@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="96" height="96" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:#e9e4da">
+<!-- palladium A — the Pallas mark: The sign of the asteroid Pallas — lozenge on a crossed stem — the sign palladium was named for in 1803; the glyph carries the beat’s own date. -->
+<path d="M24 6 L31 15 L24 24 L17 15 Z"/>
+        <path d="M24 24 L24 42"/>
+        <path d="M17.5 33 L30.5 33"/>
+        <circle cx="24" cy="42" r="1.8" fill="currentColor" stroke="none"/>
+</svg>

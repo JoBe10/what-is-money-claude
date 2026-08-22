@@ -1,0 +1,40 @@
+{
+  "variant": "reduced-motion",
+  "date": "2026-07-29T01:25:39.287Z",
+  "checks": 5,
+  "failures": 0,
+  "screenshots": 0,
+  "consoleLines": 0,
+  "results": [
+    {
+      "section": "traversal",
+      "name": "deck is 47 slides",
+      "ok": true,
+      "detail": "total=47"
+    },
+    {
+      "section": "traversal",
+      "name": "forward pass complete",
+      "ok": true,
+      "detail": "179 steps to 5-01-thank-you, 47 slides"
+    },
+    {
+      "section": "traversal",
+      "name": "seam 2-08 → legacy 3-01",
+      "ok": true,
+      "detail": "{\"id\":\"3-01-section-opener\",\"imagesBroken\":0}"
+    },
+    {
+      "section": "traversal",
+      "name": "backward pass reaches 1.1 b0",
+      "ok": true,
+      "detail": "36 steps"
+    },
+    {
+      "section": "traversal",
+      "name": "fast re-forward through Sections 1–2",
+      "ok": true,
+      "detail": "{\"id\":\"3-01-section-opener\",\"containers\":1,\"staleOverlays\":0}"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="96" height="96" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:#e9e4da">
+<!-- operation B — the mending arc: The alternative direction the round was set against: a break in a curve, closed. Two arc segments approach from either side and a third bridges the gap between their inner terminals — repair drawn as continuity restored, with the join dotted. -->
+<path d="M6 32 C10 22 15 17 21 15.5"/>
+        <path d="M42 32 C38 22 33 17 27 15.5"/>
+        <path d="M21 15.5 C23 15 25 15 27 15.5"/>
+        <circle cx="6" cy="32" r="1.8" fill="currentColor" stroke="none"/><circle cx="42" cy="32" r="1.8" fill="currentColor" stroke="none"/><circle cx="21" cy="15.5" r="1.5" fill="currentColor" stroke="none"/><circle cx="27" cy="15.5" r="1.5" fill="currentColor" stroke="none"/>
+</svg>

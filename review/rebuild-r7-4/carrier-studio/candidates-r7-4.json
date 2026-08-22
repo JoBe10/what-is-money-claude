@@ -1,0 +1,52 @@
+{
+  "phase": "R7.4",
+  "scales": [
+    {
+      "name": "4.06 / 4.07 — the scene",
+      "shell": 240,
+      "disc": 116
+    },
+    {
+      "name": "4.05 — the save road",
+      "shell": 164,
+      "disc": 104
+    },
+    {
+      "name": "4.10–4.12 — the stress stage",
+      "shell": 120,
+      "disc": 76
+    }
+  ],
+  "candidates": [
+    {
+      "id": "capsule-hull",
+      "title": "1 — the capsule hull",
+      "idea": "The old capsule's confident hull, reinterpreted as an enclosure rather than an object: a dual-stroke wall with a low fill, and the claim glowing inside it. The one candidate that answers the brief's \"real weight\" literally.",
+      "svg": "\n      <rect x=\"14\" y=\"50\" width=\"212\" height=\"140\" rx=\"70\"\n            fill=\"rgba(247,147,26,0.06)\" stroke=\"currentColor\" stroke-width=\"2.5\"/>\n      <rect x=\"22\" y=\"58\" width=\"196\" height=\"124\" rx=\"62\"\n            fill=\"none\" stroke=\"currentColor\" stroke-width=\"1\" opacity=\"0.55\"/>"
+    },
+    {
+      "id": "vault-ring",
+      "title": "2 — the faceted vault ring",
+      "idea": "A full enclosure with no openings, cut as an octagon so the eye reads a made thing rather than a circle. Material stroke, its own glow. The strongest reading of \"vault\"; also the least openable, which is a claim the carrier argument may not want to make.",
+      "svg": "\n      <polygon points=\"120,18 192,48 222,120 192,192 120,222 48,192 18,120 48,48\"\n               fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\"/>\n      <polygon points=\"120,34 181,59 206,120 181,181 120,206 59,181 34,120 59,59\"\n               fill=\"none\" stroke=\"currentColor\" stroke-width=\"1\" opacity=\"0.45\"/>"
+    },
+    {
+      "id": "soft-vessel",
+      "title": "3 — the soft vessel",
+      "idea": "A continuous rounded enclosure with a low warm fill: a body with an inside, not a boundary drawn around a gap. Quieter than the hull and warmer than the ring; the fill is what makes it a container rather than an outline.",
+      "svg": "\n      <path d=\"M120 20 C176 20 220 64 220 120 C220 176 176 220 120 220 C64 220 20 176 20 120 C20 64 64 20 120 20 Z\"\n            fill=\"rgba(247,147,26,0.075)\" stroke=\"currentColor\" stroke-width=\"2.5\"/>"
+    },
+    {
+      "id": "minimal-orbit",
+      "title": "4 — the minimal orbit",
+      "idea": "One fine full ring, no gaps, no terminals, no fill. The quietest option that is still an enclosure — it says \"held\" and nothing else, and it is the only candidate that never competes with the disc's own light.",
+      "svg": "<circle cx=\"120\" cy=\"120\" r=\"100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\"/>"
+    },
+    {
+      "id": "no-shell",
+      "title": "5 — no shell",
+      "idea": "The disc alone. Carrier identity carried by label and context — which is how the rest of the deck already does it, and the honest test of whether the shell is load-bearing at all.",
+      "svg": ""
+    }
+  ]
+}

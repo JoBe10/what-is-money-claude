@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="96" height="96" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:#e9e4da">
+<!-- peso B — the piece of eight: The peso’s ancestor, the real de a ocho: the numeral eight as two open rounds, struck through once by the assayer’s line. -->
+<circle cx="24" cy="15" r="7"/>
+        <circle cx="24" cy="31.5" r="8.5"/>
+        <path d="M33.5 7 L14.5 41"/>
+        <circle cx="33.5" cy="7" r="1.5" fill="currentColor" stroke="none"/><circle cx="14.5" cy="41" r="1.5" fill="currentColor" stroke="none"/>
+</svg>

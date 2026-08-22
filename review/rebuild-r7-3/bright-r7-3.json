@@ -1,0 +1,1373 @@
+{
+  "phase": "R7.3",
+  "floor": 0.55,
+  "full": 0.92,
+  "settle": 2700,
+  "enforced": [
+    "2-02-the-discovery",
+    "2-03-the-convergence",
+    "2-04-the-competition-record",
+    "2-05-two-survivors",
+    "2-06-the-abstraction-ladder",
+    "2-07-the-severance",
+    "2-08-the-pattern",
+    "3-01-the-three-functions",
+    "3-02-the-functions-separate",
+    "4-22-fixed-supply-reprices-at-margin"
+  ],
+  "slides": [
+    {
+      "id": "1-01-eighty-thousand-hours",
+      "builds": 2,
+      "dimmedStates": 0,
+      "minDimmedAlpha": null
+    },
+    {
+      "id": "1-02-the-conversion",
+      "builds": 3,
+      "dimmedStates": 0,
+      "minDimmedAlpha": null
+    },
+    {
+      "id": "1-03-what-is-money",
+      "builds": 5,
+      "dimmedStates": 3,
+      "minDimmedAlpha": 0.3
+    },
+    {
+      "id": "1-04-the-stakes",
+      "builds": 1,
+      "dimmedStates": 0,
+      "minDimmedAlpha": null
+    },
+    {
+      "id": "1-05-the-promise",
+      "builds": 6,
+      "dimmedStates": 4,
+      "minDimmedAlpha": 0.3
+    },
+    {
+      "id": "2-01-the-world-without-it",
+      "builds": 3,
+      "dimmedStates": 0,
+      "minDimmedAlpha": null
+    },
+    {
+      "id": "2-02-the-discovery",
+      "builds": 4,
+      "dimmedStates": 45,
+      "minDimmedAlpha": 0.58
+    },
+    {
+      "id": "2-03-the-convergence",
+      "builds": 3,
+      "dimmedStates": 0,
+      "minDimmedAlpha": null
+    },
+    {
+      "id": "2-04-the-competition-record",
+      "builds": 8,
+      "dimmedStates": 47,
+      "minDimmedAlpha": 0.58
+    },
+    {
+      "id": "2-05-two-survivors",
+      "builds": 6,
+      "dimmedStates": 204,
+      "minDimmedAlpha": 0.031
+    },
+    {
+      "id": "2-06-the-abstraction-ladder",
+      "builds": 4,
+      "dimmedStates": 6,
+      "minDimmedAlpha": 0.58
+    },
+    {
+      "id": "2-07-the-severance",
+      "builds": 4,
+      "dimmedStates": 47,
+      "minDimmedAlpha": 0.55
+    },
+    {
+      "id": "2-08-the-pattern",
+      "builds": 6,
+      "dimmedStates": 4,
+      "minDimmedAlpha": 0.58
+    },
+    {
+      "id": "3-00-waypoint-function",
+      "builds": 2,
+      "dimmedStates": 1,
+      "minDimmedAlpha": 0.3
+    },
+    {
+      "id": "3-01-the-three-functions",
+      "builds": 5,
+      "dimmedStates": 0,
+      "minDimmedAlpha": null
+    },
+    {
+      "id": "3-02-the-functions-separate",
+      "builds": 3,
+      "dimmedStates": 0,
+      "minDimmedAlpha": null
+    },
+    {
+      "id": "3-03-the-order-of-monetization",
+      "builds": 6,
+      "dimmedStates": 2,
+      "minDimmedAlpha": 0.275
+    },
+    {
+      "id": "3-04-stage-signatures",
+      "builds": 2,
+      "dimmedStates": 0,
+      "minDimmedAlpha": null
+    },
+    {
+      "id": "3-05-the-palladium-test",
+      "builds": 5,
+      "dimmedStates": 4,
+      "minDimmedAlpha": 0.85
+    },
+    {
+      "id": "3-06-what-your-money-is",
+      "builds": 6,
+      "dimmedStates": 10,
+      "minDimmedAlpha": 0.275
+    },
+    {
+      "id": "3-07-where-bitcoin-is",
+      "builds": 5,
+      "dimmedStates": 0,
+      "minDimmedAlpha": null
+    },
+    {
+      "id": "3-08-waypoint-judge",
+      "builds": 2,
+      "dimmedStates": 2,
+      "minDimmedAlpha": 0.3
+    },
+    {
+      "id": "4-01-define-the-job",
+      "builds": 4,
+      "dimmedStates": 1,
+      "minDimmedAlpha": 0.22
+    },
+    {
+      "id": "4-03-simple-exchange",
+      "builds": 4,
+      "dimmedStates": 4,
+      "minDimmedAlpha": 0.42
+    },
+    {
+      "id": "4-04-unfinished-exchange",
+      "builds": 4,
+      "dimmedStates": 3,
+      "minDimmedAlpha": 0.375
+    },
+    {
+      "id": "4-05-spend-or-save",
+      "builds": 4,
+      "dimmedStates": 3,
+      "minDimmedAlpha": 0.315
+    },
+    {
+      "id": "4-06-claim-and-carrier",
+      "builds": 4,
+      "dimmedStates": 9,
+      "minDimmedAlpha": 0.21
+    },
+    {
+      "id": "4-07-store-of-value-function",
+      "builds": 5,
+      "dimmedStates": 8,
+      "minDimmedAlpha": 0.18
+    },
+    {
+      "id": "4-08-100-year-test",
+      "builds": 3,
+      "dimmedStates": 1,
+      "minDimmedAlpha": 0.39
+    },
+    {
+      "id": "4-09-future-is-unknowable",
+      "builds": 5,
+      "dimmedStates": 7,
+      "minDimmedAlpha": 0.15
+    },
+    {
+      "id": "4-10-invert-the-question",
+      "builds": 2,
+      "dimmedStates": 0,
+      "minDimmedAlpha": null
+    },
+    {
+      "id": "4-11-carrier-failures-i",
+      "builds": 5,
+      "dimmedStates": 0,
+      "minDimmedAlpha": null
+    },
+    {
+      "id": "4-12-carrier-failures-ii",
+      "builds": 5,
+      "dimmedStates": 0,
+      "minDimmedAlpha": null
+    },
+    {
+      "id": "4-13-failure-to-requirement",
+      "builds": 2,
+      "dimmedStates": 0,
+      "minDimmedAlpha": null
+    },
+    {
+      "id": "4-14-ten-properties",
+      "builds": 2,
+      "dimmedStates": 0,
+      "minDimmedAlpha": null
+    },
+    {
+      "id": "4-15-framework-to-comparison",
+      "builds": 4,
+      "dimmedStates": 4,
+      "minDimmedAlpha": 0.19
+    },
+    {
+      "id": "4-16-the-comparison",
+      "builds": 3,
+      "dimmedStates": 0,
+      "minDimmedAlpha": null
+    },
+    {
+      "id": "4-17-store-of-value-function-migrates",
+      "builds": 3,
+      "dimmedStates": 0,
+      "minDimmedAlpha": null
+    },
+    {
+      "id": "4-18-monetary-premium",
+      "builds": 3,
+      "dimmedStates": 16,
+      "minDimmedAlpha": 0.17
+    },
+    {
+      "id": "4-19-other-assets-do-moneys-job",
+      "builds": 5,
+      "dimmedStates": 0,
+      "minDimmedAlpha": null
+    },
+    {
+      "id": "4-20-bitcoin-does-not-replace-everything",
+      "builds": 8,
+      "dimmedStates": 12,
+      "minDimmedAlpha": 0.255
+    },
+    {
+      "id": "4-20b-what-would-change-these-scores",
+      "builds": 5,
+      "dimmedStates": 3,
+      "minDimmedAlpha": 0.75
+    },
+    {
+      "id": "4-21-marginal-store-of-value-decision",
+      "builds": 2,
+      "dimmedStates": 0,
+      "minDimmedAlpha": null
+    },
+    {
+      "id": "4-22-fixed-supply-reprices-at-margin",
+      "builds": 3,
+      "dimmedStates": 3,
+      "minDimmedAlpha": 0.58
+    },
+    {
+      "id": "4-23-investment-case-from-first-principles",
+      "builds": 2,
+      "dimmedStates": 0,
+      "minDimmedAlpha": null
+    },
+    {
+      "id": "5-01-thank-you",
+      "builds": 2,
+      "dimmedStates": 0,
+      "minDimmedAlpha": null
+    }
+  ],
+  "checks": 94,
+  "failures": 0,
+  "results": [
+    {
+      "name": "1-01-eighty-thousand-hours b2: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"This is how many hours of your life you will spend working.\""
+    },
+    {
+      "name": "1-02-the-conversion b2: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"Everything you earn is your time, changing form.\""
+    },
+    {
+      "name": "1-02-the-conversion b3: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"Money is where a life’s work accumulates.\""
+    },
+    {
+      "name": "1-03-what-is-money b1: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"Without saying what it does — can you say what money is?\""
+    },
+    {
+      "name": "1-04-the-stakes b1: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"If you don’t understand the thing your life’s work is stored\""
+    },
+    {
+      "name": "1-05-the-promise b1: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"How do you understand anything mysterious?\""
+    },
+    {
+      "name": "2-01-the-world-without-it b3: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"The double coincidence of wants.\""
+    },
+    {
+      "name": "2-02-the-discovery b3: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"Money is born the moment someone accepts a good they do not \""
+    },
+    {
+      "name": "2-02-the-discovery b4: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"Some goods are easier to sell on than others. That property \""
+    },
+    {
+      "name": "2-03-the-convergence b3: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"Nobody decides. Everyone converges.\""
+    },
+    {
+      "name": "2-04-the-competition-record b1: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"Cannot be divided. Half a cow is no cow.\""
+    },
+    {
+      "name": "2-04-the-competition-record b2: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"Dissolves in a rainstorm.\""
+    },
+    {
+      "name": "2-04-the-competition-record b3: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"Scarce only until someone reaches the right beach — supply o\""
+    },
+    {
+      "name": "2-04-the-competition-record b4: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"Rusts. And anyone with a furnace can make more.\""
+    },
+    {
+      "name": "2-04-the-competition-record b5: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"The market keeps re-running one experiment — and keeps selec\""
+    },
+    {
+      "name": "2-05-two-survivors b2: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"Anything that floats away is out.\""
+    },
+    {
+      "name": "2-05-two-survivors b3: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"Anything that rusts, burns, or dissolves is out.\""
+    },
+    {
+      "name": "2-05-two-survivors b4: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"Anything that kills the holder is out.\""
+    },
+    {
+      "name": "2-05-two-survivors b5: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"Anything that will not hold a shape is out.\""
+    },
+    {
+      "name": "2-05-two-survivors b6: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"Workable nobility leaves two.\""
+    },
+    {
+      "name": "2-06-the-abstraction-ladder b2: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"Solves verification and division. Trust required: the mint.\""
+    },
+    {
+      "name": "2-06-the-abstraction-ladder b3: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"A claim on gold in a vault. Trust required: the vault.\""
+    },
+    {
+      "name": "2-06-the-abstraction-ladder b4: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"Each rung buys convenience — and pays for it in trust.\""
+    },
+    {
+      "name": "2-07-the-severance b2: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"Redemption ends. For the first time in the record, the world\""
+    },
+    {
+      "name": "2-07-the-severance b3: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"What one unit still buys.\""
+    },
+    {
+      "name": "2-07-the-severance b4: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 2 new statement(s): α 1.00 — \"The most universally accepted medium of exchange in history.\""
+    },
+    {
+      "name": "2-08-the-pattern b2: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"In the free competition, monies fell when something categori\""
+    },
+    {
+      "name": "2-08-the-pattern b3: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"The last incumbent didn’t fall that way — it was captured: c\""
+    },
+    {
+      "name": "2-08-the-pattern b4: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"Either way, the role moves. And the record has no reason to \""
+    },
+    {
+      "name": "2-08-the-pattern b5: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"2009: digital · no state, no company · supply fixed by its o\""
+    },
+    {
+      "name": "2-08-the-pattern b6: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"Very young. Its price still swings far more than the monies \""
+    },
+    {
+      "name": "3-00-waypoint-function b2: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"Ask what it must do.\""
+    },
+    {
+      "name": "3-01-the-three-functions b2: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 0.92 — \"— moves value through time.\""
+    },
+    {
+      "name": "3-01-the-three-functions b3: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 0.92 — \"— moves value between people.\""
+    },
+    {
+      "name": "3-01-the-three-functions b5: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"Across time. Across space. Across scale. The three dimension\""
+    },
+    {
+      "name": "3-02-the-functions-separate b3: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"The functions are separable — across goods, and across time.\""
+    },
+    {
+      "name": "3-03-the-order-of-monetization b6: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"Store of value is the foundation function. The other functio\""
+    },
+    {
+      "name": "3-04-stage-signatures b2: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"Volatility and illiquidity are properties of the stage — not\""
+    },
+    {
+      "name": "3-05-the-palladium-test b1: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"Palladium: scarcer in supply than gold. Genuinely useful. At\""
+    },
+    {
+      "name": "3-05-the-palladium-test b5: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"Marginally better is structurally insufficient. Only a categ\""
+    },
+    {
+      "name": "3-06-what-your-money-is b5: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"This presentation’s question is about the foundation asset —\""
+    },
+    {
+      "name": "3-07-where-bitcoin-is b5: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"So how do you tell — for this candidate or any other — wheth\""
+    },
+    {
+      "name": "3-08-waypoint-judge b2: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"Ask how you would judge anything that tries to be it.\""
+    },
+    {
+      "name": "4-01-define-the-job b3: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"What exactly is being stored?\""
+    },
+    {
+      "name": "4-01-define-the-job b4: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"Start where money is earned.\""
+    },
+    {
+      "name": "4-03-simple-exchange b4: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"What did he actually receive?\""
+    },
+    {
+      "name": "4-04-unfinished-exchange b1: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"What does the $400 actually represent?\""
+    },
+    {
+      "name": "4-05-spend-or-save b4: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 2 new statement(s): α 1.00 — \"Spending closes the exchange.\""
+    },
+    {
+      "name": "4-07-store-of-value-function b1: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"What must the carrier actually preserve?\""
+    },
+    {
+      "name": "4-07-store-of-value-function b3: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"The claim can still command real value later.\""
+    },
+    {
+      "name": "4-07-store-of-value-function b4: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"The future holder can still exercise it.\""
+    },
+    {
+      "name": "4-07-store-of-value-function b5: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"and keeps that claim  through time.\""
+    },
+    {
+      "name": "4-08-100-year-test b1: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 4 new statement(s): α 1.00 — \"You earn the claim today.\""
+    },
+    {
+      "name": "4-09-future-is-unknowable b1: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"We do not know the world.\""
+    },
+    {
+      "name": "4-09-future-is-unknowable b2: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 2 new statement(s): α 1.00 — \"WHERE WILL THEY LIVE?\""
+    },
+    {
+      "name": "4-09-future-is-unknowable b3: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 2 new statement(s): α 1.00 — \"WHICH GOVERNMENTS WILL EXIST?\""
+    },
+    {
+      "name": "4-09-future-is-unknowable b4: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 2 new statement(s): α 1.00 — \"WHICH TECHNOLOGIES WILL DOMINATE?\""
+    },
+    {
+      "name": "4-09-future-is-unknowable b5: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"of reaching 2126 with its ?\""
+    },
+    {
+      "name": "4-10-invert-the-question b1: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"How could the carrier fail?\""
+    },
+    {
+      "name": "4-11-carrier-failures-i b1: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"Additional carrier units can dilute the claim embodied in ex\""
+    },
+    {
+      "name": "4-11-carrier-failures-i b2: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"The carrier cannot be divided into the quantities required f\""
+    },
+    {
+      "name": "4-11-carrier-failures-i b3: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"It cannot be exchanged reliably without delay, friction or s\""
+    },
+    {
+      "name": "4-11-carrier-failures-i b4: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"It cannot move freely across distance or jurisdiction.\""
+    },
+    {
+      "name": "4-11-carrier-failures-i b5: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"Storage, maintenance or administration consume the claim ove\""
+    },
+    {
+      "name": "4-12-carrier-failures-ii b1: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"An external party can alter access, ownership or the governi\""
+    },
+    {
+      "name": "4-12-carrier-failures-ii b2: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"The carrier can decay or fail before the claim is redeemed.\""
+    },
+    {
+      "name": "4-12-carrier-failures-ii b3: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"Authenticity, ownership or supply cannot be established conf\""
+    },
+    {
+      "name": "4-12-carrier-failures-ii b4: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"Equal units can be treated differently because of their hist\""
+    },
+    {
+      "name": "4-12-carrier-failures-ii b5: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"There is insufficient evidence across crises, technologies a\""
+    },
+    {
+      "name": "4-15-framework-to-comparison b4: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"The framework is explicit. The scores are judgments.\""
+    },
+    {
+      "name": "4-17-store-of-value-function-migrates b1: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"The demand to save does not disappear.\""
+    },
+    {
+      "name": "4-17-store-of-value-function-migrates b3: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"When money is not trusted to preserve purchasing power, savi\""
+    },
+    {
+      "name": "4-18-monetary-premium b2: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"Savings demand adds value beyond what the asset produces, pr\""
+    },
+    {
+      "name": "4-18-monetary-premium b3: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"not the asset’s entire value.\""
+    },
+    {
+      "name": "4-19-other-assets-do-moneys-job b1: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"REAL ESTATE SHELTERS.\""
+    },
+    {
+      "name": "4-19-other-assets-do-moneys-job b3: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"GOLD HAS LONG CARRIED MONETARY VALUE.\""
+    },
+    {
+      "name": "4-19-other-assets-do-moneys-job b4: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"BITCOIN’S UTILITY IS .\""
+    },
+    {
+      "name": "4-19-other-assets-do-moneys-job b5: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"It competes for the monetary premium attached elsewhere.\""
+    },
+    {
+      "name": "4-20-bitcoin-does-not-replace-everything b1: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"It does not need to replace real estate.\""
+    },
+    {
+      "name": "4-20-bitcoin-does-not-replace-everything b2: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"It does not need to replace shares.\""
+    },
+    {
+      "name": "4-20-bitcoin-does-not-replace-everything b3: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"It does not need to absorb every store of value.\""
+    },
+    {
+      "name": "4-20-bitcoin-does-not-replace-everything b4: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"not their reason to exist.\""
+    },
+    {
+      "name": "4-20-bitcoin-does-not-replace-everything b7: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"Architecture protects the integrity of the claim. The market\""
+    },
+    {
+      "name": "4-20-bitcoin-does-not-replace-everything b8: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 2 new statement(s): α 1.00 — \"It fixes the rules through which the market discovers its pr\""
+    },
+    {
+      "name": "4-20b-what-would-change-these-scores b2: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"A credible failure of supply integrity.\""
+    },
+    {
+      "name": "4-20b-what-would-change-these-scores b3: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"Sustained decay of the security budget.\""
+    },
+    {
+      "name": "4-20b-what-would-change-these-scores b4: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"Capture of the protocol itself.\""
+    },
+    {
+      "name": "4-21-marginal-store-of-value-decision b2: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"Every new unit of savings creates a new carrier decision.\""
+    },
+    {
+      "name": "4-22-fixed-supply-reprices-at-margin b1: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"Demand does not need to absorb everything.\""
+    },
+    {
+      "name": "4-22-fixed-supply-reprices-at-margin b2: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"It only needs to grow against a supply that cannot respond.\""
+    },
+    {
+      "name": "4-22-fixed-supply-reprices-at-margin b3: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"Marginal flows can reprice the entire stock.\""
+    },
+    {
+      "name": "4-23-investment-case-from-first-principles b1: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 4 new statement(s): α 1.00 — \"Money is a claim on value.\""
+    },
+    {
+      "name": "4-23-investment-case-from-first-principles b2: the statement that just landed is at full brightness",
+      "ok": true,
+      "detail": "brightest of 1 new statement(s): α 1.00 — \"Bitcoin does not need to replace everything.It only needs to\""
+    },
+    {
+      "name": "BASELINE: no slide outside the enforced scope is over its declared count",
+      "ok": true,
+      "detail": "111 pre-existing departures across 21 slides, all at or under baseline"
+    }
+  ],
+  "baseline": {
+    "1-03-what-is-money": 6,
+    "1-05-the-promise": 7,
+    "3-00-waypoint-function": 2,
+    "3-03-the-order-of-monetization": 4,
+    "3-04-stage-signatures": 1,
+    "3-05-the-palladium-test": 2,
+    "3-06-what-your-money-is": 13,
+    "3-07-where-bitcoin-is": 3,
+    "3-08-waypoint-judge": 3,
+    "4-01-define-the-job": 1,
+    "4-03-simple-exchange": 4,
+    "4-04-unfinished-exchange": 3,
+    "4-05-spend-or-save": 3,
+    "4-06-claim-and-carrier": 10,
+    "4-07-store-of-value-function": 8,
+    "4-08-100-year-test": 1,
+    "4-09-future-is-unknowable": 7,
+    "4-15-framework-to-comparison": 4,
+    "4-18-monetary-premium": 16,
+    "4-20-bitcoin-does-not-replace-everything": 12,
+    "5-01-thank-you": 1
+  },
+  "census": {
+    "1-03-what-is-money": 6,
+    "1-05-the-promise": 7,
+    "3-00-waypoint-function": 2,
+    "3-03-the-order-of-monetization": 4,
+    "3-04-stage-signatures": 1,
+    "3-05-the-palladium-test": 2,
+    "3-06-what-your-money-is": 13,
+    "3-07-where-bitcoin-is": 3,
+    "3-08-waypoint-judge": 3,
+    "4-01-define-the-job": 1,
+    "4-03-simple-exchange": 4,
+    "4-04-unfinished-exchange": 3,
+    "4-05-spend-or-save": 3,
+    "4-06-claim-and-carrier": 10,
+    "4-07-store-of-value-function": 8,
+    "4-08-100-year-test": 1,
+    "4-09-future-is-unknowable": 7,
+    "4-15-framework-to-comparison": 4,
+    "4-18-monetary-premium": 16,
+    "4-20-bitcoin-does-not-replace-everything": 12,
+    "5-01-thank-you": 1
+  },
+  "backlog": [
+    {
+      "slide": "1-03-what-is-money",
+      "name": "1-03-what-is-money b2: dimmed element holds the legibility floor — \"Without saying what it does — can you say what money is?\"",
+      "detail": "α 0.30 (landed 1.00 at b1); floor 0.55"
+    },
+    {
+      "slide": "1-03-what-is-money",
+      "name": "1-03-what-is-money b2: the statement that just landed is at full brightness",
+      "detail": "brightest of 1 new statement(s): α 0.75 — \"It is one side of nearly every trade on Earth.\""
+    },
+    {
+      "slide": "1-03-what-is-money",
+      "name": "1-03-what-is-money b3: dimmed element holds the legibility floor — \"Without saying what it does — can you say what money is?\"",
+      "detail": "α 0.30 (landed 1.00 at b1); floor 0.55"
+    },
+    {
+      "slide": "1-03-what-is-money",
+      "name": "1-03-what-is-money b3: the statement that just landed is at full brightness",
+      "detail": "brightest of 1 new statement(s): α 0.75 — \"It is the most used good in human civilization.\""
+    },
+    {
+      "slide": "1-03-what-is-money",
+      "name": "1-03-what-is-money b4: dimmed element holds the legibility floor — \"Without saying what it does — can you say what money is?\"",
+      "detail": "α 0.30 (landed 1.00 at b1); floor 0.55"
+    },
+    {
+      "slide": "1-03-what-is-money",
+      "name": "1-03-what-is-money b4: the statement that just landed is at full brightness",
+      "detail": "brightest of 1 new statement(s): α 0.75 — \"There is not one hour of school on what it actually is.\""
+    },
+    {
+      "slide": "1-05-the-promise",
+      "name": "1-05-the-promise b2: the statement that just landed is at full brightness",
+      "detail": "brightest of 1 new statement(s): α 0.75 — \"Ask where it came from.\""
+    },
+    {
+      "slide": "1-05-the-promise",
+      "name": "1-05-the-promise b3: the statement that just landed is at full brightness",
+      "detail": "brightest of 1 new statement(s): α 0.75 — \"Ask what it must do.\""
+    },
+    {
+      "slide": "1-05-the-promise",
+      "name": "1-05-the-promise b4: the statement that just landed is at full brightness",
+      "detail": "brightest of 1 new statement(s): α 0.75 — \"Ask how you would judge anything that tries to be it.\""
+    },
+    {
+      "slide": "1-05-the-promise",
+      "name": "1-05-the-promise b5: dimmed element holds the legibility floor — \"How do you understand anything mysterious?\"",
+      "detail": "α 0.30 (landed 1.00 at b1); floor 0.55"
+    },
+    {
+      "slide": "1-05-the-promise",
+      "name": "1-05-the-promise b6: dimmed element holds the legibility floor — \"How do you understand anything mysterious?\"",
+      "detail": "α 0.30 (landed 1.00 at b1); floor 0.55"
+    },
+    {
+      "slide": "1-05-the-promise",
+      "name": "1-05-the-promise b6: dimmed element holds the legibility floor — \"Ask what it must do.\"",
+      "detail": "α 0.50 (landed 0.75 at b3); floor 0.55"
+    },
+    {
+      "slide": "1-05-the-promise",
+      "name": "1-05-the-promise b6: dimmed element holds the legibility floor — \"Ask how you would judge anything that tries to be it.\"",
+      "detail": "α 0.50 (landed 0.75 at b4); floor 0.55"
+    },
+    {
+      "slide": "3-00-waypoint-function",
+      "name": "3-00-waypoint-function b1: the statement that just landed is at full brightness",
+      "detail": "brightest of 1 new statement(s): α 0.50 — \"Ask where it came from.\""
+    },
+    {
+      "slide": "3-00-waypoint-function",
+      "name": "3-00-waypoint-function b2: dimmed element holds the legibility floor — \"Ask where it came from.\"",
+      "detail": "α 0.30 (landed 0.50 at b1); floor 0.55"
+    },
+    {
+      "slide": "3-03-the-order-of-monetization",
+      "name": "3-03-the-order-of-monetization b4: the statement that just landed is at full brightness",
+      "detail": "brightest of 1 new statement(s): α 0.50 — \"Nobody accepts as payment what they don’t expect to hold val\""
+    },
+    {
+      "slide": "3-03-the-order-of-monetization",
+      "name": "3-03-the-order-of-monetization b5: the statement that just landed is at full brightness",
+      "detail": "brightest of 1 new statement(s): α 0.50 — \"Nobody writes contracts in what nobody accepts.\""
+    },
+    {
+      "slide": "3-03-the-order-of-monetization",
+      "name": "3-03-the-order-of-monetization b6: dimmed element holds the legibility floor — \"Nobody accepts as payment what they don’t expect to hold val\"",
+      "detail": "α 0.28 (landed 0.50 at b4); floor 0.55"
+    },
+    {
+      "slide": "3-03-the-order-of-monetization",
+      "name": "3-03-the-order-of-monetization b6: dimmed element holds the legibility floor — \"Nobody writes contracts in what nobody accepts.\"",
+      "detail": "α 0.28 (landed 0.50 at b5); floor 0.55"
+    },
+    {
+      "slide": "3-04-stage-signatures",
+      "name": "3-04-stage-signatures b1: the statement that just landed is at full brightness",
+      "detail": "brightest of 1 new statement(s): α 0.50 — \"Early-stage signature: few holders · thin markets · reflexiv\""
+    },
+    {
+      "slide": "3-05-the-palladium-test",
+      "name": "3-05-the-palladium-test b3: the statement that just landed is at full brightness",
+      "detail": "brightest of 1 new statement(s): α 0.85 — \"Discovered in 1803 — facing a monetary network thousands of \""
+    },
+    {
+      "slide": "3-05-the-palladium-test",
+      "name": "3-05-the-palladium-test b4: the statement that just landed is at full brightness",
+      "detail": "brightest of 1 new statement(s): α 0.85 — \"And when gold’s role narrowed to store of value, palladium n\""
+    },
+    {
+      "slide": "3-06-what-your-money-is",
+      "name": "3-06-what-your-money-is b2: the statement that just landed is at full brightness",
+      "detail": "brightest of 1 new statement(s): α 0.75 — \"a claim on your deposit.\""
+    },
+    {
+      "slide": "3-06-what-your-money-is",
+      "name": "3-06-what-your-money-is b3: the statement that just landed is at full brightness",
+      "detail": "brightest of 2 new statement(s): α 0.75 — \"a claim on base money.\""
+    },
+    {
+      "slide": "3-06-what-your-money-is",
+      "name": "3-06-what-your-money-is b4: the statement that just landed is at full brightness",
+      "detail": "brightest of 1 new statement(s): α 0.75 — \"Layers are not a scam — they are how money scales. But layer\""
+    },
+    {
+      "slide": "3-06-what-your-money-is",
+      "name": "3-06-what-your-money-is b5: dimmed element holds the legibility floor — \"PAYMENT APPS\"",
+      "detail": "α 0.30 (landed 0.75 at b1); floor 0.55"
+    },
+    {
+      "slide": "3-06-what-your-money-is",
+      "name": "3-06-what-your-money-is b5: dimmed element holds the legibility floor — \"BANK DEPOSITS\"",
+      "detail": "α 0.30 (landed 0.75 at b2); floor 0.55"
+    },
+    {
+      "slide": "3-06-what-your-money-is",
+      "name": "3-06-what-your-money-is b5: dimmed element holds the legibility floor — \"a claim on your deposit.\"",
+      "detail": "α 0.30 (landed 0.75 at b2); floor 0.55"
+    },
+    {
+      "slide": "3-06-what-your-money-is",
+      "name": "3-06-what-your-money-is b5: dimmed element holds the legibility floor — \"a claim on base money.\"",
+      "detail": "α 0.30 (landed 0.75 at b3); floor 0.55"
+    },
+    {
+      "slide": "3-06-what-your-money-is",
+      "name": "3-06-what-your-money-is b5: dimmed element holds the legibility floor — \"More claims than base. That is what a bank run runs on.\"",
+      "detail": "α 0.28 (landed 0.50 at b3); floor 0.55"
+    },
+    {
+      "slide": "3-06-what-your-money-is",
+      "name": "3-06-what-your-money-is b5: dimmed element holds the legibility floor — \"Layers are not a scam — they are how money scales. But layer\"",
+      "detail": "α 0.41 (landed 0.75 at b4); floor 0.55"
+    },
+    {
+      "slide": "3-06-what-your-money-is",
+      "name": "3-06-what-your-money-is b6: dimmed element holds the legibility floor — \"PAYMENT APPS\"",
+      "detail": "α 0.30 (landed 0.75 at b1); floor 0.55"
+    },
+    {
+      "slide": "3-06-what-your-money-is",
+      "name": "3-06-what-your-money-is b6: dimmed element holds the legibility floor — \"BANK DEPOSITS\"",
+      "detail": "α 0.30 (landed 0.75 at b2); floor 0.55"
+    },
+    {
+      "slide": "3-06-what-your-money-is",
+      "name": "3-06-what-your-money-is b6: dimmed element holds the legibility floor — \"a claim on your deposit.\"",
+      "detail": "α 0.30 (landed 0.75 at b2); floor 0.55"
+    },
+    {
+      "slide": "3-06-what-your-money-is",
+      "name": "3-06-what-your-money-is b6: dimmed element holds the legibility floor — \"a claim on base money.\"",
+      "detail": "α 0.30 (landed 0.75 at b3); floor 0.55"
+    },
+    {
+      "slide": "3-07-where-bitcoin-is",
+      "name": "3-07-where-bitcoin-is b2: the statement that just landed is at full brightness",
+      "detail": "brightest of 1 new statement(s): α 0.75 — \"Collectible, 2009–. Now visibly in the store-of-value stage:\""
+    },
+    {
+      "slide": "3-07-where-bitcoin-is",
+      "name": "3-07-where-bitcoin-is b3: the statement that just landed is at full brightness",
+      "detail": "brightest of 2 new statement(s): α 0.75 — \"Supply: 21,000,000 units — fixed by the protocol’s rules.\""
+    },
+    {
+      "slide": "3-07-where-bitcoin-is",
+      "name": "3-07-where-bitcoin-is b4: the statement that just landed is at full brightness",
+      "detail": "brightest of 1 new statement(s): α 0.75 — \"Early in a process that history shows can stall. Candidates \""
+    },
+    {
+      "slide": "3-08-waypoint-judge",
+      "name": "3-08-waypoint-judge b1: the statement that just landed is at full brightness",
+      "detail": "brightest of 2 new statement(s): α 0.50 — \"Ask where it came from.\""
+    },
+    {
+      "slide": "3-08-waypoint-judge",
+      "name": "3-08-waypoint-judge b2: dimmed element holds the legibility floor — \"Ask where it came from.\"",
+      "detail": "α 0.30 (landed 0.50 at b1); floor 0.55"
+    },
+    {
+      "slide": "3-08-waypoint-judge",
+      "name": "3-08-waypoint-judge b2: dimmed element holds the legibility floor — \"Ask what it must do.\"",
+      "detail": "α 0.30 (landed 0.50 at b1); floor 0.55"
+    },
+    {
+      "slide": "4-01-define-the-job",
+      "name": "4-01-define-the-job b2: dimmed element holds the legibility floor — \"STORE OF\"",
+      "detail": "α 0.22 (landed 1.00 at b1); floor 0.55"
+    },
+    {
+      "slide": "4-03-simple-exchange",
+      "name": "4-03-simple-exchange b4: dimmed element holds the legibility floor — \"1 HOUR OF\"",
+      "detail": "α 0.42 (landed 1.00 at b0); floor 0.55"
+    },
+    {
+      "slide": "4-03-simple-exchange",
+      "name": "4-03-simple-exchange b4: dimmed element holds the legibility floor — \"SPECIALIZED\"",
+      "detail": "α 0.42 (landed 1.00 at b1); floor 0.55"
+    },
+    {
+      "slide": "4-03-simple-exchange",
+      "name": "4-03-simple-exchange b4: dimmed element holds the legibility floor — \"SURGERY\"",
+      "detail": "α 0.42 (landed 1.00 at b0); floor 0.55"
+    },
+    {
+      "slide": "4-03-simple-exchange",
+      "name": "4-03-simple-exchange b4: dimmed element holds the legibility floor — \"$400\"",
+      "detail": "α 0.50 (landed 1.00 at b3); floor 0.55"
+    },
+    {
+      "slide": "4-04-unfinished-exchange",
+      "name": "4-04-unfinished-exchange b2: dimmed element holds the legibility floor — \"$400\"",
+      "detail": "α 0.42 (landed 1.00 at b0); floor 0.55"
+    },
+    {
+      "slide": "4-04-unfinished-exchange",
+      "name": "4-04-unfinished-exchange b4: dimmed element holds the legibility floor — \"AN EARNED, TRANSFERABLE\"",
+      "detail": "α 0.38 (landed 0.75 at b2); floor 0.55"
+    },
+    {
+      "slide": "4-04-unfinished-exchange",
+      "name": "4-04-unfinished-exchange b4: dimmed element holds the legibility floor — \"CLAIM ON VALUE\"",
+      "detail": "α 0.50 (landed 1.00 at b2); floor 0.55"
+    },
+    {
+      "slide": "4-05-spend-or-save",
+      "name": "4-05-spend-or-save b2: dimmed element holds the legibility floor — \"SAVE FOR LATER\"",
+      "detail": "α 0.32 (landed 0.54 at b1); floor 0.55"
+    },
+    {
+      "slide": "4-05-spend-or-save",
+      "name": "4-05-spend-or-save b3: dimmed element holds the legibility floor — \"SPEND NOW\"",
+      "detail": "α 0.32 (landed 0.54 at b1); floor 0.55"
+    },
+    {
+      "slide": "4-05-spend-or-save",
+      "name": "4-05-spend-or-save b4: dimmed element holds the legibility floor — \"SPEND NOW\"",
+      "detail": "α 0.32 (landed 0.54 at b1); floor 0.55"
+    },
+    {
+      "slide": "4-06-claim-and-carrier",
+      "name": "4-06-claim-and-carrier b1: the statement that just landed is at full brightness",
+      "detail": "brightest of 1 new statement(s): α 0.75 — \"something capable of carrying it across people, places and t\""
+    },
+    {
+      "slide": "4-06-claim-and-carrier",
+      "name": "4-06-claim-and-carrier b3: dimmed element holds the legibility floor — \"THE MONETARY MEDIUM\"",
+      "detail": "α 0.23 (landed 0.75 at b2); floor 0.55"
+    },
+    {
+      "slide": "4-06-claim-and-carrier",
+      "name": "4-06-claim-and-carrier b3: dimmed element holds the legibility floor — \"THE CARRIER\"",
+      "detail": "α 0.30 (landed 1.00 at b2); floor 0.55"
+    },
+    {
+      "slide": "4-06-claim-and-carrier",
+      "name": "4-06-claim-and-carrier b3: dimmed element holds the legibility floor — \"SHELLS\"",
+      "detail": "α 0.21 (landed 0.70 at b2); floor 0.55"
+    },
+    {
+      "slide": "4-06-claim-and-carrier",
+      "name": "4-06-claim-and-carrier b3: dimmed element holds the legibility floor — \"GOLD\"",
+      "detail": "α 0.21 (landed 0.70 at b2); floor 0.55"
+    },
+    {
+      "slide": "4-06-claim-and-carrier",
+      "name": "4-06-claim-and-carrier b3: dimmed element holds the legibility floor — \"PAPER\"",
+      "detail": "α 0.21 (landed 0.70 at b2); floor 0.55"
+    },
+    {
+      "slide": "4-06-claim-and-carrier",
+      "name": "4-06-claim-and-carrier b3: dimmed element holds the legibility floor — \"BANK LEDGERS\"",
+      "detail": "α 0.21 (landed 0.70 at b2); floor 0.55"
+    },
+    {
+      "slide": "4-06-claim-and-carrier",
+      "name": "4-06-claim-and-carrier b3: dimmed element holds the legibility floor — \"BITCOIN\"",
+      "detail": "α 0.21 (landed 0.70 at b2); floor 0.55"
+    },
+    {
+      "slide": "4-06-claim-and-carrier",
+      "name": "4-06-claim-and-carrier b4: dimmed element holds the legibility floor — \"THE MONETARY MEDIUM\"",
+      "detail": "α 0.23 (landed 0.75 at b2); floor 0.55"
+    },
+    {
+      "slide": "4-06-claim-and-carrier",
+      "name": "4-06-claim-and-carrier b4: dimmed element holds the legibility floor — \"THE CARRIER\"",
+      "detail": "α 0.30 (landed 1.00 at b2); floor 0.55"
+    },
+    {
+      "slide": "4-07-store-of-value-function",
+      "name": "4-07-store-of-value-function b5: dimmed element holds the legibility floor — \"What must the carrier actually preserve?\"",
+      "detail": "α 0.24 (landed 1.00 at b1); floor 0.55"
+    },
+    {
+      "slide": "4-07-store-of-value-function",
+      "name": "4-07-store-of-value-function b5: dimmed element holds the legibility floor — \"NOW\"",
+      "detail": "α 0.18 (landed 0.43 at b2); floor 0.55"
+    },
+    {
+      "slide": "4-07-store-of-value-function",
+      "name": "4-07-store-of-value-function b5: dimmed element holds the legibility floor — \"LATER\"",
+      "detail": "α 0.18 (landed 0.43 at b2); floor 0.55"
+    },
+    {
+      "slide": "4-07-store-of-value-function",
+      "name": "4-07-store-of-value-function b5: dimmed element holds the legibility floor — \"«s4-store-function__time»\"",
+      "detail": "α 0.18 (landed 0.43 at b2); floor 0.55"
+    },
+    {
+      "slide": "4-07-store-of-value-function",
+      "name": "4-07-store-of-value-function b5: dimmed element holds the legibility floor — \"PURCHASING POWER\"",
+      "detail": "α 0.34 (landed 1.00 at b3); floor 0.55"
+    },
+    {
+      "slide": "4-07-store-of-value-function",
+      "name": "4-07-store-of-value-function b5: dimmed element holds the legibility floor — \"The claim can still command real value later.\"",
+      "detail": "α 0.34 (landed 1.00 at b3); floor 0.55"
+    },
+    {
+      "slide": "4-07-store-of-value-function",
+      "name": "4-07-store-of-value-function b5: dimmed element holds the legibility floor — \"REDEEMABILITY\"",
+      "detail": "α 0.34 (landed 1.00 at b4); floor 0.55"
+    },
+    {
+      "slide": "4-07-store-of-value-function",
+      "name": "4-07-store-of-value-function b5: dimmed element holds the legibility floor — \"The future holder can still exercise it.\"",
+      "detail": "α 0.34 (landed 1.00 at b4); floor 0.55"
+    },
+    {
+      "slide": "4-08-100-year-test",
+      "name": "4-08-100-year-test b3: dimmed element holds the legibility floor — \"2026\"",
+      "detail": "α 0.39 (landed 1.00 at b2); floor 0.55"
+    },
+    {
+      "slide": "4-09-future-is-unknowable",
+      "name": "4-09-future-is-unknowable b2: dimmed element holds the legibility floor — \"We know the date.\"",
+      "detail": "α 0.15 (landed 0.75 at b1); floor 0.55"
+    },
+    {
+      "slide": "4-09-future-is-unknowable",
+      "name": "4-09-future-is-unknowable b2: dimmed element holds the legibility floor — \"We do not know the world.\"",
+      "detail": "α 0.20 (landed 1.00 at b1); floor 0.55"
+    },
+    {
+      "slide": "4-09-future-is-unknowable",
+      "name": "4-09-future-is-unknowable b3: dimmed element holds the legibility floor — \"We know the date.\"",
+      "detail": "α 0.15 (landed 0.75 at b1); floor 0.55"
+    },
+    {
+      "slide": "4-09-future-is-unknowable",
+      "name": "4-09-future-is-unknowable b3: dimmed element holds the legibility floor — \"We do not know the world.\"",
+      "detail": "α 0.20 (landed 1.00 at b1); floor 0.55"
+    },
+    {
+      "slide": "4-09-future-is-unknowable",
+      "name": "4-09-future-is-unknowable b4: dimmed element holds the legibility floor — \"We know the date.\"",
+      "detail": "α 0.15 (landed 0.75 at b1); floor 0.55"
+    },
+    {
+      "slide": "4-09-future-is-unknowable",
+      "name": "4-09-future-is-unknowable b4: dimmed element holds the legibility floor — \"We do not know the world.\"",
+      "detail": "α 0.20 (landed 1.00 at b1); floor 0.55"
+    },
+    {
+      "slide": "4-09-future-is-unknowable",
+      "name": "4-09-future-is-unknowable b5: dimmed element holds the legibility floor — \"«s4-carrier-shell s4-future-unknown__shell»\"",
+      "detail": "α 0.50 (landed 0.86 at b0); floor 0.55"
+    },
+    {
+      "slide": "4-15-framework-to-comparison",
+      "name": "4-15-framework-to-comparison b3: dimmed element holds the legibility floor — \"MONETARY ASSETS\"",
+      "detail": "α 0.19 (landed 0.50 at b1); floor 0.55"
+    },
+    {
+      "slide": "4-15-framework-to-comparison",
+      "name": "4-15-framework-to-comparison b3: dimmed element holds the legibility floor — \"PRODUCTIVE ASSETS\"",
+      "detail": "α 0.19 (landed 0.50 at b2); floor 0.55"
+    },
+    {
+      "slide": "4-15-framework-to-comparison",
+      "name": "4-15-framework-to-comparison b4: dimmed element holds the legibility floor — \"MONETARY ASSETS\"",
+      "detail": "α 0.19 (landed 0.50 at b1); floor 0.55"
+    },
+    {
+      "slide": "4-15-framework-to-comparison",
+      "name": "4-15-framework-to-comparison b4: dimmed element holds the legibility floor — \"PRODUCTIVE ASSETS\"",
+      "detail": "α 0.19 (landed 0.50 at b2); floor 0.55"
+    },
+    {
+      "slide": "4-18-monetary-premium",
+      "name": "4-18-monetary-premium b3: dimmed element holds the legibility floor — \"ASSET VALUE\"",
+      "detail": "α 0.34 (landed 1.00 at b0); floor 0.55"
+    },
+    {
+      "slide": "4-18-monetary-premium",
+      "name": "4-18-monetary-premium b3: dimmed element holds the legibility floor — \"=\"",
+      "detail": "α 0.17 (landed 0.50 at b0); floor 0.55"
+    },
+    {
+      "slide": "4-18-monetary-premium",
+      "name": "4-18-monetary-premium b3: dimmed element holds the legibility floor — \"UNDERLYING UTILITY/ PRODUCTIVE VALUE\"",
+      "detail": "α 0.34 (landed 1.00 at b1); floor 0.55"
+    },
+    {
+      "slide": "4-18-monetary-premium",
+      "name": "4-18-monetary-premium b3: dimmed element holds the legibility floor — \"+\"",
+      "detail": "α 0.17 (landed 0.50 at b2); floor 0.55"
+    },
+    {
+      "slide": "4-18-monetary-premium",
+      "name": "4-18-monetary-premium b3: dimmed element holds the legibility floor — \"MONETARY PREMIUM\"",
+      "detail": "α 0.34 (landed 1.00 at b2); floor 0.55"
+    },
+    {
+      "slide": "4-18-monetary-premium",
+      "name": "4-18-monetary-premium b3: dimmed element holds the legibility floor — \"«s4-comparison-asset__mark»\"",
+      "detail": "α 0.34 (landed 1.00 at b1); floor 0.55"
+    },
+    {
+      "slide": "4-18-monetary-premium",
+      "name": "4-18-monetary-premium b3: dimmed element holds the legibility floor — \"REAL ESTATE\"",
+      "detail": "α 0.34 (landed 1.00 at b1); floor 0.55"
+    },
+    {
+      "slide": "4-18-monetary-premium",
+      "name": "4-18-monetary-premium b3: dimmed element holds the legibility floor — \"SHELTER / RENT\"",
+      "detail": "α 0.17 (landed 0.50 at b1); floor 0.55"
+    },
+    {
+      "slide": "4-18-monetary-premium",
+      "name": "4-18-monetary-premium b3: dimmed element holds the legibility floor — \"«s4-comparison-asset__mark»\"",
+      "detail": "α 0.34 (landed 1.00 at b1); floor 0.55"
+    },
+    {
+      "slide": "4-18-monetary-premium",
+      "name": "4-18-monetary-premium b3: dimmed element holds the legibility floor — \"SHARES\"",
+      "detail": "α 0.34 (landed 1.00 at b1); floor 0.55"
+    },
+    {
+      "slide": "4-18-monetary-premium",
+      "name": "4-18-monetary-premium b3: dimmed element holds the legibility floor — \"PROFITS / CASH FLOWS\"",
+      "detail": "α 0.17 (landed 0.50 at b1); floor 0.55"
+    },
+    {
+      "slide": "4-18-monetary-premium",
+      "name": "4-18-monetary-premium b3: dimmed element holds the legibility floor — \"«s4-comparison-asset__mark»\"",
+      "detail": "α 0.34 (landed 1.00 at b1); floor 0.55"
+    },
+    {
+      "slide": "4-18-monetary-premium",
+      "name": "4-18-monetary-premium b3: dimmed element holds the legibility floor — \"GOLD\"",
+      "detail": "α 0.34 (landed 1.00 at b1); floor 0.55"
+    },
+    {
+      "slide": "4-18-monetary-premium",
+      "name": "4-18-monetary-premium b3: dimmed element holds the legibility floor — \"ORNAMENTAL / INDUSTRIAL\"",
+      "detail": "α 0.17 (landed 0.50 at b1); floor 0.55"
+    },
+    {
+      "slide": "4-18-monetary-premium",
+      "name": "4-18-monetary-premium b3: dimmed element holds the legibility floor — \"MONETARY PREMIUM\"",
+      "detail": "α 0.34 (landed 1.00 at b2); floor 0.55"
+    },
+    {
+      "slide": "4-18-monetary-premium",
+      "name": "4-18-monetary-premium b3: dimmed element holds the legibility floor — \"Savings demand adds value beyond what the asset produces, pr\"",
+      "detail": "α 0.26 (landed 0.75 at b2); floor 0.55"
+    },
+    {
+      "slide": "4-20-bitcoin-does-not-replace-everything",
+      "name": "4-20-bitcoin-does-not-replace-everything b6: dimmed element holds the legibility floor — \"STABILITY\"",
+      "detail": "α 0.34 (landed 1.00 at b5); floor 0.55"
+    },
+    {
+      "slide": "4-20-bitcoin-does-not-replace-everything",
+      "name": "4-20-bitcoin-does-not-replace-everything b7: dimmed element holds the legibility floor — \"STABILITY\"",
+      "detail": "α 0.34 (landed 1.00 at b5); floor 0.55"
+    },
+    {
+      "slide": "4-20-bitcoin-does-not-replace-everything",
+      "name": "4-20-bitcoin-does-not-replace-everything b7: dimmed element holds the legibility floor — \"THE MARKET’S VALUATION\"",
+      "detail": "α 0.26 (landed 0.75 at b6); floor 0.55"
+    },
+    {
+      "slide": "4-20-bitcoin-does-not-replace-everything",
+      "name": "4-20-bitcoin-does-not-replace-everything b7: dimmed element holds the legibility floor — \"demand · liquidity · expectations\"",
+      "detail": "α 0.26 (landed 0.75 at b6); floor 0.55"
+    },
+    {
+      "slide": "4-20-bitcoin-does-not-replace-everything",
+      "name": "4-20-bitcoin-does-not-replace-everything b7: dimmed element holds the legibility floor — \"THE ARCHITECTURE OF THE CLAIM\"",
+      "detail": "α 0.26 (landed 0.75 at b6); floor 0.55"
+    },
+    {
+      "slide": "4-20-bitcoin-does-not-replace-everything",
+      "name": "4-20-bitcoin-does-not-replace-everything b7: dimmed element holds the legibility floor — \"supply rules · ownership rules · verification · control\"",
+      "detail": "α 0.26 (landed 0.75 at b6); floor 0.55"
+    },
+    {
+      "slide": "4-20-bitcoin-does-not-replace-everything",
+      "name": "4-20-bitcoin-does-not-replace-everything b8: dimmed element holds the legibility floor — \"STABILITY\"",
+      "detail": "α 0.34 (landed 1.00 at b5); floor 0.55"
+    },
+    {
+      "slide": "4-20-bitcoin-does-not-replace-everything",
+      "name": "4-20-bitcoin-does-not-replace-everything b8: dimmed element holds the legibility floor — \"THE MARKET’S VALUATION\"",
+      "detail": "α 0.26 (landed 0.75 at b6); floor 0.55"
+    },
+    {
+      "slide": "4-20-bitcoin-does-not-replace-everything",
+      "name": "4-20-bitcoin-does-not-replace-everything b8: dimmed element holds the legibility floor — \"demand · liquidity · expectations\"",
+      "detail": "α 0.26 (landed 0.75 at b6); floor 0.55"
+    },
+    {
+      "slide": "4-20-bitcoin-does-not-replace-everything",
+      "name": "4-20-bitcoin-does-not-replace-everything b8: dimmed element holds the legibility floor — \"THE ARCHITECTURE OF THE CLAIM\"",
+      "detail": "α 0.26 (landed 0.75 at b6); floor 0.55"
+    },
+    {
+      "slide": "4-20-bitcoin-does-not-replace-everything",
+      "name": "4-20-bitcoin-does-not-replace-everything b8: dimmed element holds the legibility floor — \"supply rules · ownership rules · verification · control\"",
+      "detail": "α 0.26 (landed 0.75 at b6); floor 0.55"
+    },
+    {
+      "slide": "4-20-bitcoin-does-not-replace-everything",
+      "name": "4-20-bitcoin-does-not-replace-everything b8: dimmed element holds the legibility floor — \"Architecture protects the integrity of the claim. The market\"",
+      "detail": "α 0.34 (landed 1.00 at b7); floor 0.55"
+    },
+    {
+      "slide": "5-01-thank-you",
+      "name": "5-01-thank-you b1: the statement that just landed is at full brightness",
+      "detail": "brightest of 3 new statement(s): α 0.50 — \"Ask where it came from.\""
+    }
+  ]
+}

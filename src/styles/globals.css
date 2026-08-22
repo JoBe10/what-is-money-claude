@@ -1,0 +1,416 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary:      #000000;
+  --text-primary:    #FFFFFF;
+  --text-secondary:  rgba(255, 255, 255, 0.75);
+  --text-muted:      rgba(255, 255, 255, 0.5);
+  --text-dim:        rgba(255, 255, 255, 0.3);
+  --accent:          #F7931A;
+  --accent-light:    #FFA94D;
+  --accent-dim:      rgba(247, 147, 26, 0.15);
+  --success:         #4ADE80;
+  --danger:          #FF5C5C;
+  --border-subtle:   rgba(255, 255, 255, 0.12);
+  --border-accent:   rgba(247, 147, 26, 0.4);
+
+  /* The dimmed-prior step (§9.4 rule 10, R7.3). One number for the whole deck:
+     an element that has landed and then recedes goes here and no further.
+     The floor is 0.55 — below it a statement stops reading as receded and
+     starts reading as unfinished — and 0.58 sits just above it, so a prior that
+     recedes has somewhere to go without falling through. `--dim-prior` is for
+     recession carried by opacity; `--text-prior` for recession carried by the
+     color token, which is the same brightness by construction. */
+  --dim-prior:       0.58;
+  --text-prior:      rgba(255, 255, 255, 0.58);
+
+  /* Warm neutrals for Section 1's hours-field and token: --text-primary
+     blended toward --accent at 20% and 10%. The hours are proto-value —
+     deliberately warm but not yet the deck's accent orange. */
+  --unit-warm:        #FDE9D4;
+  --unit-warm-bright: #FEF4E8;
+
+  /* Logical canvas dimensions — every slide is authored against 1920×1080. */
+  --canvas-w: 1920px;
+  --canvas-h: 1080px;
+}
+
+html, body, #deck-root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  /* Kill the bouncy edge-overscroll on mobile when swiping at deck boundaries. */
+  overscroll-behavior: none;
+}
+
+body {
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-feature-settings: 'cv11', 'ss01', 'ss03';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  /* The deck is a presentation surface — long-press selection and the iOS
+     callout menu would only get in the way. */
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ----- Deck shell ----- */
+.deck-shell {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: var(--bg-primary);
+  /* The slide area never scrolls or zooms — touch-action: none routes every
+     gesture to the TouchController and disables pinch-zoom + double-tap-zoom. */
+  touch-action: none;
+}
+
+/* The canvas is the 1920×1080 logical surface. The shell scales it. */
+.deck-canvas {
+  position: relative;
+  width: var(--canvas-w);
+  height: var(--canvas-h);
+  transform-origin: center center;
+  background: var(--bg-primary);
+  overflow: hidden;
+  will-change: transform;
+}
+
+.deck-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: scale(0.98);
+  pointer-events: none;
+}
+
+.deck-slide[data-active="true"] {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+/* ----- UI chrome ----- */
+.deck-chrome {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 50;
+  opacity: 1;
+  transition: opacity 400ms ease-out;
+}
+.deck-chrome[data-hidden="true"] {
+  opacity: 0;
+}
+
+.deck-counter {
+  position: absolute;
+  right: 32px;
+  bottom: 28px;
+  font-size: 15px;
+  letter-spacing: 0.16em;
+  color: var(--text-dim);
+  font-variant-numeric: tabular-nums;
+  font-weight: 500;
+  user-select: none;
+}
+
+.deck-progress {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.04);
+}
+.deck-progress__fill {
+  height: 100%;
+  width: 0%;
+  background: var(--accent);
+  transition: width 400ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Fullscreen toggle — bottom-left of the chrome, fades with the slide counter.
+   Touch-accessible equivalent of the F key (mainly for mobile / tablet). */
+.deck-fullscreen-btn {
+  position: absolute;
+  left: 28px;
+  bottom: 24px;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+  color: var(--text-dim);
+  font-size: 20px;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: color 200ms ease-out, border-color 200ms ease-out;
+}
+.deck-fullscreen-btn:hover {
+  color: var(--accent);
+  border-color: var(--border-accent);
+}
+
+/* ----- Notes overlay ----- */
+.notes-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.86);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 100;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 64px;
+  /* Notes can be long — allow vertical pan, still no zoom. */
+  touch-action: pan-y;
+}
+.notes-overlay[data-open="true"] { display: flex; }
+
+/* The card is a fixed-height flex column: kicker, title and footer stay put and
+   only the body scrolls. Without the cap, long notes (4.16 is ~2,350 chars) grow
+   the card past both viewport edges with no way to reach the overflow — and the
+   footer buttons go with it. */
+.notes-card {
+  max-width: 880px;
+  width: 100%;
+  max-height: calc(100vh - 80px);
+  border: 1px solid var(--border-subtle);
+  background: rgba(10, 10, 10, 0.92);
+  padding: 48px 56px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+.notes-card__kicker {
+  flex: 0 0 auto;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 11px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+.notes-card__title {
+  flex: 0 0 auto;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+}
+.notes-card__body {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  white-space: pre-wrap;
+}
+.notes-card__footer {
+  flex: 0 0 auto;
+  margin-top: 32px;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+}
+.notes-card__footer-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  pointer-events: auto;
+}
+.notes-card__pop-btn {
+  pointer-events: auto;
+  background: transparent;
+  border: 1px solid var(--border-accent);
+  color: var(--accent);
+  padding: 8px 14px;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 200ms ease-out, color 200ms ease-out;
+  font-family: inherit;
+}
+.notes-card__pop-btn:hover {
+  background: var(--accent-dim);
+}
+
+/* ----- Overview grid ----- */
+.overview-grid {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.94);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 90;
+  display: none;
+  padding: 64px;
+  overflow: auto;
+  /* The grid scrolls vertically — allow pan-y but still suppress pinch-zoom. */
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
+}
+.overview-grid[data-open="true"] { display: block; }
+
+.overview-grid__header {
+  color: var(--text-muted);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.overview-grid__tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+.overview-tile {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: #0a0a0a;
+  border: 1px solid var(--border-subtle);
+  cursor: pointer;
+  overflow: hidden;
+  transition: border-color 200ms ease-out, transform 200ms ease-out;
+}
+.overview-tile:hover {
+  border-color: var(--border-accent);
+  transform: translateY(-2px);
+}
+.overview-tile[data-current="true"] {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent);
+}
+.overview-tile__index {
+  position: absolute;
+  top: 12px;
+  left: 14px;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: var(--text-dim);
+  font-variant-numeric: tabular-nums;
+}
+.overview-tile__label {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  right: 14px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  letter-spacing: -0.01em;
+}
+.overview-tile__section {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  opacity: 0.65;
+}
+
+/* ----- Help overlay ----- */
+.help-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.86);
+  backdrop-filter: blur(8px);
+  z-index: 110;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 64px;
+}
+.help-overlay[data-open="true"] { display: flex; }
+.help-card {
+  max-width: 560px;
+  width: 100%;
+  border: 1px solid var(--border-subtle);
+  background: rgba(10, 10, 10, 0.94);
+  padding: 40px 48px;
+  border-radius: 4px;
+}
+.help-card__title {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 24px;
+}
+.help-card__row {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 16px;
+  padding: 8px 0;
+  font-size: 14px;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-subtle);
+}
+.help-card__row:last-child { border-bottom: none; }
+.help-card__keys {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 12px;
+  color: var(--accent);
+}
+
+/* ----- Jump indicator ----- */
+.jump-indicator {
+  position: fixed;
+  bottom: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 60;
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid var(--border-accent);
+  padding: 8px 16px;
+  display: none;
+}
+.jump-indicator[data-open="true"] { display: block; }
+
+/* ----- Reduced motion ----- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="96" height="96" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:#e9e4da">
+<!-- shoe B — the head-on last: The shoe seen head-on: the ankle opening as an open arc, the upper falling to a rounded toe box, three lace rungs across it, the sole a bar beneath. Symmetry does the work the profile's silhouette could not. -->
+<path d="M17 14 C21 11.4 27 11.4 31 14"/>
+        <path d="M17 14 L13.4 29 M31 14 L34.6 29"/>
+        <path d="M13.4 29 C16 33.6 32 33.6 34.6 29"/>
+        <path d="M19.6 18 L28.4 18 M18.8 22 L29.2 22 M18.2 26 L29.8 26"/>
+        <path d="M11.5 36 L36.5 36"/>
+        <circle cx="11.5" cy="36" r="1.8" fill="currentColor" stroke="none"/><circle cx="36.5" cy="36" r="1.8" fill="currentColor" stroke="none"/>
+</svg>

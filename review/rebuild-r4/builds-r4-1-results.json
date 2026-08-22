@@ -1,0 +1,100 @@
+{
+  "revision": "R4.1",
+  "variant": "standard",
+  "date": "2026-07-31T02:30:10.034Z",
+  "checks": 18,
+  "failures": 0,
+  "consoleLines": 0,
+  "results": [
+    {
+      "name": "2-05 b0 exact",
+      "ok": true,
+      "detail": "{\"lit\":{\"g\":11,\"r\":60,\"x\":36,\"n\":6,\"s\":2,\"i\":3},\"alone\":[]}"
+    },
+    {
+      "name": "2-05 b1 exact",
+      "ok": true,
+      "detail": "{\"lit\":{\"g\":11,\"r\":60,\"x\":36,\"n\":6,\"s\":2,\"i\":3},\"alone\":[]}"
+    },
+    {
+      "name": "2-05 b2 exact",
+      "ok": true,
+      "detail": "{\"lit\":{\"r\":60,\"x\":36,\"n\":6,\"s\":2,\"i\":3},\"alone\":[]}"
+    },
+    {
+      "name": "2-05 b3 exact",
+      "ok": true,
+      "detail": "{\"lit\":{\"x\":36,\"n\":6,\"s\":2,\"i\":3},\"alone\":[]}"
+    },
+    {
+      "name": "2-05 b4 exact",
+      "ok": true,
+      "detail": "{\"lit\":{\"n\":6,\"s\":2,\"i\":3},\"alone\":[]}"
+    },
+    {
+      "name": "2-05 b5 exact",
+      "ok": true,
+      "detail": "{\"lit\":{\"n\":6,\"s\":2},\"alone\":[]}"
+    },
+    {
+      "name": "2-05 b6 exact",
+      "ok": true,
+      "detail": "{\"lit\":{\"s\":2},\"alone\":[\"Ag\",\"Au\"]}"
+    },
+    {
+      "name": "R-03: chemistry leaves the noble family — 8 cells lit at b5",
+      "ok": true,
+      "detail": "8 lit: {\"n\":6,\"s\":2}"
+    },
+    {
+      "name": "R-03: the furnace leaves two — 2 cells lit at b6, live",
+      "ok": true,
+      "detail": "2 lit, alone=Ag,Au"
+    },
+    {
+      "name": "forward handoff 2-05 b6 → 2-06 b0",
+      "ok": true,
+      "detail": "2-06-the-abstraction-ladder b0 containers=1"
+    },
+    {
+      "name": "backward handoff 2-06 b0 → 2-05 b6 (lands the end state, not black)",
+      "ok": true,
+      "detail": "2-05-two-survivors b6 alone=Ag,Au"
+    },
+    {
+      "name": "forward handoff 2-04 b8 → 2-05 b0",
+      "ok": true,
+      "detail": "2-05-two-survivors b0"
+    },
+    {
+      "name": "live advance to b1",
+      "ok": true,
+      "detail": "b1 lit g,i,n,r,s,x"
+    },
+    {
+      "name": "live advance to b2",
+      "ok": true,
+      "detail": "b2 lit i,n,r,s,x"
+    },
+    {
+      "name": "live advance to b3",
+      "ok": true,
+      "detail": "b3 lit i,n,s,x"
+    },
+    {
+      "name": "live advance to b4",
+      "ok": true,
+      "detail": "b4 lit i,n,s"
+    },
+    {
+      "name": "live advance to b5",
+      "ok": true,
+      "detail": "b5 lit n,s"
+    },
+    {
+      "name": "live advance to b6",
+      "ok": true,
+      "detail": "b6 lit s"
+    }
+  ]
+}

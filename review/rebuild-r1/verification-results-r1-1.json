@@ -1,0 +1,292 @@
+[
+  {
+    "name": "traversal forward sequence",
+    "pass": true,
+    "detail": "[[0,0],[0,1],[0,2],[1,0],[1,1],[1,2],[1,3],[2,0],[2,1],[2,2],[2,3],[2,4],[2,5],[3,0],[3,1],[4,0],[4,1],[4,2],[4,3],[4,4],[4,5],[5,0]]"
+  },
+  {
+    "name": "traversal forward integrity",
+    "pass": true,
+    "detail": "one active, one mounted, non-empty at every step"
+  },
+  {
+    "name": "seam slide reached",
+    "pass": true,
+    "detail": "id=2-01-section-opener"
+  },
+  {
+    "name": "seam legacy 2.01 images loaded",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "traversal backward to start",
+    "pass": true,
+    "detail": "10 steps"
+  },
+  {
+    "name": "traversal fast re-forward",
+    "pass": true,
+    "detail": "35 advances, ends on 2-01-section-opener"
+  },
+  {
+    "name": "direct-entry b0 flags",
+    "pass": true,
+    "detail": "{\"step\":\"0\",\"token\":true,\"question\":false,\"questionOpacity\":\"0.00\",\"facts\":[false,false,false],\"factOpacities\":[\"0.00\",\"0.00\",\"0.00\"],\"title\":false,\"titleOpacity\":\"0.00\"}"
+  },
+  {
+    "name": "direct-entry b1 flags",
+    "pass": true,
+    "detail": "{\"step\":\"1\",\"token\":true,\"question\":true,\"questionOpacity\":\"1.00\",\"facts\":[false,false,false],\"factOpacities\":[\"0.00\",\"0.00\",\"0.00\"],\"title\":false,\"titleOpacity\":\"0.00\"}"
+  },
+  {
+    "name": "direct-entry b1 question opacity",
+    "pass": true,
+    "detail": "got 1.00"
+  },
+  {
+    "name": "direct-entry b2 flags",
+    "pass": true,
+    "detail": "{\"step\":\"2\",\"token\":true,\"question\":true,\"questionOpacity\":\"0.30\",\"facts\":[true,false,false],\"factOpacities\":[\"1.00\",\"0.00\",\"0.00\"],\"title\":false,\"titleOpacity\":\"0.00\"}"
+  },
+  {
+    "name": "direct-entry b2 question opacity",
+    "pass": true,
+    "detail": "got 0.30"
+  },
+  {
+    "name": "direct-entry b2 fact opacities settled",
+    "pass": true,
+    "detail": "[\"1.00\",\"0.00\",\"0.00\"]"
+  },
+  {
+    "name": "direct-entry b3 flags",
+    "pass": true,
+    "detail": "{\"step\":\"3\",\"token\":true,\"question\":true,\"questionOpacity\":\"0.30\",\"facts\":[true,true,false],\"factOpacities\":[\"1.00\",\"1.00\",\"0.00\"],\"title\":false,\"titleOpacity\":\"0.00\"}"
+  },
+  {
+    "name": "direct-entry b3 question opacity",
+    "pass": true,
+    "detail": "got 0.30"
+  },
+  {
+    "name": "direct-entry b3 fact opacities settled",
+    "pass": true,
+    "detail": "[\"1.00\",\"1.00\",\"0.00\"]"
+  },
+  {
+    "name": "direct-entry b4 flags",
+    "pass": true,
+    "detail": "{\"step\":\"4\",\"token\":true,\"question\":true,\"questionOpacity\":\"0.30\",\"facts\":[true,true,true],\"factOpacities\":[\"1.00\",\"1.00\",\"1.00\"],\"title\":false,\"titleOpacity\":\"0.00\"}"
+  },
+  {
+    "name": "direct-entry b4 question opacity",
+    "pass": true,
+    "detail": "got 0.30"
+  },
+  {
+    "name": "direct-entry b4 fact opacities settled",
+    "pass": true,
+    "detail": "[\"1.00\",\"1.00\",\"1.00\"]"
+  },
+  {
+    "name": "direct-entry b5 flags",
+    "pass": true,
+    "detail": "{\"step\":\"5\",\"token\":false,\"question\":false,\"questionOpacity\":\"0.00\",\"facts\":[false,false,false],\"factOpacities\":[\"0.00\",\"0.00\",\"0.00\"],\"title\":true,\"titleOpacity\":\"1.00\"}"
+  },
+  {
+    "name": "direct-entry b5 title opacity",
+    "pass": true,
+    "detail": "got 1.00"
+  },
+  {
+    "name": "reduced-motion direct b0 flags",
+    "pass": true,
+    "detail": "{\"step\":\"0\",\"token\":true,\"question\":false,\"questionOpacity\":\"0.00\",\"facts\":[false,false,false],\"factOpacities\":[\"0.00\",\"0.00\",\"0.00\"],\"title\":false,\"titleOpacity\":\"0.00\"}"
+  },
+  {
+    "name": "reduced-motion direct b1 flags",
+    "pass": true,
+    "detail": "{\"step\":\"1\",\"token\":true,\"question\":true,\"questionOpacity\":\"1.00\",\"facts\":[false,false,false],\"factOpacities\":[\"0.00\",\"0.00\",\"0.00\"],\"title\":false,\"titleOpacity\":\"0.00\"}"
+  },
+  {
+    "name": "reduced-motion direct b1 question opacity",
+    "pass": true,
+    "detail": "got 1.00"
+  },
+  {
+    "name": "reduced-motion direct b2 flags",
+    "pass": true,
+    "detail": "{\"step\":\"2\",\"token\":true,\"question\":true,\"questionOpacity\":\"0.30\",\"facts\":[true,false,false],\"factOpacities\":[\"1.00\",\"0.00\",\"0.00\"],\"title\":false,\"titleOpacity\":\"0.00\"}"
+  },
+  {
+    "name": "reduced-motion direct b2 question opacity",
+    "pass": true,
+    "detail": "got 0.30"
+  },
+  {
+    "name": "reduced-motion direct b2 fact opacities settled",
+    "pass": true,
+    "detail": "[\"1.00\",\"0.00\",\"0.00\"]"
+  },
+  {
+    "name": "reduced-motion direct b3 flags",
+    "pass": true,
+    "detail": "{\"step\":\"3\",\"token\":true,\"question\":true,\"questionOpacity\":\"0.30\",\"facts\":[true,true,false],\"factOpacities\":[\"1.00\",\"1.00\",\"0.00\"],\"title\":false,\"titleOpacity\":\"0.00\"}"
+  },
+  {
+    "name": "reduced-motion direct b3 question opacity",
+    "pass": true,
+    "detail": "got 0.30"
+  },
+  {
+    "name": "reduced-motion direct b3 fact opacities settled",
+    "pass": true,
+    "detail": "[\"1.00\",\"1.00\",\"0.00\"]"
+  },
+  {
+    "name": "reduced-motion direct b4 flags",
+    "pass": true,
+    "detail": "{\"step\":\"4\",\"token\":true,\"question\":true,\"questionOpacity\":\"0.30\",\"facts\":[true,true,true],\"factOpacities\":[\"1.00\",\"1.00\",\"1.00\"],\"title\":false,\"titleOpacity\":\"0.00\"}"
+  },
+  {
+    "name": "reduced-motion direct b4 question opacity",
+    "pass": true,
+    "detail": "got 0.30"
+  },
+  {
+    "name": "reduced-motion direct b4 fact opacities settled",
+    "pass": true,
+    "detail": "[\"1.00\",\"1.00\",\"1.00\"]"
+  },
+  {
+    "name": "reduced-motion direct b5 flags",
+    "pass": true,
+    "detail": "{\"step\":\"5\",\"token\":false,\"question\":false,\"questionOpacity\":\"0.00\",\"facts\":[false,false,false],\"factOpacities\":[\"0.00\",\"0.00\",\"0.00\"],\"title\":true,\"titleOpacity\":\"1.00\"}"
+  },
+  {
+    "name": "reduced-motion direct b5 title opacity",
+    "pass": true,
+    "detail": "got 1.00"
+  },
+  {
+    "name": "reduced-motion live b1 flags",
+    "pass": true,
+    "detail": "{\"step\":\"1\",\"token\":true,\"question\":true,\"questionOpacity\":\"1.00\",\"facts\":[false,false,false],\"factOpacities\":[\"0.00\",\"0.00\",\"0.00\"],\"title\":false,\"titleOpacity\":\"0.00\"}"
+  },
+  {
+    "name": "reduced-motion live b1 question opacity",
+    "pass": true,
+    "detail": "got 1.00"
+  },
+  {
+    "name": "reduced-motion live b2 flags",
+    "pass": true,
+    "detail": "{\"step\":\"2\",\"token\":true,\"question\":true,\"questionOpacity\":\"0.30\",\"facts\":[true,false,false],\"factOpacities\":[\"1.00\",\"0.00\",\"0.00\"],\"title\":false,\"titleOpacity\":\"0.00\"}"
+  },
+  {
+    "name": "reduced-motion live b2 question opacity",
+    "pass": true,
+    "detail": "got 0.30"
+  },
+  {
+    "name": "reduced-motion live b2 fact opacities settled",
+    "pass": true,
+    "detail": "[\"1.00\",\"0.00\",\"0.00\"]"
+  },
+  {
+    "name": "reduced-motion live b3 flags",
+    "pass": true,
+    "detail": "{\"step\":\"3\",\"token\":true,\"question\":true,\"questionOpacity\":\"0.30\",\"facts\":[true,true,false],\"factOpacities\":[\"1.00\",\"1.00\",\"0.00\"],\"title\":false,\"titleOpacity\":\"0.00\"}"
+  },
+  {
+    "name": "reduced-motion live b3 question opacity",
+    "pass": true,
+    "detail": "got 0.30"
+  },
+  {
+    "name": "reduced-motion live b3 fact opacities settled",
+    "pass": true,
+    "detail": "[\"1.00\",\"1.00\",\"0.00\"]"
+  },
+  {
+    "name": "reduced-motion live b4 flags",
+    "pass": true,
+    "detail": "{\"step\":\"4\",\"token\":true,\"question\":true,\"questionOpacity\":\"0.30\",\"facts\":[true,true,true],\"factOpacities\":[\"1.00\",\"1.00\",\"1.00\"],\"title\":false,\"titleOpacity\":\"0.00\"}"
+  },
+  {
+    "name": "reduced-motion live b4 question opacity",
+    "pass": true,
+    "detail": "got 0.30"
+  },
+  {
+    "name": "reduced-motion live b4 fact opacities settled",
+    "pass": true,
+    "detail": "[\"1.00\",\"1.00\",\"1.00\"]"
+  },
+  {
+    "name": "reduced-motion live b5 flags",
+    "pass": true,
+    "detail": "{\"step\":\"5\",\"token\":false,\"question\":false,\"questionOpacity\":\"0.00\",\"facts\":[false,false,false],\"factOpacities\":[\"0.00\",\"0.00\",\"0.00\"],\"title\":true,\"titleOpacity\":\"1.00\"}"
+  },
+  {
+    "name": "reduced-motion live b5 title opacity",
+    "pass": true,
+    "detail": "got 1.00"
+  },
+  {
+    "name": "overlay open 1-02-the-conversion",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "overlay text verbatim 1-02-the-conversion",
+    "pass": true,
+    "detail": "len=935"
+  },
+  {
+    "name": "overlay arrows render 1-02-the-conversion",
+    "pass": true,
+    "detail": "plain-text markers present"
+  },
+  {
+    "name": "overlay scroll 1-02-the-conversion",
+    "pass": true,
+    "detail": "scrollHeight=369 clientHeight=369 overflowY=auto"
+  },
+  {
+    "name": "second window text 1-02-the-conversion",
+    "pass": true,
+    "detail": "title=\"Speaker Notes\" len=935"
+  },
+  {
+    "name": "overlay open 1-05-the-promise",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "overlay text verbatim 1-05-the-promise",
+    "pass": true,
+    "detail": "len=970"
+  },
+  {
+    "name": "overlay arrows render 1-05-the-promise",
+    "pass": true,
+    "detail": "plain-text markers present"
+  },
+  {
+    "name": "overlay scroll 1-05-the-promise",
+    "pass": true,
+    "detail": "scrollHeight=528 clientHeight=528 overflowY=auto"
+  },
+  {
+    "name": "second window text 1-05-the-promise",
+    "pass": true,
+    "detail": "title=\"Speaker Notes\" len=970"
+  },
+  {
+    "name": "console clean across all passes",
+    "pass": true,
+    "detail": "0 messages"
+  }
+]

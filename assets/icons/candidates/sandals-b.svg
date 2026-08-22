@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="96" height="96" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:#e9e4da">
+<!-- sandals B — the harness: The sandal reduced to its straps: toe post with its dot, the V running back, the heel band closing the loop — no outsole at all. -->
+<path d="M24 7 L24 13"/>
+        <path d="M24 13 L12.5 27 M24 13 L35.5 27"/>
+        <path d="M12.5 27 C16 36.5 32 36.5 35.5 27"/>
+        <circle cx="24" cy="7" r="2" fill="currentColor" stroke="none"/>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="96" height="96" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:#e9e4da">
+<!-- measure A — the beam balance: The oldest instrument of monetary measure: post, beam, two hanging pans — value weighed, not guessed. -->
+<path d="M24 13 L24 40"/>
+        <path d="M17 40 L31 40"/>
+        <path d="M10 13 L38 13"/>
+        <path d="M10 13 L10 22.5 M38 13 L38 22.5"/>
+        <path d="M4.5 22.5 C7 28 13 28 15.5 22.5"/>
+        <path d="M32.5 22.5 C35 28 41 28 43.5 22.5"/>
+        <circle cx="24" cy="13" r="1.8" fill="currentColor" stroke="none"/><circle cx="10" cy="22.5" r="1.5" fill="currentColor" stroke="none"/><circle cx="38" cy="22.5" r="1.5" fill="currentColor" stroke="none"/>
+</svg>

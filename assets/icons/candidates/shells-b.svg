@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="96" height="96" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:#e9e4da">
+<!-- shells B — the aperture: The cowrie reduced to its mouth: two lip arcs, the S between them, tooth ticks, dot terminals — the part that names the shell. -->
+<path d="M17.5 9.5 C14 16 14 32 17.5 38.5"/>
+        <path d="M30.5 9.5 C34 16 34 32 30.5 38.5"/>
+        <path d="M24 6.5 C22 13 22 18.5 24 24 C26 29.5 26 35 24 41.5"/>
+        <path d="M20.6 13.5 L25.2 14 M20.4 20 L25 20.4 M22.8 26.5 L27.4 26.9 M22.6 32.8 L27.2 33.2"/>
+        <circle cx="24" cy="6.5" r="1.8" fill="currentColor" stroke="none"/><circle cx="24" cy="41.5" r="1.8" fill="currentColor" stroke="none"/>
+</svg>

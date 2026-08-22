@@ -1,0 +1,919 @@
+{
+  "phase": "R7",
+  "suite": "static gates",
+  "base": "main",
+  "checks": 182,
+  "failures": 0,
+  "results": [
+    {
+      "name": "FREEZE: comparisonRows byte-identical to the branch point",
+      "ok": true,
+      "detail": "10 properties × 5 candidates = 50 scores unchanged"
+    },
+    {
+      "name": "FREEZE: the five candidates (id, label, group) unchanged",
+      "ok": true,
+      "detail": "id: 'gold',\n    label: 'GOLD',\n    group: 'monetary'|id: 'fiat',\n    label: 'FIAT',\n    group: 'monetary'|id: 'bitcoin',\n    label: 'BITCOIN',\n    group: 'monetary'|id: 'property',\n    label: 'REAL ES"
+    },
+    {
+      "name": "FREEZE: the ten failure/property pairs untouched",
+      "ok": true,
+      "detail": "file identical"
+    },
+    {
+      "name": "FREEZE: 4.23 visible frame (kicker + conclusion) byte-identical",
+      "ok": true,
+      "detail": "final frame unchanged"
+    },
+    {
+      "name": "FREEZE: 4.23 CSS \".s4-investment-case__conclusion {\" unchanged",
+      "ok": true,
+      "detail": "rule unchanged"
+    },
+    {
+      "name": "FREEZE: 4.23 CSS \".s4-investment-case__kicker\" unchanged",
+      "ok": true,
+      "detail": "rule unchanged"
+    },
+    {
+      "name": "banned term absent: \"engineered\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "banned term absent: \"purpose-built\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "banned term absent: \"repurposed\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "banned term absent: \"designed as a solution\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "retired line absent (the void printing line): \"You can print claims\"",
+      "ok": true,
+      "detail": "found on stage or in notes"
+    },
+    {
+      "name": "retired line absent (the pre-amendment table line): \"Don’t trust the table\"",
+      "ok": true,
+      "detail": "found on stage or in notes"
+    },
+    {
+      "name": "retired line absent (the pre-amendment table line (ASCII)): \"Don't trust the table\"",
+      "ok": true,
+      "detail": "found on stage or in notes"
+    },
+    {
+      "name": "retired line absent (the pre-amendment table line, second half): \"Verify every score.\"",
+      "ok": true,
+      "detail": "found on stage or in notes"
+    },
+    {
+      "name": "retired line absent (the Florian-era attribution): \"German investment advisor\"",
+      "ok": true,
+      "detail": "found on stage or in notes"
+    },
+    {
+      "name": "retired line absent (the retired ending): \"perfect engineered solution\"",
+      "ok": true,
+      "detail": "found on stage or in notes"
+    },
+    {
+      "name": "\"Don’t trust. Verify.\" on stage exactly twice",
+      "ok": true,
+      "detail": "16-the-comparison.js, 20b-what-would-change-these-scores.js"
+    },
+    {
+      "name": "  …and the two are 4.16 and 4.20b",
+      "ok": true,
+      "detail": "16-the-comparison.js, 20b-what-would-change-these-scores.js"
+    },
+    {
+      "name": "American English: no \"monetisation\" in copy or notes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "American English: no \"monetise\" in copy or notes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "American English: no \"recognisable\" in copy or notes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "American English: no \"specialised\" in copy or notes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "American English: no \"optimised\" in copy or notes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "American English: no \"normalise\" in copy or notes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "American English: no \"colour\" in copy or notes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "American English: no \"behaviour\" in copy or notes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "American English: no \"favour\" in copy or notes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "American English: no \"centre of\" in copy or notes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "American English: no \"analyse\" in copy or notes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "American English: no \"judgement\" in copy or notes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "American English: no \"jewellery\" in copy or notes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "American English: no \"labour\" in copy or notes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "typographic apostrophes: no ASCII apostrophe between letters",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "typographic apostrophes: Section 4/5 CSS comments clean",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "no transcript artifacts (L1: style markers)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pacing: 01-define-the-job.js — 4 builds / 4 arrows",
+      "ok": true,
+      "detail": "4 vs 4"
+    },
+    {
+      "name": "pacing: 03-simple-exchange.js — 4 builds / 4 arrows",
+      "ok": true,
+      "detail": "4 vs 4"
+    },
+    {
+      "name": "pacing: 04-unfinished-exchange.js — 4 builds / 4 arrows",
+      "ok": true,
+      "detail": "4 vs 4"
+    },
+    {
+      "name": "pacing: 05-spend-or-save.js — 4 builds / 4 arrows",
+      "ok": true,
+      "detail": "4 vs 4"
+    },
+    {
+      "name": "pacing: 06-claim-and-carrier.js — 4 builds / 4 arrows",
+      "ok": true,
+      "detail": "4 vs 4"
+    },
+    {
+      "name": "pacing: 07-store-of-value-function.js — 5 builds / 5 arrows",
+      "ok": true,
+      "detail": "5 vs 5"
+    },
+    {
+      "name": "pacing: 08-100-year-test.js — 3 builds / 3 arrows",
+      "ok": true,
+      "detail": "3 vs 3"
+    },
+    {
+      "name": "pacing: 09-future-is-unknowable.js — 5 builds / 5 arrows",
+      "ok": true,
+      "detail": "5 vs 5"
+    },
+    {
+      "name": "pacing: 10-invert-the-question.js — 2 builds / 2 arrows",
+      "ok": true,
+      "detail": "2 vs 2"
+    },
+    {
+      "name": "pacing: 11-carrier-failures-i.js — 5 builds / 5 arrows",
+      "ok": true,
+      "detail": "5 vs 5"
+    },
+    {
+      "name": "pacing: 12-carrier-failures-ii.js — 5 builds / 5 arrows",
+      "ok": true,
+      "detail": "5 vs 5"
+    },
+    {
+      "name": "pacing: 13-failure-to-requirement.js — 2 builds / 2 arrows",
+      "ok": true,
+      "detail": "2 vs 2"
+    },
+    {
+      "name": "pacing: 14-ten-properties.js — 2 builds / 2 arrows",
+      "ok": true,
+      "detail": "2 vs 2"
+    },
+    {
+      "name": "pacing: 15-framework-to-comparison.js — 4 builds / 4 arrows",
+      "ok": true,
+      "detail": "4 vs 4"
+    },
+    {
+      "name": "pacing: 16-the-comparison.js — 3 builds / 3 arrows",
+      "ok": true,
+      "detail": "3 vs 3"
+    },
+    {
+      "name": "pacing: 17-store-of-value-function-migrates.js — 3 builds / 3 arrows",
+      "ok": true,
+      "detail": "3 vs 3"
+    },
+    {
+      "name": "pacing: 18-monetary-premium.js — 3 builds / 3 arrows",
+      "ok": true,
+      "detail": "3 vs 3"
+    },
+    {
+      "name": "pacing: 19-other-assets-do-moneys-job.js — 5 builds / 5 arrows",
+      "ok": true,
+      "detail": "5 vs 5"
+    },
+    {
+      "name": "pacing: 20-bitcoin-does-not-replace-everything.js — 7 builds / 7 arrows",
+      "ok": true,
+      "detail": "7 vs 7"
+    },
+    {
+      "name": "pacing: 20b-what-would-change-these-scores.js — 5 builds / 5 arrows",
+      "ok": true,
+      "detail": "5 vs 5"
+    },
+    {
+      "name": "pacing: 21-marginal-store-of-value-decision.js — 2 builds / 2 arrows",
+      "ok": true,
+      "detail": "2 vs 2"
+    },
+    {
+      "name": "pacing: 22-fixed-supply-reprices-at-margin.js — 3 builds / 3 arrows",
+      "ok": true,
+      "detail": "3 vs 3"
+    },
+    {
+      "name": "pacing: 23-investment-case-from-first-principles.js — 2 builds / 2 arrows",
+      "ok": true,
+      "detail": "2 vs 2"
+    },
+    {
+      "name": "pacing: 01-thank-you.js — 2 builds / 2 arrows",
+      "ok": true,
+      "detail": "2 vs 2"
+    },
+    {
+      "name": "pacing: every Section 4 + close slide audited",
+      "ok": true,
+      "detail": "24 slides"
+    },
+    {
+      "name": "script voice: 01-define-the-job.js has no explainer voice",
+      "ok": true,
+      "detail": "01-define-the-job.js"
+    },
+    {
+      "name": "script voice: 01-define-the-job.js carries at least one advance",
+      "ok": true,
+      "detail": "01-define-the-job.js"
+    },
+    {
+      "name": "script voice: 03-simple-exchange.js has no explainer voice",
+      "ok": true,
+      "detail": "03-simple-exchange.js"
+    },
+    {
+      "name": "script voice: 03-simple-exchange.js carries at least one advance",
+      "ok": true,
+      "detail": "03-simple-exchange.js"
+    },
+    {
+      "name": "script voice: 04-unfinished-exchange.js has no explainer voice",
+      "ok": true,
+      "detail": "04-unfinished-exchange.js"
+    },
+    {
+      "name": "script voice: 04-unfinished-exchange.js carries at least one advance",
+      "ok": true,
+      "detail": "04-unfinished-exchange.js"
+    },
+    {
+      "name": "script voice: 05-spend-or-save.js has no explainer voice",
+      "ok": true,
+      "detail": "05-spend-or-save.js"
+    },
+    {
+      "name": "script voice: 05-spend-or-save.js carries at least one advance",
+      "ok": true,
+      "detail": "05-spend-or-save.js"
+    },
+    {
+      "name": "script voice: 06-claim-and-carrier.js has no explainer voice",
+      "ok": true,
+      "detail": "06-claim-and-carrier.js"
+    },
+    {
+      "name": "script voice: 06-claim-and-carrier.js carries at least one advance",
+      "ok": true,
+      "detail": "06-claim-and-carrier.js"
+    },
+    {
+      "name": "script voice: 07-store-of-value-function.js has no explainer voice",
+      "ok": true,
+      "detail": "07-store-of-value-function.js"
+    },
+    {
+      "name": "script voice: 07-store-of-value-function.js carries at least one advance",
+      "ok": true,
+      "detail": "07-store-of-value-function.js"
+    },
+    {
+      "name": "script voice: 08-100-year-test.js has no explainer voice",
+      "ok": true,
+      "detail": "08-100-year-test.js"
+    },
+    {
+      "name": "script voice: 08-100-year-test.js carries at least one advance",
+      "ok": true,
+      "detail": "08-100-year-test.js"
+    },
+    {
+      "name": "script voice: 09-future-is-unknowable.js has no explainer voice",
+      "ok": true,
+      "detail": "09-future-is-unknowable.js"
+    },
+    {
+      "name": "script voice: 09-future-is-unknowable.js carries at least one advance",
+      "ok": true,
+      "detail": "09-future-is-unknowable.js"
+    },
+    {
+      "name": "script voice: 10-invert-the-question.js has no explainer voice",
+      "ok": true,
+      "detail": "10-invert-the-question.js"
+    },
+    {
+      "name": "script voice: 10-invert-the-question.js carries at least one advance",
+      "ok": true,
+      "detail": "10-invert-the-question.js"
+    },
+    {
+      "name": "script voice: 11-carrier-failures-i.js has no explainer voice",
+      "ok": true,
+      "detail": "11-carrier-failures-i.js"
+    },
+    {
+      "name": "script voice: 11-carrier-failures-i.js carries at least one advance",
+      "ok": true,
+      "detail": "11-carrier-failures-i.js"
+    },
+    {
+      "name": "script voice: 12-carrier-failures-ii.js has no explainer voice",
+      "ok": true,
+      "detail": "12-carrier-failures-ii.js"
+    },
+    {
+      "name": "script voice: 12-carrier-failures-ii.js carries at least one advance",
+      "ok": true,
+      "detail": "12-carrier-failures-ii.js"
+    },
+    {
+      "name": "script voice: 13-failure-to-requirement.js has no explainer voice",
+      "ok": true,
+      "detail": "13-failure-to-requirement.js"
+    },
+    {
+      "name": "script voice: 13-failure-to-requirement.js carries at least one advance",
+      "ok": true,
+      "detail": "13-failure-to-requirement.js"
+    },
+    {
+      "name": "script voice: 14-ten-properties.js has no explainer voice",
+      "ok": true,
+      "detail": "14-ten-properties.js"
+    },
+    {
+      "name": "script voice: 14-ten-properties.js carries at least one advance",
+      "ok": true,
+      "detail": "14-ten-properties.js"
+    },
+    {
+      "name": "script voice: 15-framework-to-comparison.js has no explainer voice",
+      "ok": true,
+      "detail": "15-framework-to-comparison.js"
+    },
+    {
+      "name": "script voice: 15-framework-to-comparison.js carries at least one advance",
+      "ok": true,
+      "detail": "15-framework-to-comparison.js"
+    },
+    {
+      "name": "script voice: 16-the-comparison.js has no explainer voice",
+      "ok": true,
+      "detail": "16-the-comparison.js"
+    },
+    {
+      "name": "script voice: 16-the-comparison.js carries at least one advance",
+      "ok": true,
+      "detail": "16-the-comparison.js"
+    },
+    {
+      "name": "script voice: 17-store-of-value-function-migrates.js has no explainer voice",
+      "ok": true,
+      "detail": "17-store-of-value-function-migrates.js"
+    },
+    {
+      "name": "script voice: 17-store-of-value-function-migrates.js carries at least one advance",
+      "ok": true,
+      "detail": "17-store-of-value-function-migrates.js"
+    },
+    {
+      "name": "script voice: 18-monetary-premium.js has no explainer voice",
+      "ok": true,
+      "detail": "18-monetary-premium.js"
+    },
+    {
+      "name": "script voice: 18-monetary-premium.js carries at least one advance",
+      "ok": true,
+      "detail": "18-monetary-premium.js"
+    },
+    {
+      "name": "script voice: 19-other-assets-do-moneys-job.js has no explainer voice",
+      "ok": true,
+      "detail": "19-other-assets-do-moneys-job.js"
+    },
+    {
+      "name": "script voice: 19-other-assets-do-moneys-job.js carries at least one advance",
+      "ok": true,
+      "detail": "19-other-assets-do-moneys-job.js"
+    },
+    {
+      "name": "script voice: 20-bitcoin-does-not-replace-everything.js has no explainer voice",
+      "ok": true,
+      "detail": "20-bitcoin-does-not-replace-everything.js"
+    },
+    {
+      "name": "script voice: 20-bitcoin-does-not-replace-everything.js carries at least one advance",
+      "ok": true,
+      "detail": "20-bitcoin-does-not-replace-everything.js"
+    },
+    {
+      "name": "script voice: 20b-what-would-change-these-scores.js has no explainer voice",
+      "ok": true,
+      "detail": "20b-what-would-change-these-scores.js"
+    },
+    {
+      "name": "script voice: 20b-what-would-change-these-scores.js carries at least one advance",
+      "ok": true,
+      "detail": "20b-what-would-change-these-scores.js"
+    },
+    {
+      "name": "script voice: 21-marginal-store-of-value-decision.js has no explainer voice",
+      "ok": true,
+      "detail": "21-marginal-store-of-value-decision.js"
+    },
+    {
+      "name": "script voice: 21-marginal-store-of-value-decision.js carries at least one advance",
+      "ok": true,
+      "detail": "21-marginal-store-of-value-decision.js"
+    },
+    {
+      "name": "script voice: 22-fixed-supply-reprices-at-margin.js has no explainer voice",
+      "ok": true,
+      "detail": "22-fixed-supply-reprices-at-margin.js"
+    },
+    {
+      "name": "script voice: 22-fixed-supply-reprices-at-margin.js carries at least one advance",
+      "ok": true,
+      "detail": "22-fixed-supply-reprices-at-margin.js"
+    },
+    {
+      "name": "script voice: 23-investment-case-from-first-principles.js has no explainer voice",
+      "ok": true,
+      "detail": "23-investment-case-from-first-principles.js"
+    },
+    {
+      "name": "script voice: 23-investment-case-from-first-principles.js carries at least one advance",
+      "ok": true,
+      "detail": "23-investment-case-from-first-principles.js"
+    },
+    {
+      "name": "script voice: 01-thank-you.js has no explainer voice",
+      "ok": true,
+      "detail": "01-thank-you.js"
+    },
+    {
+      "name": "script voice: 01-thank-you.js carries at least one advance",
+      "ok": true,
+      "detail": "01-thank-you.js"
+    },
+    {
+      "name": "verbatim: 04-unfinished-exchange.js carries \"A *social* claim on everyone in general…\"",
+      "ok": true,
+      "detail": "04-unfinished-exchange.js"
+    },
+    {
+      "name": "verbatim: 04-unfinished-exchange.js carries \"what is the bottom layer a claim on…\"",
+      "ok": true,
+      "detail": "04-unfinished-exchange.js"
+    },
+    {
+      "name": "verbatim: 06-claim-and-carrier.js carries \"you cannot print money. You can only print t…\"",
+      "ok": true,
+      "detail": "06-claim-and-carrier.js"
+    },
+    {
+      "name": "verbatim: 08-100-year-test.js carries \"That’s the point of the number.…\"",
+      "ok": true,
+      "detail": "08-100-year-test.js"
+    },
+    {
+      "name": "verbatim: 15-framework-to-comparison.js carries \"Structure, not prophecy…\"",
+      "ok": true,
+      "detail": "15-framework-to-comparison.js"
+    },
+    {
+      "name": "verbatim: 16-the-comparison.js carries \"my judgments, as of 2026…\"",
+      "ok": true,
+      "detail": "16-the-comparison.js"
+    },
+    {
+      "name": "verbatim: 17-store-of-value-function-migrates.js carries \"During transitions, savings diversify…\"",
+      "ok": true,
+      "detail": "17-store-of-value-function-migrates.js"
+    },
+    {
+      "name": "verbatim: 20b-what-would-change-these-scores.js carries \"Q&A ARSENAL (not spoken in the recording)…\"",
+      "ok": true,
+      "detail": "20b-what-would-change-these-scores.js"
+    },
+    {
+      "name": "verbatim: 20b-what-would-change-these-scores.js carries \"history’s worst store-of-value failures were…\"",
+      "ok": true,
+      "detail": "20b-what-would-change-these-scores.js"
+    },
+    {
+      "name": "verbatim: 21-marginal-store-of-value-decision.js carries \"asking it calmly, in advance…\"",
+      "ok": true,
+      "detail": "21-marginal-store-of-value-decision.js"
+    },
+    {
+      "name": "verbatim: 23-investment-case-from-first-principles.js carries \"The monetary rules should be hard to move.…\"",
+      "ok": true,
+      "detail": "23-investment-case-from-first-principles.js"
+    },
+    {
+      "name": "verbatim: 01-thank-you.js carries \"can the rules be moved beneath you?…\"",
+      "ok": true,
+      "detail": "01-thank-you.js"
+    },
+    {
+      "name": "verbatim: 20-bitcoin-does-not-replace-everything.js carries \"It fixes the rules through which the market …\"",
+      "ok": true,
+      "detail": "20-bitcoin-does-not-replace-everything.js"
+    },
+    {
+      "name": "verbatim: 20-bitcoin-does-not-replace-everything.js carries \"the stage, not the verdict…\"",
+      "ok": true,
+      "detail": "20-bitcoin-does-not-replace-everything.js"
+    },
+    {
+      "name": "verbatim: 18-monetary-premium.js carries \"investing has become the new saving…\"",
+      "ok": true,
+      "detail": "18-monetary-premium.js"
+    },
+    {
+      "name": "verbatim: 19-other-assets-do-moneys-job.js carries \"required yield-producing counterparty…\"",
+      "ok": true,
+      "detail": "19-other-assets-do-moneys-job.js"
+    },
+    {
+      "name": "qualification preserved (the durability defense)",
+      "ok": true,
+      "detail": "16-the-comparison.js"
+    },
+    {
+      "name": "qualification preserved (the self-custody honesty)",
+      "ok": true,
+      "detail": "16-the-comparison.js"
+    },
+    {
+      "name": "qualification preserved (the carrying-cost honesty)",
+      "ok": true,
+      "detail": "16-the-comparison.js"
+    },
+    {
+      "name": "qualification preserved (the no-total rule)",
+      "ok": true,
+      "detail": "16-the-comparison.js"
+    },
+    {
+      "name": "qualification preserved (the valuation caveat)",
+      "ok": true,
+      "detail": "16-the-comparison.js"
+    },
+    {
+      "name": "qualification preserved (the demand-floor honesty)",
+      "ok": true,
+      "detail": "19-other-assets-do-moneys-job.js"
+    },
+    {
+      "name": "qualification preserved (the symmetry note)",
+      "ok": true,
+      "detail": "22-fixed-supply-reprices-at-margin.js"
+    },
+    {
+      "name": "qualification preserved (the fiat assumption)",
+      "ok": true,
+      "detail": "15-framework-to-comparison.js"
+    },
+    {
+      "name": "qualification preserved (the bitcoin assumption)",
+      "ok": true,
+      "detail": "15-framework-to-comparison.js"
+    },
+    {
+      "name": "qualification preserved (the real-estate assumption)",
+      "ok": true,
+      "detail": "15-framework-to-comparison.js"
+    },
+    {
+      "name": "qualification preserved (the shares assumption)",
+      "ok": true,
+      "detail": "15-framework-to-comparison.js"
+    },
+    {
+      "name": "qualification preserved (the purchasing-power qualification)",
+      "ok": true,
+      "detail": "07-store-of-value-function.js"
+    },
+    {
+      "name": "qualification preserved (the premium qualification)",
+      "ok": true,
+      "detail": "18-monetary-premium.js"
+    },
+    {
+      "name": "qualification preserved (the volatility qualification)",
+      "ok": true,
+      "detail": "20-bitcoin-does-not-replace-everything.js"
+    },
+    {
+      "name": "color: no hard-coded colors in Section 4/5 slide JS",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "color: R7 introduced no colour that was not already on the deck’s palette",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "color: every colour in R7’s new rules is accent, neutral or unit-warm",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "glyph studio: real-estate has three candidates",
+      "ok": true,
+      "detail": "real-estate"
+    },
+    {
+      "name": "glyph studio: real-estate-a.svg written",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "glyph studio: real-estate-b.svg written",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "glyph studio: real-estate-c.svg written",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "glyph selection recorded: real-estate",
+      "ok": true,
+      "detail": "real-estate"
+    },
+    {
+      "name": "glyph studio: shares has three candidates",
+      "ok": true,
+      "detail": "shares"
+    },
+    {
+      "name": "glyph studio: shares-a.svg written",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "glyph studio: shares-b.svg written",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "glyph studio: shares-c.svg written",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "glyph selection recorded: shares",
+      "ok": true,
+      "detail": "shares"
+    },
+    {
+      "name": "glyph studio: ledger has three candidates",
+      "ok": true,
+      "detail": "ledger"
+    },
+    {
+      "name": "glyph studio: ledger-a.svg written",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "glyph studio: ledger-b.svg written",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "glyph studio: ledger-c.svg written",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "glyph selection recorded: ledger",
+      "ok": true,
+      "detail": "ledger"
+    },
+    {
+      "name": "glyph studio: the contact sheet carries the R7 rows",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "glyphs: the comparison header renders glyphs, not images",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "glyphs: gold/fiat/bitcoin reuse the Section 2 anchors",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "glyphs: the 4.06 carrier lineage is drawn, not photographed",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "retired asset deleted: store_of_value.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "retired asset deleted: carrier_shells.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "retired asset deleted: carrier_gold.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "retired asset deleted: carrier_paper.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "retired asset deleted: carrier_bank_ledgers.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "retired asset deleted: carrier_bitcoin.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "retired asset deleted: comparison_property.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "retired asset deleted: comparison_shares.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "no reference to retired asset: store_of_value",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "no reference to retired asset: carrier_shells",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "no reference to retired asset: carrier_gold",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "no reference to retired asset: carrier_paper",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "no reference to retired asset: carrier_bank_ledgers",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "no reference to retired asset: carrier_bitcoin",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "no reference to retired asset: comparison_property",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "no reference to retired asset: comparison_shares",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "architecture: the shared snap frame exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "architecture: every Section 4/5 slide uses the reconstruction snap",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "structure: the retired opener is gone from the manifest",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "structure: the merged entry is first in Section 4",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "structure: 20b sits between 20 and 21",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "structure: no scene groups declared in Section 4 or the close",
+      "ok": true,
+      "detail": "crossfade default only — recorded as a judgment call"
+    }
+  ]
+}

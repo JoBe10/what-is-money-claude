@@ -1,0 +1,121 @@
+[
+  {
+    "subject": "surgeon",
+    "where": "4.03 — the sensory anchor",
+    "w": 620,
+    "h": 827,
+    "present": false
+  },
+  {
+    "subject": "shoe",
+    "where": "4.04 — what he did not receive",
+    "w": 300,
+    "h": 225,
+    "present": true
+  },
+  {
+    "subject": "meal",
+    "where": "4.04 — what he did not receive",
+    "w": 300,
+    "h": 225,
+    "present": false
+  },
+  {
+    "subject": "wine",
+    "where": "4.04 — what he did not receive",
+    "w": 300,
+    "h": 225,
+    "present": true
+  },
+  {
+    "subject": "shoe",
+    "where": "4.05 — the spend road",
+    "w": 210,
+    "h": 158,
+    "present": true
+  },
+  {
+    "subject": "meal",
+    "where": "4.05 — the spend road",
+    "w": 210,
+    "h": 158,
+    "present": false
+  },
+  {
+    "subject": "wine",
+    "where": "4.05 — the spend road",
+    "w": 210,
+    "h": 158,
+    "present": true
+  },
+  {
+    "subject": "shells",
+    "where": "4.06 — the carrier lineup",
+    "w": 150,
+    "h": 112,
+    "present": true
+  },
+  {
+    "subject": "gold",
+    "where": "4.06 — the carrier lineup",
+    "w": 150,
+    "h": 112,
+    "present": true
+  },
+  {
+    "subject": "paper",
+    "where": "4.06 — the carrier lineup",
+    "w": 150,
+    "h": 112,
+    "present": true
+  },
+  {
+    "subject": "ledger",
+    "where": "4.06 — the carrier lineup",
+    "w": 150,
+    "h": 112,
+    "present": true
+  },
+  {
+    "subject": "bitcoin",
+    "where": "4.06 — the carrier lineup",
+    "w": 150,
+    "h": 112,
+    "present": true
+  },
+  {
+    "subject": "cattle",
+    "where": "2.04 — the contender row (on stage)",
+    "w": 288,
+    "h": 216,
+    "present": false
+  },
+  {
+    "subject": "salt",
+    "where": "2.04 — the contender row (on stage)",
+    "w": 288,
+    "h": 216,
+    "present": false
+  },
+  {
+    "subject": "shells",
+    "where": "2.04 — the contender row (on stage)",
+    "w": 288,
+    "h": 216,
+    "present": true
+  },
+  {
+    "subject": "iron",
+    "where": "2.04 — the contender row (on stage)",
+    "w": 288,
+    "h": 216,
+    "present": false
+  },
+  {
+    "subject": "gold",
+    "where": "2.05 — the arrival (flagged candidate)",
+    "w": 320,
+    "h": 240,
+    "present": true
+  }
+]

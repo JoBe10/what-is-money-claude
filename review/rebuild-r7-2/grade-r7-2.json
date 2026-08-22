@@ -1,0 +1,265 @@
+{
+  "phase": "R7.2",
+  "dir": "assets/dark-field/incoming",
+  "thresholds": {
+    "cornerMax": 6,
+    "borderMax": 6,
+    "darkFracMin": 0.5,
+    "warmthMin": 18,
+    "warmFracMin": 0.9
+  },
+  "images": 4,
+  "checks": 20,
+  "failures": 0,
+  "frameTarget": 0.88,
+  "framing": {
+    "meal": [
+      0.935,
+      -0.8,
+      2.4
+    ],
+    "property": [
+      1.226,
+      -1.6,
+      -3.1
+    ],
+    "shares": [
+      1.104,
+      -0.1,
+      0.8
+    ],
+    "surgeon": [
+      1.005,
+      6.8,
+      5.8
+    ]
+  },
+  "rows": [
+    {
+      "file": "meal.png",
+      "zone": "integrated",
+      "bytes": 1354868,
+      "width": 1187,
+      "height": 912,
+      "corners": {
+        "tl": 0,
+        "tr": 0,
+        "bl": 0,
+        "br": 0
+      },
+      "cornerMax": 0,
+      "border": 1.28,
+      "darkFrac": 0.692,
+      "subjectW": 0.941,
+      "subjectH": 0.714,
+      "subjectDX": 0.008,
+      "subjectDY": -0.024,
+      "highlightFrac": 0.0386,
+      "warmth": 59.5,
+      "highlightRGB": [
+        203,
+        165,
+        143
+      ],
+      "warmFrac": 0.998,
+      "keyAzimuth": 117,
+      "keyOffset": 0.132,
+      "spread": 0.896
+    },
+    {
+      "file": "property.png",
+      "zone": "integrated",
+      "bytes": 985680,
+      "width": 1254,
+      "height": 1254,
+      "corners": {
+        "tl": 0.07,
+        "tr": 0.09,
+        "bl": 0.08,
+        "br": 0.09
+      },
+      "cornerMax": 0.09,
+      "border": 0.08,
+      "darkFrac": 0.791,
+      "subjectW": 0.718,
+      "subjectH": 0.404,
+      "subjectDX": 0.016,
+      "subjectDY": 0.031,
+      "highlightFrac": 0.0204,
+      "warmth": 124.2,
+      "highlightRGB": [
+        218,
+        154,
+        94
+      ],
+      "warmFrac": 0.998,
+      "keyAzimuth": -60,
+      "keyOffset": 0.069,
+      "spread": 0.935
+    },
+    {
+      "file": "shares.png",
+      "zone": "integrated",
+      "bytes": 2163266,
+      "width": 1254,
+      "height": 1254,
+      "corners": {
+        "tl": 0.12,
+        "tr": 0.17,
+        "bl": 0.13,
+        "br": 0.13
+      },
+      "cornerMax": 0.17,
+      "border": 0.15,
+      "darkFrac": 0.519,
+      "subjectW": 0.797,
+      "subjectH": 0.659,
+      "subjectDX": 0.001,
+      "subjectDY": -0.008,
+      "highlightFrac": 0.3294,
+      "warmth": 52.3,
+      "highlightRGB": [
+        202,
+        178,
+        150
+      ],
+      "warmFrac": 0.999,
+      "keyAzimuth": 152,
+      "keyOffset": 0.008,
+      "spread": 0.696
+    },
+    {
+      "file": "surgeon.png",
+      "zone": "integrated",
+      "bytes": 292585,
+      "width": 847,
+      "height": 1014,
+      "corners": {
+        "tl": 0,
+        "tr": 0,
+        "bl": 0,
+        "br": 0
+      },
+      "cornerMax": 0,
+      "border": 0.82,
+      "darkFrac": 0.921,
+      "subjectW": 0.738,
+      "subjectH": 0.876,
+      "subjectDX": -0.068,
+      "subjectDY": -0.058,
+      "highlightFrac": 0.0124,
+      "warmth": 132.7,
+      "highlightRGB": [
+        224,
+        155,
+        91
+      ],
+      "warmFrac": 0.997,
+      "keyAzimuth": -111,
+      "keyOffset": 0.136,
+      "spread": 0.798
+    }
+  ],
+  "results": [
+    {
+      "name": "grade: meal.png — frame corners are black (≤ 6)",
+      "ok": true,
+      "detail": "max corner 0 (tl 0 tr 0 bl 0 br 0)"
+    },
+    {
+      "name": "grade: meal.png — no environment reaches the border (≤ 6)",
+      "ok": true,
+      "detail": "border ring 1.28"
+    },
+    {
+      "name": "grade: meal.png — the subject emerges from darkness (≥ 50% below L16)",
+      "ok": true,
+      "detail": "69.2% dark"
+    },
+    {
+      "name": "grade: meal.png — the key is warm (R−B ≥ 18)",
+      "ok": true,
+      "detail": "R−B 59.5 on 3.86% of the frame, mean highlight rgb(203, 165, 143)"
+    },
+    {
+      "name": "grade: meal.png — the highlight population is warm throughout (≥ 90%)",
+      "ok": true,
+      "detail": "99.8% of highlight pixels warm"
+    },
+    {
+      "name": "grade: property.png — frame corners are black (≤ 6)",
+      "ok": true,
+      "detail": "max corner 0.09 (tl 0.07 tr 0.09 bl 0.08 br 0.09)"
+    },
+    {
+      "name": "grade: property.png — no environment reaches the border (≤ 6)",
+      "ok": true,
+      "detail": "border ring 0.08"
+    },
+    {
+      "name": "grade: property.png — the subject emerges from darkness (≥ 50% below L16)",
+      "ok": true,
+      "detail": "79.1% dark"
+    },
+    {
+      "name": "grade: property.png — the key is warm (R−B ≥ 18)",
+      "ok": true,
+      "detail": "R−B 124.2 on 2.04% of the frame, mean highlight rgb(218, 154, 94)"
+    },
+    {
+      "name": "grade: property.png — the highlight population is warm throughout (≥ 90%)",
+      "ok": true,
+      "detail": "99.8% of highlight pixels warm"
+    },
+    {
+      "name": "grade: shares.png — frame corners are black (≤ 6)",
+      "ok": true,
+      "detail": "max corner 0.17 (tl 0.12 tr 0.17 bl 0.13 br 0.13)"
+    },
+    {
+      "name": "grade: shares.png — no environment reaches the border (≤ 6)",
+      "ok": true,
+      "detail": "border ring 0.15"
+    },
+    {
+      "name": "grade: shares.png — the subject emerges from darkness (≥ 50% below L16)",
+      "ok": true,
+      "detail": "51.9% dark"
+    },
+    {
+      "name": "grade: shares.png — the key is warm (R−B ≥ 18)",
+      "ok": true,
+      "detail": "R−B 52.3 on 32.94% of the frame, mean highlight rgb(202, 178, 150)"
+    },
+    {
+      "name": "grade: shares.png — the highlight population is warm throughout (≥ 90%)",
+      "ok": true,
+      "detail": "99.9% of highlight pixels warm"
+    },
+    {
+      "name": "grade: surgeon.png — frame corners are black (≤ 6)",
+      "ok": true,
+      "detail": "max corner 0 (tl 0 tr 0 bl 0 br 0)"
+    },
+    {
+      "name": "grade: surgeon.png — no environment reaches the border (≤ 6)",
+      "ok": true,
+      "detail": "border ring 0.82"
+    },
+    {
+      "name": "grade: surgeon.png — the subject emerges from darkness (≥ 50% below L16)",
+      "ok": true,
+      "detail": "92.1% dark"
+    },
+    {
+      "name": "grade: surgeon.png — the key is warm (R−B ≥ 18)",
+      "ok": true,
+      "detail": "R−B 132.7 on 1.24% of the frame, mean highlight rgb(224, 155, 91)"
+    },
+    {
+      "name": "grade: surgeon.png — the highlight population is warm throughout (≥ 90%)",
+      "ok": true,
+      "detail": "99.7% of highlight pixels warm"
+    }
+  ]
+}

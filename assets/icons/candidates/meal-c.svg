@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="96" height="96" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:#e9e4da">
+<!-- meal C — the fork and the cut: Utensil and food together: three-tine fork left, the cut as an open arc right — the moment of eating rather than the object. -->
+<path d="M12 10 L12 20 M17 10 L17 20 M22 10 L22 20"/>
+        <path d="M12 20 C12 24 17 24.5 17 28 L17 40"/>
+        <path d="M27 22 C31 18 38 18.5 41 23 C43 27 39.5 32 34 32 C29 32 26.5 28 27 22 Z"/>
+        <circle cx="17" cy="40" r="1.8" fill="currentColor" stroke="none"/>
+</svg>

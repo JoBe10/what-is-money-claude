@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="96" height="96" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:#e9e4da">
+<!-- collectible C — the cut stone: A faceted gem, flat-on: crown, girdle line, pavilion point — the scarce, interesting object before it is anyone’s money. -->
+<path d="M16.5 10.5 L31.5 10.5 L38.5 19 L24 39 L9.5 19 Z"/>
+        <path d="M9.5 19 L38.5 19"/>
+        <circle cx="24" cy="14.8" r="1.5" fill="currentColor" stroke="none"/>
+</svg>

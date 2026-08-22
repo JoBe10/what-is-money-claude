@@ -1,0 +1,40 @@
+{
+  "variant": "reduced-motion",
+  "date": "2026-07-29T09:21:02.659Z",
+  "checks": 5,
+  "failures": 0,
+  "screenshots": 0,
+  "consoleLines": 0,
+  "results": [
+    {
+      "section": "traversal",
+      "name": "deck is 47 slides",
+      "ok": true,
+      "detail": "total=47"
+    },
+    {
+      "section": "traversal",
+      "name": "forward pass complete",
+      "ok": true,
+      "detail": "179 steps to 5-01-thank-you, 47 slides"
+    },
+    {
+      "section": "traversal",
+      "name": "backward pass reaches 1.1 b0",
+      "ok": true,
+      "detail": "72 steps"
+    },
+    {
+      "section": "traversal",
+      "name": "triangle backward handoff lands 2-01 b3",
+      "ok": true,
+      "detail": "2-01-the-world-without-it b3"
+    },
+    {
+      "section": "traversal",
+      "name": "fast re-forward through Sections 1–2",
+      "ok": true,
+      "detail": "{\"id\":\"3-01-section-opener\",\"containers\":1,\"staleOverlays\":0}"
+    }
+  ]
+}

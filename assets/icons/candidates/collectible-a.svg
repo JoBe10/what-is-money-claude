@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="96" height="96" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:#e9e4da">
+<!-- collectible A — the strung beads: Three bead dots threaded on a sagging strand — shells and beads, the first goods held for their own strange reasons. -->
+<path d="M7 18 C13 30 35 30 41 18"/>
+        <circle cx="15" cy="24.4" r="2" fill="currentColor" stroke="none"/><circle cx="24" cy="27" r="2" fill="currentColor" stroke="none"/><circle cx="33" cy="24.4" r="2" fill="currentColor" stroke="none"/>
+        <circle cx="7" cy="18" r="1.4" fill="currentColor" stroke="none"/><circle cx="41" cy="18" r="1.4" fill="currentColor" stroke="none"/>
+</svg>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="96" height="96" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:#e9e4da">
+<!-- shells A — the cowrie: The money shell, top view: egg outline, S-curved aperture, four tooth ticks crossing it. -->
+<path d="M24 5.5 C33.5 5.5 39 13 39 23.5 C39 34.5 33 42.5 24 42.5 C15 42.5 9 34.5 9 23.5 C9 13 14.5 5.5 24 5.5 Z"/>
+        <path d="M24 11 C22.4 15.6 22.4 19.8 24 24 C25.6 28.2 25.6 32.4 24 37"/>
+        <path d="M20.8 14.6 L25.4 15 M20.6 21 L25.2 21.3 M22.8 26.7 L27.4 27 M22.6 33 L27.2 33.4"/>
+</svg>

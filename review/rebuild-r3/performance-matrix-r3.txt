@@ -1,0 +1,8 @@
+waypoint ignition pulse (3-00 b1→b2) :: avg 60.0fps · p95 16.8ms · >20ms 0/90
+functions: token + spoke draw (3-01 b0→b1) :: avg 60.0fps · p95 16.8ms · >20ms 0/109
+ladder: the line draws (3-03 b0→b1) :: avg 56.1fps · p95 16.8ms · >20ms 1/101
+ladder: foundation ignites (3-03 b5→b6) :: avg 60.0fps · p95 16.8ms · >20ms 0/78
+ladder handoff 3-03 b6 → 3-04 b0 :: avg 58.5fps · p95 16.8ms · >20ms 1/76
+palladium: chart draw + hook lift (3-05 b1→b2) :: avg 59.1fps · p95 16.8ms · >20ms 2/130
+layer tower completes (3-06 b2→b3) :: avg 60.0fps · p95 16.8ms · >20ms 0/96
+bitcoin placement settles (3-07 b1→b2) :: avg 60.0fps · p95 16.7ms · >20ms 0/90

@@ -1,0 +1,10 @@
+
+=== HEADLESS · 2026-07-28T14:29:53.388Z ===
+murmuration phase 1 (ambient flock)            avg 54.0 fps · p95 33.3ms · max 50ms · >20ms: 17/163
+murmuration phase 2 (convergence, 5.2s)        avg 49.3 fps · p95 33.4ms · max 34ms · >20ms: 60/277
+elimination: gases drift-off                   avg 60.0 fps · p95 16.8ms · max 17ms · >20ms: 0/163
+elimination: corrosion wave                    avg 39.4 fps · p95 16.8ms · max 767ms · >20ms: 3/107
+elimination: radioactive pulse-out             avg 60.0 fps · p95 16.7ms · max 17ms · >20ms: 0/133
+elimination: impractical settle + survivors    avg 60.0 fps · p95 16.8ms · max 17ms · >20ms: 0/145
+rail camera: 05 b2→b3 ease to metals           avg 60.0 fps · p95 16.7ms · max 17ms · >20ms: 0/127
+rail camera: 09 b0→b1 full-rail pull-back      avg 60.0 fps · p95 16.8ms · max 17ms · >20ms: 0/126

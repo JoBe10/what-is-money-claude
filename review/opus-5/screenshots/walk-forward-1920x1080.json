@@ -1,0 +1,2451 @@
+[
+  {
+    "i": 0,
+    "b": 0,
+    "id": "01-title",
+    "file": "s01-b0-01-title.png",
+    "visibleText": [
+      "A first-principles talk",
+      "What is money?",
+      "And how does Bitcoin fit in?"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 1,
+    "b": 0,
+    "id": "02-question",
+    "file": "s02-b0-02-question.png",
+    "visibleText": [
+      "A Question Hidden in Plain Sight",
+      "The Most Important Question Nobody Asks"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 2,
+    "b": 0,
+    "id": "03-why-care",
+    "file": "s03-b0-03-why-care.png",
+    "visibleText": [
+      "Stakes",
+      "Why should we care?"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 2,
+    "b": 1,
+    "id": "03-why-care",
+    "file": "s03-b1-03-why-care.png",
+    "visibleText": [
+      "Stakes",
+      "Why should we care?",
+      "Money is the contract you signed without reading."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 2,
+    "b": 2,
+    "id": "03-why-care",
+    "file": "s03-b2-03-why-care.png",
+    "visibleText": [
+      "Stakes",
+      "Why should we care?",
+      "Money is the contract you signed without reading.",
+      "You can't defend yourself against something you can't see."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 2,
+    "b": 3,
+    "id": "03-why-care",
+    "file": "s03-b3-03-why-care.png",
+    "visibleText": [
+      "Stakes",
+      "Why should we care?",
+      "Money is the contract you signed without reading.",
+      "You can't defend yourself against something you can't see.",
+      "Misunderstanding money is expensive."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 2,
+    "b": 4,
+    "id": "03-why-care",
+    "file": "s03-b4-03-why-care.png",
+    "visibleText": [
+      "Stakes",
+      "Why should we care?",
+      "Money is the contract you signed without reading.",
+      "You can't defend yourself against something you can't see.",
+      "Misunderstanding money is expensive.",
+      "Bitcoin is money."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 3,
+    "b": 0,
+    "id": "05-matrix",
+    "file": "s04-b0-05-matrix.png",
+    "visibleText": [
+      "Unplugging from the Matrix",
+      "Once you see it, you can’t unsee it."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 4,
+    "b": 0,
+    "id": "06-orange-pill-ingredients",
+    "file": "s05-b0-06-orange-pill-ingredients.png",
+    "visibleText": [
+      "Ingredients of the Orange Pill"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 5,
+    "b": 0,
+    "id": "07-orange-pill-focus",
+    "file": "s06-b0-07-orange-pill-focus.png",
+    "visibleText": [
+      "Ingredients of the Orange Pill"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 6,
+    "b": 0,
+    "id": "08-path-forward",
+    "file": "s07-b0-08-path-forward.png",
+    "visibleText": [
+      "The Journey Ahead",
+      "The Path Forward",
+      "As a disclaimer: this is not investment advice and is purely for educational purposes only."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 6,
+    "b": 1,
+    "id": "08-path-forward",
+    "file": "s07-b1-08-path-forward.png",
+    "visibleText": [
+      "The Journey Ahead",
+      "The Path Forward",
+      "1",
+      "Where money came from",
+      "— a brief history",
+      "As a disclaimer: this is not investment advice and is purely for educational purposes only."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 6,
+    "b": 2,
+    "id": "08-path-forward",
+    "file": "s07-b2-08-path-forward.png",
+    "visibleText": [
+      "The Journey Ahead",
+      "The Path Forward",
+      "1",
+      "Where money came from",
+      "— a brief history",
+      "2",
+      "What money does",
+      "— the three functions",
+      "As a disclaimer: this is not investment advice and is purely for educational purposes only."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 6,
+    "b": 3,
+    "id": "08-path-forward",
+    "file": "s07-b3-08-path-forward.png",
+    "visibleText": [
+      "The Journey Ahead",
+      "The Path Forward",
+      "1",
+      "Where money came from",
+      "— a brief history",
+      "2",
+      "What money does",
+      "— the three functions",
+      "3",
+      "What makes money good",
+      "— an ideal store of value",
+      "As a disclaimer: this is not investment advice and is purely for educational purposes only."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 7,
+    "b": 0,
+    "id": "2-01-section-opener",
+    "file": "s08-b0-2-01-section-opener.png",
+    "visibleText": [
+      "SECTION 02",
+      "Part One",
+      "Where money came from",
+      "A brief history of humanity's most important technology"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 8,
+    "b": 0,
+    "id": "2-02-the-problem",
+    "file": "s09-b0-2-02-the-problem.png",
+    "visibleText": [
+      "The Problem",
+      "The problem that started everything.",
+      "Before money, there was barter. And barter had a",
+      "fatal flaw",
+      "."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 9,
+    "b": 0,
+    "id": "2-03-barter-works",
+    "file": "s10-b0-2-03-barter-works.png",
+    "visibleText": [
+      "The Starting Point",
+      "Sometimes, barter works.",
+      "✓",
+      "B",
+      "Baker",
+      "HAS",
+      "Bread",
+      "WANTS",
+      "Apples",
+      "F",
+      "Farmer",
+      "HAS",
+      "Apples",
+      "WANTS",
+      "Bread"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 10,
+    "b": 0,
+    "id": "2-03-double-coincidence",
+    "file": "s11-b0-2-03-double-coincidence.png",
+    "visibleText": [
+      "The Fatal Flaw",
+      "The double coincidence of wants",
+      "✕",
+      "B",
+      "Baker",
+      "HAS",
+      "Bread",
+      "WANTS",
+      "Apples",
+      "F",
+      "Farmer",
+      "HAS",
+      "Apples",
+      "WANTS",
+      "Meat"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 10,
+    "b": 1,
+    "id": "2-03-double-coincidence",
+    "file": "s11-b1-2-03-double-coincidence.png",
+    "visibleText": [
+      "The Fatal Flaw",
+      "The double coincidence of wants",
+      "✓",
+      "✓",
+      "✓",
+      "B",
+      "Baker",
+      "HAS",
+      "Bread",
+      "WANTS",
+      "Apples",
+      "F",
+      "Farmer",
+      "HAS",
+      "Apples",
+      "WANTS",
+      "Meat",
+      "X",
+      "Butcher",
+      "HAS",
+      "Meat",
+      "WANTS",
+      "Bread"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 10,
+    "b": 2,
+    "id": "2-03-double-coincidence",
+    "file": "s11-b2-2-03-double-coincidence.png",
+    "visibleText": [
+      "The Fatal Flaw",
+      "The double coincidence of wants",
+      "✕",
+      "B",
+      "Baker",
+      "HAS",
+      "Bread",
+      "WANTS",
+      "Apples",
+      "F",
+      "Farmer",
+      "HAS",
+      "Apples",
+      "WANTS",
+      "Meat",
+      "X",
+      "Butcher",
+      "HAS",
+      "Meat",
+      "WANTS",
+      "Eggs",
+      "?",
+      "Someone with eggs who wants bread"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 11,
+    "b": 0,
+    "id": "2-04-the-solution",
+    "file": "s12-b0-2-04-the-solution.png",
+    "visibleText": [
+      "The Solution",
+      "Humans found a way.",
+      "Not by design. Not by decree.",
+      "By",
+      "spontaneous",
+      "market consensus."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 12,
+    "b": 0,
+    "id": "2-05-insight-emerged",
+    "file": "s13-b0-2-05-insight-emerged.png",
+    "visibleText": [
+      "Key Insight 01",
+      "Money emerged.",
+      "It wasn’t invented.",
+      "Money has never had to come from the government — in fact, until recently it never did. Throughout history, humans have converged on money naturally, through free market competition. People gravitate toward whichever good best fulfills the roles of money — what economists call the",
+      "most saleable good",
+      ": the item most easily exchanged for anything else.",
+      "Money emerges as",
+      "spontaneous order",
+      "— through practical necessity and market consensus, not by design or decree."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 13,
+    "b": 0,
+    "id": "2-06-insight-iteration",
+    "file": "s14-b0-2-06-insight-iteration.png",
+    "visibleText": [
+      "Key Insight 02",
+      "Each step solved a shortcoming of the previous one.",
+      "Every monetary form we’ll see was an improvement on the last — until it wasn’t. The story of money is humanity’s ongoing search for a better carrier of value."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 14,
+    "b": 0,
+    "id": "2-07-evolution-intro",
+    "file": "s15-b0-2-07-evolution-intro.png",
+    "visibleText": [
+      "The Story",
+      "The Evolution of Money",
+      "GOVERNMENT-ISSUED",
+      "BARTER",
+      "COLLECTIBLES",
+      "PRECIOUS METALS",
+      "GOLD-BACKED",
+      "FIAT",
+      "BITCOIN",
+      "?"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 15,
+    "b": 0,
+    "id": "2-08-barter",
+    "file": "s16-b0-2-08-barter.png",
+    "visibleText": [
+      "The Story",
+      "The Evolution of Money",
+      "GOVERNMENT-ISSUED",
+      "BARTER",
+      "COLLECTIBLES",
+      "PRECIOUS METALS",
+      "GOLD-BACKED",
+      "FIAT",
+      "BITCOIN",
+      "?",
+      "Prehistory",
+      "Barter",
+      "Direct exchange of goods for goods.",
+      "The earliest form of human trade.",
+      "BUT —",
+      "Required the double coincidence of wants. Couldn’t scale beyond small communities."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 16,
+    "b": 0,
+    "id": "2-09-collectibles",
+    "file": "s17-b0-2-09-collectibles.png",
+    "visibleText": [
+      "The Story",
+      "The Evolution of Money",
+      "GOVERNMENT-ISSUED",
+      "BARTER",
+      "COLLECTIBLES",
+      "PRECIOUS METALS",
+      "GOLD-BACKED",
+      "FIAT",
+      "BITCOIN",
+      "?",
+      "~100,000 BCE onwards",
+      "Collectibles",
+      "Shells, beads, salt, cattle — the first widely accepted stores of value.",
+      "Rare, durable, culturally recognized.",
+      "Crossed the double-coincidence barrier — anyone would accept them.",
+      "BUT —",
+      "Not scarce enough. New technology (glass beads, mass harvesting) could inflate the supply overnight."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 17,
+    "b": 0,
+    "id": "2-10-precious-metals",
+    "file": "s18-b0-2-10-precious-metals.png",
+    "visibleText": [
+      "The Story",
+      "The Evolution of Money",
+      "GOVERNMENT-ISSUED",
+      "BARTER",
+      "COLLECTIBLES",
+      "PRECIOUS METALS",
+      "GOLD-BACKED",
+      "FIAT",
+      "BITCOIN",
+      "?",
+      "~600 BCE onwards",
+      "Precious Metals",
+      "Gold and silver emerged through global trade competition.",
+      "Durable, divisible, hard to inflate.",
+      "Universal recognition across cultures.",
+      "BUT —",
+      "Heavy. Hard to transport in large amounts. Difficult to subdivide for small transactions."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 18,
+    "b": 0,
+    "id": "2-11-gold-backed",
+    "file": "s19-b0-2-11-gold-backed.png",
+    "visibleText": [
+      "The Story",
+      "The Evolution of Money",
+      "GOVERNMENT-ISSUED",
+      "BARTER",
+      "COLLECTIBLES",
+      "PRECIOUS METALS",
+      "GOLD-BACKED",
+      "FIAT",
+      "BITCOIN",
+      "?",
+      "1700s — 1971",
+      "Gold-Backed",
+      "Paper certificates redeemable for gold.",
+      "Easier to carry, divide, and transact.",
+      "Kept the gold anchor — supply constrained.",
+      "BUT —",
+      "Required trust in the issuer to actually hold the gold and honor redemptions.",
+      "BUT —",
+      "Rigid monetary supply limited governments and central banks in their spending and flexibility to manage the economy."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 19,
+    "b": 0,
+    "id": "2-12-fiat",
+    "file": "s20-b0-2-12-fiat.png",
+    "visibleText": [
+      "The Story",
+      "The Evolution of Money",
+      "GOVERNMENT-ISSUED",
+      "BARTER",
+      "COLLECTIBLES",
+      "PRECIOUS METALS",
+      "GOLD-BACKED",
+      "FIAT",
+      "BITCOIN",
+      "?",
+      "1971 — today",
+      "Fiat",
+      "Fiat (government-decreed) removed gold constraint, allowing for easier expansion or contraction of money supply.",
+      "BUT —",
+      "Unlimited supply can lead to inflation or currency debasement — requires deep trust."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 20,
+    "b": 0,
+    "id": "2-13-bitcoin",
+    "file": "s21-b0-2-13-bitcoin.png",
+    "visibleText": [
+      "The Story",
+      "The Evolution of Money",
+      "GOVERNMENT-ISSUED",
+      "BARTER",
+      "COLLECTIBLES",
+      "PRECIOUS METALS",
+      "GOLD-BACKED",
+      "FIAT",
+      "BITCOIN",
+      "?",
+      "2009 onwards",
+      "Bitcoin",
+      "Bitcoin introduces digital scarcity, decentralization, censorship resistance, and trustless global value transfer.",
+      "Seeks to combine the best traits of gold's scarcity with the portability and divisibility of fiat, without needing centralized issuers."
+    ],
+    "overflow": [
+      {
+        "cls": "DIV",
+        "box": [
+          115,
+          460,
+          825,
+          1141
+        ]
+      },
+      {
+        "cls": "IMG",
+        "box": [
+          115,
+          460,
+          796,
+          1141
+        ]
+      }
+    ]
+  },
+  {
+    "i": 21,
+    "b": 0,
+    "id": "2-14-transition-out",
+    "file": "s22-b0-2-14-transition-out.png",
+    "visibleText": [
+      "What's Next",
+      "Now we know where money came from.",
+      "Next question:",
+      "what does money actually do?"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 22,
+    "b": 0,
+    "id": "3-01-section-opener",
+    "file": "s23-b0-3-01-section-opener.png",
+    "visibleText": [
+      "SECTION 03",
+      "Part Two",
+      "What money does",
+      "The three functions every money must perform"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 23,
+    "b": 0,
+    "id": "3-02-three-roles",
+    "file": "s24-b0-3-02-three-roles.png",
+    "visibleText": [
+      "The Three Roles",
+      "Money does three jobs.",
+      "Medium of Exchange",
+      "Widely accepted as payment for goods and services."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 23,
+    "b": 1,
+    "id": "3-02-three-roles",
+    "file": "s24-b1-3-02-three-roles.png",
+    "visibleText": [
+      "The Three Roles",
+      "Money does three jobs.",
+      "Medium of Exchange",
+      "Widely accepted as payment for goods and services."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 23,
+    "b": 2,
+    "id": "3-02-three-roles",
+    "file": "s24-b2-3-02-three-roles.png",
+    "visibleText": [
+      "The Three Roles",
+      "Money does three jobs.",
+      "Medium of Exchange",
+      "Widely accepted as payment for goods and services.",
+      "Unit of Account",
+      "Standard measure of value — a common unit for pricing goods and services."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 23,
+    "b": 3,
+    "id": "3-02-three-roles",
+    "file": "s24-b3-3-02-three-roles.png",
+    "visibleText": [
+      "The Three Roles",
+      "Money does three jobs.",
+      "Medium of Exchange",
+      "Widely accepted as payment for goods and services.",
+      "Unit of Account",
+      "Standard measure of value — a common unit for pricing goods and services.",
+      "Store of Value",
+      "Retains purchasing power over time — you can save it and later buy roughly the same amount of goods or services."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 24,
+    "b": 0,
+    "id": "3-04-fiat-fails",
+    "file": "s25-b0-3-04-fiat-fails.png",
+    "visibleText": [
+      "The Real Problem",
+      "Fiat fails the most important function.",
+      "Inflation silently erodes the purchasing power of fiat currencies every year.",
+      "The US dollar has lost over 85% of its purchasing power since 1971.",
+      "People intuitively know this — which is why they don't use fiat as a true store of value.",
+      "Instead, they reach for substitutes:",
+      "gold, real estate, shares, art",
+      "— anything that holds value better.",
+      "Everyone is forced to become an investor — not because they want to, but because saving in fiat is no longer safe.",
+      "Gold",
+      "Real Estate",
+      "Shares",
+      "Art",
+      "Bitcoin"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 25,
+    "b": 0,
+    "id": "3-05-foundation",
+    "file": "s26-b0-3-05-foundation.png",
+    "visibleText": [
+      "The Foundation",
+      "Store of value is the foundation.",
+      "Medium of Exchange",
+      "Widely accepted as payment for goods and services.",
+      "Unit of Account",
+      "Standard measure of value — a common unit for pricing goods and services.",
+      "₿",
+      "Store of Value",
+      "Retains purchasing power over time. Bitcoin is currently emerging as the new store of value of the digital age."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 26,
+    "b": 0,
+    "id": "3-06-monetisation-intro",
+    "file": "s27-b0-3-06-monetisation-intro.png",
+    "visibleText": [
+      "The Path",
+      "The Four Stages of Monetisation",
+      "COLLECTIBLE",
+      "STORE OF VALUE",
+      "MEDIUM OF EXCHANGE",
+      "UNIT OF ACCOUNT",
+      "Every monetary good in history that emerged organically followed this pattern. This applies to money that emerges naturally through free market competition by being selected by the people — not to currency, which the government essentially forces us to use."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 27,
+    "b": 0,
+    "id": "3-07-stage-collectible",
+    "file": "s28-b0-3-07-stage-collectible.png",
+    "visibleText": [
+      "The Path",
+      "The Four Stages of Monetisation",
+      "COLLECTIBLE",
+      "STORE OF VALUE",
+      "MEDIUM OF EXCHANGE",
+      "UNIT OF ACCOUNT",
+      "The first stage",
+      "Collectible",
+      "People start collecting something because it's beautiful, rare, novel, or carries status.",
+      "As more people start collecting it, demand rises and so does its purchasing power."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 28,
+    "b": 0,
+    "id": "3-08-stage-store-of-value",
+    "file": "s29-b0-3-08-stage-store-of-value.png",
+    "visibleText": [
+      "The Path",
+      "The Four Stages of Monetisation",
+      "COLLECTIBLE",
+      "STORE OF VALUE",
+      "MEDIUM OF EXCHANGE",
+      "UNIT OF ACCOUNT",
+      "The second stage",
+      "Store of Value",
+      "Once enough people collect something, it will be recognised as a means of keeping and storing value.",
+      "Purchasing power rises as more people demand it, until it plateaus when widely held."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 29,
+    "b": 0,
+    "id": "3-09-stage-medium-of-exchange",
+    "file": "s30-b0-3-09-stage-medium-of-exchange.png",
+    "visibleText": [
+      "The Path",
+      "The Four Stages of Monetisation",
+      "COLLECTIBLE",
+      "STORE OF VALUE",
+      "MEDIUM OF EXCHANGE",
+      "UNIT OF ACCOUNT",
+      "The third stage",
+      "Medium of Exchange",
+      "Once purchasing power stabilises, a money can be used as a medium of exchange.",
+      "This may take decades or centuries."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 30,
+    "b": 0,
+    "id": "3-10-stage-unit-of-account",
+    "file": "s31-b0-3-10-stage-unit-of-account.png",
+    "visibleText": [
+      "The Path",
+      "The Four Stages of Monetisation",
+      "COLLECTIBLE",
+      "STORE OF VALUE",
+      "MEDIUM OF EXCHANGE",
+      "UNIT OF ACCOUNT",
+      "The final stage — full monetisation",
+      "Unit of Account",
+      "Once a money is widely used as a medium of exchange, goods will be priced in it."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 31,
+    "b": 0,
+    "id": "3-11-where-is-bitcoin",
+    "file": "s32-b0-3-11-where-is-bitcoin.png",
+    "visibleText": [
+      "The Path",
+      "The Four Stages of Monetisation",
+      "COLLECTIBLE",
+      "STORE OF VALUE",
+      "MEDIUM OF EXCHANGE",
+      "UNIT OF ACCOUNT",
+      "₿",
+      "BITCOIN IS HERE",
+      "Bitcoin is transitioning from collectible to store of value.",
+      "Bitcoin has graduated from a niche collectible to a recognised monetary asset.",
+      "Increasingly held by institutions, corporations, and even nation-states.",
+      "Still completing its transition into a credible store of value — purchasing power has been volatile but trending up across multi-year cycles.",
+      "Medium of exchange and unit of account are stages still ahead.",
+      "This is why critics who say \"I can't buy my coffee with Bitcoin\" miss the point. Bitcoin isn't supposed to be a medium of exchange yet — it's still completing the foundation.",
+      "Skipping straight to medium of exchange before establishing store of value is what fiat does.",
+      "We've seen how that ends."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 32,
+    "b": 0,
+    "id": "4-01-ideal-store-of-value",
+    "file": "s33-b0-4-01-ideal-store-of-value.png",
+    "visibleText": [
+      "SECTION 4"
+    ],
+    "overflow": [
+      {
+        "cls": "IMG",
+        "box": [
+          909,
+          -13,
+          1932,
+          1094
+        ]
+      },
+      {
+        "cls": "s4-opener__image-veil",
+        "box": [
+          909,
+          -13,
+          1932,
+          1094
+        ]
+      }
+    ]
+  },
+  {
+    "i": 32,
+    "b": 1,
+    "id": "4-01-ideal-store-of-value",
+    "file": "s33-b1-4-01-ideal-store-of-value.png",
+    "visibleText": [
+      "SECTION 4",
+      "THE IDEAL STORE OF VALUE"
+    ],
+    "overflow": [
+      {
+        "cls": "IMG",
+        "box": [
+          909,
+          -13,
+          1932,
+          1094
+        ]
+      },
+      {
+        "cls": "s4-opener__image-veil",
+        "box": [
+          909,
+          -13,
+          1932,
+          1094
+        ]
+      }
+    ]
+  },
+  {
+    "i": 32,
+    "b": 2,
+    "id": "4-01-ideal-store-of-value",
+    "file": "s33-b2-4-01-ideal-store-of-value.png",
+    "visibleText": [
+      "SECTION 4",
+      "THE IDEAL STORE OF VALUE",
+      "A first-principles analysis"
+    ],
+    "overflow": [
+      {
+        "cls": "IMG",
+        "box": [
+          909,
+          -13,
+          1932,
+          1094
+        ]
+      },
+      {
+        "cls": "s4-opener__image-veil",
+        "box": [
+          909,
+          -13,
+          1932,
+          1094
+        ]
+      }
+    ]
+  },
+  {
+    "i": 32,
+    "b": 3,
+    "id": "4-01-ideal-store-of-value",
+    "file": "s33-b3-4-01-ideal-store-of-value.png",
+    "visibleText": [
+      "SECTION 4",
+      "THE IDEAL STORE OF VALUE",
+      "A first-principles analysis"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 33,
+    "b": 0,
+    "id": "4-02-define-the-job",
+    "file": "s34-b0-4-02-define-the-job.png",
+    "visibleText": [
+      "STORE OF",
+      "VALUE"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 33,
+    "b": 1,
+    "id": "4-02-define-the-job",
+    "file": "s34-b1-4-02-define-the-job.png",
+    "visibleText": [
+      "STORE OF",
+      "VALUE"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 33,
+    "b": 2,
+    "id": "4-02-define-the-job",
+    "file": "s34-b2-4-02-define-the-job.png",
+    "visibleText": [],
+    "overflow": []
+  },
+  {
+    "i": 33,
+    "b": 3,
+    "id": "4-02-define-the-job",
+    "file": "s34-b3-4-02-define-the-job.png",
+    "visibleText": [
+      "What exactly is being stored?"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 33,
+    "b": 4,
+    "id": "4-02-define-the-job",
+    "file": "s34-b4-4-02-define-the-job.png",
+    "visibleText": [
+      "What exactly is being stored?",
+      "Start where money is earned."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 34,
+    "b": 0,
+    "id": "4-03-simple-exchange",
+    "file": "s35-b0-4-03-simple-exchange.png",
+    "visibleText": [
+      "A SIMPLE EXAMPLE",
+      "1 HOUR OF",
+      "SURGERY"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 34,
+    "b": 1,
+    "id": "4-03-simple-exchange",
+    "file": "s35-b1-4-03-simple-exchange.png",
+    "visibleText": [
+      "A SIMPLE EXAMPLE",
+      "1 HOUR OF",
+      "SPECIALISED",
+      "SURGERY"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 34,
+    "b": 2,
+    "id": "4-03-simple-exchange",
+    "file": "s35-b2-4-03-simple-exchange.png",
+    "visibleText": [
+      "A SIMPLE EXAMPLE",
+      "1 HOUR OF",
+      "SPECIALISED",
+      "SURGERY",
+      "Specialised skill",
+      "Scarce knowledge",
+      "Years of training",
+      "Professional judgment",
+      "Dexterity",
+      "Responsibility"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 34,
+    "b": 3,
+    "id": "4-03-simple-exchange",
+    "file": "s35-b3-4-03-simple-exchange.png",
+    "visibleText": [
+      "A SIMPLE EXAMPLE",
+      "1 HOUR OF",
+      "SPECIALISED",
+      "SURGERY",
+      "Specialised skill",
+      "Scarce knowledge",
+      "Years of training",
+      "Professional judgment",
+      "Dexterity",
+      "Responsibility",
+      "RECEIVED IN EXCHANGE",
+      "$400"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 34,
+    "b": 4,
+    "id": "4-03-simple-exchange",
+    "file": "s35-b4-4-03-simple-exchange.png",
+    "visibleText": [
+      "A SIMPLE EXAMPLE",
+      "1 HOUR OF",
+      "SPECIALISED",
+      "SURGERY",
+      "Specialised skill",
+      "Scarce knowledge",
+      "Years of training",
+      "Professional judgment",
+      "Dexterity",
+      "Responsibility",
+      "RECEIVED IN EXCHANGE",
+      "$400",
+      "What did he actually receive?"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 35,
+    "b": 0,
+    "id": "4-04-unfinished-exchange",
+    "file": "s36-b0-4-04-unfinished-exchange.png",
+    "visibleText": [
+      "THE UNFINISHED EXCHANGE",
+      "$400"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 35,
+    "b": 1,
+    "id": "4-04-unfinished-exchange",
+    "file": "s36-b1-4-04-unfinished-exchange.png",
+    "visibleText": [
+      "THE UNFINISHED EXCHANGE",
+      "$400",
+      "What does the $400 actually represent?"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 35,
+    "b": 2,
+    "id": "4-04-unfinished-exchange",
+    "file": "s36-b2-4-04-unfinished-exchange.png",
+    "visibleText": [
+      "THE UNFINISHED EXCHANGE",
+      "$400",
+      "What does the $400 actually represent?"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 35,
+    "b": 3,
+    "id": "4-04-unfinished-exchange",
+    "file": "s36-b3-4-04-unfinished-exchange.png",
+    "visibleText": [
+      "THE UNFINISHED EXCHANGE",
+      "$400",
+      "What does the $400 actually represent?"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 35,
+    "b": 4,
+    "id": "4-04-unfinished-exchange",
+    "file": "s36-b4-4-04-unfinished-exchange.png",
+    "visibleText": [
+      "THE UNFINISHED EXCHANGE",
+      "AN EARNED, TRANSFERABLE",
+      "CLAIM ON VALUE"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 36,
+    "b": 0,
+    "id": "4-05-spend-or-save",
+    "file": "s37-b0-4-05-spend-or-save.png",
+    "visibleText": [
+      "SPEND OR SAVE"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 36,
+    "b": 1,
+    "id": "4-05-spend-or-save",
+    "file": "s37-b1-4-05-spend-or-save.png",
+    "visibleText": [
+      "SPEND OR SAVE",
+      "SPEND NOW",
+      "SAVE FOR LATER"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 36,
+    "b": 2,
+    "id": "4-05-spend-or-save",
+    "file": "s37-b2-4-05-spend-or-save.png",
+    "visibleText": [
+      "SPEND OR SAVE",
+      "SPEND NOW",
+      "SAVE FOR LATER",
+      "Redeem the claim now",
+      "Exchange closed"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 36,
+    "b": 3,
+    "id": "4-05-spend-or-save",
+    "file": "s37-b3-4-05-spend-or-save.png",
+    "visibleText": [
+      "SPEND OR SAVE",
+      "SPEND NOW",
+      "SAVE FOR LATER"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 36,
+    "b": 4,
+    "id": "4-05-spend-or-save",
+    "file": "s37-b4-4-05-spend-or-save.png",
+    "visibleText": [
+      "SPEND OR SAVE",
+      "SPEND NOW",
+      "SAVE FOR LATER",
+      "Carry the claim forward",
+      "Exchange remains open"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 36,
+    "b": 5,
+    "id": "4-05-spend-or-save",
+    "file": "s37-b5-4-05-spend-or-save.png",
+    "visibleText": [
+      "SPEND OR SAVE",
+      "SPEND NOW",
+      "SAVE FOR LATER",
+      "Carry the claim forward",
+      "Exchange remains open",
+      "Spending closes the exchange.",
+      "Saving keeps it open."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 37,
+    "b": 0,
+    "id": "4-06-claim-and-carrier",
+    "file": "s38-b0-4-06-claim-and-carrier.png",
+    "visibleText": [
+      "THE CLAIM AND ITS CARRIER",
+      "The claim on value is the",
+      "essence of money."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 37,
+    "b": 1,
+    "id": "4-06-claim-and-carrier",
+    "file": "s38-b1-4-06-claim-and-carrier.png",
+    "visibleText": [
+      "THE CLAIM AND ITS CARRIER",
+      "The claim on value is the",
+      "essence of money.",
+      "But an abstract claim still needs a body—",
+      "something capable of carrying it across people, places and time."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 37,
+    "b": 2,
+    "id": "4-06-claim-and-carrier",
+    "file": "s38-b2-4-06-claim-and-carrier.png",
+    "visibleText": [
+      "THE CLAIM AND ITS CARRIER",
+      "THE MONETARY MEDIUM",
+      "THE CARRIER"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 37,
+    "b": 3,
+    "id": "4-06-claim-and-carrier",
+    "file": "s38-b3-4-06-claim-and-carrier.png",
+    "visibleText": [
+      "THE CLAIM AND ITS CARRIER",
+      "THE MONETARY MEDIUM",
+      "THE CARRIER",
+      "SHELLS",
+      "GOLD",
+      "PAPER",
+      "BANK LEDGERS",
+      "BITCOIN"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 37,
+    "b": 4,
+    "id": "4-06-claim-and-carrier",
+    "file": "s38-b4-4-06-claim-and-carrier.png",
+    "visibleText": [
+      "THE CLAIM AND ITS CARRIER",
+      "THE MONETARY MEDIUM",
+      "THE CARRIER",
+      "SHELLS",
+      "GOLD",
+      "PAPER",
+      "BANK LEDGERS",
+      "BITCOIN",
+      "The claim is the",
+      "essence.",
+      "The monetary asset is the",
+      "carrier."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 38,
+    "b": 0,
+    "id": "4-07-store-of-value-function",
+    "file": "s39-b0-4-07-store-of-value-function.png",
+    "visibleText": [
+      "THE STORE-OF-VALUE FUNCTION"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 38,
+    "b": 1,
+    "id": "4-07-store-of-value-function",
+    "file": "s39-b1-4-07-store-of-value-function.png",
+    "visibleText": [
+      "THE STORE-OF-VALUE FUNCTION",
+      "What must the carrier actually preserve?"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 38,
+    "b": 2,
+    "id": "4-07-store-of-value-function",
+    "file": "s39-b2-4-07-store-of-value-function.png",
+    "visibleText": [
+      "THE STORE-OF-VALUE FUNCTION",
+      "What must the carrier actually preserve?",
+      "NOW",
+      "LATER"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 38,
+    "b": 3,
+    "id": "4-07-store-of-value-function",
+    "file": "s39-b3-4-07-store-of-value-function.png",
+    "visibleText": [
+      "THE STORE-OF-VALUE FUNCTION",
+      "What must the carrier actually preserve?",
+      "NOW",
+      "LATER",
+      "PURCHASING POWER",
+      "The claim can still command real value later."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 38,
+    "b": 4,
+    "id": "4-07-store-of-value-function",
+    "file": "s39-b4-4-07-store-of-value-function.png",
+    "visibleText": [
+      "THE STORE-OF-VALUE FUNCTION",
+      "What must the carrier actually preserve?",
+      "NOW",
+      "LATER",
+      "PURCHASING POWER",
+      "The claim can still command real value later.",
+      "REDEEMABILITY",
+      "The future holder can still exercise it."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 38,
+    "b": 5,
+    "id": "4-07-store-of-value-function",
+    "file": "s39-b5-4-07-store-of-value-function.png",
+    "visibleText": [
+      "THE STORE-OF-VALUE FUNCTION",
+      "What must the carrier actually preserve?",
+      "NOW",
+      "LATER",
+      "PURCHASING POWER",
+      "The claim can still command real value later.",
+      "REDEEMABILITY",
+      "The future holder can still exercise it.",
+      "A store of value is a monetary carrier that preserves",
+      "the",
+      "purchasing power",
+      "of an unredeemed claim",
+      "and keeps that claim",
+      "redeemable",
+      "through time."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 39,
+    "b": 0,
+    "id": "4-08-100-year-test",
+    "file": "s40-b0-4-08-100-year-test.png",
+    "visibleText": [
+      "THE 100-YEAR TEST",
+      "You earn the claim today.",
+      "2026",
+      "2126"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 39,
+    "b": 1,
+    "id": "4-08-100-year-test",
+    "file": "s40-b1-4-08-100-year-test.png",
+    "visibleText": [
+      "THE 100-YEAR TEST",
+      "You choose not to redeem it.",
+      "2026",
+      "2126"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 39,
+    "b": 2,
+    "id": "4-08-100-year-test",
+    "file": "s40-b2-4-08-100-year-test.png",
+    "visibleText": [
+      "THE 100-YEAR TEST",
+      "You pass it forward.",
+      "2026",
+      "100 YEARS",
+      "2126"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 39,
+    "b": 3,
+    "id": "4-08-100-year-test",
+    "file": "s40-b3-4-08-100-year-test.png",
+    "visibleText": [
+      "THE 100-YEAR TEST",
+      "Your descendants receive it in 2126.",
+      "2026",
+      "100 YEARS",
+      "2126"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 39,
+    "b": 4,
+    "id": "4-08-100-year-test",
+    "file": "s40-b4-4-08-100-year-test.png",
+    "visibleText": [
+      "THE 100-YEAR TEST",
+      "Your descendants receive it in 2126.",
+      "2026",
+      "100 YEARS",
+      "2126"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 40,
+    "b": 0,
+    "id": "4-09-future-is-unknowable",
+    "file": "s41-b0-4-09-future-is-unknowable.png",
+    "visibleText": [
+      "THE FUTURE IS UNKNOWABLE",
+      "2126",
+      "We know the date.",
+      "We do not know the world."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 40,
+    "b": 1,
+    "id": "4-09-future-is-unknowable",
+    "file": "s41-b1-4-09-future-is-unknowable.png",
+    "visibleText": [
+      "THE FUTURE IS UNKNOWABLE",
+      "2126",
+      "We know the date.",
+      "We do not know the world.",
+      "WHERE WILL THEY LIVE?",
+      "WHAT WILL THEY WANT?"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 40,
+    "b": 2,
+    "id": "4-09-future-is-unknowable",
+    "file": "s41-b2-4-09-future-is-unknowable.png",
+    "visibleText": [
+      "THE FUTURE IS UNKNOWABLE",
+      "2126",
+      "We know the date.",
+      "We do not know the world.",
+      "WHICH GOVERNMENTS WILL EXIST?",
+      "WHICH INSTITUTIONS WILL SURVIVE?"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 40,
+    "b": 3,
+    "id": "4-09-future-is-unknowable",
+    "file": "s41-b3-4-09-future-is-unknowable.png",
+    "visibleText": [
+      "THE FUTURE IS UNKNOWABLE",
+      "2126",
+      "We know the date.",
+      "We do not know the world.",
+      "WHICH TECHNOLOGIES WILL DOMINATE?",
+      "WHICH RULES WILL APPLY?"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 40,
+    "b": 4,
+    "id": "4-09-future-is-unknowable",
+    "file": "s41-b4-4-09-future-is-unknowable.png",
+    "visibleText": [
+      "THE FUTURE IS UNKNOWABLE",
+      "2126",
+      "What properties give this claim the best chance",
+      "of reaching 2126 with its",
+      "purchasing power intact",
+      "?"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 41,
+    "b": 0,
+    "id": "4-10-invert-the-question",
+    "file": "s42-b0-4-10-invert-the-question.png",
+    "visibleText": [
+      "INVERT THE QUESTION",
+      "What properties give this claim the best chance",
+      "of reaching 2126 with its",
+      "purchasing power intact",
+      "?",
+      "DON'T BEGIN BY ASKING:",
+      "What makes a good carrier?"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 41,
+    "b": 1,
+    "id": "4-10-invert-the-question",
+    "file": "s42-b1-4-10-invert-the-question.png",
+    "visibleText": [
+      "INVERT THE QUESTION",
+      "ASK INSTEAD:",
+      "How could the carrier fail?"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 41,
+    "b": 2,
+    "id": "4-10-invert-the-question",
+    "file": "s42-b2-4-10-invert-the-question.png",
+    "visibleText": [
+      "INVERT THE QUESTION",
+      "ASK INSTEAD:",
+      "How could the carrier fail?"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 42,
+    "b": 0,
+    "id": "4-11-carrier-failures-i",
+    "file": "s43-b0-4-11-carrier-failures-i.png",
+    "visibleText": [
+      "HOW THE CARRIER CAN FAIL"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 42,
+    "b": 1,
+    "id": "4-11-carrier-failures-i",
+    "file": "s43-b1-4-11-carrier-failures-i.png",
+    "visibleText": [
+      "HOW THE CARRIER CAN FAIL",
+      "01",
+      "DILUTED",
+      "Additional carrier units can dilute the claim embodied in existing units."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 42,
+    "b": 2,
+    "id": "4-11-carrier-failures-i",
+    "file": "s43-b2-4-11-carrier-failures-i.png",
+    "visibleText": [
+      "HOW THE CARRIER CAN FAIL",
+      "01",
+      "DILUTED",
+      "Additional carrier units can dilute the claim embodied in existing units.",
+      "02",
+      "INDIVISIBLE",
+      "The carrier cannot be divided into the quantities required for exchange."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 42,
+    "b": 3,
+    "id": "4-11-carrier-failures-i",
+    "file": "s43-b3-4-11-carrier-failures-i.png",
+    "visibleText": [
+      "HOW THE CARRIER CAN FAIL",
+      "01",
+      "DILUTED",
+      "Additional carrier units can dilute the claim embodied in existing units.",
+      "02",
+      "INDIVISIBLE",
+      "The carrier cannot be divided into the quantities required for exchange.",
+      "03",
+      "ILLIQUID",
+      "It cannot be exchanged reliably without delay, friction or significant loss."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 42,
+    "b": 4,
+    "id": "4-11-carrier-failures-i",
+    "file": "s43-b4-4-11-carrier-failures-i.png",
+    "visibleText": [
+      "HOW THE CARRIER CAN FAIL",
+      "01",
+      "DILUTED",
+      "Additional carrier units can dilute the claim embodied in existing units.",
+      "02",
+      "INDIVISIBLE",
+      "The carrier cannot be divided into the quantities required for exchange.",
+      "03",
+      "ILLIQUID",
+      "It cannot be exchanged reliably without delay, friction or significant loss.",
+      "04",
+      "TRAPPED",
+      "It cannot move freely across distance or jurisdiction."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 42,
+    "b": 5,
+    "id": "4-11-carrier-failures-i",
+    "file": "s43-b5-4-11-carrier-failures-i.png",
+    "visibleText": [
+      "HOW THE CARRIER CAN FAIL",
+      "01",
+      "DILUTED",
+      "Additional carrier units can dilute the claim embodied in existing units.",
+      "02",
+      "INDIVISIBLE",
+      "The carrier cannot be divided into the quantities required for exchange.",
+      "03",
+      "ILLIQUID",
+      "It cannot be exchanged reliably without delay, friction or significant loss.",
+      "04",
+      "TRAPPED",
+      "It cannot move freely across distance or jurisdiction.",
+      "05",
+      "COSTLY TO HOLD",
+      "Storage, maintenance or administration consume the claim over time."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 43,
+    "b": 0,
+    "id": "4-12-carrier-failures-ii",
+    "file": "s44-b0-4-12-carrier-failures-ii.png",
+    "visibleText": [
+      "HOW THE CARRIER CAN FAIL"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 43,
+    "b": 1,
+    "id": "4-12-carrier-failures-ii",
+    "file": "s44-b1-4-12-carrier-failures-ii.png",
+    "visibleText": [
+      "HOW THE CARRIER CAN FAIL",
+      "06",
+      "CONTROLLED",
+      "An external party can alter access, ownership or the governing rules."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 43,
+    "b": 2,
+    "id": "4-12-carrier-failures-ii",
+    "file": "s44-b2-4-12-carrier-failures-ii.png",
+    "visibleText": [
+      "HOW THE CARRIER CAN FAIL",
+      "06",
+      "CONTROLLED",
+      "An external party can alter access, ownership or the governing rules.",
+      "07",
+      "DEGRADED",
+      "The carrier can decay or fail before the claim is redeemed."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 43,
+    "b": 3,
+    "id": "4-12-carrier-failures-ii",
+    "file": "s44-b3-4-12-carrier-failures-ii.png",
+    "visibleText": [
+      "HOW THE CARRIER CAN FAIL",
+      "06",
+      "CONTROLLED",
+      "An external party can alter access, ownership or the governing rules.",
+      "07",
+      "DEGRADED",
+      "The carrier can decay or fail before the claim is redeemed.",
+      "08",
+      "UNVERIFIABLE",
+      "Authenticity, ownership or supply cannot be established confidently."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 43,
+    "b": 4,
+    "id": "4-12-carrier-failures-ii",
+    "file": "s44-b4-4-12-carrier-failures-ii.png",
+    "visibleText": [
+      "HOW THE CARRIER CAN FAIL",
+      "06",
+      "CONTROLLED",
+      "An external party can alter access, ownership or the governing rules.",
+      "07",
+      "DEGRADED",
+      "The carrier can decay or fail before the claim is redeemed.",
+      "08",
+      "UNVERIFIABLE",
+      "Authenticity, ownership or supply cannot be established confidently.",
+      "09",
+      "NON-FUNGIBLE",
+      "Equal units can be treated differently because of their history or condition."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 43,
+    "b": 5,
+    "id": "4-12-carrier-failures-ii",
+    "file": "s44-b5-4-12-carrier-failures-ii.png",
+    "visibleText": [
+      "HOW THE CARRIER CAN FAIL",
+      "06",
+      "CONTROLLED",
+      "An external party can alter access, ownership or the governing rules.",
+      "07",
+      "DEGRADED",
+      "The carrier can decay or fail before the claim is redeemed.",
+      "08",
+      "UNVERIFIABLE",
+      "Authenticity, ownership or supply cannot be established confidently.",
+      "09",
+      "NON-FUNGIBLE",
+      "Equal units can be treated differently because of their history or condition.",
+      "10",
+      "UNTESTED",
+      "There is insufficient evidence across crises, technologies and changing regimes."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 44,
+    "b": 0,
+    "id": "4-13-failure-to-requirement",
+    "file": "s45-b0-4-13-failure-to-requirement.png",
+    "visibleText": [
+      "FROM FAILURE TO REQUIREMENT",
+      "Invert each failure. The properties emerge.",
+      "DILUTED",
+      "INDIVISIBLE",
+      "ILLIQUID",
+      "TRAPPED",
+      "COSTLY TO HOLD",
+      "CONTROLLED",
+      "DEGRADED",
+      "UNVERIFIABLE",
+      "NON-FUNGIBLE",
+      "UNTESTED"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 44,
+    "b": 1,
+    "id": "4-13-failure-to-requirement",
+    "file": "s45-b1-4-13-failure-to-requirement.png",
+    "visibleText": [
+      "FROM FAILURE TO REQUIREMENT",
+      "Invert each failure. The properties emerge.",
+      "DILUTED",
+      "→",
+      "NO SUPPLY INFLATION",
+      "INDIVISIBLE",
+      "→",
+      "DIVISIBILITY",
+      "ILLIQUID",
+      "→",
+      "LIQUIDITY",
+      "TRAPPED",
+      "→",
+      "PORTABILITY",
+      "COSTLY TO HOLD",
+      "→",
+      "NO CARRYING COSTS",
+      "CONTROLLED",
+      "→",
+      "RESISTANCE TO CONTROL",
+      "DEGRADED",
+      "→",
+      "DURABILITY",
+      "UNVERIFIABLE",
+      "→",
+      "VERIFIABILITY",
+      "NON-FUNGIBLE",
+      "→",
+      "FUNGIBILITY",
+      "UNTESTED",
+      "→",
+      "TRACK RECORD"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 45,
+    "b": 0,
+    "id": "4-14-ten-properties",
+    "file": "s46-b0-4-14-ten-properties.png",
+    "visibleText": [
+      "THE TEN PROPERTIES",
+      "01",
+      "NO SUPPLY INFLATION",
+      "02",
+      "DIVISIBILITY",
+      "03",
+      "LIQUIDITY",
+      "04",
+      "PORTABILITY",
+      "05",
+      "NO CARRYING COSTS",
+      "06",
+      "RESISTANCE TO CONTROL",
+      "07",
+      "DURABILITY",
+      "08",
+      "VERIFIABILITY",
+      "09",
+      "FUNGIBILITY",
+      "10",
+      "TRACK RECORD"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 46,
+    "b": 0,
+    "id": "4-15-framework-to-comparison",
+    "file": "s47-b0-4-15-framework-to-comparison.png",
+    "visibleText": [
+      "FROM FRAMEWORK TO COMPARISON",
+      "How well can each asset carry purchasing power through time?"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 46,
+    "b": 1,
+    "id": "4-15-framework-to-comparison",
+    "file": "s47-b1-4-15-framework-to-comparison.png",
+    "visibleText": [
+      "FROM FRAMEWORK TO COMPARISON",
+      "How well can each asset carry purchasing power through time?",
+      "MONETARY ASSETS",
+      "GOLD",
+      "FIAT",
+      "BITCOIN"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 46,
+    "b": 2,
+    "id": "4-15-framework-to-comparison",
+    "file": "s47-b2-4-15-framework-to-comparison.png",
+    "visibleText": [
+      "FROM FRAMEWORK TO COMPARISON",
+      "How well can each asset carry purchasing power through time?",
+      "MONETARY ASSETS",
+      "PRODUCTIVE ASSETS",
+      "GOLD",
+      "FIAT",
+      "BITCOIN",
+      "PROPERTY",
+      "SHARES"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 46,
+    "b": 3,
+    "id": "4-15-framework-to-comparison",
+    "file": "s47-b3-4-15-framework-to-comparison.png",
+    "visibleText": [
+      "FROM FRAMEWORK TO COMPARISON",
+      "How well can each asset carry purchasing power through time?",
+      "MONETARY ASSETS",
+      "PRODUCTIVE ASSETS",
+      "GOLD",
+      "FIAT",
+      "BITCOIN",
+      "PROPERTY",
+      "SHARES",
+      "The framework is explicit. The scores are judgements."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 47,
+    "b": 0,
+    "id": "4-16-the-comparison",
+    "file": "s48-b0-4-16-the-comparison.png",
+    "visibleText": [
+      "THE COMPARISON",
+      "MONETARY ASSETS",
+      "PRODUCTIVE ASSETS",
+      "PROPERTY",
+      "GOLD",
+      "FIAT",
+      "BITCOIN",
+      "PROPERTY",
+      "SHARES",
+      "NO SUPPLY INFLATION",
+      "DIVISIBILITY",
+      "LIQUIDITY",
+      "PORTABILITY",
+      "NO CARRYING COSTS",
+      "RESISTANCE TO CONTROL",
+      "DURABILITY",
+      "VERIFIABILITY",
+      "FUNGIBILITY",
+      "TRACK RECORD"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 47,
+    "b": 1,
+    "id": "4-16-the-comparison",
+    "file": "s48-b1-4-16-the-comparison.png",
+    "visibleText": [
+      "THE COMPARISON",
+      "MONETARY ASSETS",
+      "PRODUCTIVE ASSETS",
+      "PROPERTY",
+      "GOLD",
+      "FIAT",
+      "BITCOIN",
+      "PROPERTY",
+      "SHARES",
+      "NO SUPPLY INFLATION",
+      "DIVISIBILITY",
+      "LIQUIDITY",
+      "PORTABILITY",
+      "NO CARRYING COSTS",
+      "RESISTANCE TO CONTROL",
+      "DURABILITY",
+      "VERIFIABILITY",
+      "FUNGIBILITY",
+      "TRACK RECORD"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 47,
+    "b": 2,
+    "id": "4-16-the-comparison",
+    "file": "s48-b2-4-16-the-comparison.png",
+    "visibleText": [
+      "THE COMPARISON",
+      "MONETARY ASSETS",
+      "PRODUCTIVE ASSETS",
+      "PROPERTY",
+      "GOLD",
+      "FIAT",
+      "BITCOIN",
+      "PROPERTY",
+      "SHARES",
+      "NO SUPPLY INFLATION",
+      "DIVISIBILITY",
+      "LIQUIDITY",
+      "PORTABILITY",
+      "NO CARRYING COSTS",
+      "RESISTANCE TO CONTROL",
+      "DURABILITY",
+      "VERIFIABILITY",
+      "FUNGIBILITY",
+      "TRACK RECORD",
+      "Don't trust the table.",
+      "Verify every score."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 48,
+    "b": 0,
+    "id": "4-17-store-of-value-function-migrates",
+    "file": "s49-b0-4-17-store-of-value-function-migrates.png",
+    "visibleText": [
+      "WHEN THE STORE-OF-VALUE FUNCTION MIGRATES",
+      "FIAT",
+      "MEDIUM OF EXCHANGE",
+      "UNIT OF ACCOUNT"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 48,
+    "b": 1,
+    "id": "4-17-store-of-value-function-migrates",
+    "file": "s49-b1-4-17-store-of-value-function-migrates.png",
+    "visibleText": [
+      "WHEN THE STORE-OF-VALUE FUNCTION MIGRATES",
+      "The demand to save does not disappear.",
+      "FIAT",
+      "MEDIUM OF EXCHANGE",
+      "UNIT OF ACCOUNT"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 48,
+    "b": 2,
+    "id": "4-17-store-of-value-function-migrates",
+    "file": "s49-b2-4-17-store-of-value-function-migrates.png",
+    "visibleText": [
+      "WHEN THE STORE-OF-VALUE FUNCTION MIGRATES",
+      "The demand to save does not disappear.",
+      "It migrates.",
+      "FIAT",
+      "MEDIUM OF EXCHANGE",
+      "UNIT OF ACCOUNT",
+      "GOLD",
+      "PROPERTY",
+      "SHARES"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 48,
+    "b": 3,
+    "id": "4-17-store-of-value-function-migrates",
+    "file": "s49-b3-4-17-store-of-value-function-migrates.png",
+    "visibleText": [
+      "WHEN THE STORE-OF-VALUE FUNCTION MIGRATES",
+      "The demand to save does not disappear.",
+      "It migrates.",
+      "FIAT",
+      "MEDIUM OF EXCHANGE",
+      "UNIT OF ACCOUNT",
+      "GOLD",
+      "PROPERTY",
+      "SHARES",
+      "When money is not trusted to preserve purchasing power, savings demand moves into other assets."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 49,
+    "b": 0,
+    "id": "4-18-monetary-premium",
+    "file": "s50-b0-4-18-monetary-premium.png",
+    "visibleText": [
+      "THE MONETARY PREMIUM",
+      "ASSET VALUE",
+      "=",
+      "UNDERLYING UTILITY",
+      "/ PRODUCTIVE VALUE",
+      "+",
+      "MONETARY PREMIUM"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 49,
+    "b": 1,
+    "id": "4-18-monetary-premium",
+    "file": "s50-b1-4-18-monetary-premium.png",
+    "visibleText": [
+      "THE MONETARY PREMIUM",
+      "ASSET VALUE",
+      "=",
+      "UNDERLYING UTILITY",
+      "/ PRODUCTIVE VALUE",
+      "+",
+      "MONETARY PREMIUM",
+      "PROPERTY",
+      "SHELTER / RENT",
+      "SHARES",
+      "PROFITS / CASH FLOWS",
+      "GOLD",
+      "ORNAMENTAL / INDUSTRIAL"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 49,
+    "b": 2,
+    "id": "4-18-monetary-premium",
+    "file": "s50-b2-4-18-monetary-premium.png",
+    "visibleText": [
+      "THE MONETARY PREMIUM",
+      "ASSET VALUE",
+      "=",
+      "UNDERLYING UTILITY",
+      "/ PRODUCTIVE VALUE",
+      "+",
+      "MONETARY PREMIUM",
+      "PROPERTY",
+      "SHELTER / RENT",
+      "SHARES",
+      "PROFITS / CASH FLOWS",
+      "GOLD",
+      "ORNAMENTAL / INDUSTRIAL",
+      "MONETARY PREMIUM",
+      "Savings demand adds value beyond what the asset produces, provides or represents."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 49,
+    "b": 3,
+    "id": "4-18-monetary-premium",
+    "file": "s50-b3-4-18-monetary-premium.png",
+    "visibleText": [
+      "THE MONETARY PREMIUM",
+      "ASSET VALUE",
+      "=",
+      "UNDERLYING UTILITY",
+      "/ PRODUCTIVE VALUE",
+      "+",
+      "MONETARY PREMIUM",
+      "PROPERTY",
+      "SHELTER / RENT",
+      "SHARES",
+      "PROFITS / CASH FLOWS",
+      "GOLD",
+      "ORNAMENTAL / INDUSTRIAL",
+      "MONETARY PREMIUM",
+      "Savings demand adds value beyond what the asset produces, provides or represents.",
+      "Bitcoin competes for the monetary premium—",
+      "not the asset's entire value."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 50,
+    "b": 0,
+    "id": "4-19-other-assets-do-moneys-job",
+    "file": "s51-b0-4-19-other-assets-do-moneys-job.png",
+    "visibleText": [
+      "WHEN OTHER ASSETS DO MONEY'S JOB",
+      "PROPERTY SHELTERS.",
+      "PROPERTY",
+      "SHELTERS"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 50,
+    "b": 1,
+    "id": "4-19-other-assets-do-moneys-job",
+    "file": "s51-b1-4-19-other-assets-do-moneys-job.png",
+    "visibleText": [
+      "WHEN OTHER ASSETS DO MONEY'S JOB",
+      "PROPERTY SHELTERS.",
+      "PROPERTY",
+      "SHELTERS",
+      "COMPANIES PRODUCE.",
+      "SHARES",
+      "PRODUCES"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 50,
+    "b": 2,
+    "id": "4-19-other-assets-do-moneys-job",
+    "file": "s51-b2-4-19-other-assets-do-moneys-job.png",
+    "visibleText": [
+      "WHEN OTHER ASSETS DO MONEY'S JOB",
+      "PROPERTY SHELTERS.",
+      "PROPERTY",
+      "SHELTERS",
+      "COMPANIES PRODUCE.",
+      "SHARES",
+      "PRODUCES",
+      "GOLD HAS LONG CARRIED MONETARY VALUE.",
+      "GOLD",
+      "MONETARY COMMODITY"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 50,
+    "b": 3,
+    "id": "4-19-other-assets-do-moneys-job",
+    "file": "s51-b3-4-19-other-assets-do-moneys-job.png",
+    "visibleText": [
+      "WHEN OTHER ASSETS DO MONEY'S JOB",
+      "PROPERTY SHELTERS.",
+      "PROPERTY",
+      "SHELTERS",
+      "COMPANIES PRODUCE.",
+      "SHARES",
+      "PRODUCES",
+      "GOLD HAS LONG CARRIED MONETARY VALUE.",
+      "GOLD",
+      "MONETARY COMMODITY",
+      "BITCOIN'S UTILITY IS",
+      "MONETARY",
+      ".",
+      "BITCOIN",
+      "MONETARY UTILITY"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 50,
+    "b": 4,
+    "id": "4-19-other-assets-do-moneys-job",
+    "file": "s51-b4-4-19-other-assets-do-moneys-job.png",
+    "visibleText": [
+      "WHEN OTHER ASSETS DO MONEY'S JOB",
+      "PROPERTY SHELTERS.",
+      "PROPERTY",
+      "SHELTERS",
+      "COMPANIES PRODUCE.",
+      "SHARES",
+      "PRODUCES",
+      "GOLD HAS LONG CARRIED MONETARY VALUE.",
+      "GOLD",
+      "MONETARY COMMODITY",
+      "BITCOIN'S UTILITY IS",
+      "MONETARY",
+      ".",
+      "BITCOIN",
+      "MONETARY UTILITY",
+      "It competes for the monetary premium attached elsewhere."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 51,
+    "b": 0,
+    "id": "4-20-bitcoin-does-not-replace-everything",
+    "file": "s52-b0-4-20-bitcoin-does-not-replace-everything.png",
+    "visibleText": [
+      "BITCOIN DOES NOT NEED TO REPLACE EVERYTHING",
+      "It does not need to replace property.",
+      "BITCOIN",
+      "PROPERTY"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 51,
+    "b": 1,
+    "id": "4-20-bitcoin-does-not-replace-everything",
+    "file": "s52-b1-4-20-bitcoin-does-not-replace-everything.png",
+    "visibleText": [
+      "BITCOIN DOES NOT NEED TO REPLACE EVERYTHING",
+      "It does not need to replace shares.",
+      "BITCOIN",
+      "PROPERTY",
+      "SHARES"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 51,
+    "b": 2,
+    "id": "4-20-bitcoin-does-not-replace-everything",
+    "file": "s52-b2-4-20-bitcoin-does-not-replace-everything.png",
+    "visibleText": [
+      "BITCOIN DOES NOT NEED TO REPLACE EVERYTHING",
+      "It does not need to absorb every store of value.",
+      "GOLD",
+      "FIAT",
+      "BITCOIN",
+      "PROPERTY",
+      "SHARES"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 51,
+    "b": 3,
+    "id": "4-20-bitcoin-does-not-replace-everything",
+    "file": "s52-b3-4-20-bitcoin-does-not-replace-everything.png",
+    "visibleText": [
+      "BITCOIN DOES NOT NEED TO REPLACE EVERYTHING",
+      "GOLD",
+      "FIAT",
+      "BITCOIN",
+      "PROPERTY",
+      "SHARES",
+      "Bitcoin competes with their monetary function—",
+      "not their reason to exist."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 52,
+    "b": 0,
+    "id": "4-21-marginal-store-of-value-decision",
+    "file": "s53-b0-4-21-marginal-store-of-value-decision.png",
+    "visibleText": [
+      "THE MARGINAL STORE-OF-VALUE DECISION",
+      "Where does the next unredeemed claim go?"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 52,
+    "b": 1,
+    "id": "4-21-marginal-store-of-value-decision",
+    "file": "s53-b1-4-21-marginal-store-of-value-decision.png",
+    "visibleText": [
+      "THE MARGINAL STORE-OF-VALUE DECISION",
+      "Where does the next unredeemed claim go?",
+      "GOLD",
+      "FIAT",
+      "BITCOIN",
+      "PROPERTY",
+      "SHARES"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 52,
+    "b": 2,
+    "id": "4-21-marginal-store-of-value-decision",
+    "file": "s53-b2-4-21-marginal-store-of-value-decision.png",
+    "visibleText": [
+      "THE MARGINAL STORE-OF-VALUE DECISION",
+      "Where does the next unredeemed claim go?",
+      "GOLD",
+      "FIAT",
+      "BITCOIN",
+      "PROPERTY",
+      "SHARES",
+      "Every new unit of savings creates a new carrier decision."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 53,
+    "b": 0,
+    "id": "4-22-fixed-supply-reprices-at-margin",
+    "file": "s54-b0-4-22-fixed-supply-reprices-at-margin.png",
+    "visibleText": [
+      "FIXED SUPPLY REPRICES AT THE MARGIN",
+      "Demand does not need to absorb everything.",
+      "FIXED OUTSTANDING STOCK"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 53,
+    "b": 1,
+    "id": "4-22-fixed-supply-reprices-at-margin",
+    "file": "s54-b1-4-22-fixed-supply-reprices-at-margin.png",
+    "visibleText": [
+      "FIXED SUPPLY REPRICES AT THE MARGIN",
+      "Demand does not need to absorb everything.",
+      "It only needs to grow against a supply that cannot respond.",
+      "FIXED OUTSTANDING STOCK",
+      "AVAILABLE AT THE MARGIN"
+    ],
+    "overflow": []
+  },
+  {
+    "i": 53,
+    "b": 2,
+    "id": "4-22-fixed-supply-reprices-at-margin",
+    "file": "s54-b2-4-22-fixed-supply-reprices-at-margin.png",
+    "visibleText": [
+      "FIXED SUPPLY REPRICES AT THE MARGIN",
+      "Demand does not need to absorb everything.",
+      "It only needs to grow against a supply that cannot respond.",
+      "FIXED OUTSTANDING STOCK",
+      "AVAILABLE AT THE MARGIN",
+      "PRICE DISCOVERED HERE",
+      "Marginal flows can reprice the entire stock."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 54,
+    "b": 0,
+    "id": "4-23-investment-case-from-first-principles",
+    "file": "s55-b0-4-23-investment-case-from-first-principles.png",
+    "visibleText": [
+      "THE CASE FOR BITCOIN — FROM FIRST PRINCIPLES",
+      "Money is a claim on value."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 54,
+    "b": 1,
+    "id": "4-23-investment-case-from-first-principles",
+    "file": "s55-b1-4-23-investment-case-from-first-principles.png",
+    "visibleText": [
+      "THE CASE FOR BITCOIN — FROM FIRST PRINCIPLES",
+      "Money is a claim on value.",
+      "A store of value carries that claim through time."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 54,
+    "b": 2,
+    "id": "4-23-investment-case-from-first-principles",
+    "file": "s55-b2-4-23-investment-case-from-first-principles.png",
+    "visibleText": [
+      "THE CASE FOR BITCOIN — FROM FIRST PRINCIPLES",
+      "Money is a claim on value.",
+      "A store of value carries that claim through time.",
+      "The ten properties let us compare the available carriers."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 54,
+    "b": 3,
+    "id": "4-23-investment-case-from-first-principles",
+    "file": "s55-b3-4-23-investment-case-from-first-principles.png",
+    "visibleText": [
+      "THE CASE FOR BITCOIN — FROM FIRST PRINCIPLES",
+      "Money is a claim on value.",
+      "A store of value carries that claim through time.",
+      "The ten properties let us compare the available carriers.",
+      "The key question is which carrier wins the next unit of savings."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 54,
+    "b": 4,
+    "id": "4-23-investment-case-from-first-principles",
+    "file": "s55-b4-4-23-investment-case-from-first-principles.png",
+    "visibleText": [
+      "THE CASE FOR BITCOIN — FROM FIRST PRINCIPLES",
+      "Bitcoin does not need to replace everything.",
+      "It only needs to become the",
+      "preferred place",
+      "to store the",
+      "next unit of value",
+      ".",
+      "The case for Bitcoin—from first principles."
+    ],
+    "overflow": []
+  },
+  {
+    "i": 55,
+    "b": 0,
+    "id": "5-01-thank-you",
+    "file": "s56-b0-5-01-thank-you.png",
+    "visibleText": [
+      "₿",
+      "Thank you.",
+      "Stay humble, and stack sats."
+    ],
+    "overflow": []
+  }
+]

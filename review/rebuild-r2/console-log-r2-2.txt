@@ -1,0 +1,14 @@
+--- standard-direct 2026-07-29T09:00:08.683Z ---
+
+--- standard-traversal 2026-07-29T09:13:43.589Z ---
+
+--- reduced-motion-direct 2026-07-29T09:17:50.841Z ---
+
+--- reduced-motion-traversal 2026-07-29T09:21:02.659Z ---
+
+--- reduced-motion-direct 2026-07-29T09:32:47.480Z ---
+
+--- standard-direct 2026-07-29T09:37:01.748Z ---
+
+--- standard-traversal 2026-07-29T09:41:48.832Z ---
+

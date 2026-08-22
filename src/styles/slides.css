@@ -1,0 +1,7540 @@
+/* ----- Shared slide patterns ----- */
+/*
+ * Type scale is sized for an audience 5-30m from a projected 1920×1080 screen.
+ * This is a stage deck, not a webpage — every default reads larger than feels right
+ * on a laptop. When in doubt: bigger.
+ */
+
+.slide-root {
+  position: absolute;
+  inset: 0;
+  /* Default safe-area: ~6% of the canvas. Slide layouts may override. */
+  padding: 6%;
+  color: var(--text-primary);
+  background: var(--bg-primary);
+}
+
+/* The luminous disc (R7.1 §2) — the deck's one render of stored value, shared
+   by 1.2's token, 1.3's small token, and every claim in Section 4. The gradient
+   and the two glow radii are 1.2's originals; the radii are expressed as
+   fractions of the diameter (34/176 and 110/176) so the object survives being
+   scaled without becoming a different drawing. Size is the only parameter. */
+.luminous-disc {
+  --disc-size: 176px;
+  width: var(--disc-size);
+  height: var(--disc-size);
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 50% 42%,
+    var(--unit-warm-bright) 0%,
+    var(--unit-warm) 55%,
+    color-mix(in srgb, var(--unit-warm) 82%, var(--accent) 18%) 100%
+  );
+  box-shadow:
+    0 0 calc(var(--disc-size) * 0.1932) rgba(253, 233, 212, 0.38),
+    0 0 calc(var(--disc-size) * 0.625) rgba(253, 233, 212, 0.22);
+}
+
+/* The dark-field register (§9.4.9, R7.2) — the deck's second register, and its
+   only raster surface. Every photographic beat renders through
+   components/DarkField.js, which produces exactly these two shapes.
+
+   The images are graded to a pure black ground (review/rebuild-r7-2/harness/
+   grade-r7-2.cjs proves it: corners and border ring below 6/255, which is under
+   the threshold at which a flat area separates from black on sRGB). So there is
+   no vignette here, no mask, no radius, no border — the frame edge is invisible
+   against the stage because the *image* is black there, not because CSS hid it.
+   Adding chrome would be the R7.1 mistake in reverse.
+
+   Presence is choreography, so the box owns opacity and the slide owns the
+   data-visible flag; scale and position stay with the slide. */
+.df {
+  width: var(--df-w);
+  height: var(--df-h);
+  display: grid;
+  place-items: center;
+  /* The framing normalization scales past the box; the surplus is black
+     margin, and clipping it costs nothing. */
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 520ms ease-out;
+}
+
+.df[data-visible="true"] {
+  opacity: 1;
+}
+
+.df-image {
+  --df-scale: 1;
+  --df-dx: 0%;
+  --df-dy: 0%;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* The renders are on black; contain keeps the subject's own proportions at
+     whatever aspect the slide's box has, and the letterboxed remainder is the
+     same black as the stage. The transform is the measured framing rule
+     (src/dark-field.js FRAMING) — every subject at the same relative size. */
+  transform: translate(var(--df-dx), var(--df-dy)) scale(var(--df-scale));
+  pointer-events: none;
+  -webkit-user-drag: none;
+}
+
+/* DARK-FIELD PENDING — the grammar mark standing in for a render that has not
+   been generated yet (docs/dark-field-manifest.md). Held at the register's own
+   luminance treatment so a stubbed beat reads as deliberate rather than broken,
+   and deliberately *not* at full strength: a pending frame should look like a
+   frame waiting for its image. */
+.df-stub {
+  color: var(--text-secondary);
+  opacity: 0.62;
+  filter: drop-shadow(0 0 10px rgba(253, 233, 212, 0.22));
+}
+
+.df-stub svg {
+  display: block;
+}
+
+/* The quiet kicker (R7.1 §9.4.5) — the Sections 1–3 register: small, widely
+   tracked, muted, no rule line. Names a frame without announcing itself.
+   Type scale matches .s2o-survivors__kicker / .s3f-separate__kicker. */
+.quiet-kicker {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  line-height: 1;
+}
+
+/* The retired Section 4 header convention. Kept for one frozen frame only —
+   4.23, whose composition may not change (R7.1 A2). Nothing else may use it. */
+.kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 22px;
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--accent);
+  line-height: 1;
+}
+.kicker::before {
+  content: "";
+  width: 56px;
+  height: 2px;
+  background: var(--accent);
+  display: inline-block;
+}
+
+/* Display title sizes. Tighten letter-spacing as type grows. */
+.title-display {
+  font-size: 132px;
+  font-weight: 600;
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+}
+.subtitle {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--text-secondary);
+  letter-spacing: -0.012em;
+}
+
+.body-text {
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--text-secondary);
+}
+
+/* Numbered/bulleted reveal lists. */
+.build-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.build-list__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+  padding: 22px 0;
+  opacity: 0;
+  transform: translateY(14px);
+}
+.build-list__item[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 500ms cubic-bezier(0.22, 1, 0.36, 1),
+              transform 500ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+/* Vertical orange "bullet" — anchored to the FIRST LINE of text. The trick:
+   the tick is a flex sibling of the text, sized in em units (relative to its
+   own inherited font-size), so its placement scales with each text variant. */
+.build-list__tick {
+  flex: 0 0 auto;
+  width: 3px;
+  height: 0.9em;        /* shorter than line-height — looks like a pull-quote tick */
+  margin-top: 0.25em;   /* shifts tick down so its center sits on first-line center */
+  background: var(--accent);
+  align-self: flex-start;
+}
+.build-list__text {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.32;
+  color: var(--text-secondary);
+  letter-spacing: -0.014em;
+  flex: 1 1 auto;
+}
+/* Tick inherits font-size from its containing item; setting font-size on the
+   item lets the em-based tick scale per text variant. */
+.build-list__item--default { font-size: 36px; }
+.build-list__item--accent  { font-size: 36px; }
+.build-list__item--punch   { font-size: 56px; }
+.build-list__item--punch .build-list__tick {
+  width: 4px;
+}
+.build-list__text--accent {
+  color: var(--accent);
+  font-weight: 600;
+}
+.build-list__text--punch {
+  font-size: 56px;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+/* The unit field’s DOM renderer (components/UnitField.js → UnitGrid). The grid
+   template, pitch and unit box are set from the shared grammar in JS; what
+   lives here is the unit’s drawn identity — the same beveled cell 1.1's canvas
+   field paints 80,000 of at 4.58px. Consumers add their own state rules. */
+.unit-field-grid {
+  display: grid;
+}
+
+.unit-field-grid__unit {
+  width: var(--unit-w);
+  height: var(--unit-h);
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.17);
+  background: rgba(255, 255, 255, 0.085);
+  clip-path: polygon(8% 0, 92% 0, 100% 20%, 100% 80%, 92% 100%, 8% 100%, 0 80%, 0 20%);
+}
+
+/* Generic helpers. */
+.text-shadow-legible {
+  text-shadow: 0 0 24px rgba(0, 0, 0, 0.92), 0 0 48px rgba(0, 0, 0, 0.6);
+}
+
+/* Image fade-in. */
+.image-fade {
+  opacity: 0;
+  transform: scale(1.02);
+}
+.image-fade[data-visible="true"] {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 1200ms cubic-bezier(0.22, 1, 0.36, 1),
+              transform 1200ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Footer disclaimer — small but still stage-readable. */
+.slide-footer-disclaimer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 36px;
+  text-align: center;
+  font-size: 22px;
+  color: var(--text-dim);
+  letter-spacing: 0.02em;
+  font-style: italic;
+}
+
+/* Ambient particle drift — used on hero/journey slides. Designed to be barely
+   noticeable: faint orange dots floating slowly. */
+.particle-field {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+.particle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.18;
+  filter: blur(0.4px);
+  animation: particle-drift linear infinite;
+}
+/* Distances are in canvas-local px (canvas is always 1080 tall in logical units). */
+@keyframes particle-drift {
+  0%   { transform: translate3d(0, 1100px, 0); opacity: 0; }
+  10%  { opacity: 0.18; }
+  90%  { opacity: 0.18; }
+  100% { transform: translate3d(0, -120px, 0); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .particle { animation: none !important; opacity: 0; }
+}
+
+/* ----- Section 4 opening sequence ----- */
+
+.s4-opening {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* The reconstruction snap frame (deck standard since R2; Section 4 adopts it at
+   R7 via slides/section-4-ideal-store/_snapFrame.js). Any apply that is not a
+   live forward advance — direct entry, a refresh mid-animation, back
+   navigation, an overview jump — carries `data-snap` on the slide root for two
+   frames, so the frame lands exactly instead of animating into place. Delays
+   die here too: several Section 4 reveals are authored with them, and a
+   reconstruction that honors a 320ms delay is a reconstruction the viewer
+   watches assemble. */
+.s4-opening[data-snap="true"],
+.s4-opening[data-snap="true"] *,
+.s4-opening[data-snap="true"] *::before,
+.s4-opening[data-snap="true"] *::after {
+  transition-duration: 0ms !important;
+  transition-delay: 0ms !important;
+  animation: none !important;
+}
+
+/* 4.01 — the section entry: the phrase, put under a lens. */
+.s4-define-job__phrase,
+.s4-define-job__question,
+.s4-define-job__prompt {
+  position: absolute;
+  left: 120px;
+  right: 120px;
+  text-align: center;
+}
+
+.s4-define-job__phrase {
+  top: 430px;
+  font-size: 112px;
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: 0;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 400ms ease-out;
+}
+
+.s4-define-job__phrase[data-visible="true"] {
+  opacity: 1;
+}
+
+.s4-define-job__prefix,
+.s4-define-job__value {
+  color: var(--text-primary);
+  transition:
+    color 450ms ease-out,
+    opacity 450ms ease-out;
+}
+
+.s4-define-job__prefix[data-quiet="true"] {
+  opacity: 0.22;
+}
+
+.s4-define-job__value[data-emphasised="true"] {
+  color: var(--accent);
+}
+
+.s4-define-job__question {
+  top: 420px;
+  font-size: 90px;
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: 0;
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 500ms ease-out,
+    transform 500ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s4-define-job__question[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.s4-define-job__prompt {
+  top: 610px;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0;
+  color: var(--accent);
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 400ms ease-out,
+    transform 400ms ease-out;
+}
+
+.s4-define-job__prompt[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ----- The exchange scene: slides 4.03-4.05 (R7.1 §C1) -----
+   Section 2's triad construction, reused deliberately: node dots, names on the
+   outside of the shape, one thin edge inset at both ends, goods riding the
+   drawn line. Exchange failing and exchange succeeding are the same drawing. */
+
+.s4-exchange__svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.s4-exchange__edge {
+  stroke: rgba(233, 228, 218, 0.34);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-dasharray: var(--len) var(--len);
+  stroke-dashoffset: 0;
+}
+
+.s4-exchange__node {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.s4-exchange__dot {
+  width: 13px;
+  height: 13px;
+  margin: -6.5px auto 0;
+  border-radius: 50%;
+  background: var(--text-primary);
+}
+
+/* The outside rule: names sit below their dots, where no edge runs. */
+.s4-exchange__name {
+  position: absolute;
+  left: 50%;
+  top: 34px;
+  transform: translateX(-50%);
+  margin: 0;
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  white-space: nowrap;
+  color: var(--text-secondary);
+}
+
+.s4-exchange__good {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--text-primary);
+  opacity: 0;
+  transition: opacity 460ms ease-out;
+}
+
+.s4-exchange__good svg {
+  display: block;
+}
+
+/* ----- 4.03: the surgeon beat, on the dark-field register (R7.2 §C1) -----
+   The photograph holds the left of the frame and the argument stacks at the
+   right, the two balanced about the stage's center rather than mirrored — a
+   portrait subject has no mirror, and forcing one would mean cropping the image
+   or shrinking it out of its job. The three text slots are exclusive by design:
+   the capabilities and the receipt share one slot, so the frame never carries
+   two blocks at once (§9.4.1), and the settled frame is the photograph, a quiet
+   headline, a quiet receipt and the question. */
+
+.s4-simple-exchange__portrait {
+  position: absolute;
+  left: 290px;
+  top: 126px;
+}
+
+.s4-simple-exchange__headline {
+  position: absolute;
+  left: 980px;
+  width: 820px;
+  top: 250px;
+  margin: 0;
+  text-align: center;
+  font-size: 46px;
+  font-weight: 600;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: var(--text-primary);
+  transition: opacity 420ms ease-out;
+}
+
+.s4-simple-exchange__headline[data-quiet="true"] {
+  opacity: 0.42;
+}
+
+.s4-simple-exchange__lead,
+.s4-simple-exchange__tail {
+  color: var(--text-primary);
+}
+
+/* The emphasis is the argument — the hour was not the product. */
+.s4-simple-exchange__emphasis {
+  color: var(--accent);
+  opacity: 0;
+  transition: opacity 460ms ease-out;
+}
+
+.s4-simple-exchange__headline[data-state="plain"] .s4-simple-exchange__emphasis {
+  opacity: 0;
+  font-size: 0;
+  letter-spacing: 0;
+}
+
+.s4-simple-exchange__headline[data-state="specialized"] .s4-simple-exchange__emphasis {
+  opacity: 1;
+  font-size: inherit;
+}
+
+/* What the hour contained — one accumulating element (§9.4.1) at label scale,
+   in the slot the receipt takes over at b3. */
+.s4-simple-exchange__capabilities {
+  position: absolute;
+  left: 980px;
+  width: 820px;
+  top: 440px;
+  display: grid;
+  justify-items: center;
+  gap: 11px;
+  text-align: center;
+}
+
+.s4-simple-exchange__capability {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 1.15;
+  color: var(--text-secondary);
+  opacity: 0;
+  transform: translateY(6px);
+  transition:
+    opacity 420ms ease-out,
+    transform 420ms ease-out;
+}
+
+.s4-simple-exchange__capability[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* One spoken list, one build — but on a live advance the six labels arrive in
+   the order the sentence names them (3.2's Argentina-row pattern). */
+.s4-simple-exchange[data-live="true"] .s4-simple-exchange__capability {
+  transition-delay: calc(var(--capability-index) * 150ms);
+}
+
+.s4-simple-exchange__capability[data-subdued="true"] {
+  opacity: 0.4;
+}
+
+.s4-exchange-receipt {
+  font-variant-numeric: tabular-nums;
+  font-weight: 650;
+  line-height: 1;
+  letter-spacing: 0;
+  color: var(--accent);
+  text-align: center;
+}
+
+/* The receipt lands in the slot the capabilities vacate — its own landing, per
+   §C1, rather than a fourth line stacked under them. Display scale and accent:
+   it is argument, not chrome. */
+.s4-simple-exchange__amount {
+  position: absolute;
+  left: 1390px;
+  top: 448px;
+  transform: translateX(-50%);
+  margin: 0;
+  font-size: 104px;
+  opacity: 0;
+  transition:
+    opacity 500ms ease-out,
+    color 420ms ease-out;
+}
+
+.s4-simple-exchange__amount[data-visible="true"] {
+  opacity: 1;
+}
+
+.s4-simple-exchange__amount[data-visible="true"][data-quiet="true"] {
+  opacity: 0.5;
+}
+
+.s4-simple-exchange__question {
+  position: absolute;
+  top: 720px;
+  left: 980px;
+  width: 820px;
+  margin: 0;
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 1.14;
+  letter-spacing: 0;
+  text-align: center;
+  color: var(--text-primary);
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 500ms ease-out,
+    transform 500ms ease-out;
+}
+
+.s4-simple-exchange__question[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* ----- Section 4 object sequence: slides 4.04-4.07 ----- */
+
+/* The claim, shared by slides 4.04-4.09 and beyond: 1.2's luminous disc,
+   centered in whatever box the slide gives it (R7.1 §2). Timings below are
+   unchanged from the capsule they replace — the skin moved, the motion did
+   not. */
+.s4-claim-object {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  transform: scale(0.88);
+  transform-origin: center;
+  transition:
+    opacity 420ms ease-out,
+    transform 560ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 420ms ease-out;
+}
+
+.s4-claim-object[data-visible="true"] {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Focus brightens the claim's own light rather than casting a shadow under it:
+   a disc that glows harder reads as emphasis; a drop-shadow reads as a card. */
+.s4-claim-object[data-emphasis="focus"] {
+  transform: scale(1);
+  filter: brightness(1.06);
+}
+
+/* Redeeming the claim closes the exchange, so the claim is gone — not dimmed.
+   At 0.1 it could still ghost behind the SPEND NOW goods on a calibrated
+   projector, which is the one place the slide must not hedge. */
+.s4-claim-object[data-redeemed="true"] {
+  opacity: 0;
+  transform: scale(0.76);
+  filter: none;
+}
+
+.s4-claim-object__disc {
+  flex: none;
+}
+
+.s4-claim-object__geometry {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  shape-rendering: geometricPrecision;
+}
+
+.s4-claim-object__body {
+  fill: var(--accent);
+  stroke: rgba(74, 30, 0, 0.38);
+  stroke-width: 1;
+}
+
+.s4-claim-object__inset,
+.s4-claim-object__inner,
+.s4-claim-object__highlight {
+  fill: none;
+  vector-effect: non-scaling-stroke;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.s4-claim-object__inset {
+  stroke: rgba(255, 193, 117, 0.76);
+  stroke-width: 1.35;
+}
+
+.s4-claim-object__inner {
+  stroke: rgba(75, 31, 0, 0.38);
+  stroke-width: 1.2;
+}
+
+.s4-claim-object__highlight {
+  stroke: rgba(255, 232, 203, 0.5);
+  stroke-width: 1.2;
+}
+
+/* The carrier is the thing under judgment, so it carries the accent (§9.4.6).
+   Held below full strength: the claim inside it stays the brightest object.
+
+   R7.2 §C3 — material presence. The shell reads at full accent now rather than
+   at 72%, and it carries a glow of its own. Both are tuned *against* the disc:
+   the disc's glow runs to 62% of its diameter at 0.22 alpha, the shell's to a
+   fixed 18px at 0.16, so the carrier is present in the same light without
+   competing with what it carries. The R7.1 pair sat at 0.68 opacity on a 72%
+   accent, which is where it read as an annotation beside the claim rather than
+   as the body around it. */
+.s4-carrier-shell {
+  position: absolute;
+  inset: 0;
+  color: var(--accent);
+  opacity: 0;
+  transform: scale(0.95);
+  transform-origin: center;
+  filter: drop-shadow(0 0 18px rgba(247, 147, 26, 0.16));
+  transition:
+    opacity 480ms ease-out,
+    transform 650ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s4-carrier-shell[data-visible="true"] {
+  opacity: 0.86;
+  transform: scale(1);
+}
+
+.s4-carrier-shell__geometry {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.s4-carrier-shell__frame {
+  fill: none;
+  stroke: currentColor;
+  transition:
+    stroke 420ms ease-out,
+    opacity 420ms ease-out;
+}
+
+/* Candidate A's inner echo — retained so the studio candidates render, unused
+   by the shipped construction (C, the banded wall). */
+.s4-carrier-shell__echo {
+  opacity: 0.5;
+}
+
+/* Dot terminals are the grammar's one sanctioned fill (r ≤ 2). */
+.s4-carrier-shell__terminal {
+  fill: currentColor;
+  stroke: none;
+}
+
+.s4-carrier-shell[data-focus="future"] .s4-carrier-shell__frame--left {
+  opacity: 0.46;
+}
+
+.s4-carrier-shell[data-focus="future"] .s4-carrier-shell__frame--right {
+  stroke: var(--accent-bright, var(--accent));
+  opacity: 1;
+}
+
+/* The final goods, on the dark-field register (R7.2 §C2). The row sits at the
+   spend road's end, just under the point the claim arrives at and dissolves —
+   so redemption reads as the claim *becoming* these, not as a caption about
+   them. The three per-asset scale and brightness corrections the old renders
+   needed are gone: every image is graded to one standard now, and the gate
+   proves it, so the row needs one box size and nothing else. */
+
+.s4-spend-save__goods {
+  position: absolute;
+  left: 151px;
+  top: 601px;
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  opacity: 0;
+  transition: opacity 460ms ease-out;
+}
+
+.s4-spend-save__goods[data-visible="true"] {
+  opacity: 1;
+}
+
+.s4-spend-save__good {
+  transform: translateY(8px);
+  transition:
+    opacity 460ms ease-out,
+    transform 460ms ease-out;
+}
+
+.s4-spend-save__good[data-visible="true"] {
+  opacity: 0.92;
+  transform: translateY(0);
+}
+
+.s4-spend-save[data-live="true"] .s4-spend-save__good {
+  transition-delay: calc(var(--good-index) * 120ms);
+}
+
+/* The shell fills the claim stage behind the disc, so enclosure needs no
+   separate positioning — the carrier closes around the claim in place. The
+   inset is set from the shell's own inner wall: at -46 the banded construction
+   (R7.2 §C3) left 7px between wall and disc, which reads as a collision rather
+   than as an enclosure. */
+.s4-spend-save__shell {
+  position: absolute;
+  inset: -74px;
+}
+
+/* The scene withdraws when the claim stops being tied to the patient. */
+.s4-exchange__svg,
+.s4-exchange__node {
+  transition: opacity 620ms ease-out;
+}
+
+.s4-exchange__svg[data-state="gone"],
+.s4-exchange__node[data-state="gone"] {
+  opacity: 0;
+}
+
+/* 4.04: the return leg, the goods not yet reachable, and the claim released. */
+
+/* The service, already delivered, resting above the patient's node. Static:
+   the crossing happened on the slide before this one. */
+.s4-unfinished__service {
+  transform: translate(-50%, -50%);
+}
+
+.s4-unfinished__service[data-visible="true"] {
+  opacity: 1;
+}
+
+/* What he did not receive — the dark-field band, across the frame's lower third
+   (R7.2 §C2). It was a column of glyphs pinned at the right edge, which read as
+   ornament: three small marks in the margin of a diagram. As a row of renders
+   at display scale it reads as what it is — the actual goods, laid out where a
+   line from the exchange would reach them if the exchange were finished. The
+   empty band between the scene and this row is the argument. */
+.s4-unfinished__wanted {
+  position: absolute;
+  left: 420px;
+  top: 602px;
+  display: flex;
+  align-items: center;
+  gap: 90px;
+  opacity: 0;
+  transition: opacity 520ms ease-out;
+}
+
+.s4-unfinished__wanted[data-visible="true"] {
+  opacity: 1;
+}
+
+/* Not yet reachable — held below full strength, but well clear of the 0.34 the
+   glyph column used: these are the sensory point of the beat and have to be
+   wanted, not merely noted. */
+.s4-unfinished__want {
+  transform: translateY(10px);
+  transition:
+    opacity 520ms ease-out,
+    transform 520ms ease-out;
+}
+
+.s4-unfinished__want[data-visible="true"] {
+  opacity: 0.75;
+  transform: translateY(0);
+}
+
+.s4-unfinished[data-live="true"] .s4-unfinished__want {
+  transition-delay: calc(var(--want-index) * 130ms);
+}
+
+.s4-unfinished__amount {
+  position: absolute;
+  left: 960px;
+  top: 440px;
+  transform: translateX(-50%);
+  margin: 0;
+  font-size: 84px;
+  opacity: 0;
+  transition: opacity 460ms ease-out;
+}
+
+.s4-unfinished__amount[data-visible="true"] {
+  opacity: 1;
+}
+
+/* Quiet only qualifies a visible receipt — unqualified it would resurrect one
+   the build has cleared. */
+.s4-unfinished__amount[data-visible="true"][data-quiet="true"] {
+  opacity: 0.42;
+}
+
+.s4-unfinished__question {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 856px;
+  margin: 0;
+  text-align: center;
+  font-size: 46px;
+  font-weight: 600;
+  line-height: 1.14;
+  color: var(--text-primary);
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 460ms ease-out,
+    transform 460ms ease-out;
+}
+
+.s4-unfinished__question[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* The definition — the deck's central sentence, and it gets a lane of its own.
+   At R7.1 it sat at 330, which put it directly under the claim's rest slot: the
+   disc landed on top of the words and the line read "AN EA●ED, TRANSFERABLE
+   CLAIM ON VALUE". It lives below the scene while the scene is there (`low`),
+   and rises into the middle the scene vacates (`mid`) on the build where
+   everything else clears. One motivated move, on the one build that is about
+   things leaving. */
+.s4-unfinished__headline {
+  --lane: 800px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: var(--lane);
+  margin: 0;
+  text-align: center;
+  /* Display treatment (R7.4 §F.5). The definition is what the whole section is
+     for, and it was set at 44px/500 in `--text-secondary` — a caption under a
+     diagram. It is the frame's one bright statement now: display scale, stacked
+     on two lines, the claim itself in the accent. */
+  font-size: 68px;
+  font-weight: 620;
+  letter-spacing: 0.02em;
+  line-height: 1.14;
+  color: var(--text-primary);
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 520ms ease-out,
+    transform 520ms ease-out,
+    top 620ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s4-unfinished__headline span {
+  display: block;
+}
+
+.s4-unfinished__headline[data-lane="mid"] {
+  --lane: 660px;
+}
+
+.s4-unfinished__headline[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.s4-unfinished__headline[data-quiet="true"] {
+  opacity: var(--dim-prior);
+}
+
+.s4-unfinished__headline strong {
+  font-weight: 650;
+  color: var(--accent);
+}
+
+/* The claim rides the lane back to the surgeon, then is released to center
+   stage. offset-anchor centers the box on the point, so no translate here. */
+.s4-unfinished__claim-stage {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 176px;
+  height: 176px;
+  offset-path: var(--travel);
+  offset-distance: 100%;
+  offset-rotate: 0deg;
+  transition:
+    offset-distance 900ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 760ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Released: off the path, into the middle of the emptied stage — high enough
+   that the claim and the definition below it settle as one centered pair. */
+.s4-unfinished__claim-stage[data-position="released"] {
+  offset-path: none;
+  left: 960px;
+  top: 470px;
+  transform: translate(-50%, -50%);
+}
+
+/* 4.05: one claim, two mutually exclusive paths. */
+.s4-spend-save__choice {
+  position: absolute;
+  top: 210px;
+  z-index: 8;
+  width: 420px;
+  font-size: 34px;
+  font-weight: 620;
+  line-height: 1;
+  letter-spacing: 0;
+  text-align: center;
+  color: var(--text-secondary);
+  opacity: 0;
+  transform: translateY(8px);
+  transition:
+    opacity 400ms ease-out,
+    transform 400ms ease-out,
+    color 400ms ease-out;
+}
+
+.s4-spend-save__choice--spend {
+  left: 250px;
+}
+
+.s4-spend-save__choice--save {
+  right: 250px;
+}
+
+.s4-spend-save__choice[data-visible="true"] {
+  opacity: 0.72;
+  transform: translateY(0);
+}
+
+.s4-spend-save__choice[data-state="active"] {
+  opacity: 1;
+  color: var(--accent);
+}
+
+/* V-3: the slide is a fork, so both tines stay visible even when one is not
+   taken. The unchosen side is dormant, not absent — it was 0.24 (and its route
+   0.18), which read as gone. */
+.s4-spend-save__choice[data-state="subdued"] {
+  opacity: 0.42;
+}
+
+.s4-spend-save__routes {
+  position: absolute;
+  left: 220px;
+  top: 380px;
+  width: 1480px;
+  height: 320px;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 400ms ease-out;
+}
+
+.s4-spend-save__routes[data-visible="true"] {
+  opacity: 1;
+}
+
+.s4-spend-save__routes svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.s4-spend-save__route {
+  fill: none;
+  stroke: var(--text-dim);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+  transition:
+    stroke 420ms ease-out,
+    opacity 420ms ease-out;
+}
+
+.s4-spend-save__routes[data-active="spend"] .s4-spend-save__route--spend {
+  stroke: var(--accent);
+}
+
+.s4-spend-save__routes[data-active="spend"] .s4-spend-save__route--save {
+  opacity: 0.4;
+}
+
+.s4-spend-save__routes[data-active="save"] .s4-spend-save__route--save {
+  stroke: var(--accent);
+  opacity: 0.78;
+}
+
+.s4-spend-save__routes[data-active="save"] .s4-spend-save__route--spend {
+  opacity: 0.4;
+}
+
+.s4-spend-save__claim-stage {
+  position: absolute;
+  left: 870px;
+  top: 464px;
+  width: 180px;
+  height: 72px;
+  z-index: 7;
+  transform: translate(0, 0);
+  transition: transform 650ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s4-spend-save__claim-stage[data-position="spend"] {
+  z-index: 4;
+  transform: translate(-510px, 90px);
+}
+
+.s4-spend-save__claim-stage[data-position="spend"] .s4-spend-save__claim {
+  opacity: 0;
+  transform: scale(0.7);
+  filter: none;
+}
+
+.s4-spend-save__claim-stage[data-position="save"] {
+  transform: translate(510px, 90px);
+}
+
+.s4-spend-save__support {
+  position: absolute;
+  z-index: 8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 560px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 430ms ease-out,
+    transform 430ms ease-out;
+}
+
+.s4-spend-save__support[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.s4-spend-save__support--spend {
+  left: 210px;
+  top: 802px;
+}
+
+/* Clear of the disc's glow: the claim is round and taller than the capsule
+   this position was set for, and the support was landing inside its halo. */
+.s4-spend-save__support--save {
+  right: 170px;
+  top: 728px;
+}
+
+.s4-spend-save__support span {
+  font-size: 29px;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: 0;
+  color: var(--text-secondary);
+}
+
+.s4-spend-save__support strong {
+  font-size: 23px;
+  font-weight: 650;
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: var(--text-primary);
+}
+
+.s4-spend-save__support--save strong {
+  color: var(--accent);
+}
+
+.s4-spend-save__final {
+  position: absolute;
+  left: 360px;
+  top: 824px;
+  width: 1200px;
+  z-index: 9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity 480ms ease-out,
+    transform 480ms ease-out;
+}
+
+.s4-spend-save__final[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.s4-spend-save__final span {
+  font-size: 39px;
+  font-weight: 540;
+  line-height: 1.08;
+  letter-spacing: 0;
+  color: var(--text-secondary);
+}
+
+.s4-spend-save__final strong {
+  font-size: 50px;
+  font-weight: 650;
+  line-height: 1.08;
+  letter-spacing: 0;
+  color: var(--accent);
+}
+
+/* 4.06: name the essence, then form a neutral carrier around it. */
+.s4-claim-carrier__statement {
+  position: absolute;
+  left: 300px;
+  width: 1320px;
+  z-index: 8;
+  text-align: center;
+  letter-spacing: 0;
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 440ms ease-out,
+    transform 440ms ease-out;
+}
+
+.s4-claim-carrier__statement[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.s4-claim-carrier__statement[data-quiet="true"] {
+  opacity: 0.34;
+}
+
+.s4-claim-carrier__statement--essence {
+  top: 166px;
+  font-size: 43px;
+  font-weight: 520;
+  line-height: 1.12;
+  color: var(--text-primary);
+}
+
+.s4-claim-carrier__statement--essence strong {
+  color: var(--accent);
+  font-weight: 650;
+}
+
+.s4-claim-carrier__statement--body {
+  top: 238px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 31px;
+  font-weight: 480;
+  line-height: 1.18;
+  color: var(--text-secondary);
+}
+
+.s4-claim-carrier__carrier-title {
+  position: absolute;
+  left: 560px;
+  top: 226px;
+  width: 800px;
+  z-index: 8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 440ms ease-out,
+    transform 440ms ease-out;
+}
+
+.s4-claim-carrier__carrier-title[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.s4-claim-carrier__carrier-title[data-quiet="true"] {
+  opacity: 0.3;
+}
+
+.s4-claim-carrier__carrier-title span {
+  font-size: 19px;
+  font-weight: 560;
+  line-height: 1;
+  letter-spacing: 0;
+  color: var(--text-secondary);
+}
+
+.s4-claim-carrier__carrier-title strong {
+  font-size: 42px;
+  font-weight: 650;
+  line-height: 1;
+  letter-spacing: 0;
+  color: var(--accent);
+}
+
+.s4-claim-carrier__scene,
+.s4-store-function__scene {
+  position: absolute;
+  left: 700px;
+  top: 400px;
+  width: 520px;
+  height: 240px;
+  z-index: 6;
+}
+
+.s4-claim-carrier__claim-stage,
+.s4-store-function__claim-stage {
+  position: absolute;
+  left: 170px;
+  top: 84px;
+  width: 180px;
+  height: 72px;
+  z-index: 3;
+  transition: transform 620ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s4-claim-carrier__shell,
+.s4-store-function__shell {
+  z-index: 1;
+}
+
+/* The lineup takes the dark-field register at R7.2 §C3, so the row grows to
+   hold renders at display scale. It moved up from 704 to make room without
+   crowding the closing pair beneath it, and the whole row sits between the
+   scene's glow and that pair with clear air on both sides. */
+.s4-claim-carrier__lineage {
+  position: absolute;
+  left: 300px;
+  top: 664px;
+  width: 1320px;
+  height: 145px;
+  z-index: 7;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  align-items: start;
+  text-align: center;
+  opacity: 0;
+  transition:
+    opacity 420ms ease-out;
+}
+
+/* The renders carry their own luminance, so the row runs brighter than the
+   glyph row did — 0.76 on a drawn mark reads as "quiet"; 0.76 on a photograph
+   reads as "underexposed". */
+.s4-claim-carrier__lineage[data-visible="true"] {
+  opacity: 0.94;
+}
+
+.s4-claim-carrier__lineage[data-quiet="true"] {
+  opacity: 0.28;
+}
+
+.s4-claim-carrier__lineage-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  opacity: 0;
+  transform: translateY(8px);
+  transition:
+    opacity 400ms ease-out,
+    transform 400ms ease-out;
+}
+
+.s4-claim-carrier__lineage[data-visible="true"] .s4-claim-carrier__lineage-item {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: calc(var(--carrier-index) * 90ms);
+}
+
+/* One box for every position, whichever register fills it — which is what kept
+   the old O-07 problem from coming back with the photographs. The five renders
+   are graded to one standard and gated against it, so the row needs no
+   per-carrier scale or brightness correction: the five CSS fixes the pre-R7
+   renders needed existed because the images disagreed with each other, not
+   because a row of images is unmanageable. */
+.s4-claim-carrier__lineage-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 112px;
+  transition: none;
+}
+
+/* A position still speaking the line grammar keeps the glyph treatment. */
+.s4-claim-carrier__lineage-visual--glyph {
+  color: var(--text-primary);
+  opacity: 0.82;
+  filter: drop-shadow(0 0 10px rgba(253, 233, 212, 0.22));
+}
+
+.s4-claim-carrier__lineage-visual svg {
+  display: block;
+}
+
+.s4-claim-carrier__lineage span {
+  font-size: 17px;
+  font-weight: 620;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.s4-claim-carrier__final {
+  position: absolute;
+  left: 360px;
+  top: 842px;
+  width: 1200px;
+  z-index: 8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity 500ms ease-out,
+    transform 500ms ease-out;
+}
+
+.s4-claim-carrier__final[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.s4-claim-carrier__final span {
+  font-size: 42px;
+  font-weight: 540;
+  line-height: 1.1;
+  letter-spacing: 0;
+  color: var(--text-primary);
+}
+
+.s4-claim-carrier__final strong {
+  color: var(--accent);
+  font-weight: 650;
+}
+
+/* 4.07: carry the same object through time and define the function. */
+.s4-store-function__question {
+  position: absolute;
+  left: 360px;
+  top: 174px;
+  width: 1200px;
+  z-index: 8;
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: 0;
+  text-align: center;
+  color: var(--text-primary);
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 440ms ease-out,
+    transform 440ms ease-out;
+}
+
+.s4-store-function__question[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.s4-store-function__question[data-quiet="true"] {
+  opacity: 0.24;
+}
+
+.s4-store-function__scene {
+  transform: translateX(0);
+  transition: transform 620ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s4-store-function__scene[data-position="later"] {
+  transform: translateX(60px);
+}
+
+.s4-store-function__time {
+  position: absolute;
+  left: 360px;
+  top: 564px;
+  width: 1200px;
+  height: 84px;
+  z-index: 2;
+  color: var(--text-secondary);
+  opacity: 0;
+  transition: opacity 420ms ease-out;
+}
+
+.s4-store-function__time[data-visible="true"] {
+  opacity: 0.58;
+}
+
+.s4-store-function__time[data-quiet="true"] {
+  opacity: 0.24;
+}
+
+.s4-store-function__time svg {
+  position: absolute;
+  inset: 0 40px;
+  width: 1120px;
+  height: 72px;
+  overflow: visible;
+}
+
+.s4-store-function__time path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.s4-store-function__time-label {
+  position: absolute;
+  top: 27px;
+  z-index: 3;
+  font-size: 15px;
+  font-weight: 650;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+}
+
+.s4-store-function__time-label--now {
+  left: 0;
+}
+
+.s4-store-function__time-label--later {
+  right: 0;
+}
+
+.s4-store-function__measure {
+  position: absolute;
+  top: 680px;
+  z-index: 8;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 500px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 430ms ease-out,
+    transform 430ms ease-out;
+}
+
+.s4-store-function__measure[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.s4-store-function__measure[data-quiet="true"] {
+  opacity: 0.34;
+}
+
+.s4-store-function__measure--purchasing-power {
+  left: 280px;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.s4-store-function__measure--redeemability {
+  right: 250px;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.s4-store-function__measure strong {
+  font-size: 24px;
+  font-weight: 670;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+}
+
+.s4-store-function__measure span {
+  font-size: 29px;
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: 0;
+  color: var(--text-primary);
+}
+
+.s4-store-function__definition {
+  position: absolute;
+  left: 260px;
+  top: 824px;
+  width: 1400px;
+  z-index: 9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity 500ms ease-out,
+    transform 500ms ease-out;
+}
+
+.s4-store-function__definition[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.s4-store-function__definition span {
+  font-size: 36px;
+  font-weight: 540;
+  line-height: 1.12;
+  letter-spacing: 0;
+  color: var(--text-primary);
+}
+
+.s4-store-function__definition strong {
+  font-weight: 650;
+  color: var(--accent);
+}
+
+/* 4.08: carry the approved claim and carrier across one century. */
+/* The four statements are the experiment, stated — one paragraph, one build,
+   so they stand together as a block instead of replacing one another. */
+.s4-century-test__statements {
+  position: absolute;
+  left: 300px;
+  top: 232px;
+  width: 1320px;
+  display: grid;
+  gap: 14px;
+  z-index: 8;
+}
+
+.s4-century-test__statement {
+  margin: 0;
+  font-size: 42px;
+  font-weight: 610;
+  line-height: 1.14;
+  letter-spacing: 0;
+  text-align: center;
+  color: var(--text-primary);
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 440ms ease-out,
+    transform 440ms ease-out;
+}
+
+.s4-century-test__statement[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* One gesture, read in order — live only. */
+.s4-century-test[data-live="true"] .s4-century-test__statement {
+  transition-delay: calc(var(--statement-index) * 260ms);
+}
+
+.s4-century-test__timeline {
+  position: absolute;
+  left: 330px;
+  top: 545px;
+  width: 1260px;
+  height: 112px;
+  opacity: 0;
+  transition: opacity 520ms ease-out;
+  z-index: 2;
+  color: var(--text-secondary);
+}
+
+.s4-century-test__timeline[data-visible="true"] {
+  opacity: 1;
+}
+
+.s4-century-test__timeline svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1260px;
+  height: 80px;
+  overflow: visible;
+}
+
+.s4-century-test__track,
+.s4-century-test__travel {
+  fill: none;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.s4-century-test__track {
+  stroke: rgba(255, 255, 255, 0.22);
+  stroke-width: 1.4;
+}
+
+.s4-century-test__travel {
+  stroke: var(--accent);
+  stroke-width: 1.6;
+  opacity: 0;
+  transform: scaleX(0);
+  transform-box: fill-box;
+  transform-origin: left center;
+  transition:
+    opacity 480ms ease-out,
+    transform 720ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s4-century-test__timeline[data-progress="middle"] .s4-century-test__travel {
+  opacity: 0.5;
+  transform: scaleX(0.5);
+}
+
+.s4-century-test__timeline[data-progress="end"] .s4-century-test__travel {
+  opacity: 0.48;
+  transform: scaleX(1);
+}
+
+.s4-century-test__timeline[data-held="true"] .s4-century-test__travel {
+  opacity: 0.24;
+}
+
+.s4-century-test__year {
+  position: absolute;
+  top: 86px;
+  z-index: 4;
+  width: 120px;
+  font-size: 23px;
+  font-weight: 640;
+  line-height: 1;
+  letter-spacing: 0;
+  color: var(--text-secondary);
+  transition:
+    color 420ms ease-out,
+    opacity 420ms ease-out;
+}
+
+.s4-century-test__year--start {
+  left: -60px;
+  text-align: center;
+  color: var(--accent);
+}
+
+.s4-century-test__year--end {
+  right: -60px;
+  text-align: center;
+}
+
+.s4-century-test__timeline[data-destination="true"] .s4-century-test__year--start {
+  color: var(--text-secondary);
+  opacity: 0.52;
+}
+
+.s4-century-test__timeline[data-destination="true"] .s4-century-test__year--end {
+  color: var(--accent);
+}
+
+/* R7.4 §C: "100 YEARS" sat at -68px, which put it exactly on the shell's upper
+   arc terminals — the label and the carrier occupying the same pixels at every
+   build the shell is on stage. The span clears the shell's outer radius now
+   (the scene's shell reaches ~92px above the timeline at this scale, so -126
+   leaves a real gap rather than a hairline miss). Clearance between the
+   shell/disc and any text is a rule on this slide, not a nudge. */
+.s4-century-test__span {
+  position: absolute;
+  left: 530px;
+  top: -126px;
+  width: 200px;
+  z-index: 4;
+  font-size: 18px;
+  font-weight: 640;
+  line-height: 1;
+  letter-spacing: 0;
+  text-align: center;
+  color: var(--text-secondary);
+  opacity: 0;
+  transform: translateY(6px);
+  transition:
+    opacity 420ms ease-out,
+    transform 420ms ease-out;
+}
+
+.s4-century-test__timeline[data-span-visible="true"] .s4-century-test__span {
+  opacity: 0.72;
+  transform: translateY(0);
+}
+
+.s4-century-test__scene,
+.s4-future-unknown__scene {
+  position: absolute;
+  width: 520px;
+  height: 240px;
+  z-index: 6;
+}
+
+.s4-century-test__scene {
+  left: 170px;
+  top: 465px;
+  transform: translateX(0);
+  transition: transform 1000ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s4-century-test__scene[data-position="middle"] {
+  transform: translateX(530px);
+}
+
+.s4-century-test__scene[data-position="end"] {
+  transform: translateX(1060px);
+}
+
+.s4-century-test__claim-stage,
+.s4-future-unknown__claim-stage {
+  position: absolute;
+  left: 170px;
+  top: 84px;
+  width: 180px;
+  height: 72px;
+  z-index: 3;
+}
+
+.s4-century-test__shell,
+.s4-future-unknown__shell {
+  z-index: 1;
+}
+
+/* 4.09: the date remains known while every surrounding condition is uncertain. */
+.s4-future-unknown__date {
+  position: absolute;
+  left: 260px;
+  top: 700px;
+  width: 1400px;
+  z-index: 1;
+  font-size: 260px;
+  font-weight: 680;
+  line-height: 0.9;
+  letter-spacing: 0;
+  text-align: center;
+  color: rgba(220, 210, 195, 0.07);
+  user-select: none;
+}
+
+.s4-future-unknown__opening {
+  position: absolute;
+  left: 360px;
+  top: 160px;
+  width: 1200px;
+  z-index: 8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 440ms ease-out,
+    transform 440ms ease-out;
+}
+
+.s4-future-unknown__opening[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.s4-future-unknown__opening[data-visible="true"][data-quiet="true"] {
+  opacity: 0.2;
+}
+
+.s4-future-unknown__opening span,
+.s4-future-unknown__opening strong {
+  font-size: 51px;
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+
+.s4-future-unknown__opening span {
+  font-weight: 520;
+  color: var(--text-secondary);
+}
+
+.s4-future-unknown__opening strong {
+  font-weight: 640;
+  color: var(--text-primary);
+}
+
+.s4-future-unknown__pairs {
+  position: absolute;
+  left: 300px;
+  top: 286px;
+  width: 1320px;
+  height: 136px;
+  z-index: 8;
+}
+
+.s4-future-unknown__pair {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 420px);
+  column-gap: 480px;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 430ms ease-out;
+}
+
+.s4-future-unknown__pair[data-visible="true"] {
+  opacity: 1;
+}
+
+.s4-future-unknown__pair-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 420px;
+  min-height: 108px;
+  font-size: 31px;
+  font-weight: 640;
+  line-height: 1.18;
+  letter-spacing: 0;
+  text-align: center;
+  color: var(--text-primary);
+}
+
+.s4-future-unknown__scene {
+  left: 700px;
+  top: 430px;
+  opacity: 1;
+  transition: opacity 500ms ease-out;
+}
+
+.s4-future-unknown__scene[data-quiet="true"] {
+  opacity: 0.58;
+}
+
+.s4-future-unknown__final {
+  position: absolute;
+  left: 320px;
+  top: 236px;
+  width: 1280px;
+  z-index: 9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity 500ms ease-out,
+    transform 500ms ease-out;
+}
+
+.s4-future-unknown__final[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.s4-future-unknown__final span {
+  font-size: 51px;
+  font-weight: 570;
+  line-height: 1.12;
+  letter-spacing: 0;
+  color: var(--text-primary);
+}
+
+.s4-future-unknown__final strong {
+  font-weight: 660;
+  color: var(--accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .s4-goods-cluster__image,
+  .s4-claim-carrier__lineage-item {
+    transition-delay: 0ms !important;
+  }
+}
+
+
+/* ----- Section 4 inversion and property derivation: slides 4.10-4.14 ----- */
+
+/* Slide 4.10 retains only the restrained inspection frame and approved claim/carrier. */
+.s4-stress-stage {
+  position: absolute;
+  width: 720px;
+  height: 360px;
+  isolation: isolate;
+}
+
+.s4-stress-stage__scene {
+  position: absolute;
+  left: 100px;
+  top: 60px;
+  width: 520px;
+  height: 240px;
+  z-index: 3;
+  opacity: 1;
+  transform: translateX(0) scale(1);
+  transform-origin: center;
+  transition:
+    opacity 420ms ease-out,
+    transform 650ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s4-stress-stage__claim-stage {
+  position: absolute;
+  left: 170px;
+  top: 84px;
+  width: 180px;
+  height: 72px;
+  z-index: 3;
+  transform: scale(1);
+  transform-origin: center;
+  transition:
+    opacity 420ms ease-out,
+    transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s4-stress-stage__shell {
+  z-index: 1;
+}
+
+/* Slide 4.10: carry the question into inversion without altering 4.09. */
+/* Recentered after the header went (§9.4.4). */
+.s4-inversion__governing,
+.s4-inversion__framing {
+  position: absolute;
+  left: 320px;
+  top: 338px;
+  width: 1280px;
+  z-index: 8;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity 460ms ease-out,
+    transform 520ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s4-inversion__governing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.s4-inversion__governing[data-visible="true"],
+.s4-inversion__framing[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.s4-inversion__governing[data-visible="true"][data-quiet="true"] {
+  opacity: 0.13;
+  transform: translateY(-122px) scale(0.78);
+}
+
+.s4-inversion__governing span {
+  font-size: 51px;
+  font-weight: 570;
+  line-height: 1.12;
+  letter-spacing: 0;
+  color: var(--text-primary);
+}
+
+.s4-inversion__governing strong {
+  font-weight: 660;
+  color: var(--accent);
+}
+
+.s4-inversion__framing {
+  top: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.s4-inversion__framing span {
+  font-size: 21px;
+  font-weight: 650;
+  line-height: 1;
+  letter-spacing: 0;
+  color: var(--accent);
+}
+
+.s4-inversion__framing strong {
+  font-size: 58px;
+  font-weight: 620;
+  line-height: 1.1;
+  letter-spacing: 0;
+  color: var(--text-primary);
+}
+
+.s4-inversion__stage {
+  left: 600px;
+  top: 472px;
+}
+
+/* Slides 4.11-4.12: identical five-row typographic frameworks. */
+.s4-failure-list {
+  position: absolute;
+  left: 235px;
+  top: 244px;
+  width: 1450px;
+  display: grid;
+  grid-template-rows: repeat(5, 104px);
+  row-gap: 11px;
+}
+
+.s4-failure-list__row {
+  display: grid;
+  grid-template-columns: 64px 300px minmax(0, 1fr);
+  column-gap: 48px;
+  align-items: center;
+  min-width: 0;
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 400ms ease-out,
+    transform 430ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s4-failure-list__row[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.s4-failure-list__number,
+.s4-failure-list__name,
+.s4-failure-list__explanation {
+  min-width: 0;
+  letter-spacing: 0;
+}
+
+.s4-failure-list__number {
+  font-size: 25px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  text-align: right;
+  color: var(--accent);
+  opacity: 0.8;
+}
+
+.s4-failure-list__name {
+  font-size: 30px;
+  font-weight: 620;
+  line-height: 1.08;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+.s4-failure-list__explanation {
+  font-size: 25px;
+  font-weight: 430;
+  line-height: 1.28;
+  color: var(--text-secondary);
+}
+
+/* Slide 4.13: two identical five-row mapping tracks. */
+/* Recentered after the header went (§9.4.4): the block sat 108px high, which
+   was the space the retired header used to occupy. */
+.s4-mapping__main {
+  position: absolute;
+  left: 360px;
+  top: 298px;
+  width: 1200px;
+  margin: 0;
+  font-size: 48px;
+  font-weight: 590;
+  line-height: 1.12;
+  letter-spacing: 0;
+  text-align: center;
+  color: var(--text-primary);
+  opacity: 1;
+  transition: opacity 420ms ease-out;
+}
+
+.s4-mapping__grid {
+  position: absolute;
+  left: 200px;
+  top: 438px;
+  width: 1520px;
+  display: grid;
+  grid-template-columns: repeat(2, 720px);
+  grid-template-rows: repeat(5, 74px);
+  grid-auto-flow: column;
+  column-gap: 80px;
+}
+
+.s4-mapping__row {
+  display: grid;
+  grid-template-columns: 220px 42px minmax(0, 1fr);
+  align-items: center;
+  min-width: 0;
+}
+
+.s4-mapping__failure,
+.s4-mapping__arrow,
+.s4-mapping__property {
+  line-height: 1.08;
+  letter-spacing: 0;
+  white-space: nowrap;
+  transition:
+    color 420ms ease-out,
+    opacity 420ms ease-out,
+    transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s4-mapping__failure {
+  font-size: 22px;
+  font-weight: 590;
+  color: var(--text-muted);
+}
+
+.s4-mapping__arrow {
+  font-size: 24px;
+  font-weight: 420;
+  text-align: center;
+  color: rgba(247, 147, 26, 0.42);
+  opacity: 0;
+}
+
+.s4-mapping__property {
+  font-size: 24px;
+  font-weight: 610;
+  color: var(--text-primary);
+  opacity: 0;
+  transform: translateX(-8px);
+}
+
+.s4-mapping__row[data-mapped="true"] .s4-mapping__arrow,
+.s4-mapping__row[data-mapped="true"] .s4-mapping__property {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Slide 4.14: 600 + 180 + 600 creates exact mirror columns around x=960. */
+.s4-properties__grid {
+  position: absolute;
+  left: 270px;
+  top: 285px;
+  width: 1380px;
+  display: grid;
+  grid-template-columns: repeat(2, 600px);
+  column-gap: 180px;
+}
+
+.s4-properties__column {
+  display: grid;
+  grid-template-rows: repeat(5, 92px);
+  row-gap: 16px;
+}
+
+.s4-properties__row {
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr);
+  column-gap: 20px;
+  align-items: center;
+  min-width: 0;
+  opacity: 0;
+  transform: translateY(9px);
+  transition:
+    opacity 380ms ease-out,
+    transform 440ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s4-properties__row[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* A column is one spoken beat, so it is one build — its five rows arrive in
+   reading order inside that single gesture, live only. */
+.s4-properties[data-live="true"] .s4-properties__row {
+  transition-delay: calc(var(--property-index) * 80ms);
+}
+
+.s4-properties__number,
+.s4-properties__label {
+  line-height: 1;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.s4-properties__number {
+  font-size: 27px;
+  font-weight: 590;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+  color: var(--accent);
+  opacity: 0.82;
+}
+
+.s4-properties__label {
+  font-size: 30px;
+  font-weight: 560;
+  color: var(--text-primary);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .s4-failure-list__row,
+  .s4-mapping__failure,
+  .s4-mapping__arrow,
+  .s4-mapping__property {
+    transition-duration: 0.01ms !important;
+  }
+}
+
+
+/* ----- Section 4 comparison framing and table: slides 4.15-4.16 ----- */
+
+/* Centered over the table's own span (120–1800), per §9.4.4. */
+.s4-comparison__kicker {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.s4-candidates__question {
+  position: absolute;
+  left: 260px;
+  top: 176px;
+  width: 1400px;
+  margin: 0;
+  font-size: 50px;
+  font-weight: 590;
+  line-height: 1.12;
+  letter-spacing: 0;
+  text-align: center;
+  color: var(--text-primary);
+  transition: opacity 420ms ease-out;
+}
+
+.s4-candidates__stage {
+  position: absolute;
+  inset: 0;
+}
+
+.s4-candidates__group {
+  position: absolute;
+  top: 330px;
+  font-size: 17px;
+  font-weight: 620;
+  line-height: 1;
+  letter-spacing: 0.16em;
+  text-align: center;
+  color: var(--text-muted);
+  opacity: 0;
+  transform: translateY(8px);
+  transition:
+    opacity 360ms ease-out,
+    transform 440ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s4-candidates__group--monetary {
+  left: 270px;
+  width: 760px;
+}
+
+.s4-candidates__group--productive {
+  left: 1110px;
+  width: 520px;
+}
+
+.s4-candidates__group[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* The candidate set, complete: the family labels and the rule between them
+   yield, and the five stand as one row — which is what the "why these five"
+   beat is about. */
+.s4-candidates__stage[data-settled="true"] .s4-candidates__group[data-visible="true"],
+.s4-candidates__stage[data-settled="true"] .s4-candidates__divider[data-visible="true"] {
+  opacity: 0.38;
+}
+
+.s4-candidates__divider {
+  position: absolute;
+  left: 1074px;
+  top: 320px;
+  width: 1px;
+  height: 380px;
+  background: rgba(255, 255, 255, 0.16);
+  opacity: 0;
+  transform: scaleY(0.72);
+  transform-origin: center;
+  transition:
+    opacity 380ms ease-out,
+    transform 480ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s4-candidates__divider[data-visible="true"] {
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+.s4-comparison-asset {
+  width: 200px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* R7 §4.1: one stroke weight, one grid, one glow family — so the five
+   candidates scan as a set with no per-asset scale or brightness correction
+   at all, which is what the old photographic renders needed and never quite
+   achieved (O-07). Glyphs are monochrome via currentColor and carry the
+   deck’s standard unit-warm luminance treatment from placement CSS. */
+.s4-comparison-asset__mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 150px;
+  color: var(--text-primary);
+  filter: drop-shadow(0 0 10px rgba(253, 233, 212, 0.22));
+}
+
+.s4-comparison-asset__mark svg {
+  display: block;
+}
+
+/* The same box, the other register (R7.4 §B). The dark-field surface carries no
+   glow of its own — the grade put the light in the image — so the mark's
+   drop-shadow is dropped rather than applied to a photograph, where it would
+   read as bloom. Nothing else about the asset moves: same box, same label, same
+   position, so the five candidates keep their composition exactly. */
+.s4-comparison-asset__mark--df {
+  filter: none;
+}
+
+.s4-comparison-asset__render {
+  margin: 0 auto;
+}
+
+.s4-comparison-asset__label {
+  margin-top: 16px;
+  font-size: 19px;
+  font-weight: 620;
+  line-height: 1;
+  letter-spacing: 0.15em;
+  text-align: center;
+  color: var(--text-primary);
+}
+
+.s4-candidates__asset {
+  position: absolute;
+  top: 382px;
+  opacity: 0;
+  transform: translateY(16px) scale(0.98);
+  transition:
+    opacity 400ms ease-out,
+    transform 480ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s4-candidates__asset[data-asset="gold"] {
+  left: 290px;
+}
+
+.s4-candidates__asset[data-asset="fiat"] {
+  left: 550px;
+}
+
+.s4-candidates__asset[data-asset="bitcoin"] {
+  left: 810px;
+}
+
+.s4-candidates__asset[data-asset="property"] {
+  left: 1140px;
+}
+
+.s4-candidates__asset[data-asset="shares"] {
+  left: 1400px;
+}
+
+.s4-candidates__asset[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.s4-candidates__asset[data-visible="true"][data-asset="fiat"],
+.s4-candidates__asset[data-visible="true"][data-asset="shares"] {
+  transition-delay: 80ms;
+}
+
+.s4-candidates__asset[data-visible="true"][data-asset="bitcoin"] {
+  transition-delay: 160ms;
+}
+
+/* The candidates' last build (R7.4 §D.2). The framework/judgment line was here
+   and is now spoken only; what the build does instead is recede the question it
+   has just answered, so the frame the table arrives from is the five candidates
+   alone. */
+.s4-candidates[data-answered="true"] .s4-candidates__question {
+  opacity: var(--dim-prior);
+}
+
+/* Compact asset headers: the same marks in an equal, smaller slot. */
+.s4-comparison-asset--compact {
+  width: 100%;
+}
+
+.s4-comparison-asset--compact .s4-comparison-asset__mark {
+  width: 72px;
+  height: 58px;
+}
+
+.s4-comparison-asset--compact .s4-comparison-asset__label {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 620;
+  letter-spacing: 0.12em;
+}
+
+/* The header convention sat at 78px because it was chrome; a kicker that names
+   a frame is content and keeps the deck's margin (§9.4.4). At 46px it was the
+   nearest thing to a frame edge in Section 4. */
+.s4-comparison__kicker {
+  top: 104px;
+}
+
+.s4-comparison__table-wrap {
+  position: absolute;
+  left: 120px;
+  top: 116px;
+  width: 1680px;
+}
+
+.s4-comparison-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.s4-comparison-table__property-column {
+  width: 460px;
+}
+
+.s4-comparison-table__asset-column {
+  width: 244px;
+}
+
+.s4-comparison-table th,
+.s4-comparison-table td {
+  padding: 0;
+}
+
+.s4-comparison-table__group-row {
+  height: 27px;
+}
+
+.s4-comparison-table__group {
+  font-size: 13px;
+  font-weight: 620;
+  line-height: 1;
+  letter-spacing: 0.16em;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.s4-comparison-table__asset-row {
+  height: 101px;
+}
+
+.s4-comparison-table__property-heading {
+  padding: 0 28px 14px 0;
+  vertical-align: bottom;
+  font-size: 14px;
+  font-weight: 620;
+  line-height: 1;
+  letter-spacing: 0.16em;
+  text-align: left;
+  color: var(--text-muted);
+}
+
+.s4-comparison-table__asset-heading {
+  vertical-align: middle;
+}
+
+.s4-comparison-table__family-break {
+  border-left: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.s4-comparison-table__row {
+  height: 60px;
+  border-top: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.s4-comparison-table__property {
+  padding-right: 28px;
+  font-size: 20px;
+  font-weight: 570;
+  line-height: 1.1;
+  letter-spacing: 0;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.88);
+  white-space: nowrap;
+}
+
+.s4-comparison-table__score {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.s4-dot-rating {
+  display: inline-grid;
+  grid-template-columns: repeat(5, 10px);
+  column-gap: 8px;
+  align-items: center;
+  justify-content: center;
+  min-width: 82px;
+  height: 18px;
+}
+
+/* The empty dots carry the difference between a 4 and a 5, and that difference
+   has to survive video compression — at 0.12 the fifth empty dot is close
+   enough to black that a streaming encoder can lose it. The filled treatment is
+   unchanged, so the contrast between scored and unscored is untouched. */
+.s4-dot-rating__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  transition: background-color 520ms ease-out;
+}
+
+.s4-dot-rating[data-revealed="true"] .s4-dot-rating__dot[data-filled="true"] {
+  background: var(--accent);
+}
+
+/* Held clear of the bottom margin (§9.4.4); at 948 the line's descenders came
+   within 97px of the frame edge, the tightest clearance in the section. */
+.s4-comparison__final {
+  position: absolute;
+  left: 300px;
+  top: 930px;
+  width: 1320px;
+  margin: 0;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 10px;
+  font-size: 30px;
+  font-weight: 540;
+  line-height: 1.15;
+  letter-spacing: 0;
+  text-align: center;
+  color: var(--text-primary);
+  opacity: 0;
+  transform: translateY(8px);
+  transition:
+    opacity 360ms ease-out,
+    transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s4-comparison__final strong {
+  font-weight: 650;
+  color: var(--accent);
+}
+
+.s4-comparison__final[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .s4-candidates__group,
+  .s4-candidates__divider,
+  .s4-candidates__asset,
+  .s4-dot-rating__dot,
+  .s4-comparison__final {
+    transition-delay: 0ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+
+/* ----- Section 4 final investment thesis: slides 4.17-4.23 ----- */
+
+/* 4.23's kicker is the one survivor of the retired header convention: its
+   frame is frozen (R7 §7, the argument freeze), so it keeps the old treatment
+   — accent caption and rule line — by design, not by oversight. The six other
+   selectors that shared this rule are gone with their headers (R7.1 A2).
+   Declarations below are byte-identical to the shared rule they came from. */
+.s4-investment-case__kicker {
+  position: absolute;
+  left: 120px;
+  top: 78px;
+}
+
+/* Slide 4.17: the store-of-value function migrates. */
+
+.s4-migration__opening,
+.s4-migration__reveal,
+.s4-migration__final {
+  position: absolute;
+  margin: 0;
+  text-align: center;
+  letter-spacing: 0;
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 400ms ease-out,
+    transform 480ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s4-migration__opening {
+  left: 360px;
+  top: 168px;
+  width: 1200px;
+  font-size: 43px;
+  font-weight: 570;
+  line-height: 1.15;
+  color: var(--text-primary);
+}
+
+.s4-migration__reveal {
+  left: 640px;
+  top: 236px;
+  width: 640px;
+  font-size: 68px;
+  font-weight: 650;
+  line-height: 1;
+  color: var(--accent);
+}
+
+.s4-migration__opening[data-visible="true"],
+.s4-migration__reveal[data-visible="true"],
+.s4-migration__final[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.s4-migration__asset {
+  position: absolute;
+  top: 342px;
+  opacity: 0;
+  transform: translateY(14px) scale(0.98);
+  transition:
+    opacity 420ms ease-out,
+    transform 540ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s4-migration__asset[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.s4-migration__asset--fiat {
+  left: 180px;
+}
+
+.s4-migration__asset--gold {
+  left: calc(var(--destination-centre-x) - 100px);
+}
+
+.s4-migration__asset--property {
+  left: calc(var(--destination-centre-x) - 100px);
+}
+
+.s4-migration__asset--shares {
+  left: calc(var(--destination-centre-x) - 100px);
+}
+
+.s4-migration__fiat-functions {
+  position: absolute;
+  left: 168px;
+  top: 548px;
+  width: 224px;
+  display: grid;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 560;
+  line-height: 1;
+  letter-spacing: 0;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.s4-migration__flow {
+  position: absolute;
+  left: 390px;
+  top: 566px;
+  width: 1320px;
+  height: 200px;
+  opacity: 0;
+  transition: opacity 420ms ease-out;
+}
+
+.s4-migration__flow[data-visible="true"] {
+  opacity: 1;
+}
+
+.s4-migration__flow svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.s4-migration__flow path {
+  fill: none;
+  vector-effect: non-scaling-stroke;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.s4-migration__flow-lane--base {
+  stroke: rgba(255, 255, 255, 0.12);
+  stroke-width: 1;
+}
+
+.s4-migration__flow-lane--active,
+.s4-migration__flow-branch {
+  stroke: var(--accent);
+  stroke-width: 1.4;
+}
+
+.s4-migration__flow-lane--active {
+  stroke-dasharray: 1232;
+  stroke-dashoffset: 1232;
+  transition: stroke-dashoffset 620ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s4-migration__flow-branch {
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: 50% 152px;
+  transition:
+    opacity 220ms ease-out 420ms,
+    transform 360ms cubic-bezier(0.22, 1, 0.36, 1) 420ms;
+}
+
+.s4-migration__flow[data-visible="true"] .s4-migration__flow-lane--active {
+  stroke-dashoffset: 0;
+}
+
+.s4-migration__flow[data-visible="true"] .s4-migration__flow-branch {
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+/* The travelling claim (R7.4 §F.3). The box is the disc's own size, so the
+   disc fills it and `offset-path` — which moves the box by its own centre —
+   moves the disc's centre. `left`/`top` are then the disc's starting centre and
+   each destination's `centreX` is where that centre lands, which is the whole
+   point: one coordinate system for the connector and the thing standing on it.
+   It used to be a 90×36 box whose middle rode the path while the disc sat
+   somewhere else inside it, and every disc landed beside its connector. */
+.s4-migration__claim {
+  position: absolute;
+  left: 450px;
+  top: 718px;
+  width: 116px;
+  height: 116px;
+  offset-distance: 0%;
+  offset-rotate: 0deg;
+  transition: offset-distance 820ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s4-migration__claim[data-migrated="true"] {
+  offset-distance: 100%;
+}
+
+.s4-migration__claim-object {
+  filter: none;
+}
+
+.s4-migration__final {
+  left: 330px;
+  top: 844px;
+  width: 1260px;
+  font-size: 35px;
+  font-weight: 540;
+  line-height: 1.25;
+  color: var(--text-secondary);
+}
+
+/* Slide 4.18: conceptual monetary premium. */
+
+.s4-premium__equation {
+  position: absolute;
+  left: 210px;
+  top: 154px;
+  width: 1500px;
+  display: grid;
+  grid-template-columns: 240px 70px 500px 70px 430px;
+  align-items: center;
+  justify-content: center;
+  font-size: 27px;
+  font-weight: 620;
+  line-height: 1.18;
+  letter-spacing: 0;
+  text-align: center;
+  color: var(--text-primary);
+}
+
+.s4-premium__equation-mark {
+  font-size: 38px;
+  font-weight: 450;
+  color: var(--text-muted);
+}
+
+.s4-premium__equation-term--premium {
+  color: var(--accent);
+}
+
+.s4-premium__example {
+  position: absolute;
+  top: 354px;
+  width: 240px;
+  min-height: 248px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 420ms ease-out,
+    transform 520ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s4-premium__example[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.s4-premium__example--property {
+  left: 310px;
+}
+
+.s4-premium__example--shares {
+  left: 840px;
+}
+
+.s4-premium__example--gold {
+  left: 1370px;
+}
+
+.s4-premium__asset {
+  position: relative;
+  z-index: 2;
+}
+
+/* The premium, drawn as light on the mark rather than a border around it. */
+.s4-premium__asset {
+  transition: filter 520ms ease-out;
+}
+
+.s4-premium__example[data-premium="true"] .s4-premium__asset {
+  filter: drop-shadow(0 0 16px rgba(247, 147, 26, 0.55))
+    drop-shadow(0 0 42px rgba(247, 147, 26, 0.28));
+}
+
+/* Equation terms assemble one per advance. */
+.s4-premium__equation-term,
+.s4-premium__equation-mark {
+  opacity: 0;
+  transition: opacity 460ms ease-out;
+}
+
+.s4-premium__equation-term[data-visible="true"],
+.s4-premium__equation-mark[data-visible="true"] {
+  opacity: 1;
+}
+
+/* The closing pair lands alone: everything above it dims (§C3). */
+.s4-premium__equation,
+.s4-premium__example,
+.s4-premium__shared-label,
+.s4-premium__supporting {
+  transition: opacity 460ms ease-out;
+}
+
+.s4-premium__equation[data-quiet="true"],
+.s4-premium__example[data-visible="true"][data-quiet="true"],
+.s4-premium__shared-label[data-visible="true"][data-quiet="true"],
+.s4-premium__supporting[data-visible="true"][data-quiet="true"] {
+  opacity: 0.34;
+}
+
+.s4-premium__base-label {
+  margin: 16px 0 0;
+  font-size: 15px;
+  font-weight: 540;
+  line-height: 1;
+  letter-spacing: 0;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.s4-premium__shared-label,
+.s4-premium__supporting,
+.s4-premium__final {
+  position: absolute;
+  margin: 0;
+  text-align: center;
+  letter-spacing: 0;
+  opacity: 0;
+  transform: translateY(9px);
+  transition:
+    opacity 400ms ease-out,
+    transform 480ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s4-premium__shared-label[data-visible="true"],
+.s4-premium__supporting[data-visible="true"],
+.s4-premium__final[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.s4-premium__shared-label {
+  left: 700px;
+  top: 646px;
+  width: 520px;
+  font-size: 17px;
+  font-weight: 650;
+  line-height: 1;
+  color: var(--accent);
+}
+
+.s4-premium__supporting {
+  left: 330px;
+  top: 704px;
+  width: 1260px;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--text-secondary);
+}
+
+.s4-premium__final {
+  left: 390px;
+  top: 828px;
+  width: 1140px;
+  font-size: 40px;
+  font-weight: 620;
+  line-height: 1.16;
+  color: var(--text-primary);
+}
+
+.s4-premium__final span {
+  display: block;
+  margin-top: 7px;
+  color: var(--accent);
+}
+
+/* Slide 4.19: primary roles and monetary utility. */
+
+.s4-roles__role {
+  position: absolute;
+  top: 236px;
+  width: 360px;
+  min-height: 430px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 420ms ease-out,
+    transform 520ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s4-roles__role[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.s4-roles__role--property {
+  left: 80px;
+}
+
+.s4-roles__role--shares {
+  left: 540px;
+}
+
+.s4-roles__role--gold {
+  left: 1000px;
+}
+
+.s4-roles__role--bitcoin {
+  left: 1460px;
+}
+
+.s4-roles__statement {
+  min-height: 72px;
+  margin: 0 0 22px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 620;
+  line-height: 1.2;
+  letter-spacing: 0;
+  text-align: center;
+  color: var(--text-primary);
+}
+
+.s4-roles__statement strong {
+  color: var(--accent);
+}
+
+.s4-roles__asset {
+  width: 220px;
+}
+
+.s4-roles__function {
+  margin: 18px 0 0;
+  font-size: 16px;
+  font-weight: 560;
+  line-height: 1;
+  letter-spacing: 0;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.s4-roles__final {
+  position: absolute;
+  left: 350px;
+  top: 806px;
+  width: 1220px;
+  margin: 0;
+  font-size: 39px;
+  font-weight: 600;
+  line-height: 1.18;
+  letter-spacing: 0;
+  text-align: center;
+  color: var(--text-primary);
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 400ms ease-out,
+    transform 480ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s4-roles__final[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Slide 4.20: coexistence rather than total replacement. */
+
+.s4-coexistence__statement,
+.s4-coexistence__final {
+  position: absolute;
+  margin: 0;
+  letter-spacing: 0;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 400ms ease-out,
+    transform 480ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s4-coexistence__statement {
+  left: 310px;
+  top: 184px;
+  width: 1300px;
+  font-size: 48px;
+  font-weight: 590;
+  line-height: 1.15;
+  color: var(--text-primary);
+}
+
+.s4-coexistence__statement[data-visible="true"],
+.s4-coexistence__final[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.s4-coexistence__asset {
+  position: absolute;
+  top: 400px;
+  opacity: 0;
+  transform: translateY(14px) scale(0.98);
+  transition:
+    opacity 420ms ease-out,
+    transform 520ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s4-coexistence__asset[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.s4-coexistence__asset--gold {
+  left: 180px;
+}
+
+.s4-coexistence__asset--fiat {
+  left: 520px;
+}
+
+.s4-coexistence__asset--bitcoin {
+  left: 860px;
+}
+
+.s4-coexistence__asset--property {
+  left: 1200px;
+}
+
+.s4-coexistence__asset--shares {
+  left: 1540px;
+}
+
+.s4-coexistence__asset--fiat[data-visible="true"] {
+  opacity: 0.54;
+}
+
+.s4-coexistence__final {
+  left: 330px;
+  top: 760px;
+  width: 1260px;
+  font-size: 47px;
+  font-weight: 620;
+  line-height: 1.16;
+  color: var(--text-primary);
+}
+
+.s4-coexistence__final span {
+  display: block;
+  margin-top: 9px;
+  color: var(--accent);
+}
+
+/* 4.20, final builds — the stability module, rebuilt at R7.4 §E. What the
+   objection hides inside is two different lines, so the slide draws them and
+   the closing statement names what the contrast has already shown. */
+
+.s4-coexistence__price {
+  position: absolute;
+  left: 300px;
+  width: 1320px;
+  margin: 0;
+  text-align: center;
+  letter-spacing: 0;
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 420ms ease-out,
+    transform 500ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s4-coexistence__price[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* R7.4 §E — the stability contrast. Two lines, one restless and one fixed, and
+   the whole argument is the difference between their shapes. The plot is
+   deliberately not a chart: no axis, no scale, no ticks, no data — a hairline
+   in the deck's own line grammar, drawn in rather than faded in, because the
+   restlessness has to be watched rather than presented. */
+.s4-coexistence__contrast {
+  position: absolute;
+  left: 404px;
+  top: 300px;
+  width: 1112px;
+}
+
+.s4-coexistence__line {
+  opacity: 0;
+  transition: opacity 420ms ease-out;
+}
+
+.s4-coexistence__line[data-visible="true"] {
+  opacity: 1;
+}
+
+.s4-coexistence__line--rules {
+  margin-top: 96px;
+}
+
+.s4-coexistence__plot {
+  display: block;
+  width: 100%;
+  height: 112px;
+  overflow: visible;
+}
+
+.s4-coexistence__line--rules .s4-coexistence__plot {
+  height: 40px;
+}
+
+.s4-coexistence__stroke {
+  fill: none;
+  stroke: var(--text-primary);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+  /* The draw. 2600 comfortably exceeds either path's length, so one value
+     serves both and neither needs measuring at runtime. */
+  stroke-dasharray: 2600;
+  stroke-dashoffset: 2600;
+  transition: stroke-dashoffset 1500ms cubic-bezier(0.22, 1, 0.36, 1) 120ms;
+}
+
+.s4-coexistence__line[data-visible="true"] .s4-coexistence__stroke {
+  stroke-dashoffset: 0;
+}
+
+/* The rules line is the answer, so it is the accent — the one orange on the
+   frame until the closing statement lands (§9.4.6). */
+.s4-coexistence__line--rules .s4-coexistence__stroke {
+  stroke: var(--accent);
+}
+
+.s4-coexistence__linelabel {
+  margin: 18px 0 0;
+  font-size: 19px;
+  font-weight: 620;
+  letter-spacing: 0.2em;
+  line-height: 1;
+  text-align: center;
+  color: var(--text-prior);
+}
+
+.s4-coexistence__price {
+  position: absolute;
+  left: 300px;
+  width: 1320px;
+  margin: 0;
+  text-align: center;
+  letter-spacing: 0;
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 420ms ease-out,
+    transform 500ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s4-coexistence__price {
+  left: 240px;
+  top: 770px;
+  width: 1440px;
+  font-size: 42px;
+  font-weight: 620;
+  line-height: 1.18;
+  color: var(--text-primary);
+}
+
+.s4-coexistence__price span {
+  display: block;
+  margin-top: 10px;
+  color: var(--accent);
+}
+
+/* Slide 4.21: neutral marginal carrier decision. */
+
+.s4-marginal__question {
+  position: absolute;
+  left: 260px;
+  top: 174px;
+  width: 1400px;
+  margin: 0;
+  font-size: 48px;
+  font-weight: 590;
+  line-height: 1.15;
+  letter-spacing: 0;
+  text-align: center;
+  color: var(--text-primary);
+}
+
+.s4-marginal__paths {
+  position: absolute;
+  inset: 0;
+  width: 1920px;
+  height: 720px;
+  opacity: 0;
+  transition: opacity 420ms ease-out;
+}
+
+.s4-marginal__paths[data-visible="true"] {
+  opacity: 1;
+}
+
+.s4-marginal__paths path {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.17);
+  stroke-width: 1.15;
+  vector-effect: non-scaling-stroke;
+  stroke-linecap: round;
+}
+
+.s4-marginal__candidate {
+  position: absolute;
+  left: calc(var(--candidate-x) - 90px);
+  top: 344px;
+  width: 180px;
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity 420ms ease-out,
+    transform 500ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s4-marginal__candidate[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.s4-marginal__candidate .s4-comparison-asset__mark {
+  width: 112px;
+  height: 84px;
+}
+
+.s4-marginal__candidate .s4-comparison-asset__label {
+  margin-top: 10px;
+  font-size: 16px;
+  letter-spacing: 0;
+}
+
+.s4-marginal__decision-point {
+  position: absolute;
+  left: 870px;
+  top: 612px;
+  width: 180px;
+  height: 72px;
+}
+
+.s4-marginal__supporting {
+  position: absolute;
+  margin: 0;
+  width: 1280px;
+  left: 320px;
+  text-align: center;
+  letter-spacing: 0;
+  opacity: 0;
+  transform: translateY(9px);
+  transition:
+    opacity 400ms ease-out,
+    transform 480ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s4-marginal__supporting[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.s4-marginal__supporting {
+  top: 790px;
+  font-size: 36px;
+  font-weight: 560;
+  line-height: 1.2;
+  color: var(--text-primary);
+}
+
+/* Slide 4.22: fixed outstanding stock and marginal repricing. */
+
+.s4-fixed-supply__statement,
+.s4-fixed-supply__final {
+  position: absolute;
+  left: 300px;
+  width: 1320px;
+  margin: 0;
+  letter-spacing: 0;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(9px);
+  transition:
+    opacity 400ms ease-out,
+    transform 480ms cubic-bezier(0.22, 1, 0.36, 1),
+    color 400ms ease-out;
+}
+
+.s4-fixed-supply__statement[data-visible="true"],
+.s4-fixed-supply__final[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.s4-fixed-supply__statement--opening {
+  top: 164px;
+  font-size: 39px;
+  font-weight: 580;
+  line-height: 1.16;
+  color: var(--text-primary);
+}
+
+/* The brightness floors reaching Section 4 (§9.4 rule 10, R7.3). This is the
+   deck's one other place where a statement lands quieter than the line it
+   extends and both then settle below the floor: the mechanism line arrived at
+   0.75 under an opening still at 1.0, and `data-quiet` took both to 0.5. The
+   remedy is the rule, applied — the line being spoken is at full voice, the one
+   before it recedes to the dimmed-prior step — and it is the only frame outside
+   Sections 2–3 this phase changes. Copy, build map and geometry are untouched;
+   Section 4's direction is a separate conversation and this is not it. */
+.s4-fixed-supply__statement--opening[data-quiet="true"] {
+  color: var(--text-prior);
+}
+
+.s4-fixed-supply__statement--mechanism {
+  top: 224px;
+  font-size: 31px;
+  font-weight: 540;
+  line-height: 1.2;
+  color: var(--text-primary);
+}
+
+.s4-fixed-supply__statement--mechanism[data-quiet="true"] {
+  color: var(--text-prior);
+}
+
+.s4-fixed-supply__stage {
+  position: absolute;
+  inset: 292px 0 auto;
+  height: 510px;
+}
+
+/* The painted composition runs from the reprice frame (field-local x 136) to the
+   resting incoming claims (x 956), so its center is x 546. Offsetting the field
+   by 414px puts that center on the stage’s center line, x 960, instead of the
+   x 807 it sat at before. */
+.s4-fixed-supply-field {
+  position: absolute;
+  left: 414px;
+  top: 0;
+  width: 1400px;
+  height: 500px;
+}
+
+.s4-fixed-supply-field__stock-label,
+.s4-fixed-supply-field__margin-label {
+  position: absolute;
+  top: 54px;
+  font-size: 16px;
+  font-weight: 630;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.s4-fixed-supply-field__stock-label {
+  left: 150px;
+  color: var(--text-muted);
+}
+
+/* Centered on the margin column (field-local x 770-854, center 812). */
+.s4-fixed-supply-field__margin-label {
+  left: 682px;
+  width: 260px;
+  text-align: center;
+  color: var(--text-muted);
+  opacity: 0;
+  transform: translateY(6px);
+  transition:
+    opacity 360ms ease-out,
+    transform 440ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s4-fixed-supply-field[data-margin-visible="true"] .s4-fixed-supply-field__margin-label {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* De-boxed (R7.1 §C3, applied here per C4). This was a bordered rectangle
+   drawn around the whole stock — a panel outline, and redundant besides: the
+   units themselves visibly relight across the sweep, which is the argument.
+   What remains is a single rule under the stock marking its extent. */
+.s4-fixed-supply-field__reprice-frame {
+  position: absolute;
+  left: 136px;
+  top: 94px;
+  width: 732px;
+  height: 322px;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(247, 147, 26, 0.28);
+  opacity: 0;
+  transform: scaleX(0.985);
+  transform-origin: right center;
+  transition:
+    opacity 420ms ease-out 280ms,
+    transform 620ms cubic-bezier(0.22, 1, 0.36, 1) 280ms;
+}
+
+.s4-fixed-supply-field[data-repriced="true"] .s4-fixed-supply-field__reprice-frame {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+/* Only the placement belongs to 4.22 now; the grid template, the pitch and the
+   unit size come from UnitField’s shared grammar (R7 §4.2). */
+.s4-fixed-supply-field__units {
+  position: absolute;
+  left: 150px;
+  top: 108px;
+}
+
+.s4-fixed-supply-field .unit-field-grid__unit {
+  transition:
+    border-color 440ms ease-out,
+    background-color 440ms ease-out,
+    box-shadow 440ms ease-out;
+  transition-delay: calc(var(--reprice-order) * 58ms);
+}
+
+.s4-fixed-supply-field .unit-field-grid__unit[data-available="true"] {
+  transform: translateX(8px);
+}
+
+.s4-fixed-supply-field[data-margin-visible="true"] .unit-field-grid__unit[data-available="true"] {
+  border-color: rgba(247, 147, 26, 0.94);
+  background: rgba(247, 147, 26, 0.58);
+}
+
+/* The repriced field lands at roughly 58% of the margin column’s fill (0.42
+   against 0.72), which is enough for the whole-stock state change to read in a
+   single viewing while keeping the margin column the brightest point on the
+   slide at every build. The per-column delay above sweeps the emphasis
+   right-to-left from the margin, 58ms a column, ~350ms end to end — the
+   direction of the causal claim: price is discovered here, then applied to
+   all of that. */
+.s4-fixed-supply-field[data-repriced="true"] .unit-field-grid__unit {
+  border-color: rgba(247, 147, 26, 0.62);
+  background: rgba(247, 147, 26, 0.42);
+  box-shadow: inset 0 0 18px rgba(247, 147, 26, 0.14);
+}
+
+.s4-fixed-supply-field[data-repriced="true"] .unit-field-grid__unit[data-available="true"] {
+  border-color: var(--accent);
+  background: rgba(247, 147, 26, 0.72);
+}
+
+.s4-fixed-supply-field__margin-bracket {
+  position: absolute;
+  left: 758px;
+  top: 98px;
+  width: 108px;
+  height: 322px;
+  box-sizing: border-box;
+  border-left: 1px solid rgba(247, 147, 26, 0.88);
+  opacity: 0;
+  transform: scaleY(0.94);
+  transition:
+    opacity 360ms ease-out,
+    transform 480ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s4-fixed-supply-field__margin-bracket::before,
+.s4-fixed-supply-field__margin-bracket::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 15px;
+  height: 1px;
+  background: rgba(247, 147, 26, 0.88);
+}
+
+.s4-fixed-supply-field__margin-bracket::before {
+  top: 0;
+}
+
+.s4-fixed-supply-field__margin-bracket::after {
+  bottom: 0;
+}
+
+.s4-fixed-supply-field[data-margin-visible="true"] .s4-fixed-supply-field__margin-bracket {
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+/* The one label that names the mechanism, so it is the one label in the accent:
+   18px, orange, directly beneath the margin column it refers to. At 13px grey
+   it did not survive video compression. */
+.s4-fixed-supply-field__price-discovery {
+  position: absolute;
+  left: 682px;
+  top: 440px;
+  width: 260px;
+  font-size: 18px;
+  font-weight: 640;
+  line-height: 1;
+  letter-spacing: 0;
+  text-align: center;
+  color: var(--accent);
+  opacity: 0;
+  transform: translateY(6px);
+  transition:
+    opacity 400ms ease-out 320ms,
+    transform 460ms cubic-bezier(0.22, 1, 0.36, 1) 320ms;
+}
+
+.s4-fixed-supply-field[data-repriced="true"] .s4-fixed-supply-field__price-discovery {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.s4-fixed-supply-field__demand {
+  position: absolute;
+  inset: 0;
+  overflow: visible;
+}
+
+.s4-fixed-supply-field__demand-claim {
+  position: absolute;
+  left: 1180px;
+  width: 84px;
+  height: 34px;
+  transition:
+    left 760ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 420ms ease-out;
+}
+
+.s4-fixed-supply-field__demand-claim:nth-child(1) {
+  top: 114px;
+}
+
+.s4-fixed-supply-field__demand-claim:nth-child(2) {
+  top: 238px;
+}
+
+.s4-fixed-supply-field__demand-claim:nth-child(3) {
+  top: 362px;
+}
+
+.s4-fixed-supply-field[data-demand-arrived="true"] .s4-fixed-supply-field__demand-claim {
+  left: 872px;
+}
+
+.s4-fixed-supply-field__claim {
+  filter: none;
+}
+
+.s4-fixed-supply__final {
+  top: 850px;
+  font-size: 46px;
+  font-weight: 630;
+  line-height: 1.15;
+  color: var(--text-primary);
+}
+
+/* Slide 4.23: the case for Bitcoin, stated from first principles. */
+
+.s4-investment-case__summary {
+  position: absolute;
+  left: 400px;
+  top: 270px;
+  width: 1120px;
+  display: grid;
+  gap: 20px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 420ms ease-out,
+    transform 500ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s4-investment-case__summary[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.s4-investment-case__summary-line {
+  min-height: 54px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: 540;
+  line-height: 1.2;
+  letter-spacing: 0;
+  text-align: center;
+  color: var(--text-secondary);
+  opacity: 0;
+  transform: translateY(8px);
+  transition:
+    opacity 380ms ease-out,
+    transform 440ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s4-investment-case__summary-line[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* The recap is one spoken paragraph, so it is one build — its four lines land
+   in the order the sentence closes them, live only. */
+.s4-investment-case[data-live="true"] .s4-investment-case__summary-line {
+  transition-delay: calc(var(--summary-index) * 300ms);
+}
+
+.s4-investment-case__summary-line:last-child {
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* The conclusion is the only thing on the deck’s last frame, so it sits at the
+   optical center of the stage: three lines of 48px/1.32 (190px) centered on
+   y 540. 1200px keeps the authored line breaks exactly where they are. */
+.s4-investment-case__conclusion {
+  position: absolute;
+  left: 360px;
+  top: 445px;
+  width: 1200px;
+  margin: 0;
+  font-size: 48px;
+  font-weight: 610;
+  line-height: 1.32;
+  letter-spacing: 0;
+  text-align: center;
+  color: var(--text-primary);
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 420ms ease-out,
+    transform 500ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* The delay lives on the visible state so it applies only on the way in: the
+   summary clears, the stage holds on pure black for roughly half a second, and
+   then the final statement lands. Stepping back from the conclusion is still
+   immediate. The reduced-motion block below overrides the delay to 0. */
+.s4-investment-case__conclusion[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 900ms;
+}
+
+.s4-investment-case__conclusion strong {
+  font-weight: 650;
+  color: var(--accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .s4-migration__opening,
+  .s4-migration__reveal,
+  .s4-migration__asset,
+  .s4-migration__flow,
+  .s4-migration__flow-lane--active,
+  .s4-migration__flow-branch,
+  .s4-migration__claim,
+  .s4-migration__final,
+  .s4-premium__example,
+  .s4-premium__contour,
+  .s4-premium__shared-label,
+  .s4-premium__supporting,
+  .s4-premium__final,
+  .s4-roles__role,
+  .s4-roles__final,
+  .s4-coexistence__statement,
+  .s4-coexistence__asset,
+  .s4-coexistence__final,
+  .s4-marginal__paths,
+  .s4-marginal__candidate,
+  .s4-marginal__supporting,
+  .s4-fixed-supply__statement,
+  .s4-fixed-supply__final,
+  .s4-fixed-supply-field__margin-label,
+  .s4-fixed-supply-field__margin-bracket,
+  .s4-fixed-supply-field__price-discovery,
+  .s4-fixed-supply-field__reprice-frame,
+  .s4-fixed-supply-field .unit-field-grid__unit,
+  .s4-fixed-supply-field__demand-claim,
+  .s4-investment-case__summary,
+  .s4-investment-case__summary-line,
+  .s4-investment-case__conclusion,
+  .s4-investment-case__conclusion[data-visible="true"] {
+    transition-delay: 0ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ===== Section 1 — The Question (rebuild R1) ===== */
+
+/* The quietest passage in the deck: black frames, generous negative space,
+   one element at a time, slow deliberate motion, nothing decorative. The
+   hours-field itself is canvas (UnitField); everything here is the DOM layer
+   above it. */
+
+.s1q {
+  position: absolute;
+  inset: 0;
+  background: var(--bg-primary);
+}
+
+/* --- The hours-field continuity group (R2.1 §A) ---
+   1.1 and 1.2 share one persistent scene layer (the UnitField canvas); at
+   the boundary the engine hands it off and only these text overlays
+   transition. The overlay layer must never paint over the field. */
+.s1q--overlay {
+  background: transparent;
+  transition: opacity 480ms ease-out;
+}
+
+.s1q--overlay[data-entering="true"],
+.s1q--overlay[data-exiting="true"] {
+  opacity: 0;
+}
+
+/* --- 1.1: eighty thousand hours --- */
+
+/* The counter sits top-center over the field: present, not dominant. */
+.s1q-hours__counter {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 108px;
+  text-align: center;
+  font-size: 104px;
+  font-weight: 560;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  color: rgba(255, 255, 255, 0.92);
+  font-variant-numeric: tabular-nums;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  transition: opacity 500ms ease-out;
+}
+
+.s1q-hours__counter[data-visible="true"] {
+  opacity: 1;
+}
+
+.s1q-hours__line {
+  position: absolute;
+  left: 160px;
+  right: 160px;
+  top: 806px;
+  margin: 0;
+  text-align: center;
+  font-size: 58px;
+  font-weight: 540;
+  line-height: 1.3;
+  letter-spacing: -0.012em;
+  color: var(--text-primary);
+  text-shadow: 0 2px 26px rgba(0, 0, 0, 0.78), 0 0 64px rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 700ms ease-out,
+    transform 800ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s1q-hours__line[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- The token: a plain, softly luminous disc. No symbol, no marking.
+   The disc's identity now lives in `.luminous-disc` (see the deck-wide block
+   near the top of this file), which 1.2, 1.3 and every Section 4 claim share —
+   R7.1 §2. What stays here is only what is 1.2's own: where the token sits and
+   how it arrives. The 176px diameter and the glow come from the shared class,
+   and the numbers below are unchanged from the pre-R7.1 rule. --- */
+
+.s1q-token {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -88px 0 0 -88px;
+  opacity: 0;
+  transform: scale(0.82);
+  transition:
+    opacity 1100ms ease-out,
+    transform 1500ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s1q-token[data-visible="true"] {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* 1.3's small token. The shared class scales the glow with the diameter; the
+   pre-R7.1 rule did not — the 120px token kept the 176px token's glow radii —
+   so the original absolute values are restored here. R7.1's scope is Section 4,
+   and a delivered Section 1 frame does not change on the way past: the
+   pixel-diff of 1.3 against its pre-R7.1 capture is the gate that caught this. */
+.s1q-token--small {
+  --disc-size: 120px;
+  margin: -60px 0 0 -60px;
+  box-shadow:
+    0 0 34px rgba(253, 233, 212, 0.38),
+    0 0 110px rgba(253, 233, 212, 0.22);
+}
+
+/* --- 1.2: the conversion --- */
+
+/* Two sequenced lines share one slot beneath the token — never stacked. */
+.s1q-conversion__line {
+  position: absolute;
+  left: 260px;
+  right: 260px;
+  top: 796px;
+  margin: 0;
+  text-align: center;
+  font-size: 54px;
+  font-weight: 540;
+  line-height: 1.3;
+  letter-spacing: -0.012em;
+  color: var(--text-primary);
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 650ms ease-out,
+    transform 750ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s1q-conversion__line[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- 1.3: the question and the title punchline --- */
+
+/* The token rises out of the question’s way, then is cut for the title frame. */
+.s1q-what__token {
+  transition:
+    opacity 700ms ease-out,
+    transform 1100ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s1q-what[data-step="1"] .s1q-what__token,
+.s1q-what[data-step="2"] .s1q-what__token,
+.s1q-what[data-step="3"] .s1q-what__token,
+.s1q-what[data-step="4"] .s1q-what__token {
+  transform: translateY(-228px) scale(1);
+}
+
+.s1q-what__question {
+  position: absolute;
+  left: 240px;
+  right: 240px;
+  top: 506px;
+  margin: 0;
+  text-align: center;
+  font-size: 64px;
+  font-weight: 560;
+  line-height: 1.35;
+  letter-spacing: -0.015em;
+  color: var(--text-primary);
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 700ms ease-out,
+    transform 800ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s1q-what__question[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Builds 2–4: the question yields the frame to the facts but stays legible. */
+.s1q-what[data-step="2"] .s1q-what__question[data-visible="true"],
+.s1q-what[data-step="3"] .s1q-what__question[data-visible="true"],
+.s1q-what[data-step="4"] .s1q-what__question[data-visible="true"] {
+  opacity: 0.3;
+}
+
+.s1q-what__facts {
+  position: absolute;
+  left: 240px;
+  right: 240px;
+  top: 706px;
+  display: grid;
+  gap: 30px;
+}
+
+.s1q-what__fact {
+  margin: 0;
+  text-align: center;
+  font-size: 38px;
+  font-weight: 460;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  color: var(--text-secondary);
+  opacity: 0;
+  transform: translateY(8px);
+  transition:
+    opacity 600ms ease-out,
+    transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s1q-what__fact[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Each fact is its own presenter-paced build (the pacing rule) — a live
+   advance lands its one new fact immediately, no authored stagger. A
+   reconstructed frame (direct entry, back-step) gets a short cascade so
+   state reconstruction stays effectively immediate and exact. */
+.s1q-what[data-live="false"] .s1q-what__fact:nth-child(2)[data-visible="true"] {
+  transition-delay: 120ms;
+}
+
+.s1q-what[data-live="false"] .s1q-what__fact:nth-child(3)[data-visible="true"] {
+  transition-delay: 240ms;
+}
+
+/* The deck’s most important single frame in Section 1: the title, centered,
+   at full title scale — deliberately larger than the legacy title treatment. */
+.s1q-what__title {
+  position: absolute;
+  left: 60px;
+  right: 60px;
+  top: 50%;
+  margin: 0;
+  transform: translateY(-50%) translateY(14px);
+  text-align: center;
+  font-size: 150px;
+  font-weight: 650;
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  opacity: 0;
+  transition:
+    opacity 900ms ease-out,
+    transform 1000ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s1q-what__title[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(-50%) translateY(0);
+}
+
+/* The beat of emptiness: on the live advance everything clears first and the
+   title lands after ~600ms of black. Stepping back is immediate. */
+.s1q-what[data-live="true"] .s1q-what__title[data-visible="true"] {
+  transition-delay: 600ms;
+}
+
+/* --- 1.4: the stakes --- */
+
+.s1q-stakes__line {
+  position: absolute;
+  left: 280px;
+  right: 280px;
+  top: 50%;
+  margin: 0;
+  transform: translateY(-50%) translateY(10px);
+  text-align: center;
+  font-size: 50px;
+  font-weight: 540;
+  line-height: 1.45;
+  letter-spacing: -0.012em;
+  color: var(--text-primary);
+  opacity: 0;
+  transition:
+    opacity 800ms ease-out,
+    transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s1q-stakes__line[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(-50%) translateY(0);
+}
+
+/* --- 1.5: the promise --- */
+
+.s1q-promise__question {
+  position: absolute;
+  left: 240px;
+  right: 240px;
+  top: 344px;
+  margin: 0;
+  text-align: center;
+  font-size: 60px;
+  font-weight: 560;
+  line-height: 1.35;
+  letter-spacing: -0.015em;
+  color: var(--text-primary);
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 700ms ease-out,
+    transform 800ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s1q-promise__question[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Build 5: the waypoints settle; the question yields the frame. */
+.s1q-promise:is([data-step="5"], [data-step="6"]) .s1q-promise__question[data-visible="true"] {
+  opacity: 0.3;
+}
+
+/* The faint horizontal line — the quiet ancestor of the Evolution Rail’s
+   line-language. Never labeled, never numbered. */
+.s1q-promise__rail {
+  position: absolute;
+  left: 320px;
+  top: 660px;
+  width: 1280px;
+  height: 0;
+}
+
+.s1q-promise__railline {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.18);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition:
+    background-color 900ms ease-out,
+    transform 1200ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s1q-promise__railline[data-visible="true"] {
+  transform: scaleX(1);
+}
+
+.s1q-promise:is([data-step="5"], [data-step="6"]) .s1q-promise__railline {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.s1q-promise__wp {
+  position: absolute;
+  top: 0;
+  width: 420px;
+  margin-left: -210px;
+  opacity: 0;
+  transform: translateY(8px);
+  transition:
+    opacity 650ms ease-out,
+    transform 750ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s1q-promise__wp[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.s1q-promise__wp[data-index="0"] { left: 150px; }
+.s1q-promise__wp[data-index="1"] { left: 640px; }
+.s1q-promise__wp[data-index="2"] { left: 1130px; }
+
+.s1q-promise__dot {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  margin: -5px 0 0 -5px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.8);
+  transition: background-color 900ms ease-out, box-shadow 900ms ease-out;
+}
+
+.s1q-promise:is([data-step="5"], [data-step="6"]) .s1q-promise__dot {
+  background: var(--unit-warm);
+  box-shadow: 0 0 14px rgba(253, 233, 212, 0.45);
+}
+
+.s1q-promise__wptext {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 36px;
+  margin: 0;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 460;
+  line-height: 1.4;
+  letter-spacing: -0.008em;
+  color: var(--text-secondary);
+  transition: color 900ms ease-out;
+}
+
+/* Build 6 — the first waypoint ignites: the first orange in the
+   presentation, and the reference implementation of the waypoint ignition
+   standard (rebuild brief §9.3). The active marker scales to 2× the
+   inactive markers, takes the full accent with a soft bloom halo, and its
+   label rises to warm white; the other two markers and labels dim a step
+   further. The single slow ignition pulse is gated to the live advance. */
+.s1q-promise[data-step="6"] .s1q-promise__wp[data-index="0"] .s1q-promise__dot {
+  background: var(--accent);
+  transform: scale(2);
+  box-shadow: 0 0 18px rgba(247, 147, 26, 0.6), 0 0 56px rgba(247, 147, 26, 0.3);
+}
+
+.s1q-promise[data-step="6"][data-live="true"] .s1q-promise__wp[data-index="0"] .s1q-promise__dot {
+  animation: s1q-ignite 1200ms cubic-bezier(0.34, 1.3, 0.5, 1) both;
+}
+
+@keyframes s1q-ignite {
+  0% { transform: scale(1); }
+  45% { transform: scale(2.35); }
+  100% { transform: scale(2); }
+}
+
+.s1q-promise[data-step="6"] .s1q-promise__wp[data-index="0"] .s1q-promise__wptext {
+  color: var(--unit-warm-bright);
+}
+
+.s1q-promise[data-step="6"] .s1q-promise__wp:not([data-index="0"]) .s1q-promise__dot {
+  background: rgba(253, 233, 212, 0.45);
+  box-shadow: none;
+}
+
+.s1q-promise[data-step="6"] .s1q-promise__wp:not([data-index="0"]) .s1q-promise__wptext {
+  color: var(--text-muted);
+}
+
+/* --- Section 1 reduced motion: every state lands instantly and completely;
+   the authored staggers and the title’s beat of black are collapsed. Canvas
+   animation parity is handled inside UnitField. --- */
+@media (prefers-reduced-motion: reduce) {
+  .s1q--overlay,
+  .s1q-hours__counter,
+  .s1q-hours__line,
+  .s1q-token,
+  .s1q-what__token,
+  .s1q-what[data-step="1"] .s1q-what__token,
+  .s1q-what[data-step="2"] .s1q-what__token,
+  .s1q-what[data-step="3"] .s1q-what__token,
+  .s1q-what[data-step="4"] .s1q-what__token,
+  .s1q-what__question,
+  .s1q-what__fact,
+  .s1q-what[data-live="false"] .s1q-what__fact:nth-child(2)[data-visible="true"],
+  .s1q-what[data-live="false"] .s1q-what__fact:nth-child(3)[data-visible="true"],
+  .s1q-what__title,
+  .s1q-what[data-live="true"] .s1q-what__title[data-visible="true"],
+  .s1q-stakes__line,
+  .s1q-promise__question,
+  .s1q-promise__railline,
+  .s1q-promise__wp,
+  .s1q-promise__dot,
+  .s1q-promise__wptext,
+  .s1q-conversion__line {
+    transition-delay: 0ms !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  /* The ignition pulse collapses to its end state. */
+  .s1q-promise .s1q-promise__dot {
+    animation: none !important;
+  }
+}
+
+/* ===== Section 2 — Where Money Comes From (rebuild R2) ===== */
+
+/* Section 1's austerity carries through: black frames, generous negative
+   space, one element at a time. The section is monochrome except the two
+   sanctioned accents of the color arc — the waypoint ignition and the rail’s
+   active stop (rebuild brief §9.3). */
+
+/* --- The Evolution Rail (component) --- */
+
+.s2o-rail {
+  position: absolute;
+  inset: 0;
+  transition: opacity 800ms ease-out;
+}
+
+/* The rail recedes while the chart holds the frame (2.7). */
+.s2o-rail[data-dimmed="true"] {
+  opacity: 0.16;
+}
+
+/* The table’s heavy dim (R2.1 §A designed exception): the rail stays
+   mounted in place beneath the risen periodic table — structure, not
+   competing text. The slide holds the lighter dim until the table rises. */
+.s2o-rail[data-dimmed="deep"] {
+  opacity: 0.08;
+}
+
+/* The world layer: a 0x0 anchor at the rail line’s origin; the camera is a
+   translate+scale transform applied by the component. */
+.s2o-rail__world {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  transform-origin: 0 0;
+  will-change: transform;
+}
+
+.s2o-rail__world > *,
+.s2o-rail__ladder > *,
+.s2o-rail__entrant > *,
+.s2o-rail__fiat > * {
+  position: absolute;
+}
+
+/* The line — the waypoint device’s descendant: same weight-language, now
+   carrying the record. Fades in from dark at its left, out at its right.
+   In contender mode it does not exist yet; the §E transformation draws it
+   horizontally through the row. */
+.s2o-rail__line {
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 4%,
+    rgba(255, 255, 255, 0.3) 96%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  transform-origin: left center;
+  transition: transform 1500ms cubic-bezier(0.22, 1, 0.36, 1) 300ms;
+}
+
+.s2o-rail[data-line="false"] .s2o-rail__line {
+  transform: scaleX(0);
+  transition-delay: 0ms;
+}
+
+/* The dark extension (2.8): the record continuing into the unwritten. */
+.s2o-rail__extension {
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: left center;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.24),
+    rgba(255, 255, 255, 0.06)
+  );
+  transition: transform 1300ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s2o-rail__extension[data-visible="true"] {
+  transform: scaleX(1);
+}
+
+/* Unlabeled minor marks — the record’s texture of small monies. They arrive
+   with the line. */
+.s2o-rail__minor {
+  width: 2px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  transition: opacity 900ms ease-out 900ms;
+}
+
+.s2o-rail[data-line="false"] .s2o-rail__minor {
+  opacity: 0;
+  transition-delay: 0ms;
+}
+
+/* --- Stops --- */
+
+/* One vertical rhythm across every stop (R2.1 §F.2): glyph above the
+   marker, label row at +26, wound row at +64 — identical across stops, no
+   staggered baselines. Labels live in rail-space and are transformed only
+   by the camera (R2.2 §C.2): every stop’s text stays horizontally centered
+   under its own stop at every camera — frames are composed so nothing
+   clips; no per-viewport re-layout exists. Contender mode (§E) restyles
+   the four early stops through transform-only custom properties — the
+   morph back to rail geometry never reflows text.
+
+   The settle motion (upcoming/defeated stops sitting low) lives on the
+   text and glyph via --settle, never on the stop root: the marker dot is
+   pinned to the line — marker center y equals line y, exactly, at every
+   state and camera (R2.2 §C.1). */
+
+.s2o-rail__stop {
+  width: 340px;
+  margin-left: -170px;
+  opacity: 0.3;
+  --settle: 6px;
+  transition: opacity 800ms ease-out;
+}
+
+.s2o-rail__stop[data-state="lit"],
+.s2o-rail__stop[data-state="active"] {
+  opacity: 1;
+  --settle: 0px;
+}
+
+/* Defeated stops settle low part by part — the wound line keeps its own
+   voice (it must read clearly at the beat where it lands). */
+.s2o-rail__stop[data-state="defeated"] {
+  opacity: 1;
+  --settle: 4px;
+}
+
+/* Not yet part of the composition (metals and gold during the contender
+   builds). */
+.s2o-rail__stop[data-state="hidden"] {
+  opacity: 0;
+}
+
+/* Contender treatment (§E builds 0–5): enlarged glyph, label beneath it,
+   full-voice wound — no dot, no line. All transform-only. */
+.s2o-rail[data-contenders="true"] .s2o-rail__stop {
+  --glyph-y: -12px;
+  --glyph-s: 1.3;
+  --label-y: -59px;
+  --label-s: 0.76;
+  --mode-y: -58px;
+  --mode-s: 0.85;
+}
+
+.s2o-rail__dot {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  margin: -6px 0 0 -6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  transition: opacity 900ms ease-out 600ms, background-color 900ms ease-out,
+    box-shadow 900ms ease-out, transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Stops form beneath each glyph as the line arrives (§E build 6). */
+.s2o-rail[data-contenders="true"] .s2o-rail__dot {
+  opacity: 0;
+  transform: scale(0.4);
+  transition-delay: 0ms;
+}
+
+.s2o-rail__stop[data-state="lit"] .s2o-rail__dot {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+/* The single sanctioned rail accent: the active stop’s marker. Structural,
+   never decorative — the record’s current subject. */
+.s2o-rail__stop[data-state="active"] .s2o-rail__dot {
+  background: var(--accent);
+  box-shadow: 0 0 16px rgba(247, 147, 26, 0.55), 0 0 44px rgba(247, 147, 26, 0.22);
+}
+
+/* A defeated stop is a receded stop, not a disappearing one (§9.4 rule 10):
+   the marker keeps the floor and gives up its size instead. */
+.s2o-rail__stop[data-state="defeated"] .s2o-rail__dot {
+  background: var(--text-prior);
+  transform: scale(0.78);
+}
+
+.s2o-rail__glyph {
+  position: absolute;
+  left: 50%;
+  top: -80px;
+  transform: translateX(-50%) translateY(calc(var(--glyph-y, 0px) + var(--settle, 0px))) scale(var(--glyph-s, 1));
+  transform-origin: center bottom;
+  color: rgba(255, 255, 255, 0.6);
+  transition: color 900ms ease-out, transform 1100ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s2o-rail__glyph svg {
+  display: block;
+  width: 40px;
+  height: 40px;
+  /* The grammar’s soft luminance treatment — the unit-warm glow family. */
+  filter: drop-shadow(0 0 10px rgba(253, 233, 212, 0.22));
+}
+
+.s2o-rail__stop[data-state="lit"] .s2o-rail__glyph {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.s2o-rail__stop[data-state="active"] .s2o-rail__glyph {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* Defeated is the record's past tense, and the past tense is still legible
+   (§9.4 rule 10, R7.3): the mark recedes to the dimmed-prior step and stops
+   there. It sat at 0.32 until the presenter's review, which is where a stop
+   stops reading as quiet and starts reading as half-rendered — and at the
+   full-rail camera every stop on the line is defeated, so the whole frame went
+   with it. Hierarchy survives the change: 0.58 defeated · 0.75 lit · 0.95
+   active. */
+.s2o-rail__stop[data-state="defeated"] .s2o-rail__glyph {
+  color: var(--text-prior);
+}
+
+/* A wounded contender dims to its coming defeated tone (§E builds 1–4). */
+.s2o-rail[data-contenders="true"] .s2o-rail__stop[data-wound="wound"] .s2o-rail__glyph {
+  color: var(--text-prior);
+}
+
+/* The contenders' dark-field register (§9.4.9, R7.2 §D1).
+
+   The render sits on the mark's own baseline and scales about it, so the
+   transformation at build 6 is one object becoming another rather than two
+   things swapping places: as the line draws through the row, each good
+   collapses into the mark that will stand for it on the record, and the
+   register switch *is* the meaning — this is the moment history stops holding
+   a good and starts keeping an entry about it.
+
+   The glyph is present underneath the whole time and simply fades up as the
+   render fades down, which is why the crossfade needs no sequencing logic in
+   JS: one attribute flip drives both halves. */
+.s2o-rail__render {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(var(--settle, 0px)) scale(1);
+  transform-origin: center bottom;
+  opacity: 1;
+  transition:
+    opacity 780ms ease-out,
+    transform 1100ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Off the dark-field register: the good collapses onto its mark and goes. */
+.s2o-rail[data-renders="false"] .s2o-rail__render {
+  opacity: 0;
+  transform: translateX(-50%) translateY(var(--settle, 0px)) scale(0.24);
+  pointer-events: none;
+}
+
+/* While the renders hold the row, the marks wait underneath them. */
+.s2o-rail[data-renders="true"] .s2o-rail__stop .s2o-rail__glyph {
+  opacity: 0;
+  transition: opacity 620ms ease-out, color 900ms ease-out,
+    transform 1100ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* A wounded contender's render dims with its mark — one wound, one tone,
+   whichever register is carrying the stop, and the tone is the deck's one
+   dimmed-prior step (§9.4 rule 10). */
+.s2o-rail[data-contenders="true"] .s2o-rail__stop[data-wound="wound"] .s2o-rail__render {
+  opacity: var(--dim-prior);
+}
+
+.s2o-rail__label {
+  position: absolute;
+  left: 50%;
+  top: 26px;
+  width: max-content;
+  transform: translateX(-50%) translateY(calc(var(--label-y, 0px) + var(--settle, 0px))) scale(var(--label-s, 1));
+  transform-origin: top center;
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  color: var(--text-muted);
+  transition: color 900ms ease-out, transform 1100ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s2o-rail__stop[data-state="lit"] .s2o-rail__label {
+  color: var(--text-secondary);
+}
+
+.s2o-rail__stop[data-state="active"] .s2o-rail__label {
+  color: var(--text-primary);
+}
+
+.s2o-rail__stop[data-state="defeated"] .s2o-rail__label {
+  color: var(--text-prior);
+}
+
+.s2o-rail[data-contenders="true"] .s2o-rail__stop[data-wound="wound"] .s2o-rail__label {
+  color: var(--text-prior);
+}
+
+/* The one-line wound on the shared wound row, retained once the stop settles.
+   Contender mode lifts and enlarges it via the mode vars.
+
+   Voice is state, not mode (§9.4 rule 10, R7.3). A wound row is either the
+   sentence being spoken — the stop is `data-latest`, and it renders at full
+   brightness — or it is one of the record's earlier sentences, receded to the
+   dimmed-prior step. Until the presenter's review both cases rendered at
+   `--text-muted` under a 0.85/0.95 opacity, which put the line being read at
+   43–48% of full voice: the beat's own subject, at the tone of a footnote. */
+.s2o-rail__wound,
+.s2o-rail__receipt {
+  position: absolute;
+  left: 50%;
+  top: 64px;
+  width: 218px;
+  transform: translateX(-50%)
+    translateY(calc(var(--mode-y, 0px) + var(--settle, 0px) + 6px)) scale(var(--mode-s, 1));
+  transform-origin: top center;
+  text-align: center;
+  font-size: 17px;
+  line-height: 1.45;
+  color: var(--text-prior);
+  opacity: 0;
+  transition: opacity 900ms ease-out, color 900ms ease-out,
+    transform 1100ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s2o-rail__stop[data-wound="wound"] .s2o-rail__wound,
+.s2o-rail__stop[data-wound="receipt"] .s2o-rail__receipt {
+  opacity: 1;
+  transform: translateX(-50%)
+    translateY(calc(var(--mode-y, 0px) + var(--settle, 0px))) scale(var(--mode-s, 1));
+}
+
+/* The line that just landed is the one being spoken. */
+.s2o-rail__stop[data-latest="true"] .s2o-rail__wound,
+.s2o-rail__stop[data-latest="true"] .s2o-rail__receipt {
+  color: var(--text-primary);
+}
+
+/* The shells receipt (§E build 7): the dated defeat line that replaces the
+   contender wound when the ship arrives. Slightly wider, same row. */
+.s2o-rail__receipt {
+  width: 244px;
+}
+
+/* Gold’s wounds are traits beside a winner, not a defeat line. */
+.s2o-rail__wound--traits {
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+
+/* --- The abstraction ladder --- */
+
+.s2o-rail__spine {
+  width: 2px;
+  background: rgba(255, 255, 255, 0.3);
+  opacity: 0;
+  transition: opacity 700ms ease-out, transform 1100ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s2o-rail__spine[data-visible="true"] {
+  opacity: 1;
+}
+
+.s2o-rail__spine--stub {
+  transform-origin: bottom center;
+}
+
+/* The cut (R2.1 §D.2): the coinage–paper spine segment breaks — a dim stub
+   of it stays reaching up from COINAGE — and the paper rung departs for its
+   floating position. Coinage, a form of the metal itself, stays standing
+   on gold. */
+.s2o-rail[data-severed="true"] .s2o-rail__spine[data-riser="paper"] {
+  transform: scaleY(0.45);
+  transform-origin: bottom center;
+  opacity: 0.35;
+}
+
+.s2o-rail__riser {
+  width: 160px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.03);
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 700ms ease-out, transform 800ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s2o-rail__riser[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* The paper rung becomes the FIAT marker — one continuous idea: the chip
+   drifts up-right toward the marker’s float and dissolves into it. */
+.s2o-rail[data-severed="true"] .s2o-rail__riser[data-riser="paper"] {
+  transform: translate(184px, 76px) scale(0.35);
+  opacity: 0;
+  transition: opacity 1100ms ease-out 250ms, transform 1400ms cubic-bezier(0.4, 0, 0.3, 1);
+}
+
+/* After the cut, the riser annotations yield to the event — the record
+   keeps its structure (the chips, the spine), not its footnotes; the FIAT
+   mark takes that airspace. */
+.s2o-rail[data-severed="true"] .s2o-rail__risernote {
+  opacity: 0;
+  transform: translateY(-6px);
+}
+
+.s2o-rail__risermark {
+  position: static;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.s2o-rail__risermark svg {
+  display: block;
+}
+
+.s2o-rail__riserlabel {
+  position: static;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  color: var(--text-secondary);
+}
+
+/* A riser's note is the rung's argument — "solves this, trusts that" — and it
+   is what the presenter is saying on the build it arrives (§9.4 rule 10). It
+   holds full voice until the next rung's note lands, then recedes. */
+.s2o-rail__risernote {
+  width: 320px;
+  font-size: 16.5px;
+  line-height: 1.5;
+  color: var(--text-prior);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 700ms ease-out 150ms, color 700ms ease-out,
+    transform 800ms cubic-bezier(0.22, 1, 0.36, 1) 150ms;
+}
+
+.s2o-rail[data-latest="coinage"] .s2o-rail__risernote[data-riser="coinage"],
+.s2o-rail[data-latest="paper"] .s2o-rail__risernote[data-riser="paper"] {
+  color: var(--text-primary);
+}
+
+.s2o-rail__risernote[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- FIAT (§D.2): the one stop that does not touch the line --- */
+
+/* Settles where the departed paper rung resolves: a fixed float above the
+   rail, right of GOLD, no connector down to the line. */
+.s2o-rail__fiat {
+  opacity: 0;
+  transition: opacity 1000ms ease-out 500ms;
+}
+
+.s2o-rail__fiat[data-visible="true"] {
+  opacity: 1;
+}
+
+.s2o-rail__fiatdot {
+  left: -6px;
+  top: -6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.s2o-rail__fiatlabel {
+  left: 50%;
+  top: 20px;
+  width: max-content;
+  transform: translateX(-50%);
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  color: var(--text-secondary);
+}
+
+.s2o-rail__fiatline {
+  left: 50%;
+  top: 58px;
+  width: max-content;
+  transform: translateX(-50%);
+  font-size: 17px;
+  line-height: 1.45;
+  color: var(--text-muted);
+}
+
+/* --- The dark end: the protected ? and the entrant --- */
+
+.s2o-rail__qmark {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 25px;
+  font-weight: 500;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  transform: scale(0.82);
+  transition: opacity 900ms ease-out 700ms, transform 1000ms cubic-bezier(0.22, 1, 0.36, 1) 700ms;
+}
+
+.s2o-rail__qmark[data-visible="true"] {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.s2o-rail__entrantdot {
+  left: -4.5px;
+  top: -4.5px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.8);
+  opacity: 0;
+  transition: opacity 800ms ease-out;
+}
+
+/* The entrant’s glyph (R2.2 §D): the ₿ mark in the set’s hand, on the same
+   glyph anchor as every stop, arriving with the entrant build. */
+.s2o-rail__entrant .s2o-rail__glyph {
+  opacity: 0;
+  transition: opacity 800ms ease-out 100ms;
+}
+
+.s2o-rail__entrant[data-visible="true"] .s2o-rail__glyph {
+  opacity: 1;
+}
+
+/* The entrant is named (§D.1) — the same stop typography as every other
+   rail stop; naming is description. It appears with the entrant build. */
+.s2o-rail__entrantlabel {
+  left: 50%;
+  top: 24px;
+  width: max-content;
+  transform: translateX(-50%) translateY(6px);
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  color: var(--text-secondary);
+  opacity: 0;
+  transition: opacity 800ms ease-out 100ms, transform 800ms cubic-bezier(0.22, 1, 0.36, 1) 100ms;
+}
+
+/* The entrant's three facts and its limitation are two sentences, spoken one
+   build apart, and R7.3 §3 splits them: the description lands at full voice,
+   recedes one step when the limitation lands, and the limitation holds the
+   frame's end state beside the closing thesis line. Before that split both sat
+   permanently at 0.75 and 0.5 — the honest-limitation line, which the beat
+   exists to deliver, arriving at half brightness. */
+.s2o-rail__entrantline {
+  top: 70px;
+  left: 0;
+  transform: translateX(-50%) translateY(6px);
+  width: 440px;
+  text-align: center;
+  font-size: 22px;
+  line-height: 1.5;
+  color: var(--text-prior);
+  opacity: 0;
+  transition: opacity 800ms ease-out 250ms, color 800ms ease-out,
+    transform 800ms cubic-bezier(0.22, 1, 0.36, 1) 250ms;
+}
+
+.s2o-rail[data-latest="entrant"] .s2o-rail__entrantline {
+  color: var(--text-primary);
+}
+
+.s2o-rail__entrant[data-visible="true"] .s2o-rail__entrantdot {
+  opacity: 1;
+}
+
+.s2o-rail__entrant[data-visible="true"] .s2o-rail__entrantlabel {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.s2o-rail__entrant[data-visible="true"] .s2o-rail__entrantline {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.s2o-rail__limitation {
+  top: 152px;
+  left: 0;
+  transform: translateX(-50%) translateY(6px);
+  width: 470px;
+  text-align: center;
+  font-size: 21px;
+  line-height: 1.5;
+  color: var(--text-prior);
+  opacity: 0;
+  transition: opacity 800ms ease-out, color 800ms ease-out,
+    transform 800ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s2o-rail[data-latest="limitation"] .s2o-rail__limitation {
+  color: var(--text-primary);
+}
+
+.s2o-rail__limitation[data-visible="true"] {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Snap mode: exact instant reconstruction (direct entry, back-navigation,
+   reduced motion). Every transition dies for the duration of the apply. */
+.s2o-rail[data-snap="true"],
+.s2o-rail[data-snap="true"] * {
+  transition: none !important;
+}
+
+/* --- The element grid (component) --- */
+
+.s2o-elements {
+  position: relative;
+}
+
+.s2o-elements__cell {
+  position: absolute;
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.02);
+  font-size: 19px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+/* Gases drift off — anything that floats away is out. */
+.s2o-elements__cell[data-fate="g"] {
+  transition: opacity 1700ms ease-out var(--d), transform 2100ms cubic-bezier(0.3, 0.6, 0.4, 1) var(--d);
+}
+
+.s2o-elements__cell[data-fate="g"][data-state="out"] {
+  opacity: 0;
+  transform: translate(var(--dx), -54px) rotate(var(--rot));
+}
+
+/* The corrosion wave sweeps diagonally; the husks stay barely visible. */
+.s2o-elements__cell[data-fate="r"] {
+  transition: opacity 1100ms ease-out var(--sweep), color 1100ms ease-out var(--sweep),
+    border-color 1100ms ease-out var(--sweep), transform 1100ms ease-out var(--sweep);
+}
+
+.s2o-elements__cell[data-fate="r"][data-state="out"] {
+  opacity: 0.07;
+  color: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.04);
+  transform: translateY(3px);
+}
+
+/* The radioactive pulse-out: one flare, then dark. The keyframe animation is
+   gated to the live wave (data-step-live) so reconstruction and later builds
+   land the resting end state without a replay. */
+.s2o-elements__cell[data-fate="x"][data-state="out"] {
+  opacity: 0.04;
+  transform: scale(0.9);
+}
+
+.s2o-elements[data-step-live="3"] .s2o-elements__cell[data-fate="x"] {
+  animation: s2o-pulse-out 1050ms cubic-bezier(0.2, 0.7, 0.3, 1) var(--d) both;
+}
+
+@keyframes s2o-pulse-out {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+    color: rgba(255, 255, 255, 0.78);
+  }
+  36% {
+    opacity: 1;
+    transform: scale(1.16);
+    color: rgba(255, 255, 255, 1);
+  }
+  100% {
+    opacity: 0.04;
+    transform: scale(0.9);
+    color: rgba(255, 255, 255, 0.78);
+  }
+}
+
+/* The shapeless settle dim — mercury pours, tungsten and rhenium cannot be
+   worked at all. Still present, out of the running. */
+.s2o-elements__cell[data-fate="i"] {
+  transition: opacity 1300ms ease-out calc(var(--d) * 0.6), transform 1300ms ease-out calc(var(--d) * 0.6);
+}
+
+.s2o-elements__cell[data-fate="i"][data-state="out"] {
+  opacity: 0.15;
+  transform: translateY(2px);
+}
+
+/* The furnace wave (R4.1, ruling R-03): the noble metals survive every
+   chemical cut and lose to melting point instead. They settle the same way
+   the shapeless do — this is a losing beat, not a violent one — but on their
+   own wave, and a shade brighter, because the deck comes back for one of
+   them at 3.5. */
+.s2o-elements__cell[data-fate="n"] {
+  transition: opacity 1300ms ease-out calc(var(--d) * 0.6), transform 1300ms ease-out calc(var(--d) * 0.6);
+}
+
+.s2o-elements__cell[data-fate="n"][data-state="out"] {
+  opacity: 0.2;
+  transform: translateY(2px);
+}
+
+/* The two survivors, alone. */
+.s2o-elements__cell[data-fate="s"] {
+  transition: color 1100ms ease-out 600ms, border-color 1100ms ease-out 600ms,
+    background 1100ms ease-out 600ms, box-shadow 1100ms ease-out 600ms,
+    transform 1100ms cubic-bezier(0.22, 1, 0.36, 1) 600ms;
+}
+
+.s2o-elements__cell[data-state="alone"] {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 22px rgba(255, 255, 255, 0.16), inset 0 0 10px rgba(255, 255, 255, 0.05);
+  transform: scale(1.08);
+}
+
+.s2o-elements[data-snap="true"],
+.s2o-elements[data-snap="true"] * {
+  transition: none !important;
+  animation: none !important;
+}
+
+/* --- Section 2 component reduced motion: states land instantly; the global
+   duration collapse leaves transition-delay alive, so delays die here. --- */
+@media (prefers-reduced-motion: reduce) {
+  .s2o-rail,
+  .s2o-rail *,
+  .s2o-elements,
+  .s2o-elements * {
+    transition-delay: 0ms !important;
+    transition-duration: 0.01ms !important;
+    animation: none !important;
+  }
+}
+
+/* --- Section 2 slide frames --- */
+
+.s2o {
+  position: absolute;
+  inset: 0;
+  background: var(--bg-primary);
+}
+
+/* Snap mode at slide level: reconstructed frames (direct entry, retreat)
+   land every element on its exact end state instantly. All staged
+   choreography is gated to live advances (data-step-live), so nothing
+   replays when this lifts. */
+.s2o[data-snap="true"],
+.s2o[data-snap="true"] * {
+  transition: none !important;
+  animation: none !important;
+}
+
+/* --- The evolution-rail continuity group (R2.1 §A) ---
+   The rail-group slides split into a persistent scene layer (the rail) and
+   a per-slide overlay. At a handoff only the overlays transition — the
+   outgoing one lifts away while the incoming one rises in over the rail,
+   which animates from its current state. The overlay must never paint over
+   the scene. */
+.s2o--overlay {
+  background: transparent;
+  transition: opacity 480ms ease-out, transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s2o--overlay[data-entering="true"] {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.s2o--overlay[data-exiting="true"] {
+  opacity: 0;
+  transform: translateY(-16px);
+}
+
+/* --- The triad (2.1–2.2) --- */
+
+.s2o-triad {
+  position: absolute;
+  inset: 0;
+  transition: opacity 900ms ease-out;
+}
+
+.s2o-triad__svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.s2o-triad__edge {
+  stroke: rgba(255, 255, 255, 0.13);
+  stroke-width: 1.5;
+  stroke-dasharray: var(--len);
+  stroke-dashoffset: 0;
+  opacity: 0;
+}
+
+.s2o-triad__cross {
+  stroke: rgba(255, 255, 255, 0.45);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  fill: none;
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.s2o-triad__cyclearc {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.22);
+  stroke-width: 1.2;
+  stroke-dasharray: 4 7;
+  opacity: 0;
+  transition: opacity 900ms ease-out;
+}
+
+.s2o-triad__node {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  transition: opacity 700ms ease-out;
+}
+
+.s2o-triad__node[data-visible="true"] {
+  opacity: 1;
+}
+
+.s2o-triad__dot {
+  position: absolute;
+  left: -6.5px;
+  top: -6.5px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+/* The outside rule (R2.2 §A), replacing uniform below-centering for
+   polygonal layouts: labels sit on the outside of the shape, never crossing
+   an edge, in mirror symmetry across the vertical axis. The fisherman’s
+   card sits left of its dot (right-aligned toward it), the sandal-maker’s
+   right of its dot (left-aligned toward it) — both vertically centered on
+   the dot at one shared offset — and the farmer’s stays centered below its
+   dot (no edge below it). Name row and HAS/WANTS row keep their shared
+   baseline grid within every block (§C.3); icon anchors are unchanged
+   (goods rest centered above their dots). */
+.s2o-triad__card {
+  position: absolute;
+  width: 460px;
+}
+
+.s2o-triad__node[data-node="fisherman"] .s2o-triad__card {
+  right: 36px;
+  top: -35px;
+  text-align: right;
+}
+
+.s2o-triad__node[data-node="sandal-maker"] .s2o-triad__card {
+  left: 36px;
+  top: -35px;
+  text-align: left;
+}
+
+.s2o-triad__node[data-node="farmer"] .s2o-triad__card {
+  left: -230px;
+  top: 36px;
+  text-align: center;
+}
+
+.s2o-triad__name {
+  margin: 0;
+  font-size: 29px;
+  font-weight: 540;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.s2o-triad__haswants {
+  margin: 10px 0 0 0;
+  font-size: 23px;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+.s2o-triad__key {
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: var(--text-dim);
+}
+
+.s2o-triad__sep {
+  color: var(--text-dim);
+}
+
+/* Traveling goods (2.2) — anchored to their motion paths, carrying the
+   grammar’s soft luminance treatment (the unit-warm glow family). Part of
+   the persistent exchange-triangle scene: world mode keeps them hidden;
+   they arrive — fade in on their rest shelves — as the discovery slide’s
+   first build state (R2.2 §B.1). */
+.s2o-triad__good {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: rgba(10, 10, 10, 0.82);
+  display: grid;
+  place-items: center;
+  color: rgba(255, 255, 255, 0.85);
+  offset-rotate: 0deg;
+  transition: offset-distance 1700ms cubic-bezier(0.45, 0.05, 0.3, 1),
+    opacity 600ms ease-out;
+}
+
+.s2o-triadscene[data-mode="world"] .s2o-triad__good {
+  opacity: 0;
+}
+
+.s2o-triad__good svg {
+  filter: drop-shadow(0 0 10px rgba(253, 233, 212, 0.22));
+}
+
+/* A parked good snaps to its placement (offset transitions die) but keeps
+   its opacity fade — the handoff arrival is a fade, never a slide. */
+.s2o-triad__good[data-moving="false"] {
+  transition: offset-distance 0s linear, opacity 600ms ease-out;
+}
+
+.s2o-triad__good[data-good="fish"] {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* Opposing goods on one edge ride in sequence, not in parallel (§C.2): the
+   return leg waits out the outbound leg inside the same gesture. Landed
+   states carry no delay, so reconstruction stays exact. */
+.s2o-triadscene[data-mode="discovery"][data-step-live="1"] .s2o-triad__good[data-good="sandals"] {
+  transition-delay: 1900ms;
+}
+
+.s2o-triadscene[data-mode="discovery"][data-step-live="2"] .s2o-triad__good[data-good="grain"] {
+  transition-delay: 1900ms;
+}
+
+/* --- 2.1: the world without it (scene mode "world") --- */
+
+/* Node visibility per build. */
+.s2o-triadscene[data-mode="world"] .s2o-triad__node,
+.s2o-triadscene[data-mode="world"] .s2o-triad__edge,
+.s2o-triadscene[data-mode="world"] .s2o-triad__cross {
+  opacity: 0;
+}
+
+.s2o-triadscene[data-mode="world"]:is([data-step="1"], [data-step="2"], [data-step="3"]) .s2o-triad__node[data-node="fisherman"],
+.s2o-triadscene[data-mode="world"]:is([data-step="1"], [data-step="2"], [data-step="3"]) .s2o-triad__node[data-node="sandal-maker"],
+.s2o-triadscene[data-mode="world"]:is([data-step="2"], [data-step="3"]) .s2o-triad__node[data-node="farmer"] {
+  opacity: 1;
+  transition: opacity 700ms ease-out;
+}
+
+/* Resting failure states (what reconstruction lands on). */
+.s2o-triadscene[data-mode="world"]:is([data-step="1"], [data-step="2"], [data-step="3"]) .s2o-triad__edge[data-edge="fs"],
+.s2o-triadscene[data-mode="world"]:is([data-step="2"], [data-step="3"]) .s2o-triad__edge {
+  opacity: 1;
+}
+
+.s2o-triadscene[data-mode="world"]:is([data-step="1"], [data-step="2"], [data-step="3"]) .s2o-triad__cross[data-edge="fs"],
+.s2o-triadscene[data-mode="world"]:is([data-step="2"], [data-step="3"]) .s2o-triad__cross {
+  opacity: 0.7;
+}
+
+.s2o-triadscene[data-mode="world"]:is([data-step="2"], [data-step="3"]) .s2o-triad__cyclearc {
+  opacity: 0.32;
+}
+
+/* Live choreography: the attempt draws bright, holds, dies to the resting
+   dim line; the ✕ lands at the death. One gesture per advance. */
+@keyframes s2o-edge-fail {
+  0% {
+    stroke-dashoffset: var(--len);
+    stroke: rgba(255, 255, 255, 0.6);
+    opacity: 1;
+  }
+  38% {
+    stroke-dashoffset: 0;
+    stroke: rgba(255, 255, 255, 0.6);
+  }
+  66% {
+    stroke-dashoffset: 0;
+    stroke: rgba(255, 255, 255, 0.55);
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke: rgba(255, 255, 255, 0.13);
+    opacity: 1;
+  }
+}
+
+@keyframes s2o-cross-land {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+}
+
+.s2o-triadscene[data-mode="world"][data-step-live="1"] .s2o-triad__edge[data-edge="fs"] {
+  animation: s2o-edge-fail 1900ms ease-out 300ms both;
+}
+
+.s2o-triadscene[data-mode="world"][data-step-live="1"] .s2o-triad__cross[data-edge="fs"] {
+  animation: s2o-cross-land 500ms ease-out 1900ms both;
+}
+
+.s2o-triadscene[data-mode="world"][data-step-live="2"] .s2o-triad__edge[data-edge="ff"] {
+  animation: s2o-edge-fail 1900ms ease-out 600ms both;
+}
+
+.s2o-triadscene[data-mode="world"][data-step-live="2"] .s2o-triad__cross[data-edge="ff"] {
+  animation: s2o-cross-land 500ms ease-out 2200ms both;
+}
+
+.s2o-triadscene[data-mode="world"][data-step-live="2"] .s2o-triad__edge[data-edge="sf"] {
+  animation: s2o-edge-fail 1900ms ease-out 1600ms both;
+}
+
+.s2o-triadscene[data-mode="world"][data-step-live="2"] .s2o-triad__cross[data-edge="sf"] {
+  animation: s2o-cross-land 500ms ease-out 3200ms both;
+}
+
+.s2o-triadscene[data-mode="world"][data-step-live="2"] .s2o-triad__cyclearc {
+  transition-delay: 3000ms;
+}
+
+.s2o-world__wall {
+  position: absolute;
+  left: 200px;
+  right: 200px;
+  top: 936px;
+  margin: 0;
+  text-align: center;
+  font-size: 46px;
+  font-weight: 560;
+  letter-spacing: -0.012em;
+  color: var(--text-primary);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 700ms ease-out, transform 800ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s2o-world__wall[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- 2.2: the discovery (scene mode "discovery") --- */
+
+/* The same triangle, handed off whole: nodes shown, edges at their failed
+   rest — then relit as the trades clear them. The cycle arcs were 2.1's
+   reading aid; they fade with the mode flip (and return on the way back). */
+.s2o-triadscene[data-mode="discovery"] .s2o-triad__node {
+  opacity: 1;
+}
+
+.s2o-triadscene[data-mode="discovery"] .s2o-triad__edge {
+  opacity: 1;
+  transition: stroke 900ms ease-out;
+}
+
+.s2o-triadscene[data-mode="discovery"] .s2o-triad__cross {
+  opacity: 0.7;
+  transition: opacity 700ms ease-out;
+}
+
+.s2o-triadscene[data-mode="discovery"] .s2o-triad__cyclearc {
+  opacity: 0;
+}
+
+.s2o-triadscene[data-mode="discovery"]:is([data-step="1"], [data-step="2"], [data-step="3"], [data-step="4"]) .s2o-triad__edge[data-edge="fs"],
+.s2o-triadscene[data-mode="discovery"]:is([data-step="2"], [data-step="3"], [data-step="4"]) .s2o-triad__edge {
+  stroke: rgba(255, 255, 255, 0.5);
+}
+
+.s2o-triadscene[data-mode="discovery"]:is([data-step="1"], [data-step="2"], [data-step="3"], [data-step="4"]) .s2o-triad__cross[data-edge="fs"],
+.s2o-triadscene[data-mode="discovery"]:is([data-step="2"], [data-step="3"], [data-step="4"]) .s2o-triad__cross {
+  opacity: 0;
+}
+
+/* The summary lines take the frame; the triangle yields.
+
+   `data-yielded` is the declaration, not a decoration (§9.4 rule 10's handoff
+   clause, R7.3): a whole scene layer that has given the frame to a superseding
+   one may recede past the legibility floor, because nothing on it is being
+   read — but it has to say so, in the DOM, where the brightness gate and the
+   next reader can both see it. Left as a bare opacity keyed on a step number,
+   it is indistinguishable from a frame that has simply gone dim. */
+.s2o-triadscene[data-yielded="true"] .s2o-triad {
+  opacity: 0.45;
+}
+
+/* The fish’s traced path, drawn with the travel and retained faintly. */
+.s2o-discovery__trace {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.16);
+  stroke-width: 1.5;
+  stroke-dashoffset: var(--len);
+  opacity: 0;
+  transition: stroke-dashoffset 1700ms cubic-bezier(0.45, 0.05, 0.3, 1),
+    opacity 600ms ease-out;
+}
+
+.s2o-triadscene[data-mode="discovery"]:is([data-step="1"], [data-step="2"], [data-step="3"], [data-step="4"]) .s2o-discovery__trace[data-leg="1"],
+.s2o-triadscene[data-mode="discovery"]:is([data-step="2"], [data-step="3"], [data-step="4"]) .s2o-discovery__trace[data-leg="2"] {
+  stroke-dashoffset: 0;
+  opacity: 1;
+}
+
+/* Held, unconsumed: the ring at the sandal-maker’s rest shelf (centered
+   above its dot, per the §C.1 anchor), build 1 only. */
+.s2o-discovery__hold {
+  position: absolute;
+  left: 1388px;
+  top: 276px;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  opacity: 0;
+  transition: opacity 700ms ease-out;
+}
+
+.s2o-triadscene[data-mode="discovery"][data-step="1"] .s2o-discovery__hold {
+  opacity: 1;
+}
+
+.s2o-triadscene[data-mode="discovery"][data-step="1"][data-live="true"] .s2o-discovery__hold {
+  transition-delay: 1700ms;
+}
+
+.s2o-discovery__wall {
+  position: absolute;
+  left: 300px;
+  right: 300px;
+  top: 92px;
+  margin: 0;
+  text-align: center;
+  font-size: 27px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--text-muted);
+  opacity: 0;
+  transition: opacity 700ms ease-out;
+}
+
+.s2o-discovery__wall[data-visible="true"] {
+  opacity: 1;
+}
+
+/* The birth line lands where the wall stood. */
+.s2o-discovery__birth {
+  position: absolute;
+  left: 180px;
+  right: 180px;
+  top: 96px;
+  margin: 0;
+  text-align: center;
+  font-size: 42px;
+  font-weight: 540;
+  line-height: 1.35;
+  letter-spacing: -0.012em;
+  color: var(--text-primary);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 700ms ease-out, transform 800ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s2o-discovery__birth[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* The naming line. It lands one build after the birth line and it is the
+   sentence being spoken when it does — salability is the word the rest of the
+   section runs on — so it takes full brightness and the birth line above it
+   recedes a step (§9.4 rule 10, R7.3). The two used to be a fixed hierarchy,
+   42px white over 32px at 0.75, which meant the newest line on the frame
+   arrived quieter than the one it was extending. Rank is carried by size and
+   position, which is where it belongs. */
+.s2o-discovery__salability {
+  position: absolute;
+  left: 260px;
+  right: 260px;
+  top: 224px;
+  margin: 0;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 460;
+  line-height: 1.4;
+  letter-spacing: -0.008em;
+  color: var(--text-primary);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 700ms ease-out, transform 800ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s2o-discovery[data-step="4"] .s2o-discovery__birth[data-visible="true"] {
+  opacity: var(--dim-prior);
+}
+
+.s2o-discovery__salability[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- 2.3: the convergence --- */
+
+.s2o-convergence__field {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1400ms ease-out;
+}
+
+.s2o-convergence__field[data-visible="true"] {
+  opacity: 1;
+}
+
+/* The resolved token sits at the orbit’s center; its own class carries the
+   look — this only gates its slower, bloom-matched resolve. */
+.s2o-convergence__token {
+  transition: opacity 1600ms ease-out, transform 2000ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s2o-convergence__line {
+  position: absolute;
+  left: 300px;
+  right: 300px;
+  top: 924px;
+  margin: 0;
+  text-align: center;
+  font-size: 42px;
+  font-weight: 540;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 700ms ease-out, transform 800ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s2o-convergence__line[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- 2.4–2.5: the competition record --- */
+
+/* The contender row itself is the rail in contender mode (R2.1 §E); the
+   slide’s overlay carries only the law. */
+.s2o-competition__law {
+  position: absolute;
+  left: 180px;
+  right: 180px;
+  top: 872px;
+  margin: 0;
+  text-align: center;
+  font-size: 38px;
+  font-weight: 540;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 700ms ease-out, transform 800ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s2o-competition__law[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- The featured-render moment (R7.3 §7, flagged: RAIL_FEATURE) --- */
+
+/* The close-up sits over the schematic in stage space, above the stop it
+   belongs to. It rises a little as it arrives and settles back as it goes, so
+   the beat reads as a camera moving in and out rather than as a panel toggling.
+   No border, no radius, no shadow — the image is graded to black and the frame
+   edge is invisible because the image is black there (§9.4.9). */
+.s2o-railfeature {
+  position: absolute;
+  opacity: 0;
+  transform: translateY(14px) scale(0.985);
+  transition: opacity 900ms ease-out 450ms,
+    transform 1200ms cubic-bezier(0.22, 1, 0.36, 1) 450ms;
+  pointer-events: none;
+}
+
+.s2o-railfeature[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* --- The rail scene layer (2.4–2.8 shared) --- */
+
+.s2o-railwrap {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1400ms ease-out;
+}
+
+.s2o-railwrap[data-visible="true"] {
+  opacity: 1;
+}
+
+/* --- 2.6: the abstraction ladder --- */
+
+.s2o-ladder__law {
+  position: absolute;
+  left: 210px;
+  right: 210px;
+  top: 884px;
+  margin: 0;
+  text-align: center;
+  font-size: 38px;
+  font-weight: 540;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 700ms ease-out, transform 800ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s2o-ladder__law[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- 2.5 part two: two survivors --- */
+
+.s2o-survivors__kicker {
+  position: absolute;
+  left: 200px;
+  right: 200px;
+  top: 150px;
+  margin: 0;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  opacity: 0;
+  transition: opacity 800ms ease-out;
+}
+
+.s2o-survivors__kicker[data-visible="true"] {
+  opacity: 1;
+}
+
+/* The table rises over the dimmed rail (the §A designed exception). */
+.s2o-survivors__grid {
+  position: absolute;
+  left: 50%;
+  top: 244px;
+  transform: translateX(-50%) translateY(30px);
+  opacity: 0;
+  transition: opacity 900ms ease-out, transform 1100ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s2o-survivors__grid[data-visible="true"] {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Each wave's verdict, in the same voice as the verdict that closes them
+   (§9.4 rule 10, R7.3): one line is on stage at a time and it is the sentence
+   being spoken, so it renders at full brightness. It sat at `--text-muted`,
+   which put every elimination line at half voice against a table the wave had
+   just lit up. The italic is what keeps it a caption to the field rather than
+   a second headline; the brightness is not what was doing that work. */
+.s2o-survivors__waveline {
+  position: absolute;
+  left: 300px;
+  right: 300px;
+  top: 894px;
+  margin: 0;
+  text-align: center;
+  font-size: 27px;
+  font-weight: 420;
+  font-style: italic;
+  letter-spacing: -0.005em;
+  color: var(--text-primary);
+  opacity: 0;
+  transition: opacity 500ms ease-out;
+}
+
+.s2o-survivors__waveline[data-visible="true"] {
+  opacity: 1;
+}
+
+.s2o-survivors__verdict {
+  position: absolute;
+  left: 300px;
+  right: 300px;
+  top: 890px;
+  margin: 0;
+  text-align: center;
+  font-size: 33px;
+  font-weight: 540;
+  letter-spacing: -0.008em;
+  color: var(--text-primary);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 700ms ease-out 500ms, transform 800ms cubic-bezier(0.22, 1, 0.36, 1) 500ms;
+}
+
+.s2o-survivors__verdict[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* R7.2 §D2, flagged candidate (off by default — see GOLD_ARRIVAL). The study
+   lands to the right of the resolved table, in the band the eye moves into as
+   the chemistry finishes: "gold won everything" arriving as an object rather
+   than as another line of type. */
+.s2o-survivors__arrival {
+  position: absolute;
+  left: 1340px;
+  top: 262px;
+  z-index: 6;
+  transition: opacity 700ms ease-out 400ms;
+}
+
+/* --- 2.7: the severance --- */
+
+.s2o-severance__date {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 84px;
+  margin: 0;
+  text-align: center;
+  font-size: 128px;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-primary);
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 900ms ease-out, transform 1000ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s2o-severance__date[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* The date yields once the cut has landed. */
+.s2o-severance[data-step="2"] .s2o-severance__date[data-visible="true"] {
+  opacity: 0.55;
+}
+
+.s2o-severance__decree {
+  position: absolute;
+  left: 240px;
+  right: 240px;
+  top: 886px;
+  margin: 0;
+  text-align: center;
+  font-size: 33px;
+  font-weight: 460;
+  line-height: 1.45;
+  letter-spacing: -0.008em;
+  color: var(--text-primary);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 700ms ease-out 600ms, transform 800ms cubic-bezier(0.22, 1, 0.36, 1) 600ms;
+}
+
+.s2o-severance__decree[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.s2o-severance__chart {
+  position: absolute;
+  left: 340px;
+  width: 1240px;
+  top: 150px;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 800ms ease-out, transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s2o-severance__chart[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.s2o-severance__headline {
+  margin: 0 0 20px 0;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 560;
+  letter-spacing: -0.012em;
+  color: var(--text-primary);
+}
+
+.s2o-severance__plot {
+  display: block;
+  width: 100%;
+}
+
+.s2o-severance__refline {
+  stroke: rgba(255, 255, 255, 0.12);
+  stroke-width: 1;
+  stroke-dasharray: 3 7;
+}
+
+.s2o-severance__axis {
+  stroke: rgba(255, 255, 255, 0.25);
+  stroke-width: 1.5;
+}
+
+.s2o-severance__axislabel {
+  fill: rgba(255, 255, 255, 0.4);
+  font-size: 19px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+
+.s2o-severance__series {
+  fill: none;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-dashoffset: var(--len);
+  transition: stroke-dashoffset 1600ms ease-out calc(var(--i) * 160ms);
+}
+
+.s2o-severance:is([data-step="3"], [data-step="4"]) .s2o-severance__series {
+  stroke-dashoffset: 0;
+}
+
+.s2o-severance__serieslabel {
+  font-size: 21px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  opacity: 0;
+  transition: opacity 700ms ease-out;
+}
+
+.s2o-severance[data-live="true"]:is([data-step="3"]) .s2o-severance__serieslabel {
+  transition-delay: 1500ms;
+}
+
+.s2o-severance:is([data-step="3"], [data-step="4"]) .s2o-severance__serieslabel {
+  opacity: 1;
+}
+
+.s2o-severance__indexnote {
+  margin: 14px 0 0 0;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: var(--text-dim);
+}
+
+.s2o-severance__balance {
+  position: absolute;
+  left: 200px;
+  right: 200px;
+  top: 856px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 700ms ease-out, transform 800ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s2o-severance__balance[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.s2o-severance__balanceline {
+  margin: 0;
+  text-align: center;
+}
+
+.s2o-severance__balanceline--one {
+  font-size: 29px;
+  font-weight: 440;
+  letter-spacing: -0.006em;
+  color: var(--text-secondary);
+}
+
+.s2o-severance__balanceline--two {
+  margin-top: 12px;
+  font-size: 35px;
+  font-weight: 560;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+}
+
+/* --- 2.8: the pattern --- */
+
+/* Full-rail frame composition (R2.1 §F.4): the rail sits at ~62% stage
+   height (the frame’s camera cy); the thesis block is optically centered in
+   the space above it, max width 1400px. */
+.s2o-pattern__thesis {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1400px;
+  max-width: 1400px;
+  top: 160px;
+  display: grid;
+  gap: 26px;
+}
+
+.s2o-pattern__thesisline {
+  margin: 0;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 540;
+  line-height: 1.35;
+  letter-spacing: -0.012em;
+  color: var(--text-primary);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 700ms ease-out, transform 800ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s2o-pattern__thesisline[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Earlier chapters settle to the dimmed-prior step as the thesis builds — and
+   only the chapters *before* the current one (§9.4 rule 10, R7.3). The line
+   that just landed is the sentence being spoken and holds full brightness; at
+   builds 5–6 the first two clear entirely (the slide stops rendering them) and
+   the closing line holds full brightness as the frame's end state, which is
+   what the pull-back was for. Until the presenter's review this rule dimmed
+   all three at once from build 5, so the frame's last word arrived at half
+   voice with nothing at full voice anywhere on stage. */
+.s2o-pattern:is([data-step="3"], [data-step="4"]) .s2o-pattern__thesisline[data-index="0"][data-visible="true"],
+.s2o-pattern[data-step="4"] .s2o-pattern__thesisline[data-index="1"][data-visible="true"] {
+  opacity: var(--dim-prior);
+}
+
+/* --- Section 2 slide reduced motion: every state lands instantly and
+   completely; entry fades, staggers and gesture animations collapse. --- */
+@media (prefers-reduced-motion: reduce) {
+  .s2o,
+  .s2o * {
+    transition-delay: 0ms !important;
+    transition-duration: 0.01ms !important;
+    animation: none !important;
+  }
+}
+
+/* ===== Section 3 — What Money Must Do (rebuild R3) ===== */
+
+/* Sections 1–2's austerity continues: black frames, one element at a time,
+   monochrome except the color arc’s sanctioned accents — the waypoint
+   ignitions (3.0, 3.8) and the two foundation emphases (the ladder’s
+   store-of-value stage, the layer tower’s base). */
+
+/* --- Section 3 slide frames --- */
+
+.s3f {
+  position: absolute;
+  inset: 0;
+  background: var(--bg-primary);
+}
+
+/* Snap mode at slide level: reconstructed frames (direct entry, retreat)
+   land every element on its exact end state instantly. All staged
+   choreography is gated to live advances, so nothing replays when this
+   lifts. */
+.s3f[data-snap="true"],
+.s3f[data-snap="true"] * {
+  transition: none !important;
+  animation: none !important;
+}
+
+/* --- The stage-ladder continuity group (R2.1 §A pattern) ---
+   The ladder-group slides split into a persistent scene layer (the ladder)
+   and a per-slide overlay; at a handoff only the overlays transition. */
+.s3f--overlay {
+  background: transparent;
+  transition: opacity 480ms ease-out, transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s3f--overlay[data-entering="true"] {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.s3f--overlay[data-exiting="true"] {
+  opacity: 0;
+  transform: translateY(-16px);
+}
+
+/* --- The waypoint interstitial (component, brief §9.3) ---
+   The method line exactly as 1.5 left it: same geometry, same labels, the
+   same line-language. The device fades in as one object from the authored
+   black beat; per-waypoint states carry the return. */
+
+.wayline {
+  position: absolute;
+  left: 320px;
+  top: 660px;
+  width: 1280px;
+  height: 0;
+  opacity: 0;
+  transition: opacity 1100ms ease-out;
+}
+
+.wayline[data-visible="true"] {
+  opacity: 1;
+}
+
+.wayline__line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.wayline__wp {
+  position: absolute;
+  top: 0;
+  width: 420px;
+  margin-left: -210px;
+}
+
+.wayline__wp[data-index="0"] { left: 150px; }
+.wayline__wp[data-index="1"] { left: 640px; }
+.wayline__wp[data-index="2"] { left: 1130px; }
+
+.wayline__dot {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  margin: -5px 0 0 -5px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.22);
+  transition: background-color 900ms ease-out, box-shadow 900ms ease-out,
+    transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.wayline__text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 36px;
+  margin: 0;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 460;
+  line-height: 1.4;
+  letter-spacing: -0.008em;
+  color: var(--text-dim);
+  transition: color 900ms ease-out;
+}
+
+/* Completed: settled and visibly done — the dot solid at low warmth (the
+   ignition’s residue), the label quiet but present. */
+.wayline__wp[data-state="completed"] .wayline__dot {
+  background: rgba(253, 233, 212, 0.6);
+  box-shadow: 0 0 10px rgba(253, 233, 212, 0.25);
+}
+
+.wayline__wp[data-state="completed"] .wayline__text {
+  color: var(--text-muted);
+}
+
+/* Active: the §9.3 ignition standard — 2× marker, full accent with bloom,
+   label at warm white; the single slow pulse is gated to the live apply. */
+.wayline__wp[data-state="active"] .wayline__dot {
+  background: var(--accent);
+  transform: scale(2);
+  box-shadow: 0 0 18px rgba(247, 147, 26, 0.6), 0 0 56px rgba(247, 147, 26, 0.3);
+}
+
+.wayline__wp[data-state="active"] .wayline__text {
+  color: var(--unit-warm-bright);
+}
+
+.wayline[data-live="true"] .wayline__wp[data-state="active"] .wayline__dot {
+  animation: wayline-ignite 1200ms cubic-bezier(0.34, 1.3, 0.5, 1) both;
+}
+
+@keyframes wayline-ignite {
+  0% { transform: scale(1); }
+  45% { transform: scale(2.35); }
+  100% { transform: scale(2); }
+}
+
+/* While one waypoint burns, the others dim a step further (the 1.5
+   reference behavior). */
+.wayline[data-has-active="true"] .wayline__wp[data-state="completed"] .wayline__dot {
+  background: rgba(253, 233, 212, 0.42);
+  box-shadow: none;
+}
+
+.wayline[data-has-active="true"] .wayline__wp[data-state="completed"] .wayline__text {
+  color: var(--text-dim);
+}
+
+.wayline[data-has-active="true"] .wayline__wp[data-state="upcoming"] .wayline__dot {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+/* --- The StageLadder (component) --- */
+
+.s3f-ladder {
+  position: absolute;
+  inset: 0;
+  transition: opacity 800ms ease-out;
+}
+
+.s3f-ladder[data-visible="false"] {
+  opacity: 0;
+}
+
+/* Snap mode: exact instant reconstruction. */
+.s3f-ladder[data-snap="true"],
+.s3f-ladder[data-snap="true"] * {
+  transition: none !important;
+  animation: none !important;
+}
+
+/* The rising line — the rail’s weight-language on a climb. The wrapper
+   carries the rotation (set inline from the component’s geometry); the
+   inner bar draws with scaleX so the two transforms never collide. */
+.s3f-ladder__linewrap {
+  position: absolute;
+  height: 2px;
+  transform-origin: 0 50%;
+}
+
+.s3f-ladder__line {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 5%,
+    rgba(255, 255, 255, 0.3) 95%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform-origin: left center;
+  transition: transform 1500ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s3f-ladder[data-line="false"] .s3f-ladder__line {
+  transform: scaleX(0);
+}
+
+/* --- Ladder stops: the rail’s vertical rhythm on the ascent — glyph
+   above, marker pinned at the stop point, label below. --- */
+
+.s3f-ladder__stop {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.s3f-ladder__stop > * {
+  transition: opacity 800ms ease-out, color 900ms ease-out,
+    transform 1000ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s3f-ladder__dot {
+  position: absolute;
+  left: -6px;
+  top: -6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+  transition: opacity 800ms ease-out, background-color 900ms ease-out,
+    box-shadow 900ms ease-out, transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s3f-ladder__glyph {
+  position: absolute;
+  left: -20px;
+  top: -80px;
+  width: 40px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.s3f-ladder__glyph svg {
+  display: block;
+  width: 40px;
+  height: 40px;
+  filter: drop-shadow(0 0 10px rgba(253, 233, 212, 0.22));
+}
+
+/* Labels sit at +52 — deeper than the rail’s +26 — so on the rising line
+   no label’s left half ever crosses the incoming segment (the grammar’s
+   outside rule: text never crosses a drawn edge; at +52 the segment passes
+   above the padded band for every label width in the set, the widest —
+   MEDIUM OF EXCHANGE — included, with ~20px to spare). One offset for all
+   four stops keeps the vertical rhythm uniform; the geometry probe
+   measures the clearance from the live DOM. */
+.s3f-ladder__label {
+  position: absolute;
+  left: 50%;
+  top: 52px;
+  width: max-content;
+  transform: translateX(-50%);
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  color: var(--text-secondary);
+}
+
+/* Upcoming stages are not yet part of the composition — the empty rising
+   line is genuinely empty. */
+.s3f-ladder__stop[data-state="upcoming"] > * {
+  opacity: 0;
+}
+
+.s3f-ladder__stop[data-state="upcoming"] .s3f-ladder__glyph {
+  transform: translateY(8px);
+}
+
+.s3f-ladder__stop[data-state="revealed"] > *,
+.s3f-ladder__stop[data-state="foundation"] > * {
+  opacity: 1;
+}
+
+/* The foundation state — the ladder’s only orange: the store-of-value
+   marker takes the accent with a bloom, its label rises to full voice. */
+.s3f-ladder__stop[data-state="foundation"] .s3f-ladder__dot {
+  background: var(--accent);
+  transform: scale(1.45);
+  box-shadow: 0 0 16px rgba(247, 147, 26, 0.55), 0 0 44px rgba(247, 147, 26, 0.22);
+}
+
+.s3f-ladder__stop[data-state="foundation"] .s3f-ladder__label {
+  color: var(--text-primary);
+}
+
+.s3f-ladder__stop[data-state="foundation"] .s3f-ladder__glyph {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* --- Thresholds (R3.1 §B): a short tick crossing the rising line at each
+   between-stage position. A perpendicular tick on a line reads as a
+   threshold without a legend — the arch glyph it replaces did not (icon
+   grammar §1, the legibility rule). Three states: absent, dim once the
+   stage below it is on the line, warm white at the build where its gate
+   logic is stated. Never the accent. The rotation is set inline from the
+   component’s LINE.angle, so these rules carry color and opacity only. --- */
+
+.s3f-ladder__gate {
+  position: absolute;
+  width: 24px;
+  height: 1.5px;
+  margin: -0.75px 0 0 -12px;
+  transform-origin: center center;
+  background: rgba(255, 255, 255, 0.26);
+  opacity: 0;
+  transition: opacity 800ms ease-out, background-color 900ms ease-out,
+    box-shadow 900ms ease-out;
+}
+
+.s3f-ladder__gate[data-mark="dim"] {
+  opacity: 1;
+}
+
+.s3f-ladder__gate[data-mark="bright"] {
+  opacity: 1;
+  background: var(--unit-warm-bright);
+  box-shadow: 0 0 9px rgba(253, 233, 212, 0.45);
+}
+
+/* --- The early-stages bracket and signature (3.4) --- */
+
+.s3f-ladder__bracket {
+  position: absolute;
+  left: 396px;
+  top: 756px;
+  width: 428px;
+  height: 12px;
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.35);
+  opacity: 0;
+  transition: opacity 800ms ease-out;
+}
+
+.s3f-ladder__bracket::before,
+.s3f-ladder__bracket::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 1.5px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.s3f-ladder__bracket::before { left: 0; }
+.s3f-ladder__bracket::after { right: 0; }
+
+.s3f-ladder__bracket[data-visible="true"] {
+  opacity: 1;
+}
+
+.s3f-ladder__signature {
+  position: absolute;
+  left: 200px;
+  top: 802px;
+  width: 820px;
+  margin: 0;
+  text-align: center;
+  font-size: 22px;
+  line-height: 1.5;
+  color: var(--text-muted);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 800ms ease-out 150ms, transform 900ms cubic-bezier(0.22, 1, 0.36, 1) 150ms;
+}
+
+.s3f-ladder__signature[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- The entity berth (3.7): a glyph pinned to a stage column — its own
+   small marker under it, the placed mark settling from above. Monochrome:
+   placement is description, never emphasis. --- */
+
+.s3f-ladder__entity {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  transition: opacity 900ms ease-out;
+}
+
+.s3f-ladder__entity[data-visible="true"] {
+  opacity: 1;
+}
+
+.s3f-ladder__entityglyph {
+  position: absolute;
+  left: -18px;
+  top: -168px;
+  width: 36px;
+  color: rgba(255, 255, 255, 0.9);
+  transform: translateY(-16px);
+  transition: transform 1100ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s3f-ladder__entity[data-visible="true"] .s3f-ladder__entityglyph {
+  transform: translateY(0);
+}
+
+.s3f-ladder__entityglyph svg {
+  display: block;
+  width: 36px;
+  height: 36px;
+  filter: drop-shadow(0 0 10px rgba(253, 233, 212, 0.22));
+}
+
+.s3f-ladder__entitydot {
+  position: absolute;
+  left: -4.5px;
+  top: -116.5px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/* --- The credit tower (component, 3.6 — rebuilt R3.1 §D) ---
+   Three slabs on one centered spine, each resting on the one below, with
+   the widths inverted against the stack: narrowest at the bottom. The
+   geometry carries the argument, so the slabs are architecture, not chips —
+   square corners, one hairline stroke, no rounded-app energy. */
+
+.s3f-tower {
+  position: absolute;
+  inset: 0;
+}
+
+.s3f-tower[data-snap="true"],
+.s3f-tower[data-snap="true"] * {
+  transition: none !important;
+  animation: none !important;
+}
+
+/* A slab sinks by --settle for each slab that has landed beneath it — the
+   visible rest. --settle is state (set by the component from the layers on
+   stage), so a reconstruction lands exactly where a live advance leaves
+   things; the transition supplies the easing, not the position. */
+.s3f-tower__slab {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  background: rgba(255, 255, 255, 0.03);
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  transform: translateY(calc(var(--settle, 0px) - 14px));
+  transition: opacity 700ms ease-out, transform 900ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 900ms ease-out, background-color 900ms ease-out,
+    box-shadow 900ms ease-out;
+}
+
+.s3f-tower__slab[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(var(--settle, 0px));
+}
+
+.s3f-tower__label {
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  color: var(--text-secondary);
+  transition: color 900ms ease-out;
+}
+
+/* Link lines: a hairline hanging in the gap, its caption beside it — right
+   of the spine, one shared alignment for both. Each carries the settle of
+   the slab it hangs from. */
+.s3f-tower__link {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  transform: translateY(var(--settle, 0px));
+  transition: opacity 800ms ease-out 200ms,
+    transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s3f-tower__link[data-visible="true"] {
+  opacity: 1;
+}
+
+.s3f-tower__linkline {
+  position: absolute;
+  left: -0.5px;
+  top: 0;
+  width: 1px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.5);
+  transition: background-color 900ms ease-out;
+}
+
+.s3f-tower__linkcaption {
+  position: absolute;
+  left: 34px;
+  top: 15px;
+  transform: translateY(-50%);
+  width: 460px;
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.4;
+  color: var(--text-secondary);
+  transition: color 900ms ease-out;
+}
+
+/* The scope build: the upper slabs recede to dim outlines and the base
+   takes the foundation emphasis — the slide’s single allowed orange. */
+.s3f-tower[data-foundation="true"] .s3f-tower__slab:not([data-layer="base"]) {
+  border-color: rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.012);
+}
+
+.s3f-tower[data-foundation="true"] .s3f-tower__slab:not([data-layer="base"]) .s3f-tower__label {
+  color: var(--text-dim);
+}
+
+.s3f-tower[data-foundation="true"] .s3f-tower__linkline {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.s3f-tower[data-foundation="true"] .s3f-tower__linkcaption {
+  color: var(--text-dim);
+}
+
+.s3f-tower[data-foundation="true"] .s3f-tower__slab[data-layer="base"] {
+  border-color: rgba(247, 147, 26, 0.55);
+  box-shadow: 0 0 24px rgba(247, 147, 26, 0.18), 0 0 64px rgba(247, 147, 26, 0.08);
+}
+
+.s3f-tower[data-foundation="true"] .s3f-tower__slab[data-layer="base"] .s3f-tower__label {
+  color: var(--text-primary);
+}
+
+/* The held question: the bottom-most link reaching into empty black. It
+   draws downward once and holds; it dissolves rather than stopping, so it
+   points at nothing instead of at an edge. Same missing-anchor motif as the
+   FIAT float, never explained on screen. */
+.s3f-tower__drop {
+  position: absolute;
+  margin-left: -0.5px;
+  width: 1px;
+  height: 212px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.42) 0%,
+    rgba(255, 255, 255, 0.36) 58%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform-origin: center top;
+  transform: scaleY(0);
+  transition: transform 1300ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s3f-tower__drop[data-visible="true"] {
+  transform: scaleY(1);
+}
+
+/* The tremor (build 4, live only): the base slab flickers once and a quiet
+   shudder travels upward through the layers above it — a shudder, not a
+   collapse. Snap and reduced motion drop it entirely; it is choreography
+   over an unchanged state, so nothing about the frame depends on it. */
+@keyframes tower-flicker {
+  0%, 100% { opacity: 1; }
+  30% { opacity: 0.42; }
+  62% { opacity: 0.88; }
+}
+
+@keyframes tower-shudder {
+  0%, 100% { transform: translateY(var(--settle, 0px)); }
+  22% { transform: translateY(calc(var(--settle, 0px) + 2.5px)); }
+  48% { transform: translateY(calc(var(--settle, 0px) - 1.5px)); }
+  74% { transform: translateY(calc(var(--settle, 0px) + 0.8px)); }
+}
+
+.s3f-money[data-step="4"][data-live="true"] .s3f-tower__slab[data-layer="base"] {
+  animation: tower-flicker 460ms ease-in-out both;
+}
+
+.s3f-money[data-step="4"][data-live="true"] .s3f-tower__slab[data-layer="deposits"],
+.s3f-money[data-step="4"][data-live="true"] .s3f-tower__link[data-link="l2"] {
+  animation: tower-shudder 620ms ease-in-out 220ms both;
+}
+
+.s3f-money[data-step="4"][data-live="true"] .s3f-tower__slab[data-layer="apps"],
+.s3f-money[data-step="4"][data-live="true"] .s3f-tower__link[data-link="l1"] {
+  animation: tower-shudder 620ms ease-in-out 380ms both;
+}
+
+/* --- 3.0 / 3.8: the waypoint interstitials --- */
+
+/* The frame is the authored black beat; the device carries everything. */
+.s3f-way {
+  background: var(--bg-primary);
+}
+
+/* --- 3.1: the three functions --- */
+
+.s3f-functions__token {
+  top: 400px;
+}
+
+/* Spokes: thin radials from the token to each function — drawn, like every
+   connection in the deck. */
+.s3f-functions__spoke {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.22);
+  transition: transform 1100ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s3f-functions__spoke[data-fn="sov"] {
+  left: 448px;
+  top: 399.5px;
+  width: 448px;
+  height: 1px;
+  transform-origin: right center;
+}
+
+.s3f-functions__spoke[data-fn="moe"] {
+  left: 1024px;
+  top: 399.5px;
+  width: 448px;
+  height: 1px;
+  transform-origin: left center;
+}
+
+.s3f-functions__spoke[data-fn="uoa"] {
+  left: 959.5px;
+  top: 464px;
+  width: 1px;
+  height: 172px;
+  transform-origin: center top;
+}
+
+.s3f-functions__spoke[data-visible="false"][data-fn="sov"],
+.s3f-functions__spoke[data-visible="false"][data-fn="moe"] {
+  transform: scaleX(0);
+}
+
+.s3f-functions__spoke[data-visible="false"][data-fn="uoa"] {
+  transform: scaleY(0);
+}
+
+.s3f-functions__fn {
+  position: absolute;
+  width: 460px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 800ms ease-out, transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s3f-functions__fn[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.s3f-functions__fn[data-fn="sov"] { left: 170px; top: 372px; }
+.s3f-functions__fn[data-fn="moe"] { left: 1290px; top: 372px; }
+.s3f-functions__fn[data-fn="uoa"] { left: 730px; top: 662px; }
+
+.s3f-functions__glyph {
+  width: 56px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.s3f-functions__glyph svg {
+  display: block;
+  width: 56px;
+  height: 56px;
+  filter: drop-shadow(0 0 10px rgba(253, 233, 212, 0.22));
+}
+
+.s3f-functions__text {
+  margin: 18px 0 0 0;
+  text-align: center;
+  font-size: 24px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.s3f-functions__name {
+  font-weight: 560;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.s3f-functions__sub {
+  color: var(--text-muted);
+}
+
+.s3f-functions__continuity {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  top: 872px;
+  width: 1560px;
+  margin: 0;
+  text-align: center;
+  font-size: 26px;
+  line-height: 1.5;
+  font-weight: 480;
+  color: var(--text-primary);
+  opacity: 0;
+  transition: opacity 800ms ease-out, transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s3f-functions__continuity[data-visible="true"] {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* --- 3.2: the functions separate --- */
+
+.s3f-separate__head {
+  position: absolute;
+  top: 296px;
+  width: 400px;
+  margin: 0;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 540;
+  letter-spacing: 0.2em;
+  color: var(--text-secondary);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 800ms ease-out, transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s3f-separate__head[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.s3f-separate__head[data-col="0"] { left: 280px; }
+.s3f-separate__head[data-col="1"] { left: 760px; }
+.s3f-separate__head[data-col="2"] { left: 1240px; }
+
+.s3f-separate__kicker {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 424px;
+  margin: 0;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  color: var(--text-muted);
+  opacity: 0;
+  transition: opacity 800ms ease-out;
+}
+
+.s3f-separate__kicker[data-visible="true"] {
+  opacity: 1;
+}
+
+.s3f-separate__cell {
+  position: absolute;
+  top: 496px;
+  width: 400px;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 800ms ease-out, transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s3f-separate__cell[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.s3f-separate__cell[data-col="0"] { left: 280px; }
+.s3f-separate__cell[data-col="1"] { left: 760px; transition-delay: 120ms; }
+.s3f-separate__cell[data-col="2"] { left: 1240px; transition-delay: 240ms; }
+
+/* Landed cells carry no delay, so reconstruction stays exact. */
+.s3f-separate[data-live="false"] .s3f-separate__cell {
+  transition-delay: 0ms;
+}
+
+.s3f-separate__glyphs {
+  display: flex;
+  justify-content: center;
+  gap: 26px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.s3f-separate__glyph svg {
+  display: block;
+  width: 56px;
+  height: 56px;
+  filter: drop-shadow(0 0 10px rgba(253, 233, 212, 0.22));
+}
+
+/* The currency marks (R7.3 §5.2). A named currency is set, not drawn — the
+   deck's label register at glyph scale, sharing the glyph row's color and its
+   warm luminance so a mark and a word sit in one family rather than looking
+   like two systems on one row. The 56px line box is the glyph box, so USD and
+   the brick share a baseline without either being nudged. */
+.s3f-separate__mark {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  font-size: 33px;
+  font-weight: 540;
+  letter-spacing: 0.14em;
+  /* Tracking is applied after the last letter too, so the mark's box is wider
+     than its ink. Pulling the surplus back off the right keeps the row's
+     centering honest — the letters are centered, not the letters plus a space. */
+  margin-right: -0.14em;
+  line-height: 1;
+  text-shadow: 0 0 10px rgba(253, 233, 212, 0.22);
+}
+
+.s3f-separate__word {
+  margin: 20px 0 0 0;
+  text-align: center;
+  font-size: 26px;
+  color: var(--text-secondary);
+}
+
+.s3f-separate__principle {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  top: 764px;
+  width: 1260px;
+  margin: 0;
+  text-align: center;
+  font-size: 27px;
+  line-height: 1.55;
+  font-weight: 480;
+  color: var(--text-primary);
+  opacity: 0;
+  transition: opacity 800ms ease-out, transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s3f-separate__principle[data-visible="true"] {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* --- 3.3: the order of monetization --- */
+
+.s3f-order__kicker {
+  position: absolute;
+  left: 360px;
+  top: 140px;
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  opacity: 0;
+  transition: opacity 800ms ease-out;
+}
+
+.s3f-order__kicker[data-visible="true"] {
+  opacity: 1;
+}
+
+.s3f-order__gateline {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  width: 1200px;
+  margin: 0;
+  text-align: center;
+  font-size: 23px;
+  line-height: 1.45;
+  color: var(--text-muted);
+  opacity: 0;
+  transition: opacity 800ms ease-out, transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s3f-order__gateline[data-q="1"] { top: 806px; }
+.s3f-order__gateline[data-q="2"] { top: 858px; }
+
+.s3f-order__gateline[data-visible="true"] {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.s3f-order__foundation {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  top: 934px;
+  width: 1400px;
+  margin: 0;
+  text-align: center;
+  font-size: 28px;
+  line-height: 1.45;
+  font-weight: 520;
+  color: var(--text-primary);
+  opacity: 0;
+  transition: opacity 800ms ease-out, transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s3f-order__foundation[data-visible="true"] {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* The gate quotes settle once the foundation lands. */
+.s3f-order[data-step="6"] .s3f-order__gateline[data-visible="true"] {
+  opacity: 0.55;
+}
+
+/* --- 3.4: stage signatures --- */
+
+.s3f-signatures__verdict {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  top: 878px;
+  width: 1500px;
+  margin: 0;
+  text-align: center;
+  font-size: 28px;
+  line-height: 1.45;
+  font-weight: 520;
+  color: var(--text-primary);
+  opacity: 0;
+  transition: opacity 800ms ease-out, transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s3f-signatures__verdict[data-visible="true"] {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* --- 3.5: the palladium test --- */
+
+/* The hook lands alone at center stage, then yields the frame to the
+   chart — one transform gesture, no reflow. */
+.s3f-palladium__hook {
+  position: absolute;
+  left: 50%;
+  top: 396px;
+  width: 1560px;
+  margin: 0;
+  text-align: center;
+  font-size: 40px;
+  line-height: 1.4;
+  font-weight: 540;
+  letter-spacing: -0.012em;
+  color: var(--text-primary);
+  opacity: 0;
+  transform: translateX(-50%) translateY(12px);
+  transform-origin: center top;
+  transition: opacity 800ms ease-out, transform 1000ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s3f-palladium__hook[data-visible="true"] {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.s3f-palladium:not([data-step="0"]):not([data-step="1"]) .s3f-palladium__hook[data-visible="true"] {
+  transform: translateX(-50%) translateY(-266px) scale(0.68);
+  opacity: 0.85;
+}
+
+.s3f-palladium__chart {
+  position: absolute;
+  left: 310px;
+  top: 268px;
+  width: 1300px;
+  height: 470px;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 800ms ease-out, transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s3f-palladium__chart[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.s3f-palladium__paneltitle {
+  margin: 0 0 34px 0;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: var(--text-dim);
+}
+
+/* The left panel measures annual mine supply, not crustal abundance (R4
+   §1.2.1: standard references disagree on the sign of the crustal
+   comparison, so it cannot be asserted). Same geometry as before — relative
+   line lengths against gold — but the figures are now stated in the label,
+   because the data is now real. */
+.s3f-palladium__supply {
+  position: absolute;
+  left: 0;
+  top: 24px;
+  width: 400px;
+}
+
+.s3f-palladium__supplymark {
+  position: absolute;
+  right: 44px;
+  top: 150px;
+  width: 40px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.s3f-palladium__supplymark svg {
+  display: block;
+  width: 40px;
+  height: 40px;
+  filter: drop-shadow(0 0 10px rgba(253, 233, 212, 0.22));
+}
+
+.s3f-palladium__supplyrow {
+  position: relative;
+  height: 74px;
+}
+
+.s3f-palladium__supplylabel {
+  display: block;
+  font-size: 17px;
+  letter-spacing: 0.16em;
+  margin-bottom: 12px;
+}
+
+.s3f-palladium__supplybar {
+  position: absolute;
+  left: 0;
+  top: 34px;
+  height: 2px;
+  width: calc(var(--rel) * 330px);
+  transform-origin: left center;
+  transition: transform 1200ms cubic-bezier(0.22, 1, 0.36, 1) 300ms;
+}
+
+/* Palladium’s bar is 7% of gold’s, so the tip is what makes a very short
+   line legible as a measured value rather than a rendering accident. */
+.s3f-palladium__supplytip {
+  position: absolute;
+  left: calc(var(--rel) * 330px - 3px);
+  top: 32px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  transition: opacity 600ms ease-out 1300ms;
+}
+
+.s3f-palladium__chart[data-visible="false"] .s3f-palladium__supplybar {
+  transform: scaleX(0);
+  transition-delay: 0ms;
+}
+
+.s3f-palladium__chart[data-visible="false"] .s3f-palladium__supplytip {
+  opacity: 0;
+  transition-delay: 0ms;
+}
+
+.s3f-palladium__panelnote {
+  margin: 10px 0 0 0;
+  font-size: 15.5px;
+  line-height: 1.5;
+  color: var(--text-dim);
+}
+
+.s3f-palladium__price {
+  position: absolute;
+  left: 470px;
+  top: 24px;
+  width: 830px;
+}
+
+.s3f-palladium__plot {
+  width: 830px;
+  height: auto;
+  overflow: visible;
+}
+
+.s3f-palladium__axis {
+  stroke: rgba(255, 255, 255, 0.25);
+  stroke-width: 1.5;
+}
+
+.s3f-palladium__axislabel {
+  fill: var(--text-dim);
+  font-size: 15px;
+  letter-spacing: 0.08em;
+}
+
+.s3f-palladium__series {
+  fill: none;
+  stroke-width: 2;
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 1600ms cubic-bezier(0.4, 0.1, 0.3, 1);
+  transition-delay: calc(var(--i) * 250ms);
+}
+
+.s3f-palladium__chart[data-visible="false"] .s3f-palladium__series {
+  stroke-dashoffset: var(--len);
+  transition-delay: 0ms;
+}
+
+.s3f-palladium__serieslabel {
+  font-size: 16px;
+  letter-spacing: 0.14em;
+  opacity: 1;
+  transition: opacity 700ms ease-out 900ms;
+}
+
+.s3f-palladium__chart[data-visible="false"] .s3f-palladium__serieslabel {
+  opacity: 0;
+  transition-delay: 0ms;
+}
+
+/* The two epochs land in one register, stacked — the ancient network the
+   metal arrived too late for, then the narrowed store-of-value role it
+   never touched (R3.1 §C) — and the bar concludes beneath them. */
+.s3f-palladium__timing,
+.s3f-palladium__narrowed {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  margin: 0;
+  text-align: center;
+  font-size: 25px;
+  line-height: 1.45;
+  color: var(--text-secondary);
+  opacity: 0;
+  transition: opacity 800ms ease-out, transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s3f-palladium__timing {
+  top: 752px;
+  width: 1400px;
+}
+
+/* Narrow enough that the second epoch breaks at its own sentence boundary
+   rather than orphaning a word. */
+.s3f-palladium__narrowed {
+  top: 806px;
+  width: 1060px;
+}
+
+/* R7.4 §F.6 — the final frame's budget: one bright statement plus labels. The
+   two epoch lines and the bar arrive on top of a chart that is still at full
+   voice, and the last of them was the quietest thing on the frame. The line
+   that just landed takes full brightness; the ones before it settle small and
+   receded (the rule-10 step), and the chart is a diagram. */
+.s3f-palladium[data-step="4"] .s3f-palladium__timing,
+.s3f-palladium[data-step="5"] .s3f-palladium__timing,
+.s3f-palladium[data-step="5"] .s3f-palladium__narrowed {
+  font-size: 21px;
+  color: var(--text-prior);
+}
+
+.s3f-palladium[data-step="4"] .s3f-palladium__narrowed,
+.s3f-palladium[data-step="3"] .s3f-palladium__timing {
+  color: var(--text-primary);
+}
+
+.s3f-palladium__timing[data-visible="true"],
+.s3f-palladium__narrowed[data-visible="true"] {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.s3f-palladium__bar {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  top: 902px;
+  width: 1560px;
+  margin: 0;
+  text-align: center;
+  font-size: 28px;
+  line-height: 1.45;
+  font-weight: 520;
+  color: var(--unit-warm-bright);
+  opacity: 0;
+  transition: opacity 800ms ease-out, transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s3f-palladium__bar[data-visible="true"] {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* --- 3.6: what your money is ---
+   Every line lands beneath the tower, centered — no side text. Three
+   registers: the caption on the geometry, the principle, then the scoping
+   sentence; the first two settle back when the last one lands (the 3.3
+   gate-line pattern). All three clear for the held question. */
+
+.s3f-money__run,
+.s3f-money__principle,
+.s3f-money__scoping {
+  position: absolute;
+  left: 50%;
+  margin: 0;
+  text-align: center;
+  transform: translateX(-50%) translateY(10px);
+  opacity: 0;
+  transition: opacity 800ms ease-out, transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s3f-money__run[data-visible="true"],
+.s3f-money__principle[data-visible="true"],
+.s3f-money__scoping[data-visible="true"] {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.s3f-money__run {
+  top: 610px;
+  width: 1300px;
+  font-size: 24px;
+  line-height: 1.45;
+  color: var(--text-muted);
+}
+
+.s3f-money__principle {
+  top: 686px;
+  width: 1500px;
+  font-size: 26px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.s3f-money__scoping {
+  top: 800px;
+  width: 1420px;
+  font-size: 28px;
+  line-height: 1.45;
+  font-weight: 520;
+  color: var(--text-primary);
+}
+
+/* The two lines above settle once the scoping sentence lands. */
+.s3f-money[data-step="5"] .s3f-money__run[data-visible="true"],
+.s3f-money[data-step="5"] .s3f-money__principle[data-visible="true"] {
+  opacity: 0.55;
+}
+
+/* --- 3.7: where Bitcoin is --- */
+
+/* The world (ladder, caption, literacy, honesty) clears at the final build
+   so the handoff stands alone. */
+.s3f-bitcoin__world {
+  position: absolute;
+  inset: 0;
+  transition: opacity 800ms ease-out;
+}
+
+.s3f-bitcoin[data-step="5"] .s3f-bitcoin__world {
+  opacity: 0;
+}
+
+/* Settled by the honesty line (R7.4 §F.6): smaller, receded, still legible. */
+.s3f-bitcoin[data-step="4"] .s3f-bitcoin__caption {
+  font-size: 20px;
+  color: var(--text-prior);
+}
+
+.s3f-bitcoin[data-step="4"] .s3f-bitcoin__literacy {
+  font-size: 21px;
+  color: var(--text-prior);
+}
+
+.s3f-bitcoin__caption {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  top: 800px;
+  width: 1240px;
+  margin: 0;
+  text-align: center;
+  font-size: 24px;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  opacity: 0;
+  transition: opacity 800ms ease-out, transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s3f-bitcoin__caption[data-visible="true"] {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* The literacy lines take the clear sky above the early stages. */
+.s3f-bitcoin__literacy {
+  position: absolute;
+  left: 360px;
+  width: 900px;
+  margin: 0;
+  font-size: 25px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  transform-origin: left top;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 800ms ease-out, transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s3f-bitcoin__literacy[data-line="1"] { top: 150px; }
+.s3f-bitcoin__literacy[data-line="2"] { top: 206px; }
+
+/* The second line follows inside the same gesture on a live advance;
+   landed states carry no delay. */
+.s3f-bitcoin[data-step="3"][data-live="true"] .s3f-bitcoin__literacy[data-line="2"] {
+  transition-delay: 260ms;
+}
+
+.s3f-bitcoin__literacy[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* R7.4 §F.6 — the final frame's budget: one bright statement plus labels. The
+   honesty line is the beat's last word and it arrived at 21px in `--text-muted`
+   under three lines still at full size, so the frame's last sentence was its
+   quietest. It lands at statement scale now; the caption and the two literacy
+   lines settle small and receded behind it (the rule-10 step), and the ladder's
+   labels are labels. */
+.s3f-bitcoin__honesty {
+  position: absolute;
+  left: 360px;
+  top: 286px;
+  width: 900px;
+  margin: 0;
+  font-size: 26px;
+  line-height: 1.5;
+  color: var(--text-primary);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 800ms ease-out, transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.s3f-bitcoin__honesty[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.s3f-bitcoin__handoff {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(12px);
+  top: 460px;
+  width: 1520px;
+  margin: 0;
+  text-align: center;
+  font-size: 36px;
+  line-height: 1.45;
+  font-weight: 540;
+  letter-spacing: -0.012em;
+  color: var(--text-primary);
+  opacity: 0;
+  transition: opacity 900ms ease-out 250ms, transform 1000ms cubic-bezier(0.22, 1, 0.36, 1) 250ms;
+}
+
+.s3f-bitcoin__handoff[data-visible="true"] {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* --- Section 3 reduced motion: every state lands instantly and
+   completely; the ignition pulse collapses to its end state and the tower’s
+   tremor is skipped entirely. --- */
+@media (prefers-reduced-motion: reduce) {
+  .s3f,
+  .s3f *,
+  .wayline,
+  .wayline *,
+  .s3f-ladder,
+  .s3f-ladder *,
+  .s3f-tower,
+  .s3f-tower * {
+    transition-delay: 0ms !important;
+    transition-duration: 0.01ms !important;
+    animation: none !important;
+  }
+}
+
+/* ===== Section 5 — The Close (rebuild R7) ===== */
+
+.s5c {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* The same reconstruction snap the Section 4 roots carry. */
+.s5c[data-snap="true"],
+.s5c[data-snap="true"] *,
+.s5c[data-snap="true"] *::before,
+.s5c[data-snap="true"] *::after {
+  transition-duration: 0ms !important;
+  transition-delay: 0ms !important;
+  animation: none !important;
+}
+
+/* The promise, kept: one slow warmth pulse travels the whole line, left to
+   right — the order the three questions were asked — and never repeats. Live
+   only, so back-navigation and direct entry land the settled line. The clip is
+   scoped to the close: the interstitials have nothing to clip. */
+.s5c .wayline__line {
+  overflow: hidden;
+}
+
+.s5c[data-live="true"][data-step="1"] .wayline__line::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(253, 233, 212, 0) 0%,
+    rgba(253, 233, 212, 0.9) 50%,
+    rgba(253, 233, 212, 0) 100%
+  );
+  animation: s5c-line-warmth 2600ms ease-in-out 800ms both;
+}
+
+@keyframes s5c-line-warmth {
+  0%   { transform: translateX(-100%); opacity: 0; }
+  16%  { opacity: 1; }
+  84%  { opacity: 1; }
+  100% { transform: translateX(100%); opacity: 0; }
+}
+
+/* The retained final frame — one line of typography on black, unchanged. */
+.s5c__thanks {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 132px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  text-align: center;
+  color: var(--text-primary);
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 1000ms ease-out,
+    transform 1000ms ease-out;
+}
+
+.s5c__thanks[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- Section 4 and the close, reduced motion: every state lands instantly and
+   completely, the section-wide form Sections 2 and 3 already take. The earlier
+   per-component blocks in this file zeroed durations but not the staggers’
+   delays, so a staggered beat — 4.08’s four statements, 4.22’s repricing order —
+   still assembled over a second for a viewer who asked for no motion. Delays die
+   here with durations: a reveal a reduced-motion viewer watches arrive in
+   sequence is a reveal that ignored the request. --- */
+@media (prefers-reduced-motion: reduce) {
+  .s4-opening,
+  .s4-opening *,
+  .s4-opening *::before,
+  .s4-opening *::after,
+  .s5c,
+  .s5c *,
+  .s5c *::before,
+  .s5c *::after {
+    transition-delay: 0ms !important;
+    transition-duration: 0.01ms !important;
+    animation: none !important;
+  }
+
+  /* The close’s warmth sweep is a decorative overlay that exists only while it
+     animates; `animation: none` would strand its gradient across the line as a
+     permanent band, so the pseudo-element is not generated at all. */
+  .s5c[data-live="true"][data-step="1"] .wayline__line::after {
+    content: none !important;
+  }
+}

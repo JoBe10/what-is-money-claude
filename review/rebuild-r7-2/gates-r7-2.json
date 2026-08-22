@@ -1,0 +1,158 @@
+{
+  "phase": "R7.2",
+  "base": "b029e4d",
+  "checks": 30,
+  "failures": 0,
+  "results": [
+    {
+      "name": "FREEZE: comparisonRows byte-identical to main",
+      "ok": true,
+      "detail": "10 properties × 5 candidates = 50 scores unchanged"
+    },
+    {
+      "name": "FREEZE: _comparison-data.js untouched entirely",
+      "ok": true,
+      "detail": "file identical"
+    },
+    {
+      "name": "FREEZE: 4.23 slide file untouched",
+      "ok": true,
+      "detail": "4.23 is the frozen final frame (C4)"
+    },
+    {
+      "name": "SCOPE: only the two designated Section 1–3 slides changed since the R7 merge",
+      "ok": true,
+      "detail": "src/slides/section-2-origin/04-the-competition-record.js, src/slides/section-2-origin/05-two-survivors.js"
+    },
+    {
+      "name": "REGISTER: every raster reference in src/ flows through src/dark-field.js",
+      "ok": true,
+      "detail": "src/dark-field.js"
+    },
+    {
+      "name": "REGISTER: only components/DarkField.js constructs an image element",
+      "ok": true,
+      "detail": "src/components/DarkField.js"
+    },
+    {
+      "name": "REGISTER: the manifest is a glob, so a pending render needs no code change",
+      "ok": true,
+      "detail": "src/dark-field.js"
+    },
+    {
+      "name": "REGISTER: every shipping render has a grade-gate result",
+      "ok": true,
+      "detail": "7 shipping, 7 graded"
+    },
+    {
+      "name": "REGISTER: no shipping render failed the grade gate",
+      "ok": true,
+      "detail": "0 failures across 35 checks"
+    },
+    {
+      "name": "REGISTER: assets/images still holds only the favicon",
+      "ok": true,
+      "detail": "icon_bitcoin.png"
+    },
+    {
+      "name": "REGISTER: every pending subject is listed in docs/dark-field-manifest.md",
+      "ok": true,
+      "detail": "pending: surgeon"
+    },
+    {
+      "name": "KickerLabel has exactly one caller, the frozen 4.23",
+      "ok": true,
+      "detail": "23-investment-case-from-first-principles.js"
+    },
+    {
+      "name": "QuietKicker is used by exactly the two named frames",
+      "ok": true,
+      "detail": "16-the-comparison.js, 20b-what-would-change-these-scores.js"
+    },
+    {
+      "name": "no retired per-slide header selectors remain in CSS",
+      "ok": true,
+      "detail": "only the three survivors"
+    },
+    {
+      "name": "no boxed-panel borders on Section 4 selectors",
+      "ok": true,
+      "detail": "none"
+    },
+    {
+      "name": "REGISTER: no border, radius or shadow on a dark-field surface",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "\"Don't trust. Verify.\" on stage exactly twice",
+      "ok": true,
+      "detail": "2 occurrence(s)"
+    },
+    {
+      "name": "banned term absent: \"engineered\"",
+      "ok": true,
+      "detail": "absent"
+    },
+    {
+      "name": "banned term absent: \"purpose-built\"",
+      "ok": true,
+      "detail": "absent"
+    },
+    {
+      "name": "banned term absent: \"designed as a solution\"",
+      "ok": true,
+      "detail": "absent"
+    },
+    {
+      "name": "banned term absent: \"repurposed\"",
+      "ok": true,
+      "detail": "absent"
+    },
+    {
+      "name": "American English: \"labour\" → \"labor\"",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "American English: \"specialised\" → \"specialized\"",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "American English: \"centralised\" → \"centralized\"",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "American English: \"recognised\" → \"recognized\"",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "American English: \"judgement\" → \"judgment\"",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "American English: \"jewellery\" → \"jewelry\"",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "American English: \"colour\" → \"color\"",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "typographic apostrophes in visible copy",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "[→] count equals build count on every slide walked",
+      "ok": true,
+      "detail": "144 builds, 144 arrows across 37 slides"
+    }
+  ]
+}

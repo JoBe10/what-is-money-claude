@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="96" height="96" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:#e9e4da">
+<!-- brick A — the coursing: A wall fragment as pure line: three course lines, head joints staggered bond-wise between them — brickwork with no filled shape. -->
+<path d="M8 16 L40 16 M8 24 L40 24 M8 32 L40 32"/>
+        <path d="M18 16 L18 24 M30 16 L30 24"/>
+        <path d="M12 24 L12 32 M24 24 L24 32 M36 24 L36 32"/>
+</svg>

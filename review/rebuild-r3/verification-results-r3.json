@@ -1,0 +1,1042 @@
+{
+  "variant": "standard",
+  "date": "2026-07-29T12:35:30.427Z",
+  "checks": 172,
+  "failures": 0,
+  "screenshots": 99,
+  "consoleLines": 0,
+  "results": [
+    {
+      "section": "traversal",
+      "name": "deck is 46 slides",
+      "ok": true,
+      "detail": "total=46"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "3-00-waypoint-function b0",
+      "ok": true,
+      "detail": "wayline b0 exact"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "3-00-waypoint-function b1",
+      "ok": true,
+      "detail": "wayline b1 exact"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "3-00-waypoint-function b2",
+      "ok": true,
+      "detail": "wayline b2 exact"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "3-01-the-three-functions b0",
+      "ok": true,
+      "detail": "functions b0 exact"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "3-01-the-three-functions b1",
+      "ok": true,
+      "detail": "functions b1 exact"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "3-01-the-three-functions b2",
+      "ok": true,
+      "detail": "functions b2 exact"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "3-01-the-three-functions b3",
+      "ok": true,
+      "detail": "functions b3 exact"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "3-01-the-three-functions b4",
+      "ok": true,
+      "detail": "functions b4 exact"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "3-01-the-three-functions b5",
+      "ok": true,
+      "detail": "functions b5 exact"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "3-02-the-functions-separate b0",
+      "ok": true,
+      "detail": "separate b0 exact"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "3-02-the-functions-separate b1",
+      "ok": true,
+      "detail": "separate b1 exact"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "3-02-the-functions-separate b2",
+      "ok": true,
+      "detail": "separate b2 exact"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "3-02-the-functions-separate b3",
+      "ok": true,
+      "detail": "separate b3 exact"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "3-03-the-order-of-monetization b0",
+      "ok": true,
+      "detail": "3-03-the-order-of-monetization b0 exact"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "3-03-the-order-of-monetization b1",
+      "ok": true,
+      "detail": "3-03-the-order-of-monetization b1 exact"
+    },
+    {
+      "section": "traversal-geometry",
+      "name": "ladder-geometry 3-03-the-order-of-monetization b1",
+      "ok": true,
+      "detail": "geometry exact ()"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "3-03-the-order-of-monetization b2",
+      "ok": true,
+      "detail": "3-03-the-order-of-monetization b2 exact"
+    },
+    {
+      "section": "traversal-geometry",
+      "name": "ladder-geometry 3-03-the-order-of-monetization b2",
+      "ok": true,
+      "detail": "geometry exact (collectible Δ=0.00)"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "3-03-the-order-of-monetization b3",
+      "ok": true,
+      "detail": "3-03-the-order-of-monetization b3 exact"
+    },
+    {
+      "section": "traversal-geometry",
+      "name": "ladder-geometry 3-03-the-order-of-monetization b3",
+      "ok": true,
+      "detail": "geometry exact (collectible Δ=0.00, sov Δ=0.04)"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "3-03-the-order-of-monetization b4",
+      "ok": true,
+      "detail": "3-03-the-order-of-monetization b4 exact"
+    },
+    {
+      "section": "traversal-geometry",
+      "name": "ladder-geometry 3-03-the-order-of-monetization b4",
+      "ok": true,
+      "detail": "geometry exact (collectible Δ=0.00, sov Δ=0.04, moe Δ=0.02)"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "3-03-the-order-of-monetization b5",
+      "ok": true,
+      "detail": "3-03-the-order-of-monetization b5 exact"
+    },
+    {
+      "section": "traversal-geometry",
+      "name": "ladder-geometry 3-03-the-order-of-monetization b5",
+      "ok": true,
+      "detail": "geometry exact (collectible Δ=0.00, sov Δ=0.04, moe Δ=0.02, uoa Δ=0.00)"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "3-03-the-order-of-monetization b6",
+      "ok": true,
+      "detail": "3-03-the-order-of-monetization b6 exact"
+    },
+    {
+      "section": "traversal-geometry",
+      "name": "ladder-geometry 3-03-the-order-of-monetization b6",
+      "ok": true,
+      "detail": "geometry exact (collectible Δ=0.00, sov Δ=0.04, moe Δ=0.02, uoa Δ=0.00)"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "3-04-stage-signatures b0",
+      "ok": true,
+      "detail": "3-04-stage-signatures b0 exact"
+    },
+    {
+      "section": "traversal-geometry",
+      "name": "ladder-geometry 3-04-stage-signatures b0",
+      "ok": true,
+      "detail": "geometry exact (collectible Δ=0.00, sov Δ=0.04, moe Δ=0.02, uoa Δ=0.00)"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "3-04-stage-signatures b1",
+      "ok": true,
+      "detail": "3-04-stage-signatures b1 exact"
+    },
+    {
+      "section": "traversal-geometry",
+      "name": "ladder-geometry 3-04-stage-signatures b1",
+      "ok": true,
+      "detail": "geometry exact (collectible Δ=0.00, sov Δ=0.04, moe Δ=0.02, uoa Δ=0.00)"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "3-04-stage-signatures b2",
+      "ok": true,
+      "detail": "3-04-stage-signatures b2 exact"
+    },
+    {
+      "section": "traversal-geometry",
+      "name": "ladder-geometry 3-04-stage-signatures b2",
+      "ok": true,
+      "detail": "geometry exact (collectible Δ=0.00, sov Δ=0.04, moe Δ=0.02, uoa Δ=0.00)"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "3-05-the-palladium-test b0",
+      "ok": true,
+      "detail": "palladium b0 exact"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "3-05-the-palladium-test b1",
+      "ok": true,
+      "detail": "palladium b1 exact"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "3-05-the-palladium-test b2",
+      "ok": true,
+      "detail": "palladium b2 exact"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "3-05-the-palladium-test b3",
+      "ok": true,
+      "detail": "palladium b3 exact"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "3-05-the-palladium-test b4",
+      "ok": true,
+      "detail": "palladium b4 exact"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "3-06-what-your-money-is b0",
+      "ok": true,
+      "detail": "money b0 exact"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "3-06-what-your-money-is b1",
+      "ok": true,
+      "detail": "money b1 exact"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "3-06-what-your-money-is b2",
+      "ok": true,
+      "detail": "money b2 exact"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "3-06-what-your-money-is b3",
+      "ok": true,
+      "detail": "money b3 exact"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "3-06-what-your-money-is b4",
+      "ok": true,
+      "detail": "money b4 exact"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "3-07-where-bitcoin-is b0",
+      "ok": true,
+      "detail": "3-07-where-bitcoin-is b0 exact"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "3-07-where-bitcoin-is b1",
+      "ok": true,
+      "detail": "3-07-where-bitcoin-is b1 exact"
+    },
+    {
+      "section": "traversal-geometry",
+      "name": "ladder-geometry 3-07-where-bitcoin-is b1",
+      "ok": true,
+      "detail": "geometry exact (collectible Δ=0.00, sov Δ=0.04, moe Δ=0.02, uoa Δ=0.00)"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "3-07-where-bitcoin-is b2",
+      "ok": true,
+      "detail": "3-07-where-bitcoin-is b2 exact"
+    },
+    {
+      "section": "traversal-geometry",
+      "name": "ladder-geometry 3-07-where-bitcoin-is b2",
+      "ok": true,
+      "detail": "geometry exact (collectible Δ=0.00, sov Δ=0.04, moe Δ=0.02, uoa Δ=0.00)"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "3-07-where-bitcoin-is b3",
+      "ok": true,
+      "detail": "3-07-where-bitcoin-is b3 exact"
+    },
+    {
+      "section": "traversal-geometry",
+      "name": "ladder-geometry 3-07-where-bitcoin-is b3",
+      "ok": true,
+      "detail": "geometry exact (collectible Δ=0.00, sov Δ=0.04, moe Δ=0.02, uoa Δ=0.00)"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "3-07-where-bitcoin-is b4",
+      "ok": true,
+      "detail": "3-07-where-bitcoin-is b4 exact"
+    },
+    {
+      "section": "traversal-geometry",
+      "name": "ladder-geometry 3-07-where-bitcoin-is b4",
+      "ok": true,
+      "detail": "geometry exact (collectible Δ=0.00, sov Δ=0.04, moe Δ=0.02, uoa Δ=0.00)"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "3-07-where-bitcoin-is b5",
+      "ok": true,
+      "detail": "3-07-where-bitcoin-is b5 exact"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "3-08-waypoint-judge b0",
+      "ok": true,
+      "detail": "wayline b0 exact"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "3-08-waypoint-judge b1",
+      "ok": true,
+      "detail": "wayline b1 exact"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "3-08-waypoint-judge b2",
+      "ok": true,
+      "detail": "wayline b2 exact"
+    },
+    {
+      "section": "traversal",
+      "name": "the seam 3-08 → 4-01 lands clean",
+      "ok": true,
+      "detail": "{\"id\":\"4-01-ideal-store-of-value\",\"imagesBroken\":0}"
+    },
+    {
+      "section": "traversal",
+      "name": "forward pass complete",
+      "ok": true,
+      "detail": "208 steps to 5-01-thank-you"
+    },
+    {
+      "section": "traversal",
+      "name": "backward pass reaches 1.1 b0",
+      "ok": true,
+      "detail": "77 steps"
+    },
+    {
+      "section": "traversal",
+      "name": "ladder backward handoff lands 3-03 b6",
+      "ok": true,
+      "detail": "3-03-the-order-of-monetization b6"
+    },
+    {
+      "section": "traversal",
+      "name": "ladder backward handoff state",
+      "ok": true,
+      "detail": "3-03-the-order-of-monetization b6 exact"
+    },
+    {
+      "section": "traversal",
+      "name": "fast re-forward through Sections 2–3",
+      "ok": true,
+      "detail": "{\"id\":\"4-01-ideal-store-of-value\",\"containers\":1,\"staleOverlays\":0}"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-00-waypoint-function b0",
+      "ok": true,
+      "detail": "wayline b0 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-00-waypoint-function b1",
+      "ok": true,
+      "detail": "wayline b1 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-00-waypoint-function b2",
+      "ok": true,
+      "detail": "wayline b2 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-01-the-three-functions b0",
+      "ok": true,
+      "detail": "functions b0 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-01-the-three-functions b1",
+      "ok": true,
+      "detail": "functions b1 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-01-the-three-functions b2",
+      "ok": true,
+      "detail": "functions b2 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-01-the-three-functions b3",
+      "ok": true,
+      "detail": "functions b3 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-01-the-three-functions b4",
+      "ok": true,
+      "detail": "functions b4 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-01-the-three-functions b5",
+      "ok": true,
+      "detail": "functions b5 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-02-the-functions-separate b0",
+      "ok": true,
+      "detail": "separate b0 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-02-the-functions-separate b1",
+      "ok": true,
+      "detail": "separate b1 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-02-the-functions-separate b2",
+      "ok": true,
+      "detail": "separate b2 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-02-the-functions-separate b3",
+      "ok": true,
+      "detail": "separate b3 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-03-the-order-of-monetization b0",
+      "ok": true,
+      "detail": "3-03-the-order-of-monetization b0 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-03-the-order-of-monetization b1",
+      "ok": true,
+      "detail": "3-03-the-order-of-monetization b1 exact"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "ladder-geometry 3-03-the-order-of-monetization b1",
+      "ok": true,
+      "detail": "geometry exact ()"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-03-the-order-of-monetization b2",
+      "ok": true,
+      "detail": "3-03-the-order-of-monetization b2 exact"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "ladder-geometry 3-03-the-order-of-monetization b2",
+      "ok": true,
+      "detail": "geometry exact (collectible Δ=0.00)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-03-the-order-of-monetization b3",
+      "ok": true,
+      "detail": "3-03-the-order-of-monetization b3 exact"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "ladder-geometry 3-03-the-order-of-monetization b3",
+      "ok": true,
+      "detail": "geometry exact (collectible Δ=0.00, sov Δ=0.04)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-03-the-order-of-monetization b4",
+      "ok": true,
+      "detail": "3-03-the-order-of-monetization b4 exact"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "ladder-geometry 3-03-the-order-of-monetization b4",
+      "ok": true,
+      "detail": "geometry exact (collectible Δ=0.00, sov Δ=0.04, moe Δ=0.02)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-03-the-order-of-monetization b5",
+      "ok": true,
+      "detail": "3-03-the-order-of-monetization b5 exact"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "ladder-geometry 3-03-the-order-of-monetization b5",
+      "ok": true,
+      "detail": "geometry exact (collectible Δ=0.00, sov Δ=0.04, moe Δ=0.02, uoa Δ=0.00)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-03-the-order-of-monetization b6",
+      "ok": true,
+      "detail": "3-03-the-order-of-monetization b6 exact"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "ladder-geometry 3-03-the-order-of-monetization b6",
+      "ok": true,
+      "detail": "geometry exact (collectible Δ=0.00, sov Δ=0.04, moe Δ=0.02, uoa Δ=0.00)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-04-stage-signatures b0",
+      "ok": true,
+      "detail": "3-04-stage-signatures b0 exact"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "ladder-geometry 3-04-stage-signatures b0",
+      "ok": true,
+      "detail": "geometry exact (collectible Δ=0.00, sov Δ=0.04, moe Δ=0.02, uoa Δ=0.00)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-04-stage-signatures b1",
+      "ok": true,
+      "detail": "3-04-stage-signatures b1 exact"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "ladder-geometry 3-04-stage-signatures b1",
+      "ok": true,
+      "detail": "geometry exact (collectible Δ=0.00, sov Δ=0.04, moe Δ=0.02, uoa Δ=0.00)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-04-stage-signatures b2",
+      "ok": true,
+      "detail": "3-04-stage-signatures b2 exact"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "ladder-geometry 3-04-stage-signatures b2",
+      "ok": true,
+      "detail": "geometry exact (collectible Δ=0.00, sov Δ=0.04, moe Δ=0.02, uoa Δ=0.00)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-05-the-palladium-test b0",
+      "ok": true,
+      "detail": "palladium b0 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-05-the-palladium-test b1",
+      "ok": true,
+      "detail": "palladium b1 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-05-the-palladium-test b2",
+      "ok": true,
+      "detail": "palladium b2 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-05-the-palladium-test b3",
+      "ok": true,
+      "detail": "palladium b3 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-05-the-palladium-test b4",
+      "ok": true,
+      "detail": "palladium b4 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-06-what-your-money-is b0",
+      "ok": true,
+      "detail": "money b0 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-06-what-your-money-is b1",
+      "ok": true,
+      "detail": "money b1 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-06-what-your-money-is b2",
+      "ok": true,
+      "detail": "money b2 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-06-what-your-money-is b3",
+      "ok": true,
+      "detail": "money b3 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-06-what-your-money-is b4",
+      "ok": true,
+      "detail": "money b4 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-07-where-bitcoin-is b0",
+      "ok": true,
+      "detail": "3-07-where-bitcoin-is b0 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-07-where-bitcoin-is b1",
+      "ok": true,
+      "detail": "3-07-where-bitcoin-is b1 exact"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "ladder-geometry 3-07-where-bitcoin-is b1",
+      "ok": true,
+      "detail": "geometry exact (collectible Δ=0.00, sov Δ=0.04, moe Δ=0.02, uoa Δ=0.00)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-07-where-bitcoin-is b2",
+      "ok": true,
+      "detail": "3-07-where-bitcoin-is b2 exact"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "ladder-geometry 3-07-where-bitcoin-is b2",
+      "ok": true,
+      "detail": "geometry exact (collectible Δ=0.00, sov Δ=0.04, moe Δ=0.02, uoa Δ=0.00)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-07-where-bitcoin-is b3",
+      "ok": true,
+      "detail": "3-07-where-bitcoin-is b3 exact"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "ladder-geometry 3-07-where-bitcoin-is b3",
+      "ok": true,
+      "detail": "geometry exact (collectible Δ=0.00, sov Δ=0.04, moe Δ=0.02, uoa Δ=0.00)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-07-where-bitcoin-is b4",
+      "ok": true,
+      "detail": "3-07-where-bitcoin-is b4 exact"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "ladder-geometry 3-07-where-bitcoin-is b4",
+      "ok": true,
+      "detail": "geometry exact (collectible Δ=0.00, sov Δ=0.04, moe Δ=0.02, uoa Δ=0.00)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-07-where-bitcoin-is b5",
+      "ok": true,
+      "detail": "3-07-where-bitcoin-is b5 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-08-waypoint-judge b0",
+      "ok": true,
+      "detail": "wayline b0 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-08-waypoint-judge b1",
+      "ok": true,
+      "detail": "wayline b1 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-08-waypoint-judge b2",
+      "ok": true,
+      "detail": "wayline b2 exact"
+    },
+    {
+      "section": "mid-animation-refresh",
+      "name": "3-00-waypoint-function b2",
+      "ok": true,
+      "detail": "wayline b2 exact"
+    },
+    {
+      "section": "mid-animation-refresh",
+      "name": "3-03-the-order-of-monetization b1",
+      "ok": true,
+      "detail": "3-03-the-order-of-monetization b1 exact"
+    },
+    {
+      "section": "mid-animation-refresh",
+      "name": "3-05-the-palladium-test b2",
+      "ok": true,
+      "detail": "palladium b2 exact"
+    },
+    {
+      "section": "mid-animation-refresh",
+      "name": "3-06-what-your-money-is b1",
+      "ok": true,
+      "detail": "money b1 exact"
+    },
+    {
+      "section": "named-frames",
+      "name": "3-00-waypoint-function ignition (live)",
+      "ok": true,
+      "detail": "wayline b2 exact"
+    },
+    {
+      "section": "named-frames",
+      "name": "3-08-waypoint-judge ignition (live)",
+      "ok": true,
+      "detail": "wayline b2 exact"
+    },
+    {
+      "section": "named-frames",
+      "name": "the placed bitcoin glyph (live)",
+      "ok": true,
+      "detail": "3-07-where-bitcoin-is b2 exact"
+    },
+    {
+      "section": "named-frames",
+      "name": "placement geometry",
+      "ok": true,
+      "detail": "geometry exact (collectible Δ=0.00, sov Δ=0.04, moe Δ=0.02, uoa Δ=0.00)"
+    },
+    {
+      "section": "named-frames",
+      "name": "layer tower foundation emphasis (live)",
+      "ok": true,
+      "detail": "money b4 exact"
+    },
+    {
+      "section": "named-frames",
+      "name": "ladder handoff resolves to 3-04 b0",
+      "ok": true,
+      "detail": "3-04-stage-signatures b0 exact"
+    },
+    {
+      "section": "named-frames",
+      "name": "seam crossfade lands 4-01 clean",
+      "ok": true,
+      "detail": "{\"id\":\"4-01-ideal-store-of-value\",\"containers\":1}"
+    },
+    {
+      "section": "static",
+      "name": "Section 3 CSS region present",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-pacing",
+      "name": "3-00-waypoint-function: 2 arrows = 2 builds",
+      "ok": true,
+      "detail": "arrows=2 builds=2"
+    },
+    {
+      "section": "static-pacing",
+      "name": "3-01-the-three-functions: 5 arrows = 5 builds",
+      "ok": true,
+      "detail": "arrows=5 builds=5"
+    },
+    {
+      "section": "static-pacing",
+      "name": "3-02-the-functions-separate: 3 arrows = 3 builds",
+      "ok": true,
+      "detail": "arrows=3 builds=3"
+    },
+    {
+      "section": "static-pacing",
+      "name": "3-03-the-order-of-monetization: 6 arrows = 6 builds",
+      "ok": true,
+      "detail": "arrows=6 builds=6"
+    },
+    {
+      "section": "static-pacing",
+      "name": "3-04-stage-signatures: 2 arrows = 2 builds",
+      "ok": true,
+      "detail": "arrows=2 builds=2"
+    },
+    {
+      "section": "static-pacing",
+      "name": "3-05-the-palladium-test: 4 arrows = 4 builds",
+      "ok": true,
+      "detail": "arrows=4 builds=4"
+    },
+    {
+      "section": "static-pacing",
+      "name": "3-06-what-your-money-is: 4 arrows = 4 builds",
+      "ok": true,
+      "detail": "arrows=4 builds=4"
+    },
+    {
+      "section": "static-pacing",
+      "name": "3-07-where-bitcoin-is: 5 arrows = 5 builds",
+      "ok": true,
+      "detail": "arrows=5 builds=5"
+    },
+    {
+      "section": "static-pacing",
+      "name": "3-08-waypoint-judge: 2 arrows = 2 builds",
+      "ok": true,
+      "detail": "arrows=2 builds=2"
+    },
+    {
+      "section": "static-verbatim",
+      "name": "3-00-waypoint-function script verbatim (normalized)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-verbatim",
+      "name": "3-01-the-three-functions script verbatim (normalized)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-verbatim",
+      "name": "3-02-the-functions-separate script verbatim (normalized)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-verbatim",
+      "name": "3-03-the-order-of-monetization script verbatim (normalized)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-verbatim",
+      "name": "3-04-stage-signatures script verbatim (normalized)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-verbatim",
+      "name": "3-05-the-palladium-test script verbatim (normalized)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-verbatim",
+      "name": "3-06-what-your-money-is script verbatim (normalized)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-verbatim",
+      "name": "3-07-where-bitcoin-is script verbatim (normalized)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-verbatim",
+      "name": "3-08-waypoint-judge script verbatim (normalized)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-copy",
+      "name": "all 43 on-screen strings verbatim",
+      "ok": true,
+      "detail": "43/43"
+    },
+    {
+      "section": "static-gates",
+      "name": "banned terms: zero in Section 3 sources",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-gates",
+      "name": "\"claim\" only within slide 06",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-gates",
+      "name": "slide 06 carries the rung (occurrences recorded)",
+      "ok": true,
+      "detail": "9 occurrences in 06"
+    },
+    {
+      "section": "static-gates",
+      "name": "falsifiability/displacement content absent",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-gates",
+      "name": "color arc: accent only at ignition + foundations (CSS)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-gates",
+      "name": "no accent in Section 3 JS",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-gates",
+      "name": "American English: zero British spellings",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-gates",
+      "name": "typographic apostrophes throughout",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-gates",
+      "name": "stage-ladder group on exactly 03 + 04",
+      "ok": true,
+      "detail": "03-the-order-of-monetization.js,04-stage-signatures.js"
+    },
+    {
+      "section": "static-gates",
+      "name": "Section 4/5 files untouched (git)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-gates",
+      "name": "Sections 1–2 sources untouched beyond glyphs.js (git)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-sources",
+      "name": "palladium chart flagged PROVISIONAL in code",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-sources",
+      "name": "WIM-PD-001 entry present",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-sources",
+      "name": "WIM-PD-002 entry present",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-sources",
+      "name": "WIM-AR-001 entry present",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-sources",
+      "name": "WIM-BTC-001 entry present",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-sources",
+      "name": "palladium stubs marked PROVISIONAL",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-glyphs",
+      "name": "30 new candidate svgs present",
+      "ok": true,
+      "detail": "all present"
+    },
+    {
+      "section": "static-glyphs",
+      "name": "SELECTIONS covers the 10 new glyphs",
+      "ok": true,
+      "detail": "10/10"
+    },
+    {
+      "section": "static-glyphs",
+      "name": "contact sheet carries the 10 new rows",
+      "ok": true,
+      "detail": "10/10"
+    },
+    {
+      "section": "static-glyphs",
+      "name": "grammar doc records the R3 extension",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-glyphs",
+      "name": "function/stage glyphs placed (ladder + functions row)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-glyphs",
+      "name": "argentina triad placed (dollar, peso, brick)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-glyphs",
+      "name": "palladium + gate + tie placed",
+      "ok": true,
+      "detail": ""
+    }
+  ]
+}

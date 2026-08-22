@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="96" height="96" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:#e9e4da">
+<!-- bitcoin C — the constellation ₿: Spine and two open bowl arcs, with the four protrusions left as unconnected dots — the symbol implied, star-chart style. -->
+<path d="M17.5 9.5 L17.5 38.5"/>
+        <path d="M17.5 10.5 C28 8.5 33 12.5 32.5 17 C32 20.8 28 22.8 17.5 23"/>
+        <path d="M17.5 23 C29.5 22.2 35 26.5 34.4 31 C33.8 35.5 29 38.3 17.5 38"/>
+        <circle cx="21" cy="5" r="1.8" fill="currentColor" stroke="none"/><circle cx="26" cy="5" r="1.8" fill="currentColor" stroke="none"/><circle cx="21" cy="43" r="1.8" fill="currentColor" stroke="none"/><circle cx="26" cy="43" r="1.8" fill="currentColor" stroke="none"/>
+</svg>

@@ -1,0 +1,187 @@
+[
+  {
+    "id": "4-01-define-the-job",
+    "builds": 4,
+    "arrows": 4
+  },
+  {
+    "id": "4-03-simple-exchange",
+    "builds": 4,
+    "arrows": 4
+  },
+  {
+    "id": "4-04-unfinished-exchange",
+    "builds": 4,
+    "arrows": 4
+  },
+  {
+    "id": "4-05-spend-or-save",
+    "builds": 4,
+    "arrows": 4
+  },
+  {
+    "id": "4-06-claim-and-carrier",
+    "builds": 4,
+    "arrows": 4
+  },
+  {
+    "id": "4-07-store-of-value-function",
+    "builds": 5,
+    "arrows": 5
+  },
+  {
+    "id": "4-08-100-year-test",
+    "builds": 3,
+    "arrows": 3
+  },
+  {
+    "id": "4-09-future-is-unknowable",
+    "builds": 5,
+    "arrows": 5
+  },
+  {
+    "id": "4-10-invert-the-question",
+    "builds": 2,
+    "arrows": 2
+  },
+  {
+    "id": "4-11-carrier-failures-i",
+    "builds": 5,
+    "arrows": 5
+  },
+  {
+    "id": "4-12-carrier-failures-ii",
+    "builds": 5,
+    "arrows": 5
+  },
+  {
+    "id": "4-13-failure-to-requirement",
+    "builds": 2,
+    "arrows": 2
+  },
+  {
+    "id": "4-14-ten-properties",
+    "builds": 2,
+    "arrows": 2
+  },
+  {
+    "id": "4-15-framework-to-comparison",
+    "builds": 4,
+    "arrows": 4
+  },
+  {
+    "id": "4-16-the-comparison",
+    "builds": 3,
+    "arrows": 3
+  },
+  {
+    "id": "gold",
+    "builds": 3,
+    "arrows": 3
+  },
+  {
+    "id": "property",
+    "builds": 3,
+    "arrows": 3
+  },
+  {
+    "id": "property",
+    "builds": 5,
+    "arrows": 5
+  },
+  {
+    "id": "gold",
+    "builds": 8,
+    "arrows": 8
+  },
+  {
+    "id": "4-20b-what-would-change-these-scores",
+    "builds": 5,
+    "arrows": 5
+  },
+  {
+    "id": "4-21-marginal-store-of-value-decision",
+    "builds": 2,
+    "arrows": 2
+  },
+  {
+    "id": "4-22-fixed-supply-reprices-at-margin",
+    "builds": 3,
+    "arrows": 3
+  },
+  {
+    "id": "4-23-investment-case-from-first-principles",
+    "builds": 2,
+    "arrows": 2
+  },
+  {
+    "id": "5-01-thank-you",
+    "builds": 2,
+    "arrows": 2
+  },
+  {
+    "id": "1-01-eighty-thousand-hours",
+    "builds": 2,
+    "arrows": 2
+  },
+  {
+    "id": "1-02-the-conversion",
+    "builds": 3,
+    "arrows": 3
+  },
+  {
+    "id": "1-03-what-is-money",
+    "builds": 5,
+    "arrows": 5
+  },
+  {
+    "id": "1-04-the-stakes",
+    "builds": 1,
+    "arrows": 1
+  },
+  {
+    "id": "1-05-the-promise",
+    "builds": 6,
+    "arrows": 6
+  },
+  {
+    "id": "2-01-the-world-without-it",
+    "builds": 3,
+    "arrows": 3
+  },
+  {
+    "id": "2-02-the-discovery",
+    "builds": 4,
+    "arrows": 4
+  },
+  {
+    "id": "2-03-the-convergence",
+    "builds": 3,
+    "arrows": 3
+  },
+  {
+    "id": "2-04-the-competition-record",
+    "builds": 8,
+    "arrows": 8
+  },
+  {
+    "id": "2-05-two-survivors",
+    "builds": 6,
+    "arrows": 6
+  },
+  {
+    "id": "2-06-the-abstraction-ladder",
+    "builds": 4,
+    "arrows": 4
+  },
+  {
+    "id": "2-07-the-severance",
+    "builds": 4,
+    "arrows": 4
+  },
+  {
+    "id": "2-08-the-pattern",
+    "builds": 6,
+    "arrows": 6
+  }
+]

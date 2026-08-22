@@ -1,0 +1,210 @@
+{
+  "phase": "R7",
+  "suite": "dynamic:settle",
+  "variant": "reduced-motion",
+  "checks": 40,
+  "failures": 0,
+  "consoleLines": [],
+  "results": [
+    {
+      "name": "reduced motion: 2-04-the-competition-record b1 fully settled within 420ms of the keypress",
+      "ok": true,
+      "detail": "b1"
+    },
+    {
+      "name": "reduced motion: 2-04-the-competition-record b2 fully settled within 420ms of the keypress",
+      "ok": true,
+      "detail": "b2"
+    },
+    {
+      "name": "reduced motion: 2-04-the-competition-record b3 fully settled within 420ms of the keypress",
+      "ok": true,
+      "detail": "b3"
+    },
+    {
+      "name": "reduced motion: 2-04-the-competition-record b4 fully settled within 420ms of the keypress",
+      "ok": true,
+      "detail": "b4"
+    },
+    {
+      "name": "reduced motion: 2-04-the-competition-record b5 fully settled within 420ms of the keypress",
+      "ok": true,
+      "detail": "b5"
+    },
+    {
+      "name": "reduced motion: 2-04-the-competition-record b6 fully settled within 420ms of the keypress",
+      "ok": true,
+      "detail": "b6"
+    },
+    {
+      "name": "reduced motion: 2-04-the-competition-record b7 fully settled within 420ms of the keypress",
+      "ok": true,
+      "detail": "b7"
+    },
+    {
+      "name": "reduced motion: 2-04-the-competition-record b8 fully settled within 420ms of the keypress",
+      "ok": true,
+      "detail": "b8"
+    },
+    {
+      "name": "reduced motion: 4-01-define-the-job b1 fully settled within 420ms of the keypress",
+      "ok": true,
+      "detail": "b1"
+    },
+    {
+      "name": "reduced motion: 4-01-define-the-job b2 fully settled within 420ms of the keypress",
+      "ok": true,
+      "detail": "b2"
+    },
+    {
+      "name": "reduced motion: 4-01-define-the-job b3 fully settled within 420ms of the keypress",
+      "ok": true,
+      "detail": "b3"
+    },
+    {
+      "name": "reduced motion: 4-01-define-the-job b4 fully settled within 420ms of the keypress",
+      "ok": true,
+      "detail": "b4"
+    },
+    {
+      "name": "reduced motion: 4-08-100-year-test b1 fully settled within 420ms of the keypress",
+      "ok": true,
+      "detail": "b1"
+    },
+    {
+      "name": "reduced motion: 4-08-100-year-test b2 fully settled within 420ms of the keypress",
+      "ok": true,
+      "detail": "b2"
+    },
+    {
+      "name": "reduced motion: 4-08-100-year-test b3 fully settled within 420ms of the keypress",
+      "ok": true,
+      "detail": "b3"
+    },
+    {
+      "name": "reduced motion: 4-14-ten-properties b1 fully settled within 420ms of the keypress",
+      "ok": true,
+      "detail": "b1"
+    },
+    {
+      "name": "reduced motion: 4-14-ten-properties b2 fully settled within 420ms of the keypress",
+      "ok": true,
+      "detail": "b2"
+    },
+    {
+      "name": "reduced motion: 4-16-the-comparison b1 fully settled within 420ms of the keypress",
+      "ok": true,
+      "detail": "b1"
+    },
+    {
+      "name": "reduced motion: 4-16-the-comparison b2 fully settled within 420ms of the keypress",
+      "ok": true,
+      "detail": "b2"
+    },
+    {
+      "name": "reduced motion: 4-16-the-comparison b3 fully settled within 420ms of the keypress",
+      "ok": true,
+      "detail": "b3"
+    },
+    {
+      "name": "reduced motion: 4-20-bitcoin-does-not-replace-everything b1 fully settled within 420ms of the keypress",
+      "ok": true,
+      "detail": "b1"
+    },
+    {
+      "name": "reduced motion: 4-20-bitcoin-does-not-replace-everything b2 fully settled within 420ms of the keypress",
+      "ok": true,
+      "detail": "b2"
+    },
+    {
+      "name": "reduced motion: 4-20-bitcoin-does-not-replace-everything b3 fully settled within 420ms of the keypress",
+      "ok": true,
+      "detail": "b3"
+    },
+    {
+      "name": "reduced motion: 4-20-bitcoin-does-not-replace-everything b4 fully settled within 420ms of the keypress",
+      "ok": true,
+      "detail": "b4"
+    },
+    {
+      "name": "reduced motion: 4-20-bitcoin-does-not-replace-everything b5 fully settled within 420ms of the keypress",
+      "ok": true,
+      "detail": "b5"
+    },
+    {
+      "name": "reduced motion: 4-20-bitcoin-does-not-replace-everything b6 fully settled within 420ms of the keypress",
+      "ok": true,
+      "detail": "b6"
+    },
+    {
+      "name": "reduced motion: 4-20-bitcoin-does-not-replace-everything b7 fully settled within 420ms of the keypress",
+      "ok": true,
+      "detail": "b7"
+    },
+    {
+      "name": "reduced motion: 4-20-bitcoin-does-not-replace-everything b8 fully settled within 420ms of the keypress",
+      "ok": true,
+      "detail": "b8"
+    },
+    {
+      "name": "reduced motion: 4-20b-what-would-change-these-scores b1 fully settled within 420ms of the keypress",
+      "ok": true,
+      "detail": "b1"
+    },
+    {
+      "name": "reduced motion: 4-20b-what-would-change-these-scores b2 fully settled within 420ms of the keypress",
+      "ok": true,
+      "detail": "b2"
+    },
+    {
+      "name": "reduced motion: 4-20b-what-would-change-these-scores b3 fully settled within 420ms of the keypress",
+      "ok": true,
+      "detail": "b3"
+    },
+    {
+      "name": "reduced motion: 4-20b-what-would-change-these-scores b4 fully settled within 420ms of the keypress",
+      "ok": true,
+      "detail": "b4"
+    },
+    {
+      "name": "reduced motion: 4-20b-what-would-change-these-scores b5 fully settled within 420ms of the keypress",
+      "ok": true,
+      "detail": "b5"
+    },
+    {
+      "name": "reduced motion: 4-22-fixed-supply-reprices-at-margin b1 fully settled within 420ms of the keypress",
+      "ok": true,
+      "detail": "b1"
+    },
+    {
+      "name": "reduced motion: 4-22-fixed-supply-reprices-at-margin b2 fully settled within 420ms of the keypress",
+      "ok": true,
+      "detail": "b2"
+    },
+    {
+      "name": "reduced motion: 4-22-fixed-supply-reprices-at-margin b3 fully settled within 420ms of the keypress",
+      "ok": true,
+      "detail": "b3"
+    },
+    {
+      "name": "reduced motion: 5-01-thank-you b1 fully settled within 420ms of the keypress",
+      "ok": true,
+      "detail": "b1"
+    },
+    {
+      "name": "reduced motion: 5-01-thank-you b2 fully settled within 420ms of the keypress",
+      "ok": true,
+      "detail": "b2"
+    },
+    {
+      "name": "reduced motion: the close stands on the frame the sweep is gated to",
+      "ok": true,
+      "detail": "live=true step=1"
+    },
+    {
+      "name": "reduced motion: the close’s warmth pulse is suppressed on that frame",
+      "ok": true,
+      "detail": "content=none animation=none"
+    }
+  ]
+}

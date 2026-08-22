@@ -1,0 +1,410 @@
+{
+  "revision": "R4",
+  "date": "2026-07-31T02:33:31.157Z",
+  "checks": 67,
+  "failures": 0,
+  "results": [
+    {
+      "section": "provisional",
+      "name": "no PROVISIONAL flag anywhere in src/",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "provisional",
+      "name": "no PROVISIONAL flag in any file under src/ (full walk)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "provisional",
+      "name": "no PROVISIONAL status line left in SOURCES.md",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "sources",
+      "name": "SOURCES.md defines 25 entries",
+      "ok": true,
+      "detail": "WIM-001 WIM-006 WIM-007 WIM-008 WIM-005 WIM-009 WIM-003 WIM-011 WIM-FX-001 WIM-FX-002 WIM-FX-003 WIM-FX-004 WIM-FX-005 WIM-004 WIM-AR-001 WIM-012 WIM-013 WIM-PD-001 WIM-PD-002 WIM-PD-003 WIM-PD-004 WIM-014 WIM-BTC-001 WIM-BTC-002 WIM-002"
+    },
+    {
+      "section": "sources",
+      "name": "no duplicate ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "sources",
+      "name": "every WIM id cited in code is defined in SOURCES.md",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "sources",
+      "name": "all 24 required entries present",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "sources",
+      "name": "every live entry states the claim, a basis/source, and a date",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "sources",
+      "name": "retrieval dates recorded on the researched entries",
+      "ok": true,
+      "detail": "18 occurrences"
+    },
+    {
+      "section": "sources",
+      "name": "no presenter ruling left open",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "sources",
+      "name": "all 8 rulings marked applied, uniquely numbered",
+      "ok": true,
+      "detail": "R-07, R-01, R-02, R-03, R-04, R-06, R-08, R-05"
+    },
+    {
+      "section": "sources",
+      "name": "every flag raised in SOURCES.md is answered in r4-report.md",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "fx-data",
+      "name": "window is 1971–2025",
+      "ok": true,
+      "detail": "1971–2025"
+    },
+    {
+      "section": "fx-data",
+      "name": "four series present",
+      "ok": true,
+      "detail": "USD,GBP,JPY,CHF"
+    },
+    {
+      "section": "fx-data",
+      "name": "USD: 55 annual values",
+      "ok": true,
+      "detail": "55"
+    },
+    {
+      "section": "fx-data",
+      "name": "USD: indexed to 100 at 1971",
+      "ok": true,
+      "detail": "100"
+    },
+    {
+      "section": "fx-data",
+      "name": "USD: declines over the span",
+      "ok": true,
+      "detail": "100 → 12.58"
+    },
+    {
+      "section": "fx-data",
+      "name": "USD: no value outside (0, 100]",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "fx-data",
+      "name": "GBP: 55 annual values",
+      "ok": true,
+      "detail": "55"
+    },
+    {
+      "section": "fx-data",
+      "name": "GBP: indexed to 100 at 1971",
+      "ok": true,
+      "detail": "100"
+    },
+    {
+      "section": "fx-data",
+      "name": "GBP: declines over the span",
+      "ok": true,
+      "detail": "100 → 9.06"
+    },
+    {
+      "section": "fx-data",
+      "name": "GBP: no value outside (0, 100]",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "fx-data",
+      "name": "JPY: 55 annual values",
+      "ok": true,
+      "detail": "55"
+    },
+    {
+      "section": "fx-data",
+      "name": "JPY: indexed to 100 at 1971",
+      "ok": true,
+      "detail": "100"
+    },
+    {
+      "section": "fx-data",
+      "name": "JPY: declines over the span",
+      "ok": true,
+      "detail": "100 → 29.4"
+    },
+    {
+      "section": "fx-data",
+      "name": "JPY: no value outside (0, 100]",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "fx-data",
+      "name": "CHF: 55 annual values",
+      "ok": true,
+      "detail": "55"
+    },
+    {
+      "section": "fx-data",
+      "name": "CHF: indexed to 100 at 1971",
+      "ok": true,
+      "detail": "100"
+    },
+    {
+      "section": "fx-data",
+      "name": "CHF: declines over the span",
+      "ok": true,
+      "detail": "100 → 33.66"
+    },
+    {
+      "section": "fx-data",
+      "name": "CHF: no value outside (0, 100]",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "fx-data",
+      "name": "CHF is the strongest line at the end of the window",
+      "ok": true,
+      "detail": "{\"USD\":12.58,\"GBP\":9.06,\"JPY\":29.4,\"CHF\":33.66}"
+    },
+    {
+      "section": "fx-data",
+      "name": "CHF is the strongest line from 1976 onward (USD above it 1972-1975 only)",
+      "ok": true,
+      "detail": "1972, 1973, 1974, 1975"
+    },
+    {
+      "section": "fx-data",
+      "name": "recorded deflation upticks match the plotted series (JPY 12, CHF 6, USD 1, GBP 0)",
+      "ok": true,
+      "detail": "{\"USD\":1,\"GBP\":0,\"JPY\":12,\"CHF\":6}"
+    },
+    {
+      "section": "fx-data",
+      "name": "SOURCES.md quotes USD 2025 = 12.58",
+      "ok": true,
+      "detail": "12.58"
+    },
+    {
+      "section": "fx-data",
+      "name": "SOURCES.md quotes GBP 2025 = 9.06",
+      "ok": true,
+      "detail": "9.06"
+    },
+    {
+      "section": "fx-data",
+      "name": "SOURCES.md quotes JPY 2025 = 29.4",
+      "ok": true,
+      "detail": "29.4"
+    },
+    {
+      "section": "fx-data",
+      "name": "SOURCES.md quotes CHF 2025 = 33.66",
+      "ok": true,
+      "detail": "33.66"
+    },
+    {
+      "section": "fx-data",
+      "name": "the slide consumes the data file (no inline series)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "pd-data",
+      "name": "price window is 1990–2025",
+      "ok": true,
+      "detail": "1990–2025"
+    },
+    {
+      "section": "pd-data",
+      "name": "two price series present",
+      "ok": true,
+      "detail": "GOLD,PALLADIUM"
+    },
+    {
+      "section": "pd-data",
+      "name": "GOLD: 36 annual values",
+      "ok": true,
+      "detail": "36"
+    },
+    {
+      "section": "pd-data",
+      "name": "GOLD: all values inside the plotted value axis (80–3600)",
+      "ok": true,
+      "detail": "min 271.04 max 3431.54"
+    },
+    {
+      "section": "pd-data",
+      "name": "PALLADIUM: 36 annual values",
+      "ok": true,
+      "detail": "36"
+    },
+    {
+      "section": "pd-data",
+      "name": "PALLADIUM: all values inside the plotted value axis (80–3600)",
+      "ok": true,
+      "detail": "min 88.13 max 2398.28"
+    },
+    {
+      "section": "pd-data",
+      "name": "palladium closed above gold in exactly 1999–2002 and 2019–2022",
+      "ok": true,
+      "detail": "1999, 2000, 2001, 2002, 2019, 2020, 2021, 2022"
+    },
+    {
+      "section": "pd-data",
+      "name": "\"long stretches\" is plural and true (two runs of four years)",
+      "ok": true,
+      "detail": "8 years"
+    },
+    {
+      "section": "pd-data",
+      "name": "SOURCES.md records the same crossing years",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "pd-data",
+      "name": "mine supply: gold 3,280 t and palladium 217 t (USGS MCS 2026, 2024 actuals)",
+      "ok": true,
+      "detail": "{\"GOLD\":3280,\"PALLADIUM\":217}"
+    },
+    {
+      "section": "pd-data",
+      "name": "gold mine supply is >10x palladium (the panel's claim)",
+      "ok": true,
+      "detail": "15.1x"
+    },
+    {
+      "section": "pd-data",
+      "name": "the widths are documented as qualitative, not to scale",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "pd-data",
+      "name": "the crustal-rarity panel is gone from every surface",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "pd-data",
+      "name": "the supply panel is titled ANNUAL MINE SUPPLY · TONNES",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "pd-data",
+      "name": "the slide consumes the data file (no inline price points)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "constitution",
+      "name": "banned terms: zero across Sections 1–3 sources and data",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "constitution",
+      "name": "\"claim\" still confined to slide 3.6 within Section 3",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "constitution",
+      "name": "slide 3.6 claim count unchanged from R3.1 (12)",
+      "ok": true,
+      "detail": "12"
+    },
+    {
+      "section": "constitution",
+      "name": "typographic apostrophes in every file R4 touched, and all of Section 3",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "constitution",
+      "name": "American English across Sections 1–3 sources and data",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "constitution",
+      "name": "no accent color introduced in JS or data files",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "scope",
+      "name": "only the R4 data work and the R4.1 ruled files changed under src/",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "scope",
+      "name": "Sections 4–5 untouched",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "scope",
+      "name": "Section 1 touched only by R-07 (the script qualifier)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "scope",
+      "name": "2.5 grew to 6 builds and 6 arrows (R-03)",
+      "ok": true,
+      "detail": "arrows=6 builds=6"
+    },
+    {
+      "section": "scope",
+      "name": "engine untouched",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "scope",
+      "name": "all 14 ruled lines are on stage",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "scope",
+      "name": "every retired wording is gone from the deck",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "scope",
+      "name": "R-07: the on-screen cold-open line is untouched",
+      "ok": true,
+      "detail": ""
+    }
+  ]
+}

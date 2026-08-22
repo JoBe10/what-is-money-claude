@@ -1,0 +1,641 @@
+{
+  "variant": "standard",
+  "revision": "R3.1",
+  "date": "2026-07-30T03:25:40.360Z",
+  "checks": 105,
+  "failures": 0,
+  "screenshots": 75,
+  "consoleLines": 0,
+  "results": [
+    {
+      "section": "direct-entry",
+      "name": "3-00-waypoint-function b0",
+      "ok": true,
+      "detail": "wayline b0 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-00-waypoint-function b1",
+      "ok": true,
+      "detail": "wayline b1 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-00-waypoint-function b2",
+      "ok": true,
+      "detail": "wayline b2 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-01-the-three-functions b0",
+      "ok": true,
+      "detail": "functions b0 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-01-the-three-functions b1",
+      "ok": true,
+      "detail": "functions b1 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-01-the-three-functions b2",
+      "ok": true,
+      "detail": "functions b2 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-01-the-three-functions b3",
+      "ok": true,
+      "detail": "functions b3 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-01-the-three-functions b4",
+      "ok": true,
+      "detail": "functions b4 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-01-the-three-functions b5",
+      "ok": true,
+      "detail": "functions b5 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-02-the-functions-separate b0",
+      "ok": true,
+      "detail": "separate b0 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-02-the-functions-separate b1",
+      "ok": true,
+      "detail": "separate b1 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-02-the-functions-separate b2",
+      "ok": true,
+      "detail": "separate b2 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-02-the-functions-separate b3",
+      "ok": true,
+      "detail": "separate b3 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-03-the-order-of-monetization b0",
+      "ok": true,
+      "detail": "3-03-the-order-of-monetization b0 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-03-the-order-of-monetization b1",
+      "ok": true,
+      "detail": "3-03-the-order-of-monetization b1 exact"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "ladder-geometry 3-03-the-order-of-monetization b1",
+      "ok": true,
+      "detail": "geometry exact ()"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-03-the-order-of-monetization b2",
+      "ok": true,
+      "detail": "3-03-the-order-of-monetization b2 exact"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "ladder-geometry 3-03-the-order-of-monetization b2",
+      "ok": true,
+      "detail": "geometry exact (collectible Δ=0.00, g1 Δ=0.02)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-03-the-order-of-monetization b3",
+      "ok": true,
+      "detail": "3-03-the-order-of-monetization b3 exact"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "ladder-geometry 3-03-the-order-of-monetization b3",
+      "ok": true,
+      "detail": "geometry exact (collectible Δ=0.00, sov Δ=0.04, g1 Δ=0.02, g2 Δ=0.00)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-03-the-order-of-monetization b4",
+      "ok": true,
+      "detail": "3-03-the-order-of-monetization b4 exact"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "ladder-geometry 3-03-the-order-of-monetization b4",
+      "ok": true,
+      "detail": "geometry exact (collectible Δ=0.00, sov Δ=0.04, moe Δ=0.02, g1 Δ=0.02, g2 Δ=0.00, g3 Δ=0.03)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-03-the-order-of-monetization b5",
+      "ok": true,
+      "detail": "3-03-the-order-of-monetization b5 exact"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "ladder-geometry 3-03-the-order-of-monetization b5",
+      "ok": true,
+      "detail": "geometry exact (collectible Δ=0.00, sov Δ=0.04, moe Δ=0.02, uoa Δ=0.00, g1 Δ=0.02, g2 Δ=0.00, g3 Δ=0.03)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-03-the-order-of-monetization b6",
+      "ok": true,
+      "detail": "3-03-the-order-of-monetization b6 exact"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "ladder-geometry 3-03-the-order-of-monetization b6",
+      "ok": true,
+      "detail": "geometry exact (collectible Δ=0.00, sov Δ=0.04, moe Δ=0.02, uoa Δ=0.00, g1 Δ=0.02, g2 Δ=0.00, g3 Δ=0.03)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-04-stage-signatures b0",
+      "ok": true,
+      "detail": "3-04-stage-signatures b0 exact"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "ladder-geometry 3-04-stage-signatures b0",
+      "ok": true,
+      "detail": "geometry exact (collectible Δ=0.00, sov Δ=0.04, moe Δ=0.02, uoa Δ=0.00, g1 Δ=0.02, g2 Δ=0.00, g3 Δ=0.03)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-04-stage-signatures b1",
+      "ok": true,
+      "detail": "3-04-stage-signatures b1 exact"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "ladder-geometry 3-04-stage-signatures b1",
+      "ok": true,
+      "detail": "geometry exact (collectible Δ=0.00, sov Δ=0.04, moe Δ=0.02, uoa Δ=0.00, g1 Δ=0.02, g2 Δ=0.00, g3 Δ=0.03)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-04-stage-signatures b2",
+      "ok": true,
+      "detail": "3-04-stage-signatures b2 exact"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "ladder-geometry 3-04-stage-signatures b2",
+      "ok": true,
+      "detail": "geometry exact (collectible Δ=0.00, sov Δ=0.04, moe Δ=0.02, uoa Δ=0.00, g1 Δ=0.02, g2 Δ=0.00, g3 Δ=0.03)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-05-the-palladium-test b0",
+      "ok": true,
+      "detail": "palladium b0 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-05-the-palladium-test b1",
+      "ok": true,
+      "detail": "palladium b1 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-05-the-palladium-test b2",
+      "ok": true,
+      "detail": "palladium b2 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-05-the-palladium-test b3",
+      "ok": true,
+      "detail": "palladium b3 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-05-the-palladium-test b4",
+      "ok": true,
+      "detail": "palladium b4 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-05-the-palladium-test b5",
+      "ok": true,
+      "detail": "palladium b5 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-06-what-your-money-is b0",
+      "ok": true,
+      "detail": "tower b0 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-06-what-your-money-is b1",
+      "ok": true,
+      "detail": "tower b1 exact"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "tower-geometry 3-06-what-your-money-is b1",
+      "ok": true,
+      "detail": "widths base 420 < deposits 600 < apps 780"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-06-what-your-money-is b2",
+      "ok": true,
+      "detail": "tower b2 exact"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "tower-geometry 3-06-what-your-money-is b2",
+      "ok": true,
+      "detail": "widths base 420 < deposits 600 < apps 780"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-06-what-your-money-is b3",
+      "ok": true,
+      "detail": "tower b3 exact"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "tower-geometry 3-06-what-your-money-is b3",
+      "ok": true,
+      "detail": "widths base 420 < deposits 600 < apps 780"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-06-what-your-money-is b4",
+      "ok": true,
+      "detail": "tower b4 exact"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "tower-geometry 3-06-what-your-money-is b4",
+      "ok": true,
+      "detail": "widths base 420 < deposits 600 < apps 780"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-06-what-your-money-is b5",
+      "ok": true,
+      "detail": "tower b5 exact"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "tower-geometry 3-06-what-your-money-is b5",
+      "ok": true,
+      "detail": "widths base 420 < deposits 600 < apps 780"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-06-what-your-money-is b6",
+      "ok": true,
+      "detail": "tower b6 exact"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "tower-geometry 3-06-what-your-money-is b6",
+      "ok": true,
+      "detail": "widths base 420 < deposits 600 < apps 780"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-07-where-bitcoin-is b0",
+      "ok": true,
+      "detail": "3-07-where-bitcoin-is b0 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-07-where-bitcoin-is b1",
+      "ok": true,
+      "detail": "3-07-where-bitcoin-is b1 exact"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "ladder-geometry 3-07-where-bitcoin-is b1",
+      "ok": true,
+      "detail": "geometry exact (collectible Δ=0.00, sov Δ=0.04, moe Δ=0.02, uoa Δ=0.00, g1 Δ=0.02, g2 Δ=0.00, g3 Δ=0.03)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-07-where-bitcoin-is b2",
+      "ok": true,
+      "detail": "3-07-where-bitcoin-is b2 exact"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "ladder-geometry 3-07-where-bitcoin-is b2",
+      "ok": true,
+      "detail": "geometry exact (collectible Δ=0.00, sov Δ=0.04, moe Δ=0.02, uoa Δ=0.00, g1 Δ=0.02, g2 Δ=0.00, g3 Δ=0.03)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-07-where-bitcoin-is b3",
+      "ok": true,
+      "detail": "3-07-where-bitcoin-is b3 exact"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "ladder-geometry 3-07-where-bitcoin-is b3",
+      "ok": true,
+      "detail": "geometry exact (collectible Δ=0.00, sov Δ=0.04, moe Δ=0.02, uoa Δ=0.00, g1 Δ=0.02, g2 Δ=0.00, g3 Δ=0.03)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-07-where-bitcoin-is b4",
+      "ok": true,
+      "detail": "3-07-where-bitcoin-is b4 exact"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "ladder-geometry 3-07-where-bitcoin-is b4",
+      "ok": true,
+      "detail": "geometry exact (collectible Δ=0.00, sov Δ=0.04, moe Δ=0.02, uoa Δ=0.00, g1 Δ=0.02, g2 Δ=0.00, g3 Δ=0.03)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-07-where-bitcoin-is b5",
+      "ok": true,
+      "detail": "3-07-where-bitcoin-is b5 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-08-waypoint-judge b0",
+      "ok": true,
+      "detail": "wayline b0 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-08-waypoint-judge b1",
+      "ok": true,
+      "detail": "wayline b1 exact"
+    },
+    {
+      "section": "direct-entry",
+      "name": "3-08-waypoint-judge b2",
+      "ok": true,
+      "detail": "wayline b2 exact"
+    },
+    {
+      "section": "mid-animation-refresh",
+      "name": "3-00-waypoint-function b2",
+      "ok": true,
+      "detail": "wayline b2 exact"
+    },
+    {
+      "section": "mid-animation-refresh",
+      "name": "3-03-the-order-of-monetization b1",
+      "ok": true,
+      "detail": "3-03-the-order-of-monetization b1 exact"
+    },
+    {
+      "section": "mid-animation-refresh",
+      "name": "3-05-the-palladium-test b2",
+      "ok": true,
+      "detail": "palladium b2 exact"
+    },
+    {
+      "section": "mid-animation-refresh",
+      "name": "3-06-what-your-money-is b1",
+      "ok": true,
+      "detail": "tower b1 exact"
+    },
+    {
+      "section": "mid-animation-refresh",
+      "name": "3-06-what-your-money-is b4",
+      "ok": true,
+      "detail": "tower b4 exact"
+    },
+    {
+      "section": "mid-animation-refresh",
+      "name": "3-06-what-your-money-is b6",
+      "ok": true,
+      "detail": "tower b6 exact"
+    },
+    {
+      "section": "named-frames",
+      "name": "3-00-waypoint-function ignition (live)",
+      "ok": true,
+      "detail": "wayline b2 exact"
+    },
+    {
+      "section": "named-frames",
+      "name": "3-08-waypoint-judge ignition (live)",
+      "ok": true,
+      "detail": "wayline b2 exact"
+    },
+    {
+      "section": "named-frames",
+      "name": "ladder thresholds live b2",
+      "ok": true,
+      "detail": "3-03-the-order-of-monetization b2 exact"
+    },
+    {
+      "section": "named-frames",
+      "name": "threshold geometry live b2",
+      "ok": true,
+      "detail": "geometry exact (collectible Δ=0.00, g1 Δ=0.02)"
+    },
+    {
+      "section": "named-frames",
+      "name": "ladder thresholds live b3",
+      "ok": true,
+      "detail": "3-03-the-order-of-monetization b3 exact"
+    },
+    {
+      "section": "named-frames",
+      "name": "threshold geometry live b3",
+      "ok": true,
+      "detail": "geometry exact (collectible Δ=0.00, sov Δ=0.04, g1 Δ=0.02, g2 Δ=0.00)"
+    },
+    {
+      "section": "named-frames",
+      "name": "ladder thresholds live b4",
+      "ok": true,
+      "detail": "3-03-the-order-of-monetization b4 exact"
+    },
+    {
+      "section": "named-frames",
+      "name": "threshold geometry live b4",
+      "ok": true,
+      "detail": "geometry exact (collectible Δ=0.00, sov Δ=0.04, moe Δ=0.02, g1 Δ=0.02, g2 Δ=0.00, g3 Δ=0.03)"
+    },
+    {
+      "section": "named-frames",
+      "name": "ladder thresholds live b5",
+      "ok": true,
+      "detail": "3-03-the-order-of-monetization b5 exact"
+    },
+    {
+      "section": "named-frames",
+      "name": "threshold geometry live b5",
+      "ok": true,
+      "detail": "geometry exact (collectible Δ=0.00, sov Δ=0.04, moe Δ=0.02, uoa Δ=0.00, g1 Δ=0.02, g2 Δ=0.00, g3 Δ=0.03)"
+    },
+    {
+      "section": "named-frames",
+      "name": "ladder thresholds live b6",
+      "ok": true,
+      "detail": "3-03-the-order-of-monetization b6 exact"
+    },
+    {
+      "section": "named-frames",
+      "name": "threshold geometry live b6",
+      "ok": true,
+      "detail": "geometry exact (collectible Δ=0.00, sov Δ=0.04, moe Δ=0.02, uoa Δ=0.00, g1 Δ=0.02, g2 Δ=0.00, g3 Δ=0.03)"
+    },
+    {
+      "section": "named-frames",
+      "name": "the placed bitcoin glyph (live)",
+      "ok": true,
+      "detail": "3-07-where-bitcoin-is b2 exact"
+    },
+    {
+      "section": "named-frames",
+      "name": "placement geometry",
+      "ok": true,
+      "detail": "geometry exact (collectible Δ=0.00, sov Δ=0.04, moe Δ=0.02, uoa Δ=0.00, g1 Δ=0.02, g2 Δ=0.00, g3 Δ=0.03)"
+    },
+    {
+      "section": "named-frames",
+      "name": "palladium second epoch (live)",
+      "ok": true,
+      "detail": "palladium b4 exact"
+    },
+    {
+      "section": "named-frames",
+      "name": "tower live b1",
+      "ok": true,
+      "detail": "tower b1 exact"
+    },
+    {
+      "section": "named-frames",
+      "name": "tower geometry live b1",
+      "ok": true,
+      "detail": "widths base 420 < deposits 600 < apps 780"
+    },
+    {
+      "section": "named-frames",
+      "name": "tower live b2",
+      "ok": true,
+      "detail": "tower b2 exact"
+    },
+    {
+      "section": "named-frames",
+      "name": "tower geometry live b2",
+      "ok": true,
+      "detail": "widths base 420 < deposits 600 < apps 780"
+    },
+    {
+      "section": "named-frames",
+      "name": "tower live b3",
+      "ok": true,
+      "detail": "tower b3 exact"
+    },
+    {
+      "section": "named-frames",
+      "name": "tower geometry live b3",
+      "ok": true,
+      "detail": "widths base 420 < deposits 600 < apps 780"
+    },
+    {
+      "section": "named-frames",
+      "name": "tower live b4",
+      "ok": true,
+      "detail": "tower b4 exact"
+    },
+    {
+      "section": "named-frames",
+      "name": "tower geometry live b4",
+      "ok": true,
+      "detail": "widths base 420 < deposits 600 < apps 780"
+    },
+    {
+      "section": "named-frames",
+      "name": "tower live b5",
+      "ok": true,
+      "detail": "tower b5 exact"
+    },
+    {
+      "section": "named-frames",
+      "name": "tower geometry live b5",
+      "ok": true,
+      "detail": "widths base 420 < deposits 600 < apps 780"
+    },
+    {
+      "section": "named-frames",
+      "name": "tower live b6",
+      "ok": true,
+      "detail": "tower b6 exact"
+    },
+    {
+      "section": "named-frames",
+      "name": "tower geometry live b6",
+      "ok": true,
+      "detail": "widths base 420 < deposits 600 < apps 780"
+    },
+    {
+      "section": "named-frames",
+      "name": "tremor: the base dips once",
+      "ok": true,
+      "detail": "min base opacity 0.42"
+    },
+    {
+      "section": "named-frames",
+      "name": "tremor: the shudder reaches the layers above",
+      "ok": true,
+      "detail": "[[\"14.0\",\"7.0\"],[\"14.0\",\"7.0\"],[\"14.0\",\"7.0\"],[\"14.0\",\"7.0\"],[\"14.0\",\"7.0\"],[\"14.0\",\"7.0\"],[\"14.0\",\"7.0\"],[\"14.0\",\"7.0\"],[\"14.0\",\"7.0\"],[\"14.0\",\"7.0\"],[\"14.0\",\"7.0\"],[\"14.0\",\"7.0\"],[\"14.0\",\"7.0\"],[\"14.0\",\"7.0\"],[\"14.0\",\"7.0\"],[\"14.0\",\"7.2\"],[\"14.0\",\"7.6\"],[\"14.0\",\"8.1\"],[\"14.0\",\"8.6\"],[\"14.0\",\"9.1\"],[\"14.0\",\"9.4\"],[\"14.0\",\"9.5\"],[\"14.0\",\"9.5\"],[\"14.0\",\"9.3\"],[\"14.1\",\"8.9\"],[\"14.4\",\"8.3\"],[\"14.8\",\"7.7\"],[\"15.3\",\"7.0\"],[\"15.8\",\"6.3\"],[\"16.2\",\"5.9\"],[\"16.4\",\"5.6\"],[\"16.5\",\"5.5\"],[\"16.4\",\"5.5\"],[\"16.1\",\"5.7\"],[\"15.7\",\"5.9\"],[\"15.1\",\"6.3\"],[\"14.4\",\"6.7\"],[\"13.7\",\"7.1\"],[\"13.1\",\"7.4\"],[\"12.7\",\"7.7\"],[\"12.5\",\"7.8\"],[\"12.5\",\"7.8\"],[\"12.6\",\"7.8\"],[\"12.8\",\"7.7\"],[\"13.1\",\"7.6\"],[\"13.4\",\"7.5\"],[\"13.9\",\"7.3\"],[\"14.2\",\"7.2\"],[\"14.5\",\"7.1\"],[\"14.7\",\"7.0\"],[\"14.8\",\"7.0\"],[\"14.8\",\"7.0\"],[\"14.8\",\"7.0\"],[\"14.7\",\"7.0\"],[\"14.6\",\"7.0\"],[\"14.4\",\"7.0\"],[\"14.3\",\"7.0\"],[\"14.2\",\"7.0\"],[\"14.1\",\"7.0\"],[\"14.0\",\"7.0\"],[\"14.0\",\"7.0\"],[\"14.0\",\"7.0\"],[\"14.0\",\"7.0\"],[\"14.0\",\"7.0\"],[\"14.0\",\"7.0\"],[\"14.0\",\"7.0\"],[\"14.0\",\"7.0\"],[\"14.0\",\"7.0\"],[\"14.0\",\"7.0\"],[\"14.0\",\"7.0\"],[\"14.0\",\"7.0\"],[\"14.0\",\"7.0\"],[\"14.0\",\"7.0\"],[\"14.0\",\"7.0\"],[\"14.0\",\"7.0\"],[\"14.0\",\"7.0\"],[\"14.0\",\"7.0\"],[\"14.0\",\"7.0\"],[\"14.0\",\"7.0\"],[\"14.0\",\"7.0\"],[\"14.0\",\"7.0\"],[\"14.0\",\"7.0\"],[\"14.0\",\"7.0\"],[\"14.0\",\"7.0\"],[\"14.0\",\"7.0\"]]"
+    },
+    {
+      "section": "named-frames",
+      "name": "tremor: restrained (≤4px, never collapses)",
+      "ok": true,
+      "detail": "max slab displacement 2.50px"
+    },
+    {
+      "section": "named-frames",
+      "name": "tremor settles back to its exact state",
+      "ok": true,
+      "detail": "tower b4 exact"
+    },
+    {
+      "section": "named-frames",
+      "name": "the held question holds (live)",
+      "ok": true,
+      "detail": "tower b6 exact"
+    },
+    {
+      "section": "named-frames",
+      "name": "held-question geometry",
+      "ok": true,
+      "detail": "widths base 420 < deposits 600 < apps 780"
+    },
+    {
+      "section": "named-frames",
+      "name": "ladder handoff resolves to 3-04 b0",
+      "ok": true,
+      "detail": "3-04-stage-signatures b0 exact"
+    },
+    {
+      "section": "named-frames",
+      "name": "seam crossfade lands 4-01 clean",
+      "ok": true,
+      "detail": "{\"id\":\"4-01-ideal-store-of-value\",\"containers\":1}"
+    }
+  ]
+}

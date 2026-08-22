@@ -1,0 +1,207 @@
+[
+  {
+    "name": "arrow-count 01-eighty-thousand-hours",
+    "pass": true,
+    "detail": "builds=2 arrows=2"
+  },
+  {
+    "name": "verbatim 01-eighty-thousand-hours",
+    "pass": true,
+    "detail": "byte-identical after U+2019 normalization"
+  },
+  {
+    "name": "banned-terms 01-eighty-thousand-hours",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "no-claim 01-eighty-thousand-hours",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "no-bitcoin 01-eighty-thousand-hours",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "american-english 01-eighty-thousand-hours",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "typographic-apostrophes 01-eighty-thousand-hours",
+    "pass": true,
+    "detail": "no ASCII apostrophe between letters"
+  },
+  {
+    "name": "arrow-count 02-the-conversion",
+    "pass": true,
+    "detail": "builds=3 arrows=3"
+  },
+  {
+    "name": "verbatim 02-the-conversion",
+    "pass": true,
+    "detail": "byte-identical after U+2019 normalization"
+  },
+  {
+    "name": "banned-terms 02-the-conversion",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "no-claim 02-the-conversion",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "no-bitcoin 02-the-conversion",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "american-english 02-the-conversion",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "typographic-apostrophes 02-the-conversion",
+    "pass": true,
+    "detail": "no ASCII apostrophe between letters"
+  },
+  {
+    "name": "arrow-count 03-what-is-money",
+    "pass": true,
+    "detail": "builds=5 arrows=5"
+  },
+  {
+    "name": "verbatim 03-what-is-money",
+    "pass": true,
+    "detail": "byte-identical after U+2019 normalization"
+  },
+  {
+    "name": "banned-terms 03-what-is-money",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "no-claim 03-what-is-money",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "no-bitcoin 03-what-is-money",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "american-english 03-what-is-money",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "typographic-apostrophes 03-what-is-money",
+    "pass": true,
+    "detail": "no ASCII apostrophe between letters"
+  },
+  {
+    "name": "arrow-count 04-the-stakes",
+    "pass": true,
+    "detail": "builds=1 arrows=1"
+  },
+  {
+    "name": "verbatim 04-the-stakes",
+    "pass": true,
+    "detail": "byte-identical after U+2019 normalization"
+  },
+  {
+    "name": "banned-terms 04-the-stakes",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "no-claim 04-the-stakes",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "no-bitcoin 04-the-stakes",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "american-english 04-the-stakes",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "typographic-apostrophes 04-the-stakes",
+    "pass": true,
+    "detail": "no ASCII apostrophe between letters"
+  },
+  {
+    "name": "arrow-count 05-the-promise",
+    "pass": false,
+    "detail": "builds=5 arrows=4"
+  },
+  {
+    "name": "verbatim 05-the-promise",
+    "pass": true,
+    "detail": "byte-identical after U+2019 normalization"
+  },
+  {
+    "name": "banned-terms 05-the-promise",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "no-claim 05-the-promise",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "no-bitcoin 05-the-promise",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "american-english 05-the-promise",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "typographic-apostrophes 05-the-promise",
+    "pass": true,
+    "detail": "no ASCII apostrophe between letters"
+  },
+  {
+    "name": "banned-terms slides.css",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "doc has script standard",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "doc placeholder standard gone",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "doc has pacing rule in 3.5",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "sources WIM-001 present",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "sourcing removed from 1-01 notes",
+    "pass": true,
+    "detail": ""
+  }
+]

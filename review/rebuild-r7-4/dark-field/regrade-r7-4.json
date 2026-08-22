@@ -1,0 +1,43 @@
+{
+  "phase": "R7.4",
+  "passes": [
+    {
+      "name": "surgeon",
+      "bytes": 292585,
+      "file": "surgeon--off-grade.png",
+      "crop": [
+        0.02,
+        0.3,
+        0.8,
+        1
+      ],
+      "falloff": [
+        0.62,
+        1.02
+      ],
+      "crush": [
+        26,
+        62
+      ]
+    },
+    {
+      "name": "meal",
+      "bytes": 1354868,
+      "file": "meal--off-grade.png",
+      "crop": [
+        0.1,
+        0.14,
+        0.92,
+        0.98
+      ],
+      "falloff": [
+        0.58,
+        0.99
+      ],
+      "crush": [
+        20,
+        54
+      ]
+    }
+  ]
+}

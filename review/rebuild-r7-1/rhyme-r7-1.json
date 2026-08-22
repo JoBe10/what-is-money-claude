@@ -1,0 +1,43 @@
+{
+  "phase": "R7.1",
+  "readings": [
+    {
+      "backgroundImage": "radial-gradient(circle at 50% 42%, rgb(254, 244, 232) 0%, rgb(253, 233, 212) 55%, color(srgb 0.987922 0.85302 0.700078) 100%)",
+      "boxShadow": "rgba(253, 233, 212, 0.38) 0px 0px 34.0032px 0px, rgba(253, 233, 212, 0.22) 0px 0px 110px 0px",
+      "borderRadius": "50%",
+      "classes": "luminous-disc s1q-token",
+      "aspect": "1.000"
+    },
+    {
+      "backgroundImage": "radial-gradient(circle at 50% 42%, rgb(254, 244, 232) 0%, rgb(253, 233, 212) 55%, color(srgb 0.987922 0.85302 0.700078) 100%)",
+      "boxShadow": "rgba(253, 233, 212, 0.38) 0px 0px 34.0032px 0px, rgba(253, 233, 212, 0.22) 0px 0px 110px 0px",
+      "borderRadius": "50%",
+      "classes": "luminous-disc s4-claim-object__disc",
+      "aspect": "1.000"
+    }
+  ],
+  "checks": 4,
+  "failures": 0,
+  "results": [
+    {
+      "name": "the claim and the token render from one class",
+      "ok": true,
+      "detail": "luminous-disc s1q-token / luminous-disc s4-claim-object__disc"
+    },
+    {
+      "name": "identical gradient",
+      "ok": true,
+      "detail": "radial-gradient(circle at 50% 42%, rgb(254, 244, 232) 0%, rgb(253, 233, 212) 55%, color(sr"
+    },
+    {
+      "name": "identical glow color",
+      "ok": true,
+      "detail": "rgba(253, 233, 212, 0.38)|rgba(253, 233, 212, 0.22)"
+    },
+    {
+      "name": "both are circular",
+      "ok": true,
+      "detail": "1.000 / 1.000"
+    }
+  ]
+}

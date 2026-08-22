@@ -1,0 +1,128 @@
+{
+  "phase": "R7.1",
+  "base": "b029e4d",
+  "checks": 24,
+  "failures": 0,
+  "results": [
+    {
+      "name": "FREEZE: comparisonRows byte-identical to main",
+      "ok": true,
+      "detail": "10 properties × 5 candidates = 50 scores unchanged"
+    },
+    {
+      "name": "FREEZE: _comparison-data.js untouched entirely",
+      "ok": true,
+      "detail": "file identical"
+    },
+    {
+      "name": "FREEZE: 4.23 slide file untouched",
+      "ok": true,
+      "detail": "4.23 is the frozen final frame (C4)"
+    },
+    {
+      "name": "no <img> or raster asset reference anywhere in src/",
+      "ok": true,
+      "detail": "none"
+    },
+    {
+      "name": "assets/images holds only the favicon",
+      "ok": true,
+      "detail": "icon_bitcoin.png"
+    },
+    {
+      "name": "the photographic components are gone",
+      "ok": true,
+      "detail": "GoodsCluster.js and src/assets.js deleted"
+    },
+    {
+      "name": "KickerLabel has exactly one caller, the frozen 4.23",
+      "ok": true,
+      "detail": "23-investment-case-from-first-principles.js"
+    },
+    {
+      "name": "QuietKicker is used by exactly the two named frames",
+      "ok": true,
+      "detail": "16-the-comparison.js, 20b-what-would-change-these-scores.js"
+    },
+    {
+      "name": "no retired per-slide header selectors remain in CSS",
+      "ok": true,
+      "detail": "only the three survivors"
+    },
+    {
+      "name": "no boxed-panel borders on Section 4 selectors",
+      "ok": true,
+      "detail": "none"
+    },
+    {
+      "name": "\"Don't trust. Verify.\" on stage exactly twice",
+      "ok": true,
+      "detail": "2 occurrence(s)"
+    },
+    {
+      "name": "banned term absent: \"engineered\"",
+      "ok": true,
+      "detail": "absent"
+    },
+    {
+      "name": "banned term absent: \"purpose-built\"",
+      "ok": true,
+      "detail": "absent"
+    },
+    {
+      "name": "banned term absent: \"designed as a solution\"",
+      "ok": true,
+      "detail": "absent"
+    },
+    {
+      "name": "banned term absent: \"repurposed\"",
+      "ok": true,
+      "detail": "absent"
+    },
+    {
+      "name": "American English: \"labour\" → \"labor\"",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "American English: \"specialised\" → \"specialized\"",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "American English: \"centralised\" → \"centralized\"",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "American English: \"recognised\" → \"recognized\"",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "American English: \"judgement\" → \"judgment\"",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "American English: \"jewellery\" → \"jewelry\"",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "American English: \"colour\" → \"color\"",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "typographic apostrophes in visible copy",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "[→] count equals build count on every slide",
+      "ok": true,
+      "detail": "89 builds, 89 arrows across 27 slides"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="96" height="96" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:#e9e4da">
+<!-- measure C — the dividers: Drafting dividers spanning a dimension: hinge dot at the apex, two legs, the measured chord drawn between their tips. -->
+<path d="M24 8 L13 36 M24 8 L35 36"/>
+        <path d="M13 36 C17 32.5 31 32.5 35 36"/>
+        <circle cx="24" cy="8" r="2" fill="currentColor" stroke="none"/><circle cx="13" cy="36" r="1.8" fill="currentColor" stroke="none"/><circle cx="35" cy="36" r="1.8" fill="currentColor" stroke="none"/>
+</svg>

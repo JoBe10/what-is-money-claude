@@ -1,0 +1,507 @@
+{
+  "date": "2026-07-28T14:54:30.951Z",
+  "checks": 73,
+  "failures": 0,
+  "pacingTable": [
+    {
+      "slide": "00-waypoint-origin",
+      "builds": 1,
+      "arrows": 1,
+      "match": true
+    },
+    {
+      "slide": "01-the-world-without-it",
+      "builds": 3,
+      "arrows": 3,
+      "match": true
+    },
+    {
+      "slide": "02-the-discovery",
+      "builds": 4,
+      "arrows": 4,
+      "match": true
+    },
+    {
+      "slide": "03-the-convergence",
+      "builds": 3,
+      "arrows": 3,
+      "match": true
+    },
+    {
+      "slide": "04-the-competition",
+      "builds": 5,
+      "arrows": 5,
+      "match": true
+    },
+    {
+      "slide": "05-the-rail-rises",
+      "builds": 3,
+      "arrows": 3,
+      "match": true
+    },
+    {
+      "slide": "06-two-survivors",
+      "builds": 5,
+      "arrows": 5,
+      "match": true
+    },
+    {
+      "slide": "07-the-abstraction-ladder",
+      "builds": 4,
+      "arrows": 4,
+      "match": true
+    },
+    {
+      "slide": "08-the-severance",
+      "builds": 4,
+      "arrows": 4,
+      "match": true
+    },
+    {
+      "slide": "09-the-pattern",
+      "builds": 6,
+      "arrows": 6,
+      "match": true
+    }
+  ],
+  "results": [
+    {
+      "section": "pacing-rule",
+      "name": "00-waypoint-origin.js",
+      "ok": true,
+      "detail": "builds=1 arrows=1"
+    },
+    {
+      "section": "pacing-rule",
+      "name": "01-the-world-without-it.js",
+      "ok": true,
+      "detail": "builds=3 arrows=3"
+    },
+    {
+      "section": "pacing-rule",
+      "name": "02-the-discovery.js",
+      "ok": true,
+      "detail": "builds=4 arrows=4"
+    },
+    {
+      "section": "pacing-rule",
+      "name": "03-the-convergence.js",
+      "ok": true,
+      "detail": "builds=3 arrows=3"
+    },
+    {
+      "section": "pacing-rule",
+      "name": "04-the-competition.js",
+      "ok": true,
+      "detail": "builds=5 arrows=5"
+    },
+    {
+      "section": "pacing-rule",
+      "name": "05-the-rail-rises.js",
+      "ok": true,
+      "detail": "builds=3 arrows=3"
+    },
+    {
+      "section": "pacing-rule",
+      "name": "06-two-survivors.js",
+      "ok": true,
+      "detail": "builds=5 arrows=5"
+    },
+    {
+      "section": "pacing-rule",
+      "name": "07-the-abstraction-ladder.js",
+      "ok": true,
+      "detail": "builds=4 arrows=4"
+    },
+    {
+      "section": "pacing-rule",
+      "name": "08-the-severance.js",
+      "ok": true,
+      "detail": "builds=4 arrows=4"
+    },
+    {
+      "section": "pacing-rule",
+      "name": "09-the-pattern.js",
+      "ok": true,
+      "detail": "builds=6 arrows=6"
+    },
+    {
+      "section": "verbatim-script",
+      "name": "00-waypoint-origin.js",
+      "ok": true,
+      "detail": "identical after apostrophe normalization"
+    },
+    {
+      "section": "verbatim-script",
+      "name": "01-the-world-without-it.js",
+      "ok": true,
+      "detail": "identical after apostrophe normalization"
+    },
+    {
+      "section": "verbatim-script",
+      "name": "02-the-discovery.js",
+      "ok": true,
+      "detail": "identical after apostrophe normalization"
+    },
+    {
+      "section": "verbatim-script",
+      "name": "03-the-convergence.js",
+      "ok": true,
+      "detail": "identical after apostrophe normalization"
+    },
+    {
+      "section": "verbatim-script",
+      "name": "04-the-competition.js",
+      "ok": true,
+      "detail": "identical after apostrophe normalization"
+    },
+    {
+      "section": "verbatim-script",
+      "name": "05-the-rail-rises.js",
+      "ok": true,
+      "detail": "identical after apostrophe normalization"
+    },
+    {
+      "section": "verbatim-script",
+      "name": "06-two-survivors.js",
+      "ok": true,
+      "detail": "identical after apostrophe normalization"
+    },
+    {
+      "section": "verbatim-script",
+      "name": "07-the-abstraction-ladder.js",
+      "ok": true,
+      "detail": "identical after apostrophe normalization"
+    },
+    {
+      "section": "verbatim-script",
+      "name": "08-the-severance.js",
+      "ok": true,
+      "detail": "identical after apostrophe normalization"
+    },
+    {
+      "section": "verbatim-script",
+      "name": "09-the-pattern.js",
+      "ok": true,
+      "detail": "identical after apostrophe normalization"
+    },
+    {
+      "section": "verbatim-script",
+      "name": "ASCII apostrophes in brief scripts (normalized at install)",
+      "ok": true,
+      "detail": "36"
+    },
+    {
+      "section": "on-screen-copy",
+      "name": "00-waypoint-origin.js: \"Ask where it came from.…\"",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "on-screen-copy",
+      "name": "00-waypoint-origin.js: \"Ask what it must do.…\"",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "on-screen-copy",
+      "name": "00-waypoint-origin.js: \"Ask how you would judge anything that tries …\"",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "on-screen-copy",
+      "name": "01-the-world-without-it.js: \"The coincidence of wants.…\"",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "on-screen-copy",
+      "name": "_triad.js: \"FISHERMAN…\"",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "on-screen-copy",
+      "name": "_triad.js: \"SANDAL-MAKER…\"",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "on-screen-copy",
+      "name": "_triad.js: \"FARMER…\"",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "on-screen-copy",
+      "name": "02-the-discovery.js: \"Money is born the moment someone accepts a g…\"",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "on-screen-copy",
+      "name": "02-the-discovery.js: \"Some goods are easier to sell on than others…\"",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "on-screen-copy",
+      "name": "03-the-convergence.js: \"Nobody decides. Everyone converges.…\"",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "on-screen-copy",
+      "name": "04-the-competition.js: \"Cannot be divided. Half a cow is no cow.…\"",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "on-screen-copy",
+      "name": "04-the-competition.js: \"Dissolves in a rainstorm.…\"",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "on-screen-copy",
+      "name": "04-the-competition.js: \"Scarce only until someone reaches the right …\"",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "on-screen-copy",
+      "name": "04-the-competition.js: \"Rusts. And anyone with a furnace can make mo…\"",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "on-screen-copy",
+      "name": "04-the-competition.js: \"The market keeps re-running one experiment —…\"",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "on-screen-copy",
+      "name": "06-two-survivors.js: \"Run the competition over the whole table.…\"",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "on-screen-copy",
+      "name": "06-two-survivors.js: \"Anything that floats away is out.…\"",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "on-screen-copy",
+      "name": "06-two-survivors.js: \"Anything that rusts, burns, or dissolves is …\"",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "on-screen-copy",
+      "name": "06-two-survivors.js: \"Anything that kills the holder is out.…\"",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "on-screen-copy",
+      "name": "06-two-survivors.js: \"Chemistry leaves two candidates.…\"",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "on-screen-copy",
+      "name": "07-the-abstraction-ladder.js: \"Each rung buys convenience — and pays for it…\"",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "on-screen-copy",
+      "name": "08-the-severance.js: \"1971.…\"",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "on-screen-copy",
+      "name": "08-the-severance.js: \"Redemption ends. For the first time in the r…\"",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "on-screen-copy",
+      "name": "08-the-severance.js: \"What one unit still buys.…\"",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "on-screen-copy",
+      "name": "08-the-severance.js: \"The most universally accepted medium of exch…\"",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "on-screen-copy",
+      "name": "08-the-severance.js: \"Extraordinary at moving value. Measurably po…\"",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "on-screen-copy",
+      "name": "09-the-pattern.js: \"In the free competition, monies fell when so…\"",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "on-screen-copy",
+      "name": "09-the-pattern.js: \"The last incumbent didn’t fall that way — it…\"",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "on-screen-copy",
+      "name": "09-the-pattern.js: \"Either way, the role moves. And the record h…\"",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "on-screen-copy",
+      "name": "EvolutionRail: \"West Africa, 1500s–1800s: industrial shippin…\"",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "on-screen-copy",
+      "name": "EvolutionRail: \"heavy · hard to verify · dangerous to move…\"",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "on-screen-copy",
+      "name": "EvolutionRail: \"Solves verification and division. Trust requ…\"",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "on-screen-copy",
+      "name": "EvolutionRail: \"A claim on gold in a vault. Trust required: …\"",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "on-screen-copy",
+      "name": "EvolutionRail: \"2009: digital · no state, no company · suppl…\"",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "on-screen-copy",
+      "name": "EvolutionRail: \"Very young. Its price still swings far more …\"",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "constitution",
+      "name": "banned term \"engineered\"",
+      "ok": true,
+      "detail": "zero"
+    },
+    {
+      "section": "constitution",
+      "name": "banned term \"purpose-built\"",
+      "ok": true,
+      "detail": "zero"
+    },
+    {
+      "section": "constitution",
+      "name": "banned term \"repurposed\"",
+      "ok": true,
+      "detail": "zero"
+    },
+    {
+      "section": "constitution",
+      "name": "banned term \"designed as a solution\"",
+      "ok": true,
+      "detail": "zero"
+    },
+    {
+      "section": "constitution",
+      "name": "the word \"bitcoin\" absent from Section 2",
+      "ok": true,
+      "detail": "zero"
+    },
+    {
+      "section": "constitution",
+      "name": "claim ladder rung 1 planted (07 script + PAPER riser line)",
+      "ok": true,
+      "detail": "[\n \"07-the-abstraction-ladder.js:4: // for it in trust. The claim ladder’s first rung is planted here, casually,\",\n \"07-the-abstraction-ladder.js:107: [→] Then the second rung: leave the gold in a vault and trade the paper — a claim on gold \",\n \"08-the-severance.js:274: [→] So in August 1971, the redemption window closes. Officially temporary; permanent ever \",\n \"09-the-pattern.js:13: 'The last incumbent didn’t fall that way — it was captured: custody centralized, claims ov\",\n \"09-the-pattern.js:128: [→] The last transition broke the pattern. Gold was never out-competed — nothing categoric\",\n \"09-the-pattern.js:128: [→] The last transition broke the pattern. Gold was never out-competed — nothing categoric\",\n \"EvolutionRail.js:81: { id: 'paper',   label: 'PAPER',   note: 'A claim on gold in a vault. Trust required: the \"\n]"
+    },
+    {
+      "section": "constitution",
+      "name": "British spellings (excluding the brief-verbatim \"cancelled\")",
+      "ok": true,
+      "detail": "zero (cancelled occurrences: 3)"
+    },
+    {
+      "section": "constitution",
+      "name": "\"cancelled\" occurrences (brief-verbatim, disclosed)",
+      "ok": true,
+      "detail": "08-the-severance.js:274: cancelled; 09-the-pattern.js:13: cancelled; 09-the-pattern.js:128: cancelled"
+    },
+    {
+      "section": "constitution",
+      "name": "ASCII apostrophes between letters",
+      "ok": true,
+      "detail": "zero"
+    },
+    {
+      "section": "constitution",
+      "name": "color arc: accent only at ignition + rail active stop",
+      "ok": true,
+      "detail": ".s2o-rail__stop[data-state=\"active\"] .s2o-rail__dot :: background: var(--accent); | .s2o-rail__stop[data-state=\"active\"] .s2o-rail__dot :: box-shadow: 0 0 16px rgba(247, 147, 26, 0.55), 0 0 44px rgba(247, 147, 26, 0.22); | .s2o-waypoint[data-step=\"1\"] .s2o-waypoint__wp[data-index=\"0\"] .s2o-waypoint__dot :: background: var(--accent); | .s2o-waypoint[data-step=\"1\"] .s2o-waypoint__wp[data-index=\"0\"] .s2o-waypoint__dot :: box-shadow: 0 0 18px rgba(247, 147, 26, 0.6), 0 0 56px rgba(247, 147, 26, 0.3);"
+    },
+    {
+      "section": "constitution",
+      "name": "no accent in Section 2 JS",
+      "ok": true,
+      "detail": "zero"
+    },
+    {
+      "section": "provisional",
+      "name": "PROVISIONAL code comment in 08",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "provisional",
+      "name": "no on-screen point values (no numeric end labels)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "provisional",
+      "name": "SOURCES.md WIM-002 stub marked PROVISIONAL",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "provisional",
+      "name": "SOURCES.md WIM-003 present",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "provisional",
+      "name": "SOURCES.md WIM-004 present",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "provisional",
+      "name": "SOURCES.md WIM-005 present",
+      "ok": true,
+      "detail": ""
+    }
+  ]
+}

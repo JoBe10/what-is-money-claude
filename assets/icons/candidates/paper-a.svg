@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="96" height="96" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:#e9e4da">
+<!-- paper A — the folded note: The note with one corner folded: the fold breaks the app-icon rectangle; the medallion ring sits off-center. -->
+<path d="M8.5 14 L32.5 14 L39.5 21 L39.5 34 L8.5 34 Z"/>
+        <path d="M32.5 14 L32.5 21 L39.5 21"/>
+        <circle cx="19" cy="24" r="4.25"/>
+</svg>

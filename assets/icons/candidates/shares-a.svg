@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="96" height="96" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:#e9e4da">
+<!-- shares A — the parted round: The whole with one part taken out of it and set beside it, on its own radius, the same size as the gap it left — a share is a fraction of an enterprise, and the fraction is what you hold. -->
+<path d="M20 27 L20 13 A14 14 0 1 0 34 27 Z"/>
+        <path d="M29 18 L29 4 A14 14 0 0 1 43 18 Z"/>
+        <circle cx="20" cy="27" r="1.6" fill="currentColor" stroke="none"/><circle cx="29" cy="18" r="1.6" fill="currentColor" stroke="none"/>
+</svg>

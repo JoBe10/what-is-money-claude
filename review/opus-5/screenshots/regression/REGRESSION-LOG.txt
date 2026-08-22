@@ -1,0 +1,51 @@
+
+===== TEST 1: MonetisationScene chain (3-06..3-11) — SECOND PASS =====
+PASS 1 ends at: 3-11-where-is-bitcoin
+PASS 1 visible: ["The Path","The Four Stages of Monetisation","COLLECTIBLE","STORE OF VALUE","MEDIUM OF EXCHANGE","UNIT OF ACCOUNT","₿","BITCOIN IS HERE","Bitcoin is transitioning from collectible to store of value.","Bitcoin has graduated from a niche collectible to a recognised monetary asset.","Increasingly held by institutions, co
+PASS 2 ends at: 3-11-where-is-bitcoin
+PASS 2 visible: ["The Path","The Four Stages of Monetisation","COLLECTIBLE","STORE OF VALUE","MEDIUM OF EXCHANGE","UNIT OF ACCOUNT","₿","BITCOIN IS HERE","Bitcoin is transitioning from collectible to store of value.","Bitcoin has graduated from a niche collectible to a recognised monetary asset.","Increasingly held by institutions, co
+>>> RESULT: pass1 === pass2 ? true  OK
+
+--- Pass 2, each chain slide ---
+  3-06-monetisation-intro: ["The Path","The Four Stages of Monetisation","COLLECTIBLE","STORE OF VALUE","MEDIUM OF EXCHANGE","UNIT OF ACCOUNT","Every monetary good in history that emerged organically followed this pattern. This
+  3-07-stage-collectible: ["The Path","The Four Stages of Monetisation","COLLECTIBLE","STORE OF VALUE","MEDIUM OF EXCHANGE","UNIT OF ACCOUNT","Every monetary good in history that emerged organically followed this pattern. This
+  3-08-stage-store-of-value: ["The Path","The Four Stages of Monetisation","COLLECTIBLE","STORE OF VALUE","MEDIUM OF EXCHANGE","UNIT OF ACCOUNT","Every monetary good in history that emerged organically followed this pattern. This
+  3-09-stage-medium-of-exchange: ["The Path","The Four Stages of Monetisation","COLLECTIBLE","STORE OF VALUE","MEDIUM OF EXCHANGE","UNIT OF ACCOUNT","Every monetary good in history that emerged organically followed this pattern. This
+  3-10-stage-unit-of-account: ["The Path","The Four Stages of Monetisation","COLLECTIBLE","STORE OF VALUE","MEDIUM OF EXCHANGE","UNIT OF ACCOUNT","Every monetary good in history that emerged organically followed this pattern. This
+  3-11-where-is-bitcoin: ["The Path","The Four Stages of Monetisation","COLLECTIBLE","STORE OF VALUE","MEDIUM OF EXCHANGE","UNIT OF ACCOUNT","₿","BITCOIN IS HERE","Bitcoin is transitioning from collectible to store of value."
+
+===== TEST 2: EvolutionScene chain (2-07..2-13) — SECOND PASS =====
+PASS 1 ends at 2-13-bitcoin: ["The Story","The Evolution of Money","GOVERNMENT-ISSUED","BARTER","COLLECTIBLES","PRECIOUS METALS","GOLD-BACKED","FIAT","BITCOIN","?","2009 onwards","Bitcoin","Bitcoin introduces digital scarcity, decentralization, censorship resistance, and trustless global 
+PASS 2 ends at 2-13-bitcoin: ["The Story","The Evolution of Money","GOVERNMENT-ISSUED","BARTER","COLLECTIBLES","PRECIOUS METALS","GOLD-BACKED","FIAT","BITCOIN","?","2009 onwards","Bitcoin","Bitcoin introduces digital scarcity, decentralization, censorship resistance, and trustless global 
+>>> RESULT: pass1 === pass2 ? true  OK
+
+===== TEST 3: OrangePillCapsule (1.6 -> 1.7) — SECOND PASS =====
+PASS 1 at 1.7 images: [{"src":"orange_pill_v6.png","op":"0"},{"src":"orange_pill_v7.png","op":"1"}]
+PASS 2 at 1.7 images: [{"src":"orange_pill_v6.png","op":"0"},{"src":"orange_pill_v7.png","op":"1"}]
+>>> RESULT: OK
+
+===== TEST 4: DIRECT ENTRY to continuation slides (fresh load) =====
+  07-orange-pill-focus               -> Ingredients of the Orange Pill
+  2-08-barter                        -> The Story | The Evolution of Money | GOVERNMENT-ISSUED | BARTER | COLLECTIBLES | PRECIOUS METALS | GOLD-BACKED | FIAT | BITCOIN | ? | Prehistory | Bar
+  2-09-collectibles                  -> The Story | The Evolution of Money | GOVERNMENT-ISSUED | BARTER | COLLECTIBLES | PRECIOUS METALS | GOLD-BACKED | FIAT | BITCOIN | ? | ~100,000 BCE onw
+  2-10-precious-metals               -> The Story | The Evolution of Money | GOVERNMENT-ISSUED | BARTER | COLLECTIBLES | PRECIOUS METALS | GOLD-BACKED | FIAT | BITCOIN | ? | ~600 BCE onwards
+  2-11-gold-backed                   -> The Story | The Evolution of Money | GOVERNMENT-ISSUED | BARTER | COLLECTIBLES | PRECIOUS METALS | GOLD-BACKED | FIAT | BITCOIN | ? | 1700s — 1971 | G
+  2-12-fiat                          -> The Story | The Evolution of Money | GOVERNMENT-ISSUED | BARTER | COLLECTIBLES | PRECIOUS METALS | GOLD-BACKED | FIAT | BITCOIN | ? | 1971 — today | F
+  2-13-bitcoin                       -> The Story | The Evolution of Money | GOVERNMENT-ISSUED | BARTER | COLLECTIBLES | PRECIOUS METALS | GOLD-BACKED | FIAT | BITCOIN | ? | 2009 onwards | B
+  3-07-stage-collectible             -> The Path | The Four Stages of Monetisation | COLLECTIBLE | STORE OF VALUE | MEDIUM OF EXCHANGE | UNIT OF ACCOUNT | The first stage | Collectible | Peo
+  3-08-stage-store-of-value          -> The Path | The Four Stages of Monetisation | COLLECTIBLE | STORE OF VALUE | MEDIUM OF EXCHANGE | UNIT OF ACCOUNT | The second stage | Store of Value |
+  3-09-stage-medium-of-exchange      -> The Path | The Four Stages of Monetisation | COLLECTIBLE | STORE OF VALUE | MEDIUM OF EXCHANGE | UNIT OF ACCOUNT | The third stage | Medium of Exchang
+  3-10-stage-unit-of-account         -> The Path | The Four Stages of Monetisation | COLLECTIBLE | STORE OF VALUE | MEDIUM OF EXCHANGE | UNIT OF ACCOUNT | The final stage — full monetisation
+  3-11-where-is-bitcoin              -> The Path | The Four Stages of Monetisation | COLLECTIBLE | STORE OF VALUE | MEDIUM OF EXCHANGE | UNIT OF ACCOUNT | ₿ | BITCOIN IS HERE | Bitcoin is tr
+
+===== TEST 5: REFRESH at non-zero build step =====
+  4-11-carrier-failures-i build 3 -> after reload build 3 : RESTORED OK
+  4-05-spend-or-save build 4 -> after reload build 4 : RESTORED OK
+  03-why-care build 2 -> after reload build 2 : RESTORED OK
+
+===== TEST 6: FULL BACKWARD WALK (end -> start), state integrity =====
+  backward states visited: 56
+  empty-screen states: 02-question b0: EMPTY SCREEN
+
+===== CONSOLE (whole session) =====
+(clean)

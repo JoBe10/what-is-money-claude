@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="96" height="96" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:#e9e4da">
+<!-- grain A — the kernel arcs: Wheat ear as open arcs: three mirrored kernel strokes sweeping off the stem, each ending in a dot terminal; awn leaning one unit. -->
+<path d="M24 44 L24 12"/>
+        <path d="M24 12 C24 8.6 24.8 6 26.4 4"/>
+        <path d="M24 20 C19.6 18.8 16.6 15.6 16.4 11.6 M24 20 C28.4 18.8 31.4 15.6 31.6 11.6"/>
+        <path d="M24 28 C19.6 26.8 16.6 23.6 16.4 19.6 M24 28 C28.4 26.8 31.4 23.6 31.6 19.6"/>
+        <path d="M24 36 C19.6 34.8 16.6 31.6 16.4 27.6 M24 36 C28.4 34.8 31.4 31.6 31.6 27.6"/>
+        <circle cx="26.4" cy="4" r="1.8" fill="currentColor" stroke="none"/><circle cx="16.4" cy="11.6" r="1.8" fill="currentColor" stroke="none"/><circle cx="31.6" cy="11.6" r="1.8" fill="currentColor" stroke="none"/><circle cx="16.4" cy="19.6" r="1.8" fill="currentColor" stroke="none"/><circle cx="31.6" cy="19.6" r="1.8" fill="currentColor" stroke="none"/><circle cx="16.4" cy="27.6" r="1.8" fill="currentColor" stroke="none"/><circle cx="31.6" cy="27.6" r="1.8" fill="currentColor" stroke="none"/>
+</svg>

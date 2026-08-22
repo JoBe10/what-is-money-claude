@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="96" height="96" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:#e9e4da">
+<!-- palladium B — the assay ingot: The metals-family trapezoid with an assay scratch instead of iron’s rivets — the metal perpetually tested, never crowned. -->
+<path d="M14 17 L34 17 L38 31 L10 31 Z"/>
+        <path d="M20.5 21.5 L27.5 26.5"/>
+        <circle cx="20.5" cy="21.5" r="1.4" fill="currentColor" stroke="none"/><circle cx="27.5" cy="26.5" r="1.4" fill="currentColor" stroke="none"/>
+</svg>

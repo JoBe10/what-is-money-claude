@@ -1,0 +1,601 @@
+{
+  "phase": "R7",
+  "variant": "standard",
+  "frames": 15,
+  "frameMs": 70,
+  "voidThreshold": 0.0001,
+  "checks": 21,
+  "failures": 0,
+  "table": [
+    {
+      "boundary": "CALIBRATION — 4.01 b0 authored black",
+      "cls": "calibration",
+      "voidFrames": 15,
+      "minLit": "0.0000%",
+      "frames": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "boundary": "S3→S4 seam · 3.8 b2 → 4.01 b0",
+      "cls": "authored-black",
+      "voidFrames": 14,
+      "minLit": "0.0000%",
+      "frames": [
+        0.9676,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "boundary": "S3→S4 seam back · 4.01 b0 → 3.8 b0",
+      "cls": "authored-black",
+      "voidFrames": 15,
+      "minLit": "0.0000%",
+      "frames": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "boundary": "4.01 b4 → 4.03",
+      "cls": "crossfade",
+      "voidFrames": 0,
+      "minLit": "1.1505%",
+      "frames": [
+        3.3611,
+        1.1505,
+        1.2122,
+        1.2122,
+        1.2122,
+        1.2122,
+        1.2122,
+        1.2122,
+        1.2122,
+        1.2122,
+        1.2122,
+        1.2122,
+        1.2122,
+        1.2122,
+        1.2122
+      ]
+    },
+    {
+      "boundary": "4.03 b4 → 4.04 (dark-field → line grammar)",
+      "cls": "crossfade",
+      "voidFrames": 0,
+      "minLit": "0.8349%",
+      "frames": [
+        3.1258,
+        0.8349,
+        0.9398,
+        0.9398,
+        0.9398,
+        0.9398,
+        0.9398,
+        0.9398,
+        0.9398,
+        0.9398,
+        0.9398,
+        0.9398,
+        0.9398,
+        0.9398,
+        0.9398
+      ]
+    },
+    {
+      "boundary": "2.4 b5 → b6 (the register switch)",
+      "cls": "build",
+      "voidFrames": 0,
+      "minLit": "2.4907%",
+      "frames": [
+        7.446,
+        4.7508,
+        4.1443,
+        2.7731,
+        2.4907,
+        2.8434,
+        2.6952,
+        2.7531,
+        2.7207,
+        2.7215,
+        2.7215,
+        2.7215,
+        2.7215,
+        2.7215,
+        2.7215
+      ]
+    },
+    {
+      "boundary": "2.4 b6 → b5 (back through the switch)",
+      "cls": "build",
+      "voidFrames": 0,
+      "minLit": "8.0432%",
+      "frames": [
+        8.0432,
+        8.0432,
+        8.0432,
+        8.0432,
+        8.0432,
+        8.0432,
+        8.0432,
+        8.0432,
+        8.0432,
+        8.0432,
+        8.0432,
+        8.0432,
+        8.0432,
+        8.0432,
+        8.0432
+      ]
+    },
+    {
+      "boundary": "2.8 b4 → b5 (the thesis clears as the entrant lands)",
+      "cls": "build",
+      "voidFrames": 0,
+      "minLit": "2.4676%",
+      "frames": [
+        5.8025,
+        5.4475,
+        4.341,
+        2.4676,
+        2.4738,
+        2.4769,
+        2.4769,
+        2.4769,
+        2.4769,
+        2.4769,
+        2.4769,
+        2.4769,
+        2.4769,
+        2.4769,
+        2.4769
+      ]
+    },
+    {
+      "boundary": "2.8 b5 → b4 (back)",
+      "cls": "build",
+      "voidFrames": 0,
+      "minLit": "5.8387%",
+      "frames": [
+        5.8387,
+        5.8387,
+        5.8387,
+        5.8387,
+        5.8387,
+        5.8387,
+        5.8387,
+        5.8387,
+        5.8387,
+        5.8387,
+        5.8387,
+        5.8387,
+        5.8387,
+        5.8387,
+        5.8387
+      ]
+    },
+    {
+      "boundary": "4.04 b4 → 4.05 (the claim carried across)",
+      "cls": "crossfade",
+      "voidFrames": 0,
+      "minLit": "0.7037%",
+      "frames": [
+        2.7755,
+        0.7037,
+        0.7222,
+        0.7222,
+        0.7222,
+        0.7222,
+        0.7222,
+        0.7222,
+        0.7222,
+        0.7222,
+        0.7222,
+        0.7222,
+        0.7222,
+        0.7222,
+        0.7222
+      ]
+    },
+    {
+      "boundary": "4.05 b0 → 4.04 (back)",
+      "cls": "crossfade",
+      "voidFrames": 0,
+      "minLit": "0.7222%",
+      "frames": [
+        0.7222,
+        0.8241,
+        0.9398,
+        0.9398,
+        0.9398,
+        0.9398,
+        0.9398,
+        0.9398,
+        0.9398,
+        0.9398,
+        0.9398,
+        0.9398,
+        0.9398,
+        0.9398,
+        0.9398
+      ]
+    },
+    {
+      "boundary": "4.06 b4 → 4.07",
+      "cls": "crossfade",
+      "voidFrames": 0,
+      "minLit": "1.1196%",
+      "frames": [
+        2.6644,
+        1.1196,
+        1.1782,
+        1.1782,
+        1.1782,
+        1.1782,
+        1.1782,
+        1.1782,
+        1.1782,
+        1.1782,
+        1.1782,
+        1.1782,
+        1.1782,
+        1.1782,
+        1.1782
+      ]
+    },
+    {
+      "boundary": "4.09 b5 → 4.10",
+      "cls": "crossfade",
+      "voidFrames": 0,
+      "minLit": "3.5525%",
+      "frames": [
+        4.9236,
+        3.5525,
+        3.6829,
+        3.6829,
+        3.6829,
+        3.6829,
+        3.6829,
+        3.6829,
+        3.6829,
+        3.6829,
+        3.6829,
+        3.6829,
+        3.6829,
+        3.6829,
+        3.6829
+      ]
+    },
+    {
+      "boundary": "4.14 b2 → 4.15",
+      "cls": "crossfade",
+      "voidFrames": 0,
+      "minLit": "1.7261%",
+      "frames": [
+        3.311,
+        1.7261,
+        1.7461,
+        1.7461,
+        1.7461,
+        1.7461,
+        1.7461,
+        1.7461,
+        1.7461,
+        1.7461,
+        1.7461,
+        1.7461,
+        1.7461,
+        1.7461,
+        1.7461
+      ]
+    },
+    {
+      "boundary": "4.16 b3 → 4.17",
+      "cls": "crossfade",
+      "voidFrames": 0,
+      "minLit": "0.3287%",
+      "frames": [
+        3.7392,
+        0.3287,
+        0.3372,
+        0.3372,
+        0.3372,
+        0.3372,
+        0.3372,
+        0.3372,
+        0.3372,
+        0.3372,
+        0.3372,
+        0.3372,
+        0.3372,
+        0.3372,
+        0.3372
+      ]
+    },
+    {
+      "boundary": "4.20 b8 → 4.20b b0",
+      "cls": "authored-black",
+      "voidFrames": 14,
+      "minLit": "0.0000%",
+      "frames": [
+        5.1651,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "boundary": "4.20b b5 → 4.21",
+      "cls": "crossfade",
+      "voidFrames": 0,
+      "minLit": "1.9676%",
+      "frames": [
+        3.9699,
+        1.9676,
+        1.9853,
+        1.9853,
+        1.9853,
+        1.9853,
+        1.9853,
+        1.9853,
+        1.9853,
+        1.9853,
+        1.9853,
+        1.9853,
+        1.9853,
+        1.9853,
+        1.9853
+      ]
+    },
+    {
+      "boundary": "4.22 b3 → 4.23",
+      "cls": "crossfade",
+      "voidFrames": 0,
+      "minLit": "0.4630%",
+      "frames": [
+        10.473,
+        0.5409,
+        0.463,
+        0.463,
+        0.463,
+        0.463,
+        0.463,
+        0.463,
+        0.463,
+        0.463,
+        0.463,
+        0.463,
+        0.463,
+        0.463,
+        0.463
+      ]
+    },
+    {
+      "boundary": "4.23 b2 → the close b0 (the black hold)",
+      "cls": "authored-black",
+      "voidFrames": 14,
+      "minLit": "0.0000%",
+      "frames": [
+        3.5918,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "boundary": "the close b0 → b1 (the road returns)",
+      "cls": "from-black",
+      "voidFrames": 1,
+      "minLit": "0.0000%",
+      "frames": [
+        0,
+        0.5278,
+        0.7901,
+        0.902,
+        1.2068,
+        1.2477,
+        1.2546,
+        1.2608,
+        1.2608,
+        1.2608,
+        1.2608,
+        1.2608,
+        1.2608,
+        1.2608,
+        1.2608
+      ]
+    },
+    {
+      "boundary": "the close b1 → b2 (the line dissolves)",
+      "cls": "build",
+      "voidFrames": 0,
+      "minLit": "1.2539%",
+      "frames": [
+        1.2539,
+        2.5363,
+        2.2508,
+        2.1196,
+        1.8418,
+        1.4244,
+        1.4244,
+        1.4244,
+        1.4244,
+        1.4244,
+        1.4244,
+        1.4244,
+        1.4244,
+        1.4244,
+        1.4244
+      ]
+    }
+  ],
+  "results": [
+    {
+      "name": "CALIBRATION — 4.01 b0 authored black — the detector calls black black",
+      "ok": true,
+      "detail": "0.0000%"
+    },
+    {
+      "name": "S3→S4 seam · 3.8 b2 → 4.01 b0 — dims into its authored darkness and never relights",
+      "ok": true,
+      "detail": "min 0.0000%, 14/15 void"
+    },
+    {
+      "name": "S3→S4 seam back · 4.01 b0 → 3.8 b0 — dims into its authored darkness and never relights",
+      "ok": true,
+      "detail": "min 0.0000%, 15/15 void"
+    },
+    {
+      "name": "4.01 b4 → 4.03 — zero void frames",
+      "ok": true,
+      "detail": "0/15 void, min 1.1505%"
+    },
+    {
+      "name": "4.03 b4 → 4.04 (dark-field → line grammar) — zero void frames",
+      "ok": true,
+      "detail": "0/15 void, min 0.8349%"
+    },
+    {
+      "name": "2.4 b5 → b6 (the register switch) — zero void frames",
+      "ok": true,
+      "detail": "0/15 void, min 2.4907%"
+    },
+    {
+      "name": "2.4 b6 → b5 (back through the switch) — zero void frames",
+      "ok": true,
+      "detail": "0/15 void, min 8.0432%"
+    },
+    {
+      "name": "2.8 b4 → b5 (the thesis clears as the entrant lands) — zero void frames",
+      "ok": true,
+      "detail": "0/15 void, min 2.4676%"
+    },
+    {
+      "name": "2.8 b5 → b4 (back) — zero void frames",
+      "ok": true,
+      "detail": "0/15 void, min 5.8387%"
+    },
+    {
+      "name": "4.04 b4 → 4.05 (the claim carried across) — zero void frames",
+      "ok": true,
+      "detail": "0/15 void, min 0.7037%"
+    },
+    {
+      "name": "4.05 b0 → 4.04 (back) — zero void frames",
+      "ok": true,
+      "detail": "0/15 void, min 0.7222%"
+    },
+    {
+      "name": "4.06 b4 → 4.07 — zero void frames",
+      "ok": true,
+      "detail": "0/15 void, min 1.1196%"
+    },
+    {
+      "name": "4.09 b5 → 4.10 — zero void frames",
+      "ok": true,
+      "detail": "0/15 void, min 3.5525%"
+    },
+    {
+      "name": "4.14 b2 → 4.15 — zero void frames",
+      "ok": true,
+      "detail": "0/15 void, min 1.7261%"
+    },
+    {
+      "name": "4.16 b3 → 4.17 — zero void frames",
+      "ok": true,
+      "detail": "0/15 void, min 0.3287%"
+    },
+    {
+      "name": "4.20 b8 → 4.20b b0 — dims into its authored darkness and never relights",
+      "ok": true,
+      "detail": "min 0.0000%, 14/15 void"
+    },
+    {
+      "name": "4.20b b5 → 4.21 — zero void frames",
+      "ok": true,
+      "detail": "0/15 void, min 1.9676%"
+    },
+    {
+      "name": "4.22 b3 → 4.23 — zero void frames",
+      "ok": true,
+      "detail": "0/15 void, min 0.4630%"
+    },
+    {
+      "name": "4.23 b2 → the close b0 (the black hold) — dims into its authored darkness and never relights",
+      "ok": true,
+      "detail": "min 0.0000%, 14/15 void"
+    },
+    {
+      "name": "the close b0 → b1 (the road returns) — rises out of the hold and stays lit",
+      "ok": true,
+      "detail": "lights at frame 1, ends 1.2608%"
+    },
+    {
+      "name": "the close b1 → b2 (the line dissolves) — zero void frames",
+      "ok": true,
+      "detail": "0/15 void, min 1.2539%"
+    }
+  ]
+}

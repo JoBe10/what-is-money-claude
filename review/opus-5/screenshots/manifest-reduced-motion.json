@@ -1,0 +1,450 @@
+[
+  {
+    "i": 0,
+    "id": "01-title",
+    "title": "What is money?",
+    "section": "opening",
+    "steps": 0,
+    "continuesFrom": null
+  },
+  {
+    "i": 1,
+    "id": "02-question",
+    "title": "The Most Important Question Nobody Asks",
+    "section": "opening",
+    "steps": 0,
+    "continuesFrom": null
+  },
+  {
+    "i": 2,
+    "id": "03-why-care",
+    "title": "Why should we care?",
+    "section": "opening",
+    "steps": 4,
+    "continuesFrom": null
+  },
+  {
+    "i": 3,
+    "id": "05-matrix",
+    "title": "Unplugging from the Matrix",
+    "section": "opening",
+    "steps": 0,
+    "continuesFrom": null
+  },
+  {
+    "i": 4,
+    "id": "06-orange-pill-ingredients",
+    "title": "Ingredients of the Orange Pill",
+    "section": "opening",
+    "steps": 0,
+    "continuesFrom": null
+  },
+  {
+    "i": 5,
+    "id": "07-orange-pill-focus",
+    "title": "Orange Pill Focus",
+    "section": "opening",
+    "steps": 0,
+    "continuesFrom": "06-orange-pill-ingredients"
+  },
+  {
+    "i": 6,
+    "id": "08-path-forward",
+    "title": "The Path Forward",
+    "section": "opening",
+    "steps": 3,
+    "continuesFrom": null
+  },
+  {
+    "i": 7,
+    "id": "2-01-section-opener",
+    "title": "Where money came from",
+    "section": "history",
+    "steps": 0,
+    "continuesFrom": null
+  },
+  {
+    "i": 8,
+    "id": "2-02-the-problem",
+    "title": "The problem that started everything",
+    "section": "history",
+    "steps": 0,
+    "continuesFrom": null
+  },
+  {
+    "i": 9,
+    "id": "2-03-barter-works",
+    "title": "Sometimes, barter works",
+    "section": "history",
+    "steps": 0,
+    "continuesFrom": null
+  },
+  {
+    "i": 10,
+    "id": "2-03-double-coincidence",
+    "title": "The double coincidence of wants",
+    "section": "history",
+    "steps": 2,
+    "continuesFrom": null
+  },
+  {
+    "i": 11,
+    "id": "2-04-the-solution",
+    "title": "Humans found a way",
+    "section": "history",
+    "steps": 0,
+    "continuesFrom": null
+  },
+  {
+    "i": 12,
+    "id": "2-05-insight-emerged",
+    "title": "Money emerged. It wasn’t invented.",
+    "section": "history",
+    "steps": 0,
+    "continuesFrom": null
+  },
+  {
+    "i": 13,
+    "id": "2-06-insight-iteration",
+    "title": "Each step solved a shortcoming",
+    "section": "history",
+    "steps": 0,
+    "continuesFrom": null
+  },
+  {
+    "i": 14,
+    "id": "2-07-evolution-intro",
+    "title": "The Evolution of Money",
+    "section": "history",
+    "steps": 0,
+    "continuesFrom": null
+  },
+  {
+    "i": 15,
+    "id": "2-08-barter",
+    "title": "Evolution — Barter",
+    "section": "history",
+    "steps": 0,
+    "continuesFrom": "2-07-evolution-intro"
+  },
+  {
+    "i": 16,
+    "id": "2-09-collectibles",
+    "title": "Evolution — Collectibles",
+    "section": "history",
+    "steps": 0,
+    "continuesFrom": "2-08-barter"
+  },
+  {
+    "i": 17,
+    "id": "2-10-precious-metals",
+    "title": "Evolution — Precious Metals",
+    "section": "history",
+    "steps": 0,
+    "continuesFrom": "2-09-collectibles"
+  },
+  {
+    "i": 18,
+    "id": "2-11-gold-backed",
+    "title": "Evolution — Gold-Backed",
+    "section": "history",
+    "steps": 0,
+    "continuesFrom": "2-10-precious-metals"
+  },
+  {
+    "i": 19,
+    "id": "2-12-fiat",
+    "title": "Evolution — Fiat",
+    "section": "history",
+    "steps": 0,
+    "continuesFrom": "2-11-gold-backed"
+  },
+  {
+    "i": 20,
+    "id": "2-13-bitcoin",
+    "title": "Evolution — Bitcoin",
+    "section": "history",
+    "steps": 0,
+    "continuesFrom": "2-12-fiat"
+  },
+  {
+    "i": 21,
+    "id": "2-14-transition-out",
+    "title": "What's next",
+    "section": "history",
+    "steps": 0,
+    "continuesFrom": null
+  },
+  {
+    "i": 22,
+    "id": "3-01-section-opener",
+    "title": "What money does",
+    "section": "functions",
+    "steps": 0,
+    "continuesFrom": null
+  },
+  {
+    "i": 23,
+    "id": "3-02-three-roles",
+    "title": "Money does three jobs.",
+    "section": "functions",
+    "steps": 3,
+    "continuesFrom": null
+  },
+  {
+    "i": 24,
+    "id": "3-04-fiat-fails",
+    "title": "Fiat fails the most important function.",
+    "section": "functions",
+    "steps": 0,
+    "continuesFrom": null
+  },
+  {
+    "i": 25,
+    "id": "3-05-foundation",
+    "title": "Store of value is the foundation.",
+    "section": "functions",
+    "steps": 0,
+    "continuesFrom": null
+  },
+  {
+    "i": 26,
+    "id": "3-06-monetisation-intro",
+    "title": "The Four Stages of Monetisation",
+    "section": "functions",
+    "steps": 0,
+    "continuesFrom": null
+  },
+  {
+    "i": 27,
+    "id": "3-07-stage-collectible",
+    "title": "Stage 1 — Collectible",
+    "section": "functions",
+    "steps": 0,
+    "continuesFrom": "3-06-monetisation-intro"
+  },
+  {
+    "i": 28,
+    "id": "3-08-stage-store-of-value",
+    "title": "Stage 2 — Store of Value",
+    "section": "functions",
+    "steps": 0,
+    "continuesFrom": "3-07-stage-collectible"
+  },
+  {
+    "i": 29,
+    "id": "3-09-stage-medium-of-exchange",
+    "title": "Stage 3 — Medium of Exchange",
+    "section": "functions",
+    "steps": 0,
+    "continuesFrom": "3-08-stage-store-of-value"
+  },
+  {
+    "i": 30,
+    "id": "3-10-stage-unit-of-account",
+    "title": "Stage 4 — Unit of Account",
+    "section": "functions",
+    "steps": 0,
+    "continuesFrom": "3-09-stage-medium-of-exchange"
+  },
+  {
+    "i": 31,
+    "id": "3-11-where-is-bitcoin",
+    "title": "Bitcoin is transitioning from collectible to store of value.",
+    "section": "functions",
+    "steps": 0,
+    "continuesFrom": "3-10-stage-unit-of-account"
+  },
+  {
+    "i": 32,
+    "id": "4-01-ideal-store-of-value",
+    "title": "The Ideal Store of Value",
+    "section": "ideal-store",
+    "steps": 3,
+    "continuesFrom": null
+  },
+  {
+    "i": 33,
+    "id": "4-02-define-the-job",
+    "title": "What Exactly Is Being Stored?",
+    "section": "ideal-store",
+    "steps": 4,
+    "continuesFrom": null
+  },
+  {
+    "i": 34,
+    "id": "4-03-simple-exchange",
+    "title": "A Simple Example",
+    "section": "ideal-store",
+    "steps": 4,
+    "continuesFrom": null
+  },
+  {
+    "i": 35,
+    "id": "4-04-unfinished-exchange",
+    "title": "The Unfinished Exchange",
+    "section": "ideal-store",
+    "steps": 4,
+    "continuesFrom": null
+  },
+  {
+    "i": 36,
+    "id": "4-05-spend-or-save",
+    "title": "Spend or Save",
+    "section": "ideal-store",
+    "steps": 5,
+    "continuesFrom": null
+  },
+  {
+    "i": 37,
+    "id": "4-06-claim-and-carrier",
+    "title": "The Claim and Its Carrier",
+    "section": "ideal-store",
+    "steps": 4,
+    "continuesFrom": null
+  },
+  {
+    "i": 38,
+    "id": "4-07-store-of-value-function",
+    "title": "The Store-of-Value Function",
+    "section": "ideal-store",
+    "steps": 5,
+    "continuesFrom": null
+  },
+  {
+    "i": 39,
+    "id": "4-08-100-year-test",
+    "title": "The 100-Year Test",
+    "section": "ideal-store",
+    "steps": 4,
+    "continuesFrom": null
+  },
+  {
+    "i": 40,
+    "id": "4-09-future-is-unknowable",
+    "title": "The Future Is Unknowable",
+    "section": "ideal-store",
+    "steps": 4,
+    "continuesFrom": null
+  },
+  {
+    "i": 41,
+    "id": "4-10-invert-the-question",
+    "title": "Invert the Question",
+    "section": "ideal-store",
+    "steps": 2,
+    "continuesFrom": null
+  },
+  {
+    "i": 42,
+    "id": "4-11-carrier-failures-i",
+    "title": "How the Carrier Can Fail: I",
+    "section": "ideal-store",
+    "steps": 5,
+    "continuesFrom": null
+  },
+  {
+    "i": 43,
+    "id": "4-12-carrier-failures-ii",
+    "title": "How the Carrier Can Fail: II",
+    "section": "ideal-store",
+    "steps": 5,
+    "continuesFrom": null
+  },
+  {
+    "i": 44,
+    "id": "4-13-failure-to-requirement",
+    "title": "From Failure to Requirement",
+    "section": "ideal-store",
+    "steps": 1,
+    "continuesFrom": null
+  },
+  {
+    "i": 45,
+    "id": "4-14-ten-properties",
+    "title": "The Ten Properties",
+    "section": "ideal-store",
+    "steps": 0,
+    "continuesFrom": null
+  },
+  {
+    "i": 46,
+    "id": "4-15-framework-to-comparison",
+    "title": "From Framework to Comparison",
+    "section": "ideal-store",
+    "steps": 3,
+    "continuesFrom": null
+  },
+  {
+    "i": 47,
+    "id": "4-16-the-comparison",
+    "title": "The Comparison",
+    "section": "ideal-store",
+    "steps": 2,
+    "continuesFrom": null
+  },
+  {
+    "i": 48,
+    "id": "4-17-store-of-value-function-migrates",
+    "title": "When the Store-of-Value Function Migrates",
+    "section": "ideal-store",
+    "steps": 3,
+    "continuesFrom": null
+  },
+  {
+    "i": 49,
+    "id": "4-18-monetary-premium",
+    "title": "The Monetary Premium",
+    "section": "ideal-store",
+    "steps": 3,
+    "continuesFrom": null
+  },
+  {
+    "i": 50,
+    "id": "4-19-other-assets-do-moneys-job",
+    "title": "When Other Assets Do Money's Job",
+    "section": "ideal-store",
+    "steps": 4,
+    "continuesFrom": null
+  },
+  {
+    "i": 51,
+    "id": "4-20-bitcoin-does-not-replace-everything",
+    "title": "Bitcoin Does Not Need to Replace Everything",
+    "section": "ideal-store",
+    "steps": 3,
+    "continuesFrom": null
+  },
+  {
+    "i": 52,
+    "id": "4-21-marginal-store-of-value-decision",
+    "title": "The Marginal Store-of-Value Decision",
+    "section": "ideal-store",
+    "steps": 2,
+    "continuesFrom": null
+  },
+  {
+    "i": 53,
+    "id": "4-22-fixed-supply-reprices-at-margin",
+    "title": "Fixed Supply Reprices at the Margin",
+    "section": "ideal-store",
+    "steps": 2,
+    "continuesFrom": null
+  },
+  {
+    "i": 54,
+    "id": "4-23-investment-case-from-first-principles",
+    "title": "The Case for Bitcoin from First Principles",
+    "section": "ideal-store",
+    "steps": 4,
+    "continuesFrom": null
+  },
+  {
+    "i": 55,
+    "id": "5-01-thank-you",
+    "title": "Thank you",
+    "section": "close",
+    "steps": 0,
+    "continuesFrom": null
+  }
+]

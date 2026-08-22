@@ -1,0 +1,402 @@
+{
+  "results": [
+    {
+      "section": "manifest",
+      "name": "deck has 54 slides",
+      "ok": true,
+      "detail": "total=54"
+    },
+    {
+      "section": "manifest",
+      "name": "numbering normalized (F-10)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "manifest",
+      "name": "slide 6 is legacy 2-01",
+      "ok": true,
+      "detail": "2-01-section-opener"
+    },
+    {
+      "section": "manifest",
+      "name": "chrome counter",
+      "ok": true,
+      "detail": "01 / 54"
+    },
+    {
+      "section": "traversal",
+      "name": "pass 1 forward (full animations, all slides shot) completed",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "traversal",
+      "name": "pass 2 backward to slide 1 completed",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "traversal",
+      "name": "pass 3 forward (fast, tests cancellation) completed",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "direct-entry",
+      "name": "1-01-eighty-thousand-hours @ build 0",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "direct-entry",
+      "name": "1-01-eighty-thousand-hours @ build 1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "direct-entry",
+      "name": "1-01-eighty-thousand-hours @ build 2",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "direct-entry",
+      "name": "1-02-the-conversion @ build 0",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "direct-entry",
+      "name": "1-02-the-conversion @ build 1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "direct-entry",
+      "name": "1-02-the-conversion @ build 2",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "direct-entry",
+      "name": "1-02-the-conversion @ build 3",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "direct-entry",
+      "name": "1-03-what-is-money @ build 0",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "direct-entry",
+      "name": "1-03-what-is-money @ build 1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "direct-entry",
+      "name": "1-03-what-is-money @ build 2",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "direct-entry",
+      "name": "1-03-what-is-money @ build 3",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "direct-entry",
+      "name": "1-04-the-stakes @ build 0",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "direct-entry",
+      "name": "1-04-the-stakes @ build 1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "direct-entry",
+      "name": "1-05-the-promise @ build 0",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "direct-entry",
+      "name": "1-05-the-promise @ build 1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "direct-entry",
+      "name": "1-05-the-promise @ build 2",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "direct-entry",
+      "name": "1-05-the-promise @ build 3",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "direct-entry",
+      "name": "1-05-the-promise @ build 4",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "direct-entry",
+      "name": "1-05-the-promise @ build 5",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "screens",
+      "name": "1.4 bright/dim ghost-field pair captured",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "reduced-motion",
+      "name": "direct 1-01-eighty-thousand-hours @ b0",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "reduced-motion",
+      "name": "direct 1-01-eighty-thousand-hours @ b1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "reduced-motion",
+      "name": "direct 1-01-eighty-thousand-hours @ b2",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "reduced-motion",
+      "name": "direct 1-02-the-conversion @ b0",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "reduced-motion",
+      "name": "direct 1-02-the-conversion @ b1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "reduced-motion",
+      "name": "direct 1-02-the-conversion @ b2",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "reduced-motion",
+      "name": "direct 1-02-the-conversion @ b3",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "reduced-motion",
+      "name": "direct 1-03-what-is-money @ b0",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "reduced-motion",
+      "name": "direct 1-03-what-is-money @ b1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "reduced-motion",
+      "name": "direct 1-03-what-is-money @ b2",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "reduced-motion",
+      "name": "direct 1-03-what-is-money @ b3",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "reduced-motion",
+      "name": "direct 1-04-the-stakes @ b0",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "reduced-motion",
+      "name": "direct 1-04-the-stakes @ b1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "reduced-motion",
+      "name": "direct 1-05-the-promise @ b0",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "reduced-motion",
+      "name": "direct 1-05-the-promise @ b1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "reduced-motion",
+      "name": "direct 1-05-the-promise @ b2",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "reduced-motion",
+      "name": "direct 1-05-the-promise @ b3",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "reduced-motion",
+      "name": "direct 1-05-the-promise @ b4",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "reduced-motion",
+      "name": "direct 1-05-the-promise @ b5",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "reduced-motion",
+      "name": "live 1-01-eighty-thousand-hours → b1 (<400ms)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "reduced-motion",
+      "name": "live 1-01-eighty-thousand-hours → b2 (<400ms)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "reduced-motion",
+      "name": "live 1-02-the-conversion → b1 (<400ms)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "reduced-motion",
+      "name": "live 1-02-the-conversion → b2 (<400ms)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "reduced-motion",
+      "name": "live 1-02-the-conversion → b3 (<400ms)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "reduced-motion",
+      "name": "live 1-03-what-is-money → b1 (<400ms)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "reduced-motion",
+      "name": "live 1-03-what-is-money → b2 (<400ms)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "reduced-motion",
+      "name": "live 1-03-what-is-money → b3 (<400ms)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "reduced-motion",
+      "name": "live 1-04-the-stakes → b1 (<400ms)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "reduced-motion",
+      "name": "live 1-05-the-promise → b1 (<400ms)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "reduced-motion",
+      "name": "live 1-05-the-promise → b2 (<400ms)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "reduced-motion",
+      "name": "live 1-05-the-promise → b3 (<400ms)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "reduced-motion",
+      "name": "live 1-05-the-promise → b4 (<400ms)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "reduced-motion",
+      "name": "live 1-05-the-promise → b5 (<400ms)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "reduced-motion",
+      "name": "seam lands on 2-01 after 1.5",
+      "ok": true,
+      "detail": "2-01-section-opener"
+    },
+    {
+      "section": "performance",
+      "name": "fill 1.1 (headless): 59.0 fps avg (p95 16.8ms, max 83.4ms, 6/597 frames >20ms)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "performance",
+      "name": "collapse 1.2 (headless): 54.0 fps avg (p95 33.3ms, max 50.0ms, 30/280 frames >20ms)",
+      "ok": false,
+      "detail": ""
+    }
+  ],
+  "perf": [
+    {
+      "label": "fill 1.1 (headless)",
+      "frames": 597,
+      "avgMs": 16.94515577889447,
+      "p95Ms": 16.799999999999272,
+      "maxMs": 83.39999999999964,
+      "over20ms": 6,
+      "fps": 59.0139160151906
+    },
+    {
+      "label": "collapse 1.2 (headless)",
+      "frames": 280,
+      "avgMs": 18.51138571428572,
+      "p95Ms": 33.30000000000018,
+      "maxMs": 50,
+      "over20ms": 30,
+      "fps": 54.020807271509334
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="96" height="96" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:#e9e4da">
+<!-- peso C — the struck P: The abbreviation that named the sign: a P with one horizontal strike, dot terminals — the peso as letterform. -->
+<path d="M18 42 L18 7 L28 7 C33.5 7 36.5 10.5 36.5 15 C36.5 19.5 33.5 23 28 23 L18 23"/>
+        <path d="M12.5 15 L23 15"/>
+        <circle cx="18" cy="42" r="1.8" fill="currentColor" stroke="none"/><circle cx="12.5" cy="15" r="1.5" fill="currentColor" stroke="none"/>
+</svg>

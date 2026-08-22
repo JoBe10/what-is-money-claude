@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="96" height="96" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:#e9e4da">
+<!-- wine C — the amphora: The ancient vessel: two open handles off a tapering body, rhyming with Section 2's traded goods rather than with a modern bottle. -->
+<path d="M17 12 L31 12"/>
+        <path d="M18.5 12 C15 20 14 28 19 36 L29 36 C34 28 33 20 29.5 12"/>
+        <path d="M17.5 15 C12 16 11 21 14.5 24"/>
+        <path d="M30.5 15 C36 16 37 21 33.5 24"/>
+        <circle cx="19" cy="36" r="1.8" fill="currentColor" stroke="none"/><circle cx="29" cy="36" r="1.8" fill="currentColor" stroke="none"/>
+</svg>

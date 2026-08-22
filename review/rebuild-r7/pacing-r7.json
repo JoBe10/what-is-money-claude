@@ -1,0 +1,122 @@
+[
+  {
+    "name": "01-define-the-job.js",
+    "builds": 4,
+    "arrows": 4
+  },
+  {
+    "name": "03-simple-exchange.js",
+    "builds": 4,
+    "arrows": 4
+  },
+  {
+    "name": "04-unfinished-exchange.js",
+    "builds": 4,
+    "arrows": 4
+  },
+  {
+    "name": "05-spend-or-save.js",
+    "builds": 4,
+    "arrows": 4
+  },
+  {
+    "name": "06-claim-and-carrier.js",
+    "builds": 4,
+    "arrows": 4
+  },
+  {
+    "name": "07-store-of-value-function.js",
+    "builds": 5,
+    "arrows": 5
+  },
+  {
+    "name": "08-100-year-test.js",
+    "builds": 3,
+    "arrows": 3
+  },
+  {
+    "name": "09-future-is-unknowable.js",
+    "builds": 5,
+    "arrows": 5
+  },
+  {
+    "name": "10-invert-the-question.js",
+    "builds": 2,
+    "arrows": 2
+  },
+  {
+    "name": "11-carrier-failures-i.js",
+    "builds": 5,
+    "arrows": 5
+  },
+  {
+    "name": "12-carrier-failures-ii.js",
+    "builds": 5,
+    "arrows": 5
+  },
+  {
+    "name": "13-failure-to-requirement.js",
+    "builds": 2,
+    "arrows": 2
+  },
+  {
+    "name": "14-ten-properties.js",
+    "builds": 2,
+    "arrows": 2
+  },
+  {
+    "name": "15-framework-to-comparison.js",
+    "builds": 4,
+    "arrows": 4
+  },
+  {
+    "name": "16-the-comparison.js",
+    "builds": 3,
+    "arrows": 3
+  },
+  {
+    "name": "17-store-of-value-function-migrates.js",
+    "builds": 3,
+    "arrows": 3
+  },
+  {
+    "name": "18-monetary-premium.js",
+    "builds": 3,
+    "arrows": 3
+  },
+  {
+    "name": "19-other-assets-do-moneys-job.js",
+    "builds": 5,
+    "arrows": 5
+  },
+  {
+    "name": "20-bitcoin-does-not-replace-everything.js",
+    "builds": 7,
+    "arrows": 7
+  },
+  {
+    "name": "20b-what-would-change-these-scores.js",
+    "builds": 5,
+    "arrows": 5
+  },
+  {
+    "name": "21-marginal-store-of-value-decision.js",
+    "builds": 2,
+    "arrows": 2
+  },
+  {
+    "name": "22-fixed-supply-reprices-at-margin.js",
+    "builds": 3,
+    "arrows": 3
+  },
+  {
+    "name": "23-investment-case-from-first-principles.js",
+    "builds": 2,
+    "arrows": 2
+  },
+  {
+    "name": "01-thank-you.js",
+    "builds": 2,
+    "arrows": 2
+  }
+]

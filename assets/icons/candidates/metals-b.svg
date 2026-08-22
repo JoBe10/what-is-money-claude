@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="96" height="96" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:#e9e4da">
+<!-- metals B — the bars: The stack edge-on: three bars narrowing upward, dot terminals at every end — the hoard as constellation. -->
+<path d="M9.5 38 L38.5 38"/>
+        <path d="M13.5 30 L34.5 30"/>
+        <path d="M17.5 22 L30.5 22"/>
+        <circle cx="9.5" cy="38" r="1.8" fill="currentColor" stroke="none"/><circle cx="38.5" cy="38" r="1.8" fill="currentColor" stroke="none"/><circle cx="13.5" cy="30" r="1.8" fill="currentColor" stroke="none"/><circle cx="34.5" cy="30" r="1.8" fill="currentColor" stroke="none"/><circle cx="17.5" cy="22" r="1.8" fill="currentColor" stroke="none"/><circle cx="30.5" cy="22" r="1.8" fill="currentColor" stroke="none"/>
+</svg>

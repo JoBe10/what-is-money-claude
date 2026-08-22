@@ -1,0 +1,634 @@
+{
+  "variant": "standard",
+  "date": "2026-07-29T09:37:01.748Z",
+  "checks": 104,
+  "failures": 0,
+  "screenshots": 50,
+  "consoleLines": 0,
+  "results": [
+    {
+      "section": "direct-entry",
+      "name": "2-01-the-world-without-it b0",
+      "ok": true,
+      "detail": "black"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-01-the-world-without-it b1",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "outside-rule 2-01-the-world-without-it b1",
+      "ok": true,
+      "detail": "outside rule holds; 1 visible edges clear of all cards"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-01-the-world-without-it b2",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "outside-rule 2-01-the-world-without-it b2",
+      "ok": true,
+      "detail": "outside rule holds; 3 visible edges clear of all cards"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-01-the-world-without-it b3",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "outside-rule 2-01-the-world-without-it b3",
+      "ok": true,
+      "detail": "outside rule holds; 3 visible edges clear of all cards"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-02-the-discovery b0",
+      "ok": true,
+      "detail": "rest — goods arrived"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "outside-rule 2-02-the-discovery b0",
+      "ok": true,
+      "detail": "outside rule holds; 3 visible edges clear of all cards"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-02-the-discovery b1",
+      "ok": true,
+      "detail": "held"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "outside-rule 2-02-the-discovery b1",
+      "ok": true,
+      "detail": "outside rule holds; 3 visible edges clear of all cards"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-02-the-discovery b2",
+      "ok": true,
+      "detail": "cycle clear"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "outside-rule 2-02-the-discovery b2",
+      "ok": true,
+      "detail": "outside rule holds; 3 visible edges clear of all cards"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-02-the-discovery b3",
+      "ok": true,
+      "detail": "cycle clear"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "outside-rule 2-02-the-discovery b3",
+      "ok": true,
+      "detail": "outside rule holds; 3 visible edges clear of all cards"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-02-the-discovery b4",
+      "ok": true,
+      "detail": "cycle clear"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "outside-rule 2-02-the-discovery b4",
+      "ok": true,
+      "detail": "outside rule holds; 3 visible edges clear of all cards"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-03-the-convergence b0",
+      "ok": true,
+      "detail": "black"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-03-the-convergence b1",
+      "ok": true,
+      "detail": "flock lit"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-03-the-convergence b2",
+      "ok": true,
+      "detail": "flock lit"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-03-the-convergence b3",
+      "ok": true,
+      "detail": "flock lit"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-04-the-competition-record b0",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "rail-geometry 2-04-the-competition-record b0",
+      "ok": true,
+      "detail": "on-line ✓ centered ✓ sweep ✓ (min margin 328px)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-04-the-competition-record b1",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "rail-geometry 2-04-the-competition-record b1",
+      "ok": true,
+      "detail": "on-line ✓ centered ✓ sweep ✓ (min margin 252px)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-04-the-competition-record b2",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "rail-geometry 2-04-the-competition-record b2",
+      "ok": true,
+      "detail": "on-line ✓ centered ✓ sweep ✓ (min margin 252px)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-04-the-competition-record b3",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "rail-geometry 2-04-the-competition-record b3",
+      "ok": true,
+      "detail": "on-line ✓ centered ✓ sweep ✓ (min margin 252px)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-04-the-competition-record b4",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "rail-geometry 2-04-the-competition-record b4",
+      "ok": true,
+      "detail": "on-line ✓ centered ✓ sweep ✓ (min margin 252px)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-04-the-competition-record b5",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "rail-geometry 2-04-the-competition-record b5",
+      "ok": true,
+      "detail": "on-line ✓ centered ✓ sweep ✓ (min margin 252px)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-04-the-competition-record b6",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "rail-geometry 2-04-the-competition-record b6",
+      "ok": true,
+      "detail": "on-line ✓ centered ✓ sweep ✓ (min margin 180px)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-04-the-competition-record b7",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "rail-geometry 2-04-the-competition-record b7",
+      "ok": true,
+      "detail": "on-line ✓ centered ✓ sweep ✓ (min margin 168px)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-04-the-competition-record b8",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "rail-geometry 2-04-the-competition-record b8",
+      "ok": true,
+      "detail": "on-line ✓ centered ✓ sweep ✓ (min margin 38px)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-05-two-survivors b0",
+      "ok": true,
+      "detail": "dimmed rail"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "rail-geometry 2-05-two-survivors b0",
+      "ok": true,
+      "detail": "on-line ✓ centered ✓ sweep ✓ (min margin 38px)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-05-two-survivors b1",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "rail-geometry 2-05-two-survivors b1",
+      "ok": true,
+      "detail": "on-line ✓ centered ✓ sweep ✓ (min margin 38px)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-05-two-survivors b2",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "rail-geometry 2-05-two-survivors b2",
+      "ok": true,
+      "detail": "on-line ✓ centered ✓ sweep ✓ (min margin 38px)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-05-two-survivors b3",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "rail-geometry 2-05-two-survivors b3",
+      "ok": true,
+      "detail": "on-line ✓ centered ✓ sweep ✓ (min margin 38px)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-05-two-survivors b4",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "rail-geometry 2-05-two-survivors b4",
+      "ok": true,
+      "detail": "on-line ✓ centered ✓ sweep ✓ (min margin 38px)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-05-two-survivors b5",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "rail-geometry 2-05-two-survivors b5",
+      "ok": true,
+      "detail": "on-line ✓ centered ✓ sweep ✓ (min margin 38px)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-06-the-abstraction-ladder b0",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "rail-geometry 2-06-the-abstraction-ladder b0",
+      "ok": true,
+      "detail": "on-line ✓ centered ✓ sweep ✓ (min margin 162px)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-06-the-abstraction-ladder b1",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "rail-geometry 2-06-the-abstraction-ladder b1",
+      "ok": true,
+      "detail": "on-line ✓ centered ✓ sweep ✓ (min margin 162px)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-06-the-abstraction-ladder b2",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "rail-geometry 2-06-the-abstraction-ladder b2",
+      "ok": true,
+      "detail": "on-line ✓ centered ✓ sweep ✓ (min margin 162px)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-06-the-abstraction-ladder b3",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "rail-geometry 2-06-the-abstraction-ladder b3",
+      "ok": true,
+      "detail": "on-line ✓ centered ✓ sweep ✓ (min margin 162px)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-06-the-abstraction-ladder b4",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "rail-geometry 2-06-the-abstraction-ladder b4",
+      "ok": true,
+      "detail": "on-line ✓ centered ✓ sweep ✓ (min margin 162px)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-07-the-severance b0",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "rail-geometry 2-07-the-severance b0",
+      "ok": true,
+      "detail": "on-line ✓ centered ✓ sweep ✓ (min margin 125px)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-07-the-severance b1",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "rail-geometry 2-07-the-severance b1",
+      "ok": true,
+      "detail": "on-line ✓ centered ✓ sweep ✓ (min margin 125px)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-07-the-severance b2",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "rail-geometry 2-07-the-severance b2",
+      "ok": true,
+      "detail": "on-line ✓ centered ✓ sweep ✓ (min margin 125px)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-07-the-severance b3",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "rail-geometry 2-07-the-severance b3",
+      "ok": true,
+      "detail": "on-line ✓ centered ✓ sweep ✓ (min margin 125px)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-07-the-severance b4",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "rail-geometry 2-07-the-severance b4",
+      "ok": true,
+      "detail": "on-line ✓ centered ✓ sweep ✓ (min margin 125px)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-08-the-pattern b0",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "rail-geometry 2-08-the-pattern b0",
+      "ok": true,
+      "detail": "on-line ✓ centered ✓ sweep ✓ (min margin 125px)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-08-the-pattern b1",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "rail-geometry 2-08-the-pattern b1",
+      "ok": true,
+      "detail": "on-line ✓ centered ✓ sweep ✓ (min margin 171px)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-08-the-pattern b2",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "rail-geometry 2-08-the-pattern b2",
+      "ok": true,
+      "detail": "on-line ✓ centered ✓ sweep ✓ (min margin 171px)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-08-the-pattern b3",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "rail-geometry 2-08-the-pattern b3",
+      "ok": true,
+      "detail": "on-line ✓ centered ✓ sweep ✓ (min margin 171px)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-08-the-pattern b4",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "rail-geometry 2-08-the-pattern b4",
+      "ok": true,
+      "detail": "on-line ✓ centered ✓ sweep ✓ (min margin 148px)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-08-the-pattern b5",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "rail-geometry 2-08-the-pattern b5",
+      "ok": true,
+      "detail": "on-line ✓ centered ✓ sweep ✓ (min margin 148px)"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-08-the-pattern b6",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-geometry",
+      "name": "rail-geometry 2-08-the-pattern b6",
+      "ok": true,
+      "detail": "on-line ✓ centered ✓ sweep ✓ (min margin 148px)"
+    },
+    {
+      "section": "scripted-black",
+      "name": "1-03 b5 title on black",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "symmetry",
+      "name": "triad: goods on one anchor above their dots",
+      "ok": true,
+      "detail": "lift -72.0px identical ×3"
+    },
+    {
+      "section": "symmetry",
+      "name": "rail stops: glyph/label centered, one rhythm",
+      "ok": true,
+      "detail": "5 stops: one rhythm per state group"
+    },
+    {
+      "section": "named-frames",
+      "name": "the line-draw transformation (live)",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "named-frames",
+      "name": "markers on the line after the transformation",
+      "ok": true,
+      "detail": "on-line ✓ centered ✓ sweep ✓ (min margin 180px)"
+    },
+    {
+      "section": "named-frames",
+      "name": "FIAT floating mark with glyph (live cut)",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "named-frames",
+      "name": "full-rail pull-back (live)",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "named-frames",
+      "name": "crossfade 2-03 → 2-04 lands clean",
+      "ok": true,
+      "detail": "{\"id\":\"2-04-the-competition-record\",\"containers\":1}"
+    },
+    {
+      "section": "mid-animation-refresh",
+      "name": "2-03-the-convergence b2",
+      "ok": true,
+      "detail": "flock lit"
+    },
+    {
+      "section": "mid-animation-refresh",
+      "name": "2-04-the-competition-record b6",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "mid-animation-refresh",
+      "name": "2-05-two-survivors b3",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "mid-animation-refresh",
+      "name": "2-07-the-severance b2",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "static",
+      "name": "39 candidate svgs in assets/icons/candidates/",
+      "ok": true,
+      "detail": "all present"
+    },
+    {
+      "section": "static",
+      "name": "contact sheet html + png present",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static",
+      "name": "docs/icon-grammar.md exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static",
+      "name": "glyphs.js holds selections only (no pre-studio inline drawings)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static",
+      "name": "SELECTIONS covers all 13 glyphs",
+      "ok": true,
+      "detail": "13/13"
+    },
+    {
+      "section": "static",
+      "name": "fiat + bitcoin glyphs placed on the rail",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static",
+      "name": "no clamp system remains (labels are rail-space only)",
+      "ok": true,
+      "detail": ""
+    }
+  ]
+}

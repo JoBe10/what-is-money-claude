@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="96" height="96" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:#e9e4da">
+<!-- wine B — the bottle: Neck, shoulder and body as one open contour with a punt line at the base and a shoulder label tick. -->
+<path d="M20 8 L20 17 C20 20 16 22 16 27 L16 40 L32 40 L32 27 C32 22 28 20 28 17 L28 8"/>
+        <path d="M16 31 L32 31"/>
+        <circle cx="20" cy="8" r="1.8" fill="currentColor" stroke="none"/><circle cx="28" cy="8" r="1.8" fill="currentColor" stroke="none"/>
+</svg>

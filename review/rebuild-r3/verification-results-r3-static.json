@@ -1,0 +1,274 @@
+{
+  "variant": "standard",
+  "date": "2026-07-29T11:54:22.544Z",
+  "checks": 44,
+  "failures": 0,
+  "screenshots": 0,
+  "consoleLines": 0,
+  "results": [
+    {
+      "section": "static",
+      "name": "Section 3 CSS region present",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-pacing",
+      "name": "3-00-waypoint-function: 2 arrows = 2 builds",
+      "ok": true,
+      "detail": "arrows=2 builds=2"
+    },
+    {
+      "section": "static-pacing",
+      "name": "3-01-the-three-functions: 5 arrows = 5 builds",
+      "ok": true,
+      "detail": "arrows=5 builds=5"
+    },
+    {
+      "section": "static-pacing",
+      "name": "3-02-the-functions-separate: 3 arrows = 3 builds",
+      "ok": true,
+      "detail": "arrows=3 builds=3"
+    },
+    {
+      "section": "static-pacing",
+      "name": "3-03-the-order-of-monetization: 6 arrows = 6 builds",
+      "ok": true,
+      "detail": "arrows=6 builds=6"
+    },
+    {
+      "section": "static-pacing",
+      "name": "3-04-stage-signatures: 2 arrows = 2 builds",
+      "ok": true,
+      "detail": "arrows=2 builds=2"
+    },
+    {
+      "section": "static-pacing",
+      "name": "3-05-the-palladium-test: 4 arrows = 4 builds",
+      "ok": true,
+      "detail": "arrows=4 builds=4"
+    },
+    {
+      "section": "static-pacing",
+      "name": "3-06-what-your-money-is: 4 arrows = 4 builds",
+      "ok": true,
+      "detail": "arrows=4 builds=4"
+    },
+    {
+      "section": "static-pacing",
+      "name": "3-07-where-bitcoin-is: 5 arrows = 5 builds",
+      "ok": true,
+      "detail": "arrows=5 builds=5"
+    },
+    {
+      "section": "static-pacing",
+      "name": "3-08-waypoint-judge: 2 arrows = 2 builds",
+      "ok": true,
+      "detail": "arrows=2 builds=2"
+    },
+    {
+      "section": "static-verbatim",
+      "name": "3-00-waypoint-function script verbatim (normalized)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-verbatim",
+      "name": "3-01-the-three-functions script verbatim (normalized)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-verbatim",
+      "name": "3-02-the-functions-separate script verbatim (normalized)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-verbatim",
+      "name": "3-03-the-order-of-monetization script verbatim (normalized)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-verbatim",
+      "name": "3-04-stage-signatures script verbatim (normalized)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-verbatim",
+      "name": "3-05-the-palladium-test script verbatim (normalized)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-verbatim",
+      "name": "3-06-what-your-money-is script verbatim (normalized)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-verbatim",
+      "name": "3-07-where-bitcoin-is script verbatim (normalized)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-verbatim",
+      "name": "3-08-waypoint-judge script verbatim (normalized)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-copy",
+      "name": "all 43 on-screen strings verbatim",
+      "ok": true,
+      "detail": "43/43"
+    },
+    {
+      "section": "static-gates",
+      "name": "banned terms: zero in Section 3 sources",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-gates",
+      "name": "\"claim\" only within slide 06",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-gates",
+      "name": "slide 06 carries the rung (occurrences recorded)",
+      "ok": true,
+      "detail": "9 occurrences in 06"
+    },
+    {
+      "section": "static-gates",
+      "name": "falsifiability/displacement content absent",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-gates",
+      "name": "color arc: accent only at ignition + foundations (CSS)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-gates",
+      "name": "no accent in Section 3 JS",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-gates",
+      "name": "American English: zero British spellings",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-gates",
+      "name": "typographic apostrophes throughout",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-gates",
+      "name": "stage-ladder group on exactly 03 + 04",
+      "ok": true,
+      "detail": "03-the-order-of-monetization.js,04-stage-signatures.js"
+    },
+    {
+      "section": "static-gates",
+      "name": "Section 4/5 files untouched (git)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-gates",
+      "name": "Sections 1–2 sources untouched beyond glyphs.js (git)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-sources",
+      "name": "palladium chart flagged PROVISIONAL in code",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-sources",
+      "name": "WIM-PD-001 entry present",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-sources",
+      "name": "WIM-PD-002 entry present",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-sources",
+      "name": "WIM-AR-001 entry present",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-sources",
+      "name": "WIM-BTC-001 entry present",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-sources",
+      "name": "palladium stubs marked PROVISIONAL",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-glyphs",
+      "name": "30 new candidate svgs present",
+      "ok": true,
+      "detail": "all present"
+    },
+    {
+      "section": "static-glyphs",
+      "name": "SELECTIONS covers the 10 new glyphs",
+      "ok": true,
+      "detail": "10/10"
+    },
+    {
+      "section": "static-glyphs",
+      "name": "contact sheet carries the 10 new rows",
+      "ok": true,
+      "detail": "10/10"
+    },
+    {
+      "section": "static-glyphs",
+      "name": "grammar doc records the R3 extension",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-glyphs",
+      "name": "function/stage glyphs placed (ladder + functions row)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-glyphs",
+      "name": "argentina triad placed (dollar, peso, brick)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "static-glyphs",
+      "name": "palladium + gate + tie placed",
+      "ok": true,
+      "detail": ""
+    }
+  ]
+}

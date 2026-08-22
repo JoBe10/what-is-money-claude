@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="96" height="96" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:#e9e4da">
+<!-- ledger C — the double entry: Bookkeeping’s own construction: two columns on one baseline, divided by the central rule, one entry dot in each — every credit answered by a debit. -->
+<path d="M24 9 L24 39"/>
+        <path d="M8 39 L40 39"/>
+        <path d="M8 15 L20 15 M28 15 L40 15"/>
+        <path d="M8 15 L8 39 M40 15 L40 39"/>
+        <circle cx="14" cy="24" r="2" fill="currentColor" stroke="none"/><circle cx="34" cy="30" r="2" fill="currentColor" stroke="none"/>
+</svg>

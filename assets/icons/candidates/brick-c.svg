@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="96" height="96" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:#e9e4da">
+<!-- brick C — the bonded pair: One brick on two — the smallest true bond: three course edges, the middle one running long, joints closing the courses. -->
+<path d="M12 20.5 L36 20.5"/>
+        <path d="M7 28.5 L41 28.5"/>
+        <path d="M12 36.5 L36 36.5"/>
+        <path d="M12 20.5 L12 28.5 M36 20.5 L36 28.5"/>
+        <path d="M24 28.5 L24 36.5"/>
+</svg>

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="96" height="96" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:#e9e4da">
+<!-- gate C — the climb chevron: One chevron pointing up the ladder, apex dotted — the next stage unlocked, direction drawn as the mark itself. -->
+<path d="M15.5 30.5 L24 17.5 L32.5 30.5"/>
+        <circle cx="24" cy="17.5" r="1.6" fill="currentColor" stroke="none"/>
+</svg>

@@ -1,0 +1,328 @@
+{
+  "variant": "standard",
+  "date": "2026-07-28T14:54:30.753Z",
+  "checks": 53,
+  "failures": 0,
+  "screenshots": 48,
+  "consoleLines": 0,
+  "results": [
+    {
+      "section": "direct-entry",
+      "name": "2-00-waypoint-origin b0",
+      "ok": true,
+      "detail": "ignited=false"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-00-waypoint-origin b1",
+      "ok": true,
+      "detail": "ignited=true"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-01-the-world-without-it b0",
+      "ok": true,
+      "detail": "black"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-01-the-world-without-it b1",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-01-the-world-without-it b2",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-01-the-world-without-it b3",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-02-the-discovery b0",
+      "ok": true,
+      "detail": "rest"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-02-the-discovery b1",
+      "ok": true,
+      "detail": "held"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-02-the-discovery b2",
+      "ok": true,
+      "detail": "cycle clear"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-02-the-discovery b3",
+      "ok": true,
+      "detail": "cycle clear"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-02-the-discovery b4",
+      "ok": true,
+      "detail": "cycle clear"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-03-the-convergence b0",
+      "ok": true,
+      "detail": "black"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-03-the-convergence b1",
+      "ok": true,
+      "detail": "flock lit"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-03-the-convergence b2",
+      "ok": true,
+      "detail": "flock lit"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-03-the-convergence b3",
+      "ok": true,
+      "detail": "flock lit"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-04-the-competition b0",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-04-the-competition b1",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-04-the-competition b2",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-04-the-competition b3",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-04-the-competition b4",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-04-the-competition b5",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-05-the-rail-rises b0",
+      "ok": true,
+      "detail": "dark"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-05-the-rail-rises b1",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-05-the-rail-rises b2",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-05-the-rail-rises b3",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-06-two-survivors b0",
+      "ok": true,
+      "detail": "dark"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-06-two-survivors b1",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-06-two-survivors b2",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-06-two-survivors b3",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-06-two-survivors b4",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-06-two-survivors b5",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-07-the-abstraction-ladder b0",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-07-the-abstraction-ladder b1",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-07-the-abstraction-ladder b2",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-07-the-abstraction-ladder b3",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-07-the-abstraction-ladder b4",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-08-the-severance b0",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-08-the-severance b1",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-08-the-severance b2",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-08-the-severance b3",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-08-the-severance b4",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-09-the-pattern b0",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-09-the-pattern b1",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-09-the-pattern b2",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-09-the-pattern b3",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-09-the-pattern b4",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-09-the-pattern b5",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "direct-entry",
+      "name": "2-09-the-pattern b6",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "named-frames",
+      "name": "first-orange ignition (live)",
+      "ok": true,
+      "detail": "ignited=true"
+    },
+    {
+      "section": "named-frames",
+      "name": "full-rail pull-back (live)",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "mid-animation-refresh",
+      "name": "2-03-the-convergence b2",
+      "ok": true,
+      "detail": "flock lit"
+    },
+    {
+      "section": "mid-animation-refresh",
+      "name": "2-06-two-survivors b3",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "mid-animation-refresh",
+      "name": "2-08-the-severance b2",
+      "ok": true,
+      "detail": "ok"
+    }
+  ]
+}

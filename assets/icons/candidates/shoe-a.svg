@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="96" height="96" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:#e9e4da">
+<!-- shoe A — the profile last: A shoe from the side, built from the three features that make one legible: the flat sole, the ankle opening dipped into the top line, and the toe spring lifting off the ground. Two lace ticks cross the instep. Distinct from Section 2's sandal, which is an outsole-and-thong mark. -->
+<path d="M8 34 L40 34"/>
+        <path d="M8 34 L8.6 24 C8.9 20.8 11.6 19.8 13.6 21.4 L15.4 22.8"/>
+        <path d="M15.4 22.8 C20 25 25 26.2 29.5 27.8 C34 29.4 37.6 31.2 40 34"/>
+        <path d="M17.6 24.2 L19.8 27.4 M22.4 25.4 L24.4 28.6"/>
+        <circle cx="8" cy="34" r="1.8" fill="currentColor" stroke="none"/><circle cx="40" cy="34" r="1.8" fill="currentColor" stroke="none"/>
+</svg>

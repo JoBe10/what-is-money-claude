@@ -1,0 +1,388 @@
+{
+  "variant": "standard",
+  "date": "2026-07-29T01:18:16.828Z",
+  "checks": 63,
+  "failures": 0,
+  "screenshots": 58,
+  "consoleLines": 0,
+  "results": [
+    {
+      "section": "traversal",
+      "name": "deck is 47 slides",
+      "ok": true,
+      "detail": "total=47"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "1-01-eighty-thousand-hours b1",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "1-01-eighty-thousand-hours b2",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "1-02-the-conversion b0",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "1-02-the-conversion b1",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "1-02-the-conversion b2",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "1-02-the-conversion b3",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "1-05-the-promise b0",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "1-05-the-promise b1",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "1-05-the-promise b2",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "1-05-the-promise b3",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "1-05-the-promise b4",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "1-05-the-promise b5",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "1-05-the-promise b6",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "2-01-the-world-without-it b0",
+      "ok": true,
+      "detail": "black"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "2-01-the-world-without-it b1",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "2-01-the-world-without-it b2",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "2-01-the-world-without-it b3",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "2-02-the-discovery b0",
+      "ok": true,
+      "detail": "rest"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "2-02-the-discovery b1",
+      "ok": true,
+      "detail": "held"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "2-02-the-discovery b2",
+      "ok": true,
+      "detail": "cycle clear"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "2-02-the-discovery b3",
+      "ok": true,
+      "detail": "cycle clear"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "2-02-the-discovery b4",
+      "ok": true,
+      "detail": "cycle clear"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "2-03-the-convergence b0",
+      "ok": true,
+      "detail": "black"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "2-03-the-convergence b1",
+      "ok": true,
+      "detail": "flock lit"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "2-03-the-convergence b2",
+      "ok": true,
+      "detail": "flock lit"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "2-03-the-convergence b3",
+      "ok": true,
+      "detail": "flock lit"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "2-04-the-competition-record b0",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "2-04-the-competition-record b1",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "2-04-the-competition-record b2",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "2-04-the-competition-record b3",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "2-04-the-competition-record b4",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "2-04-the-competition-record b5",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "2-04-the-competition-record b6",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "2-04-the-competition-record b7",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "2-04-the-competition-record b8",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "2-05-two-survivors b0",
+      "ok": true,
+      "detail": "dimmed rail"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "2-05-two-survivors b1",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "2-05-two-survivors b2",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "2-05-two-survivors b3",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "2-05-two-survivors b4",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "2-05-two-survivors b5",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "2-06-the-abstraction-ladder b0",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "2-06-the-abstraction-ladder b1",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "2-06-the-abstraction-ladder b2",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "2-06-the-abstraction-ladder b3",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "2-06-the-abstraction-ladder b4",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "2-07-the-severance b0",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "2-07-the-severance b1",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "2-07-the-severance b2",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "2-07-the-severance b3",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "2-07-the-severance b4",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "2-08-the-pattern b0",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "2-08-the-pattern b1",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "2-08-the-pattern b2",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "2-08-the-pattern b3",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "2-08-the-pattern b4",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "2-08-the-pattern b5",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "traversal-probe",
+      "name": "2-08-the-pattern b6",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "traversal",
+      "name": "forward pass complete",
+      "ok": true,
+      "detail": "183 steps to 5-01-thank-you, 47 slides"
+    },
+    {
+      "section": "traversal",
+      "name": "seam 2-08 → legacy 3-01",
+      "ok": true,
+      "detail": "{\"id\":\"3-01-section-opener\",\"imagesBroken\":0}"
+    },
+    {
+      "section": "traversal",
+      "name": "backward pass reaches 1.1 b0",
+      "ok": true,
+      "detail": "44 steps"
+    },
+    {
+      "section": "traversal",
+      "name": "fast re-forward through Sections 1–2",
+      "ok": true,
+      "detail": "{\"id\":\"2-07-the-severance\",\"containers\":1,\"staleOverlays\":0}"
+    }
+  ]
+}

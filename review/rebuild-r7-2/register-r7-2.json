@@ -1,0 +1,1758 @@
+{
+  "phase": "R7.2",
+  "diagrams": [
+    ".s4-comparison-table",
+    ".s4-failure-list",
+    ".s4-fixed-supply-field",
+    ".unit-field-grid",
+    ".s3f-ladder",
+    ".s3f-tower",
+    ".s2o-elements",
+    ".s2o-triad",
+    ".s4-exchange__svg",
+    ".wayline"
+  ],
+  "checks": 271,
+  "failures": 0,
+  "rows": [
+    {
+      "id": "1-01-eighty-thousand-hours",
+      "section": "question",
+      "register": "line",
+      "maxImages": 0,
+      "maxStubs": 0,
+      "subjects": []
+    },
+    {
+      "id": "1-02-the-conversion",
+      "section": "question",
+      "register": "line",
+      "maxImages": 0,
+      "maxStubs": 0,
+      "subjects": []
+    },
+    {
+      "id": "1-03-what-is-money",
+      "section": "question",
+      "register": "line",
+      "maxImages": 0,
+      "maxStubs": 0,
+      "subjects": []
+    },
+    {
+      "id": "1-04-the-stakes",
+      "section": "question",
+      "register": "line",
+      "maxImages": 0,
+      "maxStubs": 0,
+      "subjects": []
+    },
+    {
+      "id": "1-05-the-promise",
+      "section": "question",
+      "register": "line",
+      "maxImages": 0,
+      "maxStubs": 0,
+      "subjects": []
+    },
+    {
+      "id": "2-01-the-world-without-it",
+      "section": "origin",
+      "register": "line",
+      "maxImages": 0,
+      "maxStubs": 0,
+      "subjects": []
+    },
+    {
+      "id": "2-02-the-discovery",
+      "section": "origin",
+      "register": "line",
+      "maxImages": 0,
+      "maxStubs": 0,
+      "subjects": []
+    },
+    {
+      "id": "2-03-the-convergence",
+      "section": "origin",
+      "register": "line",
+      "maxImages": 0,
+      "maxStubs": 0,
+      "subjects": []
+    },
+    {
+      "id": "2-04-the-competition-record",
+      "section": "origin",
+      "register": "mixed",
+      "maxImages": 1,
+      "maxStubs": 3,
+      "subjects": [
+        "shells"
+      ]
+    },
+    {
+      "id": "2-05-two-survivors",
+      "section": "origin",
+      "register": "line",
+      "maxImages": 0,
+      "maxStubs": 0,
+      "subjects": []
+    },
+    {
+      "id": "2-06-the-abstraction-ladder",
+      "section": "origin",
+      "register": "line",
+      "maxImages": 0,
+      "maxStubs": 0,
+      "subjects": []
+    },
+    {
+      "id": "2-07-the-severance",
+      "section": "origin",
+      "register": "line",
+      "maxImages": 0,
+      "maxStubs": 0,
+      "subjects": []
+    },
+    {
+      "id": "2-08-the-pattern",
+      "section": "origin",
+      "register": "line",
+      "maxImages": 0,
+      "maxStubs": 0,
+      "subjects": []
+    },
+    {
+      "id": "3-00-waypoint-function",
+      "section": "function",
+      "register": "line",
+      "maxImages": 0,
+      "maxStubs": 0,
+      "subjects": []
+    },
+    {
+      "id": "3-01-the-three-functions",
+      "section": "function",
+      "register": "line",
+      "maxImages": 0,
+      "maxStubs": 0,
+      "subjects": []
+    },
+    {
+      "id": "3-02-the-functions-separate",
+      "section": "function",
+      "register": "line",
+      "maxImages": 0,
+      "maxStubs": 0,
+      "subjects": []
+    },
+    {
+      "id": "3-03-the-order-of-monetization",
+      "section": "function",
+      "register": "line",
+      "maxImages": 0,
+      "maxStubs": 0,
+      "subjects": []
+    },
+    {
+      "id": "3-04-stage-signatures",
+      "section": "function",
+      "register": "line",
+      "maxImages": 0,
+      "maxStubs": 0,
+      "subjects": []
+    },
+    {
+      "id": "3-05-the-palladium-test",
+      "section": "function",
+      "register": "line",
+      "maxImages": 0,
+      "maxStubs": 0,
+      "subjects": []
+    },
+    {
+      "id": "3-06-what-your-money-is",
+      "section": "function",
+      "register": "line",
+      "maxImages": 0,
+      "maxStubs": 0,
+      "subjects": []
+    },
+    {
+      "id": "3-07-where-bitcoin-is",
+      "section": "function",
+      "register": "line",
+      "maxImages": 0,
+      "maxStubs": 0,
+      "subjects": []
+    },
+    {
+      "id": "3-08-waypoint-judge",
+      "section": "function",
+      "register": "line",
+      "maxImages": 0,
+      "maxStubs": 0,
+      "subjects": []
+    },
+    {
+      "id": "4-01-define-the-job",
+      "section": "ideal-store",
+      "register": "line",
+      "maxImages": 0,
+      "maxStubs": 0,
+      "subjects": []
+    },
+    {
+      "id": "4-03-simple-exchange",
+      "section": "ideal-store",
+      "register": "dark-field",
+      "maxImages": 0,
+      "maxStubs": 1,
+      "subjects": []
+    },
+    {
+      "id": "4-04-unfinished-exchange",
+      "section": "ideal-store",
+      "register": "mixed",
+      "maxImages": 2,
+      "maxStubs": 1,
+      "subjects": [
+        "shoe",
+        "wine"
+      ]
+    },
+    {
+      "id": "4-05-spend-or-save",
+      "section": "ideal-store",
+      "register": "mixed",
+      "maxImages": 2,
+      "maxStubs": 1,
+      "subjects": [
+        "shoe",
+        "wine"
+      ]
+    },
+    {
+      "id": "4-06-claim-and-carrier",
+      "section": "ideal-store",
+      "register": "mixed",
+      "maxImages": 5,
+      "maxStubs": 0,
+      "subjects": [
+        "bitcoin",
+        "gold",
+        "ledger",
+        "paper",
+        "shells"
+      ]
+    },
+    {
+      "id": "4-07-store-of-value-function",
+      "section": "ideal-store",
+      "register": "line",
+      "maxImages": 0,
+      "maxStubs": 0,
+      "subjects": []
+    },
+    {
+      "id": "4-08-100-year-test",
+      "section": "ideal-store",
+      "register": "line",
+      "maxImages": 0,
+      "maxStubs": 0,
+      "subjects": []
+    },
+    {
+      "id": "4-09-future-is-unknowable",
+      "section": "ideal-store",
+      "register": "line",
+      "maxImages": 0,
+      "maxStubs": 0,
+      "subjects": []
+    },
+    {
+      "id": "4-10-invert-the-question",
+      "section": "ideal-store",
+      "register": "line",
+      "maxImages": 0,
+      "maxStubs": 0,
+      "subjects": []
+    },
+    {
+      "id": "4-11-carrier-failures-i",
+      "section": "ideal-store",
+      "register": "line",
+      "maxImages": 0,
+      "maxStubs": 0,
+      "subjects": []
+    },
+    {
+      "id": "4-12-carrier-failures-ii",
+      "section": "ideal-store",
+      "register": "line",
+      "maxImages": 0,
+      "maxStubs": 0,
+      "subjects": []
+    },
+    {
+      "id": "4-13-failure-to-requirement",
+      "section": "ideal-store",
+      "register": "line",
+      "maxImages": 0,
+      "maxStubs": 0,
+      "subjects": []
+    },
+    {
+      "id": "4-14-ten-properties",
+      "section": "ideal-store",
+      "register": "line",
+      "maxImages": 0,
+      "maxStubs": 0,
+      "subjects": []
+    },
+    {
+      "id": "4-15-framework-to-comparison",
+      "section": "ideal-store",
+      "register": "line",
+      "maxImages": 0,
+      "maxStubs": 0,
+      "subjects": []
+    },
+    {
+      "id": "4-16-the-comparison",
+      "section": "ideal-store",
+      "register": "line",
+      "maxImages": 0,
+      "maxStubs": 0,
+      "subjects": []
+    },
+    {
+      "id": "4-17-store-of-value-function-migrates",
+      "section": "ideal-store",
+      "register": "line",
+      "maxImages": 0,
+      "maxStubs": 0,
+      "subjects": []
+    },
+    {
+      "id": "4-18-monetary-premium",
+      "section": "ideal-store",
+      "register": "line",
+      "maxImages": 0,
+      "maxStubs": 0,
+      "subjects": []
+    },
+    {
+      "id": "4-19-other-assets-do-moneys-job",
+      "section": "ideal-store",
+      "register": "line",
+      "maxImages": 0,
+      "maxStubs": 0,
+      "subjects": []
+    },
+    {
+      "id": "4-20-bitcoin-does-not-replace-everything",
+      "section": "ideal-store",
+      "register": "line",
+      "maxImages": 0,
+      "maxStubs": 0,
+      "subjects": []
+    },
+    {
+      "id": "4-20b-what-would-change-these-scores",
+      "section": "ideal-store",
+      "register": "line",
+      "maxImages": 0,
+      "maxStubs": 0,
+      "subjects": []
+    },
+    {
+      "id": "4-21-marginal-store-of-value-decision",
+      "section": "ideal-store",
+      "register": "line",
+      "maxImages": 0,
+      "maxStubs": 0,
+      "subjects": []
+    },
+    {
+      "id": "4-22-fixed-supply-reprices-at-margin",
+      "section": "ideal-store",
+      "register": "line",
+      "maxImages": 0,
+      "maxStubs": 0,
+      "subjects": []
+    },
+    {
+      "id": "4-23-investment-case-from-first-principles",
+      "section": "ideal-store",
+      "register": "line",
+      "maxImages": 0,
+      "maxStubs": 0,
+      "subjects": []
+    },
+    {
+      "id": "5-01-thank-you",
+      "section": "close",
+      "register": "line",
+      "maxImages": 0,
+      "maxStubs": 0,
+      "subjects": []
+    }
+  ],
+  "results": [
+    {
+      "name": "1-01-eighty-thousand-hours b0: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "1-01-eighty-thousand-hours b1: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "1-01-eighty-thousand-hours b2: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "1-02-the-conversion b0: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "1-02-the-conversion b1: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "1-02-the-conversion b2: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "1-02-the-conversion b3: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "1-03-what-is-money b0: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "1-03-what-is-money b1: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "1-03-what-is-money b2: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "1-03-what-is-money b3: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "1-03-what-is-money b4: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "1-03-what-is-money b5: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "1-04-the-stakes b0: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "1-04-the-stakes b1: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "1-05-the-promise b0: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "1-05-the-promise b1: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "1-05-the-promise b2: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "1-05-the-promise b3: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "1-05-the-promise b4: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "1-05-the-promise b5: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "1-05-the-promise b6: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "2-01-the-world-without-it b0: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "2-01-the-world-without-it b1: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "2-01-the-world-without-it b2: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "2-01-the-world-without-it b3: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "2-02-the-discovery b0: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "2-02-the-discovery b1: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "2-02-the-discovery b2: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "2-02-the-discovery b3: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "2-02-the-discovery b4: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "2-03-the-convergence b0: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "2-03-the-convergence b1: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "2-03-the-convergence b2: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "2-03-the-convergence b3: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "2-04-the-competition-record b0: a slide showing a render declares a non-line register",
+      "ok": true,
+      "detail": "declared \"mixed\" with 1 render(s) on stage"
+    },
+    {
+      "name": "2-04-the-competition-record b0: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "2-04-the-competition-record b0: no render on the rail while the line is drawn",
+      "ok": true,
+      "detail": "no line yet"
+    },
+    {
+      "name": "2-04-the-competition-record b1: a slide showing a render declares a non-line register",
+      "ok": true,
+      "detail": "declared \"mixed\" with 1 render(s) on stage"
+    },
+    {
+      "name": "2-04-the-competition-record b1: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "2-04-the-competition-record b1: no render on the rail while the line is drawn",
+      "ok": true,
+      "detail": "no line yet"
+    },
+    {
+      "name": "2-04-the-competition-record b2: a slide showing a render declares a non-line register",
+      "ok": true,
+      "detail": "declared \"mixed\" with 1 render(s) on stage"
+    },
+    {
+      "name": "2-04-the-competition-record b2: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "2-04-the-competition-record b2: no render on the rail while the line is drawn",
+      "ok": true,
+      "detail": "no line yet"
+    },
+    {
+      "name": "2-04-the-competition-record b3: a slide showing a render declares a non-line register",
+      "ok": true,
+      "detail": "declared \"mixed\" with 1 render(s) on stage"
+    },
+    {
+      "name": "2-04-the-competition-record b3: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "2-04-the-competition-record b3: no render on the rail while the line is drawn",
+      "ok": true,
+      "detail": "no line yet"
+    },
+    {
+      "name": "2-04-the-competition-record b4: a slide showing a render declares a non-line register",
+      "ok": true,
+      "detail": "declared \"mixed\" with 1 render(s) on stage"
+    },
+    {
+      "name": "2-04-the-competition-record b4: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "2-04-the-competition-record b4: no render on the rail while the line is drawn",
+      "ok": true,
+      "detail": "no line yet"
+    },
+    {
+      "name": "2-04-the-competition-record b5: a slide showing a render declares a non-line register",
+      "ok": true,
+      "detail": "declared \"mixed\" with 1 render(s) on stage"
+    },
+    {
+      "name": "2-04-the-competition-record b5: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "2-04-the-competition-record b5: no render on the rail while the line is drawn",
+      "ok": true,
+      "detail": "no line yet"
+    },
+    {
+      "name": "2-04-the-competition-record b6: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "2-04-the-competition-record b6: no render on the rail while the line is drawn",
+      "ok": true,
+      "detail": "line drawn, 0 render(s) present"
+    },
+    {
+      "name": "2-04-the-competition-record b7: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "2-04-the-competition-record b7: no render on the rail while the line is drawn",
+      "ok": true,
+      "detail": "line drawn, 0 render(s) present"
+    },
+    {
+      "name": "2-04-the-competition-record b8: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "2-04-the-competition-record b8: no render on the rail while the line is drawn",
+      "ok": true,
+      "detail": "line drawn, 0 render(s) present"
+    },
+    {
+      "name": "2-05-two-survivors b0: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "2-05-two-survivors b0: no render on the rail while the line is drawn",
+      "ok": true,
+      "detail": "line drawn, 0 render(s) present"
+    },
+    {
+      "name": "2-05-two-survivors b1: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "2-05-two-survivors b1: no render on the rail while the line is drawn",
+      "ok": true,
+      "detail": "line drawn, 0 render(s) present"
+    },
+    {
+      "name": "2-05-two-survivors b2: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "2-05-two-survivors b2: no render on the rail while the line is drawn",
+      "ok": true,
+      "detail": "line drawn, 0 render(s) present"
+    },
+    {
+      "name": "2-05-two-survivors b3: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "2-05-two-survivors b3: no render on the rail while the line is drawn",
+      "ok": true,
+      "detail": "line drawn, 0 render(s) present"
+    },
+    {
+      "name": "2-05-two-survivors b4: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "2-05-two-survivors b4: no render on the rail while the line is drawn",
+      "ok": true,
+      "detail": "line drawn, 0 render(s) present"
+    },
+    {
+      "name": "2-05-two-survivors b5: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "2-05-two-survivors b5: no render on the rail while the line is drawn",
+      "ok": true,
+      "detail": "line drawn, 0 render(s) present"
+    },
+    {
+      "name": "2-05-two-survivors b6: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "2-05-two-survivors b6: no render on the rail while the line is drawn",
+      "ok": true,
+      "detail": "line drawn, 0 render(s) present"
+    },
+    {
+      "name": "2-06-the-abstraction-ladder b0: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "2-06-the-abstraction-ladder b0: no render on the rail while the line is drawn",
+      "ok": true,
+      "detail": "line drawn, 0 render(s) present"
+    },
+    {
+      "name": "2-06-the-abstraction-ladder b1: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "2-06-the-abstraction-ladder b1: no render on the rail while the line is drawn",
+      "ok": true,
+      "detail": "line drawn, 0 render(s) present"
+    },
+    {
+      "name": "2-06-the-abstraction-ladder b2: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "2-06-the-abstraction-ladder b2: no render on the rail while the line is drawn",
+      "ok": true,
+      "detail": "line drawn, 0 render(s) present"
+    },
+    {
+      "name": "2-06-the-abstraction-ladder b3: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "2-06-the-abstraction-ladder b3: no render on the rail while the line is drawn",
+      "ok": true,
+      "detail": "line drawn, 0 render(s) present"
+    },
+    {
+      "name": "2-06-the-abstraction-ladder b4: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "2-06-the-abstraction-ladder b4: no render on the rail while the line is drawn",
+      "ok": true,
+      "detail": "line drawn, 0 render(s) present"
+    },
+    {
+      "name": "2-07-the-severance b0: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "2-07-the-severance b0: no render on the rail while the line is drawn",
+      "ok": true,
+      "detail": "line drawn, 0 render(s) present"
+    },
+    {
+      "name": "2-07-the-severance b1: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "2-07-the-severance b1: no render on the rail while the line is drawn",
+      "ok": true,
+      "detail": "line drawn, 0 render(s) present"
+    },
+    {
+      "name": "2-07-the-severance b2: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "2-07-the-severance b2: no render on the rail while the line is drawn",
+      "ok": true,
+      "detail": "line drawn, 0 render(s) present"
+    },
+    {
+      "name": "2-07-the-severance b3: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "2-07-the-severance b3: no render on the rail while the line is drawn",
+      "ok": true,
+      "detail": "line drawn, 0 render(s) present"
+    },
+    {
+      "name": "2-07-the-severance b4: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "2-07-the-severance b4: no render on the rail while the line is drawn",
+      "ok": true,
+      "detail": "line drawn, 0 render(s) present"
+    },
+    {
+      "name": "2-08-the-pattern b0: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "2-08-the-pattern b0: no render on the rail while the line is drawn",
+      "ok": true,
+      "detail": "line drawn, 0 render(s) present"
+    },
+    {
+      "name": "2-08-the-pattern b1: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "2-08-the-pattern b1: no render on the rail while the line is drawn",
+      "ok": true,
+      "detail": "line drawn, 0 render(s) present"
+    },
+    {
+      "name": "2-08-the-pattern b2: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "2-08-the-pattern b2: no render on the rail while the line is drawn",
+      "ok": true,
+      "detail": "line drawn, 0 render(s) present"
+    },
+    {
+      "name": "2-08-the-pattern b3: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "2-08-the-pattern b3: no render on the rail while the line is drawn",
+      "ok": true,
+      "detail": "line drawn, 0 render(s) present"
+    },
+    {
+      "name": "2-08-the-pattern b4: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "2-08-the-pattern b4: no render on the rail while the line is drawn",
+      "ok": true,
+      "detail": "line drawn, 0 render(s) present"
+    },
+    {
+      "name": "2-08-the-pattern b5: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "2-08-the-pattern b5: no render on the rail while the line is drawn",
+      "ok": true,
+      "detail": "line drawn, 0 render(s) present"
+    },
+    {
+      "name": "2-08-the-pattern b6: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "2-08-the-pattern b6: no render on the rail while the line is drawn",
+      "ok": true,
+      "detail": "line drawn, 0 render(s) present"
+    },
+    {
+      "name": "3-00-waypoint-function b0: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "3-00-waypoint-function b1: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "3-00-waypoint-function b2: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "3-01-the-three-functions b0: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "3-01-the-three-functions b1: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "3-01-the-three-functions b2: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "3-01-the-three-functions b3: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "3-01-the-three-functions b4: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "3-01-the-three-functions b5: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "3-02-the-functions-separate b0: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "3-02-the-functions-separate b1: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "3-02-the-functions-separate b2: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "3-02-the-functions-separate b3: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "3-03-the-order-of-monetization b0: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "3-03-the-order-of-monetization b1: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "3-03-the-order-of-monetization b2: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "3-03-the-order-of-monetization b3: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "3-03-the-order-of-monetization b4: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "3-03-the-order-of-monetization b5: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "3-03-the-order-of-monetization b6: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "3-04-stage-signatures b0: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "3-04-stage-signatures b1: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "3-04-stage-signatures b2: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "3-05-the-palladium-test b0: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "3-05-the-palladium-test b1: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "3-05-the-palladium-test b2: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "3-05-the-palladium-test b3: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "3-05-the-palladium-test b4: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "3-05-the-palladium-test b5: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "3-06-what-your-money-is b0: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "3-06-what-your-money-is b1: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "3-06-what-your-money-is b2: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "3-06-what-your-money-is b3: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "3-06-what-your-money-is b4: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "3-06-what-your-money-is b5: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "3-06-what-your-money-is b6: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "3-07-where-bitcoin-is b0: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "3-07-where-bitcoin-is b1: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "3-07-where-bitcoin-is b2: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "3-07-where-bitcoin-is b3: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "3-07-where-bitcoin-is b4: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "3-07-where-bitcoin-is b5: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "3-08-waypoint-judge b0: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "3-08-waypoint-judge b1: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "3-08-waypoint-judge b2: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-01-define-the-job b0: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-01-define-the-job b1: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-01-define-the-job b2: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-01-define-the-job b3: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-01-define-the-job b4: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-03-simple-exchange b0: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-03-simple-exchange b1: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-03-simple-exchange b2: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-03-simple-exchange b3: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-03-simple-exchange b4: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-04-unfinished-exchange b0: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-04-unfinished-exchange b1: a slide showing a render declares a non-line register",
+      "ok": true,
+      "detail": "declared \"mixed\" with 2 render(s) on stage"
+    },
+    {
+      "name": "4-04-unfinished-exchange b1: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-04-unfinished-exchange b2: a slide showing a render declares a non-line register",
+      "ok": true,
+      "detail": "declared \"mixed\" with 2 render(s) on stage"
+    },
+    {
+      "name": "4-04-unfinished-exchange b2: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-04-unfinished-exchange b3: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-04-unfinished-exchange b4: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-05-spend-or-save b0: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-05-spend-or-save b1: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-05-spend-or-save b2: a slide showing a render declares a non-line register",
+      "ok": true,
+      "detail": "declared \"mixed\" with 2 render(s) on stage"
+    },
+    {
+      "name": "4-05-spend-or-save b2: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-05-spend-or-save b3: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-05-spend-or-save b4: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-06-claim-and-carrier b0: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-06-claim-and-carrier b1: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-06-claim-and-carrier b2: a slide showing a render declares a non-line register",
+      "ok": true,
+      "detail": "declared \"mixed\" with 5 render(s) on stage"
+    },
+    {
+      "name": "4-06-claim-and-carrier b2: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-06-claim-and-carrier b3: a slide showing a render declares a non-line register",
+      "ok": true,
+      "detail": "declared \"mixed\" with 5 render(s) on stage"
+    },
+    {
+      "name": "4-06-claim-and-carrier b3: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-06-claim-and-carrier b4: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-07-store-of-value-function b0: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-07-store-of-value-function b1: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-07-store-of-value-function b2: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-07-store-of-value-function b3: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-07-store-of-value-function b4: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-07-store-of-value-function b5: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-08-100-year-test b0: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-08-100-year-test b1: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-08-100-year-test b2: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-08-100-year-test b3: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-09-future-is-unknowable b0: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-09-future-is-unknowable b1: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-09-future-is-unknowable b2: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-09-future-is-unknowable b3: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-09-future-is-unknowable b4: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-09-future-is-unknowable b5: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-10-invert-the-question b0: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-10-invert-the-question b1: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-10-invert-the-question b2: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-11-carrier-failures-i b0: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-11-carrier-failures-i b1: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-11-carrier-failures-i b2: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-11-carrier-failures-i b3: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-11-carrier-failures-i b4: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-11-carrier-failures-i b5: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-12-carrier-failures-ii b0: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-12-carrier-failures-ii b1: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-12-carrier-failures-ii b2: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-12-carrier-failures-ii b3: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-12-carrier-failures-ii b4: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-12-carrier-failures-ii b5: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-13-failure-to-requirement b0: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-13-failure-to-requirement b1: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-13-failure-to-requirement b2: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-14-ten-properties b0: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-14-ten-properties b1: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-14-ten-properties b2: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-15-framework-to-comparison b0: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-15-framework-to-comparison b1: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-15-framework-to-comparison b2: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-15-framework-to-comparison b3: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-15-framework-to-comparison b4: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-16-the-comparison b0: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-16-the-comparison b1: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-16-the-comparison b2: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-16-the-comparison b3: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-17-store-of-value-function-migrates b0: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-17-store-of-value-function-migrates b1: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-17-store-of-value-function-migrates b2: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-17-store-of-value-function-migrates b3: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-18-monetary-premium b0: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-18-monetary-premium b1: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-18-monetary-premium b2: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-18-monetary-premium b3: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-19-other-assets-do-moneys-job b0: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-19-other-assets-do-moneys-job b1: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-19-other-assets-do-moneys-job b2: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-19-other-assets-do-moneys-job b3: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-19-other-assets-do-moneys-job b4: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-19-other-assets-do-moneys-job b5: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-20-bitcoin-does-not-replace-everything b0: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-20-bitcoin-does-not-replace-everything b1: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-20-bitcoin-does-not-replace-everything b2: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-20-bitcoin-does-not-replace-everything b3: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-20-bitcoin-does-not-replace-everything b4: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-20-bitcoin-does-not-replace-everything b5: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-20-bitcoin-does-not-replace-everything b6: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-20-bitcoin-does-not-replace-everything b7: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-20-bitcoin-does-not-replace-everything b8: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-20b-what-would-change-these-scores b0: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-20b-what-would-change-these-scores b1: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-20b-what-would-change-these-scores b2: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-20b-what-would-change-these-scores b3: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-20b-what-would-change-these-scores b4: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-20b-what-would-change-these-scores b5: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-21-marginal-store-of-value-decision b0: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-21-marginal-store-of-value-decision b1: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-21-marginal-store-of-value-decision b2: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-22-fixed-supply-reprices-at-margin b0: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-22-fixed-supply-reprices-at-margin b1: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-22-fixed-supply-reprices-at-margin b2: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-22-fixed-supply-reprices-at-margin b3: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-23-investment-case-from-first-principles b0: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-23-investment-case-from-first-principles b1: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "4-23-investment-case-from-first-principles b2: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "5-01-thank-you b0: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "5-01-thank-you b1: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "5-01-thank-you b2: no dark-field render inside a structural diagram",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "REGISTER: the dark-field register is confined to the slides the log names",
+      "ok": true,
+      "detail": "2-04-the-competition-record=mixed, 4-03-simple-exchange=dark-field, 4-04-unfinished-exchange=mixed, 4-05-spend-or-save=mixed, 4-06-claim-and-carrier=mixed"
+    }
+  ]
+}

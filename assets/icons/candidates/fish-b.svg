@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="96" height="96" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:#e9e4da">
+<!-- fish B — the ichthys: The carved two-arc fish: both arcs spring from the nose and cross at the tail — the oldest fish mark in the record, redrawn. -->
+<path d="M41 24 C31 9 14 11.5 6.5 30.5"/>
+        <path d="M41 24 C31 39 14 36.5 6.5 17.5"/>
+        <circle cx="6.5" cy="30.5" r="1.8" fill="currentColor" stroke="none"/><circle cx="6.5" cy="17.5" r="1.8" fill="currentColor" stroke="none"/><circle cx="33.5" cy="20.5" r="1.6" fill="currentColor" stroke="none"/>
+</svg>

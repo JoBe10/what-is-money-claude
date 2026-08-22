@@ -1,0 +1,525 @@
+{
+  "date": "2026-07-29T00:52:38.389Z",
+  "checks": 75,
+  "failures": 0,
+  "pacingTable": [
+    {
+      "slide": "01-eighty-thousand-hours",
+      "builds": 2,
+      "arrows": 2,
+      "match": true
+    },
+    {
+      "slide": "02-the-conversion",
+      "builds": 3,
+      "arrows": 3,
+      "match": true
+    },
+    {
+      "slide": "05-the-promise",
+      "builds": 6,
+      "arrows": 6,
+      "match": true
+    },
+    {
+      "slide": "01-the-world-without-it",
+      "builds": 3,
+      "arrows": 3,
+      "match": true
+    },
+    {
+      "slide": "02-the-discovery",
+      "builds": 4,
+      "arrows": 4,
+      "match": true
+    },
+    {
+      "slide": "03-the-convergence",
+      "builds": 3,
+      "arrows": 3,
+      "match": true
+    },
+    {
+      "slide": "04-the-competition-record",
+      "builds": 8,
+      "arrows": 8,
+      "match": true
+    },
+    {
+      "slide": "05-two-survivors",
+      "builds": 5,
+      "arrows": 5,
+      "match": true
+    },
+    {
+      "slide": "06-the-abstraction-ladder",
+      "builds": 4,
+      "arrows": 4,
+      "match": true
+    },
+    {
+      "slide": "07-the-severance",
+      "builds": 4,
+      "arrows": 4,
+      "match": true
+    },
+    {
+      "slide": "08-the-pattern",
+      "builds": 6,
+      "arrows": 6,
+      "match": true
+    }
+  ],
+  "results": [
+    {
+      "section": "pacing-rule",
+      "name": "01-eighty-thousand-hours.js",
+      "ok": true,
+      "detail": "builds=2 arrows=2"
+    },
+    {
+      "section": "pacing-rule",
+      "name": "02-the-conversion.js",
+      "ok": true,
+      "detail": "builds=3 arrows=3"
+    },
+    {
+      "section": "pacing-rule",
+      "name": "05-the-promise.js",
+      "ok": true,
+      "detail": "builds=6 arrows=6"
+    },
+    {
+      "section": "pacing-rule",
+      "name": "01-the-world-without-it.js",
+      "ok": true,
+      "detail": "builds=3 arrows=3"
+    },
+    {
+      "section": "pacing-rule",
+      "name": "02-the-discovery.js",
+      "ok": true,
+      "detail": "builds=4 arrows=4"
+    },
+    {
+      "section": "pacing-rule",
+      "name": "03-the-convergence.js",
+      "ok": true,
+      "detail": "builds=3 arrows=3"
+    },
+    {
+      "section": "pacing-rule",
+      "name": "04-the-competition-record.js",
+      "ok": true,
+      "detail": "builds=8 arrows=8"
+    },
+    {
+      "section": "pacing-rule",
+      "name": "05-two-survivors.js",
+      "ok": true,
+      "detail": "builds=5 arrows=5"
+    },
+    {
+      "section": "pacing-rule",
+      "name": "06-the-abstraction-ladder.js",
+      "ok": true,
+      "detail": "builds=4 arrows=4"
+    },
+    {
+      "section": "pacing-rule",
+      "name": "07-the-severance.js",
+      "ok": true,
+      "detail": "builds=4 arrows=4"
+    },
+    {
+      "section": "pacing-rule",
+      "name": "08-the-pattern.js",
+      "ok": true,
+      "detail": "builds=6 arrows=6"
+    },
+    {
+      "section": "verbatim-script",
+      "name": "04-the-competition-record notes == brief §E script",
+      "ok": true,
+      "detail": "identical after apostrophe normalization"
+    },
+    {
+      "section": "verbatim-script",
+      "name": "1.5 final block == brief §B.3 (verbatim, normalized)",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "verbatim-script",
+      "name": "severance §D.3 sentence appended to block two",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "verbatim-script",
+      "name": "pattern §D.3 sentence inserted after \"It ended it.\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "verbatim-script",
+      "name": "two-survivors script unchanged (spot line)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "verbatim-script",
+      "name": "ladder script unchanged (rung 1 line)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "on-screen-copy",
+      "name": "04-the-competition-record.js: \"The market keeps re-running one experiment —…\"",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "on-screen-copy",
+      "name": "05-the-promise.js: \"Ask where it came from.…\"",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "on-screen-copy",
+      "name": "05-the-promise.js: \"Ask what it must do.…\"",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "on-screen-copy",
+      "name": "05-the-promise.js: \"Ask how you would judge anything that tries …\"",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "on-screen-copy",
+      "name": "EvolutionRail: \"Cannot be divided. Half a cow is no cow.…\"",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "on-screen-copy",
+      "name": "EvolutionRail: \"Dissolves in a rainstorm.…\"",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "on-screen-copy",
+      "name": "EvolutionRail: \"Scarce only until someone reaches the right …\"",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "on-screen-copy",
+      "name": "EvolutionRail: \"Rusts. And anyone with a furnace can make mo…\"",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "on-screen-copy",
+      "name": "EvolutionRail: \"West Africa, 1500s–1800s: industrial shippin…\"",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "on-screen-copy",
+      "name": "EvolutionRail: \"heavy · hard to verify · dangerous to move…\"",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "on-screen-copy",
+      "name": "EvolutionRail: \"Solves verification and division. Trust requ…\"",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "on-screen-copy",
+      "name": "EvolutionRail: \"A claim on gold in a vault. Trust required: …\"",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "on-screen-copy",
+      "name": "EvolutionRail: \"BITCOIN…\"",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "on-screen-copy",
+      "name": "EvolutionRail: \"2009: digital · no state, no company · suppl…\"",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "on-screen-copy",
+      "name": "EvolutionRail: \"Very young. Its price still swings far more …\"",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "on-screen-copy",
+      "name": "EvolutionRail: \"FIAT…\"",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "on-screen-copy",
+      "name": "EvolutionRail: \"1971– : decree.…\"",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "section": "constitution",
+      "name": "banned term \"engineered\"",
+      "ok": true,
+      "detail": "zero"
+    },
+    {
+      "section": "constitution",
+      "name": "banned term \"purpose-built\"",
+      "ok": true,
+      "detail": "zero"
+    },
+    {
+      "section": "constitution",
+      "name": "banned term \"repurposed\"",
+      "ok": true,
+      "detail": "zero"
+    },
+    {
+      "section": "constitution",
+      "name": "banned term \"designed as a solution\"",
+      "ok": true,
+      "detail": "zero"
+    },
+    {
+      "section": "constitution",
+      "name": "\"bitcoin\" on stage only as the entrant label (§D.1)",
+      "ok": true,
+      "detail": "occurrences: 08-the-pattern.js:10, EvolutionRail.js:12, EvolutionRail.js:256"
+    },
+    {
+      "section": "constitution",
+      "name": "British spellings (excluding the brief-verbatim \"cancelled\")",
+      "ok": true,
+      "detail": "zero (cancelled occurrences: 3)"
+    },
+    {
+      "section": "constitution",
+      "name": "ASCII apostrophes between letters",
+      "ok": true,
+      "detail": "zero"
+    },
+    {
+      "section": "constitution",
+      "name": "color arc S1: accent only at the 1.5 ignition (+ token warm blend)",
+      "ok": true,
+      "detail": ".s1q-token :: color-mix(in srgb, var(--unit-warm) 82%, var(--accent) 18%) 100% | .s1q-promise[data-step=\"6\"] .s1q-promise__wp[data-index=\"0\"] .s1q-promise__dot :: background: var(--accent); | .s1q-promise[data-step=\"6\"] .s1q-promise__wp[data-index=\"0\"] .s1q-promise__dot :: box-shadow: 0 0 18px rgba(247, 147, 26, 0.6), 0 0 56px rgba(247, 147, 26, 0.3);"
+    },
+    {
+      "section": "constitution",
+      "name": "color arc S2: accent only at the rail active stop",
+      "ok": true,
+      "detail": ".s2o-rail__stop[data-state=\"active\"] .s2o-rail__dot :: background: var(--accent); | .s2o-rail__stop[data-state=\"active\"] .s2o-rail__dot :: box-shadow: 0 0 16px rgba(247, 147, 26, 0.55), 0 0 44px rgba(247, 147, 26, 0.22);"
+    },
+    {
+      "section": "constitution",
+      "name": "no accent in Section 1–2 JS",
+      "ok": true,
+      "detail": "zero"
+    },
+    {
+      "section": "icon-grammar",
+      "name": "glyph \"fish\" drawn",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "icon-grammar",
+      "name": "glyph \"grain\" drawn",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "icon-grammar",
+      "name": "glyph \"sandals\" drawn",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "icon-grammar",
+      "name": "glyph \"cattle\" drawn",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "icon-grammar",
+      "name": "glyph \"salt\" drawn",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "icon-grammar",
+      "name": "glyph \"shells\" drawn",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "icon-grammar",
+      "name": "glyph \"iron\" drawn",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "icon-grammar",
+      "name": "glyph \"metals\" drawn",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "icon-grammar",
+      "name": "glyph \"gold\" drawn",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "icon-grammar",
+      "name": "glyph \"coinage\" drawn",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "icon-grammar",
+      "name": "glyph \"paper\" drawn",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "icon-grammar",
+      "name": "one stroke weight (constant, not a parameter)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "icon-grammar",
+      "name": "no per-call stroke overrides",
+      "ok": true,
+      "detail": "zero"
+    },
+    {
+      "section": "icon-grammar",
+      "name": "no icon-font glyphs in Sections 1–2",
+      "ok": true,
+      "detail": "zero"
+    },
+    {
+      "section": "icon-grammar",
+      "name": "soft luminance treatment on rail glyphs + traveling goods",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "icon-grammar",
+      "name": "docs/icon-grammar.md present",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "scene-groups",
+      "name": "01-eighty-thousand-hours.js declares hours-field",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "scene-groups",
+      "name": "02-the-conversion.js declares hours-field",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "scene-groups",
+      "name": "04-the-competition-record.js declares evolution-rail",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "scene-groups",
+      "name": "05-two-survivors.js declares evolution-rail",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "scene-groups",
+      "name": "06-the-abstraction-ladder.js declares evolution-rail",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "scene-groups",
+      "name": "07-the-severance.js declares evolution-rail",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "scene-groups",
+      "name": "08-the-pattern.js declares evolution-rail",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "scene-groups",
+      "name": "01-the-world-without-it.js declares no group",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "scene-groups",
+      "name": "02-the-discovery.js declares no group",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "scene-groups",
+      "name": "03-the-convergence.js declares no group",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "provisional",
+      "name": "PROVISIONAL code comment in the severance",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "provisional",
+      "name": "SOURCES.md WIM-002 present",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "provisional",
+      "name": "SOURCES.md WIM-003 present",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "provisional",
+      "name": "SOURCES.md WIM-004 present",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "section": "provisional",
+      "name": "SOURCES.md WIM-005 present",
+      "ok": true,
+      "detail": ""
+    }
+  ]
+}

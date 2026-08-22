@@ -1,0 +1,29 @@
+
+########## MonetisationScene (Section 3) ##########
+  (pass 1 exited chain at 4-01-ideal-store-of-value, expected 4-01-ideal-store-of-value)
+  (pass 2 exited chain at 4-01-ideal-store-of-value, expected 4-01-ideal-store-of-value)
+
+  SLIDE                            PASS 1 (first traversal)                       PASS 2 (second traversal)
+  -------------------------------- ---------------------------------------------- ----------------------------------------------
+    3-06-monetisation-intro        Every monetary good in history that emerged organically followed this pattern. This applie Every monetary good in history that emerged organically followed this pattern. This applie
+  ✗ 3-07-stage-collectible         The first stage / Collectible                  Every monetary good in history that emerged organically followed this pattern. This applie
+  ✗ 3-08-stage-store-of-value      The second stage / Store of Value              Every monetary good in history that emerged organically followed this pattern. This applie
+  ✗ 3-09-stage-medium-of-exchange  The third stage / Medium of Exchange           Every monetary good in history that emerged organically followed this pattern. This applie
+  ✗ 3-10-stage-unit-of-account     The final stage — full monetisation / Unit of Account Every monetary good in history that emerged organically followed this pattern. This applie
+    3-11-where-is-bitcoin          ₿ / BITCOIN IS HERE                            ₿ / BITCOIN IS HERE
+  >>> 4 of 6 slides render DIFFERENT content on the second traversal
+
+########## EvolutionScene (Section 2) ##########
+  (pass 1 exited chain at 2-14-transition-out, expected 2-14-transition-out)
+  (pass 2 exited chain at 2-14-transition-out, expected 2-14-transition-out)
+
+  SLIDE                            PASS 1 (first traversal)                       PASS 2 (second traversal)
+  -------------------------------- ---------------------------------------------- ----------------------------------------------
+    2-07-evolution-intro                                                          
+  ✗ 2-08-barter                    Prehistory / Barter                            
+  ✗ 2-09-collectibles              ~100,000 BCE onwards / Collectibles            
+  ✗ 2-10-precious-metals           ~600 BCE onwards / Precious Metals             
+  ✗ 2-11-gold-backed               1700s — 1971 / Gold-Backed                     
+  ✗ 2-12-fiat                      1971 — today / Fiat                            
+    2-13-bitcoin                   2009 onwards / Bitcoin                         2009 onwards / Bitcoin
+  >>> 5 of 7 slides render DIFFERENT content on the second traversal

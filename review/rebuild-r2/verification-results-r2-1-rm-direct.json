@@ -1,0 +1,736 @@
+{
+  "variant": "reduced-motion",
+  "date": "2026-07-29T01:30:36.453Z",
+  "checks": 121,
+  "failures": 0,
+  "screenshots": 0,
+  "consoleLines": 0,
+  "results": [
+    {
+      "section": "rm-direct-entry",
+      "name": "1-01-eighty-thousand-hours b0",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "1-01-eighty-thousand-hours b1",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "1-01-eighty-thousand-hours b2",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "1-02-the-conversion b0",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "1-02-the-conversion b1",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "1-02-the-conversion b2",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "1-02-the-conversion b3",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "1-05-the-promise b0",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "1-05-the-promise b1",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "1-05-the-promise b2",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "1-05-the-promise b3",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "1-05-the-promise b4",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "1-05-the-promise b5",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "1-05-the-promise b6",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "2-01-the-world-without-it b0",
+      "ok": true,
+      "detail": "black"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "2-01-the-world-without-it b1",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "2-01-the-world-without-it b2",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "2-01-the-world-without-it b3",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "2-02-the-discovery b0",
+      "ok": true,
+      "detail": "rest"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "2-02-the-discovery b1",
+      "ok": true,
+      "detail": "held"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "2-02-the-discovery b2",
+      "ok": true,
+      "detail": "cycle clear"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "2-02-the-discovery b3",
+      "ok": true,
+      "detail": "cycle clear"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "2-02-the-discovery b4",
+      "ok": true,
+      "detail": "cycle clear"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "2-03-the-convergence b0",
+      "ok": true,
+      "detail": "black"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "2-03-the-convergence b1",
+      "ok": true,
+      "detail": "flock lit"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "2-03-the-convergence b2",
+      "ok": true,
+      "detail": "flock lit"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "2-03-the-convergence b3",
+      "ok": true,
+      "detail": "flock lit"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "2-04-the-competition-record b0",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "2-04-the-competition-record b1",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "2-04-the-competition-record b2",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "2-04-the-competition-record b3",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "2-04-the-competition-record b4",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "2-04-the-competition-record b5",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "2-04-the-competition-record b6",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "2-04-the-competition-record b7",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "2-04-the-competition-record b8",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "2-05-two-survivors b0",
+      "ok": true,
+      "detail": "dimmed rail"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "2-05-two-survivors b1",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "2-05-two-survivors b2",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "2-05-two-survivors b3",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "2-05-two-survivors b4",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "2-05-two-survivors b5",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "2-06-the-abstraction-ladder b0",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "2-06-the-abstraction-ladder b1",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "2-06-the-abstraction-ladder b2",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "2-06-the-abstraction-ladder b3",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "2-06-the-abstraction-ladder b4",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "2-07-the-severance b0",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "2-07-the-severance b1",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "2-07-the-severance b2",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "2-07-the-severance b3",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "2-07-the-severance b4",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "2-08-the-pattern b0",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "2-08-the-pattern b1",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "2-08-the-pattern b2",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "2-08-the-pattern b3",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "2-08-the-pattern b4",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "2-08-the-pattern b5",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-direct-entry",
+      "name": "2-08-the-pattern b6",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-mid-refresh",
+      "name": "2-03-the-convergence b2",
+      "ok": true,
+      "detail": "flock lit"
+    },
+    {
+      "section": "rm-mid-refresh",
+      "name": "2-04-the-competition-record b6",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-mid-refresh",
+      "name": "2-05-two-survivors b3",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-mid-refresh",
+      "name": "2-07-the-severance b2",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-live-advance",
+      "name": "1-01-eighty-thousand-hours b1 settled ≤420ms",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-live-advance",
+      "name": "1-01-eighty-thousand-hours b2 settled ≤420ms",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-live-advance",
+      "name": "1-02-the-conversion b1 settled ≤420ms",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-live-advance",
+      "name": "1-02-the-conversion b2 settled ≤420ms",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-live-advance",
+      "name": "1-02-the-conversion b3 settled ≤420ms",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-live-advance",
+      "name": "1-05-the-promise b1 settled ≤420ms",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-live-advance",
+      "name": "1-05-the-promise b2 settled ≤420ms",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-live-advance",
+      "name": "1-05-the-promise b3 settled ≤420ms",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-live-advance",
+      "name": "1-05-the-promise b4 settled ≤420ms",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-live-advance",
+      "name": "1-05-the-promise b5 settled ≤420ms",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-live-advance",
+      "name": "1-05-the-promise b6 settled ≤420ms",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-live-advance",
+      "name": "2-01-the-world-without-it b1 settled ≤420ms",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-live-advance",
+      "name": "2-01-the-world-without-it b2 settled ≤420ms",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-live-advance",
+      "name": "2-01-the-world-without-it b3 settled ≤420ms",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-live-advance",
+      "name": "2-02-the-discovery b1 settled ≤420ms",
+      "ok": true,
+      "detail": "held"
+    },
+    {
+      "section": "rm-live-advance",
+      "name": "2-02-the-discovery b2 settled ≤420ms",
+      "ok": true,
+      "detail": "cycle clear"
+    },
+    {
+      "section": "rm-live-advance",
+      "name": "2-02-the-discovery b3 settled ≤420ms",
+      "ok": true,
+      "detail": "cycle clear"
+    },
+    {
+      "section": "rm-live-advance",
+      "name": "2-02-the-discovery b4 settled ≤420ms",
+      "ok": true,
+      "detail": "cycle clear"
+    },
+    {
+      "section": "rm-live-advance",
+      "name": "2-03-the-convergence b1 settled ≤420ms",
+      "ok": true,
+      "detail": "flock lit"
+    },
+    {
+      "section": "rm-live-advance",
+      "name": "2-03-the-convergence b2 settled ≤420ms",
+      "ok": true,
+      "detail": "flock lit"
+    },
+    {
+      "section": "rm-live-advance",
+      "name": "2-03-the-convergence b3 settled ≤420ms",
+      "ok": true,
+      "detail": "flock lit"
+    },
+    {
+      "section": "rm-live-advance",
+      "name": "2-04-the-competition-record b1 settled ≤420ms",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-live-advance",
+      "name": "2-04-the-competition-record b2 settled ≤420ms",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-live-advance",
+      "name": "2-04-the-competition-record b3 settled ≤420ms",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-live-advance",
+      "name": "2-04-the-competition-record b4 settled ≤420ms",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-live-advance",
+      "name": "2-04-the-competition-record b5 settled ≤420ms",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-live-advance",
+      "name": "2-04-the-competition-record b6 settled ≤420ms",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-live-advance",
+      "name": "2-04-the-competition-record b7 settled ≤420ms",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-live-advance",
+      "name": "2-04-the-competition-record b8 settled ≤420ms",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-live-advance",
+      "name": "2-05-two-survivors b1 settled ≤420ms",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-live-advance",
+      "name": "2-05-two-survivors b2 settled ≤420ms",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-live-advance",
+      "name": "2-05-two-survivors b3 settled ≤420ms",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-live-advance",
+      "name": "2-05-two-survivors b4 settled ≤420ms",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-live-advance",
+      "name": "2-05-two-survivors b5 settled ≤420ms",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-live-advance",
+      "name": "2-06-the-abstraction-ladder b1 settled ≤420ms",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-live-advance",
+      "name": "2-06-the-abstraction-ladder b2 settled ≤420ms",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-live-advance",
+      "name": "2-06-the-abstraction-ladder b3 settled ≤420ms",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-live-advance",
+      "name": "2-06-the-abstraction-ladder b4 settled ≤420ms",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-live-advance",
+      "name": "2-07-the-severance b1 settled ≤420ms",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-live-advance",
+      "name": "2-07-the-severance b2 settled ≤420ms",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-live-advance",
+      "name": "2-07-the-severance b3 settled ≤420ms",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-live-advance",
+      "name": "2-07-the-severance b4 settled ≤420ms",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-live-advance",
+      "name": "2-08-the-pattern b1 settled ≤420ms",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-live-advance",
+      "name": "2-08-the-pattern b2 settled ≤420ms",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-live-advance",
+      "name": "2-08-the-pattern b3 settled ≤420ms",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-live-advance",
+      "name": "2-08-the-pattern b4 settled ≤420ms",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-live-advance",
+      "name": "2-08-the-pattern b5 settled ≤420ms",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-live-advance",
+      "name": "2-08-the-pattern b6 settled ≤420ms",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-handoff",
+      "name": "1-01-eighty-thousand-hours b2 → 1-02-the-conversion b0 ≤420ms",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-handoff",
+      "name": "1-02-the-conversion b0 ← 1-01-eighty-thousand-hours b2 ≤420ms",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-handoff",
+      "name": "2-04-the-competition-record b8 → 2-05-two-survivors b0 ≤420ms",
+      "ok": true,
+      "detail": "dimmed rail"
+    },
+    {
+      "section": "rm-handoff",
+      "name": "2-05-two-survivors b0 ← 2-04-the-competition-record b8 ≤420ms",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-handoff",
+      "name": "2-05-two-survivors b5 → 2-06-the-abstraction-ladder b0 ≤420ms",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-handoff",
+      "name": "2-06-the-abstraction-ladder b0 ← 2-05-two-survivors b5 ≤420ms",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-handoff",
+      "name": "2-06-the-abstraction-ladder b4 → 2-07-the-severance b0 ≤420ms",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-handoff",
+      "name": "2-07-the-severance b0 ← 2-06-the-abstraction-ladder b4 ≤420ms",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-handoff",
+      "name": "2-07-the-severance b4 → 2-08-the-pattern b0 ≤420ms",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "section": "rm-handoff",
+      "name": "2-08-the-pattern b0 ← 2-07-the-severance b4 ≤420ms",
+      "ok": true,
+      "detail": "ok"
+    }
+  ]
+}

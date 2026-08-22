@@ -1,0 +1,35 @@
+{
+  "phase": "R7",
+  "suite": "dynamic:traversal",
+  "variant": "standard",
+  "checks": 5,
+  "failures": 0,
+  "consoleLines": [],
+  "results": [
+    {
+      "name": "traversal: forward walk holds one mounted, one active container at every build",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "traversal: the forward walk ends on the close’s final build",
+      "ok": true,
+      "detail": "5-01-thank-you b2"
+    },
+    {
+      "name": "traversal: every changed build probed live",
+      "ok": true,
+      "detail": "129 live signatures"
+    },
+    {
+      "name": "traversal: backward walk reaches 1.1 build 0 with one container",
+      "ok": true,
+      "detail": "1-01-eighty-thousand-hours b0"
+    },
+    {
+      "name": "traversal: fast re-forward through Section 4 leaves one container, no stale overlay",
+      "ok": true,
+      "detail": "4-09-future-is-unknowable b1 containers=1"
+    }
+  ]
+}

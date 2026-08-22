@@ -1,0 +1,244 @@
+{
+  "phase": "R7.3",
+  "base": "b029e4d",
+  "from": "a956b09",
+  "checks": 47,
+  "failures": 8,
+  "results": [
+    {
+      "name": "FREEZE: _comparison-data.js untouched entirely",
+      "ok": true,
+      "detail": "file identical — 50 scores"
+    },
+    {
+      "name": "FREEZE: 4.23 slide file untouched",
+      "ok": true,
+      "detail": "4.23 is the frozen final frame"
+    },
+    {
+      "name": "SCOPE: no Section 4 slide file changed this phase",
+      "ok": false,
+      "detail": "src/slides/section-4-ideal-store/04-unfinished-exchange.js, src/slides/section-4-ideal-store/08-100-year-test.js, src/slides/section-4-ideal-store/15-framework-to-comparison.js, src/slides/section-4-ideal-store/16-the-comparison.js, src/slides/section-4-ideal-store/17-store-of-value-function-migrates.js, src/slides/section-4-ideal-store/18-monetary-premium.js, src/slides/section-4-ideal-store/19-other-assets-do-moneys-job.js, src/slides/section-4-ideal-store/20-bitcoin-does-not-replace-everything.js, src/slides/section-4-ideal-store/20b-what-would-change-these-scores.js, src/slides/section-4-ideal-store/21-marginal-store-of-value-decision.js"
+    },
+    {
+      "name": "SCOPE: the only Section 4 CSS this phase changed is 4.22's two brightness states",
+      "ok": false,
+      "detail": ".s4-unfinished__headline, .s4-unfinished__headline[data-lane=\"mid\"], .s4-unfinished__headline[data-quiet=\"true\"], .s4-century-test__span, .s4-stress-stage__frame, .s4-stress-stage[data-frame-visible=\"true\"] .s4-stress-stage__frame, .s4-stress-stage__corner, .s4-stress-stage__corner--tl, .s4-stress-stage__corner--tr, .s4-stress-stage__corner--bl, .s4-stress-stage__corner--br, .s4-inversion[data-step=\"1\"] .s4-stress-stage__frame, .s4-candidates__question, .s4-candidates__final, .s4-candidates__final[data-visible=\"true\"], .s4-migration__claim, .s4-coexistence__bisection, .s4-coexistence__resolution, .s4-coexistence__price, .s4-coexistence__bisection[data-visible=\"true\"], .s4-coexistence__resolution[data-visible=\"true\"], .s4-coexistence__price[data-visible=\"true\"], .s4-coexistence__bisection, .s4-coexistence__bisection-word, .s4-coexistence__bisection-word, .s4-coexistence__bisection-split, .s4-coexistence__resolution, .s4-coexistence__bisection-word[data-quiet=\"true\"], .s4-coexistence__bisection-split[data-visible=\"true\"][data-quiet=\"true\"], .s4-coexistence__resolution[data-visible=\"true\"][data-quiet=\"true\"], .s4-coexistence__bisection-split, .s4-coexistence__bisection-split[data-visible=\"true\"], .s4-coexistence__bisection-heading, .s4-coexistence__bisection-detail, .s4-coexistence__resolution, .s4-falsifiability__kicker, .s4-falsifiability__kicker[data-visible=\"true\"], .s4-falsifiability__conditions, .s4-falsifiability__condition, .s4-falsifiability__condition[data-visible=\"true\"], .s4-falsifiability__condition[data-settled=\"true\"], .s4-falsifiability__verify, .s4-falsifiability__verify strong, .s4-falsifiability__verify[data-visible=\"true\"], .s4-unfinished__headline span, .s4-comparison-asset__mark--df, .s4-comparison-asset__render, .s4-candidates[data-answered=\"true\"] .s4-candidates__question, .s4-coexistence__price[data-visible=\"true\"], .s4-coexistence__contrast, .s4-coexistence__line, .s4-coexistence__line[data-visible=\"true\"], .s4-coexistence__line--rules, .s4-coexistence__plot, .s4-coexistence__line--rules .s4-coexistence__plot, .s4-coexistence__stroke, .s4-coexistence__line[data-visible=\"true\"] .s4-coexistence__stroke, .s4-coexistence__line--rules .s4-coexistence__stroke, .s4-coexistence__linelabel"
+    },
+    {
+      "name": "SCOPE: and it changed nothing on them but the color",
+      "ok": false,
+      "detail": "color declarations only"
+    },
+    {
+      "name": "SCOPE: only the eight Section 1–3 slides this brief names have changed",
+      "ok": false,
+      "detail": "src/slides/section-1-question/04-the-stakes.js, src/slides/section-1-question/05-the-promise.js, src/slides/section-2-origin/07-the-severance.js, src/slides/section-3-function/05-the-palladium-test.js, src/slides/section-3-function/06-what-your-money-is.js"
+    },
+    {
+      "name": "REGISTER: every raster reference in src/ flows through src/dark-field.js",
+      "ok": true,
+      "detail": "src/dark-field.js"
+    },
+    {
+      "name": "REGISTER: only components/DarkField.js constructs an image element",
+      "ok": true,
+      "detail": "src/components/DarkField.js"
+    },
+    {
+      "name": "REGISTER: the manifest is a glob, so a pending render needs no code change",
+      "ok": true,
+      "detail": "src/dark-field.js"
+    },
+    {
+      "name": "REGISTER: every shipping render has a grade-gate result",
+      "ok": false,
+      "detail": "15 shipping, 11 graded"
+    },
+    {
+      "name": "REGISTER: no shipping render failed the grade gate",
+      "ok": true,
+      "detail": "0 failures across 55 checks"
+    },
+    {
+      "name": "REGISTER: every shipping render carries a measured framing row",
+      "ok": true,
+      "detail": "15 rows"
+    },
+    {
+      "name": "REGISTER: assets/images still holds only the favicon",
+      "ok": true,
+      "detail": "icon_bitcoin.png"
+    },
+    {
+      "name": "REGISTER: every pending subject is listed in docs/dark-field-manifest.md",
+      "ok": true,
+      "detail": "pending: metals"
+    },
+    {
+      "name": "STUDIO: the R7.3 candidates have no importer in src/",
+      "ok": true,
+      "detail": "none — proposals only"
+    },
+    {
+      "name": "STUDIO: no glyph selection changed this phase",
+      "ok": true,
+      "detail": "30 selections, all unchanged"
+    },
+    {
+      "name": "STUDIO: the contact sheet exists — the round's only output",
+      "ok": true,
+      "detail": "778 kB"
+    },
+    {
+      "name": "SCRIPT: the brief's two ladder paragraphs are present verbatim",
+      "ok": true,
+      "detail": "2 passage(s) matched"
+    },
+    {
+      "name": "SCRIPT: the periodic-table bridge sentence opens the two-survivors note",
+      "ok": true,
+      "detail": "installed at the head of the first paragraph"
+    },
+    {
+      "name": "SCRIPT: 00-waypoint-function.js untouched (waypoint copy is pending presenter rulings)",
+      "ok": true,
+      "detail": "src/slides/section-3-function/00-waypoint-function.js"
+    },
+    {
+      "name": "SCRIPT: 08-waypoint-judge.js untouched (waypoint copy is pending presenter rulings)",
+      "ok": true,
+      "detail": "src/slides/section-3-function/08-waypoint-judge.js"
+    },
+    {
+      "name": "SCRIPT: 1.5 untouched (waypoint copy is pending presenter rulings)",
+      "ok": false,
+      "detail": "src/slides/section-1-question/05-the-promise.js"
+    },
+    {
+      "name": "FLAGGED: the featured-render toggle ships off",
+      "ok": true,
+      "detail": "RAIL_FEATURE"
+    },
+    {
+      "name": "FLAGGED: the gold-arrival toggle still ships off (R7.2's flag, unchanged)",
+      "ok": true,
+      "detail": "GOLD_ARRIVAL"
+    },
+    {
+      "name": "BRIGHTNESS: the dimmed-prior step is one token, deck-wide",
+      "ok": true,
+      "detail": "--dim-prior / --text-prior"
+    },
+    {
+      "name": "RETIRED: the dollar glyph has no call site",
+      "ok": true,
+      "detail": "retired at R7.3 §5.2"
+    },
+    {
+      "name": "RETIRED: the peso glyph has no call site",
+      "ok": true,
+      "detail": "retired at R7.3 §5.2"
+    },
+    {
+      "name": "KickerLabel has exactly one caller, the frozen 4.23",
+      "ok": true,
+      "detail": "23-investment-case-from-first-principles.js"
+    },
+    {
+      "name": "QuietKicker is used by exactly the one named frame",
+      "ok": true,
+      "detail": "16-the-comparison.js"
+    },
+    {
+      "name": "no boxed-panel borders on Section 4 selectors",
+      "ok": true,
+      "detail": "none"
+    },
+    {
+      "name": "REGISTER: no border, radius or shadow on a dark-field surface",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "\"Don't trust. Verify.\" on stage exactly twice",
+      "ok": false,
+      "detail": "1 occurrence(s)"
+    },
+    {
+      "name": "banned term absent: \"engineered\"",
+      "ok": true,
+      "detail": "absent"
+    },
+    {
+      "name": "banned term absent: \"purpose-built\"",
+      "ok": true,
+      "detail": "absent"
+    },
+    {
+      "name": "banned term absent: \"designed as a solution\"",
+      "ok": true,
+      "detail": "absent"
+    },
+    {
+      "name": "banned term absent: \"repurposed\"",
+      "ok": true,
+      "detail": "absent"
+    },
+    {
+      "name": "American English: \"labour\" → \"labor\"",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "American English: \"specialised\" → \"specialized\"",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "American English: \"centralised\" → \"centralized\"",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "American English: \"recognised\" → \"recognized\"",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "American English: \"judgement\" → \"judgment\"",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "American English: \"jewellery\" → \"jewelry\"",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "American English: \"colour\" → \"color\"",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "typographic apostrophes in visible copy",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "typographic apostrophes in the scripts",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "[→] count equals build count on every slide walked",
+      "ok": true,
+      "detail": "173 builds, 173 arrows across 45 slides"
+    },
+    {
+      "name": "PACING: no build count changed this phase",
+      "ok": false,
+      "detail": "-  totalBuildSteps: MAX_STEP,"
+    }
+  ]
+}

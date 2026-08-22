@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="96" height="96" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:#e9e4da">
+<!-- peso A — the sol de mayo: The sun from Argentina’s first peso coinage of 1813: an open ring under eight rays, cardinal tips dotted — the coin’s own face, no gold-mark center dot. -->
+<circle cx="24" cy="24" r="8"/>
+        <path d="M24 9 L24 13 M24 35 L24 39 M9 24 L13 24 M35 24 L39 24"/>
+        <path d="M13.4 13.4 L16.2 16.2 M31.8 31.8 L34.6 34.6 M34.6 13.4 L31.8 16.2 M16.2 31.8 L13.4 34.6"/>
+        <circle cx="24" cy="9" r="1.4" fill="currentColor" stroke="none"/><circle cx="24" cy="39" r="1.4" fill="currentColor" stroke="none"/><circle cx="9" cy="24" r="1.4" fill="currentColor" stroke="none"/><circle cx="39" cy="24" r="1.4" fill="currentColor" stroke="none"/>
+</svg>

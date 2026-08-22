@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="96" height="96" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:#e9e4da">
+<!-- between-people C — the facing chevrons: Give and take reduced to geometry: two chevrons pointing at one another, the value dot held at the meeting point. -->
+<path d="M8 14.5 L17.5 24 L8 33.5"/>
+        <path d="M40 14.5 L30.5 24 L40 33.5"/>
+        <circle cx="24" cy="24" r="2" fill="currentColor" stroke="none"/>
+</svg>

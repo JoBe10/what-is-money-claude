@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="96" height="96" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:#e9e4da">
+<!-- operation C — the settled interval: The same argument as A without a waveform: four vertical strokes whose spacing and height are erratic on the left and regular on the right, over one baseline. Rhythm alone, no medical vocabulary at all. -->
+<path d="M5 34 L43 34"/>
+        <path d="M9 34 L9 17 M14.5 34 L14.5 25 M21 34 L21 14"/>
+        <path d="M28.5 34 L28.5 20 M34 34 L34 20 M39.5 34 L39.5 20"/>
+        <circle cx="5" cy="34" r="1.8" fill="currentColor" stroke="none"/><circle cx="43" cy="34" r="1.8" fill="currentColor" stroke="none"/>
+</svg>

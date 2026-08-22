@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="96" height="96" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:#e9e4da">
+<!-- real-estate C — the plot: Title to land seen from above: the boundary with a corner dot at each turn, the footprint set inside it — ownership of ground rather than of a house. -->
+<path d="M8 12 L40 12 L40 36 L8 36 Z"/>
+        <path d="M17.5 19 L30.5 19 L30.5 29 L17.5 29 Z"/>
+        <circle cx="8" cy="12" r="1.8" fill="currentColor" stroke="none"/><circle cx="40" cy="12" r="1.8" fill="currentColor" stroke="none"/><circle cx="40" cy="36" r="1.8" fill="currentColor" stroke="none"/><circle cx="8" cy="36" r="1.8" fill="currentColor" stroke="none"/>
+</svg>

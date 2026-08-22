@@ -1,0 +1,26 @@
+NOTES OVERLAY (slide 4-16, one of the longest note bodies):
+  {"cardHeight":1688,"cardTop":-304,"cardBottom":1384,"viewportH":1080,"bodyScrollH":1425,"bodyClientH":1425,"bodyOverflowY":"visible","cardOverflowY":"visible","clipped":true,"meta":"SLIDE 48","kicker":"SECTION · IDEAL-STORE"}
+  >>> CARD IS CLIPPED BY THE VIEWPORT
+  longest note bodies: [{"id":"4-16-the-comparison","n":2352},{"id":"4-15-framework-to-comparison","n":1773},{"id":"4-18-monetary-premium","n":1067},{"id":"4-19-other-assets-do-moneys-job","n":1042},{"id":"4-07-store-of-value-function","n":1005},{"id":"4-14-ten-properties","n":982}]
+OVERVIEW GRID: {"gridScrollH":1943,"gridClientH":1080,"overflowY":"auto","tilesScrollH":1766,"tilesClientH":1766,"tileCount":56}
+
+VIEWPORT 1440x900:
+  4-16-the-comparison                            canvas 1440x810 @0.75 in 1440x900
+  4-23-investment-case-from-first-principles     canvas 1440x810 @0.75 in 1440x900
+  2-11-gold-backed                               canvas 1440x810 @0.75 in 1440x900
+  3-11-where-is-bitcoin                          canvas 1440x810 @0.75 in 1440x900
+  4-22-fixed-supply-reprices-at-margin           canvas 1440x810 @0.75 in 1440x900
+
+VIEWPORT 1366x768:
+  4-16-the-comparison                            canvas 1365x768 @0.711 in 1366x768
+  4-23-investment-case-from-first-principles     canvas 1365x768 @0.711 in 1366x768
+  2-11-gold-backed                               canvas 1365x768 @0.711 in 1366x768
+  3-11-where-is-bitcoin                          canvas 1365x768 @0.711 in 1366x768
+  4-22-fixed-supply-reprices-at-margin           canvas 1365x768 @0.711 in 1366x768
+
+VIEWPORT 2560x1440:
+  4-16-the-comparison                            canvas 2560x1440 @1.333 in 2560x1440
+  4-23-investment-case-from-first-principles     canvas 2560x1440 @1.333 in 2560x1440
+  2-11-gold-backed                               canvas 2560x1440 @1.333 in 2560x1440
+  3-11-where-is-bitcoin                          canvas 2560x1440 @1.333 in 2560x1440
+  4-22-fixed-supply-reprices-at-margin           canvas 2560x1440 @1.333 in 2560x1440

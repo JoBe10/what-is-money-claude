@@ -1,0 +1,113 @@
+{
+  "phase": "R7.4",
+  "mode": "FAST",
+  "checks": 21,
+  "failures": 0,
+  "results": [
+    {
+      "name": "PACING: [→] count equals build count on every slide",
+      "ok": true,
+      "detail": "173 builds, 173 arrows across 45 slides"
+    },
+    {
+      "name": "STRUCTURE: the falsifiability slide is gone from the manifest",
+      "ok": true,
+      "detail": "no import, no array entry, no file"
+    },
+    {
+      "name": "STRUCTURE: the deck is 45 slides",
+      "ok": true,
+      "detail": "45 slide modules"
+    },
+    {
+      "name": "STRUCTURE: no falsifiability selector or reference survives in src/",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "STUDIO: the carrier treatments have no importer in src/",
+      "ok": true,
+      "detail": "proposals only"
+    },
+    {
+      "name": "STUDIO: CarrierShell still ships its R7.2 selection, unchanged",
+      "ok": true,
+      "detail": "SELECTION = 'c' — the banded wall"
+    },
+    {
+      "name": "STUDIO: R7.3's glyph candidates still have no importer in src/",
+      "ok": true,
+      "detail": "proposals only"
+    },
+    {
+      "name": "STUDIO: the three sheets this session owes the presenter exist",
+      "ok": true,
+      "detail": "3 delivered"
+    },
+    {
+      "name": "FLAGGED: the table-header exception ships glyphs",
+      "ok": true,
+      "detail": "TABLE_HEADERS_DARK_FIELD"
+    },
+    {
+      "name": "FLAGGED: the featured-render toggle still ships off",
+      "ok": true,
+      "detail": "RAIL_FEATURE"
+    },
+    {
+      "name": "FLAGGED: the gold-arrival toggle still ships off",
+      "ok": true,
+      "detail": "GOLD_ARRIVAL"
+    },
+    {
+      "name": "REGISTER: every slide showing a candidate declares a register",
+      "ok": true,
+      "detail": "6 slides"
+    },
+    {
+      "name": "REGISTER: gold ships a graded render",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "REGISTER: bitcoin ships a graded render",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "REGISTER: property ships a graded render",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "REGISTER: shares ships a graded render",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "REGISTER: surgeon ships a graded render",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "REGISTER: meal ships a graded render",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "REGISTER: the one pending subject (fiat) is documented for regeneration",
+      "ok": true,
+      "detail": "listed in docs/dark-field-manifest.md"
+    },
+    {
+      "name": "LANGUAGE: no visible line or script names the medium",
+      "ok": true,
+      "detail": "swept"
+    },
+    {
+      "name": "LANGUAGE: \"Don't trust. Verify.\" is on stage exactly once, at the table",
+      "ok": true,
+      "detail": "16-the-comparison.js"
+    }
+  ]
+}

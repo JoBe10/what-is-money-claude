@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="96" height="96" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:#e9e4da">
+<!-- dollar C — the coin S: The milled round carrying the bare S — the dollar as coin rather than letterform, no stem at all. -->
+<circle cx="24" cy="24" r="15.5"/>
+        <path d="M29.5 17.5 C27.5 15.5 21 15 18.5 17.5 C16 20.5 19.5 23 24 24 C28.5 25 32 27.5 29.5 30.5 C27 33 20.5 32.5 18.5 30.5"/>
+        <circle cx="29.5" cy="17.5" r="1.4" fill="currentColor" stroke="none"/><circle cx="18.5" cy="30.5" r="1.4" fill="currentColor" stroke="none"/>
+</svg>
