@@ -136,14 +136,14 @@ Every rule carries its rationale. Future sessions inherit the *why*, not just th
 
 ## 3.2 Neutrality rules
 
-- **Before Act IV, Bitcoin may be *described*, never *argued*.** Facts in the neutral register, at least one honest limitation in the same breath, zero adjectives of advocacy. Bitcoin's descriptive appearances are Scenes 9, 10 and 14. *(Mapped at Stage 0 from the old boundary, "before 4.01," which named a slide that no longer exists. The boundary is the same moment in the argument: the store-of-value test is where the case begins.)*
+- **Before Act IV, Bitcoin may be *described*, never *argued*.** Facts in the neutral register, at least one honest limitation in the same breath, zero adjectives of advocacy. Bitcoin's descriptive appearances are Scenes 9, 10 and 14. *(Mapped at Stage 0 from the old boundary, "before 4.01," which named a slide that no longer exists; **presenter-ruled 25 August 2026: the boundary is before Act IV** — the same moment in the argument: the store-of-value test is where the case begins.)*
 - **The evidence rule:** facts about *the money itself* — purchasing power of a currency, supply data, discovery dates, prices — may appear on screen. Evidence about *social outcomes* with contested causal chains (wealth gaps, inequality since 1971) stays in spoken word and Q&A only. The former survives any skeptic; the latter invites a fight the framework has not yet earned the right to win.
 - **The generalized honesty rule:** every monetary good presented on stage gets at least one stated weakness — fiat included, Bitcoin included. An unexplained strength reads as advocacy; an explained weakness reads as rigor.
 - **No political sorting:** no villain narratives, no country singled out for monetary failure without the structural framing its scene specifies, no partisan-coded evidence.
 
 ## 3.3 Revelation-protection rules
 
-- **The claim ladder — amended by the architecture.** The old rule (the word "claim" appears exactly three times, one rung per act, and never as a generalization before Section 4) is **void**: the Claim Mark is now born on screen in Scene 3 and is the film's protagonist. What survives is the *sequence of enlargements*, and it is still protected:
+- **The claim ladder — replaced by the enlargement sequence** *(presenter-ruled 25 August 2026)*. The old rule (the word "claim" appears exactly three times, one rung per act, and never as a generalization before Section 4) is **void**: the Claim Mark is now born on screen in Scene 3 and is the film's protagonist. What replaces the ladder is the *sequence of enlargements* — Scenes 3 → 7 → 15 → 16 — and it is still protected:
   - **Scene 3** — the claim is born from one unfinished exchange. Concrete, particular, unnamed as a category.
   - **Scene 7** — a banknote is "a claim on gold in a vault." Plain historical usage.
   - **Scene 15** — every layer is a claim on the layer below; the tower ends on the unanswered question of what the bottom layer is a claim on.
@@ -158,7 +158,8 @@ Each act before the test may introduce **at most one technical term**, and uses 
 
 - **Act I's term is the double coincidence of wants**, spoken at Scene 2's failure, as the approved script has it.
 - "Schelling point" remains explicitly excluded — the concept may be present without the label, and the label may be name-dropped in spoken word only.
-- **Allocations for Acts II and III are set by their batch packages** and recorded here when ruled. *(Flagged at Stage 0: the old allocation gave Section 2 "salability"; whether Act II keeps it is a script decision for Batch B, not an inheritance.)*
+- **Act II introduces no technical term** *(presenter-ruled 25 August 2026)*. The old allocation gave Section 2 "salability"; it is not inherited — the concept may be present without the label.
+- **Act III's term is base money** *(presenter-ruled 25 August 2026)*, entering with the tower, where the layers make it concrete.
 
 ## 3.5 Language and craft rules
 
@@ -176,7 +177,7 @@ After implementation the film is re-walked against one question:
 
 > **"Is there any moment before Scene 23 where a fair viewer could say 'he's selling me something'?"**
 
-Every such moment is a defect. This runs as a formal pass, not as a feeling. *(Mapped at Stage 0 from "before 4.16" — the comparison table, which is Scene 23.)*
+Every such moment is a defect. This runs as a formal pass, not as a feeling. *(Mapped at Stage 0 from "before 4.16" — the comparison table; **presenter-ruled 25 August 2026: the moment is Scene 23.**)*
 
 ## 3.7 Act IV / Act V integrity (inherited, re-affirmed)
 
@@ -201,7 +202,7 @@ Act IV's argument presupposes nine deposits in the audience's head. **Every beat
 - **D6 — Coordination, not stages: holding needs one person, spending needs two, pricing needs a network.** Young monetary goods therefore do the jobs in order — a structural fact, not a verdict. *(Scene 13; Boyapati's stages corroborate in the notes.)*
 - **D7 — Incumbency logic: only a categorical difference on the deciding properties has ever moved the crown.** The bar Act IV's comparison holds every candidate to. *(Scene 10, the palladium bar.)*
 - **D8 — Minimal neutral Bitcoin literacy.** No state, no company, 2009; 21,000,000 fixed by the protocol's rules; holdable directly, like a bearer asset — with the honest limitation in the same breath. *(Scene 9, completed at Scene 14.)*
-- **D9 — The claim is the thread.** *(Amended at Stage 0: the old D9 seeded a claim intuition that stayed unnamed until Section 4. The architecture names it in Act I instead. What D9 now requires is that the claim, once born in Scene 3, is present in every act — carried, saved, transferred, layered — so that Scene 16's generalization is recognition of an object the viewer has been watching for forty minutes.)*
+- **D9 — The claim is the thread, progressively enlarged.** *(Amended at Stage 0; **presenter-ruled 25 August 2026.** The old D9 seeded a claim intuition that stayed unnamed until Section 4. The architecture names it in Act I instead. What D9 now requires is progressive enlargement: the claim, once born in Scene 3, is present in every act — carried, saved, transferred, layered — and each rung of the enlargement sequence (§3.3) widens it a step, so that the generalization lands as recognition at the return, Scene 16 — recognition of an object the viewer has been watching for forty minutes.)*
 
 **The anti-list.** Before Act IV, do not: pre-argue Bitcoin; run property scoring; state barter-origin as unqualified historical chronology (it is framed as the logical problem, the standard economic account); front-load inflation grievance (that material lives inside D4's historical record at Scene 8).
 
@@ -311,9 +312,9 @@ The logical **1920 × 1080** stage with uniform letterbox scaling. Respect the t
 
 ## 8.5 The color arc
 
-The Prologue is monochrome by design. The accent is used sparingly and structurally through Acts I–III, and reaches full deployment in Act IV where it already lives. **The accent is never decorative.**
+The Prologue is **monochrome plus photographic warmth**: type and line carry no accent, and the only warmth on screen is the dark-field register's own key light. The accent is used sparingly and structurally through Acts I–III, and reaches full deployment in Act IV where it already lives. **The accent is never decorative.**
 
-*Flagged at Stage 0:* the arc's old anchor — the accent entering at the first waypoint ignition — died with the waypoint device. The natural new anchor is **the Claim Mark's birth in Scene 3**, which is also the film's first argument. Recorded as a flag rather than a ruling: it is an aesthetic decision, and aesthetic decisions belong to the presenter (`AGENTS.md` §4.3).
+**The accent's entry point is the Claim Mark's birth in Scene 3** *(presenter-ruled 25 August 2026)* — the film's first argument is the first orange on screen. The arc's old anchor, the first waypoint ignition, died with the waypoint device.
 
 ---
 
@@ -431,6 +432,7 @@ Every freeze and every amendment, in order. **A freeze is reopened only by the p
 | 24 Aug 2026 | **The synthesis architecture** is delivered — the blueprint's spine carrying the deck's strongest organs; scenes and beats replace slides; the unfinished exchange becomes the film's single thread. |
 | 25 Aug 2026 | **Stage 0 — the structure freeze.** The presenter's five rulings recorded as RULED in `docs/synthesis-architecture.md`: (1) the waypoint device and all visible structure retired; (2) the murmuration retired with honor, the asset banked; (3) the periodic elimination kept, compressed into Scene 6; (4) palladium placed in Scene 10; (5) the stability scene cut, its content distributed to Scene 9's script, Scene 23's notes and Scene 29's rules line. **The structure is closed: craft only hereafter.** |
 | 25 Aug 2026 | **Stage 0 — consolidation.** This document created; the archaeology archived; process law amended into `AGENTS.md`; `film-rebuild` opened. Rules mapped rather than invented, and flagged where mapped: the neutrality boundary (§3.2), the acceptance test (§3.6), the claim ladder (§3.3), D9 (§4), the one-term allocations (§3.4), and the color arc's anchor (§8.5). |
+| 25 Aug 2026 | **The six Stage-0 flags ruled** (presenter, at the Batch A frames session). The neutrality boundary is **before Act IV** (§3.2); the acceptance test runs **before Scene 23** (§3.6); the claim ladder is **replaced by the enlargement sequence** Scenes 3 → 7 → 15 → 16, Scene 16 landing as recognition (§3.3); **D9 is restated as progressive enlargement landing as recognition at the return** (§4); the one-term allocations are **Act I the double coincidence of wants, Act II none, Act III base money** (§3.4); the accent's entry point is **the Claim Mark's birth in Scene 3**, with the Prologue **monochrome plus photographic warmth** (§8.5). |
 
 ---
 
