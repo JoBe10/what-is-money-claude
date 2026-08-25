@@ -9,14 +9,24 @@
 // hours ghost, S2-F1's patient) render both options. Nothing animates — every
 // frame is a settled state.
 //
-// The one held asset: `patient` failed the grade gate (corner 64.73 / 6) and
-// stays in incoming/. The photographic S2-F1 option renders it directly from
-// the drop zone with a HELD annotation baked into the frame, so the sheet can
-// judge the composition while the frame itself says it is not shippable.
+// AMENDED at the selections session, 25 August 2026. The presenter's rulings
+// are applied by *adding* two frames, never by editing the ones already judged:
+// `s2-f1-final` and `s3-f1-final` are the two the rulings changed, and every
+// prior builder stays here rendering exactly what the presenter marked up. That
+// is the aesthetic law's file-keeping clause in the harness — a selection is
+// changed by changing a reference, not by re-rendering from nothing.
+//
+// `patient` is no longer held: the corner regrade passed all five clauses and
+// the render shipped (docs/dark-field-manifest.md §2.1). The two final frames
+// pull it from the shipping library through the register, so it carries the
+// measured framing row like every other subject. The historical `s2-f1-photo`
+// keeps its HELD annotation and now reads the preserved as-generated file under
+// review/frames-a/dark-field/, so the frame the presenter actually judged stays
+// reproducible after the render left the drop zone.
 
 import { DarkFieldImage } from '/src/components/DarkField.js';
 import { UnitField } from '/src/components/UnitField.js';
-import { ClaimMark, claimMarkExtent } from '/src/proto/claim-mark.js';
+import { ClaimMark, claimMarkExtent, CLAIM_MARK_SELECTION } from '/src/proto/claim-mark.js';
 
 const svgNS = 'http://www.w3.org/2000/svg';
 const STAGE_ID = 'frames-a-stage';
@@ -220,6 +230,11 @@ const BUILDERS = {
   's2-f1-mark': (st) => {
     buildExchangeStage(st, 'mark');
   },
+  // RULED: the photographic patient wins. Same composition, now sourced from
+  // the shipping library and with nothing annotated on its face.
+  's2-f1-final': (st) => {
+    buildExchangeStage(st, 'final');
+  },
 
   // S2-F2 — the failure state: wanted goods as dim possibilities near the
   // surgeon; the return path visibly failing on its way back.
@@ -256,15 +271,22 @@ const BUILDERS = {
 function buildExchangeStage(st, patientOption) {
   df(st, 'surgeon', 150, 126, 620, 827, { alt: 'The surgeon, one hour of specialized surgery' });
 
-  if (patientOption === 'photo') {
-    // HELD AT THE GATE — the patient render failed the grade (corner 64.73
-    // against 6) and stays in incoming/. Shown from the drop zone for
-    // compositional judgment only, and the frame says so on its face.
+  if (patientOption === 'final') {
+    // The ruled frame: the patient through the register, at the framing the
+    // gate measured on the regraded file. Its box is 4:5, the aspect the render
+    // arrives in, which is what the framing rule needs to hold (src/dark-field.js).
+    df(st, 'patient', 1150, 152, 620, 775, { alt: 'The patient, the other half of the exchange' });
+  } else if (patientOption === 'photo') {
+    // THE HISTORICAL FRAME, kept as rendered for the record: the patient was
+    // held at the gate (corner 64.73 against 6) and this option showed it from
+    // the drop zone with the hold annotated on its face. It now reads the
+    // preserved as-generated file, because the render itself was regraded and
+    // shipped — the pixels are the ones the presenter judged either way.
     const box = document.createElement('div');
     box.style.cssText = 'position:absolute; left:1150px; top:152px; width:620px; height:775px;' +
       'overflow:hidden; display:grid; place-items:center;';
     const img = document.createElement('img');
-    img.src = '/assets/dark-field/incoming/patient.png';
+    img.src = '/review/frames-a/dark-field/patient--as-generated.png';
     img.alt = 'The patient (held at the grade gate)';
     img.style.cssText = 'width:100%; height:100%; object-fit:contain;' +
       'transform: translate(14.6%, 4.5%) scale(0.976);';
@@ -279,9 +301,10 @@ function buildExchangeStage(st, patientOption) {
 
   // The service path, surgeon to patient, the delivered half.
   const pathY = 620;
-  seg(st.svg, 820, pathY, patientOption === 'photo' ? 1100 : 1240, pathY, 0.35, 1.5);
+  const far = patientOption === 'mark' ? 1240 : 1100;
+  seg(st.svg, 820, pathY, far, pathY, 0.35, 1.5);
   dot(st.svg, 820, pathY, 3.5, 0.7);
-  dot(st.svg, patientOption === 'photo' ? 1100 : 1240, pathY, 3.5, 0.7);
+  dot(st.svg, far, pathY, 3.5, 0.7);
 
   // What the hour contained — the accumulating inventory, at 4.03's register.
   const list = document.createElement('div');
@@ -338,6 +361,37 @@ function birthAttempt3(st, cand) {
   mark(st, cand, 220, cx, cy);
 }
 
+// S3-F1 FINAL — attempt 2, ruled, with the patient as a photograph.
+//
+// The composition is attempt 2's: the surgeon watching the unresolved half
+// contract into the mark on the path between him and the patient. Two things
+// change, both of them the presenter's ruling rather than a fresh design — the
+// mark is candidate A, and the patient is the render instead of the line glyph.
+//
+// The patient's geometry follows from that swap rather than being chosen. A
+// 320px glyph centred at x=1600 becomes a box, and S2-F1's treatment says what
+// the box is: the same 4:5 the render arrives in, at the same full opacity as
+// the surgeon beside it, mirrored against him exactly as S2-F1 mirrors the two
+// figures — surgeon 170…690, so patient 1750…1230 — and centred on the path's
+// own y, which is where S2-F1 centres both figures too. Holding the glyph's old
+// centre instead would have put a 520px box 60px from the frame edge, against
+// the compositional standard's fourth rule.
+//
+// The path starts clear of the box for the same reason: attempt 2's first
+// segment began at x=1470, which is inside the photograph's footprint and would
+// have drawn a line across the patient's chest. It now leaves from 24px outside
+// the box — the clearance the open interval uses — and the three shrinking
+// fragments that follow are attempt 2's, untouched.
+function birthInScene(st, cand) {
+  df(st, 'surgeon', 170, 194, 520, 693, { alt: 'The surgeon' });
+  df(st, 'patient', 1230, 215, 520, 650, { alt: 'The patient, the other half of the exchange' });
+  const cy = 540;
+  seg(st.svg, 1206, cy, 1052, cy, 0.32, 1.5);
+  seg(st.svg, 1028, cy, 988, cy, 0.24, 1.5);
+  seg(st.svg, 970, cy, 952, cy, 0.16, 1.5);
+  mark(st, cand, 132, 880, cy);
+}
+
 // S3-F2 — the open interval: surgeon and held claim left, expanding darkness,
 // the three-line interval set right. The list is one accumulating element;
 // LATER is the last-lit line and holds full voice.
@@ -365,6 +419,9 @@ function saveFinal(st, cand) {
     'left:0; right:0; top:872px; text-align:center; font-size:46px; font-weight:540;' +
     'letter-spacing:-0.012em; color:#fff;');
 }
+
+// RULED: attempt 2, candidate A, photographic patient.
+BUILDERS['s3-f1-final'] = (st) => birthInScene(st, CLAIM_MARK_SELECTION);
 
 for (const cand of ['a', 'b', 'c']) {
   BUILDERS[`s3-f1-a1-${cand}`] = (st) => birthAttempt1(st, cand);
