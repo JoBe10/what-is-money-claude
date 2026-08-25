@@ -1,3 +1,6 @@
+> **Build prompt, executed — archived, not authoritative.** ChatGPT/Codex-era working material for the original Section 4 build.
+> Superseded by `docs/what-is-money-master.md` and `docs/synthesis-architecture.md` (Stage 0, 25 August 2026). Nothing here governs.
+
 # Codex Task — Refine Slides 4.10–4.14: Inversion, Failure Modes, and Final Property Framework
 
 Read and follow these files first:

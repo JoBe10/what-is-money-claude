@@ -1,3 +1,6 @@
+> **Build prompt, executed — archived, not authoritative.** ChatGPT/Codex-era working material for the original Section 4 build.
+> Superseded by `docs/what-is-money-master.md` and `docs/synthesis-architecture.md` (Stage 0, 25 August 2026). Nothing here governs.
+
 # Codex Task — Final Visual Refinement of Slides 4.17, 4.21, 4.22 and 4.23
 
 Read and follow these files first:
