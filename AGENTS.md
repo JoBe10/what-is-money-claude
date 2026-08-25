@@ -13,15 +13,16 @@ Treat it as a designed audiovisual argument, not a conventional web application.
 
 When instructions conflict, follow this order:
 
-1. The user’s latest explicit instruction
-2. The active session brief in `docs/` (the rebuild is run in briefed phases)
-3. `docs/sections-1-3-rebuild-brief.md` — the whole-deck constitution, including §13's argument freeze
-4. `docs/section-4-master-document-v2.md` for Section 4 narrative and creative decisions
-5. An approved `PLANS.md` for implementation sequencing and file-level execution
-6. This `AGENTS.md`
-7. Existing repository conventions and README guidance
+1. The presenter’s latest explicit instruction
+2. The active session brief / batch package in `docs/` (the film is built in briefed stages and batches)
+3. `docs/synthesis-architecture.md` — **the frozen structure.** Acts, scenes, beats, what dies, what survives. Amendable by presenter ruling only
+4. `docs/what-is-money-master.md` — **the constitution.** Every standing rule of narrative, craft, composition, script, register and accuracy, plus the freeze register
+5. This `AGENTS.md` — process law and repository conventions
+6. Existing repository conventions and README guidance
 
-*(`docs/section-4-master-brief.md` and `docs/section-4-narrative-master-document.md` are ChatGPT-era and were consolidated into the v2 document at R7; both now live under `docs/archive/` behind a superseded-by header and govern nothing.)*
+`docs/SOURCES.md`, `docs/icon-grammar.md` and `docs/dark-field-manifest.md` are binding within their subjects and sit beside the master rather than beneath it.
+
+*(Everything else that once governed — the Sections 1–3 rebuild brief, the Section 4 master documents, the original presentation master, `PLANS.md`, and every session brief and report through R7.4 — was consolidated into the master at Stage 0 and now lives under `docs/archive/` behind superseded-by headers. **None of it governs anything.** It is kept as history and as the evidence record older harnesses and citations point back to.)*
 
 Do not silently reinterpret an approved narrative decision. Flag a genuine contradiction or technical impossibility before changing the intended meaning.
 
@@ -109,7 +110,8 @@ and was rebuilt in execution — structure, scripts and craft — by R7 on
 document is:
 
 ```text
-docs/section-4-master-document-v2.md
+docs/synthesis-architecture.md   (structure, frozen)
+docs/what-is-money-master.md     (constitution)
 ```
 
 Its §2 records what is frozen. No session may alter the Test, the definition,
@@ -148,7 +150,7 @@ Before implementation:
 7. Read the slide engine and note overlay.
 8. Read `src/styles/globals.css` and `src/styles/slides.css`.
 9. Read `src/assets.js`.
-10. Read `docs/section-4-master-document-v2.md` and the active session brief.
+10. Read `docs/synthesis-architecture.md`, `docs/what-is-money-master.md` and the active session brief or batch package.
 
 Do not assume a component behaves as its name suggests.
 
@@ -236,7 +238,7 @@ Follow the existing repository conventions.
 - Use `KickerLabel` for kicker labels.
 - Avoid browser-default bullets.
 - Use `BuildList` or a deliberate custom visual when progressive lists are required.
-- **Images go through the dark-field register, never through raw paths.** `src/assets.js` is gone; the deck's only raster surface is `src/dark-field.js` (the subject-keyed manifest) rendered by `src/components/DarkField.js`. A slide asks for a subject by name and gets either the graded render or its grammar-glyph stub. Adding a raster reference anywhere else fails `review/rebuild-r7-2/harness/gates-r7-2.cjs`. The register's own rules are `docs/sections-1-3-rebuild-brief.md` §9.4.9 and `docs/dark-field-manifest.md`.
+- **Images go through the dark-field register, never through raw paths.** `src/assets.js` is gone; the deck's only raster surface is `src/dark-field.js` (the subject-keyed manifest) rendered by `src/components/DarkField.js`. A slide asks for a subject by name and gets either the graded render or its grammar-glyph stub. Adding a raster reference anywhere else fails `review/rebuild-r7-2/harness/gates-r7-2.cjs`. The register's own rules are `docs/what-is-money-master.md` §6 and `docs/dark-field-manifest.md`.
 - Preserve the logical 1920×1080 stage.
 - Respect the existing title safe zone and projection needs.
 - Whitespace is part of the design.
@@ -428,7 +430,7 @@ Do not say:
 - sound money determines all civilizational outcomes.
 
 ## Preferred formulations
-Use exact approved formulations from `docs/section-4-master-document-v2.md` where specified.
+Use exact approved formulations from `docs/what-is-money-master.md` §9–§10 and from the active batch package's scripts where specified.
 
 Do not weaken them casually and do not intensify them beyond their qualification.
 
