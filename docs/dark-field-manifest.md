@@ -123,6 +123,38 @@ historical `comparison_*.png` files restored from `85bad44^`, unmodified.
 180px it reads as banknotes. Beside `fiat` — once `fiat` has its own render —
 that is a collision worth the presenter's eye.
 
+**The Batch A drop — six ingested, one held** (presenter-generated from the
+Batch A package §5, grade-gated 25 August 2026; the runs are
+`review/frames-a/harness/grade-frames-a.json` and `grade-frames-a-post-ingest.json`):
+
+| subject key | file | used at | corner / border | dark | R−B |
+|---|---|---|---|---|---|
+| `single_cowrie` | `assets/dark-field/single_cowrie.png` | P1 morph, the SHELL form | 0.58 / 0.49 | 89.0% | +105 |
+| `gold_certificate` | `assets/dark-field/gold_certificate.png` | Scene 7, the claim on gold | 0.11 / 0.10 | 58.8% | +132 |
+| `vault` | `assets/dark-field/vault.png` | Scene 7 custody | 0.07 / 0.07 | 84.2% | +84 |
+| `ledger_glow` | `assets/dark-field/ledger_glow.png` | Scene 8, the transformation | 0.12 / 0.10 | 64.9% | +165 |
+| `palladium` | `assets/dark-field/palladium.png` | Scene 10, the bar | 0.10 / 0.09 | 75.3% | +49 |
+| `coffee_cup` | `assets/dark-field/coffee_cup.png` | Scene 14, the coffee objection | 0.19 / 0.94 | 86.3% | +86 |
+
+All six are portraits of the R7.3 contender family (1122 × 1402, 4:5) except
+`ledger_glow`, a 1536 × 1024 landscape (3:2) — a third aspect family, so its box
+must be 3:2 for the framing rule to hold. Three subjects now duplicate an
+earlier study on purpose, and **the duplication is a presenter choice, not a
+collision**: `single_cowrie` beside `shells`/`cowrie_shells` (one cowrie for
+the P1 morph's center scale against the five-shell cluster and the contender
+study), `ledger_glow` beside `ledger` (the transformation close-up against the
+carrier lineup's book), and `gold_certificate` beside `paper` (the historical
+gold claim against the plain note). All passing variants stay in the register;
+the Batch A style-frame sheets show them side by side for the presenter's
+ruling on which serves each scene.
+
+**`patient` is HELD in `incoming/`** — it fails the corner clause (top-left
+patch 64.73 against a limit of 6: the key light's shaft is visible in frame at
+the upper left). It is the surgeon's failure class from R7.2 — a light source
+reaching the frame, not a wrong grade — so an R7.4-class corner regrade would
+likely rescue it; regeneration from the §5.7 prompt is the alternative. Until
+one of those happens, the Scene 2 patient position stubs.
+
 Two of the first shoot's renders need a note rather than a regeneration.
 
 - **`shells` satisfies the brief's "cluster of cowrie shells" contender** outright — the restored render *is* a five-shell cowrie cluster on black. No new generation is required for §4.1's shells; if a distinct Section 2 frame is wanted later, the prompt is in §4 anyway.
@@ -251,12 +283,12 @@ lineup keeps its own:
 
 | status | subjects |
 |---|---|
-| **shipping** (15) | `shoe` · `wine` · `shells` · `gold` · `paper` · `ledger` · `bitcoin` · `cattle` · `salt` · `cowrie_shells` · `iron` · **`surgeon`** · **`meal`** · **`property`** · **`shares`** |
-| **regenerate** (1) | `fiat` — see §3.0 |
+| **shipping** (21) | `shoe` · `wine` · `shells` · `gold` · `paper` · `ledger` · `bitcoin` · `cattle` · `salt` · `cowrie_shells` · `iron` · `surgeon` · `meal` · `property` · `shares` · **`single_cowrie`** · **`gold_certificate`** · **`vault`** · **`ledger_glow`** · **`palladium`** · **`coffee_cup`** |
+| **regenerate** (2) | `fiat` — see §3.0 · `patient` — held in `incoming/` on the corner clause; an R7.4-class regrade or a regeneration from §5.7 |
 | **optional** (2) | `metals`, which would light the second featured moment at 2.4 (R7.3 §7 — implemented, dormant, and it does not stub to a glyph because the stop below it already shows that glyph); `gold-native`, only if the two-survivors arrival is ruled in and wants its own study |
 
-**One image stands between this deck and a complete dark-field register**, down
-from five: `fiat`. `surgeon` and `meal` were graded rather than regenerated at
+**Two images stand between the register and completeness**: `fiat` (§3.0) and
+`patient` (held at the Batch A gate). `surgeon` and `meal` were graded rather than regenerated at
 R7.4 — they failed on their *ground*, not their light, so the lamp and the lit
 stone surface were cropped out and the surround taken to true black; the
 parameters are in `review/rebuild-r7-4/harness/regrade-r7-4.mjs` and both now
