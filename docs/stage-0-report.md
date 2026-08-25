@@ -27,7 +27,7 @@ Three standing rules that shipped at R7.4 but had never been written into the co
 
 # 2. Files changed
 
-Fifteen commits, `d47aad2`…`02576a3` — 72 files, +1412 / −176.
+Eighteen commits on `film-rebuild`, beginning at `d47aad2`; the tag `stage-0` marks the last. The fifteen substantive ones:
 
 | Commit | Change |
 |---|---|
@@ -46,6 +46,8 @@ Fifteen commits, `d47aad2`…`02576a3` — 72 files, +1412 / −176.
 | `3b63bea` | carry the conventions over to scenes (key paths, Claim Mark, manifest) |
 | `223e838` | the Stage 0 smoke harness and its result |
 | `02576a3` | document the scratch route in the README, correct the layout |
+
+The remaining three are this report and two corrections to it.
 
 **New:** `docs/what-is-money-master.md` · `docs/stage-0-report.md` · `src/scenes/README.md` + six act directories · `src/proto/registry.js` · `review/stage-0/`.
 **Modified:** `docs/synthesis-architecture.md` (the rulings) · `AGENTS.md` · `README.md` · `src/main.js` · `src/styles/globals.css` (the scratch index's styles) · `docs/icon-grammar.md`, `docs/dark-field-manifest.md`, `docs/SOURCES.md`, `src/components/section-2/glyphs.js`, `src/data/purchasing-power.js` (reference repointing only).
