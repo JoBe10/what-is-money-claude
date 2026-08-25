@@ -4,6 +4,7 @@
 **Mode: FAST.** Scoped verification: the grade gate, the production build, a deck-boot smoke, and visual review of every sheet and still. No deck-wide suite; no scene implemented; nothing animates.
 **Branch:** `film-rebuild`. **Tag:** `batch-a-frames`.
 **Date:** 25 August 2026
+**Superseded in part:** every judgment call this report leaves open was ruled on the same day. The rulings, and what each one changed, are `docs/batch-a-selections-report.md` §1.
 
 ---
 
