@@ -7,11 +7,12 @@
 ---
 
 # 1. Read these, in this order (clone the repo; all paths are in it)
-Repo: `https://github.com/JoBe10/what-is-money-claude` · working branch **`film-rebuild`** (main is the last stable pre-film deck; untouched until final GATE). Tags so far: `stage-0`, `batch-a-frames`.
+Repo: `https://github.com/JoBe10/what-is-money-claude` · working branch **`film-rebuild`** (main is the last stable pre-film deck; untouched until final GATE). Tags so far: `stage-0`, `batch-a-frames`, `batch-a-selections`.
 1. `docs/synthesis-architecture.md` — THE structure: five acts, ~30 scenes with beats, all rulings recorded. This is law.
 2. `docs/what-is-money-master.md` — the consolidated constitution: narrative rules, D-framework as restated, compositional standard, two registers + dark-field grade, script standard (`[→]` = one advance), display/settle rules, self-reference ban, guardrails, terminology, freeze register.
 3. `AGENTS.md` §4 — process law (see §4 below; the six presenter orders).
 4. `docs/batch-a-package.md` — the template every batch package follows: verbatim scripts, beat maps, style-frame specs, asset manifest.
+4b. `docs/batch-a-selections-report.md` §1 — the presenter's eight rulings of 25 August 2026 (Gate 1, the frame verdicts, the patient, the register assignments). The approval trail for everything Act I now stands on.
 5. `docs/archive/` — history; do not resurrect anything from it without the presenter reopening the freeze.
 
 # 2. The one-paragraph history you must respect
@@ -31,13 +32,18 @@ Scenes and beats, not slides. A scene = one continuous visual world (one HTML sc
 # 5. Where the project stands RIGHT NOW
 - **Stage 0 done** (freeze, master doc, archive of 47 docs, process law, scaffold `src/scenes/`, `?proto=` route).
 - **Gate 1 + Style Frames session done** (Fable 5; 11 commits; tag `batch-a-frames`). Deliverables under `review/frames-a/`:
-  - `gate-1-claim-mark/contact-sheet.png` — Claim Mark candidates A (current disc-era object), B (chamfered billet), C (flat hexagon), five contexts, three scales. `CLAIM_MARK_SELECTION` in `src/proto/claim-mark.js` is **null — awaiting Jonas's letter.**
-  - `frames/contact-sheet.png` — the ten §3 frames as 24 stills (mark-bearing frames in all three candidates; S3-F1 in three compositional attempts; P2-F1 ± hours-ghost; S2-F1 photographic patient vs restrained mark).
-  - `register/contact-sheet.png` — new dark-field arrivals beside the library. Six of seven new renders shipped (single_cowrie, gold_certificate, vault, ledger_glow, palladium, coffee_cup); **`patient` HELD** (corner luminance 64.73 vs limit 6 — key-light shaft in frame; needs regrade or regeneration). **`fiat` render missing** (pre-existing gap; gold-certificate distinctness check pending until it lands). Duplicate subjects shipped side-by-side for HIS assignment: cowrie ×3, ledger ×2, note ×2. Minor note: wine render edge faintly separable at S4-F1 box size (2.28, within gate).
-- **Jonas is reviewing the sheets now.** His next message to you will likely contain: the Gate 1 letter, per-frame verdicts (approved / approved-with-notes / redo), the S3-F1 attempt choice, P2-F1 ghost choice, S2-F1 patient choice, duplicate-subject assignments, and possibly a regenerated patient image.
+  - `gate-1-claim-mark/contact-sheet.png` — Claim Mark candidates A (current disc-era object), B (chamfered billet), C (flat hexagon), five contexts, three scales.
+  - `frames/contact-sheet-markup.png` — the ten §3 frames as 24 stills, the sheet Jonas marked up (mark-bearing frames in all three candidates; S3-F1 in three compositional attempts; P2-F1 ± hours-ghost; S2-F1 photographic patient vs restrained mark).
+  - `register/contact-sheet.png` — new dark-field arrivals beside the library, duplicates side by side for his assignment.
+- **Selection-application session done** (Opus 5, FAST; 10 commits; tag `batch-a-selections`; `docs/batch-a-selections-report.md`). His rulings are recorded and applied:
+  - **Gate 1 ruled: candidate A**, the current disc. `CLAIM_MARK_SELECTION` in `src/proto/claim-mark.js` is `'A'`; B and C stay on file, so changing the protagonist is still one letter. A is the disc the hours field was built against, so no unit-style tuning and **no P1-F1 re-render.**
+  - `frames/contact-sheet.png` is now **the approved set of ten** — S2-F1 and S3-F1 re-rendered as finals, the other eight approved as rendered, P2-F1 plain. All 26 stills stay on disk; nothing was deleted.
+  - **`patient` is regraded, gated and shipping** (corner 64.73 → 0.08, five clauses of five, zero pixels of the modelled subject changed). The register is 22 images, 110 checks, 0 failures. **Open for his eye:** the warm ambient the regrade cannot reach without touching the figure — measured at 9.2 against `coffee_cup`'s 6.8, above the register's norm but the same order (selections report §6.2).
+  - **Duplicate-subject assignments ruled** and recorded (manifest §2.2): `single_cowrie` → P1 morph, `shells` → Scene 5 lineup, `cowrie_shells` banked; `ledger_glow` → Scene 8, `ledger` → lineup; `gold_certificate` → Scene 7, `paper` → P1 morph.
+  - **`fiat` render still missing** (pre-existing gap; the gold-certificate distinctness check waits on it). No Act I scene needs it. The S4-F1 wine-edge note was waved off — within the gate, presenter-accepted.
 
 # 6. Your immediate next actions (in order)
-1. Receive his rulings → author the **selection-application session brief** (FAST, Opus): record `CLAIM_MARK_SELECTION`, apply frame markups (re-render only redone frames), integrate patient regrade/regeneration, record duplicate assignments in the manifest, tag.
+1. ~~Receive his rulings → author the selection-application brief~~ — **done**, tag `batch-a-selections`. He has not yet seen the two new finals rendered; they are on `review/frames-a/frames/contact-sheet.png`.
 2. Then **Prototype Gate 2** (Fable, top effort): Scenes 2–4 animated in the `?proto=` scratch route against approved frames — the film's signature system. The blueprint's rule holds: do not leave Gate 2 until it is exceptional. Jonas reviews as a viewer; iterate in the prototype, not in the deck.
 3. Then **Batch A implementation** (Opus, FAST) against approved frames + the verbatim scripts in `docs/batch-a-package.md`.
 4. Then author the **Batch B package here in chat** (Act II, Scenes 5–10) following `batch-a-package.md`'s exact template: beat maps, verbatim scripts (Act II scripts adapt existing material: competition wounds + Zanzibar receipt, chemistry funnel compressed, ladder motivation, the fused fiat scene with severance + four-currency chart, Bitcoin facts + honesty + the distributed stability content, palladium bar), style-frame specs, any asset needs. Then C (Act III: jobs, Argentina fusion, coordination, coffee, tower), D (Act IV: mostly existing frozen scripts re-homed), E (Act V), F (integration + close). GATE, his script pass, record.
