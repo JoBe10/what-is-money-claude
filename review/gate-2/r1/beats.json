@@ -1,0 +1,83 @@
+{
+  "date": "2026-08-25T12:33:12.858Z",
+  "session": "gate-2-r1",
+  "beats": [
+    {
+      "id": "s2-b1",
+      "caption": "DERIVED — the stage assembles: s2-f1-final minus the capabilities"
+    },
+    {
+      "id": "s2-b2",
+      "caption": "APPROVED — s2-f1-final: capabilities landed, the patient received"
+    },
+    {
+      "id": "s2-b3",
+      "caption": "DERIVED — the return path attempting, from s2-f2’s system"
+    },
+    {
+      "id": "s2-b4",
+      "caption": "APPROVED — s2-f2: the failure state"
+    },
+    {
+      "id": "s2-b5",
+      "caption": "DERIVED — the binding line at display scale, the failure receded"
+    },
+    {
+      "id": "s3-b1",
+      "caption": "APPROVED — s3-f1-final: the birth, mid-contraction"
+    },
+    {
+      "id": "s3-b2",
+      "caption": "DERIVED — the contraction complete, the claim held between them"
+    },
+    {
+      "id": "s3-b3",
+      "caption": "DERIVED — the patient released"
+    },
+    {
+      "id": "s3-b4",
+      "caption": "APPROVED — s3-f2-a: the open interval"
+    },
+    {
+      "id": "s3-b5",
+      "caption": "DERIVED — the completion demonstration’s end, from s4-f1’s system"
+    },
+    {
+      "id": "s3-b6",
+      "caption": "APPROVED — s3-f2-a again: the reset to the held claim"
+    },
+    {
+      "id": "s3-b7",
+      "caption": "DERIVED — the separation and unfinished pair, the interval receded"
+    },
+    {
+      "id": "s4-b1",
+      "caption": "DERIVED — the fork named over the held claim"
+    },
+    {
+      "id": "s4-b2",
+      "caption": "APPROVED — s4-f1: SPEND resolved"
+    },
+    {
+      "id": "s4-b3",
+      "caption": "DERIVED — the held claim restored, SAVE alone"
+    },
+    {
+      "id": "s4-b4",
+      "caption": "DERIVED — s4-f2-a minus the pair: the interval stretched"
+    },
+    {
+      "id": "s4-b5",
+      "caption": "APPROVED — s4-f2-a: the closing pair"
+    }
+  ],
+  "birthCaptures": [
+    "birth-1-collapse-a",
+    "birth-1-collapse-b",
+    "birth-2-condense-a",
+    "birth-2-condense-b",
+    "birth-3-pool-a",
+    "birth-3-pool-b"
+  ],
+  "consoleErrors": []
+}
