@@ -1,0 +1,26 @@
+{
+  "phase": "batch-a-selections",
+  "date": "2026-08-25",
+  "source": "review/frames-a/dark-field/patient--as-generated.png",
+  "pass": {
+    "subject": "patient",
+    "anchor": "top-left",
+    "window": [
+      0.12,
+      0.3
+    ],
+    "measured": {
+      "nearestStructuredBlock": 0.319,
+      "nearestModelledPixel": 0.331,
+      "failingCornerPatchOuterRadius": 0.053
+    }
+  },
+  "result": {
+    "width": 1122,
+    "height": 1402,
+    "bytes": 1612845,
+    "pixelsTouched": 228461,
+    "brightestPixelTouched": 80.1,
+    "maxDropOnModelledSubject": 0
+  }
+}
