@@ -50,22 +50,37 @@ The current slide is reflected in the URL so refreshes and Vite HMR reloads pres
 
 The URL updates as you navigate (debounced; uses `history.replaceState` so the back button doesn't pollute with every key press). The current slide *and* its build step are written to `sessionStorage`, so Vite HMR reloads return you to exactly where you were — including the mid-slide build state.
 
+## Scratch route (`?proto=`)
+
+Prototype scenes run through the real engine, without joining the deck:
+
+- `?proto=` — every prototype registered in `src/proto/registry.js`, in order.
+- `?proto=<id>` — one, by module id or by its `protoKey`.
+- `?proto=list` — the index of what is registered.
+
+`?slide=` still selects the entry point inside whatever the route is running, so
+builds, notes, direct entry and reduced motion behave exactly as they will on
+stage. Nothing here affects the deck: a scene joins the film only when its batch
+splices it into `src/slides/manifest.js`.
+
 ## Project layout
 
 ```
 index.html
 src/
-  main.js                 # entry: mounts the slide engine
-  assets.js               # central image manifest
+  main.js                 # entry: mounts the deck, or the scratch route on ?proto=
+  dark-field.js           # subject-keyed image register (images are never pathed)
   engine/                 # navigation, transitions, overlays
   components/             # reusable visual elements (KickerLabel, BuildList, …)
+  proto/registry.js       # prototypes the scratch route can run
+  scenes/                 # the film, one directory per act — see src/scenes/README.md
   slides/
-    manifest.js           # ordered list of slide modules + section grouping
-    section-1-opening/    # the eight Section 1 slides
+    manifest.js           # the running order, and the only source of truth for it
+    section-1-question/   # the legacy deck, replaced batch by batch
 styles/
   globals.css             # design tokens, shell chrome, overlays
   slides.css              # shared slide patterns
-assets/images/            # all artwork (already in place, do not regenerate)
+assets/dark-field/        # the graded shipping set (do not regenerate without approval)
 ```
 
 ## Adding a slide
