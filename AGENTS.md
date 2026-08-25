@@ -101,38 +101,57 @@ Audit existing modules before introducing a new pattern.
 
 ---
 
-# 3. Mission for the current rebuild
+# 3. Mission — the film rebuild
 
-The Section 4 rebuild is **complete**: the section shipped at 23 slides, was
-audited from first principles on 28 July 2026 (which froze its argument spine),
-and was rebuilt in execution — structure, scripts and craft — by R7 on
-31 July 2026. It is still **23 slides**; the deck is **46**. The governing
-document is:
+The deck is being rebuilt as a **film**. `docs/synthesis-architecture.md` is the
+frozen structure: thirty-one scenes across a prologue and five acts, one thread
+(the unfinished exchange), one protagonist (the Claim Mark), and no visible
+chapter structure at all. The structure closed at Stage 0, 25 August 2026.
+**Craft only hereafter** — no session proposes another architecture, and no
+session reopens a freeze. That is the presenter's to do.
 
-```text
-docs/synthesis-architecture.md   (structure, frozen)
-docs/what-is-money-master.md     (constitution)
-```
+The paradigm is **scenes and beats, not slides**: a scene is one continuous
+visual world (one module, shared DOM), a beat is one advance within it. Scenes
+morph into each other when the idea persists; hard cuts only when the question
+changes.
 
-Its §2 records what is frozen. No session may alter the Test, the definition,
+## The branch
+
+All film work lives on **`film-rebuild`**, cut from `main` at the last stable
+deck. Batches are **commit ranges on that branch**, never separate branches.
+`main` stays the last stable deck until the final GATE merge before recording.
+
+## The legacy deck
+
+The 45-slide deck is the film's source of parts, not its enemy. The engine,
+`UnitField`, the dark-field library and its pipeline, the icon grammar, the
+comparison components and their frozen data, and every surviving script all
+carry over.
+
+**Legacy slides are deleted per batch, as each batch replaces them — never
+preemptively.** The deck on `film-rebuild` therefore runs end to end at every
+commit: new scenes splice into the manifest as their batches land, and seams are
+**noted in the batch report, not smoothed**.
+
+## What is frozen
+
+The argument freeze of 28 July 2026 stands in full, and the structure freeze of
+25 August 2026 joins it. No session may alter the 100-Year Test, the definition,
 claim/carrier, the inversion, the ten failure modes and properties, the five
 candidates, any of the fifty scores, migration, the margin mechanism, or the
-case as final frame without the presenter reopening the freeze.
+case as the final frame. The full register is `docs/what-is-money-master.md`
+§13.
 
 Preserve:
 - the ten selected properties;
 - the five compared assets;
 - the existing scores unless explicitly changed;
-- the comparison framework as the presenter’s own work;
-- the overall visual identity of the deck.
+- the comparison framework as the presenter's own work;
+- the film's visual identity.
 
-Do not modify Sections 1–3 or Section 5 except where required for:
-- manifest integration;
-- absolute slide numbering;
-- a necessary transition;
-- a confirmed shared component improvement.
-
-Report every out-of-scope file changed and why.
+Stay inside your batch's scope. Touching a scene outside it is permitted only
+for manifest integration, a necessary seam, or a confirmed shared-component
+improvement. Report every out-of-scope file changed and why.
 
 ---
 
@@ -199,16 +218,15 @@ Do not defer all validation to the end.
 
 # 5. Scope and safety
 
-- Work on a dedicated branch.
-- Do not use destructive Git operations.
-- Do not force-push.
-- Do not delete source files until replacements are working and their removal is justified.
+- Work on `film-rebuild`. Never commit film work to `main`.
+- Do not use destructive Git operations. Do not force-push.
+- **Delete legacy slides only as the batch that replaces them lands** — never preemptively, never as tidying. The deck must run end to end at every commit.
 - Do not install new dependencies without explicit approval.
 - Do not regenerate or replace existing artwork without approval.
 - Do not alter the comparison scores without approval.
-- Do not change the project’s architectural stack.
-- Do not rewrite the whole slide engine to solve a local slide problem.
-- Keep changes reviewable and milestone-oriented.
+- Do not change the project's architectural stack.
+- Do not rewrite the slide engine to solve a local scene problem.
+- Keep changes reviewable: one self-contained change per commit (§4.1).
 
 If a task is ambiguous but non-blocking, make the most conservative decision consistent with the governing documents and report it. Ask only about genuinely blocking choices.
 
@@ -538,24 +556,22 @@ Before completion, search for:
 
 ---
 
-# 15. Definition of done
+# 15. Definition of done (per batch)
 
-The work is done only when:
+A batch is done only when:
 
-1. The approved 23-slide Section 4 is present in the manifest (deck total 46).
-2. The old problem-solving sequence is no longer active.
-3. The ten-property and five-asset frameworks remain intact.
-4. The orange claim motif creates genuine continuity.
-5. Every slide has complete speaker notes.
-6. The build succeeds.
-7. Navigation and build states are deterministic.
-8. Presenter notes remain synchronised.
-9. No obsolete Section 4 narrative remains in active code or notes.
-10. All affected slide numbers and IDs are correct.
-11. The complete section has been reviewed in sequence.
-12. The transition from Section 3 and into the close feels intentional.
-13. All overclaims prohibited by the master document's guardrails have been removed.
-14. The final result feels designed, not generated.
+1. Every scene in it is implemented against **presenter-approved style frames** and the batch package's scripts.
+2. Every beat maps to exactly one `[→]` in its script, in order.
+3. Builds are deterministic forward, backward and on direct entry, with reduced-motion parity at every state.
+4. Speaker notes are complete, are the verbatim recording script, and stay synchronized in the second window.
+5. `npm run build` succeeds.
+6. The legacy slides this batch replaces are deleted **in this batch**, the manifest is spliced, and the deck runs end to end.
+7. No guardrail in the master §10 is violated, and nothing on screen or in a script refers to the film as a film.
+8. The compositional standard holds: the two-element budget, the brightness floors, the display rule, the settle budgets, and the register boundary.
+9. Every visual gap is **flagged in the report** — none improvised (§4.4).
+10. Commits are granular, the working tree is clean, and the batch tag is cut.
+11. The report names its mode.
+12. The scenes pass the ten-question scene test, and the act passes the retelling test — a cold viewer can retell its idea unprompted.
 
 ---
 
