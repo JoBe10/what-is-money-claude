@@ -3,8 +3,9 @@
 // The film's only recurring protagonist, three candidate forms behind one API,
 // exactly as the aesthetic law requires (AGENTS.md §4.3): every candidate stays
 // on file, the presenter selects from the contact sheet, and the selection is
-// recorded here as one letter. Until the gate rules, SELECTION is null and
-// nothing ships — the style frames render every candidate side by side.
+// recorded here as one letter. The gate has ruled — see CLAIM_MARK_SELECTION —
+// and B and C remain here unchanged, so changing the film's protagonist stays
+// an edit to that one letter rather than a redraw.
 //
 //   A — the current ClaimObject render: the deck's luminous disc, verbatim.
 //       Same class, same gradient, same glow proportions as 1.2's token.
@@ -28,8 +29,12 @@ import { LuminousDisc } from '../components/LuminousDisc.js';
 
 export const CLAIM_MARK_CANDIDATES = ['a', 'b', 'c'];
 
-// Ruled at Prototype Gate 1 by the presenter; null until then.
-export const CLAIM_MARK_SELECTION = null;
+// RULED at Prototype Gate 1 by the presenter, 25 August 2026: **candidate A**,
+// the current ClaimObject luminous disc, verbatim. Because A is the disc the
+// deck already uses, the hours field's unit style already rhymes with it — the
+// tuning the gate reserved is not needed and P1-F1 does not re-render.
+// (docs/batch-a-selections-brief.md §1.1.)
+export const CLAIM_MARK_SELECTION = 'A';
 
 const f = (v) => Number(v.toFixed(2));
 
@@ -99,16 +104,17 @@ function hexagon(size) {
  * @param {string} candidate 'a' | 'b' | 'c'
  * @param {number} size      optical diameter on the 1920×1080 stage
  */
-export function ClaimMark({ candidate = 'a', size = 116, className = '' } = {}) {
+export function ClaimMark({ candidate = CLAIM_MARK_SELECTION, size = 116, className = '' } = {}) {
+  const c = String(candidate).toLowerCase();
   const el = document.createElement('div');
   el.className = `claim-mark ${className}`.trim();
-  el.dataset.candidate = candidate;
+  el.dataset.candidate = c;
   el.setAttribute('role', 'img');
   el.setAttribute('aria-label', 'An earned, transferable claim on value');
   el.style.cssText = 'display:inline-grid; place-items:center;';
 
-  if (candidate === 'b') el.appendChild(billet(size));
-  else if (candidate === 'c') el.appendChild(hexagon(size));
+  if (c === 'b') el.appendChild(billet(size));
+  else if (c === 'c') el.appendChild(hexagon(size));
   else el.appendChild(LuminousDisc({ size }));
 
   return el;
@@ -117,11 +123,12 @@ export function ClaimMark({ candidate = 'a', size = 116, className = '' } = {}) 
 /** The candidate's rendered footprint at a nominal size — the sheet and the
  *  frames use this to place surrounding geometry (paths, shells, lanes). */
 export function claimMarkExtent(candidate, size) {
-  if (candidate === 'b') {
+  const c = String(candidate).toLowerCase();
+  if (c === 'b') {
     const h = size * 0.53;
     return { w: h * 2.8, h };
   }
-  if (candidate === 'c') {
+  if (c === 'c') {
     const D = size * 1.04;
     return { w: D, h: D * 0.866 };
   }
