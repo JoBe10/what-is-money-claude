@@ -418,8 +418,14 @@ class Gate2Stage {
     this.frags.forEach((line, i) => {
       const c = configs[i];
       line.removeAttribute('transform');
+      // An unused pool line is reset to one canonical shape, not merely
+      // hidden: reconstruction must produce identical DOM regardless of what
+      // any gesture left behind, or state parity is only skin-deep.
       if (c) this.setSeg(line, c[0], c[1], c[2], c[3]);
-      else line.setAttribute('opacity', '0');
+      else {
+        this.setSeg(line, 0, 0, 0, 0.35);
+        line.setAttribute('opacity', '0');
+      }
     });
   }
 
@@ -523,7 +529,7 @@ class Gate2Stage {
     if (st.fragDot) {
       const d = GEOM.fragDot;
       this.setDot(this.fragDotEl, d.x, d.y, d.r, d.o);
-    } else this.fragDotEl.setAttribute('opacity', '0');
+    } else this.setDot(this.fragDotEl, 0, 0, 0, 0);
 
     if (st.closed) {
       const c = GEOM.closed;
@@ -614,6 +620,7 @@ class Gate2Stage {
       goods: [this.shoe, this.meal, this.wine].map(rect),
       service: attr(this.service.line, ['x1', 'x2', 'opacity']),
       frags: this.frags.map((l) => attr(l, ['x1', 'x2', 'y1', 'stroke', 'opacity'])),
+      fragDot: attr(this.fragDotEl, ['cx', 'cy', 'r', 'opacity']),
       fade: this.fadeState,
       closed: attr(this.closed.line, ['x1', 'x2', 'opacity']),
       labels: this.labelsEl.map((el) => el.style.opacity),
