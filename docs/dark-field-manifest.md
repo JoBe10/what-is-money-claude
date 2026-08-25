@@ -147,9 +147,9 @@ collision**: `single_cowrie` beside `shells`/`cowrie_shells` (one cowrie for
 the P1 morph's center scale against the five-shell cluster and the contender
 study), `ledger_glow` beside `ledger` (the transformation close-up against the
 carrier lineup's book), and `gold_certificate` beside `paper` (the historical
-gold claim against the plain note). All passing variants stay in the register;
-the Batch A style-frame sheets show them side by side for the presenter's
-ruling on which serves each scene.
+gold claim against the plain note). All passing variants stay in the register,
+and the presenter ruled on the Batch A register sheet which study serves which
+scene — the assignments are §2.2 below. Nothing was deleted to record them.
 
 ### 2.1 `patient` — regraded and ingested, 25 August 2026
 
@@ -193,6 +193,29 @@ for `coffee_cup`, the highest of the renders already shipping — the same order
 slightly above. It reads as key spill rather than as a beam. Regeneration from
 the Batch A package §5 item 7 remains the alternative if the presenter's eye
 disagrees with the gate's verdict.
+
+### 2.2 The duplicate-subject scene assignments (ruled 25 August 2026)
+
+Three subjects hold more than one passing study. The presenter ruled on the
+Batch A register sheet which study serves which scene. **Every non-assigned
+study stays in the library, banked** — a selection here is a change of
+reference, never a deletion, exactly as the aesthetic law requires.
+
+| subject | study | serves |
+|---|---|---|
+| cowrie | `single_cowrie` | P1 morph, centre scale — one object, rhyming with the sequence's other single forms, which is what it was generated for |
+| cowrie | `shells` | Scene 5, the carrier lineup — individual shells stay legible at lineup scale |
+| cowrie | `cowrie_shells` | **banked** — no current scene |
+| ledger | `ledger_glow` | Scene 8, the transformation — the glowing close-up it was generated for |
+| ledger | `ledger` | the carrier lineup and other display-scale ledger appearances |
+| note | `gold_certificate` | Scene 7, the claim on gold |
+| note | `paper` | P1 morph's paper form, and generic note appearances |
+
+The `used at` columns above and in §2 record the same assignments per row.
+`src/dark-field.js` carries them as a comment beside the framing table: the code
+has no assignment slot to fill — a subject key resolves to one file, and which
+scene calls that key is a property of the scenes — so the record lives where a
+reader choosing between two cowries will actually be standing.
 
 Two of the first shoot's renders need a note rather than a regeneration.
 

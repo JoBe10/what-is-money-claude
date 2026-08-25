@@ -32,6 +32,29 @@ const modules = import.meta.glob('../assets/dark-field/*.{png,jpg,jpeg,webp}', {
   import: 'default'
 });
 
+// ------------------------------------------------- duplicate-subject assignments
+//
+// Three subjects hold more than one passing study, on purpose, and the presenter
+// ruled on the Batch A register sheet which study serves which scene (25 August
+// 2026; docs/dark-field-manifest.md §2.2). There is no assignment field to fill
+// here — a key resolves to one file, and which scene calls which key is a
+// property of the scenes — so the ruling is recorded where someone choosing
+// between two cowries is actually standing:
+//
+//   cowrie   single_cowrie   P1 morph, centre scale (one object, rhyming with
+//                            the sequence's other single forms)
+//            shells          Scene 5, the carrier lineup (individual shells stay
+//                            legible at lineup scale)
+//            cowrie_shells   banked — no current scene
+//   ledger   ledger_glow     Scene 8, the transformation (the glowing close-up)
+//            ledger          the carrier lineup and other display-scale
+//                            ledger appearances
+//   note     gold_certificate  Scene 7, the claim on gold
+//            paper             P1 morph's paper form, generic note appearances
+//
+// Banked is not deleted. Every passing study stays in the register so a change
+// of assignment is a change of the key a scene asks for, never a regeneration.
+
 /** subject key → resolved URL, for every dark-field render present in the tree. */
 export const darkField = Object.fromEntries(
   Object.entries(modules).map(([file, url]) => [
