@@ -123,9 +123,11 @@ historical `comparison_*.png` files restored from `85bad44^`, unmodified.
 180px it reads as banknotes. Beside `fiat` — once `fiat` has its own render —
 that is a collision worth the presenter's eye.
 
-**The Batch A drop — six ingested, one held** (presenter-generated from the
+**The Batch A drop — all seven now shipping** (presenter-generated from the
 Batch A package §5, grade-gated 25 August 2026; the runs are
-`review/frames-a/harness/grade-frames-a.json` and `grade-frames-a-post-ingest.json`):
+`review/frames-a/harness/grade-frames-a.json`, `grade-frames-a-post-ingest.json`,
+and — for the regraded `patient` and the set it joined —
+`grade-selections-patient.json` and `grade-selections-post-ingest.json`):
 
 | subject key | file | used at | corner / border | dark | R−B |
 |---|---|---|---|---|---|
@@ -135,8 +137,9 @@ Batch A package §5, grade-gated 25 August 2026; the runs are
 | `ledger_glow` | `assets/dark-field/ledger_glow.png` | Scene 8, the transformation | 0.12 / 0.10 | 64.9% | +165 |
 | `palladium` | `assets/dark-field/palladium.png` | Scene 10, the bar | 0.10 / 0.09 | 75.3% | +49 |
 | `coffee_cup` | `assets/dark-field/coffee_cup.png` | Scene 14, the coffee objection | 0.19 / 0.94 | 86.3% | +86 |
+| `patient` | `assets/dark-field/patient.png` | Scene 2, the patient — **regraded**, §2.1 | 0.08 / 0.06 | 91.4% | +123 |
 
-All six are portraits of the R7.3 contender family (1122 × 1402, 4:5) except
+All seven are portraits of the R7.3 contender family (1122 × 1402, 4:5) except
 `ledger_glow`, a 1536 × 1024 landscape (3:2) — a third aspect family, so its box
 must be 3:2 for the framing rule to hold. Three subjects now duplicate an
 earlier study on purpose, and **the duplication is a presenter choice, not a
@@ -148,12 +151,48 @@ gold claim against the plain note). All passing variants stay in the register;
 the Batch A style-frame sheets show them side by side for the presenter's
 ruling on which serves each scene.
 
-**`patient` is HELD in `incoming/`** — it fails the corner clause (top-left
-patch 64.73 against a limit of 6: the key light's shaft is visible in frame at
-the upper left). It is the surgeon's failure class from R7.2 — a light source
-reaching the frame, not a wrong grade — so an R7.4-class corner regrade would
-likely rescue it; regeneration from the §5.7 prompt is the alternative. Until
-one of those happens, the Scene 2 patient position stubs.
+### 2.1 `patient` — regraded and ingested, 25 August 2026
+
+`patient` was held at the Batch A gate on one clause of five: top-left corner
+patch **64.73** against a limit of 6, because the key light's shaft is in frame
+at the upper left. Border, dark fraction and both warmth clauses passed with
+room — the surgeon's failure class from R7.2, a light source reaching the frame
+rather than a wrong grade. The presenter ordered the regrade attempted before
+any regeneration, and it succeeded: **corner 0.08, border 0.06, 91.4% dark,
+R−B +123, 100% of the highlight population warm** — five clauses of five, and
+the whole shipping set re-gated at 22 images, 110 checks, 0 failures.
+
+The pass is one operation, and its parameters are measured rather than chosen:
+a **corner window** anchored at the top-left, stage black inside r = 0.12 of the
+frame diagonal and smoothstepped back to untouched by r = 0.30. R7.4's crop was
+unavailable here — the subject already fills 0.70 × 0.90 of the frame, so the
+crop that removes the shaft removes the head — but the same power-window falloff
+was. Local variance separates the smooth shaft from the structured subject
+exactly: the nearest structured block sits at **r = 0.319** and the nearest pixel
+the key modelled at **r = 0.331**, both outside the window. The consequence is
+not an estimate — **zero pixels of L ≥ 90 changed**, and the brightest pixel
+anywhere in the window's reach is L = 80, the shaft's own core.
+
+**R7.4's third move, the global black-point crush, is deliberately not in this
+pass.** Tried at [14, 34] — gentler than either parameter set R7.4 shipped — it
+visibly collapsed the gown's shadow side, taking the right shoulder and the
+lower tie to black. The patient is lit far lower-key than the surgeon or the
+steak, and its subject *lives* in the tones a crush lifts. Recorded here because
+the next regrade in this register will be tempted by it.
+
+The harness is `review/frames-a/harness/regrade-patient.mjs`, re-runnable and
+reversible: the as-generated render is preserved beside it at
+`review/frames-a/dark-field/patient--as-generated.png`.
+
+**One visual note for the presenter's eye, not a gate failure.** The regrade
+removes the shaft; it does not remove the warm ambient the shaft left in the
+mid-left of the frame, because that ambient lies between the shaft's tail and
+the subject, where no window can reach it without touching the figure. Measured
+as the 90th percentile of smooth-block brightness it sits at 9.2, against 6.8
+for `coffee_cup`, the highest of the renders already shipping — the same order,
+slightly above. It reads as key spill rather than as a beam. Regeneration from
+the Batch A package §5 item 7 remains the alternative if the presenter's eye
+disagrees with the gate's verdict.
 
 Two of the first shoot's renders need a note rather than a regeneration.
 
@@ -283,17 +322,24 @@ lineup keeps its own:
 
 | status | subjects |
 |---|---|
-| **shipping** (21) | `shoe` · `wine` · `shells` · `gold` · `paper` · `ledger` · `bitcoin` · `cattle` · `salt` · `cowrie_shells` · `iron` · `surgeon` · `meal` · `property` · `shares` · **`single_cowrie`** · **`gold_certificate`** · **`vault`** · **`ledger_glow`** · **`palladium`** · **`coffee_cup`** |
-| **regenerate** (2) | `fiat` — see §3.0 · `patient` — held in `incoming/` on the corner clause; an R7.4-class regrade or a regeneration from §5.7 |
+| **shipping** (22) | `shoe` · `wine` · `shells` · `gold` · `paper` · `ledger` · `bitcoin` · `cattle` · `salt` · `cowrie_shells` · `iron` · `surgeon` · `meal` · `property` · `shares` · **`single_cowrie`** · **`gold_certificate`** · **`vault`** · **`ledger_glow`** · **`palladium`** · **`coffee_cup`** · **`patient`** |
+| **regenerate** (1) | `fiat` — see §3.0 |
 | **optional** (2) | `metals`, which would light the second featured moment at 2.4 (R7.3 §7 — implemented, dormant, and it does not stub to a glyph because the stop below it already shows that glyph); `gold-native`, only if the two-survivors arrival is ruled in and wants its own study |
 
-**Two images stand between the register and completeness**: `fiat` (§3.0) and
-`patient` (held at the Batch A gate). `surgeon` and `meal` were graded rather than regenerated at
-R7.4 — they failed on their *ground*, not their light, so the lamp and the lit
-stone surface were cropped out and the surround taken to true black; the
-parameters are in `review/rebuild-r7-4/harness/regrade-r7-4.mjs` and both now
-pass all five clauses. `property` and `shares` were restored from git history
-and passed unmodified.
+**One image stands between the register and completeness: `fiat` (§3.0).** It is
+the only position in the five-candidate lineup still showing its mark, and the
+§5 clause that `gold_certificate` be *"visually distinct from the fiat note"*
+stays unconfirmable until it lands. Both flags are unchanged by the Batch A
+selections session and were deliberately not closed there.
+
+Three images in this register were **graded rather than regenerated**, and all
+three failed on their *ground* rather than their light. `surgeon` and `meal`
+were cropped free of the lamp and the lit stone surface and their surround taken
+to true black at R7.4 (`review/rebuild-r7-4/harness/regrade-r7-4.mjs`).
+`patient` was taken by a corner window at the Batch A selections session
+(`review/frames-a/harness/regrade-patient.mjs`, §2.1) — a crop was not available
+to it. All three now pass all five clauses. `property` and `shares` were
+restored from git history and passed unmodified.
 
 If a `metals` study is ever generated, the prompt follows the master template
 with the subject line *"A stack of three rough cast metal ingots of different
