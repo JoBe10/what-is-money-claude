@@ -405,6 +405,40 @@ body {
 }
 .jump-indicator[data-open="true"] { display: block; }
 
+/* ----- The scratch route's index (`?proto=`) -----
+   A working surface, not a frame of the film: plain type on the deck's black,
+   nothing that could be mistaken for a composition. */
+.scratch-index {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+  padding: 0 8vw;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  user-select: text;
+}
+.scratch-index__title {
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+.scratch-index__note { color: var(--text-secondary); max-width: 62ch; }
+.scratch-index__list { list-style: none; margin: 0; padding: 0; }
+.scratch-index__list li { margin: 4px 0; }
+.scratch-index a { color: var(--accent); text-decoration: none; }
+.scratch-index a:hover { color: var(--accent-light); }
+.scratch-index__back {
+  margin-top: 10px;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
 /* ----- Reduced motion ----- */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
