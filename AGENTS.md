@@ -155,60 +155,90 @@ improvement. Report every out-of-scope file changed and why.
 
 ---
 
-# 4. Required workflow
+# 4. Process law
 
-## 4.1 Audit before editing
+Presenter-ordered, 25 August 2026. These are not style preferences: each one
+exists because the failure it prevents has already cost this project time.
 
-Before implementation:
-1. Read the README.
-2. Read `package.json`.
-3. Read `src/slides/manifest.js`.
-4. Read all current Section 4 modules and notes.
-5. Read relevant Section 3 and close slides to understand entry and exit.
-6. Read shared components.
-7. Read the slide engine and note overlay.
-8. Read `src/styles/globals.css` and `src/styles/slides.css`.
-9. Read `src/assets.js`.
-10. Read `docs/synthesis-architecture.md`, `docs/what-is-money-master.md` and the active session brief or batch package.
+## 4.1 Commit granularity
+
+**Every self-contained change is committed immediately** — a scene, a component,
+a fix, a doc edit — with a message that describes it. **Unrelated changes are
+never batched into one commit.** The working tree is clean at every stop.
+
+Purpose: any change is individually revertible. A commit that carries four
+unrelated edits cannot be undone without undoing three things that were fine.
+
+## 4.2 Revert points
+
+**Tag every stage and batch completion** — `stage-0`, `batch-a-frames`,
+`batch-a`, and so on. A tag is a place the presenter can return to without
+reading a log.
+
+## 4.3 The aesthetic law
+
+**No aesthetic decision ships on agent self-selection.** Glyphs, marks, frames,
+compositions — each goes to a **contact sheet**, and the presenter selects.
+Candidates are rendered at their shipping size, in the context they ship in, and
+every candidate stays on file so a selection can be changed by changing one
+letter rather than by redrawing.
+
+## 4.4 The no-invention rule
+
+During batches, the CLI **implements approved style frames and approved
+scripts.** A visual gap — a missing render, an unspecified state, a composition
+the frames do not cover — is **flagged in the report and left visibly pending.**
+It is never improvised. A pending element says so at its call site, and the
+report says so in words.
+
+This is the rule that makes the style-frames stage worth running: an improvised
+frame is indistinguishable from an approved one three weeks later.
+
+## 4.5 The style-frames stage
+
+**Every new or changed scene has its key states rendered and presenter-approved
+as stills before any motion is built.** Stills first; the approval loop runs on
+the sheet; nothing animates until the frames are approved. Prototype gates, where
+the architecture names one, run after the frames and before the batch.
+
+## 4.6 Modes
+
+FAST and GATE are retained (§14). **Batches run FAST. One GATE runs before the
+recording merge.** A report that does not name its mode is claiming the strong
+one.
+
+## 4.7 The working order
+
+For each batch: **audit → style frames → prototype gate (where one applies) →
+implement → review.**
+
+**Audit before editing.** Read, in this order:
+
+1. `docs/synthesis-architecture.md` for the scenes in scope.
+2. `docs/what-is-money-master.md` — the constitution.
+3. The batch package: beat maps, scripts, style-frame specs.
+4. `src/slides/manifest.js` and the scenes on either side of the batch's seams.
+5. The scene modules the batch replaces, and their notes.
+6. The shared components the batch will use.
+7. The slide engine and the notes overlay.
+8. `src/styles/globals.css` and `src/styles/slides.css`.
+9. `src/dark-field.js` and the dark-field manifest for the assets in scope.
 
 Do not assume a component behaves as its name suggests.
 
-## 4.2 Plan before implementation
+**Implement in scene order, not in file order.** Shared visual language and
+narrative continuity matter more than convenient batching; a run of unrelated
+scenes implemented independently produces a run of unrelated scenes.
 
-For a rebuild phase of this size, create or update `PLANS.md` after the audit.
+**Review as you go.** After each scene, and again at the end of the batch:
 
-The plan must include:
-- current-state findings;
-- exact file mapping;
-- components to reuse;
-- new components to create;
-- slide ID and numbering strategy;
-- animation-continuation strategy;
-- three implementation milestones;
-- validation after each milestone;
-- risks and rollback points.
-
-Do not begin the complete rebuild from only a high-level prompt.
-
-## 4.3 Implement in coherent milestones
-
-Preferred milestones:
-1. Slides 4.01–4.06
-2. Slides 4.07–4.12
-3. Slides 4.13–4.17
-4. Whole-deck integration and review
-
-Do not implement a run of unrelated slides independently. Shared visual language and narrative continuity matter.
-
-## 4.4 Review after each milestone
-
-After each milestone:
 - run the production build;
 - inspect the diff;
 - run the deck in the browser when available;
-- review the slides in sequence;
-- test forward and backward build steps;
-- inspect speaker notes;
+- walk the scenes in sequence, forward and backward through every build;
+- direct-enter each build;
+- check reduced motion;
+- read the notes against the frames;
 - check the console;
 - report unresolved visual judgments.
 
@@ -577,16 +607,20 @@ A batch is done only when:
 
 # 16. Completion report format
 
-At the end of each milestone, report:
+At the end of each stage or batch, report:
+
+## Mode
+FAST or GATE. A report that does not name its mode is claiming the strong one.
 
 ## Implemented
-- slides and components completed;
+- scenes and components completed;
 - narrative decisions preserved;
 - visual system changes.
 
 ## Files changed
 - file-by-file summary;
-- out-of-scope changes and justification.
+- out-of-scope changes and justification;
+- the commit list, and the tag cut.
 
 ## Validation
 - commands run;
@@ -595,10 +629,13 @@ At the end of each milestone, report:
 - notes status;
 - reduced-motion status.
 
+## Flagged, not improvised
+Every visual gap left pending under §4.4, and what each one is waiting on.
+
 ## Remaining judgment calls
-- visual choices requiring user review;
+- aesthetic selections awaiting the presenter (§4.3);
 - factual language requiring approval;
-- known limitations.
+- known limitations, and anything a scoped FAST run deferred to the GATE.
 
 ## Recommended next step
 One clear next action only.
