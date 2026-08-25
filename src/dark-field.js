@@ -64,10 +64,11 @@ export const darkField = Object.fromEntries(
 // composition" clause holding.
 //
 // Assumes the render and its box share an aspect ratio to within a few percent.
-// The shipping set is two families and each has its own box: the 4:3 renders of
-// the first shoot (4.04–4.06, and `shells` in the carrier lineup) in 4:3 boxes,
-// and the 4:5 portraits of the R7.3 contender shoot in the 4:5 box the rail's
-// contender row now uses. A box with a materially different aspect would need
+// The shipping set is three families and each has its own box: the 4:3 renders
+// of the first shoot (4.04–4.06, and `shells` in the carrier lineup) in 4:3
+// boxes, the 4:5 portraits of the R7.3 contender shoot and the Batch A drop in
+// the 4:5 box the rail's contender row now uses, and `ledger_glow`, the Batch A
+// drop's one 3:2 landscape, which needs a 3:2 box. A box with a materially different aspect would need
 // the scale computed against `object-fit: contain`'s actual fit rather than
 // against the frame — which is exactly the defect that showed up when the four
 // portrait renders first landed in the old landscape box: the rule was applied
@@ -75,18 +76,24 @@ export const darkField = Object.fromEntries(
 const FRAMING = {
   bitcoin: [1.226, 0.3, 1.5],
   cattle: [1.101, -2.1, 3.1],
+  coffee_cup: [1.227, -3.1, 13.2],
   cowrie_shells: [1.13, 1.7, -2.5],
   gold: [2.206, 0, -3.1],
+  gold_certificate: [1.124, -2.9, -0.9],
   iron: [1.095, -4.5, -7.6],
   ledger: [1.222, -1.6, 1],
+  ledger_glow: [1.122, 3.2, -5.7],
   meal: [0.935, -0.8, 2.4],
+  palladium: [1.287, -1.8, 1.5],
   paper: [1.313, 0.8, 2],
   property: [1.226, -1.6, -3.1],
   salt: [1.433, 1.8, 3.1],
   shares: [1.104, -0.1, 0.8],
   shells: [1.422, 0.3, -2.5],
   shoe: [1.222, 1, -4.7],
+  single_cowrie: [1.93, 4.4, 3.6],
   surgeon: [1.005, 6.8, 5.8],
+  vault: [1.354, -2.4, 5.1],
   wine: [1.029, 0.2, -1.3]
 };
 
