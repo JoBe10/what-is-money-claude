@@ -1,3 +1,6 @@
+> **Superseded by `docs/what-is-money-master.md` (Stage 0, 25 August 2026) — archived, not authoritative.**
+> The film's structure is `docs/synthesis-architecture.md` (frozen); the constitution is `docs/what-is-money-master.md`; process law is `AGENTS.md`.
+
 # Section 4 Rebuild Plan
 
 **Revision:** 2.0 — recovery-first, implementation-ready after Phase 0  

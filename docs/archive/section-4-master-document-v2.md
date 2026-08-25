@@ -1,3 +1,6 @@
+> **Superseded by `docs/what-is-money-master.md` (Stage 0, 25 August 2026) — archived, not authoritative.**
+> The film's structure is `docs/synthesis-architecture.md` (frozen); the constitution is `docs/what-is-money-master.md`; process law is `AGENTS.md`.
+
 # Section 4 Master Document — v2
 ## *The Ideal Store of Value* · What Is Money? — And How Does Bitcoin Fit In?
 

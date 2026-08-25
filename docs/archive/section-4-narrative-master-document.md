@@ -1,4 +1,4 @@
-> **Superseded by `docs/section-4-master-document-v2.md` (30 July 2026) — archived, not authoritative.**
+> **Superseded by `docs/section-4-master-document-v2.md` (30 July 2026), which was itself superseded by `docs/what-is-money-master.md` (Stage 0, 25 August 2026) — archived, not authoritative.**
 
 # Section 4 Narrative Master Document
 ## *The Ideal Store of Value — A First-Principles Reconstruction*
