@@ -53,8 +53,8 @@ The current `package.json` does not define lint or automated test scripts. Do no
 ```text
 index.html
 src/
-  main.js
-  assets.js
+  main.js                  deck, or the scratch route when ?proto= is present
+  dark-field.js            the subject-keyed image register
   engine/
     KeyboardController.js
     NotesOverlay.js
@@ -62,8 +62,17 @@ src/
     SlideEngine.js
     TouchController.js
   components/
-  slides/
-    manifest.js
+  proto/
+    registry.js            the prototypes ?proto= can run
+  scenes/                  the film — one directory per act, see its README
+    prologue/
+    act-1-the-unfinished-exchange/
+    act-2-the-architecture-of-money/
+    act-3-the-jobs-of-money/
+    act-4-the-store-of-value-test/
+    act-5-the-case/
+  slides/                  the legacy deck — deleted per batch as scenes replace it
+    manifest.js            the running order, and the only one
     section-1-question/
     section-2-origin/
     section-3-function/
@@ -72,8 +81,12 @@ src/
   styles/
     globals.css
     slides.css
-assets/images/
+assets/dark-field/         the graded shipping set
+assets/dark-field/incoming/  the drop zone the grade gate reads
 ```
+
+`src/assets.js` was deleted at R7.1 and is not coming back; `assets/images/`
+holds only the favicon.
 
 ## Slide module contract
 
@@ -314,45 +327,56 @@ Avoid:
 
 ---
 
-# 7. Section 4 visual system
+# 7. The Claim Mark
 
-## The recurring orange claim
+## The film's only recurring protagonist
 
-Section 4 requires a persistent orange visual motif representing the transferable monetary claim.
+The Claim Mark is the transferable monetary claim, and it runs the whole film —
+born in Scene 3, carried, saved, transferred, layered, tested, and repriced. Its
+**form is decided at Prototype Gate 1** from a contact sheet the presenter
+selects from (§4.3); until that gate rules, prototypes render the gate's
+candidate and nothing ships.
 
 It must:
-- remain recognisable across slides;
+- remain recognizable across every act;
 - change state only for conceptual reasons;
-- be reusable through a dedicated component or carefully shared implementation;
+- be one component with one API — not seventeen unrelated orange circles;
 - support reduced motion;
 - reset deterministically;
 - avoid becoming a literal dollar symbol too early.
 
-Expected narrative states:
-1. created by an unfinished exchange;
-2. detached and transferable;
-3. carried by different monetary media;
-4. preserved when saved;
-5. diluted or maintained in a simplified model;
-6. sent toward 2126;
-7. threatened by failure modes;
-8. compared across carriers;
-9. linked to hidden rulebooks;
-10. delivered to the future;
-11. multiplied into a civilization-wide coordination network.
+Its states across the film, in order:
 
-Prefer a reusable component/API over seventeen unrelated orange circles.
+1. born from an unfinished exchange (Scene 3);
+2. detached from the person who created it, and transferable (Scene 3);
+3. spent — travels, redeems, and is gone; or saved — held, the interval open (Scene 4);
+4. the through-line, as the carriers change beneath it (Scenes 5–9);
+5. detached from custody as a paper claim on a vault (Scene 7);
+6. dematerialized into a ledger entry (Scene 8);
+7. doing one job at a time — held, spent, priced (Scenes 11–14);
+8. layered: a claim on the layer below (Scene 15);
+9. generalized — the claim on value (Scene 16);
+10. sent toward 2126, and threatened by each failure mode (Scenes 18–22);
+11. compared across carriers (Scene 23);
+12. the marginal claim, choosing where it goes, and repriced against a fixed supply (Scenes 27–28).
+
+Prefer one component with one API over a fresh orange circle per scene. The
+existing implementation to audit first is `src/components/section-4/ClaimObject.js`,
+which renders the shared `LuminousDisc`.
 
 ## Continuations
-Use `continuesFrom` or an equivalent shared-DOM technique when it materially improves continuity. Audit the existing `OrangePillCapsule` continuation pattern before implementation.
 
-Likely continuation candidates:
-- unfinished exchange → definition of money;
-- definition → claim and carrier;
-- saving → integrity model;
-- 100-Year Test → failure modes;
-- comparison → hidden rulebook;
-- return to 2126 → civilization network.
+Use `continuesFrom` or an equivalent shared-DOM technique **when it materially
+improves continuity** — the film's paradigm is that a scene morphs into the next
+when the idea persists, and hard-cuts when the question changes.
+
+Continuities the architecture already asks for:
+- the hours field condensing into the shifting forms (P1);
+- the failing return path contracting into the Claim Mark (Scene 2 → Scene 3);
+- the held claim taking either road (Scene 3 → Scene 4);
+- the saved claim becoming the through-line as carriers transform around it (Scene 4 → Scene 5);
+- the tower's unanswered question opening the return to the exchange (Scene 15 → Scene 16);
+- the hours field's rhyme in the fixed-supply field (P1 → Scene 28).
 
 Do not use continuation merely because it is technically impressive.
 
@@ -407,24 +431,27 @@ If a component is Section-4-specific, place it where repository conventions make
 
 ---
 
-# 10. Slide IDs, numbers, and manifest
+# 10. Scene IDs, numbers, and the manifest
 
-The current deck stores:
-- semantic slide IDs;
-- absolute slide numbers;
-- ordered imports in `src/slides/manifest.js`.
+`src/slides/manifest.js` is the running order and the only source of truth for
+it; `src/main.js` assigns each module's deck position from the manifest's order,
+so a module's `number:` field is documentation, not authority.
 
-When Section 4 expands:
-1. choose stable semantic IDs;
-2. update every Section 4 `number`;
-3. update the Section 5 close slide number;
-4. update the manifest ordering;
-5. check deep links;
-6. check overview labels and progress;
-7. search the repository for hard-coded absolute numbers or old IDs;
-8. preserve IDs only where the slide still represents the same conceptual content.
+**A scene ID is a deep link and is permanent.** Choose it for what the scene *is*
+— never for where it currently sits in the running order. An ID survives
+renumbering, resequencing and rewrites; it changes only when the scene stops
+being the same scene.
 
-Do not leave two slides with the same ID or number.
+When a batch splices its scenes in:
+
+1. import the scenes and place them in the manifest at their architecture order;
+2. delete the legacy slides they replace, in the same batch;
+3. check deep links for every ID that moved or left;
+4. check the overview grid's labels and the progress readout;
+5. search the repository for hard-coded absolute numbers or retired IDs;
+6. walk the seams on both sides, and report them rather than smoothing them.
+
+Do not leave two modules with the same ID.
 
 ---
 
