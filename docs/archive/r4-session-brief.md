@@ -1,3 +1,6 @@
+> **Executed and superseded — archived, not authoritative.** Its standing rules live in `docs/what-is-money-master.md` (Stage 0, 25 August 2026).
+> Kept as history. Nothing here governs.
+
 # Rebuild Session Brief — R4 (Data & Sources)
 ## *What Is Money? — And How Does Bitcoin Fit In?*
 

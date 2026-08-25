@@ -1,3 +1,6 @@
+> **Historical record — archived, not authoritative.** The session it reports is complete; its rulings are absorbed into `docs/what-is-money-master.md` (Stage 0, 25 August 2026).
+> Kept as evidence: measurements, screenshots and decision logs referenced elsewhere still resolve here. Nothing here governs.
+
 # R0 + R1 Phase Report — Scaffold and Section 1: The Question
 
 **Branch:** `rebuild-r0-r1-section-1` (not merged — awaiting the presenter's viewer pass)

@@ -1,3 +1,6 @@
+> **Executed and superseded — archived, not authoritative.** Its standing rules live in `docs/what-is-money-master.md` (Stage 0, 25 August 2026).
+> Kept as history. Nothing here governs.
+
 # Bucket 1 — Approved Post-Review Implementation Brief
 ## *What Is Money? — And How Does Bitcoin Fit In?*
 

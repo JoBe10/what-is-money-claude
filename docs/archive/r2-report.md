@@ -1,3 +1,6 @@
+> **Historical record — archived, not authoritative.** The session it reports is complete; its rulings are absorbed into `docs/what-is-money-master.md` (Stage 0, 25 August 2026).
+> Kept as evidence: measurements, screenshots and decision logs referenced elsewhere still resolve here. Nothing here governs.
+
 # R2 Phase Report — Section 2: Where Money Comes From
 
 **Branch:** `rebuild-r2-section-2` (not merged — awaiting the presenter's viewer pass)

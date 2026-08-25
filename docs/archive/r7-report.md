@@ -1,3 +1,6 @@
+> **Historical record — archived, not authoritative.** The session it reports is complete; its rulings are absorbed into `docs/what-is-money-master.md` (Stage 0, 25 August 2026).
+> Kept as evidence: measurements, screenshots and decision logs referenced elsewhere still resolve here. Nothing here governs.
+
 # R7 Phase Report — Section 4: The Execution Rebuild
 
 **Branch:** `rebuild-r7-section-4` (not merged) · **Base:** `main` at `e6bd27f`
