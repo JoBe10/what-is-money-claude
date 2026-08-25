@@ -20,7 +20,7 @@
 import { CANDIDATES, STROKE } from '../../../assets/icons/candidates/candidates.js';
 
 // The R2.2 studio selections, one line of rationale each (full record in
-// docs/r2-report.md §R2.2):
+// docs/archive/r2-report.md §R2.2):
 const SELECTIONS = {
   fish:    'b',  // the ichthys — one two-arc stroke, ancient carved provenance, cleanest 22px silhouette
   grain:   'a',  // the kernel arcs — reads as a wheat ear at every size; dots carry the terminal language
@@ -38,7 +38,7 @@ const SELECTIONS = {
 
   // The R3 studio selections (Section 3: functions, stages, the Argentina
   // triad, palladium, and the ladder/layer marks — full record in
-  // docs/r3-report.md):
+  // docs/archive/r3-report.md):
   'through-time':   'a',  // the hourglass — time’s own instrument with the set’s grain dots falling through; the vessel read as a wine glass, the arc as a cloche
   'between-people': 'b',  // the two figures — the only construction that says "people" at every size; the arcs read as an eye at rail scale
   measure:          'b',  // the graduated rule — the script’s own metaphor, the measuring stick itself; the dividers closed into a triangle
@@ -71,14 +71,14 @@ const SELECTIONS = {
 
   // The R7 studio selections (Section 4: the comparison set’s two productive
   // assets, and the ledger the claim/carrier lineage needs — full record in
-  // docs/r7-report.md). Gold, fiat and bitcoin are the anchors and are reused
+  // docs/archive/r7-report.md). Gold, fiat and bitcoin are the anchors and are reused
   // above unchanged, so the rail’s gold and the table’s gold are one mark.
   'real-estate':    'a',  // the gable — the building as its own silhouette; the elevation mushes at riser size and the plot reads as a picture frame
   shares:           'a',  // the parted round — a fraction lifted out of the whole; the divided round is the Mercedes mark and the stacked slips are a copy icon
   ledger:           'a',  // the ruled book — the account book open on its spine; the tally column reads as a bar chart and the double entry needs a legend
 
   // The R7.1 studio selections (Section 4's derivation scene, where these
-  // replace photographs — full record in docs/r7-1-report.md). Standing in for
+  // replace photographs — full record in docs/archive/r7-1-report.md). Standing in for
   // a photograph is a heavier burden than the Section 2 goods carry: the mark
   // has to name the thing with no caption helping it.
   operation:        'a',  // the steadying pulse — the value delivered, not the procedure: a rhythm that starts irregular and settles. Second studio round; the first three all drew the operation and the best still read as a comb. The mending arc reads as a plain arch (its closed break is invisible) and the settled interval is a bar chart, which the grammar already rejected once at the ledger's tally column

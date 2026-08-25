@@ -1,6 +1,6 @@
 # The Dark-Field Manifest
 
-**Standard:** `docs/sections-1-3-rebuild-brief.md` §9.4.9 (the two registers)
+**Standard:** `docs/what-is-money-master.md` §6 (the two registers)
 **Gate:** `review/rebuild-r7-2/harness/grade-r7-2.cjs` · results in `review/rebuild-r7-2/grade-r7-2.json`
 **Drop zone:** `assets/dark-field/incoming/` · **Shipping set:** `assets/dark-field/`
 **Created:** R7.2, 1 August 2026

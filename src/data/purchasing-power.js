@@ -36,7 +36,7 @@
 //     JPY rises in 12 of the 54 year-steps and CHF in 7 (largest single-year
 //     rise: JPY +0.46 index points in 2009, CHF +0.42 in 2015 — under 2px
 //     on this chart, but real). The trend over the span is one direction for
-//     all four; individual years are not. See docs/r4-report.md.
+//     all four; individual years are not. See docs/archive/r4-report.md.
 
 export const PP_YEAR_MIN = 1971;
 export const PP_YEAR_MAX = 2025;
