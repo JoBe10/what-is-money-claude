@@ -15,7 +15,7 @@
 
 Three standing rules that shipped at R7.4 but had never been written into the constitution are now written down: **the display rule** (rule 11), **settle-state budgets** (rule 12) and **the self-reference ban** (rule 13).
 
-**The archive.** Thirty-eight documents moved to `docs/archive/` behind superseded-by headers, in three commits by kind. `docs/` now holds only the live set: the frozen architecture, the master, `SOURCES.md`, the icon grammar, the dark-field manifest, and the current stage's brief, batch package and report. Nothing was deleted; the two documents already in the archive were restamped so the chain of supersession resolves to the current master.
+**The archive.** Forty-seven documents moved to `docs/archive/` behind superseded-by headers, in three commits by kind. `docs/` now holds only the live set: the frozen architecture, the master, `SOURCES.md`, the icon grammar, the dark-field manifest, and the current stage's brief, batch package and report. Nothing was deleted; the two documents already in the archive were restamped so the chain of supersession resolves to the current master.
 
 **Process law.** `AGENTS.md` §4 is the presenter's six orders, each with the failure it prevents: commit granularity, revert points, the aesthetic law, the no-invention rule, the style-frames stage, FAST/GATE. The rest of the file was brought with it — the authority hierarchy, the mission (the film rebuild, the branch, per-batch deletion), scope and safety, the Claim Mark as the film's protagonist, scene IDs and splicing, per-batch definition of done, and a report format that must name its mode.
 
@@ -49,7 +49,7 @@ Fifteen commits, `d47aad2`…`02576a3` — 72 files, +1412 / −176.
 
 **New:** `docs/what-is-money-master.md` · `docs/stage-0-report.md` · `src/scenes/README.md` + six act directories · `src/proto/registry.js` · `review/stage-0/`.
 **Modified:** `docs/synthesis-architecture.md` (the rulings) · `AGENTS.md` · `README.md` · `src/main.js` · `src/styles/globals.css` (the scratch index's styles) · `docs/icon-grammar.md`, `docs/dark-field-manifest.md`, `docs/SOURCES.md`, `src/components/section-2/glyphs.js`, `src/data/purchasing-power.js` (reference repointing only).
-**Moved:** 38 documents into `docs/archive/`.
+**Moved:** 47 documents into `docs/archive/` (which now holds 49, with the two already there).
 
 **Out of scope, and why.** Three things were touched that the brief did not name:
 
