@@ -5,14 +5,20 @@
 // `src/slides/manifest.js` and only a batch splices a scene into it. When the
 // batch lands, the entry leaves this list.
 //
-// Empty at Stage 0 — no scene is implemented yet. Prototype Gate 1 (the Claim
-// Mark contact sheet) and Gate 2 (Scenes 2–4 in this route) are the first
-// entries this file will carry; see `docs/synthesis-architecture.md` and
-// `docs/batch-a-package.md`.
-//
 // Each entry is the scene module itself. An optional `protoKey` on a module
 // gives it a shorter address than its id (`?proto=claim-mark`); without one,
-// its id is its address.
-export const prototypes = [];
+// its id is its address. Modules sharing one protoKey run together, in this
+// order — `?proto=gate2` is Scenes 2–4 as one continuous world.
+//
+// Prototype Gate 2 (docs/gate-2-brief.md): Scenes 2–4 in the scratch route,
+// built against the approved stills. These modules live under `src/proto/`
+// rather than `src/scenes/` because the gate forbids scene files until Batch A
+// implements against the presenter's rulings; the birth treatment is selected
+// with `?birth=1|2|3` (or keys 1/2/3 on Scene 3), and the selection is his.
+import theDirectExchange from './gate-2/s2-the-direct-exchange.js';
+import theBreakthrough from './gate-2/s3-the-breakthrough.js';
+import spendOrSave from './gate-2/s4-spend-or-save.js';
+
+export const prototypes = [theDirectExchange, theBreakthrough, spendOrSave];
 
 export default prototypes;
