@@ -12,20 +12,20 @@
 **P1 — Eighty Thousand Hours / What Is Money?** (10 beats): black hold → field fills + counter → hours line → condensation begins → SHELL → GOLD → PAPER → LEDGER → BITCOIN → forms line → stays-the-same line → TITLE. *(Condensation-into-first-form is one gesture; each subsequent form is its own advance.)*
 **P2 — The Stakes** (2): mercy line → spoken promise + handoff (screen holds).
 **S2 — The Direct Exchange** (5): surgeon + patient + service path + capabilities (one accumulating build, under the sentences that name it) → the service delivered + the patient receives → return path attempts, wanted goods appear as possibilities → the return path fails (double coincidence) → binding line. *(Presenter-ruled 26 August 2026: the capabilities build moves into beat 1; beat 2 is the delivery and receipt; the script is untouched — Gate 2 states brief §1 R2.)*
-**S3 — The Breakthrough** (9): path contracts into the Claim Mark → "because someone else would" → patient exits → SOMEONE ELSE → SOMEWHERE ELSE → LATER → completion demonstration → reset to held claim → separation + unfinished lines. *(Presenter-ruled 26 August 2026: the interval's three names are each their own advance; the script's interval paragraph divides at the three names with zero word changes — Gate 2 states brief §1 R1.)*
+**S3 — The Breakthrough** (9): path contracts into the Claim Mark → "because someone else would" → patient exits → SOMEONE ELSE → SOMEWHERE ELSE → LATER → completion demonstration → reset to held claim → separation + unfinished lines. *(Presenter-ruled 26 August 2026: the interval’s three names are each their own advance; the script’s interval paragraph divides at the three names with zero word changes — Gate 2 states brief §1 R1.)*
 **S4 — Spend or Save** (5): the held claim, two paths named → SPEND: claim travels, goods arrive, claim gone → reset → SAVE: claim held, interval extends into black → closing pair.
 
 ---
 
-# 2. Scripts [install verbatim; presenter's own pass comes later]
+# 2. Scripts [install verbatim; presenter’s own pass comes later]
 
 ## P1 — Eighty Thousand Hours / What Is Money?
 
 Let me start with a number.
 
-[→] Every point of light appearing on your screen is one hour of work. One hour of somebody's morning, somebody's shift, somebody's life. Watch them add up. A year of full-time work is about two thousand hours. A career — call it forty years, a full-time working life — is eighty thousand. *[the counter completes with the field]* There they are. All at once.
+[→] Every point of light appearing on your screen is one hour of work. One hour of somebody’s morning, somebody’s shift, somebody’s life. Watch them add up. A year of full-time work is about two thousand hours. A career — call it forty years, a full-time working life — is eighty thousand. *[the counter completes with the field]* There they are. All at once.
 
-[→] Eighty thousand hours. That is how much of a human life goes into working — and every one of those hours is irreplaceable. You don't get any of them back. They only move in one direction. And all of them, for almost everyone, get traded for one thing.
+[→] Eighty thousand hours. That is how much of a human life goes into working — and every one of those hours is irreplaceable. You don’t get any of them back. They only move in one direction. And all of them, for almost everyone, get traded for one thing.
 
 [→] Watch what happens to them. Everything you earn — all of it — condenses into… this.
 
@@ -47,35 +47,35 @@ Let me start with a number.
 
 ## P2 — The Stakes
 
-[→] And here is why that question deserves the next hour of your attention. If you don't understand the thing your life's work is stored in, you are at the mercy of those who do. That asymmetry is as old as money itself: in every era, the people who understood the monetary system have held a quiet power over the people who merely used it. Most people live their whole lives on the wrong side of that line without ever knowing the line exists. The point of everything that follows is to move you to the other side of it.
+[→] And here is why that question deserves the next hour of your attention. If you don’t understand the thing your life’s work is stored in, you are at the mercy of those who do. That asymmetry is as old as money itself: in every era, the people who understood the monetary system have held a quiet power over the people who merely used it. Most people live their whole lives on the wrong side of that line without ever knowing the line exists. The point of everything that follows is to move you to the other side of it.
 
 [→] So how do you truly understand anything — from first principles? Not by memorizing a definition. By watching the thing get born. By watching it change. And by learning how to judge anything that claims to be it. So forget the objects. Forget everything you just saw. We start with something older and simpler than all of them. We start with an exchange.
 
 ## S2 — The Direct Exchange
 
-[→] A surgeon, and a patient. One hour of specialized surgery — and let's be precise about what that hour contains: specialized skill. Scarce knowledge. Years of training. Professional judgment. Dexterity. Responsibility. What the market pays for is never the passage of an hour — it is the specialized service delivered inside it. Keep that distinction; it matters later.
+[→] A surgeon, and a patient. One hour of specialized surgery — and let’s be precise about what that hour contains: specialized skill. Scarce knowledge. Years of training. Professional judgment. Dexterity. Responsibility. What the market pays for is never the passage of an hour — it is the specialized service delivered inside it. Keep that distinction; it matters later.
 
 [→] The service is delivered. The patient received something close to priceless. And now — in a world of *direct* exchange — the second half of this trade has to come back from this same patient. The surgeon must receive, from him, something he actually wants.
 
 [→] What does the surgeon ultimately want? Shoes for his daughter. A good dinner. A bottle of wine for the weekend. Real things, from real people — none of whom are on this operating table.
 
-[→] And here the trade breaks. The patient doesn't have those things — not the right ones, not in the right amounts, not at the right time. Economists have a name for what just failed: the double coincidence of wants. For direct exchange to work, each side must have exactly what the other wants, at the same moment. Wherever exchange happens without money, this wall appears.
+[→] And here the trade breaks. The patient doesn’t have those things — not the right ones, not in the right amounts, not at the right time. Economists have a name for what just failed: the double coincidence of wants. For direct exchange to work, each side must have exactly what the other wants, at the same moment. Wherever exchange happens without money, this wall appears.
 
 [→] That is direct exchange: it binds both halves of the trade to the same two people. And so the question becomes — how could the two halves ever be separated?
 
 ## S3 — The Breakthrough
 
-[→] Here is the breakthrough — quietly, one of the deepest ideas our species ever had. The surgeon accepts something he does not actually want. Watch the unresolved half of the exchange — the half the patient couldn't deliver — contract… into this. A claim.
+[→] Here is the breakthrough — quietly, one of the deepest ideas our species ever had. The surgeon accepts something he does not actually want. Watch the unresolved half of the exchange — the half the patient couldn’t deliver — contract… into this. A claim.
 
-[→] Why would anyone accept a thing they don't want for itself? Because someone else will. That is the entire trick — and notice that nobody invented it, and nobody decreed it. It was discovered, independently, everywhere trade existed: nobody decided, and everyone converged.
+[→] Why would anyone accept a thing they don’t want for itself? Because someone else will. That is the entire trick — and notice that nobody invented it, and nobody decreed it. It was discovered, independently, everywhere trade existed: nobody decided, and everyone converged.
 
 [→] And look what it just did. The patient can leave. This claim is not a claim on *him* — he owes nothing further. It detached from him the moment it was accepted.
 
-[→] The exchange, though — the exchange is still open. Someone else. [→] Somewhere else. [→] Later. The other half of the surgeon's trade hasn't been chosen yet.
+[→] The exchange, though — the exchange is still open. Someone else. [→] Somewhere else. [→] Later. The other half of the surgeon’s trade hasn’t been chosen yet.
 
-[→] When he's ready, the claim travels — to a shoemaker he's never met, in a place the patient has never been — and the shoes come back. The circle closes. The patient never provided the surgeon's dinner, and never needed to.
+[→] When he’s ready, the claim travels — to a shoemaker he’s never met, in a place the patient has never been — and the shoes come back. The circle closes. The patient never provided the surgeon’s dinner, and never needed to.
 
-[→] But he doesn't have to close it. He can simply… hold it.
+[→] But he doesn’t have to close it. He can simply… hold it.
 
 [→] Money separates the two halves of an exchange. You can give value to one person now, and receive value from somebody else, somewhere else, later. His side is complete. And the exchange can remain unfinished.
 
