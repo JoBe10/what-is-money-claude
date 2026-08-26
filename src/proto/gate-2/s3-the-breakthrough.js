@@ -6,7 +6,13 @@
 // it plays in one of three runtime-selectable treatments (docs/gate-2-brief.md
 // §4): `?birth=1|2|3` (or collapse|condense|pool), or keys 1/2/3 while this
 // scene is on stage — pressing one on the birth beat replays the gesture in
-// that treatment. The presenter selects; the default is only a default.
+// that treatment.
+//
+// RULED at Gate 2 by the presenter, 26 August 2026: **the birth is pool**
+// (treatment 3), and it is the default here. **Condense (2) is the named
+// banked alternate** — the presenter reserved the right to revisit — and all
+// three treatments stay runtime-selectable per the aesthetic law's
+// file-keeping clause. (docs/gate-2-states-brief.md §1 R3.)
 //
 // Landed states: beat 1 is s3-f1-final and beats 4 and 6 are s3-f2-a, exactly.
 // Beats 2, 3, 5 and 7 are derived from those frames' system and flagged.
@@ -207,7 +213,7 @@ export default makeSceneModule({
   transitions,
 
   onEnterExtra(mod, stage, ctx) {
-    mod._birth = readBirthParam() || mod._birth || 1;
+    mod._birth = readBirthParam() || mod._birth || 3;
     // The presenter's selector: 1/2/3 replays the birth in that treatment
     // while the birth beat is on stage. Scratch-route tooling, removed on exit.
     mod._keys = (e) => {

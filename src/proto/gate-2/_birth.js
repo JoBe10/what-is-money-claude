@@ -5,9 +5,10 @@
 // Motion is aesthetic territory the stills could not settle, so per the
 // aesthetic law the gesture does not ship on self-selection: three genuinely
 // distinct characters, runtime-selectable (`?birth=1|2|3`, or keys 1/2/3 while
-// Scene 3 is on stage), and the presenter's ruling is required before the gate
-// closes. All three land on s3-f1-final's exact composition — the disc at
-// (880, 540), the residual stream still arriving from the patient's side.
+// Scene 3 is on stage). RULED 26 August 2026: **pool is the birth**; condense
+// is the named banked alternate; collapse stays on file. All three land on
+// s3-f1-final's exact composition — the disc at (880, 540), the residual
+// stream still arriving from the patient's side.
 //
 //   1 COLLAPSE   the path shatters and its fragments accelerate inward; the
 //                disc snaps into being at the impact. Gravitational, sudden.
