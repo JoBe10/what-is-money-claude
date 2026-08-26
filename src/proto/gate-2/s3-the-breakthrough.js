@@ -100,6 +100,9 @@ const transitions = {
   // beat 2 — nobody decided, everyone converged: the contraction completes.
   // The last of the stream is absorbed and the claim settles into its
   // quiet presence between the two people.
+  // (The claim's micro-pulse here and the brightness breath at the release
+  // are KEPT into r2 — presenter-ruled 26 August 2026, to be judged in
+  // motion; docs/gate-2-states-brief.md §1 R5.)
   1: (mod, stage) => {
     const tl = stage.timeline();
     const edge = 880 + 66;
