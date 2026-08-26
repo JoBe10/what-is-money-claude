@@ -11,7 +11,7 @@
 
 **P1 — Eighty Thousand Hours / What Is Money?** (10 beats): black hold → field fills + counter → hours line → condensation begins → SHELL → GOLD → PAPER → LEDGER → BITCOIN → forms line → stays-the-same line → TITLE. *(Condensation-into-first-form is one gesture; each subsequent form is its own advance.)*
 **P2 — The Stakes** (2): mercy line → spoken promise + handoff (screen holds).
-**S2 — The Direct Exchange** (5): surgeon + service path → capabilities (one accumulating build) + patient receives → return path attempts, wanted goods appear as possibilities → the return path fails (double coincidence) → binding line.
+**S2 — The Direct Exchange** (5): surgeon + patient + service path + capabilities (one accumulating build, under the sentences that name it) → the service delivered + the patient receives → return path attempts, wanted goods appear as possibilities → the return path fails (double coincidence) → binding line. *(Presenter-ruled 26 August 2026: the capabilities build moves into beat 1; beat 2 is the delivery and receipt; the script is untouched — Gate 2 states brief §1 R2.)*
 **S3 — The Breakthrough** (9): path contracts into the Claim Mark → "because someone else would" → patient exits → SOMEONE ELSE → SOMEWHERE ELSE → LATER → completion demonstration → reset to held claim → separation + unfinished lines. *(Presenter-ruled 26 August 2026: the interval's three names are each their own advance; the script's interval paragraph divides at the three names with zero word changes — Gate 2 states brief §1 R1.)*
 **S4 — Spend or Save** (5): the held claim, two paths named → SPEND: claim travels, goods arrive, claim gone → reset → SAVE: claim held, interval extends into black → closing pair.
 
