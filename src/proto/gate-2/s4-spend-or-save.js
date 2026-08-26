@@ -1,10 +1,13 @@
 // Prototype Gate 2 — Scene 4, Spend or Save (5 beats).
 //
-// Scene 3 morphs into this scene — the held claim never blinks. The craft call
-// the brief leaves to this session (§3) is taken as a morph, not an authored
-// clear-to-black: the fork is a question about the claim the viewer is already
-// watching, and the surgeon dissolving as the scene opens is the story's own
-// generalization — from his claim to every claim you ever hold.
+// Scene 3 morphs into this scene — the held claim never blinks. The fork is a
+// question about the claim the viewer is already watching, and the surgeon
+// dissolving as the scene opens is the story's own generalization — from his
+// claim to every claim you ever hold.
+//
+// RULED at Gate 2 by the presenter, 26 August 2026: **the morph is
+// confirmed.** No authored-black variant is built.
+// (docs/gate-2-states-brief.md §1 R4.)
 //
 // SPEND plays the claim down the interval and the goods arrive over a closed,
 // unbroken line; the reset returns to the held claim; SAVE stretches the
