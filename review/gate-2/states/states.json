@@ -1,0 +1,386 @@
+{
+  "date": "2026-08-26T08:56:36.015Z",
+  "session": "gate-2-states",
+  "beats": {
+    "s2": 5,
+    "s3": 9,
+    "s4": 5
+  },
+  "cells": [
+    {
+      "id": "s2-b1-a",
+      "file": "s2-b1-a.png",
+      "beat": "S2 beat 1",
+      "status": "carried",
+      "decision": "D8",
+      "caption": "Beat 1 · CARRIED (s2-f1-final) + D8-A — the assembled stage as approved; capabilities land here per R2"
+    },
+    {
+      "id": "s2-b1-b",
+      "file": "s2-b1-b.png",
+      "beat": "S2 beat 1",
+      "status": "candidate",
+      "decision": "D8",
+      "caption": "Beat 1 · D8-B — tighter crop on the patient: the gown recedes, the lit head and shoulders carry him. The crop runs to the frame bottom (a deliberate departure from the edges rule, this candidate’s design)"
+    },
+    {
+      "id": "s2-b1-c",
+      "file": "s2-b1-c.png",
+      "beat": "S2 beat 1",
+      "status": "candidate",
+      "decision": "D8",
+      "caption": "Beat 1 · D8-C — the patient at reduced scale, seated lower and further right"
+    },
+    {
+      "id": "s2-b2",
+      "file": "s2-b2.png",
+      "beat": "S2 beat 2",
+      "status": "new",
+      "decision": null,
+      "caption": "Beat 2 · NEW (R2) — the service delivered: the delivery rides the drawn line to the patient; the capabilities settle to the floor"
+    },
+    {
+      "id": "s2-b3-a",
+      "file": "s2-b3-a.png",
+      "beat": "S2 beat 3",
+      "status": "candidate",
+      "decision": "D2",
+      "caption": "Beat 3 · D2-A — the goods clustered at the surgeon’s side (patient recession D1-A: dimmed in place to the floor)"
+    },
+    {
+      "id": "s2-b3-b",
+      "file": "s2-b3-b.png",
+      "beat": "S2 beat 3",
+      "status": "candidate",
+      "decision": "D2",
+      "caption": "Beat 3 · D2-B — the goods as a band on the return path’s line: what the path is trying to reach (D1-A)"
+    },
+    {
+      "id": "s2-b3-c",
+      "file": "s2-b3-c.png",
+      "beat": "S2 beat 3",
+      "status": "candidate",
+      "decision": "D2",
+      "caption": "Beat 3 · D2-C — the goods as a constellation above the exchange: real things, out of reach (D1-A)"
+    },
+    {
+      "id": "s2-b3-d",
+      "file": "s2-b3-d.png",
+      "beat": "S2 beat 3",
+      "status": "candidate",
+      "decision": "D1",
+      "caption": "Beat 3 · D1-B — the patient’s deeper recession: smaller, toward the frame edge, past the floor as a recorded layer handoff (goods D2-A)"
+    },
+    {
+      "id": "s2-b4-a",
+      "file": "s2-b4-a.png",
+      "beat": "S2 beat 4",
+      "status": "candidate",
+      "decision": "D3",
+      "caption": "Beat 4 · D3-A — the failure as fragments that fade and misalign as they break (context: D2-A, D1-A)"
+    },
+    {
+      "id": "s2-b4-b",
+      "file": "s2-b4-b.png",
+      "beat": "S2 beat 4",
+      "status": "candidate",
+      "decision": "D3",
+      "caption": "Beat 4 · D3-B — the path drawn full, losing continuity: the gaps widen toward the patient (context: D2-A, D1-A)"
+    },
+    {
+      "id": "s2-b4-c",
+      "file": "s2-b4-c.png",
+      "beat": "S2 beat 4",
+      "status": "candidate",
+      "decision": "D3",
+      "caption": "Beat 4 · D3-C — the stroke thins and dies before arriving (context: D2-A, D1-A)"
+    },
+    {
+      "id": "s2-b5-a",
+      "file": "s2-b5-a.png",
+      "beat": "S2 beat 5",
+      "status": "candidate",
+      "decision": "D4",
+      "caption": "Beat 5 · D4-A — the binding line on effectively clean black: the failure frame hands off fully (recorded handoff)"
+    },
+    {
+      "id": "s2-b5-b",
+      "file": "s2-b5-b.png",
+      "beat": "S2 beat 5",
+      "status": "candidate",
+      "decision": "D4",
+      "caption": "Beat 5 · D4-B — authored partial recede: the two people stay legible as the anchor beneath the line that names them"
+    },
+    {
+      "id": "s3-b1",
+      "file": "s3-b1.png",
+      "beat": "S3 beat 1",
+      "status": "carried",
+      "decision": null,
+      "caption": "Beat 1 · CARRIED — s3-f1-final: the birth, mid-contraction, remnant in the approved language"
+    },
+    {
+      "id": "s3-b1-a",
+      "file": "s3-b1-a.png",
+      "beat": "S3 beat 1",
+      "status": "candidate",
+      "decision": "D3",
+      "caption": "Beat 1 · D3-A remnant — the arriving stream fades and misaligns"
+    },
+    {
+      "id": "s3-b1-b",
+      "file": "s3-b1-b.png",
+      "beat": "S3 beat 1",
+      "status": "candidate",
+      "decision": "D3",
+      "caption": "Beat 1 · D3-B remnant — the stream losing continuity, gaps widening back toward the patient"
+    },
+    {
+      "id": "s3-b1-c",
+      "file": "s3-b1-c.png",
+      "beat": "S3 beat 1",
+      "status": "candidate",
+      "decision": "D3",
+      "caption": "Beat 1 · D3-C remnant — the stream thinning as the birth drinks it"
+    },
+    {
+      "id": "s3-b2",
+      "file": "s3-b2.png",
+      "beat": "S3 beat 2",
+      "status": "new",
+      "decision": null,
+      "caption": "Beat 2 · the contraction complete — the claim held between the two people (r1 derived state, now a full-size cell)"
+    },
+    {
+      "id": "s3-b3",
+      "file": "s3-b3.png",
+      "beat": "S3 beat 3",
+      "status": "new",
+      "decision": null,
+      "caption": "Beat 3 · the patient released — the darkness where he was; the claim stays"
+    },
+    {
+      "id": "s3-b4-a",
+      "file": "s3-b4-a.png",
+      "beat": "S3 beat 4",
+      "status": "candidate",
+      "decision": "D6",
+      "caption": "Beat 4 · D6-A — SOMEONE ELSE lands at full voice (the approved s3-f2-a system)"
+    },
+    {
+      "id": "s3-b4-b",
+      "file": "s3-b4-b.png",
+      "beat": "S3 beat 4",
+      "status": "candidate",
+      "decision": "D6",
+      "caption": "Beat 4 · D6-B — SOMEONE ELSE at display scale: the words themselves step into the dark, no line"
+    },
+    {
+      "id": "s3-b5-a",
+      "file": "s3-b5-a.png",
+      "beat": "S3 beat 5",
+      "status": "candidate",
+      "decision": "D6",
+      "caption": "Beat 5 · D6-A — SOMEWHERE ELSE lands; SOMEONE ELSE demotes"
+    },
+    {
+      "id": "s3-b5-b",
+      "file": "s3-b5-b.png",
+      "beat": "S3 beat 5",
+      "status": "candidate",
+      "decision": "D6",
+      "caption": "Beat 5 · D6-B — the staircase deepens: SOMEWHERE ELSE lands further out"
+    },
+    {
+      "id": "s3-b6-a",
+      "file": "s3-b6-a.png",
+      "beat": "S3 beat 6",
+      "status": "carried",
+      "decision": "D6",
+      "caption": "Beat 6 · D6-A · CARRIED — LATER lands: s3-f2-a exactly"
+    },
+    {
+      "id": "s3-b6-b",
+      "file": "s3-b6-b.png",
+      "beat": "S3 beat 6",
+      "status": "candidate",
+      "decision": "D6",
+      "caption": "Beat 6 · D6-B — LATER lands deepest; the interval is the distance the words have walked"
+    },
+    {
+      "id": "s3-b7-a",
+      "file": "s3-b7-a.png",
+      "beat": "S3 beat 7",
+      "status": "candidate",
+      "decision": "D5",
+      "caption": "Beat 7 · D5-A — two distinct roads: the claim went out on the upper, the shoes came back on the lower; the claim is gone"
+    },
+    {
+      "id": "s3-b7-b",
+      "file": "s3-b7-b.png",
+      "beat": "S3 beat 7",
+      "status": "candidate",
+      "decision": "D5",
+      "caption": "Beat 7 · D5-B — two phases in one frame: the claim mid-departure, the shoes mid-arrival, motion in the trails. (This cell depicts the gesture’s character; if selected, the beat’s motion settle still ends shoe present, claim gone)"
+    },
+    {
+      "id": "s3-b7-c",
+      "file": "s3-b7-c.png",
+      "beat": "S3 beat 7",
+      "status": "candidate",
+      "decision": "D5",
+      "caption": "Beat 7 · D5-C — the circle closes: one circuit out and back, turned at the far point, resolved at the shoes"
+    },
+    {
+      "id": "s3-b8-a",
+      "file": "s3-b8-a.png",
+      "beat": "S3 beat 8",
+      "status": "follows",
+      "decision": "D6",
+      "caption": "Beat 8 · the reset to the held claim — identical to beat 6 in system A (follows the D6 selection)"
+    },
+    {
+      "id": "s3-b8-b",
+      "file": "s3-b8-b.png",
+      "beat": "S3 beat 8",
+      "status": "follows",
+      "decision": "D6",
+      "caption": "Beat 8 · the reset in system B (follows the D6 selection)"
+    },
+    {
+      "id": "s3-b9-a",
+      "file": "s3-b9-a.png",
+      "beat": "S3 beat 9",
+      "status": "candidate",
+      "decision": "D4",
+      "caption": "Beat 9 · D4-A — the pair on effectively clean black; only the claim keeps the stage (recorded handoff)"
+    },
+    {
+      "id": "s3-b9-b",
+      "file": "s3-b9-b.png",
+      "beat": "S3 beat 9",
+      "status": "candidate",
+      "decision": "D4",
+      "caption": "Beat 9 · D4-B — partial recede: the open interval’s line stays legible as the anchor; it is the unfinished exchange"
+    },
+    {
+      "id": "s4-b1-a",
+      "file": "s4-b1-a.png",
+      "beat": "S4 beat 1",
+      "status": "candidate",
+      "decision": "D7",
+      "caption": "Beat 1 · D7-A — the fork in the approved system, upgraded: two real roads leave the held claim, each named at its destination"
+    },
+    {
+      "id": "s4-b1-b",
+      "file": "s4-b1-b.png",
+      "beat": "S4 beat 1",
+      "status": "candidate",
+      "decision": "D7",
+      "caption": "Beat 1 · D7-B — the symmetric fork: two mirrored roads descend from the claim, both real, neither taken"
+    },
+    {
+      "id": "s4-b2-a",
+      "file": "s4-b2-a.png",
+      "beat": "S4 beat 2",
+      "status": "carried",
+      "decision": "D7",
+      "caption": "Beat 2 · D7-A · CARRIED — s4-f1: SPEND resolved, goods arrived, one unbroken line"
+    },
+    {
+      "id": "s4-b2-b",
+      "file": "s4-b2-b.png",
+      "beat": "S4 beat 2",
+      "status": "candidate",
+      "decision": "D7",
+      "caption": "Beat 2 · D7-B — the spend road taken: the claim traveled left and closed; the goods stand at the road’s end; the save road waits, dormant"
+    },
+    {
+      "id": "s4-b3-a",
+      "file": "s4-b3-a.png",
+      "beat": "S4 beat 3",
+      "status": "candidate",
+      "decision": "D7",
+      "caption": "Beat 3 · D7-A — the reset: the spend road is spent and gone; the claim is held again; the other road waits"
+    },
+    {
+      "id": "s4-b3-b",
+      "file": "s4-b3-b.png",
+      "beat": "S4 beat 3",
+      "status": "candidate",
+      "decision": "D7",
+      "caption": "Beat 3 · D7-B — the fork re-posed: the spend road subdued by its own telling; the save road holds its place"
+    },
+    {
+      "id": "s4-b4-a",
+      "file": "s4-b4-a.png",
+      "beat": "S4 beat 4",
+      "status": "candidate",
+      "decision": "D7",
+      "caption": "Beat 4 · D7-A — SAVE: the claim settles deeper into the hold; the interval stretches into black (s4-f2-a minus the pair)"
+    },
+    {
+      "id": "s4-b4-b",
+      "file": "s4-b4-b.png",
+      "beat": "S4 beat 4",
+      "status": "candidate",
+      "decision": "D7",
+      "caption": "Beat 4 · D7-B — the claim takes the save road and rests on it; the road continues into time it cannot see"
+    },
+    {
+      "id": "s4-b5-a",
+      "file": "s4-b5-a.png",
+      "beat": "S4 beat 5",
+      "status": "carried",
+      "decision": "D7",
+      "caption": "Beat 5 · D7-A · CARRIED — s4-f2-a: the closing pair"
+    },
+    {
+      "id": "s4-b5-b",
+      "file": "s4-b5-b.png",
+      "beat": "S4 beat 5",
+      "status": "candidate",
+      "decision": "D7",
+      "caption": "Beat 5 · D7-B — the pair lands beneath the held road; the roads settle to the floor, the claim keeps its voice"
+    }
+  ],
+  "references": [
+    {
+      "id": "ref-4-05-b0",
+      "file": "ref-4-05-b0.png",
+      "status": "reference",
+      "caption": "The legacy deck’s 4.05 — build 0 — the claim, inherited and centered"
+    },
+    {
+      "id": "ref-4-05-b1",
+      "file": "ref-4-05-b1.png",
+      "status": "reference",
+      "caption": "The legacy deck’s 4.05 — build 1 — the fork: two mirrored roads, both named"
+    },
+    {
+      "id": "ref-4-05-b2",
+      "file": "ref-4-05-b2.png",
+      "status": "reference",
+      "caption": "The legacy deck’s 4.05 — build 2 — SPEND: the claim takes the road; the goods; exchange closed"
+    },
+    {
+      "id": "ref-4-05-b3",
+      "file": "ref-4-05-b3.png",
+      "status": "reference",
+      "caption": "The legacy deck’s 4.05 — build 3 — SAVE: the claim carried forward; the shell; exchange open"
+    },
+    {
+      "id": "ref-4-05-b4",
+      "file": "ref-4-05-b4.png",
+      "status": "reference",
+      "caption": "The legacy deck’s 4.05 — build 4 — the law: spending closes it, saving keeps it open"
+    }
+  ],
+  "retired": [
+    {
+      "still": "s2-f2",
+      "note": "Formally reopened and superseded by the S2 beat 3–4 candidates (presenter-ruled 26 August 2026); kept on file in review/frames-a/frames/."
+    }
+  ],
+  "consoleErrors": []
+}
