@@ -1,13 +1,13 @@
-// Prototype Gate 2 — FAST-scope smoke (docs/gate-2-brief.md §8).
+// Prototype Gate 2 — FAST-scope smoke (docs/gate-2-r2-brief.md §5).
 //
 // Four proofs, one run:
 //   1. Deck boot: 45 slides, 0 console errors — the scratch route cost the
 //      deck nothing.
-//   2. Traversal: ?proto=gate2 walks all 17 builds forward and back, and the
+//   2. Traversal: ?proto=gate2 walks all 19 builds forward and back, and the
 //      (slide, build) sequence is exactly the beat order in both directions.
-//   3. Direct entry: every one of the 17 builds mounted cold (URL + restored
+//   3. Direct entry: every one of the 19 builds mounted cold (URL + restored
 //      build step, the engine's own deep-link path) settles into a state.
-//   4. Reduced-motion parity: the same 17 cold entries under
+//   4. Reduced-motion parity: the same 19 cold entries under
 //      prefers-reduced-motion serialize IDENTICALLY to the settled motion-on
 //      states — the scene contract's parity clause checked mechanically, not
 //      by eye (the serializer is window.__gate2.state()).
@@ -22,8 +22,8 @@ const flag = (n, d) => { const i = args.indexOf(n); return i > -1 ? args[i + 1] 
 const PORT = flag('--port', '5273');
 const BASE = `http://127.0.0.1:${PORT}`;
 
-// (1-based slide, beats) in route order.
-const SCENES = [[1, 5], [2, 7], [3, 5]];
+// (1-based slide, beats) in route order — S2 = 5, S3 = 9 (R1), S4 = 5.
+const SCENES = [[1, 5], [2, 9], [3, 5]];
 
 (async () => {
   const browser = await chromium.launch();
