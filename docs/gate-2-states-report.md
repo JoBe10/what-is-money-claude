@@ -158,3 +158,45 @@ presence in beat 1).
 **The presenter reviews the sheet cell by cell and returns the per-cell
 verdicts and the eight D-selections**; motion r2 (Fable, top effort) then
 rebuilds the prototype at 19 beats against the approved set.
+
+---
+
+# 8. The selections record (appended 27 August 2026, by the r2 session)
+
+The presenter reviewed the sheet per §6 and returned the per-cell verdicts.
+The approved state set — recorded per cell in `states.json` (`ruling` /
+`rulingNote`, `rulings` block) — is:
+
+| Beat | Approved state |
+|---|---|
+| S2 b1 | `s2-b1-a` (carried composition; capabilities accumulate here per R2) |
+| S2 b2 | `s2-b2` |
+| S2 b3 | `s2-b3-a` — patient dimmed in place (D1-A); goods at the surgeon's side (D2-A) |
+| S2 b4 | `s2-b4-c` — **the path-failure language is the thinning stroke (D3-C), film-wide** |
+| S2 b5 | `s2-b5-b` — the two people as the statement's anchor (D4-B) |
+| S3 b1 | `s3-b1` (carried birth frame) with remnant language C (`s3-b1-c`'s remnant) |
+| S3 b2 | `s3-b2` |
+| S3 b3 | `s3-b3` |
+| S3 b4–b6 | `s3-b4-a`, `s3-b5-a`, `s3-b6-a` — interval typography system A (D6-A) |
+| S3 b7 | `s3-b7-b` — completion as two phases in one frame (D5-B) |
+| S3 b8 | `s3-b8-a` |
+| S3 b9 | `s3-b9-a` — full handoff to clean black under the separation lines (D4-A) |
+| S4 b1–b5 | `s4-b1-b` … `s4-b5-b` — **Scene 4 is system B throughout (D7-B)** |
+
+All single-candidate cells: approved as rendered. Non-selected candidates
+stay on file (aesthetic law, file-keeping clause). The prior standing rulings
+hold: birth default **pool** (condense banked), micro-motions kept for live
+judgment, S3→S4 **morph**, no accent before the birth, patient photographic
+everywhere.
+
+**One new component-level ruling (27 Aug, presenter markup on the legacy
+4.05 reference):** in the ClaimMark's **carrier context** the disc sits
+**centered between the carrier arcs, fully symmetric**. The fix lands in the
+component in r2 and must hold at every scale of the Gate 1 sheet's carrier
+row. No current Gate 2 state uses the carrier — the ruling protects Act II.
+
+Per this report's §3.3 (contexts follow the selections), the D3-C ruling
+propagates into the one selected cell whose receded context still carried the
+D3-A baseline: `s2-b5-b` re-renders with the thinning-stroke context in r2,
+recorded in `states.json` and flagged in the r2 report for the presenter's
+eye at the live review.

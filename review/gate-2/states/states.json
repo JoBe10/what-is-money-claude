@@ -13,7 +13,9 @@
       "beat": "S2 beat 1",
       "status": "carried",
       "decision": "D8",
-      "caption": "Beat 1 · CARRIED (s2-f1-final) + D8-A — the assembled stage as approved; capabilities land here per R2"
+      "caption": "Beat 1 · CARRIED (s2-f1-final) + D8-A — the assembled stage as approved; capabilities land here per R2",
+      "ruling": "landed",
+      "rulingNote": "S2 beat 1 — D8-A: the carried composition; further temperature work is r2’s entry motion"
     },
     {
       "id": "s2-b1-b",
@@ -21,7 +23,9 @@
       "beat": "S2 beat 1",
       "status": "candidate",
       "decision": "D8",
-      "caption": "Beat 1 · D8-B — tighter crop on the patient: the gown recedes, the lit head and shoulders carry him. The crop runs to the frame bottom (a deliberate departure from the edges rule, this candidate’s design)"
+      "caption": "Beat 1 · D8-B — tighter crop on the patient: the gown recedes, the lit head and shoulders carry him. The crop runs to the frame bottom (a deliberate departure from the edges rule, this candidate’s design)",
+      "ruling": "not-selected",
+      "rulingNote": "Kept on file (aesthetic-law file-keeping clause)"
     },
     {
       "id": "s2-b1-c",
@@ -29,7 +33,9 @@
       "beat": "S2 beat 1",
       "status": "candidate",
       "decision": "D8",
-      "caption": "Beat 1 · D8-C — the patient at reduced scale, seated lower and further right"
+      "caption": "Beat 1 · D8-C — the patient at reduced scale, seated lower and further right",
+      "ruling": "not-selected",
+      "rulingNote": "Kept on file (aesthetic-law file-keeping clause)"
     },
     {
       "id": "s2-b2",
@@ -37,7 +43,9 @@
       "beat": "S2 beat 2",
       "status": "new",
       "decision": null,
-      "caption": "Beat 2 · NEW (R2) — the service delivered: the delivery rides the drawn line to the patient; the capabilities settle to the floor"
+      "caption": "Beat 2 · NEW (R2) — the service delivered: the delivery rides the drawn line to the patient; the capabilities settle to the floor",
+      "ruling": "landed",
+      "rulingNote": "S2 beat 2 — approved as rendered (single candidate)"
     },
     {
       "id": "s2-b3-a",
@@ -45,7 +53,9 @@
       "beat": "S2 beat 3",
       "status": "candidate",
       "decision": "D2",
-      "caption": "Beat 3 · D2-A — the goods clustered at the surgeon’s side (patient recession D1-A: dimmed in place to the floor)"
+      "caption": "Beat 3 · D2-A — the goods clustered at the surgeon’s side (patient recession D1-A: dimmed in place to the floor)",
+      "ruling": "landed",
+      "rulingNote": "S2 beat 3 — D1-A (patient dimmed in place) + D2-A (goods clustered at the surgeon’s side)"
     },
     {
       "id": "s2-b3-b",
@@ -53,7 +63,9 @@
       "beat": "S2 beat 3",
       "status": "candidate",
       "decision": "D2",
-      "caption": "Beat 3 · D2-B — the goods as a band on the return path’s line: what the path is trying to reach (D1-A)"
+      "caption": "Beat 3 · D2-B — the goods as a band on the return path’s line: what the path is trying to reach (D1-A)",
+      "ruling": "not-selected",
+      "rulingNote": "Kept on file (aesthetic-law file-keeping clause)"
     },
     {
       "id": "s2-b3-c",
@@ -61,7 +73,9 @@
       "beat": "S2 beat 3",
       "status": "candidate",
       "decision": "D2",
-      "caption": "Beat 3 · D2-C — the goods as a constellation above the exchange: real things, out of reach (D1-A)"
+      "caption": "Beat 3 · D2-C — the goods as a constellation above the exchange: real things, out of reach (D1-A)",
+      "ruling": "not-selected",
+      "rulingNote": "Kept on file (aesthetic-law file-keeping clause)"
     },
     {
       "id": "s2-b3-d",
@@ -69,7 +83,9 @@
       "beat": "S2 beat 3",
       "status": "candidate",
       "decision": "D1",
-      "caption": "Beat 3 · D1-B — the patient’s deeper recession: smaller, toward the frame edge, past the floor as a recorded layer handoff (goods D2-A)"
+      "caption": "Beat 3 · D1-B — the patient’s deeper recession: smaller, toward the frame edge, past the floor as a recorded layer handoff (goods D2-A)",
+      "ruling": "not-selected",
+      "rulingNote": "Kept on file (aesthetic-law file-keeping clause)"
     },
     {
       "id": "s2-b4-a",
@@ -77,7 +93,9 @@
       "beat": "S2 beat 4",
       "status": "candidate",
       "decision": "D3",
-      "caption": "Beat 4 · D3-A — the failure as fragments that fade and misalign as they break (context: D2-A, D1-A)"
+      "caption": "Beat 4 · D3-A — the failure as fragments that fade and misalign as they break (context: D2-A, D1-A)",
+      "ruling": "not-selected",
+      "rulingNote": "Kept on file (aesthetic-law file-keeping clause)"
     },
     {
       "id": "s2-b4-b",
@@ -85,7 +103,9 @@
       "beat": "S2 beat 4",
       "status": "candidate",
       "decision": "D3",
-      "caption": "Beat 4 · D3-B — the path drawn full, losing continuity: the gaps widen toward the patient (context: D2-A, D1-A)"
+      "caption": "Beat 4 · D3-B — the path drawn full, losing continuity: the gaps widen toward the patient (context: D2-A, D1-A)",
+      "ruling": "not-selected",
+      "rulingNote": "Kept on file (aesthetic-law file-keeping clause)"
     },
     {
       "id": "s2-b4-c",
@@ -93,7 +113,9 @@
       "beat": "S2 beat 4",
       "status": "candidate",
       "decision": "D3",
-      "caption": "Beat 4 · D3-C — the stroke thins and dies before arriving (context: D2-A, D1-A)"
+      "caption": "Beat 4 · D3-C — the stroke thins and dies before arriving (context: D2-A, D1-A)",
+      "ruling": "landed",
+      "rulingNote": "S2 beat 4 — D3-C: the path-failure language is the thinning stroke, film-wide"
     },
     {
       "id": "s2-b5-a",
@@ -101,7 +123,9 @@
       "beat": "S2 beat 5",
       "status": "candidate",
       "decision": "D4",
-      "caption": "Beat 5 · D4-A — the binding line on effectively clean black: the failure frame hands off fully (recorded handoff)"
+      "caption": "Beat 5 · D4-A — the binding line on effectively clean black: the failure frame hands off fully (recorded handoff)",
+      "ruling": "not-selected",
+      "rulingNote": "Kept on file (aesthetic-law file-keeping clause)"
     },
     {
       "id": "s2-b5-b",
@@ -109,7 +133,9 @@
       "beat": "S2 beat 5",
       "status": "candidate",
       "decision": "D4",
-      "caption": "Beat 5 · D4-B — authored partial recede: the two people stay legible as the anchor beneath the line that names them"
+      "caption": "Beat 5 · D4-B — authored partial recede: the two people stay legible as the anchor beneath the line that names them",
+      "ruling": "landed",
+      "rulingNote": "S2 beat 5 — D4-B: the two people as the statement’s anchor"
     },
     {
       "id": "s3-b1",
@@ -117,7 +143,9 @@
       "beat": "S3 beat 1",
       "status": "carried",
       "decision": null,
-      "caption": "Beat 1 · CARRIED — s3-f1-final: the birth, mid-contraction, remnant in the approved language"
+      "caption": "Beat 1 · CARRIED — s3-f1-final: the birth, mid-contraction, remnant in the approved language",
+      "ruling": "approved-not-landed",
+      "rulingNote": "The carried birth frame stands approved; the landed S3 beat 1 state takes s3-b1-c’s remnant (D3-C, film-wide)"
     },
     {
       "id": "s3-b1-a",
@@ -125,7 +153,9 @@
       "beat": "S3 beat 1",
       "status": "candidate",
       "decision": "D3",
-      "caption": "Beat 1 · D3-A remnant — the arriving stream fades and misaligns"
+      "caption": "Beat 1 · D3-A remnant — the arriving stream fades and misaligns",
+      "ruling": "not-selected",
+      "rulingNote": "Kept on file (aesthetic-law file-keeping clause)"
     },
     {
       "id": "s3-b1-b",
@@ -133,7 +163,9 @@
       "beat": "S3 beat 1",
       "status": "candidate",
       "decision": "D3",
-      "caption": "Beat 1 · D3-B remnant — the stream losing continuity, gaps widening back toward the patient"
+      "caption": "Beat 1 · D3-B remnant — the stream losing continuity, gaps widening back toward the patient",
+      "ruling": "not-selected",
+      "rulingNote": "Kept on file (aesthetic-law file-keeping clause)"
     },
     {
       "id": "s3-b1-c",
@@ -141,7 +173,9 @@
       "beat": "S3 beat 1",
       "status": "candidate",
       "decision": "D3",
-      "caption": "Beat 1 · D3-C remnant — the stream thinning as the birth drinks it"
+      "caption": "Beat 1 · D3-C remnant — the stream thinning as the birth drinks it",
+      "ruling": "landed",
+      "rulingNote": "S3 beat 1 — the carried birth frame with remnant language C (follows D3-C)"
     },
     {
       "id": "s3-b2",
@@ -149,7 +183,9 @@
       "beat": "S3 beat 2",
       "status": "new",
       "decision": null,
-      "caption": "Beat 2 · the contraction complete — the claim held between the two people (r1 derived state, now a full-size cell)"
+      "caption": "Beat 2 · the contraction complete — the claim held between the two people (r1 derived state, now a full-size cell)",
+      "ruling": "landed",
+      "rulingNote": "S3 beat 2 — approved as rendered (single candidate)"
     },
     {
       "id": "s3-b3",
@@ -157,7 +193,9 @@
       "beat": "S3 beat 3",
       "status": "new",
       "decision": null,
-      "caption": "Beat 3 · the patient released — the darkness where he was; the claim stays"
+      "caption": "Beat 3 · the patient released — the darkness where he was; the claim stays",
+      "ruling": "landed",
+      "rulingNote": "S3 beat 3 — approved as rendered (single candidate)"
     },
     {
       "id": "s3-b4-a",
@@ -165,7 +203,9 @@
       "beat": "S3 beat 4",
       "status": "candidate",
       "decision": "D6",
-      "caption": "Beat 4 · D6-A — SOMEONE ELSE lands at full voice (the approved s3-f2-a system)"
+      "caption": "Beat 4 · D6-A — SOMEONE ELSE lands at full voice (the approved s3-f2-a system)",
+      "ruling": "landed",
+      "rulingNote": "S3 beat 4 — D6-A: interval typography system A"
     },
     {
       "id": "s3-b4-b",
@@ -173,7 +213,9 @@
       "beat": "S3 beat 4",
       "status": "candidate",
       "decision": "D6",
-      "caption": "Beat 4 · D6-B — SOMEONE ELSE at display scale: the words themselves step into the dark, no line"
+      "caption": "Beat 4 · D6-B — SOMEONE ELSE at display scale: the words themselves step into the dark, no line",
+      "ruling": "not-selected",
+      "rulingNote": "Kept on file (aesthetic-law file-keeping clause)"
     },
     {
       "id": "s3-b5-a",
@@ -181,7 +223,9 @@
       "beat": "S3 beat 5",
       "status": "candidate",
       "decision": "D6",
-      "caption": "Beat 5 · D6-A — SOMEWHERE ELSE lands; SOMEONE ELSE demotes"
+      "caption": "Beat 5 · D6-A — SOMEWHERE ELSE lands; SOMEONE ELSE demotes",
+      "ruling": "landed",
+      "rulingNote": "S3 beat 5 — D6-A"
     },
     {
       "id": "s3-b5-b",
@@ -189,7 +233,9 @@
       "beat": "S3 beat 5",
       "status": "candidate",
       "decision": "D6",
-      "caption": "Beat 5 · D6-B — the staircase deepens: SOMEWHERE ELSE lands further out"
+      "caption": "Beat 5 · D6-B — the staircase deepens: SOMEWHERE ELSE lands further out",
+      "ruling": "not-selected",
+      "rulingNote": "Kept on file (aesthetic-law file-keeping clause)"
     },
     {
       "id": "s3-b6-a",
@@ -197,7 +243,9 @@
       "beat": "S3 beat 6",
       "status": "carried",
       "decision": "D6",
-      "caption": "Beat 6 · D6-A · CARRIED — LATER lands: s3-f2-a exactly"
+      "caption": "Beat 6 · D6-A · CARRIED — LATER lands: s3-f2-a exactly",
+      "ruling": "landed",
+      "rulingNote": "S3 beat 6 — D6-A (carried, s3-f2-a)"
     },
     {
       "id": "s3-b6-b",
@@ -205,7 +253,9 @@
       "beat": "S3 beat 6",
       "status": "candidate",
       "decision": "D6",
-      "caption": "Beat 6 · D6-B — LATER lands deepest; the interval is the distance the words have walked"
+      "caption": "Beat 6 · D6-B — LATER lands deepest; the interval is the distance the words have walked",
+      "ruling": "not-selected",
+      "rulingNote": "Kept on file (aesthetic-law file-keeping clause)"
     },
     {
       "id": "s3-b7-a",
@@ -213,7 +263,9 @@
       "beat": "S3 beat 7",
       "status": "candidate",
       "decision": "D5",
-      "caption": "Beat 7 · D5-A — two distinct roads: the claim went out on the upper, the shoes came back on the lower; the claim is gone"
+      "caption": "Beat 7 · D5-A — two distinct roads: the claim went out on the upper, the shoes came back on the lower; the claim is gone",
+      "ruling": "not-selected",
+      "rulingNote": "Kept on file (aesthetic-law file-keeping clause)"
     },
     {
       "id": "s3-b7-b",
@@ -221,7 +273,9 @@
       "beat": "S3 beat 7",
       "status": "candidate",
       "decision": "D5",
-      "caption": "Beat 7 · D5-B — two phases in one frame: the claim mid-departure, the shoes mid-arrival, motion in the trails. (This cell depicts the gesture’s character; if selected, the beat’s motion settle still ends shoe present, claim gone)"
+      "caption": "Beat 7 · D5-B — two phases in one frame: the claim mid-departure, the shoes mid-arrival, motion in the trails. (This cell depicts the gesture’s character; if selected, the beat’s motion settle still ends shoe present, claim gone)",
+      "ruling": "landed",
+      "rulingNote": "S3 beat 7 — D5-B: completion as two phases in one frame; the settled state is this cell exactly"
     },
     {
       "id": "s3-b7-c",
@@ -229,7 +283,9 @@
       "beat": "S3 beat 7",
       "status": "candidate",
       "decision": "D5",
-      "caption": "Beat 7 · D5-C — the circle closes: one circuit out and back, turned at the far point, resolved at the shoes"
+      "caption": "Beat 7 · D5-C — the circle closes: one circuit out and back, turned at the far point, resolved at the shoes",
+      "ruling": "not-selected",
+      "rulingNote": "Kept on file (aesthetic-law file-keeping clause)"
     },
     {
       "id": "s3-b8-a",
@@ -237,7 +293,9 @@
       "beat": "S3 beat 8",
       "status": "follows",
       "decision": "D6",
-      "caption": "Beat 8 · the reset to the held claim — identical to beat 6 in system A (follows the D6 selection)"
+      "caption": "Beat 8 · the reset to the held claim — identical to beat 6 in system A (follows the D6 selection)",
+      "ruling": "landed",
+      "rulingNote": "S3 beat 8 — the reset, follows D6-A"
     },
     {
       "id": "s3-b8-b",
@@ -245,7 +303,9 @@
       "beat": "S3 beat 8",
       "status": "follows",
       "decision": "D6",
-      "caption": "Beat 8 · the reset in system B (follows the D6 selection)"
+      "caption": "Beat 8 · the reset in system B (follows the D6 selection)",
+      "ruling": "not-selected",
+      "rulingNote": "Kept on file (aesthetic-law file-keeping clause)"
     },
     {
       "id": "s3-b9-a",
@@ -253,7 +313,9 @@
       "beat": "S3 beat 9",
       "status": "candidate",
       "decision": "D4",
-      "caption": "Beat 9 · D4-A — the pair on effectively clean black; only the claim keeps the stage (recorded handoff)"
+      "caption": "Beat 9 · D4-A — the pair on effectively clean black; only the claim keeps the stage (recorded handoff)",
+      "ruling": "landed",
+      "rulingNote": "S3 beat 9 — D4-A: full handoff to clean black under the separation lines"
     },
     {
       "id": "s3-b9-b",
@@ -261,7 +323,9 @@
       "beat": "S3 beat 9",
       "status": "candidate",
       "decision": "D4",
-      "caption": "Beat 9 · D4-B — partial recede: the open interval’s line stays legible as the anchor; it is the unfinished exchange"
+      "caption": "Beat 9 · D4-B — partial recede: the open interval’s line stays legible as the anchor; it is the unfinished exchange",
+      "ruling": "not-selected",
+      "rulingNote": "Kept on file (aesthetic-law file-keeping clause)"
     },
     {
       "id": "s4-b1-a",
@@ -269,7 +333,9 @@
       "beat": "S4 beat 1",
       "status": "candidate",
       "decision": "D7",
-      "caption": "Beat 1 · D7-A — the fork in the approved system, upgraded: two real roads leave the held claim, each named at its destination"
+      "caption": "Beat 1 · D7-A — the fork in the approved system, upgraded: two real roads leave the held claim, each named at its destination",
+      "ruling": "not-selected",
+      "rulingNote": "Kept on file (aesthetic-law file-keeping clause)"
     },
     {
       "id": "s4-b1-b",
@@ -277,7 +343,9 @@
       "beat": "S4 beat 1",
       "status": "candidate",
       "decision": "D7",
-      "caption": "Beat 1 · D7-B — the symmetric fork: two mirrored roads descend from the claim, both real, neither taken"
+      "caption": "Beat 1 · D7-B — the symmetric fork: two mirrored roads descend from the claim, both real, neither taken",
+      "ruling": "landed",
+      "rulingNote": "S4 beat 1 — D7-B: Scene 4 is system B throughout"
     },
     {
       "id": "s4-b2-a",
@@ -285,7 +353,9 @@
       "beat": "S4 beat 2",
       "status": "carried",
       "decision": "D7",
-      "caption": "Beat 2 · D7-A · CARRIED — s4-f1: SPEND resolved, goods arrived, one unbroken line"
+      "caption": "Beat 2 · D7-A · CARRIED — s4-f1: SPEND resolved, goods arrived, one unbroken line",
+      "ruling": "not-selected",
+      "rulingNote": "Kept on file (aesthetic-law file-keeping clause)"
     },
     {
       "id": "s4-b2-b",
@@ -293,7 +363,9 @@
       "beat": "S4 beat 2",
       "status": "candidate",
       "decision": "D7",
-      "caption": "Beat 2 · D7-B — the spend road taken: the claim traveled left and closed; the goods stand at the road’s end; the save road waits, dormant"
+      "caption": "Beat 2 · D7-B — the spend road taken: the claim traveled left and closed; the goods stand at the road’s end; the save road waits, dormant",
+      "ruling": "landed",
+      "rulingNote": "S4 beat 2 — D7-B"
     },
     {
       "id": "s4-b3-a",
@@ -301,7 +373,9 @@
       "beat": "S4 beat 3",
       "status": "candidate",
       "decision": "D7",
-      "caption": "Beat 3 · D7-A — the reset: the spend road is spent and gone; the claim is held again; the other road waits"
+      "caption": "Beat 3 · D7-A — the reset: the spend road is spent and gone; the claim is held again; the other road waits",
+      "ruling": "not-selected",
+      "rulingNote": "Kept on file (aesthetic-law file-keeping clause)"
     },
     {
       "id": "s4-b3-b",
@@ -309,7 +383,9 @@
       "beat": "S4 beat 3",
       "status": "candidate",
       "decision": "D7",
-      "caption": "Beat 3 · D7-B — the fork re-posed: the spend road subdued by its own telling; the save road holds its place"
+      "caption": "Beat 3 · D7-B — the fork re-posed: the spend road subdued by its own telling; the save road holds its place",
+      "ruling": "landed",
+      "rulingNote": "S4 beat 3 — D7-B"
     },
     {
       "id": "s4-b4-a",
@@ -317,7 +393,9 @@
       "beat": "S4 beat 4",
       "status": "candidate",
       "decision": "D7",
-      "caption": "Beat 4 · D7-A — SAVE: the claim settles deeper into the hold; the interval stretches into black (s4-f2-a minus the pair)"
+      "caption": "Beat 4 · D7-A — SAVE: the claim settles deeper into the hold; the interval stretches into black (s4-f2-a minus the pair)",
+      "ruling": "not-selected",
+      "rulingNote": "Kept on file (aesthetic-law file-keeping clause)"
     },
     {
       "id": "s4-b4-b",
@@ -325,7 +403,9 @@
       "beat": "S4 beat 4",
       "status": "candidate",
       "decision": "D7",
-      "caption": "Beat 4 · D7-B — the claim takes the save road and rests on it; the road continues into time it cannot see"
+      "caption": "Beat 4 · D7-B — the claim takes the save road and rests on it; the road continues into time it cannot see",
+      "ruling": "landed",
+      "rulingNote": "S4 beat 4 — D7-B"
     },
     {
       "id": "s4-b5-a",
@@ -333,7 +413,9 @@
       "beat": "S4 beat 5",
       "status": "carried",
       "decision": "D7",
-      "caption": "Beat 5 · D7-A · CARRIED — s4-f2-a: the closing pair"
+      "caption": "Beat 5 · D7-A · CARRIED — s4-f2-a: the closing pair",
+      "ruling": "not-selected",
+      "rulingNote": "Kept on file (aesthetic-law file-keeping clause)"
     },
     {
       "id": "s4-b5-b",
@@ -341,7 +423,9 @@
       "beat": "S4 beat 5",
       "status": "candidate",
       "decision": "D7",
-      "caption": "Beat 5 · D7-B — the pair lands beneath the held road; the roads settle to the floor, the claim keeps its voice"
+      "caption": "Beat 5 · D7-B — the pair lands beneath the held road; the roads settle to the floor, the claim keeps its voice",
+      "ruling": "landed",
+      "rulingNote": "S4 beat 5 — D7-B"
     }
   ],
   "references": [
@@ -382,5 +466,47 @@
       "note": "Formally reopened and superseded by the S2 beat 3–4 candidates (presenter-ruled 26 August 2026); kept on file in review/frames-a/frames/."
     }
   ],
-  "consoleErrors": []
+  "consoleErrors": [],
+  "rulings": {
+    "date": "2026-08-27",
+    "recordedBy": "gate-2-r2 session, from the presenter’s per-cell review of the sheet",
+    "approvedSet": {
+      "S2 b1": "s2-b1-a",
+      "S2 b2": "s2-b2",
+      "S2 b3": "s2-b3-a",
+      "S2 b4": "s2-b4-c",
+      "S2 b5": "s2-b5-b",
+      "S3 b1": "s3-b1-c",
+      "S3 b2": "s3-b2",
+      "S3 b3": "s3-b3",
+      "S3 b4": "s3-b4-a",
+      "S3 b5": "s3-b5-a",
+      "S3 b6": "s3-b6-a",
+      "S3 b7": "s3-b7-b",
+      "S3 b8": "s3-b8-a",
+      "S3 b9": "s3-b9-a",
+      "S4 b1": "s4-b1-b",
+      "S4 b2": "s4-b2-b",
+      "S4 b3": "s4-b3-b",
+      "S4 b4": "s4-b4-b",
+      "S4 b5": "s4-b5-b"
+    },
+    "decisions": {
+      "D1": "A — the patient dimmed in place to the legibility floor",
+      "D2": "A — the goods clustered at the surgeon’s side",
+      "D3": "C — the thinning stroke, film-wide (governs S2 b4, the S3 b1 remnant, and every receded failure context)",
+      "D4": "S2 b5: B (the two people as anchor) · S3 b9: A (full handoff to clean black)",
+      "D5": "B — two phases in one frame; the beat settles on the cell exactly",
+      "D6": "A — the approved interval typography system",
+      "D7": "B — Scene 4 in system B’s grammar across all five beats",
+      "D8": "A — the carried patient presence; entry temperature is r2 motion work"
+    },
+    "standing": [
+      "The birth default is pool; condense is the named banked alternate; all three treatments stay runtime-selectable",
+      "The claim’s micro-motions (pulse, breath) are kept into r2, judged live",
+      "The Scene 3 → 4 morph is confirmed",
+      "No accent before the birth; the patient is photographic everywhere he appears"
+    ],
+    "component": "ClaimMark carrier context (27 Aug, from the legacy 4.05 reference markup): the disc sits centered between the carrier arcs, fully symmetric. Fixed in the component at r2; must hold at every scale of the Gate 1 sheet’s carrier row. No current Gate 2 state uses the carrier — the ruling protects Act II."
+  }
 }
