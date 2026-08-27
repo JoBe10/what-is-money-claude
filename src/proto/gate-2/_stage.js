@@ -375,14 +375,16 @@ class Gate2Stage {
     markLayer.appendChild(this.blob);
 
     // The entry's rising light — motion-only, a wide soft warm wash that
-    // lifts the black as the scene finds its light. Warm white; no accent
-    // exists in Scene 2.
+    // lifts the black as the scene finds its light. It sits OVER the scene's
+    // photographs (light falls on everything; beneath them, their box edges
+    // would occlude it into a hard-edged panel) and under the mark and the
+    // statements. Warm white; no accent exists in Scene 2.
     this.wash = document.createElement('div');
     this.wash.style.cssText = 'position:absolute; left:960px; top:620px;' +
       'width:1500px; height:900px; border-radius:50%; opacity:0; pointer-events:none;' +
       'background:radial-gradient(ellipse, rgba(253,233,212,0.1) 0%, rgba(253,233,212,0.035) 45%, rgba(253,233,212,0) 72%);';
     gsap.set(this.wash, { xPercent: -50, yPercent: -50 });
-    scene.insertBefore(this.wash, this.surgeon);
+    scene.appendChild(this.wash);
 
     const stmts = document.createElement('div');
     stmts.style.cssText = 'position:absolute; inset:0; pointer-events:none;';
