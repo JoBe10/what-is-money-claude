@@ -416,10 +416,13 @@ cell('s2-b5-a', {
 
 cell('s2-b5-b', {
   beat: 'S2 beat 5', status: 'candidate', decision: 'D4',
-  caption: 'Beat 5 · D4-B — authored partial recede: the two people stay legible as the anchor beneath the line that names them'
+  caption: 'Beat 5 · D4-B — authored partial recede: the two people stay legible as the anchor beneath the line that names them. (Context re-rendered 27 Aug per the film-wide D3-C ruling — the receded failure is the thinning stroke; the presenter judges it at the r2 live review)'
 }, (st) => {
   surgeonS2(st, 0.5); patientS2(st, 0.38); goodsD2(st, 'cluster', 0.12);
-  failureD3(st, 'misalign', 0.35);
+  // The cell's own decision is D4-B; its failure context follows the D3
+  // selection (this report's §3.3) — re-rendered from the sheet's baseline
+  // D3-A to the ruled thinning stroke, 27 August 2026.
+  failureD3(st, 'thin', 0.35);
   statement(st, 'It binds both halves of the trade to the same two people.', 815);
 });
 

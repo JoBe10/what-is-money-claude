@@ -133,9 +133,15 @@
       "beat": "S2 beat 5",
       "status": "candidate",
       "decision": "D4",
-      "caption": "Beat 5 · D4-B — authored partial recede: the two people stay legible as the anchor beneath the line that names them",
+      "caption": "Beat 5 · D4-B — authored partial recede: the two people stay legible as the anchor beneath the line that names them. (Context re-rendered 27 Aug per the film-wide D3-C ruling — the receded failure is the thinning stroke; the presenter judges it at the r2 live review)",
       "ruling": "landed",
-      "rulingNote": "S2 beat 5 — D4-B: the two people as the statement’s anchor"
+      "rulingNote": "S2 beat 5 — D4-B: the two people as the statement’s anchor",
+      "contextRerender": {
+        "date": "2026-08-27",
+        "change": "failure context D3-A (misalign) → D3-C (thin), per the film-wide D3-C ruling and the states report §3.3 (contexts follow the selections)",
+        "priorCaption": "Beat 5 · D4-B — authored partial recede: the two people stay legible as the anchor beneath the line that names them",
+        "awaiting": "the presenter’s eye at the r2 live review"
+      }
     },
     {
       "id": "s3-b1",
