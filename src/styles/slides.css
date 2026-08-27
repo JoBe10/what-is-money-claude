@@ -657,8 +657,21 @@
   filter: none;
 }
 
+/* PRESENTER-RULED, 27 August 2026 (markup on the legacy 4.05 reference): in a
+   carrier context the disc sits centered between the carrier arcs, fully
+   symmetric. The grid centering above silently top-aligns the disc when the
+   box the slide gives it is shorter than the disc (the 180×72 claim stages of
+   4.05, the stress stage and 4.21 hold 104–116px discs, leaving the disc
+   16–22px below the center their shells and roads are authored to), because
+   an overflowing auto-sized grid row starts at the container's top. Absolute
+   centering holds at any box size, which is what this component has always
+   promised: "centered in whatever box the slide gives it." */
 .s4-claim-object__disc {
   flex: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .s4-claim-object__geometry {
