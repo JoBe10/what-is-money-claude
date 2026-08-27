@@ -1,14 +1,18 @@
-// Prototype Gate 2 — the birth of the Claim Mark, in three motion treatments
-// (docs/gate-2-brief.md §4). The film's signature moment: the unresolved half
-// of the exchange contracts into the claim.
+// Prototype Gate 2 — the birth of the Claim Mark (docs/gate-2-r2-brief.md §2).
+// The film's signature moment: the unresolved half of the exchange contracts
+// into the claim.
 //
-// Motion is aesthetic territory the stills could not settle, so per the
-// aesthetic law the gesture does not ship on self-selection: three genuinely
-// distinct characters, runtime-selectable (`?birth=1|2|3`, or keys 1/2/3 while
-// Scene 3 is on stage). RULED 26 August 2026: **pool is the birth**; condense
-// is the named banked alternate; collapse stays on file. All three land on
-// s3-f1-final's exact composition — the disc at (880, 540), the residual
-// stream still arriving from the patient's side.
+// RULED 26 August 2026: **pool is the birth** (default); condense is the named
+// banked alternate; collapse stays on file. All three remain runtime-
+// selectable (`?birth=1|2|3`, or keys 1/2/3 while Scene 3 is on stage) per the
+// aesthetic law's file-keeping clause.
+//
+// RULED 27 August 2026: the settled birth frame is **s3-b1-c** — the carried
+// composition with the remnant stream in language C, the thinning stroke,
+// film-wide (D3-C). Every treatment lands on it exactly: its last act is the
+// state law itself. The path the birth consumes arrives already speaking C —
+// the substrate is the failing S2 path re-gathered, its stroke still thinning
+// toward the point where the claim will form.
 //
 //   1 COLLAPSE   the path shatters and its fragments accelerate inward; the
 //                disc snaps into being at the impact. Gravitational, sudden.
@@ -27,13 +31,14 @@ import { gsap } from 'gsap';
 import { GEOM } from './_stage.js';
 
 // The pre-birth substrate: the unresolved half hanging between the patient's
-// edge (x = 1206, where s3-f1-final's stream begins) and the birth point. The
-// S2→S3 morph re-gathers the failure's four fragments into this; a cold entry
-// assembles it directly.
+// edge (x = 1206, where s3-b1-c's stream begins) and the birth point — in
+// language C, so the stroke is already dying toward the left. The S2→S3 morph
+// re-gathers the failure's thinning spans into this; a cold entry assembles it
+// directly. Motion-only: no settled state shows it.
 export const GATHER = [
-  [1206, 1120, 540, 0.34],
-  [1096, 1004, 540, 0.3],
-  [980, 940, 540, 0.26]
+  [1206, 1108, 540, 0.34, 2.0],
+  [1096, 1006, 540, 0.3, 1.6],
+  [980, 940, 540, 0.26, 1.1]
 ];
 
 export const BIRTH_KEYS = ['1', '2', '3'];
@@ -42,21 +47,14 @@ export const BIRTH_NAMES = { 1: 'collapse', 2: 'condense', 3: 'pool' };
 const BIRTH = { cx: 880, cy: 540 };
 const SCENE = 'the-breakthrough';
 
-// A tweenable segment: proxy in, attributes out. Nothing is written until the
-// timeline reaches it — a builder runs at construction, long before playback.
-function segProxy(stage, line, [x1, x2, y, o]) {
-  const p = { x1, x2, y, o };
-  p.write = () => stage.setSeg(line, p.x1, p.x2, p.y, p.o);
-  return p;
-}
-
-// The residual stream of the approved final still fades in as a treatment
-// finishes, so the closing snap to applyState changes nothing visible.
+// The residual stream of the approved cell (s3-b1-c's language-C remnant)
+// fades in as a treatment finishes, so the closing snap to applyState changes
+// nothing visible.
 function landResiduals(stage, tl, at) {
-  GEOM.fragsBirth.forEach((conf, i) => {
+  GEOM.remnantC.forEach((conf, i) => {
     const line = stage.frags[i];
     tl.add(() => {
-      stage.setSeg(line, conf[0], conf[1], conf[2], conf[3]);
+      stage.setSeg(line, conf[0], conf[1], conf[2], conf[3], conf[4]);
       line.setAttribute('opacity', '0');
     }, at);
     tl.to(line, { attr: { opacity: 1 }, duration: 0.4, ease: 'power1.out' }, at + 0.05 * i);
@@ -69,7 +67,8 @@ function collapse(stage, tl) {
   const at = tl.duration();
   const shards = [];
   // The gathered path shatters: eleven shards scattered off-axis where the
-  // path hung, flashing in as the source lines vanish.
+  // path hung, flashing in as the source lines vanish. Pool lines 4–14 (the
+  // residual stream lands on 0–3 afterward).
   const seed = [
     [1180, 518, 34, 0.36], [1252, 552, 26, 0.3], [1118, 562, 40, 0.34],
     [1044, 522, 30, 0.3], [1330, 534, 22, 0.26], [986, 556, 26, 0.28],
@@ -77,7 +76,7 @@ function collapse(stage, tl) {
     [1150, 540, 44, 0.38], [1010, 528, 16, 0.22]
   ];
   seed.forEach(([cx, y, len, op], i) => {
-    const line = stage.frags[3 + i];
+    const line = stage.frags[4 + i];
     const p = { cx, y, len, op };
     p.write = () => stage.setSeg(line, p.cx + p.len / 2, p.cx - p.len / 2, p.y, p.op);
     shards.push(p);
@@ -97,7 +96,7 @@ function collapse(stage, tl) {
       duration: 0.62, ease: 'power3.in', onUpdate: p.write
     }, gatherAt + 0.045 * i);
     // Absorbed on arrival — an instant vanish into the core, not a fade.
-    tl.set(stage.frags[3 + i], { attr: { opacity: 0 } }, gatherAt + 0.045 * i + 0.63);
+    tl.set(stage.frags[4 + i], { attr: { opacity: 0 } }, gatherAt + 0.045 * i + 0.63);
   });
 
   // The luminous core grows with the arrivals; the disc snaps into being at
@@ -127,12 +126,13 @@ function condense(stage, tl) {
 
   // The fragments fuse into one continuous line — the unresolved half whole
   // for the first time, just before it becomes something else.
-  const whole = segProxy(stage, stage.frags[3], [1206, drain, 540, 0.3]);
+  const whole = { x1: 1206, x2: drain, o: 0.3 };
+  whole.write = () => stage.setSeg(stage.frags[4], whole.x1, whole.x2, 540, whole.o);
   tl.add(() => {
     whole.write();
-    stage.frags[3].setAttribute('opacity', '0');
+    stage.frags[4].setAttribute('opacity', '0');
   }, at);
-  tl.to(stage.frags[3], { attr: { opacity: 1 }, duration: 0.35, ease: 'power1.inOut' }, at + 0.02);
+  tl.to(stage.frags[4], { attr: { opacity: 1 }, duration: 0.35, ease: 'power1.inOut' }, at + 0.02);
   tl.to(stage.frags.slice(0, 3), // the gathered pieces yield to the whole
     { attr: { opacity: 0 }, duration: 0.3, ease: 'power1.in' }, at + 0.05);
 
@@ -157,19 +157,19 @@ function condense(stage, tl) {
     drainAt);
 
   const done = drainAt + DRAIN_DUR;
-  tl.to(stage.frags[3], { attr: { opacity: 0 }, duration: 0.3 }, done + 0.02);
+  tl.to(stage.frags[4], { attr: { opacity: 0 }, duration: 0.3 }, done + 0.02);
   landResiduals(stage, tl, done - 0.15);
   return done + 0.5;
 }
 
-// ---- 3 · POOL — light pooling before the disc resolves ---------------------
+// ---- 3 · POOL — light pooling before the disc resolves (THE BIRTH) ---------
 
 function pool(stage, tl) {
   const at = tl.duration();
   const gathered = stage.frags.slice(0, 3);
 
-  // The path's light drains out of it — the line dims toward a husk as its
-  // droplets leave.
+  // The path's light drains out of it — the thinning line dims toward a husk
+  // as its droplets leave: the C language carried to its end.
   tl.to(gathered, { attr: { opacity: 0.35 }, duration: 1.6, ease: 'power1.inOut' }, at);
 
   // Droplets: short bright dashes sliding down the line into the point,
@@ -217,19 +217,20 @@ const TREATMENTS = { 1: collapse, 2: condense, 3: pool };
 /**
  * Append the selected birth treatment to a timeline whose current end state is
  * the pre-birth substrate (figures in place, GATHER on the fragment pool). The
- * timeline finishes on the approved still exactly: its last act is the state
+ * timeline finishes on the approved cell exactly: its last act is the state
  * law itself.
  */
 export function playBirth(stage, treatment, tl) {
-  const play = TREATMENTS[treatment] || TREATMENTS[1];
+  const play = TREATMENTS[treatment] || TREATMENTS[3];
   const end = play(stage, tl);
   tl.add(() => stage.applyState(SCENE, 0), end);
   stage.birthTl = tl;
+  stage.tag('birth', tl);
   return tl;
 }
 
-/** The substrate, applied instantly: build 0 minus the mark, plus the gathered
- *  unresolved half. Every entry into the birth starts from this state. */
+/** The substrate, applied instantly: build 0 minus the mark and the remnant,
+ *  plus the gathered unresolved half. Every entry into the birth starts here. */
 export function applyPreBirth(stage) {
   stage.applyState(SCENE, 0);
   stage.markWrap.style.opacity = '0';
