@@ -55,7 +55,12 @@
       "decision": "D2",
       "caption": "Beat 3 · D2-A — the goods clustered at the surgeon’s side (patient recession D1-A: dimmed in place to the floor)",
       "ruling": "landed",
-      "rulingNote": "S2 beat 3 — D1-A (patient dimmed in place) + D2-A (goods clustered at the surgeon’s side)"
+      "rulingNote": "S2 beat 3 — D1-A (patient dimmed in place) + D2-A (goods clustered at the surgeon’s side)",
+      "reopened": {
+        "date": "2026-08-28",
+        "scope": "the path element only — the gapped attempt reads as a rendering defect in motion (D3-C rejected live)",
+        "note": "The composition (patient, surgeon, goods cluster) stands approved; the return path element is replaced by the r3 runtime candidates (?proto=gate2&path=1|2|3), judged live"
+      }
     },
     {
       "id": "s2-b3-b",
@@ -115,7 +120,12 @@
       "decision": "D3",
       "caption": "Beat 4 · D3-C — the stroke thins and dies before arriving (context: D2-A, D1-A)",
       "ruling": "landed",
-      "rulingNote": "S2 beat 4 — D3-C: the path-failure language is the thinning stroke, film-wide"
+      "rulingNote": "S2 beat 4 — D3-C: the path-failure language is the thinning stroke, film-wide",
+      "reopened": {
+        "date": "2026-08-28",
+        "scope": "the path element only — the stepped thinning reads as a rendering defect in motion (D3-C rejected live)",
+        "note": "The composition (patient, surgeon, goods cluster) stands approved; the failure element is replaced by the r3 runtime candidates (?proto=gate2&path=1|2|3), judged live"
+      }
     },
     {
       "id": "s2-b5-a",
@@ -181,7 +191,12 @@
       "decision": "D3",
       "caption": "Beat 1 · D3-C remnant — the stream thinning as the birth drinks it",
       "ruling": "landed",
-      "rulingNote": "S3 beat 1 — the carried birth frame with remnant language C (follows D3-C)"
+      "rulingNote": "S3 beat 1 — the carried birth frame with remnant language C (follows D3-C)",
+      "reopened": {
+        "date": "2026-08-28",
+        "scope": "the remnant only — the faded remnant at the birth reads as a rendering defect in motion (D3-C rejected live)",
+        "note": "The carried birth composition (figures, disc) stands approved; the remnant is replaced by the r3 runtime candidates (?proto=gate2&path=1|2|3), judged live"
+      }
     },
     {
       "id": "s3-b2",
@@ -514,5 +529,10 @@
       "No accent before the birth; the patient is photographic everywhere he appears"
     ],
     "component": "ClaimMark carrier context (27 Aug, from the legacy 4.05 reference markup): the disc sits centered between the carrier arcs, fully symmetric. Fixed in the component at r2; must hold at every scale of the Gate 1 sheet’s carrier row. No current Gate 2 state uses the carrier — the ruling protects Act II."
+  },
+  "rulingsR3": {
+    "date": "2026-08-28",
+    "recordedBy": "gate-2-r3 session, from the presenter’s live review of r2",
+    "d3InMotion": "REJECTED. Viewed live, the gapped attempt (S2 b3), the stepped thinning (S2 b4), and the faded remnant at the birth (S3 b1) all read as rendering defects, not as a path failing. Formally reopened: s2-b3-a’s path element, s2-b4-c, and s3-b1’s remnant — the path element within these states only; the compositions around them are NOT reopened. Replacements are judged live as runtime candidates (?proto=gate2&path=1|2|3); the presenter’s selection re-enters the approved record at the gate close. Binding principle for all candidates: no degraded stroke ever appears in a settled frame — failure is carried by motion, by absence, or by a medium that is not a line."
   }
 }

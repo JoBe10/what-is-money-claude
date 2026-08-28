@@ -200,3 +200,23 @@ propagates into the one selected cell whose receded context still carried the
 D3-A baseline: `s2-b5-b` re-renders with the thinning-stroke context in r2,
 recorded in `states.json` and flagged in the r2 report for the presenter's
 eye at the live review.
+
+---
+
+# 9. The r3 reopenings (appended 28 August 2026, by the r3 session)
+
+The presenter reviewed r2 live, as a viewer, per the r2 brief's §6, on
+28 August 2026. His rulings:
+
+**9.1 The D3-C failure language is rejected in motion.** Viewed live, the
+gapped attempt (S2 b3), the stepped thinning (S2 b4), and the faded remnant
+at the birth (S3 b1) all read as rendering defects, not as a path failing.
+**Formally reopened:** `s2-b3-a`'s path element, `s2-b4-c`, and `s3-b1`'s
+remnant — the path element within these states only. The compositions around
+them (patient, surgeon, goods cluster, disc) are NOT reopened. The
+replacements are three runtime-selectable failure languages
+(`?proto=gate2&path=1|2|3`), judged live; the selection re-enters the
+approved record at the gate close. Binding on every candidate: **no degraded
+stroke ever appears in a settled frame** — failure is carried by motion, by
+absence, or by a medium that is not a line. Recorded per cell in
+`states.json` (`reopened` blocks) and in its `rulingsR3` record.
