@@ -1,0 +1,112 @@
+{
+  "deck": {
+    "slides": 45,
+    "firstId": "1-01-eighty-thousand-hours"
+  },
+  "traversal": {
+    "forward": true,
+    "backward": true,
+    "states": 19
+  },
+  "directEntry": [
+    "1:0",
+    "1:1",
+    "1:2",
+    "1:3",
+    "1:4",
+    "2:0",
+    "2:1",
+    "2:2",
+    "2:3",
+    "2:4",
+    "2:5",
+    "2:6",
+    "2:7",
+    "2:8",
+    "3:0",
+    "3:1",
+    "3:2",
+    "3:3",
+    "3:4"
+  ],
+  "parity": [
+    {
+      "state": "1:0",
+      "identical": true
+    },
+    {
+      "state": "1:1",
+      "identical": true
+    },
+    {
+      "state": "1:2",
+      "identical": true
+    },
+    {
+      "state": "1:3",
+      "identical": true
+    },
+    {
+      "state": "1:4",
+      "identical": true
+    },
+    {
+      "state": "2:0",
+      "identical": true
+    },
+    {
+      "state": "2:1",
+      "identical": true
+    },
+    {
+      "state": "2:2",
+      "identical": true
+    },
+    {
+      "state": "2:3",
+      "identical": true
+    },
+    {
+      "state": "2:4",
+      "identical": true
+    },
+    {
+      "state": "2:5",
+      "identical": true
+    },
+    {
+      "state": "2:6",
+      "identical": true
+    },
+    {
+      "state": "2:7",
+      "identical": true
+    },
+    {
+      "state": "2:8",
+      "identical": true
+    },
+    {
+      "state": "3:0",
+      "identical": true
+    },
+    {
+      "state": "3:1",
+      "identical": true
+    },
+    {
+      "state": "3:2",
+      "identical": true
+    },
+    {
+      "state": "3:3",
+      "identical": true
+    },
+    {
+      "state": "3:4",
+      "identical": true
+    }
+  ],
+  "consoleErrors": [],
+  "path": 3
+}

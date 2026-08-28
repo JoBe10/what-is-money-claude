@@ -12,7 +12,9 @@
 //      states — the scene contract's parity clause checked mechanically, not
 //      by eye (the serializer is window.__gate2.state()).
 //
-// Usage: node smoke-gate2.cjs [--port 5273]
+// Usage: node smoke-gate2.cjs [--port 5273] [--path 1|2|3]
+//   --path (r3) selects the failure-language candidate; the suite runs once
+//   per value and writes smoke-gate2-p<path>.json.
 const { chromium } = require('playwright');
 const path = require('path');
 const fs = require('fs');
@@ -20,7 +22,9 @@ const fs = require('fs');
 const args = process.argv.slice(2);
 const flag = (n, d) => { const i = args.indexOf(n); return i > -1 ? args[i + 1] : d; };
 const PORT = flag('--port', '5273');
+const PATH_ID = flag('--path', '1');
 const BASE = `http://127.0.0.1:${PORT}`;
+const PROTO = `?proto=gate2&path=${PATH_ID}`;
 
 // (1-based slide, beats) in route order — S2 = 5, S3 = 9 (R1), S4 = 5.
 const SCENES = [[1, 5], [2, 9], [3, 5]];
@@ -61,7 +65,7 @@ const SCENES = [[1, 5], [2, 9], [3, 5]];
   console.log(`deck boots: ${result.deck.slides} slides, first ${result.deck.firstId}`);
 
   // ---- 2 · traversal, forward and backward ----
-  await page.goto(`${BASE}/?proto=gate2`, { waitUntil: 'networkidle' });
+  await page.goto(`${BASE}/${PROTO}`, { waitUntil: 'networkidle' });
   await page.waitForFunction(() => window.__deck && window.__gate2, null, { timeout: 30000 });
   await settled();
 
@@ -96,7 +100,7 @@ const SCENES = [[1, 5], [2, 9], [3, 5]];
   const enterCold = async (slide, build) => {
     for (let attempt = 1; ; attempt += 1) {
       try {
-        await page.goto(`${BASE}/?proto=gate2&slide=${slide}`, { waitUntil: 'domcontentloaded' });
+        await page.goto(`${BASE}/${PROTO}&slide=${slide}`, { waitUntil: 'domcontentloaded' });
         await page.waitForFunction(() => window.__deck, null, { timeout: 15000 });
         await page.evaluate(([i, b]) => {
           sessionStorage.setItem('deck-state', JSON.stringify({ slideIndex: i, buildStep: b }));
@@ -144,7 +148,8 @@ const SCENES = [[1, 5], [2, 9], [3, 5]];
   }
   console.log(`reduced-motion parity: ${result.parity.length - parityFailures}/${result.parity.length} identical`);
 
-  fs.writeFileSync(path.join(__dirname, 'smoke-gate2.json'), JSON.stringify(result, null, 2));
+  result.path = Number(PATH_ID);
+  fs.writeFileSync(path.join(__dirname, `smoke-gate2-p${PATH_ID}.json`), JSON.stringify(result, null, 2));
   console.log(`console errors: ${errors.length}`);
   errors.forEach((e) => console.log('ERR', e));
   await browser.close();
