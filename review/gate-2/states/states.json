@@ -386,7 +386,12 @@
       "decision": "D7",
       "caption": "Beat 2 · D7-B — the spend road taken: the claim traveled left and closed; the goods stand at the road’s end; the save road waits, dormant",
       "ruling": "landed",
-      "rulingNote": "S4 beat 2 — D7-B"
+      "rulingNote": "S4 beat 2 — D7-B",
+      "reopened": {
+        "date": "2026-08-28",
+        "scope": "the goods layout only — the three renders are too large and reach into the frame’s center (presenter markup)",
+        "note": "The markup: reduced uniform scale, a compact triangle within the spend terminal’s zone, wholly inside the frame’s left third, never crossing toward center; the legacy spend arrangement (ref-4-05-b2) studied for containment and modesty, not copied. The road grammar, kickers and the claim’s redemption motion stand. Replaced by s4-b2-b2 (direct markup, no candidates)"
+      }
     },
     {
       "id": "s4-b3-a",
@@ -533,6 +538,7 @@
   "rulingsR3": {
     "date": "2026-08-28",
     "recordedBy": "gate-2-r3 session, from the presenter’s live review of r2",
-    "d3InMotion": "REJECTED. Viewed live, the gapped attempt (S2 b3), the stepped thinning (S2 b4), and the faded remnant at the birth (S3 b1) all read as rendering defects, not as a path failing. Formally reopened: s2-b3-a’s path element, s2-b4-c, and s3-b1’s remnant — the path element within these states only; the compositions around them are NOT reopened. Replacements are judged live as runtime candidates (?proto=gate2&path=1|2|3); the presenter’s selection re-enters the approved record at the gate close. Binding principle for all candidates: no degraded stroke ever appears in a settled frame — failure is carried by motion, by absence, or by a medium that is not a line."
+    "d3InMotion": "REJECTED. Viewed live, the gapped attempt (S2 b3), the stepped thinning (S2 b4), and the faded remnant at the birth (S3 b1) all read as rendering defects, not as a path failing. Formally reopened: s2-b3-a’s path element, s2-b4-c, and s3-b1’s remnant — the path element within these states only; the compositions around them are NOT reopened. Replacements are judged live as runtime candidates (?proto=gate2&path=1|2|3); the presenter’s selection re-enters the approved record at the gate close. Binding principle for all candidates: no degraded stroke ever appears in a settled frame — failure is carried by motion, by absence, or by a medium that is not a line.",
+    "spendGoods": "s4-b2-b’s goods layout is reopened with an explicit markup: the three renders are too large and reach into the frame’s center. The fix is direct (no candidates): reduced uniform scale, a compact triangle within the spend terminal’s zone, wholly inside the frame’s left third. The legacy spend arrangement (ref-4-05-b2) is studied for containment and modesty, not copied. Re-rendered through the states pipeline as s4-b2-b2 beside the reopened original."
   }
 }

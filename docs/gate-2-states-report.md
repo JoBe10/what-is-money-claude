@@ -220,3 +220,12 @@ approved record at the gate close. Binding on every candidate: **no degraded
 stroke ever appears in a settled frame** — failure is carried by motion, by
 absence, or by a medium that is not a line. Recorded per cell in
 `states.json` (`reopened` blocks) and in its `rulingsR3` record.
+**9.2 The spend goods layout is reopened with an explicit markup.** In
+`s4-b2-b` the three goods renders are too large and reach into the frame's
+center. The fix is a direct markup, no candidates: the shoe, steak and wine
+at a reduced, uniform scale, arranged as a compact triangle within the spend
+terminal's zone — wholly inside the frame's left third, never crossing
+toward center. The legacy deck's spend arrangement (`ref-4-05-b2`) is the
+feel being pointed at (containment, modesty), not the geometry. The road
+grammar, the kickers and the claim's redemption motion stand. Re-rendered
+through the states pipeline as `s4-b2-b2.png` beside the reopened original.
