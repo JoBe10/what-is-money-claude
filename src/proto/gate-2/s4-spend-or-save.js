@@ -18,7 +18,11 @@
 // road.
 //
 // Landed states — approved cells, by construction (states.json rulings):
-// s4-b1-b · s4-b2-b · s4-b3-b · s4-b4-b · s4-b5-b.
+// s4-b1-b · s4-b3-b · s4-b4-b · s4-b5-b. Beat 2 lands on s4-b2-b2 — the
+// presenter's 28 August containment markup (goods at reduced uniform scale,
+// a compact triangle wholly inside the left third), rendered through the
+// states pipeline beside the reopened original; the claim's travel and
+// redemption motion are unchanged.
 
 import { GEOM } from './_stage.js';
 import { makeSceneModule } from './_scene.js';
@@ -116,6 +120,7 @@ const transitions = {
   // redeemed; the goods stand up at the road's end.
   1: (mod, stage) => {
     const tl = stage.timeline();
+    stage.tag('spend', tl);
     tl.to(stage.kickSave, { opacity: GEOM.kickDormant, duration: 0.5 }, 0.1);
     const rRight = roadProxy(stage.roadR, GEOM.roads.fork.right);
     tl.to(rRight, { o: GEOM.roads.spend.right, duration: 0.7, ease: 'power1.inOut', onUpdate: rRight.write }, 0.2);

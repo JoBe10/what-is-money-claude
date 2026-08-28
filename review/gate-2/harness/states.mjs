@@ -623,6 +623,21 @@ cell('s4-b2-b', {
   df(st, 'wine', 840, 740, 300, 225, { alt: 'The wine, arrived' });
 });
 
+cell('s4-b2-b2', {
+  beat: 'S4 beat 2', status: 'markup', decision: 'D7',
+  caption: 'Beat 2 · D7-B contained (presenter markup, 28 Aug) — the goods at reduced uniform scale, a compact triangle wholly inside the left third; the road grammar and the claim’s redemption unchanged. Replaces the reopened s4-b2-b layout'
+}, (st) => {
+  s4RoadsB(st, { left: 0.45, right: 0.15, leftDot: 0.85, rightDot: 0.3 });
+  kicker(st, 'SPEND', 390, 690);
+  kicker(st, 'SAVE', 1530, 690, 0.4);
+  // The markup: uniform 188×141 (62.7% of the reopened scale), a compact
+  // triangle echoing the S2 cluster's pose, every right edge ≤ 600 — wholly
+  // inside the frame's left third, never crossing toward center.
+  df(st, 'shoe', 178, 726, 188, 141, { alt: 'Shoes, arrived' });
+  df(st, 'meal', 412, 726, 188, 141, { alt: 'The dinner, arrived' });
+  df(st, 'wine', 295, 880, 188, 141, { alt: 'The wine, arrived' });
+});
+
 cell('s4-b3-a', {
   beat: 'S4 beat 3', status: 'candidate', decision: 'D7',
   caption: 'Beat 3 · D7-A — the reset: the spend road is spent and gone; the claim is held again; the other road waits'

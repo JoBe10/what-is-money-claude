@@ -63,7 +63,12 @@ export const GEOM = {
   goodsCluster: { shoe: [690, 140, 260, 195], meal: [960, 160, 260, 195], wine: [825, 360, 260, 195] },
   clusterO: 0.45,
   shoeDemo: [1420, 427, 300, 225],          // s3-b7-b — the shoes, arriving
-  goodsSpendB: { shoe: [180, 740, 300, 225], meal: [510, 755, 300, 225], wine: [840, 740, 300, 225] }, // s4-b2-b
+  // s4-b2-b2 (presenter markup, 28 Aug): reduced uniform scale, a compact
+  // triangle within the spend terminal's zone, wholly inside the left third
+  // (every right edge ≤ 600 < 640) — echoing the S2 cluster's own pose
+  // (shoe/meal above, wine below-center), contained and modest per the
+  // legacy ref-4-05-b2's feel.
+  goodsSpendB: { shoe: [178, 726, 188, 141], meal: [412, 726, 188, 141], wine: [295, 880, 188, 141] },
 
   // The service path (s2-b1-a) and the delivery (s2-b2).
   service: { x1: 820, x2: 1100, y: 620, o: 0.35, w: 1.5, dotR: 3.5, dotO: 0.7 },
