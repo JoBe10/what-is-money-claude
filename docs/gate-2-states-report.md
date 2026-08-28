@@ -229,3 +229,10 @@ toward center. The legacy deck's spend arrangement (`ref-4-05-b2`) is the
 feel being pointed at (containment, modesty), not the geometry. The road
 grammar, the kickers and the claim's redemption motion stand. Re-rendered
 through the states pipeline as `s4-b2-b2.png` beside the reopened original.
+**9.3 Closed from the live review by absence of objection.** The claim's
+micro-motions (the first-breath pulse, the release breath) are **kept — R5
+is closed.** The S2 entry is **accepted** and the presenter's original
+temperature concern is **resolved — D8 is closed.**
+
+**9.4 The gate remains open;** it closes only on the presenter's recorded
+word after r3.
