@@ -1,14 +1,15 @@
-// Prototype Gate 2 r2 — Scene 3, The Breakthrough (9 beats). The heart of the
-// film.
+// Prototype Gate 2 r2/r3 — Scene 3, The Breakthrough (9 beats). The heart of
+// the film.
 //
 // Scene 2 morphs into this scene — same stage, no cut: the binding line
-// yields, the figures re-gather, the failure's thinning remains rise into the
-// unresolved half, and the birth consumes it. The birth is the film's first
-// orange and it is **pool** (presenter-ruled 26 August 2026, R3); condense is
-// the named banked alternate and all three treatments stay runtime-selectable
-// (`?birth=1|2|3`, or keys 1/2/3 while this scene is on stage). The claim's
-// micro-motions — the pulse as the contraction completes, the breath at the
-// release — are KEPT into r2 to be judged in motion (R5).
+// yields, the figures re-gather, the receded record rises into the selected
+// failure candidate's substrate (r3: `?path=1|2|3`), and the birth consumes
+// it. The birth is the film's first orange and it is **pool** (presenter-
+// ruled 26 August 2026, R3); condense is the named banked alternate and all
+// three treatments stay runtime-selectable (`?birth=1|2|3`, or keys 1/2/3
+// while this scene is on stage). The claim's micro-motions — the pulse as
+// the contraction completes, the breath at the release — are KEPT (R5,
+// closed 28 August 2026).
 //
 // The interval's three names are each their own advance (R1: S3 is 9 beats);
 // the completion demonstration is D5-B — two phases in one frame: the claim
@@ -17,12 +18,13 @@
 // recorded handoff to clean black before the separation lines land (D4-A).
 //
 // Landed states — approved cells, by construction (states.json rulings):
-// s3-b1-c · s3-b2 · s3-b3 · s3-b4-a · s3-b5-a · s3-b6-a · s3-b7-b ·
-// s3-b8-a · s3-b9-a.
+// s3-b2 · s3-b3 · s3-b4-a · s3-b5-a · s3-b6-a · s3-b7-b · s3-b8-a · s3-b9-a.
+// Beat 1's remnant is presenter-reopened (rulingsR3): the carried birth
+// composition stands, and the remnant renders the selected r3 candidate.
 
 import { GEOM, reducedMotion } from './_stage.js';
 import { makeSceneModule } from './_scene.js';
-import { playBirth, applyPreBirth, GATHER, BIRTH_KEYS, BIRTH_NAMES } from './_birth.js';
+import { playBirth, applyPreBirth, fadeSubstrateIn, BIRTH_KEYS, BIRTH_NAMES } from './_birth.js';
 
 const ID = 'the-breakthrough';
 const HELD_SCALE = GEOM.markHeld[2] / GEOM.MARK_BASE;
@@ -36,16 +38,15 @@ function readBirthParam() {
 
 // The morph from Scene 2: the statement has said what it came to say; the
 // frame returns to full voice for the birth; the figures re-gather at the
-// birth's composition; the failure's thinning remains rise into the
-// unresolved half — the same dying line, gathered for what happens to it
-// next — and the birth consumes it.
+// birth's composition; the receded record rises into the corridor and
+// becomes the selected candidate's substrate — the unresolved half, gathered
+// for what happens to it next — and the birth consumes it.
 function morphIn(mod, stage) {
   stage.applyState('the-direct-exchange', 4);   // the deterministic launch point
   const tl = stage.timeline();
 
   tl.to(stage.stmt, { opacity: 0, duration: 0.4 }, 0);
   tl.to([stage.shoe, stage.meal, stage.wine], { opacity: 0, duration: 0.5, stagger: 0.05 }, 0.1);
-  tl.to(stage.fragDotEl, { attr: { opacity: 0 }, duration: 0.4 }, 0.35);
 
   // Re-gather: both figures come back to full presence at the birth frame —
   // the claim is about to detach *from* this pair, so the frame belongs to
@@ -61,67 +62,130 @@ function morphIn(mod, stage) {
     opacity: 1, duration: 1.05, ease: 'power2.inOut'
   }, 0.45);
 
-  // The failure's remains rise into the corridor: the receded thin spans
-  // lift from the failure line to the birth's height and gather into the
-  // unresolved half — still speaking C, still dying leftward. Spans 0/2/4
-  // carry the mass to the three gathered pieces; 1/3/5 are absorbed en route.
-  GEOM.thinSpans.forEach((from, i) => {
-    const line = stage.frags[i];
-    if (i % 2 === 1) {
-      tl.to(line, { attr: { opacity: 0 }, duration: 0.6 }, 0.75);
-      return;
-    }
-    const to = GATHER[i / 2];
-    const p = { x1: from[0], x2: from[1], y: from[2], o: from[3] * GEOM.b5.fail, w: from[4] };
-    tl.to(p, {
-      x1: to[0], x2: to[1], y: to[2], o: to[3], w: to[4],
-      duration: 1.05, ease: 'power2.inOut',
-      onUpdate: () => stage.setSeg(line, p.x1, p.x2, p.y, p.o, p.w)
-    }, 0.6);
-  });
-  // The gathered pieces move onto the pool lines the treatments expect.
-  tl.add(() => {
-    stage.setFrags(GATHER);
-  }, 1.75);
-
+  liftSubstrate(stage, tl);
   playBirth(stage, mod._birth, tl);
 }
 
-// Cold entry: the substrate assembles quickly — figures, the gathered
-// unresolved half — and the selected treatment plays. This is also the replay
-// path for the 1/2/3 selector.
+// The b5 record rises into the corridor as the selected candidate's
+// substrate. The record itself still speaks the approved D3-C (s2-b5-b is
+// not reopened); what it BECOMES is the candidate's — and from here on no
+// degraded stroke survives into any settled frame.
+function liftSubstrate(stage, tl) {
+  const R = GEOM.pathReach;
+  const A = GEOM.pathAbsence;
+  const F = GEOM.pathFlow;
+  if (stage.path === 1) {
+    // The spans fuse into the reach's record — one clean, full-weight short
+    // stroke at the birth's height; the terminal dot comes home to the
+    // patient's edge, and the stroke's honest end takes its dot.
+    GEOM.thinSpans.forEach((from, i) => {
+      const line = stage.frags[i];
+      if (i > 0) {
+        tl.to(line, { attr: { opacity: 0 }, duration: 0.6 }, 0.7);
+        return;
+      }
+      const p = { x1: from[0], x2: from[1], y: from[2], o: from[3] * GEOM.b5.fail, w: from[4] };
+      tl.to(p, {
+        x1: R.sub[0], x2: R.sub[1], y: R.sub[2], o: R.sub[3], w: R.sub[4],
+        duration: 1.05, ease: 'power2.inOut',
+        onUpdate: () => stage.setSeg(line, p.x1, p.x2, p.y, p.o, p.w)
+      }, 0.6);
+    });
+    const d = { x: GEOM.attemptDot[0], y: GEOM.attemptDot[1], o: GEOM.attemptDot[3] * GEOM.b5.fail };
+    const wd = () => stage.setDot(stage.fragDotEl, d.x, d.y, R.remOrigin[2], d.o);
+    tl.to(d, { x: R.remOrigin[0], y: R.remOrigin[1], o: R.remOrigin[3],
+      duration: 1.05, ease: 'power2.inOut', onUpdate: wd }, 0.6);
+    tl.add(() => {
+      stage.setDot(stage.reachDot, ...R.subEnd);
+      stage.reachDot.setAttribute('opacity', '0');
+    }, 1.55);
+    tl.to(stage.reachDot, { attr: { opacity: 1 }, duration: 0.3 }, 1.6);
+    tl.add(() => stage.setFrags([R.sub]), 1.75);
+  } else if (stage.path === 2) {
+    // The record's light goes home: every span slides back into the terminal
+    // dot and is absorbed — no line exists before the birth. The dot carries
+    // the gathered light to the patient's edge at the birth's height.
+    GEOM.thinSpans.forEach((from, i) => {
+      const line = stage.frags[i];
+      const p = { x1: from[0], x2: from[1], y: from[2], o: from[3] * GEOM.b5.fail };
+      const dur = 0.9 + 0.06 * i;
+      tl.to(p, {
+        x1: A.subDot[0], x2: A.subDot[0] - 5, y: A.subDot[1], o: 0.05,
+        duration: dur, ease: 'power2.in',
+        onUpdate: () => stage.setSeg(line, p.x1, p.x2, p.y, p.o, from[4])
+      }, 0.6 + 0.05 * i);
+      tl.set(line, { attr: { opacity: 0 } }, 0.6 + 0.05 * i + dur + 0.01);
+    });
+    const d = { x: GEOM.attemptDot[0], y: GEOM.attemptDot[1], o: GEOM.attemptDot[3] * GEOM.b5.fail };
+    const wd = () => stage.setDot(stage.fragDotEl, d.x, d.y, A.subDot[2], d.o);
+    tl.to(d, { x: A.subDot[0], y: A.subDot[1], o: A.subDot[3],
+      duration: 1.15, ease: 'power2.inOut', onUpdate: wd }, 0.6);
+    tl.add(() => stage.setFrags([]), 2.15);
+  } else {
+    // The record softens into light: the spans dissolve as the stream's
+    // residue forms at the birth's height — a medium that is not a line.
+    tl.to(stage.frags.slice(0, 6), { attr: { opacity: 0 }, duration: 0.8, ease: 'power1.inOut' }, 0.65);
+    tl.to(stage.fragDotEl, { attr: { opacity: 0 }, duration: 0.6 }, 0.7);
+    const p = { w: F.sub[2] * 0.5, o: 0 };
+    const wdr = () => stage.setDrift([F.sub[0], F.sub[1], p.w, F.sub[3], p.o]);
+    tl.add(wdr, 0.8);
+    tl.to(p, { w: F.sub[2], o: F.sub[4], duration: 0.9, ease: 'power1.inOut', onUpdate: wdr }, 0.85);
+    tl.add(() => stage.setFrags([]), 1.8);
+  }
+}
+
+// Cold entry: the substrate assembles quickly — figures, the selected
+// candidate's unresolved half — and the selected treatment plays. This is
+// also the replay path for the 1/2/3 selector.
 function entry(mod, stage) {
   applyPreBirth(stage);
   stage.patient.style.opacity = '0';
   stage.surgeon.style.opacity = '0';
-  const gathered = stage.frags.slice(0, GATHER.length);
-  gathered.forEach((line) => line.setAttribute('opacity', '0'));
   const tl = stage.timeline();
   tl.to(stage.surgeon, { opacity: 1, duration: 0.6 }, 0);
   tl.to(stage.patient, { opacity: 1, duration: 0.6 }, 0.15);
-  gathered.forEach((line, i) => {
-    tl.to(line, { attr: { opacity: 1 }, duration: 0.5 }, 0.3 + 0.1 * i);
-  });
+  fadeSubstrateIn(stage, tl, 0.3);
   playBirth(stage, mod._birth, tl);
 }
 
 const transitions = {
   // beat 2 — nobody decided, everyone converged: the contraction completes.
-  // The remnant stream is drunk span by span, nearest first, and the claim
-  // answers with its micro-pulse — its first breath (kept per R5).
+  // The candidate's remnant is drunk, and the claim answers with its
+  // micro-pulse — its first breath (kept per R5, closed 28 Aug).
   1: (mod, stage) => {
     const tl = stage.timeline();
     const edge = GEOM.markBirth[0] + GEOM.markBirth[2] / 2;
-    [3, 2, 1, 0].forEach((i, k) => {
-      const from = GEOM.remnantC[i];
-      const p = { x1: from[0], x2: from[1], o: from[3], w: from[4] };
-      tl.to(p, {
-        x1: edge + 8, x2: edge + 2, o: 0.5, w: Math.max(from[4], 1),
-        duration: 0.5, ease: 'power2.in',
-        onUpdate: () => stage.setSeg(stage.frags[i], p.x1, p.x2, from[2], p.o, p.w)
-      }, 0.15 + 0.16 * k);
-      tl.set(stage.frags[i], { attr: { opacity: 0 } }, 0.15 + 0.16 * k + 0.51);
-    });
+    if (stage.path === 1) {
+      // The clean short stroke is drunk whole: it slides into the disc's
+      // edge full-weight to the last, its terminal dot riding in with it.
+      const R = GEOM.pathReach;
+      const s = { x1: R.rem[0], x2: R.rem[1], o: R.rem[3] };
+      const ws = () => stage.setSeg(stage.frags[0], s.x1, s.x2, R.rem[2], s.o, R.rem[4]);
+      tl.to(s, { x1: edge + 10, x2: edge + 2, o: 0.5, duration: 0.75, ease: 'power2.in', onUpdate: ws }, 0.3);
+      tl.set(stage.frags[0], { attr: { opacity: 0 } }, 1.06);
+      const de = { x: R.remEnd[0] };
+      const wde = () => stage.setDot(stage.reachDot, de.x, R.remEnd[1], R.remEnd[2], R.remEnd[3]);
+      tl.to(de, { x: edge + 2, duration: 0.72, ease: 'power2.in', onUpdate: wde }, 0.3);
+      tl.set(stage.reachDot, { attr: { opacity: 0 } }, 1.04);
+      tl.to(stage.fragDotEl, { attr: { opacity: 0 }, duration: 0.45 }, 0.75);
+    } else if (stage.path === 2) {
+      // The void's last light: one quiet streak crosses from the dot's edge
+      // into the disc, and the dot lets go.
+      const A = GEOM.pathAbsence;
+      const g = { x: A.remDot[0] - 6, r: 2.2, o: 0 };
+      const wg = () => stage.setPulse(g.x, A.remDot[1], g.r, g.o);
+      tl.add(wg, 0.3);
+      tl.to(g, { o: 0.55, duration: 0.2, onUpdate: wg }, 0.3);
+      tl.to(g, { x: edge + 2, r: 1.3, duration: 0.6, ease: 'power1.in', onUpdate: wg }, 0.4);
+      tl.to(g, { o: 0, duration: 0.12, onUpdate: wg }, 1.0);
+      tl.to(stage.fragDotEl, { attr: { opacity: 0 }, duration: 0.6, ease: 'power1.inOut' }, 0.55);
+    } else {
+      // The residue is drunk: the drift leans into the disc and is gone.
+      const F = GEOM.pathFlow;
+      const dr = { cx: F.rem[0], w: F.rem[2], o: F.rem[4] };
+      const wdr = () => stage.setDrift([dr.cx, F.rem[1], dr.w, F.rem[3], dr.o]);
+      tl.to(dr, { cx: edge + 24, w: 70, o: 0, duration: 0.85, ease: 'power2.in', onUpdate: wdr }, 0.3);
+    }
     tl.to(stage.markWrap, { scale: 1.022, duration: 0.45, ease: 'sine.inOut', yoyo: true, repeat: 1 }, 0.95);
     tl.add(() => stage.applyState(ID, 1), 2.1);
   },

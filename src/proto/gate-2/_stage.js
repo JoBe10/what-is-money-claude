@@ -1,5 +1,5 @@
-// Prototype Gate 2 — motion r2: the shared stage for Scenes 2–4
-// (docs/gate-2-r2-brief.md).
+// Prototype Gate 2 — motion r2/r3: the shared stage for Scenes 2–4
+// (docs/gate-2-r2-brief.md, docs/gate-2-r3-brief.md).
 //
 // One continuous visual world: three scene modules share this one stage object,
 // cached on the engine's container across within-group handoffs, so the morphs
@@ -21,16 +21,23 @@
 // is the beat-state sheet. Every rect, coordinate, opacity and stroke width in
 // GEOM is transcribed from review/gate-2/harness/states.mjs — the builders
 // that rendered the approved cells (states.json records the presenter's 27
-// August rulings) — so all 19 settled states match the approved cells by
-// construction. The landed-state proof (review/gate-2/harness/proof-r2.cjs)
+// August rulings) — so the settled states match the approved cells by
+// construction. The landed-state proof (review/gate-2/harness/proof-r3.cjs)
 // then proves it mechanically, pixel against pixel. Derivation is banned:
-// nothing settled here exists outside an approved cell.
+// nothing settled here exists outside an approved cell, WITH r3's one ruled
+// exception: the presenter reopened the path element at S2 b3, S2 b4 and
+// S3 b1 (states.json `rulingsR3`) plus s4-b2-b's goods layout; those sites
+// render the r3 replacements — the three runtime path candidates and the
+// contained goods markup — judged live, entering the approved record at the
+// gate close.
 //
-// The approved state set (states.json `rulings.approvedSet`):
+// The approved state set (states.json `rulings.approvedSet`, r3 reopenings
+// in `rulingsR3`):
 //   S2  b1 s2-b1-a · b2 s2-b2 · b3 s2-b3-a · b4 s2-b4-c · b5 s2-b5-b
 //   S3  b1 s3-b1-c · b2 s3-b2 · b3 s3-b3 · b4 s3-b4-a · b5 s3-b5-a
 //       b6 s3-b6-a · b7 s3-b7-b · b8 s3-b8-a · b9 s3-b9-a
-//   S4  b1–b5 s4-b1-b … s4-b5-b (system B throughout)
+//   S4  b1–b5 s4-b1-b … s4-b5-b (system B throughout; b2's goods contained
+//       per the 28 Aug markup → s4-b2-b2)
 
 import { gsap } from 'gsap';
 import { DarkFieldImage } from '../../components/DarkField.js';
@@ -65,21 +72,57 @@ export const GEOM = {
   // The capabilities list (s2-b1-a full voice, s2-b2 settled to the floor).
   caps: { x: 790, y: 255, w: 340, gap: 12, full: 0.75, floor: 0.41 },
 
-  // The return attempt (s2-b3-a): the dot leaves the patient's near edge and
-  // the path probes toward the surgeon in two lunges.
+  // The return terminal at the patient's near edge (carried from the sheet;
+  // s2-b5-b's receded record still anchors on it).
   attemptDot: [1170, 620, 3, 0.5],
-  attempt: [[1165, 1065, 620, 0.35, 1.5], [1043, 1000, 620, 0.28, 1.5]],
 
-  // The failure in language C (s2-b4-c, D3-C film-wide): the stroke thins and
-  // dies before arriving. [x1, x2, y, opacity, width], right to left.
+  // The receded failure record of the APPROVED s2-b5-b (still D3-C — that
+  // cell is not reopened; its context follows the presenter's path selection
+  // at the gate close). [x1, x2, y, opacity, width], right to left.
   thinSpans: [[1165, 1105, 620, 0.38, 2.2], [1105, 1045, 620, 0.33, 1.9],
               [1045, 985, 620, 0.27, 1.5], [985, 925, 620, 0.2, 1.1],
               [925, 865, 620, 0.13, 0.7], [865, 805, 620, 0.07, 0.4]],
 
-  // The birth's remnant stream in language C (s3-b1-c): the stream thinning
-  // as the birth drinks it.
-  remnantC: [[1206, 1140, 540, 0.3, 1.8], [1140, 1074, 540, 0.25, 1.5],
-             [1074, 1010, 540, 0.18, 1.1], [1010, 950, 540, 0.1, 0.6]],
+  // ---- r3: the three failure languages (docs/gate-2-r3-brief.md §2) ----
+  // The reopened path element at its three sites — S2 b3, S2 b4, S3 b1 — as
+  // three runtime-selectable candidates (?proto=gate2&path=1|2|3), each
+  // consistent across its sites. Binding on all three: NO degraded stroke in
+  // any settled frame — no gaps, no stepped fades, no thinning. Failure is
+  // carried by motion, by absence, or by a medium that is not a line.
+  // Settled values only here; motion targets live with the gestures.
+
+  // path=1 — THE REACH. The stroke is always clean and full-weight; in
+  // motion it extends, halts short, and withdraws part of the way. Settled:
+  // a whole short stroke with a terminal dot, authored black beyond it.
+  // [x1, x2, y, opacity, width] strokes; [x, y, r, opacity] dots.
+  pathReach: {
+    origin: [1170, 620, 3, 0.5],                // the return terminal
+    b3: [1165, 1040, 620, 0.35, 1.6], b3End: [1040, 620, 2.6, 0.55], b3Far: 985,
+    b4: [1165, 1085, 620, 0.35, 1.6], b4End: [1085, 620, 2.6, 0.55], b4Far: 880,
+    remOrigin: [1206, 540, 3, 0.5],
+    rem: [1201, 1132, 540, 0.3, 1.6], remEnd: [1132, 540, 2.4, 0.5],
+    // the pre-birth substrate: the reach's record, risen and gathered
+    sub: [1201, 1015, 540, 0.3, 1.6], subEnd: [1015, 540, 2.4, 0.5]
+  },
+
+  // path=2 — THE ABSENCE. No return line exists before the birth; the
+  // service path stays whole and the return direction is only the terminal
+  // dot, which strains in motion and subsides. [x, y, r, opacity].
+  pathAbsence: {
+    b3Dot: [1170, 620, 3, 0.55],
+    b4Dot: [1170, 620, 3, 0.4],
+    remDot: [1206, 540, 3, 0.4],
+    subDot: [1206, 540, 3, 0.7]                 // the light gathered home, pre-strain
+  },
+
+  // path=3 — THE FLOW. A faint warm stream in the pool's family; settled
+  // frames show only a dim residual drift, no geometry. [cx, cy, w, h, o].
+  pathFlow: {
+    b3: [990, 620, 300, 34, 0.5],
+    b4: [940, 620, 380, 34, 0.4],
+    rem: [1090, 540, 220, 30, 0.45],
+    sub: [1060, 540, 320, 32, 0.5]
+  },
 
   // The b5 recede (s2-b5-b, D4-B): per-element, the two people the anchor.
   b5: { surgeon: 0.5, patient: 0.38, goods: 0.12, fail: 0.35, stmtY: 815 },
@@ -154,10 +197,51 @@ const FRAG_POOL = 16;
 // --------------------------------------------------------------- settled states
 //
 // The 19 builds as complete declarative states — each one an approved cell of
-// the beat-state sheet, named in its annotation. `null` / absent = off stage.
-// Goods entries are [rect, opacity]; frag entries are [x1, x2, y, o, w].
+// the beat-state sheet, named in its annotation, EXCEPT the three
+// presenter-reopened path-element sites (S2 b3, S2 b4, S3 b1), whose path
+// element renders the selected r3 candidate — judged live, entering the
+// approved record at the gate close. `null` / absent = off stage. Goods
+// entries are [rect, opacity]; frag entries are [x1, x2, y, o, w].
 
-const STATES = {
+export const PATH_NAMES = { 1: 'reach', 2: 'absence', 3: 'flow' };
+
+export function readPathParam() {
+  const q = (new URLSearchParams(window.location.search).get('path') || '').toLowerCase();
+  if (['1', '2', '3'].includes(q)) return Number(q);
+  const byName = Object.entries(PATH_NAMES).find(([, name]) => name === q);
+  return byName ? Number(byName[0]) : 1;
+}
+
+function buildStates(path) {
+  const R = GEOM.pathReach;
+  const A = GEOM.pathAbsence;
+  const F = GEOM.pathFlow;
+  // The wants context — patient dimmed in place (D1-A), goods clustered at
+  // the surgeon's side (D2-A) — approved, NOT reopened, shared by b3 and b4.
+  const wants = {
+    surgeon: [GEOM.surgeonS2, 1], patient: [GEOM.patientS2, 0.55],
+    goods: { shoe: [GEOM.goodsCluster.shoe, GEOM.clusterO], meal: [GEOM.goodsCluster.meal, GEOM.clusterO], wine: [GEOM.goodsCluster.wine, GEOM.clusterO] }
+  };
+  // The reopened path element per candidate, at each of its three sites.
+  const site = {
+    1: { // the reach — a whole clean stroke, halted short, with its terminal dot
+      b3: { fragDot: [R.origin, 1], frags: [R.b3], reachDot: R.b3End },
+      b4: { fragDot: [R.origin, 1], frags: [R.b4], reachDot: R.b4End },
+      rem: { fragDot: [R.remOrigin, 1], frags: [R.rem], reachDot: R.remEnd }
+    },
+    2: { // the absence — the service path whole, the return only a terminal dot
+      b3: { service: true, fragDot: [A.b3Dot, 1] },
+      b4: { service: true, fragDot: [A.b4Dot, 1] },
+      rem: { fragDot: [A.remDot, 1] }
+    },
+    3: { // the flow — a dim residual drift, no geometry
+      b3: { drift: F.b3 },
+      b4: { drift: F.b4 },
+      rem: { drift: F.rem }
+    }
+  }[path];
+
+  return {
   'the-direct-exchange': [
     // beat 1 — s2-b1-a: the assembled stage, capabilities at full voice (R2).
     { surgeon: [GEOM.surgeonS2, 1], patient: [GEOM.patientS2, 1],
@@ -166,19 +250,16 @@ const STATES = {
     // capabilities settled to the floor.
     { surgeon: [GEOM.surgeonS2, 1], patient: [GEOM.patientS2, 1],
       service: true, caps: GEOM.caps.floor, delivery: true },
-    // beat 3 — s2-b3-a: the frame turns to the surgeon's wants. The patient
-    // dimmed in place (D1-A), the goods clustered at his side (D2-A), the
-    // return path attempting in two lunges.
-    { surgeon: [GEOM.surgeonS2, 1], patient: [GEOM.patientS2, 0.55],
-      goods: { shoe: [GEOM.goodsCluster.shoe, GEOM.clusterO], meal: [GEOM.goodsCluster.meal, GEOM.clusterO], wine: [GEOM.goodsCluster.wine, GEOM.clusterO] },
-      fragDot: [GEOM.attemptDot, 1], frags: GEOM.attempt },
-    // beat 4 — s2-b4-c: the failure — the stroke thins and dies before
-    // arriving (D3-C, film-wide).
-    { surgeon: [GEOM.surgeonS2, 1], patient: [GEOM.patientS2, 0.55],
-      goods: { shoe: [GEOM.goodsCluster.shoe, GEOM.clusterO], meal: [GEOM.goodsCluster.meal, GEOM.clusterO], wine: [GEOM.goodsCluster.wine, GEOM.clusterO] },
-      fragDot: [GEOM.attemptDot, 1], frags: GEOM.thinSpans },
+    // beat 3 — the frame turns to the surgeon's wants (context approved);
+    // the return attempt speaks the selected candidate (reopened element).
+    { ...wants, ...site.b3 },
+    // beat 4 — the failure that sets up the statement, in the selected
+    // candidate (reopened element; the harder, second try).
+    { ...wants, ...site.b4 },
     // beat 5 — s2-b5-b: the binding line; authored partial recede, the two
-    // people the statement's anchor (D4-B; failure context D3-C per ruling).
+    // people the statement's anchor (D4-B). NOT reopened: the receded
+    // failure record still speaks D3-C exactly as approved; it follows the
+    // presenter's path selection at the gate close.
     { surgeon: [GEOM.surgeonS2, GEOM.b5.surgeon], patient: [GEOM.patientS2, GEOM.b5.patient],
       goods: { shoe: [GEOM.goodsCluster.shoe, GEOM.b5.goods], meal: [GEOM.goodsCluster.meal, GEOM.b5.goods], wine: [GEOM.goodsCluster.wine, GEOM.b5.goods] },
       fragDot: [GEOM.attemptDot, GEOM.b5.fail],
@@ -186,10 +267,10 @@ const STATES = {
       stmt: { y: GEOM.b5.stmtY, text: COPY.binding } }
   ],
   'the-breakthrough': [
-    // beat 1 — s3-b1-c: the birth, mid-contraction, the remnant stream
-    // thinning as the birth drinks it (language C).
+    // beat 1 — the carried birth frame, mid-contraction; the remnant is the
+    // selected candidate's (reopened element).
     { surgeon: [GEOM.surgeonS3, 1], patient: [GEOM.patientS3, 1],
-      frags: GEOM.remnantC, mark: GEOM.markBirth },
+      mark: GEOM.markBirth, ...site.rem },
     // beat 2 — s3-b2: the contraction complete; the claim held between them.
     { surgeon: [GEOM.surgeonS3, 1], patient: [GEOM.patientS3, 1], mark: GEOM.markBirth },
     // beat 3 — s3-b3: the patient released; the darkness where he was.
@@ -241,7 +322,12 @@ const STATES = {
       stmtDim: { y: 790, text: COPY.spendCloses },
       stmt: { y: 872, text: COPY.saveKeeps } }
   ]
-};
+  };
+}
+
+// The default table (path=1) — the source of the build counts, which are
+// identical across the three candidates.
+const STATES = buildStates(1);
 
 export const TOTAL_BUILDS = {
   'the-direct-exchange': STATES['the-direct-exchange'].length - 1,
@@ -259,6 +345,11 @@ class Gate2Stage {
     this.tagged = {};        // named gestures the capture harness can watch
     this.scene = null;
     this.build = 0;
+    // The failure-language candidate under judgment (r3). The presenter
+    // selects live via ?path=1|2|3; the state law renders the selected
+    // candidate at its three reopened sites and nothing else.
+    this.path = readPathParam();
+    this.states = buildStates(this.path);
     this._build();
   }
 
@@ -299,10 +390,13 @@ class Gate2Stage {
     this.service = { line: this._line(), d1: this._dot(), d2: this._dot() };
     this.deliveryEls = [this._dot(), this._dot()];
 
-    // The return path's fragment pool — every configuration of the attempting
-    // / thinning / remnant path is some subset of these lines.
+    // The return path's fragment pool — every line configuration of the
+    // return element (candidate strokes, the b5 record, motion transients)
+    // is some subset of these lines.
     this.frags = Array.from({ length: FRAG_POOL }, () => this._line());
     this.fragDotEl = this._dot();
+    // The reach's terminal dot (path=1): the honest end of the halted stroke.
+    this.reachDot = this._dot();
 
     // Scene 4's two mirrored roads with their dot terminals (system B).
     this.roadL = this._path(GEOM.roadLeft);
@@ -385,6 +479,26 @@ class Gate2Stage {
       'background:radial-gradient(ellipse, rgba(253,233,212,0.1) 0%, rgba(253,233,212,0.035) 45%, rgba(253,233,212,0) 72%);';
     gsap.set(this.wash, { xPercent: -50, yPercent: -50 });
     scene.appendChild(this.wash);
+
+    // The flow's residual drift (path=3) — the one settled element of the
+    // candidate whose medium is not a line: a dim warm streak in the pool's
+    // family. It sits over the photographs (light falls on the scene) and
+    // under the mark. Warm white; no accent exists before the birth.
+    this.drift = document.createElement('div');
+    this.drift.style.cssText = 'position:absolute; opacity:0; pointer-events:none;' +
+      'border-radius:50%; background:radial-gradient(closest-side,' +
+      'rgba(253,233,212,0.5) 0%, rgba(253,233,212,0.16) 55%, rgba(253,233,212,0) 100%);';
+    gsap.set(this.drift, { xPercent: -50, yPercent: -50 });
+    scene.appendChild(this.drift);
+
+    // The flow's traveling head — motion-only: the stream's bright leading
+    // light while it flows; it disperses and never settles.
+    this.flowHead = document.createElement('div');
+    this.flowHead.style.cssText = 'position:absolute; width:44px; height:44px;' +
+      'border-radius:50%; opacity:0; pointer-events:none;' +
+      'background:radial-gradient(circle, rgba(253,233,212,0.9) 0%, rgba(253,233,212,0.3) 45%, rgba(253,233,212,0) 70%);';
+    gsap.set(this.flowHead, { xPercent: -50, yPercent: -50 });
+    scene.appendChild(this.flowHead);
 
     const stmts = document.createElement('div');
     stmts.style.cssText = 'position:absolute; inset:0; pointer-events:none;';
@@ -524,6 +638,20 @@ class Gate2Stage {
     dot.removeAttribute('transform');
   }
 
+  // The flow's residual drift (path=3): [cx, cy, w, h, opacity], null = off.
+  setDrift(conf) {
+    if (!conf) {
+      this.drift.style.opacity = '0';
+      return;
+    }
+    const [cx, cy, w, h, o] = conf;
+    this.drift.style.left = `${cx}px`;
+    this.drift.style.top = `${cy}px`;
+    this.drift.style.width = `${w}px`;
+    this.drift.style.height = `${h}px`;
+    this.drift.style.opacity = String(o);
+  }
+
   // The traveling pulse keeps its own warm-white material.
   setPulse(x, y, r, o) {
     this.pulse.setAttribute('cx', x); this.pulse.setAttribute('cy', y);
@@ -636,7 +764,7 @@ class Gate2Stage {
 
   applyState(sceneId, build) {
     this.killMotion();
-    const st = STATES[sceneId][build];
+    const st = this.states[sceneId][build];
     this.scene = sceneId;
     this.build = build;
 
@@ -682,6 +810,13 @@ class Gate2Stage {
       this.setDot(this.fragDotEl, x, y, r, o * factor);
     } else this.setDot(this.fragDotEl, 0, 0, 0, 0);
 
+    if (st.reachDot) this.setDot(this.reachDot, ...st.reachDot);
+    else this.setDot(this.reachDot, 0, 0, 0, 0);
+
+    gsap.set(this.drift, { clearProps: 'x,y,scale' });
+    gsap.set(this.drift, { xPercent: -50, yPercent: -50 });
+    this.setDrift(st.drift || null);
+
     this.setRoads(st.roads || null);
     this.setFade(this.fade, st.fade || null);
     this.setFade(this.wakeA, st.wakeA || null);
@@ -724,6 +859,9 @@ class Gate2Stage {
     this.pulse.setAttribute('opacity', '0');
     this.blob.style.opacity = '0';
     this.wash.style.opacity = '0';
+    gsap.set(this.flowHead, { clearProps: 'x,y,scale,left,top' });
+    gsap.set(this.flowHead, { xPercent: -50, yPercent: -50 });
+    this.flowHead.style.opacity = '0';
   }
 
   // ---- motion registry ----
@@ -776,6 +914,9 @@ class Gate2Stage {
       delivery: this.deliveryEls.map((d) => attr(d, ['cx', 'cy', 'r', 'fill', 'opacity'])),
       frags: this.frags.map((l) => attr(l, ['x1', 'x2', 'y1', 'stroke', 'stroke-width', 'opacity'])),
       fragDot: attr(this.fragDotEl, ['cx', 'cy', 'r', 'fill', 'opacity']),
+      reachDot: attr(this.reachDot, ['cx', 'cy', 'r', 'fill', 'opacity']),
+      drift: [this.drift.style.left, this.drift.style.top, this.drift.style.width,
+              this.drift.style.height, this.drift.style.opacity],
       roads: [this.roadL, this.roadR].map((p) => attr(p, ['stroke', 'opacity'])),
       roadDots: [this.roadDotL, this.roadDotR].map((d) => attr(d, ['cx', 'r', 'fill', 'opacity'])),
       fades: [this.fade, this.wakeA, this.wakeB].map((f) => f.state),
@@ -817,7 +958,8 @@ export function ensureStage(container) {
     settled: () => !stage.hasMotion(),
     state: () => stage.serialize(),
     birthT: () => stage.birthProgress(),
-    gestureT: (name) => stage.gestureProgress(name)
+    gestureT: (name) => stage.gestureProgress(name),
+    path: () => stage.path
   };
   return stage;
 }
