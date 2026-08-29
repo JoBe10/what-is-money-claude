@@ -426,6 +426,43 @@ cell('s2-b5-b', {
   statement(st, 'It binds both halves of the trade to the same two people.', 815);
 });
 
+// ---- the gate close (29 Aug 2026): the path-2 approved states ---------------
+//
+// The presenter's word (exceptional) closed the gate with path 2 — THE
+// ABSENCE — as the failure language (states.json rulingsClose). The three
+// reopened sites and s2-b5-b's receded context re-enter the approved record
+// in the selected language, as new cells beside the retired originals.
+// Geometry mirrors the prototype's path-2 settled states (GEOM.pathAbsence)
+// exactly; proof-close.cjs proves it pixel against pixel.
+
+cell('s2-b3-p2', {
+  beat: 'S2 beat 3', status: 'approved', decision: null,
+  caption: 'Beat 3 · APPROVED AT THE CLOSE (path 2 — the absence) — the service path stays whole (the delivered half on record); the return direction is only the terminal dot at the patient’s edge, settled at 0.55 after the strain; the goods hang dim in the unreachable middle (context D1-A, D2-A, unchanged)'
+}, (st) => {
+  surgeonS2(st); patientS2(st, 0.55); goodsD2(st, 'cluster');
+  servicePath(st);
+  dot(st.svg, 1170, 620, 3, 0.55);
+});
+
+cell('s2-b4-p2', {
+  beat: 'S2 beat 4', status: 'approved', decision: null,
+  caption: 'Beat 4 · APPROVED AT THE CLOSE (path 2 — the absence) — the second, harder strain has subsided: the dot settles dimmer (0.4); the service path stays on record; no return line ever exists (context unchanged)'
+}, (st) => {
+  surgeonS2(st); patientS2(st, 0.55); goodsD2(st, 'cluster');
+  servicePath(st);
+  dot(st.svg, 1170, 620, 3, 0.4);
+});
+
+cell('s2-b5-b-p2', {
+  beat: 'S2 beat 5', status: 'approved', decision: null,
+  caption: 'Beat 5 · APPROVED AT THE CLOSE — s2-b5-b’s D4-B recede with the path-2 context (the context-follows protocol, states report §3.3): the service path on record and the terminal dot, both at the recede factor; the approved record no longer speaks D3-C'
+}, (st) => {
+  surgeonS2(st, 0.5); patientS2(st, 0.38); goodsD2(st, 'cluster', 0.12);
+  servicePath(st, 0.35);
+  dot(st.svg, 1170, 620, 3, 0.14);
+  statement(st, 'It binds both halves of the trade to the same two people.', 815);
+});
+
 // ======== SCENE 3 ========
 
 cell('s3-b1', {
@@ -454,6 +491,15 @@ cell('s3-b1-c', {
   caption: 'Beat 1 · D3-C remnant — the stream thinning as the birth drinks it'
 }, (st) => {
   birthFigures(st); remnantD3(st, 'thin'); mark(st, 880, 540, 132);
+});
+
+cell('s3-b1-p2', {
+  beat: 'S3 beat 1', status: 'approved', decision: null,
+  caption: 'Beat 1 · APPROVED AT THE CLOSE (path 2 — the absence) — the carried birth composition; the remnant area holds only the terminal dot whose final strain fed the pool: the claim as the answer to a void'
+}, (st) => {
+  birthFigures(st);
+  dot(st.svg, 1206, 540, 3, 0.4);
+  mark(st, 880, 540, 132);
 });
 
 cell('s3-b2', {
