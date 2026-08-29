@@ -1,0 +1,225 @@
+{
+  "date": "2026-08-29T07:56:19.781Z",
+  "limits": {
+    "cornerMean": 6,
+    "borderMean": 6
+  },
+  "cells": [
+    {
+      "id": "p1-b0",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 0,
+      "pxAbove32": 0
+    },
+    {
+      "id": "p1-b1",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 243.2,
+      "pxAbove32": 1097698
+    },
+    {
+      "id": "p1-b2",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 1101010
+    },
+    {
+      "id": "p1-b3",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 235.5,
+      "pxAbove32": 13505
+    },
+    {
+      "id": "p1-b4",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 254,
+      "pxAbove32": 77178
+    },
+    {
+      "id": "p1-b5",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 252,
+      "pxAbove32": 240736
+    },
+    {
+      "id": "p1-b6",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 254.8,
+      "pxAbove32": 110943
+    },
+    {
+      "id": "p1-b7",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 253.3,
+      "pxAbove32": 87566
+    },
+    {
+      "id": "p1-b8-a",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 254.9,
+      "pxAbove32": 97400
+    },
+    {
+      "id": "p1-b8-b",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 243.2,
+      "pxAbove32": 14925
+    },
+    {
+      "id": "p1-b9",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 15875
+    },
+    {
+      "id": "p1-b10",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 24736
+    },
+    {
+      "id": "p1-b11",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 69157
+    },
+    {
+      "id": "p2-b1",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 36765
+    },
+    {
+      "id": "p2-b2",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 36765
+    }
+  ],
+  "holdProof": {
+    "comparable": true,
+    "differingPixels": 0,
+    "maxChannelDelta": 0
+  },
+  "failures": 0
+}
