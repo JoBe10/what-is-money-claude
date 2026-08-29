@@ -20,24 +20,24 @@
 // THE GEOMETRY IS LAW, NOT DESIGN — and under the full-coverage rule the law
 // is the beat-state sheet. Every rect, coordinate, opacity and stroke width in
 // GEOM is transcribed from review/gate-2/harness/states.mjs — the builders
-// that rendered the approved cells (states.json records the presenter's 27
-// August rulings) — so the settled states match the approved cells by
-// construction. The landed-state proof (review/gate-2/harness/proof-r3.cjs)
-// then proves it mechanically, pixel against pixel. Derivation is banned:
-// nothing settled here exists outside an approved cell, WITH r3's one ruled
-// exception: the presenter reopened the path element at S2 b3, S2 b4 and
-// S3 b1 (states.json `rulingsR3`) plus s4-b2-b's goods layout; those sites
-// render the r3 replacements — the three runtime path candidates and the
-// contained goods markup — judged live, entering the approved record at the
-// gate close.
+// that rendered the approved cells — so the settled states match the approved
+// cells by construction. The landed-state proofs (proof-r3.cjs, and
+// proof-close.cjs at the gate close) prove it mechanically, pixel against
+// pixel. Derivation is banned: nothing settled here exists outside an
+// approved cell.
 //
-// The approved state set (states.json `rulings.approvedSet`, r3 reopenings
-// in `rulingsR3`):
-//   S2  b1 s2-b1-a · b2 s2-b2 · b3 s2-b3-a · b4 s2-b4-c · b5 s2-b5-b
-//   S3  b1 s3-b1-c · b2 s3-b2 · b3 s3-b3 · b4 s3-b4-a · b5 s3-b5-a
+// THE GATE IS CLOSED (29 August 2026, the presenter's recorded word:
+// exceptional — states.json `rulingsClose`, states report §10). The failure
+// language is PATH 2 — THE ABSENCE, the prototype's default; paths 1 (reach)
+// and 3 (flow) remain runtime-selectable on file, retired, and their sites
+// keep the archived r3 behavior exactly as judged.
+//
+// The approved state set (states.json `approvedSetCurrent`):
+//   S2  b1 s2-b1-a · b2 s2-b2 · b3 s2-b3-p2 · b4 s2-b4-p2 · b5 s2-b5-b-p2
+//   S3  b1 s3-b1-p2 · b2 s3-b2 · b3 s3-b3 · b4 s3-b4-a · b5 s3-b5-a
 //       b6 s3-b6-a · b7 s3-b7-b · b8 s3-b8-a · b9 s3-b9-a
-//   S4  b1–b5 s4-b1-b … s4-b5-b (system B throughout; b2's goods contained
-//       per the 28 Aug markup → s4-b2-b2)
+//   S4  b1–b5 s4-b1-b … s4-b5-b (system B throughout; b2 is the contained
+//       s4-b2-b2, approved at the close)
 
 import { gsap } from 'gsap';
 import { DarkFieldImage } from '../../components/DarkField.js';
@@ -81,9 +81,11 @@ export const GEOM = {
   // s2-b5-b's receded record still anchors on it).
   attemptDot: [1170, 620, 3, 0.5],
 
-  // The receded failure record of the APPROVED s2-b5-b (still D3-C — that
-  // cell is not reopened; its context follows the presenter's path selection
-  // at the gate close). [x1, x2, y, opacity, width], right to left.
+  // The archived D3-C receded record of s2-b5-b as judged at r3. At the gate
+  // close the approved record moved to the path-2 context (s2-b5-b-p2); the
+  // retired candidates (paths 1 and 3) keep this record exactly as judged —
+  // retired alternates are kept on file, never advanced.
+  // [x1, x2, y, opacity, width], right to left.
   thinSpans: [[1165, 1105, 620, 0.38, 2.2], [1105, 1045, 620, 0.33, 1.9],
               [1045, 985, 620, 0.27, 1.5], [985, 925, 620, 0.2, 1.1],
               [925, 865, 620, 0.13, 0.7], [865, 805, 620, 0.07, 0.4]],
@@ -214,7 +216,9 @@ export function readPathParam() {
   const q = (new URLSearchParams(window.location.search).get('path') || '').toLowerCase();
   if (['1', '2', '3'].includes(q)) return Number(q);
   const byName = Object.entries(PATH_NAMES).find(([, name]) => name === q);
-  return byName ? Number(byName[0]) : 1;
+  // The default is the RULED selection: path 2, the absence (the gate's
+  // close, 29 August 2026 — states.json `rulingsClose.pathSelection`).
+  return byName ? Number(byName[0]) : 2;
 }
 
 function buildStates(path) {
@@ -261,14 +265,18 @@ function buildStates(path) {
     // beat 4 — the failure that sets up the statement, in the selected
     // candidate (reopened element; the harder, second try).
     { ...wants, ...site.b4 },
-    // beat 5 — s2-b5-b: the binding line; authored partial recede, the two
-    // people the statement's anchor (D4-B). NOT reopened: the receded
-    // failure record still speaks D3-C exactly as approved; it follows the
-    // presenter's path selection at the gate close.
+    // beat 5 — the binding line; authored partial recede, the two people the
+    // statement's anchor (D4-B). The receded failure record follows the
+    // RULED selection (the close, 29 Aug 2026): under path 2 it speaks the
+    // absence — the service path on record and the terminal dot, both at the
+    // recede factor (s2-b5-b-p2). The retired candidates keep the archived
+    // D3-C record exactly as judged at r3 (s2-b5-b, on file).
     { surgeon: [GEOM.surgeonS2, GEOM.b5.surgeon], patient: [GEOM.patientS2, GEOM.b5.patient],
       goods: { shoe: [GEOM.goodsCluster.shoe, GEOM.b5.goods], meal: [GEOM.goodsCluster.meal, GEOM.b5.goods], wine: [GEOM.goodsCluster.wine, GEOM.b5.goods] },
-      fragDot: [GEOM.attemptDot, GEOM.b5.fail],
-      frags: GEOM.thinSpans.map(([x1, x2, y, o, w]) => [x1, x2, y, o * GEOM.b5.fail, w]),
+      ...(path === 2
+        ? { service: GEOM.b5.fail, fragDot: [A.b4Dot, GEOM.b5.fail] }
+        : { fragDot: [GEOM.attemptDot, GEOM.b5.fail],
+            frags: GEOM.thinSpans.map(([x1, x2, y, o, w]) => [x1, x2, y, o * GEOM.b5.fail, w]) }),
       stmt: { y: GEOM.b5.stmtY, text: COPY.binding } }
   ],
   'the-breakthrough': [
@@ -792,10 +800,14 @@ class Gate2Stage {
     });
 
     if (st.service) {
+      // `service: true` is the full-voice path; a number is a recede factor
+      // (the b5 record under path 2 keeps the delivered half on record at
+      // the recede — s2-b5-b-p2).
       const s = GEOM.service;
-      this.setSeg(this.service.line, s.x1, s.x2, s.y, s.o, s.w);
-      this.setDot(this.service.d1, s.x1, s.y, s.dotR, s.dotO);
-      this.setDot(this.service.d2, s.x2, s.y, s.dotR, s.dotO);
+      const f = st.service === true ? 1 : st.service;
+      this.setSeg(this.service.line, s.x1, s.x2, s.y, s.o * f, s.w);
+      this.setDot(this.service.d1, s.x1, s.y, s.dotR, s.dotO * f);
+      this.setDot(this.service.d2, s.x2, s.y, s.dotR, s.dotO * f);
     } else {
       this.service.line.setAttribute('opacity', '0');
       this.service.d1.setAttribute('opacity', '0');

@@ -17,10 +17,12 @@
 // point may the claim read as becoming the shoe. Beat 9 completes a full
 // recorded handoff to clean black before the separation lines land (D4-A).
 //
-// Landed states — approved cells, by construction (states.json rulings):
-// s3-b2 · s3-b3 · s3-b4-a · s3-b5-a · s3-b6-a · s3-b7-b · s3-b8-a · s3-b9-a.
-// Beat 1's remnant is presenter-reopened (rulingsR3): the carried birth
-// composition stands, and the remnant renders the selected r3 candidate.
+// Landed states — approved cells, by construction (states.json
+// approvedSetCurrent): s3-b1-p2 · s3-b2 · s3-b3 · s3-b4-a · s3-b5-a ·
+// s3-b6-a · s3-b7-b · s3-b8-a · s3-b9-a. THE GATE IS CLOSED (29 Aug 2026):
+// beat 1's remnant is path 2's — the absence — the carried birth composition
+// with only the terminal dot the pool gathers from; retired candidates
+// render the archived r3 behavior.
 
 import { GEOM, reducedMotion } from './_stage.js';
 import { makeSceneModule } from './_scene.js';
@@ -67,9 +69,11 @@ function morphIn(mod, stage) {
 }
 
 // The b5 record rises into the corridor as the selected candidate's
-// substrate. The record itself still speaks the approved D3-C (s2-b5-b is
-// not reopened); what it BECOMES is the candidate's — and from here on no
-// degraded stroke survives into any settled frame.
+// substrate. Under the RULED path 2 (the close, 29 Aug 2026) the record is
+// the absence's own — the service path on record and the terminal dot
+// (s2-b5-b-p2) — and the lift drains its light home into the dot. The
+// retired candidates lift the archived D3-C record exactly as judged at r3.
+// From here on no degraded stroke survives into any settled frame.
 function liftSubstrate(stage, tl) {
   const R = GEOM.pathReach;
   const A = GEOM.pathAbsence;
@@ -102,21 +106,14 @@ function liftSubstrate(stage, tl) {
     tl.to(stage.reachDot, { attr: { opacity: 1 }, duration: 0.3 }, 1.6);
     tl.add(() => stage.setFrags([R.sub]), 1.75);
   } else if (stage.path === 2) {
-    // The record's light goes home: every span slides back into the terminal
-    // dot and is absorbed — no line exists before the birth. The dot carries
-    // the gathered light to the patient's edge at the birth's height.
-    GEOM.thinSpans.forEach((from, i) => {
-      const line = stage.frags[i];
-      const p = { x1: from[0], x2: from[1], y: from[2], o: from[3] * GEOM.b5.fail };
-      const dur = 0.9 + 0.06 * i;
-      tl.to(p, {
-        x1: A.subDot[0], x2: A.subDot[0] - 5, y: A.subDot[1], o: 0.05,
-        duration: dur, ease: 'power2.in',
-        onUpdate: () => stage.setSeg(line, p.x1, p.x2, p.y, p.o, from[4])
-      }, 0.6 + 0.05 * i);
-      tl.set(line, { attr: { opacity: 0 } }, 0.6 + 0.05 * i + dur + 0.01);
-    });
-    const d = { x: GEOM.attemptDot[0], y: GEOM.attemptDot[1], o: GEOM.attemptDot[3] * GEOM.b5.fail };
+    // The record's light goes home (the close's record, s2-b5-b-p2): the
+    // delivered half has said its piece — the service path's receded light
+    // dims out of the frame — and the terminal dot carries the gathered
+    // light to the patient's edge at the birth's height. No line exists
+    // before the birth.
+    tl.to([stage.service.line, stage.service.d1, stage.service.d2],
+      { attr: { opacity: 0 }, duration: 0.9, ease: 'power1.inOut' }, 0.6);
+    const d = { x: GEOM.attemptDot[0], y: GEOM.attemptDot[1], o: A.b4Dot[3] * GEOM.b5.fail };
     const wd = () => stage.setDot(stage.fragDotEl, d.x, d.y, A.subDot[2], d.o);
     tl.to(d, { x: A.subDot[0], y: A.subDot[1], o: A.subDot[3],
       duration: 1.15, ease: 'power2.inOut', onUpdate: wd }, 0.6);

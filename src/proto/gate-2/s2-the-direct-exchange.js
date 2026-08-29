@@ -8,10 +8,11 @@
 // its sites, no degraded stroke in any settled frame; the binding line lands
 // over the two people who stay legible as its anchor.
 //
-// Landed states — approved cells, by construction (states.json rulings):
-// s2-b1-a · s2-b2 · s2-b5-b (D4-B). Beats 3 and 4's path element is
-// presenter-reopened (rulingsR3): the wants context (D1-A, D2-A) stands, and
-// the return element renders the selected candidate.
+// Landed states — approved cells, by construction (states.json
+// approvedSetCurrent): s2-b1-a · s2-b2 · s2-b3-p2 · s2-b4-p2 · s2-b5-b-p2.
+// THE GATE IS CLOSED (29 Aug 2026): the failure language is path 2 — the
+// absence — and it is the default; paths 1 and 3 are retired, runtime-
+// selectable on file, and render the archived r3 behavior exactly as judged.
 
 import { GEOM } from './_stage.js';
 import { makeSceneModule } from './_scene.js';
@@ -263,49 +264,65 @@ const transitions = {
 
   // beat 5 — the binding line (D4-B): the scene recedes element by element
   // but the two people stay legible — the line is about them, and they anchor
-  // it. The statement lands at display scale. The candidate's failure element
-  // recedes with the frame while the APPROVED cell's receded record (still
-  // D3-C — s2-b5-b is not reopened; its context follows the path selection
-  // at the gate close) fades in beneath it, so the settle is the approved
-  // cell exactly.
+  // it. The statement lands at display scale. The receded failure record
+  // follows the RULED selection (the gate's close, 29 Aug 2026): under
+  // path 2 the element simply recedes — the service path stays on record and
+  // the terminal dot settles to the record's voice (s2-b5-b-p2); no other
+  // record returns. The retired candidates (1, 3) keep the archived r3
+  // behavior exactly as judged: the element yields and the archived D3-C
+  // record fades in beneath it (s2-b5-b, on file).
   4: (mod, stage) => {
     const tl = stage.timeline();
     tl.to(stage.surgeon, { opacity: GEOM.b5.surgeon, duration: 0.8, ease: 'power1.inOut' }, 0);
     tl.to(stage.patient, { opacity: GEOM.b5.patient, duration: 0.8, ease: 'power1.inOut' }, 0.05);
     tl.to([stage.shoe, stage.meal, stage.wine],
       { opacity: GEOM.b5.goods, duration: 0.7, ease: 'power1.inOut', stagger: 0.04 }, 0.05);
-    // the candidate's element yields the corridor…
-    if (stage.path === 1) {
-      tl.to([stage.frags[0], stage.reachDot], { attr: { opacity: 0 }, duration: 0.7, ease: 'power1.inOut' }, 0.1);
-    } else if (stage.path === 2) {
-      tl.to([stage.service.line, stage.service.d1, stage.service.d2],
-        { attr: { opacity: 0 }, duration: 0.7, ease: 'power1.inOut' }, 0.1);
-    } else {
-      tl.to(stage.drift, { opacity: 0, duration: 0.7, ease: 'power1.inOut' }, 0.1);
-    }
-    // …the terminal dot takes the record's voice…
     const [ax, ay, ar, ao] = GEOM.attemptDot;
-    if (stage.path === 3) {
-      tl.add(() => {
-        stage.setDot(stage.fragDotEl, ax, ay, ar, ao * GEOM.b5.fail);
-        stage.fragDotEl.setAttribute('opacity', '0');
-      }, 0.1);
-      tl.to(stage.fragDotEl, { attr: { opacity: 1 }, duration: 0.7, ease: 'power1.inOut' }, 0.15);
-    } else {
-      const d = { o: stage.path === 1 ? GEOM.pathReach.origin[3] : GEOM.pathAbsence.b4Dot[3] };
+    if (stage.path === 2) {
+      // the selected language: the whole path record recedes in place…
+      const s = GEOM.service;
+      const f = { v: 1 };
+      const wf = () => {
+        stage.setSeg(stage.service.line, s.x1, s.x2, s.y, s.o * f.v, s.w);
+        stage.setDot(stage.service.d1, s.x1, s.y, s.dotR, s.dotO * f.v);
+        stage.setDot(stage.service.d2, s.x2, s.y, s.dotR, s.dotO * f.v);
+      };
+      tl.to(f, { v: GEOM.b5.fail, duration: 0.8, ease: 'power1.inOut', onUpdate: wf }, 0.1);
+      // …and the terminal dot settles to the record's voice.
+      const d = { o: GEOM.pathAbsence.b4Dot[3] };
       const wd = () => stage.setDot(stage.fragDotEl, ax, ay, ar, d.o);
-      tl.to(d, { o: ao * GEOM.b5.fail, duration: 0.7, ease: 'power1.inOut', onUpdate: wd }, 0.1);
+      tl.to(d, { o: GEOM.pathAbsence.b4Dot[3] * GEOM.b5.fail, duration: 0.8, ease: 'power1.inOut', onUpdate: wd }, 0.1);
+    } else {
+      // the retired candidates, archived behavior: the element yields the
+      // corridor…
+      if (stage.path === 1) {
+        tl.to([stage.frags[0], stage.reachDot], { attr: { opacity: 0 }, duration: 0.7, ease: 'power1.inOut' }, 0.1);
+      } else {
+        tl.to(stage.drift, { opacity: 0, duration: 0.7, ease: 'power1.inOut' }, 0.1);
+      }
+      // …the terminal dot takes the record's voice…
+      if (stage.path === 3) {
+        tl.add(() => {
+          stage.setDot(stage.fragDotEl, ax, ay, ar, ao * GEOM.b5.fail);
+          stage.fragDotEl.setAttribute('opacity', '0');
+        }, 0.1);
+        tl.to(stage.fragDotEl, { attr: { opacity: 1 }, duration: 0.7, ease: 'power1.inOut' }, 0.15);
+      } else {
+        const d = { o: GEOM.pathReach.origin[3] };
+        const wd = () => stage.setDot(stage.fragDotEl, ax, ay, ar, d.o);
+        tl.to(d, { o: ao * GEOM.b5.fail, duration: 0.7, ease: 'power1.inOut', onUpdate: wd }, 0.1);
+      }
+      // …and the archived receded record fades in on spare pool lines (the
+      // closing snap renormalizes it onto the canonical ones).
+      GEOM.thinSpans.forEach(([x1, x2, y, o, w], i) => {
+        const line = stage.frags[6 + i];
+        tl.add(() => {
+          stage.setSeg(line, x1, x2, y, o * GEOM.b5.fail, w);
+          line.setAttribute('opacity', '0');
+        }, 0.1);
+        tl.to(line, { attr: { opacity: 1 }, duration: 0.7, ease: 'power1.inOut' }, 0.15);
+      });
     }
-    // …and the approved receded record fades in on spare pool lines (the
-    // closing snap renormalizes it onto the canonical ones).
-    GEOM.thinSpans.forEach(([x1, x2, y, o, w], i) => {
-      const line = stage.frags[6 + i];
-      tl.add(() => {
-        stage.setSeg(line, x1, x2, y, o * GEOM.b5.fail, w);
-        line.setAttribute('opacity', '0');
-      }, 0.1);
-      tl.to(line, { attr: { opacity: 1 }, duration: 0.7, ease: 'power1.inOut' }, 0.15);
-    });
     tl.add(() => {
       stage.stmt.textContent = 'It binds both halves of the trade to the same two people.';
       stage.stmt.style.top = `${GEOM.b5.stmtY}px`;
