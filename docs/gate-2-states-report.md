@@ -236,3 +236,45 @@ temperature concern is **resolved — D8 is closed.**
 
 **9.4 The gate remains open;** it closes only on the presenter's recorded
 word after r3.
+
+---
+
+# 10. The gate's closure (appended 29 August 2026, by the close session)
+
+**GATE 2 IS CLOSED, on the presenter's recorded word: *exceptional*.**
+The word was given 29 August 2026. (The session prompt first carried
+"average", which is not the gate's word, and the close was refused on it —
+the gate's own law forbids softening. The presenter corrected it in-session:
+*"Sorry, I meant to write exceptional. Please close that gate now."* The
+close executed only on the corrected word.)
+
+His rulings against r3, recorded:
+
+**10.1 The failure language is path 2 — the absence.** No return line exists
+before the birth; the service path stays whole (the delivered half on
+record); the terminal dot strains toward the surgeon and subsides, harder at
+b4; the birth pools from the void, the dot's final strain feeding it.
+Recorded as the prototype's default (`readPathParam` → 2); paths 1 (the
+reach) and 3 (the flow) remain runtime-selectable on file, retired per the
+aesthetic law's file-keeping clause.
+
+**10.2 The contained spend goods are approved.** `s4-b2-b2` is promoted to
+the approved record as S4 b2's state; the reopened `s4-b2-b` layout is
+retired to file.
+
+**10.3 The approved record re-rendered in the selected language.** The three
+reopened sites take their path-2 settled states as new cells beside the
+retired originals: `s2-b3-p2`, `s2-b4-p2`, `s3-b1-p2`. Per §3.3 (contexts
+follow the selections) and the r3 report's flag 7.1, `s2-b5-b`'s receded
+failure context is re-rendered as `s2-b5-b-p2` — the service path on record
+and the terminal dot, both at the b5 recede factor — so the approved record
+no longer speaks D3-C anywhere. The authoritative post-close set is
+`states.json` `approvedSetCurrent`.
+
+**10.4 The banked birth alternates stay deferred** (the close brief's §1:
+pool is the ruled default; coherence work on collapse/condense under the
+selected language is not performed).
+
+**Gate 2 is the film's signature system — Scenes 2–4, the claim's birth —
+and it is closed on the presenter's recorded word. Tag: `gate-2-closed`.
+Batch A implementation is unblocked on the Prologue sheet's approvals.**

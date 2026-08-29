@@ -59,7 +59,8 @@
       "reopened": {
         "date": "2026-08-28",
         "scope": "the path element only — the gapped attempt reads as a rendering defect in motion (D3-C rejected live)",
-        "note": "The composition (patient, surgeon, goods cluster) stands approved; the return path element is replaced by the r3 runtime candidates (?proto=gate2&path=1|2|3), judged live"
+        "note": "The composition (patient, surgeon, goods cluster) stands approved; the return path element is replaced by the r3 runtime candidates (?proto=gate2&path=1|2|3), judged live",
+        "resolved": "2026-08-29 — the selection is path 2 (the absence); the approved S2 b3 state is s2-b3-p2: this composition with the path-2 element — the service path on record, the terminal dot at 0.55. This cell stays on file, retired."
       }
     },
     {
@@ -124,7 +125,8 @@
       "reopened": {
         "date": "2026-08-28",
         "scope": "the path element only — the stepped thinning reads as a rendering defect in motion (D3-C rejected live)",
-        "note": "The composition (patient, surgeon, goods cluster) stands approved; the failure element is replaced by the r3 runtime candidates (?proto=gate2&path=1|2|3), judged live"
+        "note": "The composition (patient, surgeon, goods cluster) stands approved; the failure element is replaced by the r3 runtime candidates (?proto=gate2&path=1|2|3), judged live",
+        "resolved": "2026-08-29 — the selection is path 2 (the absence); the approved S2 b4 state is s2-b4-p2: the dot subsided to 0.4 after the harder strain. This cell stays on file, retired."
       }
     },
     {
@@ -151,6 +153,10 @@
         "change": "failure context D3-A (misalign) → D3-C (thin), per the film-wide D3-C ruling and the states report §3.3 (contexts follow the selections)",
         "priorCaption": "Beat 5 · D4-B — authored partial recede: the two people stay legible as the anchor beneath the line that names them",
         "awaiting": "the presenter’s eye at the r2 live review"
+      },
+      "contextRerenderClose": {
+        "date": "2026-08-29",
+        "change": "the receded failure context follows the ruled path selection (states report §3.3, r3 report §7.1): D3-C (thin) → path 2 (the absence — the service path on record and the terminal dot, both at the b5 recede factor). Re-rendered as s2-b5-b-p2; this cell stays on file, retired."
       }
     },
     {
@@ -161,7 +167,8 @@
       "decision": null,
       "caption": "Beat 1 · CARRIED — s3-f1-final: the birth, mid-contraction, remnant in the approved language",
       "ruling": "approved-not-landed",
-      "rulingNote": "The carried birth frame stands approved; the landed S3 beat 1 state takes s3-b1-c’s remnant (D3-C, film-wide)"
+      "rulingNote": "The carried birth frame stands approved; the landed S3 beat 1 state takes s3-b1-c’s remnant (D3-C, film-wide)",
+      "closeNote": "Amended at the gate close (2026-08-29): the landed S3 beat 1 state is s3-b1-p2 — this carried composition with the path-2 remnant (the absence)."
     },
     {
       "id": "s3-b1-a",
@@ -195,7 +202,8 @@
       "reopened": {
         "date": "2026-08-28",
         "scope": "the remnant only — the faded remnant at the birth reads as a rendering defect in motion (D3-C rejected live)",
-        "note": "The carried birth composition (figures, disc) stands approved; the remnant is replaced by the r3 runtime candidates (?proto=gate2&path=1|2|3), judged live"
+        "note": "The carried birth composition (figures, disc) stands approved; the remnant is replaced by the r3 runtime candidates (?proto=gate2&path=1|2|3), judged live",
+        "resolved": "2026-08-29 — the selection is path 2 (the absence); the approved S3 b1 state is s3-b1-p2: the carried birth composition, the remnant area holding only the terminal dot the pool gathered from. This cell stays on file, retired."
       }
     },
     {
@@ -390,7 +398,8 @@
       "reopened": {
         "date": "2026-08-28",
         "scope": "the goods layout only — the three renders are too large and reach into the frame’s center (presenter markup)",
-        "note": "The markup: reduced uniform scale, a compact triangle within the spend terminal’s zone, wholly inside the frame’s left third, never crossing toward center; the legacy spend arrangement (ref-4-05-b2) studied for containment and modesty, not copied. The road grammar, kickers and the claim’s redemption motion stand. Replaced by s4-b2-b2 (direct markup, no candidates)"
+        "note": "The markup: reduced uniform scale, a compact triangle within the spend terminal’s zone, wholly inside the frame’s left third, never crossing toward center; the legacy spend arrangement (ref-4-05-b2) studied for containment and modesty, not copied. The road grammar, kickers and the claim’s redemption motion stand. Replaced by s4-b2-b2 (direct markup, no candidates)",
+        "resolved": "2026-08-29 — s4-b2-b2 approved at the close; this layout stays on file, retired."
       }
     },
     {
@@ -400,8 +409,8 @@
       "status": "markup",
       "decision": "D7",
       "caption": "Beat 2 · D7-B contained (presenter markup, 28 Aug) — the goods at reduced uniform scale, a compact triangle wholly inside the left third; the road grammar and the claim’s redemption unchanged. Replaces the reopened s4-b2-b layout",
-      "ruling": "awaiting-verdict",
-      "rulingNote": "The direct implementation of the 28 Aug containment markup; the presenter judges it at the r3 live review"
+      "ruling": "approved",
+      "rulingNote": "APPROVED at the gate close (29 Aug 2026) — the presenter’s verdict on the contained spend goods; promoted to the approved record as S4 b2’s state."
     },
     {
       "id": "s4-b3-a",
@@ -552,5 +561,48 @@
     "spendGoods": "s4-b2-b’s goods layout is reopened with an explicit markup: the three renders are too large and reach into the frame’s center. The fix is direct (no candidates): reduced uniform scale, a compact triangle within the spend terminal’s zone, wholly inside the frame’s left third. The legacy spend arrangement (ref-4-05-b2) is studied for containment and modesty, not copied. Re-rendered through the states pipeline as s4-b2-b2 beside the reopened original.",
     "closedByAbsenceOfObjection": "Recorded from the live review: the micro-motions are KEPT (R5 closed); the S2 entry is ACCEPTED and the presenter’s original temperature concern is RESOLVED (D8 closed).",
     "gate": "The gate remains open; it closes only on the presenter’s recorded word after r3."
+  },
+  "rulingsClose": {
+    "date": "2026-08-29",
+    "recordedBy": "the gate-2 close session, from the presenter’s word",
+    "word": "EXCEPTIONAL — given 29 August 2026. The session prompt first carried “average”, which is not the gate’s word, and the close was refused on it; the presenter corrected it in-session — “Sorry, I meant to write exceptional. Please close that gate now.” — and the close executed only on the corrected word.",
+    "pathSelection": {
+      "path": 2,
+      "name": "absence",
+      "ruling": "The failure language is path 2 — the absence: no return line exists before the birth; the service path stays whole (the delivered half on record); the terminal dot strains and subsides; the birth pools from the void. Recorded as the prototype’s default (readPathParam → 2); paths 1 (reach) and 3 (flow) remain runtime-selectable on file, retired."
+    },
+    "spendGoods": "s4-b2-b2 APPROVED — promoted to the approved record; the reopened s4-b2-b retired to file.",
+    "approvedSetAmendments": {
+      "S2 b3": "s2-b3-p2",
+      "S2 b4": "s2-b4-p2",
+      "S2 b5": "s2-b5-b-p2",
+      "S3 b1": "s3-b1-p2",
+      "S4 b2": "s4-b2-b2"
+    },
+    "flag1Resolved": "s2-b5-b’s context follows the selection: re-rendered as s2-b5-b-p2 with the path-2 receded record — the service path on record and the terminal dot, both at the b5 recede factor. The approved record no longer speaks D3-C anywhere.",
+    "flag2Deferred": "Coherence work on the banked birth alternates (collapse/condense under the selected language) stays deferred per the close brief §1 — pool is the ruled default; no work.",
+    "gate": "CLOSED — the film’s signature system, closed on the presenter’s recorded word. Tag gate-2-closed."
+  },
+  "approvedSetCurrent": {
+    "note": "the authoritative approved set after the gate close — rulings.approvedSet (27 Aug) as amended by rulingsClose.approvedSetAmendments (29 Aug)",
+    "S2 b1": "s2-b1-a",
+    "S2 b2": "s2-b2",
+    "S2 b3": "s2-b3-p2",
+    "S2 b4": "s2-b4-p2",
+    "S2 b5": "s2-b5-b-p2",
+    "S3 b1": "s3-b1-p2",
+    "S3 b2": "s3-b2",
+    "S3 b3": "s3-b3",
+    "S3 b4": "s3-b4-a",
+    "S3 b5": "s3-b5-a",
+    "S3 b6": "s3-b6-a",
+    "S3 b7": "s3-b7-b",
+    "S3 b8": "s3-b8-a",
+    "S3 b9": "s3-b9-a",
+    "S4 b1": "s4-b1-b",
+    "S4 b2": "s4-b2-b2",
+    "S4 b3": "s4-b3-b",
+    "S4 b4": "s4-b4-b",
+    "S4 b5": "s4-b5-b"
   }
 }
