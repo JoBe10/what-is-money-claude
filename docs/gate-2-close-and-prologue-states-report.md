@@ -221,3 +221,29 @@ selection become the Prologue's approved state set; **his approvals + Gate
 **The presenter returns the Gate 2 word (§1) and the Prologue per-cell
 verdicts with the C1 selection** — on both, the closing micro-session records
 the gate and the Batch A implementation brief is authored.
+
+---
+
+# 10. GATE 2 IS CLOSED (appended 29 August 2026, same day — the word arrived)
+
+**The presenter corrected the word in-session:** *"Sorry, I meant to write
+exceptional. Please close that gate now."* On the corrected word —
+***exceptional*** — §1's closing protocol executed exactly as written:
+
+| §1 order | Landed |
+|---|---|
+| The path selection recorded | `states.json` `rulingsClose` + `approvedSetCurrent`; states report §10 (`8978a24`) |
+| Path 2 as the prototype's default | `readPathParam` → 2; the b5 record and the S2→S3 lift follow the selection; retired candidates keep the archived r3 behavior (`e459a4c`) |
+| The affected cells re-rendered as the new approved states | `s2-b3-p2` · `s2-b4-p2` · `s2-b5-b-p2` · `s3-b1-p2`, through the states pipeline, beside the retired originals (`025b2b2`) |
+| `s4-b2-b2` promoted | `states.json`: ruling `approved`, S4 b2's state; `s4-b2-b` retired |
+| r3 flag 1 resolved | `s2-b5-b-p2` — the receded record speaks the absence; **the approved record no longer speaks D3-C anywhere** |
+| r3 flag 2 | explicitly deferred per the brief — pool is the ruled default; no work |
+| The alternates retired to file | paths 1 (reach) and 3 (flow) runtime-selectable on file; every retired cell kept, resolutions recorded per cell |
+| Verification | **proof-close.cjs 9/9 green**: no-param default = path 2; the prototype's settled state at each changed site = its approved cell at **0 differing pixels**, fresh = archived at 0. **Smoke on path 2**: deck boot 45/0 · traversal 19 forward + 19 back · 19 cold entries · reduced-motion parity 19/19 · 0 console errors. `npm run build` clean (`f84fc34`) |
+| Tag | **`gate-2-closed`** |
+
+**Gate 2 — the film's signature system, Scenes 2–4, the claim's birth — is
+closed on the presenter's recorded word.** The failure language of the film
+is the absence: no return line before the birth; the claim as the answer to
+a void. Batch A implementation now waits only on the Prologue sheet's
+per-cell approvals (§8) and the C1 selection.
