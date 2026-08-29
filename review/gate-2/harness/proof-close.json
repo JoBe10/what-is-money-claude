@@ -1,0 +1,69 @@
+{
+  "date": "2026-08-29T08:20:25.712Z",
+  "rule": "with no ?path param the prototype runs the ruled default (path 2); its settled state at each of the four changed sites is the approved -p2 cell exactly (channel delta > 2/255 counts; any differing pixel fails)",
+  "pipeline": "proto beats via cold direct entry at 1920×1080, no path param; cells via states.mjs buildCell on the same dev server",
+  "results": [
+    {
+      "check": "default path",
+      "value": 2,
+      "pass": true
+    },
+    {
+      "beat": "s2-b3-p2",
+      "against": "states/s2-b3-p2.png (archived)",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "beat": "s2-b3-p2",
+      "against": "s2-b3-p2 (fresh cell)",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "beat": "s2-b4-p2",
+      "against": "states/s2-b4-p2.png (archived)",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "beat": "s2-b4-p2",
+      "against": "s2-b4-p2 (fresh cell)",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "beat": "s2-b5-b-p2",
+      "against": "states/s2-b5-b-p2.png (archived)",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "beat": "s2-b5-b-p2",
+      "against": "s2-b5-b-p2 (fresh cell)",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "beat": "s3-b1-p2",
+      "against": "states/s3-b1-p2.png (archived)",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "beat": "s3-b1-p2",
+      "against": "s3-b1-p2 (fresh cell)",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    }
+  ],
+  "consoleErrors": []
+}
