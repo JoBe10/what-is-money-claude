@@ -46,15 +46,20 @@ const PORT = flag('--port', '5273');
 const REPO = path.join(__dirname, '..', '..', '..');
 const OUT = path.join(__dirname, '..', 'states');
 
-const FROZEN = { S5: 8, S6: 5, S7: 5, S8: 5, S9: 5, S10: 5 };
-const TOTAL_BEATS = 33;
+// AMENDED AT R2 (31 August 2026): S6 is 9 beats — the Ruling 3 strike returned
+// the elimination to the legacy pacing — and S6-F2 is PORT. The candidate
+// checks now describe the post-selection sheet: every NEW frame carries one
+// landed beat cell (the selection, or its ruled restage) plus its candidates
+// kept `on-file` per the aesthetic law.
+const FROZEN = { S5: 8, S6: 9, S7: 5, S8: 5, S9: 5, S10: 5 };
+const TOTAL_BEATS = 37;
 
 // The ruled map, transcribed. The MAP AGREEMENT check compares this against
 // `docs/act-2-provenance.md` itself as well as against the cells, so a
 // transcription drift here fails rather than passes quietly.
 const RULED = {
   'S5-F1': 'PORT', 'S5-F2': 'PORT', 'S5-F3': 'ADAPT',
-  'S6-F1': 'PORT', 'S6-F2': 'ADAPT', 'S6-F3': 'NEW',
+  'S6-F1': 'PORT', 'S6-F2': 'PORT', 'S6-F3': 'NEW',
   'S7-F1': 'PORT', 'S7-F2': 'NEW',
   'S8-F1': 'PORT', 'S8-F2': 'PORT',
   'S9-F1': 'NEW', 'S9-F2': 'PORT',
@@ -171,46 +176,62 @@ function check(name, ok, detail) {
   }
 
   // ---- BEAT COVERAGE --------------------------------------------------------
+  //
+  // On-file cells are candidates kept per the aesthetic law; they are not beat
+  // cells and do not count toward coverage.
   {
     const bad = [];
     let total = 0;
     const detail = [];
     Object.entries(FROZEN).forEach(([scene, n]) => {
-      const beats = new Set(cells.filter((c) => c.scene === scene && c.beat).map((c) => c.beat));
+      const live = cells.filter((c) => c.scene === scene && c.beat && c.review !== 'on-file');
+      const beats = new Set(live.map((c) => c.beat));
+      if (live.length !== beats.size) bad.push(`${scene}: ${live.length} beat cells over ${beats.size} beats — a beat is covered twice`);
       total += beats.size;
       detail.push(`${scene} ${beats.size}`);
       if (beats.size !== n) bad.push(`${scene}: ${beats.size} beats vs the frozen ${n}`);
       for (let b = 1; b <= n; b += 1) if (!beats.has(b)) bad.push(`${scene} b${b} missing`);
     });
     if (total !== TOTAL_BEATS) bad.push(`total ${total} vs ${TOTAL_BEATS}`);
-    check(`BEATS: every beat of the frozen map is on the sheet, and Act II is ${TOTAL_BEATS}`,
+    check(`BEATS: every beat of the amended map is on the sheet exactly once, and Act II is ${TOTAL_BEATS}`,
       bad.length === 0, bad.join(' · ') || `${detail.join(' · ')} = ${total}`);
   }
 
-  // ---- CANDIDATES WHERE, AND ONLY WHERE, THE MAP SAYS NEW -------------------
+  // ---- SELECTIONS LANDED, CANDIDATES KEPT — the post-selection discipline ---
   {
+    const NEW_FRAMES = Object.keys(RULED).filter((f) => RULED[f] === 'NEW');
+    const bad = [];
+    NEW_FRAMES.forEach((frame) => {
+      const kept = cells.filter((c) => c.frame === frame && c.review === 'on-file');
+      const landed = cells.filter((c) => c.frame === frame && c.review !== 'on-file');
+      if (kept.length < 2) bad.push(`${frame}: only ${kept.length} candidates on file`);
+      if (landed.length !== 1) {
+        bad.push(`${frame}: ${landed.length} beat cells (${landed.map((c) => c.id).join(', ')})`);
+      } else if (!['approved-selection', 'pending-review'].includes(landed[0].review)) {
+        bad.push(`${frame}: beat cell ${landed[0].id} is ${landed[0].review}`);
+      }
+    });
+    check('NEW: every NEW frame carries exactly one landed beat cell, with its candidates kept on file',
+      bad.length === 0, bad.join(' · ') || 'S6-F3 → s6-b9 · S7-F2 → s7-b4 · S9-F1 → s9-b1, three candidates each on file');
+
     const byFrame = {};
-    cells.forEach((c) => {
+    cells.filter((c) => c.review !== 'on-file').forEach((c) => {
       if (!c.frame || c.frame === '—') return;
       const key = `${c.scene}|${c.frame}|${c.beat}`;
       byFrame[key] = byFrame[key] || { frame: c.frame, ids: [] };
       byFrame[key].ids.push(c.id);
     });
-    const thin = Object.values(byFrame)
-      .filter((g) => RULED[g.frame] === 'NEW' && g.ids.length < 2)
-      .map((g) => `${g.frame} has ${g.ids.length}`);
-    check('NEW: every confirmed-NEW frame carries at least two distinct candidates',
-      thin.length === 0, thin.join(', ') || 'S6-F3 · S7-F2 · S9-F1, three each');
-
     const overGenerated = Object.values(byFrame)
-      .filter((g) => RULED[g.frame] !== 'NEW' && g.ids.length > 1)
+      .filter((g) => g.ids.length > 1)
       .map((g) => `${g.frame}: ${g.ids.join(', ')}`);
-    check('PORT/ADAPT: no candidates were generated for a frame the map does not rule NEW',
-      overGenerated.length === 0, overGenerated.join(' · ') || 'no PORT or ADAPT frame carries alternates');
+    check('FRAMES: no beat carries more than one cell — alternates live only on file',
+      overGenerated.length === 0, overGenerated.join(' · ') || 'one cell per beat everywhere');
 
-    const reused = cells.filter((c) => c.frame === 'S9-F1' && /systems/.test(c.source || '')).length;
-    check('NEW: S9-F1 reuses the systems sheet’s candidates rather than generating parallel ones',
-      reused === 3, `${reused}/3 carried over`);
+    const reused = cells.filter((c) => c.frame === 'S9-F1' && c.review === 'on-file' && /systems/.test(c.source || '')).length;
+    const beatCell = cells.find((c) => c.id === 's9-b1');
+    check('NEW: S9-F1’s candidates are the systems sheet’s own, and the landed cell runs the selected builder',
+      reused === 3 && beatCell && /s9-b1-a/.test(beatCell.source || ''),
+      `${reused}/3 carried over · s9-b1 source: ${beatCell ? beatCell.source : 'MISSING'}`);
   }
 
   // ---- SOURCE CHECKS --------------------------------------------------------
@@ -223,18 +244,32 @@ function check(name, ok, detail) {
       readsPP && readsPD && !inlined,
       `purchasing-power ${readsPP ? 'imported' : 'MISSING'} · palladium ${readsPD ? 'imported' : 'MISSING'} · inlined series ${inlined}`);
 
-    // The register boundary, at the source: the three diagram frames must not
-    // put a dark-field render inside a diagram (master §6.3).
-    const diagramCells = ['s6-b5-a', 's6-b5-b', 's6-b5-c', 's7-b4-a', 's7-b4-b', 's7-b4-c', 's10-b1'];
+    // The register boundary, at the source (master §6.3, as amended by the
+    // rails law of 31 August 2026): the pure line-grammar diagram cells — the
+    // mass state and the drawn detachment candidates — must not put a
+    // dark-field render inside a diagram. The rails (s5-b5, s10-b1/b2) and
+    // the photographic restage (s7-b4) carry renders BY RULING and left this
+    // list on ruling day; the band sits above the line, never on it.
+    const diagramCells = ['s6-b9', 's6-b5-a', 's6-b5-b', 's6-b5-c', 's7-b4-a', 's7-b4-b', 's7-b4-c'];
     const offenders = diagramCells.filter((id) => {
       const i = src.indexOf(`cell('${id}'`);
       if (i < 0) return false;
       const j = src.indexOf("cell('", i + 6);
       const body = src.slice(i, j > -1 ? j : src.length);
-      return /study\(|DarkFieldImage\(/.test(body);
+      return /study\(|DarkFieldImage\(|photo\(/.test(body);
     });
-    check('REGISTER: no diagram cell puts a dark-field render inside a diagram',
+    check('REGISTER: no line-grammar diagram cell puts a dark-field render inside a diagram',
       offenders.length === 0, offenders.join(', ') || `${diagramCells.length} diagram cells clean`);
+
+    // The rails law, at the source: the strip carries the object band (photo
+    // boxes for the goods) and the ClaimObject disc at the CLAIM station —
+    // and no 40px station mark survives in the strip builder.
+    const stripStart = src.indexOf('function strip(');
+    const stripEnd = src.indexOf('\n}', stripStart);
+    const stripBody = src.slice(stripStart, stripEnd);
+    check('RAILS LAW: the strip carries the object band and the disc at CLAIM, and the station marks are retired',
+      /photo\(/.test(stripBody) && /ClaimObject\(/.test(stripBody) && !/mark\(st, s\.key/.test(stripBody),
+      'photo band present · ClaimObject at CLAIM · no station mark() in the strip');
   }
 
   fs.writeFileSync(path.join(__dirname, 'check-states.json'), JSON.stringify({
