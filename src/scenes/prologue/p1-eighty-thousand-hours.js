@@ -33,7 +33,7 @@
 
 import { UnitField } from '../../components/UnitField.js';
 import {
-  setVisible, claimCanvas, releaseCanvas, massLayer, formBox, FORMS
+  setVisible, claimRasterHint, releaseRasterHint, massLayer, formBox, FORMS
 } from './_prologueStage.js';
 
 const HOURS = 80000;
@@ -104,7 +104,7 @@ export default {
 
     container.appendChild(root);
 
-    this._canvas = claimCanvas(container);
+    this._canvas = claimRasterHint(container);
     this._refs = {
       root, field, mass, forms, counter, hoursLine, formsLine, question, title,
       appliedStep: 0,
@@ -121,7 +121,7 @@ export default {
 
   onExit() {
     this._refs?.field.destroy();
-    releaseCanvas(this._canvas);
+    releaseRasterHint(this._canvas);
     this._canvas = null;
     this._refs = null;
   },

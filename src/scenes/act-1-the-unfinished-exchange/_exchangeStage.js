@@ -55,6 +55,7 @@
 
 import { gsap } from 'gsap';
 import { DarkFieldImage } from '../../components/DarkField.js';
+import { claimRasterHint, releaseRasterHint } from '../../components/rasterHint.js';
 import { ClaimMark, CLAIM_MARK_SELECTION } from '../../proto/claim-mark.js';
 
 const svgNS = 'http://www.w3.org/2000/svg';
@@ -824,14 +825,10 @@ class Act1Stage {
 export function ensureStage(container) {
   if (container.__act1Stage) return container.__act1Stage;
   container.innerHTML = '';
-  // While Act I is on stage, release the deck canvas's `will-change: transform`
-  // layer hint. The hint forces the canvas into a composited layer whose text
-  // drops from subpixel to grayscale antialiasing — which is not how the
-  // approved cells were rasterized, and the landed-state proof compares per
-  // pixel. It buys nothing here (the letterbox transform only changes on
-  // resize), it touches no engine file, and it is restored on teardown.
-  const canvas = container.closest('.deck-canvas');
-  if (canvas) canvas.style.willChange = 'auto';
+  // While Act I is on stage, release the deck canvas's layer hint so its text
+  // rasterizes the way the approved cells did — see `components/rasterHint.js`
+  // for the whole reason, including why it is refcounted.
+  const canvas = claimRasterHint(container);
   const stage = new Act1Stage(container);
   stage._canvas = canvas;
   container.__act1Stage = stage;
@@ -847,7 +844,7 @@ export function ensureStage(container) {
 export function destroyStage(container) {
   const stage = container.__act1Stage;
   if (!stage) return;
-  if (stage._canvas) stage._canvas.style.willChange = '';
+  releaseRasterHint(stage._canvas);
   stage.destroy();
   delete container.__act1Stage;
   if (window.__act1) delete window.__act1;

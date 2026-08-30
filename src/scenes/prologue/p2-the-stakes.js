@@ -16,7 +16,7 @@
 // frame rises in the engine's crossfade. No accent, no Claim Mark — the
 // Prologue is monochrome, and orange enters at Scene 3's birth.
 
-import { setVisible, claimCanvas, releaseCanvas } from './_prologueStage.js';
+import { setVisible, claimRasterHint, releaseRasterHint } from './_prologueStage.js';
 
 const MAX_STEP = 1;
 
@@ -41,7 +41,7 @@ export default {
 
     container.appendChild(root);
 
-    this._canvas = claimCanvas(container);
+    this._canvas = claimRasterHint(container);
     this._refs = { root, line, appliedStep: 0, reconstruct: false };
     this._applyBuild(0);
   },
@@ -51,7 +51,7 @@ export default {
   },
 
   onExit() {
-    releaseCanvas(this._canvas);
+    releaseRasterHint(this._canvas);
     this._canvas = null;
     this._refs = null;
   },

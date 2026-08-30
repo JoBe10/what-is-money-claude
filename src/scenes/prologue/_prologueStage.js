@@ -31,25 +31,12 @@ export function setVisible(element, visible) {
 
 // ---- the rasterization contract ---------------------------------------------
 //
-// The approved cells were rasterized on an opaque black ground with subpixel
-// text antialiasing. Inside the deck the canvas carries `will-change:
-// transform`, which forces it into a composited layer whose text drops to
-// grayscale antialiasing — every glyph would then differ from its cell by a
-// color fringe, and the landed-state proof compares per pixel. The hint buys
-// nothing while a scene is on stage (the letterbox transform only changes on
-// resize), so a Prologue scene releases it for the duration and restores it on
-// exit. This is the mechanism Prototype Gate 2 proved and it changes no engine
-// file. The scene root's own opaque black is the other half of the contract.
+// Half of it is the shared `rasterHint` helper, re-exported here so a Prologue
+// scene has one import; the other half is the scene root's own opaque black
+// (`.s1q`). Both are needed for a settled frame to rasterize the way the
+// approved cell did.
 
-export function claimCanvas(container) {
-  const canvas = container?.closest('.deck-canvas');
-  if (canvas) canvas.style.willChange = 'auto';
-  return canvas || null;
-}
-
-export function releaseCanvas(canvas) {
-  if (canvas) canvas.style.willChange = '';
-}
+export { claimRasterHint, releaseRasterHint } from '../../components/rasterHint.js';
 
 // ---- the morph's form boxes -------------------------------------------------
 //
