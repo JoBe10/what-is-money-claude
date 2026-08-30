@@ -280,6 +280,40 @@ What counts as one major construction: a scene, a systems or beat-state sheet, a
 prototype gate round, a splice, an ingest with its records. Records, rulings and
 their proofs travel with the construction they belong to.
 
+## 4.9 The provenance rule
+
+**Presenter-ordered, 30 August 2026.** **Every frame and state in the remaining
+film carries a provenance class, recorded before any design or implementation
+session touches it.**
+
+- **PORT** — a proven legacy treatment exists. It is **transplanted verbatim**:
+  grade, type and engine wiring are the only permitted changes. **Redesign is
+  forbidden, and generating candidates for a PORT frame is a process defect** —
+  unless the presenter explicitly reopens that frame **by name**.
+- **ADAPT** — a proven treatment exists, and **one ruled change** applies to it.
+  The ruling is named in the map. **Only that change is made**; everything else
+  is a PORT.
+- **NEW** — no proven treatment exists. The full-coverage rule and the candidate
+  process apply as established (§4.3, §4.5).
+
+**Sessions verify the class before touching anything.** An unclassified frame is
+not NEW by default — it is unclassified, and classifying it is the presenter's,
+through his act's provenance map. A map is a **proposal** until he rules it;
+the ruled map then governs that act's work.
+
+The class lives with the act it governs — Act II's is `docs/act-2-provenance.md`
+— and every PORT and ADAPT row **names its legacy source slide**, so the claim
+"a proven treatment exists" is checkable rather than asserted.
+
+Purpose: the legacy deck is judgment the presenter has already spent and already
+approved, and the expensive failure is not a bad candidate — it is a good one,
+generated for a frame that was already solved. That failure costs twice: the
+session that redesigned what did not need designing, and the delivery that
+quietly lost a proven treatment nobody noticed leaving. §4.3 says no aesthetic
+decision ships on agent self-selection. This answers the question before it:
+**whether there is a decision to make at all** — and that is answered from the
+record, not from the blank page.
+
 ---
 
 # 5. Scope and safety
