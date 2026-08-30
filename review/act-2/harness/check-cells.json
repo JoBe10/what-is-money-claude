@@ -1,0 +1,305 @@
+{
+  "date": "2026-08-30T04:14:30.435Z",
+  "limits": {
+    "cornerMean": 6,
+    "borderMean": 6
+  },
+  "reportedNotGated": "warmPixelsReported / maxRedMinusBlueReported — subpixel text antialiasing measures r−b up to 215 against the accent’s 221, so a per-pixel hue test cannot separate them. The accent check is made at the source instead (below). The three network cells carry no text and measure 0, which is what shows the reading is antialiasing.",
+  "sourceChecks": {
+    "noAccent": true,
+    "accentHits": [],
+    "readsFrozenData": true,
+    "inlinedData": false
+  },
+  "cells": [
+    {
+      "id": "s6f2-a",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 191,
+      "pxAbove32": 5966,
+      "warmPixelsReported": 866,
+      "maxRedMinusBlueReported": 159
+    },
+    {
+      "id": "s6f2-b",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 218,
+      "pxAbove32": 10157,
+      "warmPixelsReported": 866,
+      "maxRedMinusBlueReported": 159
+    },
+    {
+      "id": "s6f2-c",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 218,
+      "pxAbove32": 13582,
+      "warmPixelsReported": 852,
+      "maxRedMinusBlueReported": 159
+    },
+    {
+      "id": "s10f1-a",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 253,
+      "pxAbove32": 21400,
+      "warmPixelsReported": 4445,
+      "maxRedMinusBlueReported": 159
+    },
+    {
+      "id": "s10f1-b",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 253,
+      "pxAbove32": 25782,
+      "warmPixelsReported": 4425,
+      "maxRedMinusBlueReported": 159
+    },
+    {
+      "id": "s10f1-c",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 253,
+      "pxAbove32": 19681,
+      "warmPixelsReported": 4445,
+      "maxRedMinusBlueReported": 159
+    },
+    {
+      "id": "s9f1-a",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 249,
+      "pxAbove32": 19175,
+      "warmPixelsReported": 0,
+      "maxRedMinusBlueReported": 0
+    },
+    {
+      "id": "s9f1-b",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 248,
+      "pxAbove32": 10994,
+      "warmPixelsReported": 0,
+      "maxRedMinusBlueReported": 0
+    },
+    {
+      "id": "s9f1-c",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 223,
+      "pxAbove32": 7710,
+      "warmPixelsReported": 0,
+      "maxRedMinusBlueReported": 0
+    },
+    {
+      "id": "s5f3-a",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 22189,
+      "warmPixelsReported": 3861,
+      "maxRedMinusBlueReported": 215
+    },
+    {
+      "id": "s5f3-a-1971",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 18079,
+      "warmPixelsReported": 3142,
+      "maxRedMinusBlueReported": 215
+    },
+    {
+      "id": "s5f3-b",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 22317,
+      "warmPixelsReported": 3862,
+      "maxRedMinusBlueReported": 215
+    },
+    {
+      "id": "s5f3-b-1971",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 18199,
+      "warmPixelsReported": 3189,
+      "maxRedMinusBlueReported": 215
+    },
+    {
+      "id": "s5f3-c",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 24696,
+      "warmPixelsReported": 3845,
+      "maxRedMinusBlueReported": 215
+    },
+    {
+      "id": "s5f3-c-1971",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 20559,
+      "warmPixelsReported": 3143,
+      "maxRedMinusBlueReported": 215
+    },
+    {
+      "id": "s8f2-a",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 14087,
+      "warmPixelsReported": 824,
+      "maxRedMinusBlueReported": 159
+    },
+    {
+      "id": "s8f2-b",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 17101,
+      "warmPixelsReported": 991,
+      "maxRedMinusBlueReported": 159
+    },
+    {
+      "id": "s8f2-c",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 17593,
+      "warmPixelsReported": 823,
+      "maxRedMinusBlueReported": 159
+    }
+  ],
+  "failures": 0
+}
