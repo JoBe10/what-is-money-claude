@@ -10,7 +10,8 @@
 //   5. SPLICE     — the eleven superseded legacy slides are out of the manifest
 //                   and still on disk, and nothing in src/ still names them.
 //   6. REGISTER   — no raster reference outside the dark-field register; no
-//                   accent anywhere in the Prologue.
+//                   accent color anywhere in the Prologue (narrowed 30 Aug
+//                   2026 — see the check itself).
 //
 // Usage: node static-gates.cjs
 const fs = require('fs');
@@ -235,10 +236,19 @@ const notesOf = (src) => {
 
   // The Prologue is monochrome plus photographic warmth: the accent enters the
   // film at the Claim Mark's birth, in Scene 3, and nowhere earlier.
+  //
+  // NARROWED 30 August 2026. This gate used to test
+  // `--accent|#F7931A|ClaimMark|LuminousDisc|luminous-disc` and was named "no
+  // accent, no Claim Mark and no disc anywhere in the Prologue". The second
+  // half enforced a clause that has been STRUCK as over-extension: the record
+  // bans the accent from the Prologue, never the drawing (states report §12).
+  // P1's condensation is the restored legacy token — `.luminous-disc` — so the
+  // old pattern would now fail the very state the presenter ruled. What the
+  // gate holds is the law that survived, and only that.
   const prologueFiles = walk(path.join(SCENES, 'prologue')).filter((f) => f.endsWith('.js'));
-  const accent = prologueFiles.filter((f) => /--accent|#F7931A|ClaimMark|LuminousDisc|luminous-disc/i.test(read(f)))
+  const accent = prologueFiles.filter((f) => /--accent|--accent-light|--accent-dim|#F7931A/i.test(read(f)))
     .map((f) => path.basename(f));
-  check('REGISTER: no accent, no Claim Mark and no disc anywhere in the Prologue',
+  check('REGISTER: no accent color anywhere in the Prologue',
     accent.length === 0, accent.join(', ') || `${prologueFiles.length} files clean`);
 
   // And the accent's entry point is the birth: Scene 2 must not carry it.

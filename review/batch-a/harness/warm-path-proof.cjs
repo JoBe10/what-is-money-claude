@@ -38,7 +38,7 @@ const DIRS = {
 
 // The 33 states, in walking order.
 const WALK = [
-  ...['p1-b0', 'p1-b1', 'p1-b2', 'p1-b3-ball', 'p1-b4', 'p1-b5', 'p1-b6',
+  ...['p1-b0', 'p1-b1', 'p1-b2', 'p1-b3-token', 'p1-b4', 'p1-b5', 'p1-b6',
     'p1-b7-glow', 'p1-b8-a', 'p1-b9', 'p1-b10', 'p1-b11'].map((id) => [id, PROLOGUE]),
   ...['p2-b1', 'p2-b2'].map((id) => [id, PROLOGUE]),
   ...['s2-b1-a', 's2-b2', 's2-b3-p2', 's2-b4-p2', 's2-b5-b-p2'].map((id) => [id, GATE2]),

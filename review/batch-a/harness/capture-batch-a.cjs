@@ -2,9 +2,9 @@
 //
 // Every settled state of the five new scenes, captured out of the REAL DECK at
 // 1920×1080 — not out of a states pipeline — because what this strip records is
-// the film as it now runs. Plus eight gestures caught mid-flight, which the
-// settled frames cannot show: the hours arriving, the condensation, a form
-// becoming the next, the light coming up on Act I, the strain that fails, the
+// the film as it now runs. Plus ten gestures caught mid-flight, which the
+// settled frames cannot show: the hours arriving, the absorption at three
+// points of its 4.6 seconds, a form becoming the next, the light coming up on Act I, the strain that fails, the
 // claim's birth, the two-phase demonstration, and the redemption.
 //
 // The settled frames are the same pixels the landed-state proof compares; this
@@ -26,12 +26,12 @@ fs.mkdirSync(OUT, { recursive: true });
 const SCENES = [
   {
     slide: 1, key: 'p1', title: 'P1 · Eighty Thousand Hours / What Is Money?',
-    note: 'Eleven beats and the authored entry black. The field fills to eighty thousand, condenses into the ruled ball, and shape-shifts through five forms — one advance each — before the frame clears to the question and the title.',
+    note: 'Eleven beats and the authored entry black. The field fills to eighty thousand, is absorbed into the restored legacy ball, and shape-shifts through five forms — one advance each — before the frame clears to the question and the title.',
     beats: [
       'entry · the authored black, spoken over',
       'b1 · the field complete, the counter at 80,000',
       'b2 · the hours line',
-      'b3 · the condensation’s landing — the ball, not the mark (ruled 30 Aug)',
+      'b3 · the condensation’s landing — the restored legacy ball (PORT, 30 Aug)',
       'b4 · SHELL',
       'b5 · GOLD',
       'b6 · PAPER',
@@ -89,7 +89,12 @@ const SCENES = [
 // [file, slide, from-build, wait after the advance (ms), caption]
 const GESTURES = [
   ['g-p1-fill', 1, 0, 4200, 'P1 b0→b1 · the hours arriving, the counter climbing'],
-  ['g-p1-condense', 1, 2, 2600, 'P1 b2→b3 · the condensation, mid-collapse — the ball resolving'],
+  // The absorption at three points, because one frame cannot show a gesture
+  // that runs 4.6s: the ball blooming just past its 0.22 emergence, the void
+  // open with the field streaming inward, and the last of the field arriving.
+  ['g-p1-condense-1', 1, 2, 1300, 'P1 b2→b3 · the absorption begins — the front opens, the ball blooms'],
+  ['g-p1-condense-2', 1, 2, 2400, 'P1 b2→b3 · the absorption, mid-gesture — the hours falling inward'],
+  ['g-p1-condense-3', 1, 2, 3900, 'P1 b2→b3 · the absorption near its end — the last of the field arriving'],
   ['g-p1-morph', 1, 5, 260, 'P1 b5→b6 · gold becoming paper, mid-dissolve'],
   ['g-s2-entry', 3, null, 1500, 'Scene 2 · the light coming up — the cold entry'],
   ['g-s2-strain', 3, 2, 2600, 'Scene 2 b2→b3 · the strain toward the surgeon'],
@@ -188,7 +193,7 @@ const GESTURES = [
 ${sc.beats.map((cap, i) => cell(`${sc.key}-b${i}.png`, cap)).join('\n')}
 </div>`).join('\n');
   const gestures = `<h2>The gestures, mid-flight</h2>
-<p class="lang">A settled frame cannot show motion, and the motion is half the argument. These eight are caught in the middle of their gesture, out of the running deck.</p>
+<p class="lang">A settled frame cannot show motion, and the motion is half the argument. These ten are caught in the middle of their gesture, out of the running deck — the absorption at three points of it, because that one runs 4.6 seconds.</p>
 <div class="row">
 ${GESTURES.map(([f, , , , cap]) => cell(`${f}.png`, cap)).join('\n')}
 </div>`;
