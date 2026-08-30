@@ -1,0 +1,694 @@
+{
+  "date": "2026-08-30T07:29:48.136Z",
+  "limits": {
+    "cornerMean": 6,
+    "borderMean": 6
+  },
+  "frozenBeatMap": {
+    "S5": 8,
+    "S6": 5,
+    "S7": 5,
+    "S8": 5,
+    "S9": 5,
+    "S10": 5,
+    "total": 33
+  },
+  "ruledClasses": {
+    "S5-F1": "PORT",
+    "S5-F2": "PORT",
+    "S5-F3": "ADAPT",
+    "S6-F1": "PORT",
+    "S6-F2": "ADAPT",
+    "S6-F3": "NEW",
+    "S7-F1": "PORT",
+    "S7-F2": "NEW",
+    "S8-F1": "PORT",
+    "S8-F2": "PORT",
+    "S9-F1": "NEW",
+    "S9-F2": "PORT",
+    "S10-F1": "PORT",
+    "S10-F2": "ADAPT"
+  },
+  "reportedNotGated": "warmPixelsReported — this sheet is supposed to carry the accent (the claim through-line wears the Claim Mark by ruling), so the accent is evidence here rather than a gate.",
+  "cells": [
+    {
+      "id": "s5-b1",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 245.3,
+      "pxAbove32": 17593,
+      "warmPixelsReported": 6654
+    },
+    {
+      "id": "s5-b2",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 61274,
+      "warmPixelsReported": 52425
+    },
+    {
+      "id": "s5-b3",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 57897,
+      "warmPixelsReported": 46020
+    },
+    {
+      "id": "s5-b4",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 57689,
+      "warmPixelsReported": 43729
+    },
+    {
+      "id": "s5-b5",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0.07,
+      "maxLum": 255,
+      "pxAbove32": 22801,
+      "warmPixelsReported": 208
+    },
+    {
+      "id": "s5-b6",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 34106,
+      "warmPixelsReported": 2727
+    },
+    {
+      "id": "s5-b7",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 29694,
+      "warmPixelsReported": 8104
+    },
+    {
+      "id": "s5-b8",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 28451,
+      "warmPixelsReported": 8001
+    },
+    {
+      "id": "s6-b1",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 252,
+      "pxAbove32": 246714,
+      "warmPixelsReported": 244044
+    },
+    {
+      "id": "s6-b2",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 17353,
+      "warmPixelsReported": 2907
+    },
+    {
+      "id": "s6-b3",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 7210,
+      "warmPixelsReported": 1027
+    },
+    {
+      "id": "s6-b4",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 27062,
+      "warmPixelsReported": 7795
+    },
+    {
+      "id": "s6-b5-a",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 22053,
+      "warmPixelsReported": 1808
+    },
+    {
+      "id": "s6-b5-b",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 17376,
+      "warmPixelsReported": 1665
+    },
+    {
+      "id": "s6-b5-c",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 16413,
+      "warmPixelsReported": 1643
+    },
+    {
+      "id": "s7-b1",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 27113,
+      "warmPixelsReported": 8007
+    },
+    {
+      "id": "s7-b2",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 31373,
+      "warmPixelsReported": 8648
+    },
+    {
+      "id": "s7-b3",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 254.9,
+      "pxAbove32": 88859,
+      "warmPixelsReported": 42257
+    },
+    {
+      "id": "s7-b4-a",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 10779,
+      "warmPixelsReported": 1157
+    },
+    {
+      "id": "s7-b4-b",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 11446,
+      "warmPixelsReported": 1157
+    },
+    {
+      "id": "s7-b4-c",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 10999,
+      "warmPixelsReported": 1157
+    },
+    {
+      "id": "s7-b5",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 20843,
+      "warmPixelsReported": 0
+    },
+    {
+      "id": "s8-b1",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 253.6,
+      "pxAbove32": 187039,
+      "warmPixelsReported": 187658
+    },
+    {
+      "id": "s8-b2",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 31466,
+      "warmPixelsReported": 3270
+    },
+    {
+      "id": "s8-b3",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 41760,
+      "warmPixelsReported": 5240
+    },
+    {
+      "id": "s8-b4",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 26469,
+      "warmPixelsReported": 1615
+    },
+    {
+      "id": "s8-b5",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 44610,
+      "warmPixelsReported": 1992
+    },
+    {
+      "id": "s9-b1-a",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 249,
+      "pxAbove32": 19175,
+      "warmPixelsReported": 0
+    },
+    {
+      "id": "s9-b1-b",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 248,
+      "pxAbove32": 10994,
+      "warmPixelsReported": 0
+    },
+    {
+      "id": "s9-b1-c",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 223,
+      "pxAbove32": 7710,
+      "warmPixelsReported": 0
+    },
+    {
+      "id": "s9-b2",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 12774,
+      "warmPixelsReported": 2082
+    },
+    {
+      "id": "s9-b3",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 22006,
+      "warmPixelsReported": 2883
+    },
+    {
+      "id": "s9-b4",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 35719,
+      "warmPixelsReported": 5001
+    },
+    {
+      "id": "s9-b5",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 39301,
+      "warmPixelsReported": 4869
+    },
+    {
+      "id": "s10-b1",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 19677,
+      "warmPixelsReported": 2181
+    },
+    {
+      "id": "s10-b2",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 35809,
+      "warmPixelsReported": 4300
+    },
+    {
+      "id": "s10-b3",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 31742,
+      "warmPixelsReported": 5016
+    },
+    {
+      "id": "s10-b4",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 253,
+      "pxAbove32": 54496,
+      "warmPixelsReported": 9567
+    },
+    {
+      "id": "s10-b5",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 12415,
+      "warmPixelsReported": 0
+    },
+    {
+      "id": "s5f3-proof-1803",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 27191,
+      "warmPixelsReported": 2147
+    }
+  ],
+  "checks": 11,
+  "failures": 0,
+  "results": [
+    {
+      "name": "CELLS: 40 measured — corner ≤ 6, border ≤ 6, content present, 1920×1080",
+      "ok": true,
+      "detail": "40/40"
+    },
+    {
+      "name": "MAP: the ruled classes transcribed here are the classes docs/act-2-provenance.md states",
+      "ok": true,
+      "detail": "14/14 rows agree"
+    },
+    {
+      "name": "MAP: every cell’s class is the class the map rules for its frame",
+      "ok": true,
+      "detail": "every framed cell agrees with the map"
+    },
+    {
+      "name": "MAP: no cell is unclassified",
+      "ok": true,
+      "detail": "40/40 carry a class"
+    },
+    {
+      "name": "MAP: every PORT and ADAPT cell names its legacy source",
+      "ok": true,
+      "detail": "all named"
+    },
+    {
+      "name": "BEATS: every beat of the frozen map is on the sheet, and Act II is 33",
+      "ok": true,
+      "detail": "S5 8 · S6 5 · S7 5 · S8 5 · S9 5 · S10 5 = 33"
+    },
+    {
+      "name": "NEW: every confirmed-NEW frame carries at least two distinct candidates",
+      "ok": true,
+      "detail": "S6-F3 · S7-F2 · S9-F1, three each"
+    },
+    {
+      "name": "PORT/ADAPT: no candidates were generated for a frame the map does not rule NEW",
+      "ok": true,
+      "detail": "no PORT or ADAPT frame carries alternates"
+    },
+    {
+      "name": "NEW: S9-F1 reuses the systems sheet’s candidates rather than generating parallel ones",
+      "ok": true,
+      "detail": "3/3 carried over"
+    },
+    {
+      "name": "DATA: the ported charts read the frozen data modules and carry no copy of either",
+      "ok": true,
+      "detail": "purchasing-power imported · palladium imported · inlined series false"
+    },
+    {
+      "name": "REGISTER: no diagram cell puts a dark-field render inside a diagram",
+      "ok": true,
+      "detail": "7 diagram cells clean"
+    }
+  ]
+}
