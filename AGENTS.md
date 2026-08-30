@@ -362,6 +362,27 @@ Follow the existing repository conventions.
 - Whitespace is part of the design.
 - Do not add full-width orange bars or generic title underlines.
 
+## The rails law
+
+**Presenter-ordered, 31 August 2026. Film-wide.** Simple icons retire from
+monetary-good stations everywhere. On every rail, strip, or timeline of
+monetary goods, the goods are carried by their **dark-field renders as an
+object band above the line at lineup scale**, while the drawn line, station
+marks, labels, wounds and gain/dependency text beneath keep the film's line
+grammar unchanged. **The CLAIM station is the exception: it carries the
+ClaimObject disc itself — never a photograph, never an icon.**
+
+- The band sits **above** the line, never on it: no render stands on a drawn
+  line, which is the form of the register boundary (master §6.3) this law
+  preserves while amending its rail case.
+- Lineup-scale discipline applies (each render in a box of its own aspect
+  under the framing rule, one band scale across a surface), and the register
+  brightness rules apply to the band (a receded station's render recedes with
+  its station; the active station's render carries the full voice).
+- Applied on ruling day to `s5-b5` and `s10-b1`/`s10-b2` (the Act II states
+  sheet); already pre-recorded for Act III's monetization timeline; governs
+  all future rails, strips, and timelines of monetary goods.
+
 ## Anti-slop test
 Before adding a decorative element, ask:
 - Does it explain the argument?
