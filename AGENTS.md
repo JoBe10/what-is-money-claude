@@ -314,6 +314,18 @@ decision ships on agent self-selection. This answers the question before it:
 **whether there is a decision to make at all** — and that is answered from the
 record, not from the blank page.
 
+## 4.10 The plain-English rule
+
+**Presenter-ordered, 31 August 2026.** Any text that asks the presenter for a
+decision — ARGUABLE rows, flags, open questions, review protocols in reports
+and sheets — is written in **plain English: the question stated simply, the
+options in full sentences.** Compressed style stays confined to machine-facing
+sections. **Violations are defects.**
+
+Purpose: a decision request the presenter has to decode is a decision delayed
+or mis-made. Compression that saves the writer's space spends the reader's
+attention, and the presenter's attention is the project's scarcest resource.
+
 ---
 
 # 5. Scope and safety
