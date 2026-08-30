@@ -1,0 +1,384 @@
+{
+  "date": "2026-08-30T22:06:18.664Z",
+  "session": "batch-b-impl-1",
+  "rule": "each of the 22 settled states of Scenes 5–7, mounted cold through the real engine in the scratch route (?proto=act2) at 1920×1080, is its approved cell at zero differing pixels (channel delta > 2/255 counts). Comparisons: scene↔archived cell, fresh cell↔archived cell, scene↔fresh cell.",
+  "states": 22,
+  "passed": 22,
+  "results": [
+    {
+      "state": "1:0",
+      "cell": "s5-b1",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "1:1",
+      "cell": "s5-b2",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "1:2",
+      "cell": "s5-b3",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "1:3",
+      "cell": "s5-b4",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "1:4",
+      "cell": "s5-b5",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "1:5",
+      "cell": "s5-b6",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "1:6",
+      "cell": "s5-b7",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "1:7",
+      "cell": "s5-b8",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "2:0",
+      "cell": "s6-b1",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "2:1",
+      "cell": "s6-b2",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "2:2",
+      "cell": "s6-b3",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "2:3",
+      "cell": "s6-b4",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "2:4",
+      "cell": "s6-b5",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "2:5",
+      "cell": "s6-b6",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "2:6",
+      "cell": "s6-b7",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "2:7",
+      "cell": "s6-b8",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "2:8",
+      "cell": "s6-b9",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "3:0",
+      "cell": "s7-b1",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "3:1",
+      "cell": "s7-b2",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "3:2",
+      "cell": "s7-b3",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "3:3",
+      "cell": "s7-b4",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "3:4",
+      "cell": "s7-b5",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    }
+  ],
+  "consoleErrors": []
+}
