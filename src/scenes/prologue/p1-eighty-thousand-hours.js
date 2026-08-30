@@ -154,6 +154,15 @@ export default {
     refs.counter.dataset.visible = String(countable);
     if (countable) refs.counter.textContent = HOURS.toLocaleString('en-US');
 
+    // The field leaves the frame once it is spent. From the condensation on it
+    // paints nothing, but an empty full-frame canvas is not free: it still
+    // costs the frame a raster layer, and the approved cells for those beats
+    // have no field element at all. Measured, not assumed — with the spent
+    // canvases in the paint, the bitcoin form's own rasterization moved by up
+    // to 9/255 along one column and the landed-state proof caught it. The live
+    // collapse keeps the field until its gesture is done.
+    if (!(n === 3 && live)) refs.field.el.style.display = n >= 3 ? 'none' : '';
+
     if (n === 0) {
       refs.field.setState({ mode: 'empty' });
       refs.counter.textContent = '0';
@@ -197,7 +206,10 @@ export default {
         onTick: (t) => {
           if (t >= MASS_EMERGE_AT) setVisible(refs.mass, true);
         },
-        onDone: () => setVisible(refs.mass, true)
+        onDone: () => {
+          setVisible(refs.mass, true);
+          refs.field.el.style.display = 'none';
+        }
       });
       return;
     }
