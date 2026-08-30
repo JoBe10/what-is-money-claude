@@ -55,14 +55,52 @@
       "beat": "P1 beat 3",
       "status": "determined",
       "decision": null,
-      "caption": "Beat 3 · the condensation’s settled landing — “condenses into… this.”: the field’s own points of light gathered into one dense mass at the forms’ center. A mass, deliberately not a disc (the disc is born in Scene 3) and not yet any form (the shell is the next advance’s reveal)",
+      "caption": "Beat 3 · RETIRED — SUPERSEDED BY RESTORATION (30 Aug 2026). The condensation’s settled landing as the field’s own points of light gathered into one dense mass at the forms’ center. Kept on file (aesthetic-law file-keeping clause); replaced by p1-b3-token",
       "ruling": "retired",
-      "rulingNote": "Replaced by p1-b3-ball on the condensation ruling. Kept on file (aesthetic-law file-keeping clause)",
+      "rulingNote": "Superseded twice: by p1-b3-ball on the condensation ruling (letter B), and with it by p1-b3-token on the restoration. Kept on file (aesthetic-law file-keeping clause)",
       "ruledReplaced": {
         "date": "2026-08-30",
         "ruling": "The condensation ruling, letter B: the landing is a smooth luminous ball, not the field's own units massed.",
         "replacedBy": "p1-b3-ball",
         "note": "This cell stays on file, retired — the aesthetic law's file-keeping clause."
+      },
+      "supersededByRestoration": {
+        "date": "2026-08-30",
+        "ruling": "The condensation is PORT — the legacy deck's absorption restored verbatim (rulings.restoration).",
+        "replacedBy": "p1-b3-token",
+        "note": "Both candidates for this beat are retired by the restoration. This one stays on file."
+      }
+    },
+    {
+      "id": "p1-b3-ball",
+      "file": "p1-b3-ball.png",
+      "beat": "P1 beat 3",
+      "status": "retired",
+      "decision": null,
+      "caption": "Beat 3 · RETIRED — SUPERSEDED BY RESTORATION (30 Aug 2026). The letter-B object: a smooth luminous ball, achromatic white, 296 across at the forms’ centre, built to be deliberately NOT the Claim Mark. It held the beat for one session. Kept on file (aesthetic-law file-keeping clause); replaced by p1-b3-token",
+      "ruling": "retired",
+      "rulingNote": "Approved by the condensation ruling (letter B) on 30 Aug 2026 and superseded the same day by the restoration ruling. Kept on file (aesthetic-law file-keeping clause). Recorded in the cells array here for the first time: the fix session amended approvedSet and the rulings block but never added the cell row, which is why it never reached sheet.html either",
+      "supersededByRestoration": {
+        "date": "2026-08-30",
+        "ruling": "The condensation is PORT — the legacy deck's absorption restored verbatim (rulings.restoration).",
+        "replacedBy": "p1-b3-token",
+        "note": "The letter-B distinction — an object deliberately unlike the Claim Mark — was built to satisfy a clause that has since been struck. See rulings.restoration.strickenClause."
+      }
+    },
+    {
+      "id": "p1-b3-token",
+      "file": "p1-b3-token.png",
+      "beat": "P1 beat 3",
+      "status": "approved",
+      "decision": null,
+      "caption": "Beat 3 · RESTORED BY RULING (30 Aug 2026 — PORT) — the condensation’s landing is the LEGACY BALL, verbatim: 1-02-the-conversion’s token, the deck’s own luminous disc, 176 across at the stage centre the collapse actually converges on. Nothing here was designed and nothing was sized: the classes the legacy slide used are the classes this cell uses. Replaces both p1-b3 (the granular mass) and p1-b3-ball (the white ball)",
+      "ruling": "landed",
+      "rulingNote": "The approved P1 b3 state, from the presenter's restoration ruling; rendered through the states pipeline beside the two retired candidates",
+      "portedFrom": {
+        "slide": "1-02-the-conversion",
+        "file": "src/slides/section-1-question/02-the-conversion.js",
+        "object": ".luminous-disc + .s1q-token (src/styles/slides.css) — 176px, stage centre (960, 540), arriving from scale(0.82) over 1100ms opacity / 1500ms transform",
+        "gesture": "COLLAPSE_MS 4600 · TOKEN_EMERGE_AT 0.22"
       }
     },
     {
@@ -248,11 +286,11 @@
     }
   },
   "approvedSet": {
-    "note": "the authoritative approved set for the Prologue — the presenter's rulings of 29 August 2026 (rulings block). One cell per beat, plus the authored entry black. Amended 30 August 2026 by the condensation ruling (rulings.condensation): P1 b3 is now p1-b3-ball.",
+    "note": "the authoritative approved set for the Prologue — the presenter's rulings of 29 August 2026 (rulings block). One cell per beat, plus the authored entry black. Amended twice on 30 August 2026: by the condensation ruling (rulings.condensation) to p1-b3-ball, and then by the restoration ruling (rulings.restoration) to p1-b3-token, which is the current approved state for P1 b3.",
     "P1 entry": "p1-b0",
     "P1 b1": "p1-b1",
     "P1 b2": "p1-b2",
-    "P1 b3": "p1-b3-ball",
+    "P1 b3": "p1-b3-token",
     "P1 b4": "p1-b4",
     "P1 b5": "p1-b5",
     "P1 b6": "p1-b6",

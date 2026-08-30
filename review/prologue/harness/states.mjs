@@ -16,10 +16,17 @@
 // black) + p1-b1 … p1-b11; p2-b1 … p2-b2.
 //
 // Composition law: no accent color anywhere in the Prologue (orange enters at
-// Scene 3's birth); no Claim Mark and no luminous disc anywhere (the disc is
-// born in Scene 3 and nowhere earlier — the legacy 1.2 token does NOT return);
-// the self-reference ban; P1's register is monochrome plus the dark-field
-// renders' photographic warmth. Every cell is a frame that could ship.
+// Scene 3's birth); the self-reference ban; P1's register is monochrome plus
+// the dark-field renders' photographic warmth. Every cell is a frame that could
+// ship.
+//
+// AMENDED 30 August 2026. This header used to carry a second clause — "no Claim
+// Mark and no luminous disc anywhere (the disc is born in Scene 3 and nowhere
+// earlier — the legacy 1.2 token does NOT return)". It was struck as
+// over-extension: it was the close brief's own invention, and the record it
+// claimed to restate governs the accent, not the drawing. The legacy 1.2 token
+// DOES return — it is `p1-b3-token`, and it is the beat's approved cell.
+// The trail is docs/gate-2-close-and-prologue-states-report.md §12.
 //
 // Determinism note: the condensed-mass and structured-light cells use a seeded
 // LCG, never Math.random, so a re-render of those cells is pixel-stable. The
@@ -185,19 +192,17 @@ function condensedMass(st) {
   }
 }
 
-// THE CONDENSATION'S OBJECT (presenter-ruled 30 August 2026, letter B): a
-// smooth luminous ball that is deliberately NOT the Claim Mark. The drawing
-// lives in exactly one place — the `.p1-ball` class in src/styles/slides.css,
-// which states its parameters *against* the disc's — so the cell and the scene
-// cannot drift into two objects that merely resemble each other.
+// RETIRED — the letter-B object (presenter-ruled 30 August 2026, superseded the
+// same day by the restoration). A smooth luminous ball that was deliberately
+// NOT the Claim Mark; the drawing lives in the `.p1-ball` class in
+// src/styles/slides.css. Kept here, like `condensedMass` above, so its cell can
+// be re-rendered — the aesthetic law's file-keeping clause.
 //
-// The geometry is the REOPENED CELL'S OWN: the retired mass's core radius was
+// Its geometry was the reopened cell's own: the retired mass's core radius was
 // 148 at (FORM_CX, FORM_CY), so the ball is 296 across at that same centre.
-// Nothing here is chosen — the ruling said "sized per the reopened cell's box,"
-// and this is that box.
 export const BALL_SIZE = 296;
 
-function condensedBall(st) {
+function whiteBall(st) {
   const el = document.createElement('div');
   el.className = 'p1-ball';
   el.dataset.visible = 'true';
@@ -205,6 +210,25 @@ function condensedBall(st) {
   el.style.left = `${FORM_CX - BALL_SIZE / 2}px`;
   el.style.top = `${FORM_CY - BALL_SIZE / 2}px`;
   el.style.setProperty('--ball-size', `${BALL_SIZE}px`);
+  st.el.appendChild(el);
+  return el;
+}
+
+// THE CONDENSATION'S OBJECT (presenter-ruled 30 August 2026 — PORT). The legacy
+// ball, verbatim: `1-02-the-conversion`'s token, which is the deck's own
+// `.luminous-disc` positioned by `.s1q-token` — 176 across, centred on the
+// stage at (960, 540), which is exactly where UnitField's collapse converges.
+//
+// TWO LINES, AND NO GEOMETRY. That is the whole builder, because it is the
+// whole of what 1.02 wrote (02-the-conversion.js, lines 46–49). The classes
+// carry the size, the centre and the glow; a coordinate written here would be a
+// re-authoring of a frame the deck had already solved, so there is none. The
+// two candidates above kept their geometry in this file; the restoration needs
+// none, and that absence is the record of the port.
+function restoredBall(st) {
+  const el = document.createElement('div');
+  el.className = 'luminous-disc s1q-token';
+  el.dataset.visible = 'true';
   st.el.appendChild(el);
   return el;
 }
@@ -314,17 +338,24 @@ cell('p1-b2', {
 });
 
 cell('p1-b3', {
-  beat: 'P1 beat 3', status: 'determined', decision: null,
-  caption: 'Beat 3 · the condensation’s settled landing — “condenses into… this.”: the field’s own points of light gathered into one dense mass at the forms’ center. A mass, deliberately not a disc (the disc is born in Scene 3) and not yet any form (the shell is the next advance’s reveal)'
+  beat: 'P1 beat 3', status: 'retired', decision: null,
+  caption: 'Beat 3 · RETIRED — SUPERSEDED BY RESTORATION (30 Aug 2026). The condensation’s settled landing as the field’s own points of light gathered into one dense mass at the forms’ center. Kept on file (aesthetic-law file-keeping clause); replaced by p1-b3-token'
 }, (st) => {
   condensedMass(st);
 });
 
 cell('p1-b3-ball', {
-  beat: 'P1 beat 3', status: 'approved', decision: null,
-  caption: 'Beat 3 · APPROVED BY RULING (30 Aug 2026, letter B) — the condensation’s landing is a smooth luminous ball, deliberately NOT the Claim Mark: achromatic white where the disc is warm and ends in the accent, with a halo a little over half the disc’s radius and about two thirds its strength. 296 across at the forms’ centre — the reopened cell’s own box. Replaces the retired p1-b3'
+  beat: 'P1 beat 3', status: 'retired', decision: null,
+  caption: 'Beat 3 · RETIRED — SUPERSEDED BY RESTORATION (30 Aug 2026). The letter-B object: a smooth luminous ball, achromatic white, 296 across at the forms’ centre, built to be deliberately NOT the Claim Mark. It held the beat for one session. Kept on file (aesthetic-law file-keeping clause); replaced by p1-b3-token'
 }, (st) => {
-  condensedBall(st);
+  whiteBall(st);
+});
+
+cell('p1-b3-token', {
+  beat: 'P1 beat 3', status: 'approved', decision: null,
+  caption: 'Beat 3 · RESTORED BY RULING (30 Aug 2026 — PORT) — the condensation’s landing is the LEGACY BALL, verbatim: 1-02-the-conversion’s token, the deck’s own luminous disc, 176 across at the stage centre the collapse actually converges on. Nothing here was designed and nothing was sized: the classes the legacy slide used are the classes this cell uses. Replaces both p1-b3 (the granular mass) and p1-b3-ball (the white ball)'
+}, (st) => {
+  restoredBall(st);
 });
 
 cell('p1-b4', {

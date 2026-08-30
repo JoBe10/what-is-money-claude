@@ -11,7 +11,14 @@
 //      reviews at 100%, never from thumbnails) — and states.json, the
 //      per-cell record.
 //
-// Usage: node capture-states.cjs [--port 5273]
+// `--index-only` rebuilds sheet.html from the builders' metadata and touches
+// NOTHING else: no cell is re-rendered, and states.json is left alone. That
+// second half matters — states.json has carried hand-written rulings since the
+// C1 selection, and a full run would overwrite them with the generated shape.
+// Use it when a cell is added or retired through render-cell.cjs, which is the
+// path a single ruling takes.
+//
+// Usage: node capture-states.cjs [--port 5273] [--index-only]
 const { chromium } = require('playwright');
 const path = require('path');
 const fs = require('fs');
@@ -19,6 +26,7 @@ const fs = require('fs');
 const args = process.argv.slice(2);
 const flag = (n, d) => { const i = args.indexOf(n); return i > -1 ? args[i + 1] : d; };
 const PORT = flag('--port', '5273');
+const INDEX_ONLY = args.includes('--index-only');
 const BASE = `http://127.0.0.1:${PORT}`;
 const OUT = path.join(__dirname, '..', 'states');
 const FRAMES = path.join(__dirname, '..', '..', 'frames-a', 'frames');
@@ -44,7 +52,7 @@ fs.mkdirSync(OUT, { recursive: true });
   const ids = Object.keys(meta);
 
   let shots = 0;
-  for (const id of ids) {
+  for (const id of INDEX_ONLY ? [] : ids) {
     if (meta[id].carriedFrom) {
       fs.copyFileSync(path.join(FRAMES, `${meta[id].carriedFrom}.png`),
         path.join(OUT, `${id}.png`));
@@ -103,10 +111,18 @@ or its “full size” link — and receives a per-cell verdict: <b>approved / a
 No bulk verdicts; an unexamined cell stays unreviewed and blocks motion on its beat. CARRIED marks an approved frame
 shipping byte-identical (p1-f1, p1-f2, p1-f3, p2-f1-plain — inputs unchanged). The one open selection is <b>C1, the
 bitcoin form (p1-b8-a vs p1-b8-b)</b>; C2, the counter treatment, is determined by P1-F1’s approved counter. The beat
-count is the script’s 11 advances (the §1 map’s 10-beat compression is flagged in the report). No accent color and no
-Claim Mark appear anywhere in the Prologue — the disc is born in Scene 3.</p>
+count is the script’s 11 advances (the §1 map’s 10-beat compression is flagged in the report). <b>No accent color appears
+anywhere in the Prologue</b> — orange enters the film at Scene 3’s birth. The clause that once also read “and no Claim
+Mark” was struck on 30 August 2026 as over-extension, and P1 b3 is now the restored legacy ball (<b>p1-b3-token</b>);
+its two retired candidates stay on the sheet, marked, because a retired candidate stays on file.</p>
 ${sections}
 </body></html>`);
+
+  if (INDEX_ONLY) {
+    console.log(`\nsheet.html rebuilt for ${ids.length} cells — no cell re-rendered, states.json untouched`);
+    await browser.close();
+    process.exit(errors.length ? 1 : 0);
+  }
 
   fs.writeFileSync(path.join(OUT, 'states.json'), JSON.stringify({
     date: new Date().toISOString(),
