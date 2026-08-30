@@ -1,0 +1,82 @@
+{
+  "phase": "R7.2",
+  "dir": "assets/dark-field/incoming",
+  "thresholds": {
+    "cornerMax": 6,
+    "borderMax": 6,
+    "darkFracMin": 0.5,
+    "warmthMin": 18,
+    "warmFracMin": 0.9
+  },
+  "images": 1,
+  "checks": 5,
+  "failures": 0,
+  "frameTarget": 0.88,
+  "framing": {
+    "fiat": [
+      1.127,
+      0.9,
+      -1.9
+    ]
+  },
+  "rows": [
+    {
+      "file": "fiat.png",
+      "zone": "integrated",
+      "bytes": 1343997,
+      "width": 1672,
+      "height": 941,
+      "corners": {
+        "tl": 0.29,
+        "tr": 0.29,
+        "bl": 0.32,
+        "br": 0.27
+      },
+      "cornerMax": 0.32,
+      "border": 0.3,
+      "darkFrac": 0.797,
+      "subjectW": 0.345,
+      "subjectH": 0.781,
+      "subjectDX": -0.009,
+      "subjectDY": 0.019,
+      "highlightFrac": 0.0362,
+      "warmth": 130.3,
+      "highlightRGB": [
+        223,
+        167,
+        92
+      ],
+      "warmFrac": 1,
+      "keyAzimuth": 111,
+      "keyOffset": 0.223,
+      "spread": 1
+    }
+  ],
+  "results": [
+    {
+      "name": "grade: fiat.png — frame corners are black (≤ 6)",
+      "ok": true,
+      "detail": "max corner 0.32 (tl 0.29 tr 0.29 bl 0.32 br 0.27)"
+    },
+    {
+      "name": "grade: fiat.png — no environment reaches the border (≤ 6)",
+      "ok": true,
+      "detail": "border ring 0.3"
+    },
+    {
+      "name": "grade: fiat.png — the subject emerges from darkness (≥ 50% below L16)",
+      "ok": true,
+      "detail": "79.7% dark"
+    },
+    {
+      "name": "grade: fiat.png — the key is warm (R−B ≥ 18)",
+      "ok": true,
+      "detail": "R−B 130.3 on 3.62% of the frame, mean highlight rgb(223, 167, 92)"
+    },
+    {
+      "name": "grade: fiat.png — the highlight population is warm throughout (≥ 90%)",
+      "ok": true,
+      "detail": "100.0% of highlight pixels warm"
+    }
+  ]
+}

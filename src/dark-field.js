@@ -90,20 +90,29 @@ export const darkField = Object.fromEntries(
 // composition" clause holding.
 //
 // Assumes the render and its box share an aspect ratio to within a few percent.
-// The shipping set is three families and each has its own box: the 4:3 renders
+// The shipping set is four families and each needs its own box: the 4:3 renders
 // of the first shoot (4.04–4.06, and `shells` in the carrier lineup) in 4:3
 // boxes, the 4:5 portraits of the R7.3 contender shoot and the Batch A drop in
-// the 4:5 box the rail's contender row now uses, and `ledger_glow`, the Batch A
-// drop's one 3:2 landscape, which needs a 3:2 box. A box with a materially different aspect would need
+// the 4:5 box the rail's contender row now uses, `ledger_glow`, the Batch A
+// drop's one 3:2 landscape, which needs a 3:2 box (P1's ledger form gives it
+// one), and `fiat`, ingested at Batch A, which is 1672×941 — near 16:9, the
+// widest frame in the register. A box with a materially different aspect would need
 // the scale computed against `object-fit: contain`'s actual fit rather than
 // against the frame — which is exactly the defect that showed up when the four
 // portrait renders first landed in the old landscape box: the rule was applied
 // to a fit it did not describe, and the row came out at four different sizes.
+//
+// FLAGGED (Batch A): every present call site for `fiat` is a 6:5 box —
+// ComparisonAssetHeader's 180×150 display box and 96×72 compact box — which is
+// a 48% aspect departure, well past "a few percent". Those call sites are Act
+// IV/V scenes (Batches D and E) and are out of Batch A's scope; the row above is
+// the gate's measured value and stands. The box question goes with the scenes.
 const FRAMING = {
   bitcoin: [1.226, 0.3, 1.5],
   cattle: [1.101, -2.1, 3.1],
   coffee_cup: [1.227, -3.1, 13.2],
   cowrie_shells: [1.13, 1.7, -2.5],
+  fiat: [1.127, 0.9, -1.9],
   gold: [2.206, 0, -3.1],
   gold_certificate: [1.124, -2.9, -0.9],
   iron: [1.095, -4.5, -7.6],

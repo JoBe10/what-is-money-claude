@@ -151,6 +151,34 @@ gold claim against the plain note). All passing variants stay in the register,
 and the presenter ruled on the Batch A register sheet which study serves which
 scene — the assignments are §2.2 below. Nothing was deleted to record them.
 
+**The Batch A implementation drop — `fiat`, the register's last gap, ingested
+29 August 2026** (presenter-generated from §3.0's prompt; the gate run on the
+drop zone is `review/batch-a/grade-fiat-drop.json`, and the post-ingest run over
+the whole shipping set is `review/batch-a/grade-shipping-set.json` — **23 images,
+115 checks, 0 failures**):
+
+| subject key | file | used at | corner / border | dark | R−B |
+|---|---|---|---|---|---|
+| `fiat` | `assets/dark-field/fiat.png` | the five-candidate lineup, at every display-scale appearance | 0.32 / 0.30 | 79.7% | +130 |
+
+It passes **all five clauses**, and by margins in the register's own range: warm
+fraction 100%, a single key at azimuth 111° with a spread of 1 (one light, not
+two), and a subject occupying 0.345 × 0.781 of the frame. The render is a folded
+note — the §3.0 note asked for exactly that, so no denomination reads as a
+specific currency. Measured framing row, pasted into `src/dark-field.js`:
+`fiat: [1.127, 0.9, -1.9]`.
+
+**Its frame is a fourth aspect family.** `fiat.png` is 1672 × 941 — near 16:9,
+the widest in the register — where the five-candidate lineup's display box is
+180 × 150 (6:5). That is a 48% aspect departure, well past the framing rule's
+"within a few percent," and it is **flagged, not fixed**: every call site is an
+Act IV/V scene (`ComparisonAssetHeader`, 4.15/4.17/4.19/4.20), out of Batch A's
+scope. The box question travels with those scenes, to Batches D and E.
+
+**The `shares` collision is now checkable** (the §2 note above): both studies now
+exist and can be put side by side at lineup scale. Not run here — no Batch A
+scene shows either — and it stays open for the presenter's eye.
+
 ### 2.1 `patient` — regraded and ingested, 25 August 2026
 
 `patient` was held at the Batch A gate on one clause of five: top-left corner
@@ -259,7 +287,46 @@ is changed by changing one word.
 
 ## 3. Failed the gate — regeneration required
 
-### 3.0 `fiat` — the comparison lineup's one gap (R7.4)
+### 3.0 `fiat` — **CLOSED, 29 August 2026** *(was: the comparison lineup's one gap)*
+
+**The regenerated render passed the gate and was ingested.** The presenter's
+`fiat.png` had been dropped straight into the shipping set, untracked and
+ungated (flagged at the Prologue states session, §6.4 of its report); Batch A
+moved it to `incoming/` and put it through the standard harness:
+
+| run | result |
+|---|---|
+| gate on the drop zone (`review/batch-a/grade-fiat-drop.json`) | **5 clauses of 5 pass** — corner 0.32, border 0.30, 79.7% dark, R−B +130.3, warm fraction 100% |
+| `ingest-r7-2.cjs` | 1 accepted, 0 held back → `assets/dark-field/fiat.png` |
+| gate on the whole shipping set (`review/batch-a/grade-shipping-set.json`) | **23 images, 115 checks, 0 failures** |
+| measured framing row | `fiat: [1.127, 0.9, -1.9]`, pasted into `src/dark-field.js` |
+
+The register is complete: **every subject the film asks for is present and
+on-grade.** The row is in §2 above; the aspect flag is there too.
+
+**The distinctness clause is confirmed.** The §5 clause — that
+`gold_certificate` be *"visually distinct from the fiat note"* — has been
+unconfirmable since the certificate landed, because the note did not exist. Both
+now do, and the check is on file: `review/batch-a/gold-certificate-vs-fiat.png`
+(both renders through the deck's own render path, at display scale and in the
+lineup's own 180 × 150 box) with `review/batch-a/distinctness.json`.
+
+> **Read: distinct, and distinct structurally rather than tonally.** The
+> certificate is a single flat plane, monochrome gold on cream, carrying an
+> engraved ornamental border and a central seal. The note is folded into two
+> planes with a lit crease, and it is polychrome — a blue oval at the left, red-
+> brown bands across the middle — with a highlight population a quarter the
+> size (0.036 of the frame against 0.165). The two do not read as one object at
+> either scale. What does *not* separate them is the key: mean highlight RGB
+> differs by (−9, −5, −10), which is the grade holding, exactly as it should.
+
+*One honest note from the strip:* in the lineup's 6:5 box the note renders much
+smaller than the certificate, because `object-fit: contain` letterboxes a 16:9
+render into a 6:5 frame and the framing rule's scale was computed against the
+frame. That is the aspect flag in §2, not a distinctness failure, and it belongs
+to the Act IV/V scenes that own the box.
+
+The record of the original failure is kept below.
 
 The historical `fiat.png` was restored from git history with `property` and
 `shares` and is the only one of the three that fails, on four clauses of five:
@@ -378,15 +445,19 @@ lineup keeps its own:
 
 | status | subjects |
 |---|---|
-| **shipping** (22) | `shoe` · `wine` · `shells` · `gold` · `paper` · `ledger` · `bitcoin` · `cattle` · `salt` · `cowrie_shells` · `iron` · `surgeon` · `meal` · `property` · `shares` · **`single_cowrie`** · **`gold_certificate`** · **`vault`** · **`ledger_glow`** · **`palladium`** · **`coffee_cup`** · **`patient`** |
-| **regenerate** (1) | `fiat` — see §3.0 |
+| **shipping** (23) | `shoe` · `wine` · `shells` · `gold` · `paper` · `ledger` · `bitcoin` · `cattle` · `salt` · `cowrie_shells` · `iron` · `surgeon` · `meal` · `property` · `shares` · `single_cowrie` · `gold_certificate` · `vault` · `ledger_glow` · `palladium` · `coffee_cup` · `patient` · **`fiat`** |
+| **regenerate** (0) | — |
 | **optional** (2) | `metals`, which would light the second featured moment at 2.4 (R7.3 §7 — implemented, dormant, and it does not stub to a glyph because the stop below it already shows that glyph); `gold-native`, only if the two-survivors arrival is ruled in and wants its own study |
 
-**One image stands between the register and completeness: `fiat` (§3.0).** It is
-the only position in the five-candidate lineup still showing its mark, and the
-§5 clause that `gold_certificate` be *"visually distinct from the fiat note"*
-stays unconfirmable until it lands. Both flags are unchanged by the Batch A
-selections session and were deliberately not closed there.
+**The register is complete** (Batch A, 29 August 2026). `fiat` was the last gap
+and it is gated, ingested and rowed (§3.0); the five-candidate lineup no longer
+shows a mark at any display-scale position, and the §5 distinctness clause is
+confirmed on file. Nothing in the register is now waiting on a generation.
+
+Two flags stay open, and neither blocks anything: `fiat`'s frame is a fourth
+aspect family and every present call site gives it a 6:5 box (§2, §3.0 — the Act
+IV/V scenes own it), and the `shares`/`fiat` collision at lineup scale is now
+checkable and remains the presenter's eye to make.
 
 Three images in this register were **graded rather than regenerated**, and all
 three failed on their *ground* rather than their light. `surgeon` and `meal`
