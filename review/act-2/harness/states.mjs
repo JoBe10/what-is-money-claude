@@ -606,9 +606,9 @@ cell('s5-b5', {
 });
 
 cell('s5-b6', {
-  scene: 'S5', beat: 6, frame: 'S5-F3', klass: 'ADAPT', review: 'pending-review',
+  scene: 'S5', beat: 6, frame: 'S5-F3', klass: 'ADAPT', review: 'approved-adapt',
   source: '2-07-the-severance’s dated-fact treatment · ruled change: generalized as the film-wide evidence grammar',
-  caption: 'Beat 6 · THE ZANZIBAR RECEIPT — the evidence grammar’s first specimen. VERIFY THE ONE CHANGE: the type is the legacy’s to the value (128px/650 tabular date, 33px/460 fact), and the only thing that moved is that the two now stand as one block that can also carry a place. The words are the rail’s own receipt text, split into place · date · fact.'
+  caption: 'Beat 6 · THE ZANZIBAR RECEIPT — the evidence grammar’s first specimen. VERIFIED 31 August 2026: the one ruled change landed and nothing else moved. The type is the legacy’s to the value (128px/650 tabular date, 33px/460 fact); the only thing that moved is that the two now stand as one block that can also carry a place. The words are the rail’s own receipt text, split into place · date · fact.'
 }, (st) => { evidence(st, SPECIMEN.zanzibar); });
 
 cell('s5-b7', {
@@ -942,9 +942,9 @@ cell('s8-b1', {
 });
 
 cell('s8-b2', {
-  scene: 'S8', beat: 2, frame: 'S5-F3', klass: 'ADAPT', review: 'pending-review',
+  scene: 'S8', beat: 2, frame: 'S5-F3', klass: 'ADAPT', review: 'approved-adapt',
   source: '2-07-the-severance’s dated-fact treatment · the evidence grammar’s second specimen',
-  caption: 'Beat 2 · 1971. The grammar’s second specimen — a date with no place — carrying `2-07`’s own decree sentence verbatim. VERIFY THE ONE CHANGE: this is where the legacy composition and the generalized one should look most alike, because this is the specimen it was built on.'
+  caption: 'Beat 2 · 1971. The grammar’s second specimen — a date with no place — carrying `2-07`’s own decree sentence verbatim. VERIFIED 31 August 2026: the legacy composition and the generalized one look most alike here, because this is the specimen it was built on, and nothing else moved.'
 }, (st) => { evidence(st, SPECIMEN.severance); });
 
 cell('s8-b3', {
@@ -1036,9 +1036,9 @@ cell('s10-b2', {
 });
 
 cell('s10-b3', {
-  scene: 'S10', beat: 3, frame: 'S10-F2', klass: 'ADAPT', review: 'pending-review',
+  scene: 'S10', beat: 3, frame: 'S10-F2', klass: 'ADAPT', review: 'approved-adapt',
   source: '3-05-the-palladium-test · ruled change: Ruling 4, placed in Scene 10 as the bar the strip must clear',
-  caption: 'Beat 3 · PALLADIUM. The legacy frame ported — the hook, and the two panels with their real sourced figures (annual mine supply beside the modern price record on a log axis, one vertex per observed year). VERIFY THE ONE CHANGE: the beat has moved out of Act III’s judging position and now stands against the strip. Nothing inside the frame moved, and the two-epoch honesty travels with it.'
+  caption: 'Beat 3 · PALLADIUM. The legacy frame ported — the hook, and the two panels with their real sourced figures (annual mine supply beside the modern price record on a log axis, one vertex per observed year). VERIFIED 31 August 2026, placement confirmed: the beat stands against the strip, out of Act III’s judging position, nothing inside the frame moved, and the two-epoch honesty traveled with it.'
 }, (st) => {
   const hook = document.createElement('p');
   hook.className = 's3f-palladium__hook';
@@ -1054,9 +1054,9 @@ cell('s10-b3', {
 });
 
 cell('s10-b4', {
-  scene: 'S10', beat: 4, frame: 'S10-F2', klass: 'ADAPT', review: 'pending-review',
+  scene: 'S10', beat: 4, frame: 'S10-F2', klass: 'ADAPT', review: 'approved-adapt',
   source: '3-05-the-palladium-test build 5 — the bar',
-  caption: 'Beat 4 · THE BAR — the sentence every later candidate is held to, landing at full voice with the two epoch lines settled small and receded beneath a chart still at full voice (R7.4 §F.6’s own budget). The sentence is the legacy’s, unchanged.'
+  caption: 'Beat 4 · THE BAR — the sentence every later candidate is held to, landing at full voice with the two epoch lines settled small and receded beneath a chart still at full voice (R7.4 §F.6’s own budget). The sentence is the legacy’s, unchanged. VERIFIED 31 August 2026.'
 }, (st) => {
   const hook = document.createElement('p');
   hook.className = 's3f-palladium__hook';
@@ -1104,10 +1104,10 @@ cell('s10-b5', {
 // tradition of rendering a treatment twice to show it degrade.
 
 cell('s5f3-proof-1803', {
-  scene: '—', beat: null, frame: 'S5-F3', klass: 'ADAPT', review: 'pending-review',
+  scene: '—', beat: null, frame: 'S5-F3', klass: 'ADAPT', review: 'approved-adapt',
   system: 'system proof',
   source: 'the evidence grammar carrying its third specimen',
-  caption: 'SYSTEM PROOF, not a beat · the evidence grammar carrying 1803 — the film’s third dated fact, and the one Scene 6 plants four scenes before Scene 10 pays it off. The ruling asks that Zanzibar, 1971 and 1803 all speak this grammar; this cell is the third, shown so the claim is demonstrated rather than asserted. In the film the line lives inside Scene 10’s ported palladium frame.'
+  caption: 'SYSTEM PROOF, not a beat · the evidence grammar carrying 1803 — the film’s third dated fact, and the one Scene 6 plants four scenes before Scene 10 pays it off. APPROVED 31 August 2026 with the two beat specimens, so the ruled generalization is demonstrated on all three rather than asserted on the third. In the film the line lives inside Scene 10’s ported palladium frame.'
 }, (st) => { evidence(st, SPECIMEN.palladium); });
 
 // ---- runtime ---------------------------------------------------------------
