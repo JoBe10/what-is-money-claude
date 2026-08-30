@@ -515,19 +515,62 @@ function entrantBlock(st, { capabilities = false, limitation = false } = {}) {
 
 // PORT (S10-F1) — the strip, in EvolutionRail's own grammar, transcribed from
 // the component and its stylesheet: a thin threaded line, a 12px marker centred
-// ON the line, the 40px glyph 80 above it, the label row at +26 in 25px/0.16em,
-// and the second row at +64 on a 218px measure — one shared rhythm, identical
-// row heights, no staggered baselines (icon grammar §4.5). Scene 10's stations
-// put the gain and the dependency where the wound sat.
+// ON the line, the label row at +26 in 25px/0.16em, and the second row at +64
+// on a 218px measure — one shared rhythm, identical row heights, no staggered
+// baselines (icon grammar §4.5). Scene 10's stations put the gain and the
+// dependency where the wound sat.
+//
+// UPGRADED BY THE RAILS LAW (presenter-ordered, 31 August 2026; AGENTS.md §6):
+// the simple 40px marks retire from the stations, and the goods ride above the
+// line as an OBJECT BAND of dark-field renders at lineup scale — GOLD and
+// BITCOIN by their carrier renders (bitcoin per the C1 ruling), LEDGER by
+// `ledger_glow` (its Scene 8 assignment) — each in a box of its own aspect
+// (the framing rule) at the band's shared height, bottom-aligned on one
+// baseline above the line. THE CLAIM STATION IS THE LAW'S NAMED EXCEPTION: it
+// carries the ClaimObject disc itself, at the film's held 116, centred on the
+// band's middle — never a photograph, never an icon. The band's scale is the
+// contender band's own (188 world px at the metals camera's 1.3 = 244 stage px,
+// clearing the line by the rail's own 68), so the two rails read as one
+// system. Receded stations recede to the dimmed-prior step (§9.4 rule 10);
+// nothing beneath the line changed.
+const BAND_H = 244;          // 188 world × 1.3 — the contender band's stage height
+const BAND_GAP = 68;         // 52 world × 1.3 — the rail's render-baseline clearance
+const BAND_GOODS = {
+  gold: { subject: 'gold', aspect: 4 / 3, alt: 'A cast gold bar' },
+  ledger: { subject: 'ledger_glow', aspect: 3 / 2, alt: 'A glowing ledger entry' },
+  bitcoin: { subject: 'bitcoin', aspect: 4 / 3, alt: 'The bitcoin carrier' }
+};
+
 function strip(st, { live = 3 } = {}) {
   const Y = 470;
   // WIRING: four stations on the stage, at the rail's own 340px stop width.
   const XS = [345, 750, 1155, 1560];
+  const BOTTOM = Y - BAND_GAP;
   line(st.svg, 200, Y, 1720, Y, VOICE.lineDim, 2);
   STATIONS.forEach((s, i) => {
     const on = i === live;
     const a = on ? 1 : 0.55;
-    mark(st, s.key, XS[i], Y - 80, 40, (on ? 0.95 : 0.58));
+    const voice = on ? 1 : 0.58;
+    if (s.key === 'paper') {
+      // The CLAIM station: the disc itself, the through-line arriving from
+      // Scene 7. The reveal transition is disabled so the still is the
+      // settled state, exactly as the photo boxes do it.
+      const wrap = document.createElement('div');
+      wrap.style.cssText = `position:absolute; left:${XS[i] - 58}px; top:${BOTTOM - BAND_H / 2 - 58}px;` +
+        `width:116px; height:116px; opacity:${voice};`;
+      const claim = ClaimObject();
+      claim.el.style.transition = 'none';
+      claim.applyState({ visible: true });
+      wrap.appendChild(claim.el);
+      st.el.appendChild(wrap);
+    } else {
+      const g = BAND_GOODS[s.key];
+      const w = Math.round(BAND_H * g.aspect);
+      photo(st, {
+        subject: g.subject, alt: g.alt, o: voice,
+        box: [XS[i] - w / 2, BOTTOM - BAND_H, w, BAND_H]
+      });
+    }
     dot(st.svg, XS[i], Y, 6, on ? 0.85 : 0.5);
     text(st, s.name, `left:${XS[i] - 170}px; top:${Y + 26}px; width:340px; text-align:center; text-indent:0;` +
       RAIL_LABEL(on ? 1 : 0.58));
@@ -587,13 +630,25 @@ cell('s5-b4', {
   caption: 'Beat 4 · IRON falls. Three wounds on the record, the newest at full voice. SHELLS is still standing — its defeat is beat 6’s, and it is the one the scene opened on.'
 }, (st) => { rail(st, s5Row(['cattle', 'salt', 'iron'], 'iron')); });
 
+// Beat 5 carries THE RAILS LAW (presenter-ordered, 31 August 2026): the goods
+// ride the record as an object band of renders above the line, while the
+// component's own drawn grammar — the line, the markers, the labels, the four
+// wounds, METALS active — is untouched beneath. The four contender renders
+// are the component's own (`renders: true` — the same studies s5-b4 mounts);
+// what the harness adds is exactly two things, both marked below: the METALS
+// render box, mirroring the component's own render markup at the band's
+// shared world baseline (bottom −52, the component's RENDER_BOTTOM), in a box
+// of the render's own near-16:9 aspect; and the dimmed-prior voice on the
+// fallen goods' renders — the component only defines that recession for
+// contender mode, because renders never rode the drawn rail before this law.
 cell('s5-b5', {
-  scene: 'S5', beat: 5, frame: 'S5-F2', klass: 'PORT', review: 'approved-port',
-  source: '2-04-the-competition-record build 8 — the transformation and METALS rising',
-  caption: 'Beat 5 · the same experiment, and the metals rise out of the wreckage. The register switch the legacy build makes: the goods become entries on a record as the line draws through them, and METALS takes the active state. SHELLS holds its place, undefeated, one beat from the ship.'
+  scene: 'S5', beat: 5, frame: 'S5-F2', klass: 'PORT', review: 'pending-review',
+  source: '2-04-the-competition-record build 8 + the rails law (31 Aug 2026) — the goods on the object band',
+  caption: 'Beat 5 · the metals rise — THE RAILS LAW STAGED. Beneath the line, the legacy record is untouched: the drawn line, the station markers, the labels and the four wounds, with METALS active. Above it, the goods now ride as an object band of their dark-field renders — the same four studies the contender row uses, receded to the record’s own prior step where their stations have fallen, SHELLS still at full voice — and METALS is carried by the newly gated metals render on the band’s shared baseline. The question for your eye: does the band read as one system with S10’s strip, and is the drawn grammar beneath exactly as it was?'
 }, (st) => {
-  rail(st, {
+  const r = rail(st, {
     camera: FRAMES.metals,
+    renders: true,
     stops: {
       cattle: ROW_STOP('defeated', 'contender'),
       salt: ROW_STOP('defeated', 'contender'),
@@ -602,6 +657,29 @@ cell('s5-b5', {
       metals: ROW_STOP('active'),
       gold: ROW_STOP('upcoming')
     }
+  });
+  // The METALS render box — the component's own render markup, mirrored: the
+  // band bottom is the component's RENDER_BOTTOM (world −52), and the box is
+  // the render's own aspect (1672×941, near 16:9) at the band's baseline.
+  const M_W = 240;
+  const M_H = 135;
+  const metalsStop = r.el.querySelector('[data-stop="metals"]');
+  const renderBox = document.createElement('div');
+  renderBox.className = 's2o-rail__render';
+  const df = DarkFieldImage({
+    name: 'metals', width: M_W, height: M_H,
+    alt: 'A stack of cast metal ingots', stubSize: 64
+  });
+  df.el.dataset.visible = 'true';
+  renderBox.style.top = `${-52 - M_H}px`;
+  renderBox.appendChild(df.el);
+  metalsStop.appendChild(renderBox);
+  // The register brightness rule on the band: a fallen station's render
+  // recedes to the deck's one dimmed-prior step, as the contender-mode CSS
+  // does it; rail mode has no such rule because renders are new here.
+  ['cattle', 'salt', 'iron'].forEach((id) => {
+    const box = r.el.querySelector(`[data-stop="${id}"] .s2o-rail__render`);
+    if (box) box.style.opacity = 'var(--dim-prior)';
   });
 });
 
@@ -1076,17 +1154,17 @@ cell('s9-b5', {
 // ========================================================== SCENE 10 (5 beats)
 
 cell('s10-b1', {
-  scene: 'S10', beat: 1, frame: 'S10-F1', klass: 'PORT', review: 'approved-port',
-  source: 'EvolutionRail’s grammar — icon grammar §4.5, transcribed from the component and its stylesheet',
-  caption: 'Beat 1 · THE STRIP. The rail’s own sentence at four stations: the 40px mark above, the 12px marker centred on the line, the name at +26 in 25px/0.16em, and the second row at +64 on a 218px measure — one shared rhythm, no staggered baselines. Scene 10 puts the gain and the dependency where the wound sat. The CLAIM station is the through-line’s own, arriving here from Scene 7.'
+  scene: 'S10', beat: 1, frame: 'S10-F1', klass: 'PORT', review: 'pending-review',
+  source: 'EvolutionRail’s grammar (icon grammar §4.5) + the rails law (31 Aug 2026) — the goods on the object band',
+  caption: 'Beat 1 · THE STRIP — THE RAILS LAW STAGED. Beneath the line, the rail’s own drawn sentence is unchanged: the 12px marker on the line, the name at +26 in 25px/0.16em, the gain and the dependency where the wound sat, one shared rhythm, no staggered baselines. Above it, the goods ride as the object band: GOLD by its render, LEDGER by ledger_glow, BITCOIN by its render per the C1 ruling — each at the band’s shared height in a box of its own aspect — and the CLAIM station carries the ClaimObject disc itself, the through-line arriving from Scene 7, never a photograph, never an icon. BITCOIN is the live station; the three before it recede to the prior step. The question for your eye: does the band read as one system with S5’s rail, and is the drawn grammar beneath exactly as it was?'
 }, (st) => {
   strip(st);
 });
 
 cell('s10-b2', {
-  scene: 'S10', beat: 2, frame: '—', klass: 'determined', review: 'determined',
-  source: 'the architecture’s own line, on the beat-1 composition',
-  caption: 'Beat 2 · the history line, landing on the strip that just made its case. A script landing on an already-approved frame.'
+  scene: 'S10', beat: 2, frame: '—', klass: 'determined', review: 'pending-review',
+  source: 'the architecture’s own line, on the beat-1 composition — re-landed on the upgraded strip',
+  caption: 'Beat 2 · the history line, re-landed on the upgraded strip. The line and its register are unchanged; what you are checking is only that it still sits correctly under the object band the rails law put above the line.'
 }, (st) => {
   strip(st);
   statement(st, 'The history of money is a history of changing trade-offs.', { top: 866, size: 44 });

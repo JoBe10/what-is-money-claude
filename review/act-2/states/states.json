@@ -1,5 +1,5 @@
 {
-  "date": "2026-08-30T11:17:19.909Z",
+  "date": "2026-08-30T11:19:58.077Z",
   "session": "act-2-states-r2",
   "beatMap": {
     "S5": 8,
@@ -76,11 +76,11 @@
     "s10-b2"
   ],
   "counts": {
-    "pending-review": 1,
+    "pending-review": 4,
     "approved-selection": 2,
     "approved-adapt": 5,
-    "approved-port": 22,
-    "determined": 8,
+    "approved-port": 20,
+    "determined": 7,
     "on-file": 9
   },
   "cells": [
@@ -135,9 +135,9 @@
       "beat": 5,
       "frame": "S5-F2",
       "klass": "PORT",
-      "review": "approved-port",
-      "source": "2-04-the-competition-record build 8 — the transformation and METALS rising",
-      "caption": "Beat 5 · the same experiment, and the metals rise out of the wreckage. The register switch the legacy build makes: the goods become entries on a record as the line draws through them, and METALS takes the active state. SHELLS holds its place, undefeated, one beat from the ship."
+      "review": "pending-review",
+      "source": "2-04-the-competition-record build 8 + the rails law (31 Aug 2026) — the goods on the object band",
+      "caption": "Beat 5 · the metals rise — THE RAILS LAW STAGED. Beneath the line, the legacy record is untouched: the drawn line, the station markers, the labels and the four wounds, with METALS active. Above it, the goods now ride as an object band of their dark-field renders — the same four studies the contender row uses, receded to the record’s own prior step where their stations have fallen, SHELLS still at full voice — and METALS is carried by the newly gated metals render on the band’s shared baseline. The question for your eye: does the band read as one system with S10’s strip, and is the drawn grammar beneath exactly as it was?"
     },
     {
       "id": "s5-b6",
@@ -548,9 +548,9 @@
       "beat": 1,
       "frame": "S10-F1",
       "klass": "PORT",
-      "review": "approved-port",
-      "source": "EvolutionRail’s grammar — icon grammar §4.5, transcribed from the component and its stylesheet",
-      "caption": "Beat 1 · THE STRIP. The rail’s own sentence at four stations: the 40px mark above, the 12px marker centred on the line, the name at +26 in 25px/0.16em, and the second row at +64 on a 218px measure — one shared rhythm, no staggered baselines. Scene 10 puts the gain and the dependency where the wound sat. The CLAIM station is the through-line’s own, arriving here from Scene 7."
+      "review": "pending-review",
+      "source": "EvolutionRail’s grammar (icon grammar §4.5) + the rails law (31 Aug 2026) — the goods on the object band",
+      "caption": "Beat 1 · THE STRIP — THE RAILS LAW STAGED. Beneath the line, the rail’s own drawn sentence is unchanged: the 12px marker on the line, the name at +26 in 25px/0.16em, the gain and the dependency where the wound sat, one shared rhythm, no staggered baselines. Above it, the goods ride as the object band: GOLD by its render, LEDGER by ledger_glow, BITCOIN by its render per the C1 ruling — each at the band’s shared height in a box of its own aspect — and the CLAIM station carries the ClaimObject disc itself, the through-line arriving from Scene 7, never a photograph, never an icon. BITCOIN is the live station; the three before it recede to the prior step. The question for your eye: does the band read as one system with S5’s rail, and is the drawn grammar beneath exactly as it was?"
     },
     {
       "id": "s10-b2",
@@ -559,9 +559,9 @@
       "beat": 2,
       "frame": "—",
       "klass": "determined",
-      "review": "determined",
-      "source": "the architecture’s own line, on the beat-1 composition",
-      "caption": "Beat 2 · the history line, landing on the strip that just made its case. A script landing on an already-approved frame."
+      "review": "pending-review",
+      "source": "the architecture’s own line, on the beat-1 composition — re-landed on the upgraded strip",
+      "caption": "Beat 2 · the history line, re-landed on the upgraded strip. The line and its register are unchanged; what you are checking is only that it still sits correctly under the object band the rails law put above the line."
     },
     {
       "id": "s10-b3",
