@@ -1,0 +1,571 @@
+{
+  "date": "2026-08-30T02:26:24.704Z",
+  "rule": "walked forward from the top of the deck, one advance at a time, every settled frame of the five new scenes is its approved cell at zero differing pixels, and the canvas layer hint stays released for the whole run",
+  "order": [
+    "eighty-thousand-hours:0",
+    "eighty-thousand-hours:1",
+    "eighty-thousand-hours:2",
+    "eighty-thousand-hours:3",
+    "eighty-thousand-hours:4",
+    "eighty-thousand-hours:5",
+    "eighty-thousand-hours:6",
+    "eighty-thousand-hours:7",
+    "eighty-thousand-hours:8",
+    "eighty-thousand-hours:9",
+    "eighty-thousand-hours:10",
+    "eighty-thousand-hours:11",
+    "the-stakes:0",
+    "the-stakes:1",
+    "the-direct-exchange:0",
+    "the-direct-exchange:1",
+    "the-direct-exchange:2",
+    "the-direct-exchange:3",
+    "the-direct-exchange:4",
+    "the-breakthrough:0",
+    "the-breakthrough:1",
+    "the-breakthrough:2",
+    "the-breakthrough:3",
+    "the-breakthrough:4",
+    "the-breakthrough:5",
+    "the-breakthrough:6",
+    "the-breakthrough:7",
+    "the-breakthrough:8",
+    "spend-or-save:0",
+    "spend-or-save:1",
+    "spend-or-save:2",
+    "spend-or-save:3",
+    "spend-or-save:4"
+  ],
+  "rasterHint": {
+    "heldAcrossTheWalk": true,
+    "perState": [
+      "auto",
+      "auto",
+      "auto",
+      "auto",
+      "auto",
+      "auto",
+      "auto",
+      "auto",
+      "auto",
+      "auto",
+      "auto",
+      "auto",
+      "auto",
+      "auto",
+      "auto",
+      "auto",
+      "auto",
+      "auto",
+      "auto",
+      "auto",
+      "auto",
+      "auto",
+      "auto",
+      "auto",
+      "auto",
+      "auto",
+      "auto",
+      "auto",
+      "auto",
+      "auto",
+      "auto",
+      "auto",
+      "auto"
+    ]
+  },
+  "states": 33,
+  "passed": 31,
+  "results": [
+    {
+      "order": 0,
+      "landedAt": "eighty-thousand-hours:0",
+      "cell": "p1-b0",
+      "fieldBearing": false,
+      "vsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "vsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "order": 1,
+      "landedAt": "eighty-thousand-hours:1",
+      "cell": "p1-b1",
+      "fieldBearing": true,
+      "vsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "vsArchive": null,
+      "pass": true
+    },
+    {
+      "order": 2,
+      "landedAt": "eighty-thousand-hours:2",
+      "cell": "p1-b2",
+      "fieldBearing": true,
+      "vsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "vsArchive": null,
+      "pass": true
+    },
+    {
+      "order": 3,
+      "landedAt": "eighty-thousand-hours:3",
+      "cell": "p1-b3",
+      "fieldBearing": false,
+      "vsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "vsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "order": 4,
+      "landedAt": "eighty-thousand-hours:4",
+      "cell": "p1-b4",
+      "fieldBearing": false,
+      "vsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "vsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "order": 5,
+      "landedAt": "eighty-thousand-hours:5",
+      "cell": "p1-b5",
+      "fieldBearing": false,
+      "vsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "vsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "order": 6,
+      "landedAt": "eighty-thousand-hours:6",
+      "cell": "p1-b6",
+      "fieldBearing": false,
+      "vsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "vsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "order": 7,
+      "landedAt": "eighty-thousand-hours:7",
+      "cell": "p1-b7-glow",
+      "fieldBearing": false,
+      "vsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "vsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "order": 8,
+      "landedAt": "eighty-thousand-hours:8",
+      "cell": "p1-b8-a",
+      "fieldBearing": false,
+      "vsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "vsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "order": 9,
+      "landedAt": "eighty-thousand-hours:9",
+      "cell": "p1-b9",
+      "fieldBearing": false,
+      "vsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "vsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "order": 10,
+      "landedAt": "eighty-thousand-hours:10",
+      "cell": "p1-b10",
+      "fieldBearing": false,
+      "vsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "vsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "order": 11,
+      "landedAt": "eighty-thousand-hours:11",
+      "cell": "p1-b11",
+      "fieldBearing": false,
+      "vsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "vsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "order": 12,
+      "landedAt": "the-stakes:0",
+      "cell": "p2-b1",
+      "fieldBearing": false,
+      "vsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "vsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "order": 13,
+      "landedAt": "the-stakes:1",
+      "cell": "p2-b2",
+      "fieldBearing": false,
+      "vsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "vsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "order": 14,
+      "landedAt": "the-direct-exchange:0",
+      "cell": "s2-b1-a",
+      "fieldBearing": false,
+      "vsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "vsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "order": 15,
+      "landedAt": "the-direct-exchange:1",
+      "cell": "s2-b2",
+      "fieldBearing": false,
+      "vsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "vsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "order": 16,
+      "landedAt": "the-direct-exchange:2",
+      "cell": "s2-b3-p2",
+      "fieldBearing": false,
+      "vsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "vsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "order": 17,
+      "landedAt": "the-direct-exchange:3",
+      "cell": "s2-b4-p2",
+      "fieldBearing": false,
+      "vsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "vsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "order": 18,
+      "landedAt": "the-direct-exchange:4",
+      "cell": "s2-b5-b-p2",
+      "fieldBearing": false,
+      "vsCell": {
+        "diffPixels": 0,
+        "maxDelta": 1
+      },
+      "vsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 1
+      },
+      "pass": true
+    },
+    {
+      "order": 19,
+      "landedAt": "the-breakthrough:0",
+      "cell": "s3-b1-p2",
+      "fieldBearing": false,
+      "vsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "vsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "order": 20,
+      "landedAt": "the-breakthrough:1",
+      "cell": "s3-b2",
+      "fieldBearing": false,
+      "vsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "vsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "order": 21,
+      "landedAt": "the-breakthrough:2",
+      "cell": "s3-b3",
+      "fieldBearing": false,
+      "vsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "vsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "order": 22,
+      "landedAt": "the-breakthrough:3",
+      "cell": "s3-b4-a",
+      "fieldBearing": false,
+      "vsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "vsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "order": 23,
+      "landedAt": "the-breakthrough:4",
+      "cell": "s3-b5-a",
+      "fieldBearing": false,
+      "vsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "vsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "order": 24,
+      "landedAt": "the-breakthrough:5",
+      "cell": "s3-b6-a",
+      "fieldBearing": false,
+      "vsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "vsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "order": 25,
+      "landedAt": "the-breakthrough:6",
+      "cell": "s3-b7-b",
+      "fieldBearing": false,
+      "vsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "vsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "order": 26,
+      "landedAt": "the-breakthrough:7",
+      "cell": "s3-b8-a",
+      "fieldBearing": false,
+      "vsCell": {
+        "diffPixels": 12,
+        "maxDelta": 23
+      },
+      "vsArchive": {
+        "diffPixels": 12,
+        "maxDelta": 23
+      },
+      "pass": false
+    },
+    {
+      "order": 27,
+      "landedAt": "the-breakthrough:8",
+      "cell": "s3-b9-a",
+      "fieldBearing": false,
+      "vsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "vsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "order": 28,
+      "landedAt": "spend-or-save:0",
+      "cell": "s4-b1-b",
+      "fieldBearing": false,
+      "vsCell": {
+        "diffPixels": 0,
+        "maxDelta": 1
+      },
+      "vsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 1
+      },
+      "pass": true
+    },
+    {
+      "order": 29,
+      "landedAt": "spend-or-save:1",
+      "cell": "s4-b2-b2",
+      "fieldBearing": false,
+      "vsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "vsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "order": 30,
+      "landedAt": "spend-or-save:2",
+      "cell": "s4-b3-b",
+      "fieldBearing": false,
+      "vsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "vsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "order": 31,
+      "landedAt": "spend-or-save:3",
+      "cell": "s4-b4-b",
+      "fieldBearing": false,
+      "vsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "vsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "order": 32,
+      "landedAt": "spend-or-save:4",
+      "cell": "s4-b5-b",
+      "fieldBearing": false,
+      "vsCell": {
+        "diffPixels": 2,
+        "maxDelta": 15
+      },
+      "vsArchive": {
+        "diffPixels": 2,
+        "maxDelta": 15
+      },
+      "pass": false
+    }
+  ],
+  "consoleErrors": []
+}
