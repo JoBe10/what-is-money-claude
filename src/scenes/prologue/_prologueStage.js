@@ -6,20 +6,24 @@
 //
 //   · the rasterization contract, so a settled frame is the approved cell;
 //   · `setVisible`, the deck's own data-attribute reveal;
-//   · the form geometry and the condensation's object, transcribed from the
-//     beat-state builders that rendered the approved cells.
+//   · the form geometry, transcribed from the beat-state builders that
+//     rendered the approved cells;
+//   · the condensation's object, which since the restoration is the legacy
+//     deck's own and carries no geometry here at all.
 //
 // THE GEOMETRY IS LAW, NOT DESIGN. Every coordinate below is transcribed from
 // `review/prologue/harness/states.mjs` — the builders the presenter's approved
-// cells were rendered from (states.json `approvedSet`, ruled 29 August 2026 and
-// amended 30 August 2026 by the condensation ruling).
-// Nothing settled in P1 or P2 exists outside an approved cell, and the
-// landed-state proof checks it per pixel.
+// cells were rendered from (states.json `approvedSet`, ruled 29 August 2026,
+// amended 30 August 2026 by the condensation ruling and again by the
+// restoration). Nothing settled in P1 or P2 exists outside an approved cell,
+// and the landed-state proof checks it per pixel.
 //
-// Composition law, inherited: no accent color anywhere in the Prologue (orange
-// enters at Scene 3's birth), no Claim Mark and no luminous disc, monochrome
-// plus the dark-field renders' own photographic warmth, and the self-reference
-// ban.
+// Composition law, inherited: no accent color anywhere in the Prologue — orange
+// enters at Scene 3's birth (master §8.5) — monochrome plus the dark-field
+// renders' own photographic warmth, and the self-reference ban. The clause that
+// once read "and no Claim Mark and no luminous disc" was struck on 30 August
+// 2026 as over-extension: the record bans the *accent* in the Prologue, never
+// the drawing (states report §12).
 
 import { DarkFieldImage } from '../../components/DarkField.js';
 
@@ -76,28 +80,31 @@ export function formBox({ key, box, alt }) {
   return df.el;
 }
 
-// ---- the condensation's object (p1-b3-ball) ---------------------------------
+// ---- the condensation's object (p1-b3-token) --------------------------------
 //
-// PRESENTER-RULED 30 August 2026, letter B: the condensation lands on a smooth
-// luminous ball that is deliberately NOT the Claim Mark. The drawing lives in
-// exactly one place — the `.p1-ball` class in `src/styles/slides.css`, which
-// states its parameters against the disc's — so the cell and the scene cannot
-// drift into two objects that merely resemble each other.
+// PRESENTER-RULED 30 August 2026: the condensation is **PORT**. The legacy
+// deck's absorption is the proven treatment, and the object is the legacy ball,
+// verbatim — `1-02-the-conversion`'s token, which is the deck's own
+// `.luminous-disc` positioned by `.s1q-token`
+// (`src/slides/section-1-question/02-the-conversion.js`, lines 46–49).
 //
-// The geometry is the reopened cell's own: the retired granular mass had a core
-// radius of 148 at the forms' centre, so the ball is 296 across at that centre.
-// The retired drawing is not here — it stays on file in the states builders and
-// in its archived cell, which is where a retired candidate belongs.
+// THERE IS NO GEOMETRY HERE, AND THAT IS THE POINT. 1.02 wrote two lines and let
+// the classes carry everything: `.s1q-token` centres the object on the stage
+// (left/top 50%, margin −88) and `.luminous-disc` draws it at 176 across with
+// its glow radii as fractions of that diameter. A coordinate written here would
+// be a re-authoring of a frame that was already solved, so none is. The two
+// retired candidates — the granular mass and the white monochrome ball — kept
+// their geometry in this file; the restoration needs none.
+//
+// The struck clause that forbade this object ("no Claim Mark anywhere",
+// `docs/gate-2-close-and-prologue-states-brief.md` §3) is struck as
+// over-extension. The law that stands is the accent's: orange enters the film
+// at Scene 3's birth, and no accent color appears in the Prologue. The trail is
+// `docs/gate-2-close-and-prologue-states-report.md` §12.
 
-export const BALL_SIZE = 296;
-
-/** The condensation's landing, at the reopened cell's own size and centre. */
+/** The condensation's landing — 1.02's token, ported verbatim. */
 export function condensedBall() {
   const el = document.createElement('div');
-  el.className = 'p1-ball';
-  el.style.position = 'absolute';
-  el.style.left = `${FORM_CX - BALL_SIZE / 2}px`;
-  el.style.top = `${FORM_CY - BALL_SIZE / 2}px`;
-  el.style.setProperty('--ball-size', `${BALL_SIZE}px`);
+  el.className = 'luminous-disc s1q-token';
   return el;
 }

@@ -10,29 +10,34 @@
 //
 // LANDED STATES ARE APPROVED CELLS, BY CONSTRUCTION. Every settled frame here
 // is a cell of `review/prologue/states/` (states.json `approvedSet`, ruled
-// 29 August 2026): p1-b0 · p1-b1 · p1-b2 · p1-b3-ball · p1-b4 · p1-b5 · p1-b6 ·
-// p1-b7-glow · p1-b8-a · p1-b9 · p1-b10 · p1-b11 — with b3 the ruled
-// p1-b3-ball since 30 August 2026. The geometry is transcribed
-// from the builders those cells were rendered from (`_prologueStage.js` and
-// the deck's own type classes); the landed-state proof checks it per pixel.
+// 29 August 2026): p1-b0 · p1-b1 · p1-b2 · p1-b3-token · p1-b4 · p1-b5 · p1-b6 ·
+// p1-b7-glow · p1-b8-a · p1-b9 · p1-b10 · p1-b11 — with b3 the restored
+// p1-b3-token since 30 August 2026, which superseded p1-b3-ball and p1-b3 both.
+// The geometry is transcribed from the builders those cells were rendered from
+// (`_prologueStage.js`, the legacy deck's own token classes for b3, and the
+// deck's own type classes); the landed-state proof checks it per pixel.
 // Nothing settled in this scene was derived.
 //
 // MOTION. The fill and the counter are the legacy deck's proven gesture,
 // reused with its own timings (1.01: an 8.2s fill behind an authored 800ms
 // hold, the counter fading in with the first countable units and completing
-// with the field). The condensation is the deck's proven collapse (1.02's
-// 4.6s), landing on the condensation's object — presenter-ruled 30 August 2026
-// (letter B) to be a smooth luminous ball that is deliberately NOT the Claim
-// Mark: achromatic where the disc is warm, tighter-haloed, and larger. The disc
-// itself is still born in Scene 3 and nowhere earlier, and the accent with it. The five-form morph is a cross-dissolve in the
-// dark-field register's own reveal: each form is its own advance, and one
-// object becoming another by dissolve is the scene's argument in a gesture —
-// the form changed, the thing did not. The two lines and the title are the
-// deck's own sequenced-line treatment: each gets the frame alone, and the
-// title lands after a beat of emptiness.
+// with the field). THE CONDENSATION IS 1.02's, PORTED WHOLE — presenter-ruled
+// 30 August 2026: its class is PORT, and the ruling's test is that it looks
+// exactly as it always did. The collapse is 1.02's 4.6s, the ball resolves at
+// 1.02's 0.22 of it, and the ball is 1.02's token: the deck's `.luminous-disc`
+// on `.s1q-token`, at the stage centre the collapse actually converges on.
+// Every number in this file's condensation is transcribed from that slide;
+// none is chosen. The five-form morph is a cross-dissolve in the dark-field
+// register's own reveal: each form is its own advance, and one object becoming
+// another by dissolve is the scene's argument in a gesture — the form changed,
+// the thing did not. The two lines and the title are the deck's own
+// sequenced-line treatment: each gets the frame alone, and the title lands
+// after a beat of emptiness.
 //
-// REGISTER. Monochrome plus the renders' photographic warmth. No accent, no
-// Claim Mark, no luminous disc anywhere in this scene.
+// REGISTER. Monochrome plus the renders' photographic warmth, and no accent
+// color anywhere — orange still enters the film at Scene 3's birth. The clause
+// that also banned the disc here was struck on 30 August 2026 as
+// over-extension; the trail is the states report §12.
 
 import { UnitField } from '../../components/UnitField.js';
 import {
@@ -43,12 +48,12 @@ const HOURS = 80000;
 // 1.01's own numbers: the fill, and the authored hold before the first unit.
 const FILL_MS = 8200;
 const FILL_DELAY_MS = 800;
-// 1.02's own number: the collapse.
+// 1.02's own numbers: the collapse, and the point in it at which the ball
+// begins to bloom while the last of the field is still streaming inward.
+// Both are transcribed from `02-the-conversion.js` (COLLAPSE_MS,
+// TOKEN_EMERGE_AT) and neither is this scene's to choose.
 const COLLAPSE_MS = 4600;
-// The ball resolves while the last of the field is still pouring in. The
-// threshold and both durations are the condensation's own, unchanged by the
-// ruling: it replaced the object, not the motion.
-const BALL_EMERGE_AT = 0.45;
+const BALL_EMERGE_AT = 0.22;
 
 const MAX_STEP = 11;
 // Beats 4–8 are the five forms, in the morph's order.
@@ -73,8 +78,8 @@ export default {
     const field = UnitField({ preRadial: true, warmAnim: true });
     root.appendChild(field.el);
 
-    // The condensation's object (presenter-ruled 30 August 2026, letter B):
-    // the smooth luminous ball, deliberately not the Claim Mark.
+    // The condensation's object: 1.02's token, ported verbatim. It carries no
+    // geometry — the legacy classes centre it and draw it, exactly as they did.
     const ball = condensedBall();
     root.appendChild(ball);
 

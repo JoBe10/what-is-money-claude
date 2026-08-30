@@ -4374,19 +4374,23 @@
 /* The Prologue reuses Section 1's type treatments verbatim — the counter, the
    hours line, the stakes line, the question and the title are the same classes
    the presenter approved his frames in, so the scenes inherit their proven
-   transitions and their exact metrics. Only two things are the Prologue's own:
-   the condensed mass and the five-form morph. Both are geometry-free here —
-   every coordinate lives in the scene's builders, transcribed from the approved
-   cells — so what is written below is timing and nothing else. */
+   transitions and their exact metrics. Since the restoration the condensation
+   joins them: it is 1.02's token on 1.02's own `.luminous-disc` and
+   `.s1q-token` rules, which are already in this file. **There is no rule below
+   for the condensation's object, and its absence is the record of the port** —
+   a P1-specific rule for it would be a re-authoring of a frame the deck had
+   already solved. The one thing that is still the Prologue's own is the
+   five-form morph, and it is geometry-free here: every coordinate lives in the
+   scene's builders, transcribed from the approved cells. */
 
-/* The condensation's landing. It reveals slowly, while the last of the field is
-   still pouring in, and releases at the morph's own pace when the first form
-   takes the frame: the duration is read from the target state, so the two
-   directions get their own.
-
-   `.p1-mass` is the RETIRED granular landing (presenter-reopened 30 August
-   2026). It stays here because its cell stays on file — the aesthetic law's
-   file-keeping clause — and nothing in the deck renders it any more. */
+/* THE TWO RETIRED CONDENSATION LANDINGS. `.p1-mass` is the granular landing
+   (presenter-reopened 30 August 2026); `.p1-ball` is the white monochrome ball
+   that briefly replaced it (letter B, superseded the same day by the
+   restoration ruling — states report §12). Both stay here because their cells
+   stay on file, which is the aesthetic law's file-keeping clause, and neither
+   is rendered anywhere in the deck. The letter-B ball's parameters are kept in
+   full below: they are the record of what was ruled, and a retired candidate
+   that cannot be re-rendered is not on file at all. */
 .p1-mass,
 .p1-ball {
   opacity: 0;
@@ -4399,27 +4403,24 @@
   transition: opacity 1200ms ease-out;
 }
 
-/* THE CONDENSATION'S OBJECT (presenter-ruled 30 August 2026, letter B).
-   A smooth luminous ball that is deliberately NOT the Claim Mark. Everything
-   about it is set against `.luminous-disc` (the deck-wide block near the top of
-   this file), because the whole point of the ruling is that these two objects
-   must never be mistaken for each other:
+/* RETIRED — the letter-B object, kept for its cell. A smooth luminous ball,
+   deliberately not the Claim Mark; everything about it was set against
+   `.luminous-disc` (the deck-wide block near the top of this file):
 
      · HUE — the disc is warm and ends in the accent: unit-warm-bright to
        unit-warm to a rim mixed 18% with `--accent`. The ball is ACHROMATIC:
-       white to near-white to a neutral grey. No warm tone, no chroma at all,
-       and no orange anywhere near it — the accent still enters the film at the
-       birth in Scene 3 and nowhere earlier.
+       white to near-white to a neutral grey.
      · FALLOFF — the disc's glow reaches 0.1932 and 0.625 of its diameter, in
        the warm rgba(253,233,212). The ball's reaches 0.11 and 0.34, in white:
        a little over half the radius, at roughly two thirds the strength.
      · CORE TO HALO — the disc's halo reaches 1.25 core-radii past its edge, a
        total footprint of 2.25 diameters. The ball's reaches 0.68, a footprint
-       of 1.68. It is the tighter, colder object by construction.
+       of 1.68.
 
-   What they share is the light: the highlight sits at 50% 42% in both, because
-   one film has one key. The distinction is carried by hue and falloff, which is
-   what the ruling asked for — not by lighting the two objects differently. */
+   Under the restoration the distinction it was built to carry is no longer
+   wanted: P1's condensation lands on the deck's proven token, which IS the
+   disc, and the object's separation from the Claim Mark was never the law —
+   only the accent's absence from the Prologue was. */
 .p1-ball {
   --ball-size: 296px;
   width: var(--ball-size);
