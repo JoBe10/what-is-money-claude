@@ -281,3 +281,74 @@ photographic warmth.
 
 The object's own parameters, and the measured distance between it and the Claim
 Mark, are in the fix session's report.
+
+---
+
+# 12. The condensation ruling, second and final (appended 30 August 2026 — PORT)
+
+The letter-B ball of §11 lasted one session. The presenter's ruling of the same
+day supersedes it, and it is not another letter — it is a **class**:
+
+> **P1's condensation is PORT.** The legacy deck's absorption is the proven
+> treatment and is restored **verbatim**: the field's points absorbed gradually
+> into the luminous white ball, the legacy gesture and the legacy ball, not
+> re-authored from description. **The test is that it looks exactly as it always
+> did.**
+
+The class is the one `AGENTS.md` §4.9 now defines, ordered in the same ruling.
+The legacy source is named and on disk: **`1-02-the-conversion`** (`src/slides/
+section-1-question/02-the-conversion.js`) and the object it renders,
+`.luminous-disc` + `.s1q-token`.
+
+**Two candidates retire, not one.** `p1-b3` (the granular mass, 29 Aug) and
+`p1-b3-ball` (the white monochrome ball, 30 Aug) are both **superseded by the
+restoration** and both stay on file under the aesthetic law's file-keeping
+clause. The restored state is **`p1-b3-token`**.
+
+## 12.1 The struck clause, and the document that legislated it
+
+**Struck:** *"no Claim Mark anywhere"* — the Prologue composition-law clause of
+`docs/gate-2-close-and-prologue-states-brief.md` §3, 29 August 2026. It is
+**struck as over-extension**, in place, in that document, with a pointer back
+here so it cannot be reintroduced from its origin.
+
+**Replaced by the architecture's actual law**, which is unchanged and was always
+the law: ***orange enters the film at Scene 3's birth; no accent color in the
+Prologue.*** Recorded at `docs/what-is-money-master.md` §8.5 and in its freeze
+register, 25 August 2026 — *"the accent's entry point is the Claim Mark's birth
+in Scene 3, with the Prologue monochrome plus photographic warmth."*
+
+**What went wrong, precisely.** The close brief restated a rule about **the
+accent** as a rule about **the object**. Those are not the same rule: the disc
+is a drawing, the accent is a color, and the record bans the second in the
+Prologue, never the first. The clause then propagated — into the states
+builders' header, the sheet's review note, a static gate's own regex, both
+Prologue scene headers and a CSS comment — and every one of them read back as
+independent confirmation of a law that had exactly one source.
+
+**What it cost.** The over-extension is what made P1's condensation a design
+question at all. It ruled out the one object the deck had already proven for
+exactly this gesture, so the beat went to the candidate process instead: a
+granular mass (29 Aug), a presenter reopening, a white ball (30 Aug), a second
+reopening, and two retired cells — for a frame that was never open. That is the
+failure §4.9 exists to prevent, and this is its first recorded instance.
+
+**Where the clause was corrected in this session:** the close brief §3 (struck in
+place); `review/prologue/harness/states.mjs` header;
+`review/prologue/states/sheet.html` review note;
+`review/batch-a/harness/static-gates.cjs` (the REGISTER gate's own pattern —
+the `ClaimMark|LuminousDisc|luminous-disc` half removed, the accent half kept);
+`src/scenes/prologue/_prologueStage.js` and
+`src/scenes/prologue/p1-eighty-thousand-hours.js` headers;
+`src/styles/slides.css`. Historical records — §11 above, the p1-fix report, and
+the retired cells' own captions — are **left as written**: they are what was
+believed when they were written, and that is the point of a trail.
+
+## 12.2 What is still *not* amended
+
+The freeze register is untouched, again. Under PORT the condensation lands on
+the deck's proven token — which is the same drawing as the Claim Mark's disc —
+so the question the letter-A branch would have raised does return, and it is
+**flagged, not decided**: the restoration report §7 carries it, with the disc's
+measured rim value, for the presenter's ruling. Nothing in the master, the
+architecture or the freeze register was changed by this session.

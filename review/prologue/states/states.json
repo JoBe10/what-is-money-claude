@@ -223,6 +223,27 @@
       "notAmended": "Letter B leaves the master's no-anticipation rule untouched: the ball is not the mark, so the birth in Scene 3 stays the accent's first appearance and the disc's first appearance. The freeze-register amendment the brief reserves for letter A is NOT made.",
       "approvedSetAmendments": {
         "P1 b3": "p1-b3-ball"
+      },
+      "superseded": "SUPERSEDED 30 August 2026 by rulings.restoration — the condensation is PORT, and p1-b3-ball retires beside p1-b3. Kept in full: it is the record of what was ruled, and the restoration's trail needs it."
+    },
+    "restoration": {
+      "date": "2026-08-30",
+      "recordedBy": "the P1 restoration session, from the presenter's ruling in the session prompt",
+      "class": "PORT",
+      "ruling": "P1'S CONDENSATION IS PORT. The legacy deck's absorption is the proven treatment and is restored VERBATIM: the field's points absorbed gradually into the luminous white ball, using the legacy slides' own gesture — the legacy implementation ported (timing, easing, absorption behavior, the ball's rendering), not re-authored from description. The ball is the legacy ball, verbatim. The test is that it looks exactly as it always did.",
+      "legacySource": "1-02-the-conversion (src/slides/section-1-question/02-the-conversion.js) — COLLAPSE_MS 4600, TOKEN_EMERGE_AT 0.22, and the object it renders: `.luminous-disc` + `.s1q-token` (src/styles/slides.css), 176px centred on the stage at (960, 540), arriving from scale(0.82) over 1100ms opacity / 1500ms transform.",
+      "reopened": "BOTH prior candidates. p1-b3 (the granular mass, 29 Aug) and p1-b3-ball (the white monochrome ball, 30 Aug) are superseded-by-restoration and stay on file under the aesthetic law's file-keeping clause.",
+      "strickenClause": {
+        "clause": "no Claim Mark anywhere",
+        "legislatedBy": "docs/gate-2-close-and-prologue-states-brief.md §3 (Composition law), 29 August 2026",
+        "verdict": "STRUCK as over-extension — it was that document's own invention, not the architecture's law. Struck in place at its origin, with a pointer to the trail.",
+        "replacedBy": "orange enters the film at Scene 3's birth; no accent color in the Prologue — docs/what-is-money-master.md §8.5 and its freeze register, 25 August 2026. Unchanged, and always the law.",
+        "cost": "The clause is what made P1's condensation a design question at all: it ruled out the one object the deck had already proven for this gesture, and the beat went to the candidate process instead — a granular mass, a reopening, a white ball, a second reopening, two retired cells, for a frame that was never open.",
+        "trail": "docs/gate-2-close-and-prologue-states-report.md §12"
+      },
+      "notAmended": "The freeze register, the master and the architecture are untouched. Under PORT the condensation lands on the deck's proven token, which is the same drawing as the Claim Mark's disc — so the no-anticipation question the letter-A branch would have raised returns. It is FLAGGED for the presenter, not decided here (docs/p1-restoration-and-provenance-report.md §7).",
+      "approvedSetAmendments": {
+        "P1 b3": "p1-b3-token"
       }
     }
   },
