@@ -562,3 +562,45 @@ deck, running.
 **His viewing of the deck from the top**, and his verdicts on the eight
 scene-test tensions and the two visual flags. On those, Batch B (Act II, Scenes
 5–10) opens against `docs/batch-b-package.md`, which is already on file.
+
+---
+
+# 12. Disposition (appended 30 August 2026 — presenter-reviewed)
+
+The presenter has reviewed §6's **eight scene-test tensions** and §7's **eleven
+flags**. All are **accepted as flagged**: nothing here is a defect to fix, and
+**no action is taken on any of them in the condensation-fix session**. What each
+one rides to is recorded below so none of them can quietly become nobody's.
+
+**The one item that did not ride** is P1's condensation, which he ruled on
+separately — the ruling and its execution are `docs/p1-fix-and-act-2-systems-brief.md`
+and its report. It reopened `p1-b3` only.
+
+## The eight scene-test tensions
+
+| tension | rides to |
+|---|---|
+| P1 Q4 — beats 9 and 10 are two consecutive told-lines before the title | **the essay-conversion step** (script) |
+| P1 Q6 — the condensation's two centres | **his eye**, and re-flagged sharper after the fix (§7.3, and the fix report) |
+| P1 Q9 — the visuals never say the five objects are *money* | **the essay-conversion step** (script) |
+| P2 Q2 — the frame holds rather than explains | design by his own ruling of 25 Aug; **no action** |
+| P2 Q4 — told, flatly | **the essay-conversion step** (script) |
+| P2 Q7 — the screen creates no next question | design by the architecture's own placement; **no action** |
+| S2 Q3 — six capability lines, the batch's densest text | his own ruling of 26 Aug; **no action** |
+| S3 Q9 — beat 7 needs narration for *why* | **the essay-conversion step** (script) |
+
+## The eleven flags
+
+| flag | rides to |
+|---|---|
+| §7.1 the hours field's unseeded jitter | **the GATE** (verification method) |
+| §7.2 2–12 px on the forward walk | **the GATE** |
+| §7.3 the condensation's two centres | **his eye** — see the fix report; the ruling replaced the object, not the geometry |
+| §7.4 the three splice seams | **Batches C, D and E**, with the slides they belong to |
+| §7.5 the definition off-screen until Scene 16 | **Batch D** |
+| §7.6 ambiguous legacy fates (the waypoints, 5-01, the orphaned helpers) | **Batches C and F** |
+| §7.7 `fiat`'s frame against a 6:5 box | **Batches D and E** |
+| §7.8 the `shares` / `fiat` collision | **his eye**, open |
+| §7.9 the R7.4 static gate's re-baselining | **the GATE** |
+| §7.10 "ten-question scene test" in three documents | **a one-line ruling**, whenever he gives it |
+| §7.11 the Claim Mark component under `src/proto/` | **a later batch** — named a hygiene item that rides, in the fix brief's own §4 |
