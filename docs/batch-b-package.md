@@ -153,7 +153,7 @@ Every frame: 1920×1080, real assets, real type, final composition, brightness r
 
 # 5. Asset manifest for Act II
 
-**In the shipping library, assigned:** `shells` (S5 carrier), `cattle` · `salt` · `iron` (S5 verdicts), `gold` (S5 survivor, S6, S10 strip), `vault` (S7 custody), `gold_certificate` (S7 claim · **S10, the strip's CLAIM ON GOLD station** — the CERTIFICATE ruling, 31 August 2026, brief §1.1), `ledger_glow` (S8 transformation), `ledger` (lineup appearances), `palladium` (S10), `bitcoin` (S10 strip — carries the recorded V-1 physical-coin flag; the presenter's P1 C1 ruling may inform its treatment here; flag at states time, don't resolve silently).
+**In the shipping library, assigned:** `shells` (S5 carrier), `cattle` · `salt` · `iron` (S5 verdicts), `gold` (S5 survivor, S6, S10 strip), `vault` (S7 custody), `gold_certificate` (S7 claim · **S10, the strip's CLAIM ON GOLD station** — the CERTIFICATE ruling, 31 August 2026, brief §1.1), `ledger_glow` (S8 transformation), `ledger` (lineup appearances), `palladium` (S10), `bitcoin` (S10 strip · S9's entrant block — the V-1 flag closed by C1, and **the display-scale glyph retirement of 31 August 2026** (Batch B brief §1.2) resolves the treatment: the coin render carries the asset wherever it stands at display scale in Act II; drawn grammar — network nodes, station marks — stays drawn).
 **Pending, presenter-side:** `fiat` (S8) — generation in flight per manifest §3.0; the S8 frames stub it automatically until it lands; the `gold_certificate` distinctness check closes when it does.
 **No other generation is needed for Act II.**
 

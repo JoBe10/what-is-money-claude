@@ -73,7 +73,7 @@ sit beside them on the contact sheet without standing out.
 | `gold` | `assets/dark-field/gold.png` | 4.06 carrier lineup · 2.5 two-survivors (flagged) · 2.6 featured moment (flagged) | 0.08 / 0.07 | 86.7% | +181 |
 | `paper` | `assets/dark-field/paper.png` | 4.06 carrier lineup | 0.09 / 0.08 | 80.5% | +80 |
 | `ledger` | `assets/dark-field/ledger.png` | 4.06 carrier lineup | 0.10 / 0.08 | 69.0% | +138 |
-| `bitcoin` | `assets/dark-field/bitcoin.png` | 4.06 carrier lineup | 0.11 / 0.10 | 77.2% | +154 |
+| `bitcoin` | `assets/dark-field/bitcoin.png` | 4.06 carrier lineup · P1's fifth form · S9's entrant block · S10's strip | 0.11 / 0.10 | 77.2% | +154 |
 
 **The R7.3 contender shoot — four more, all passing** (presenter-generated,
 grade-gated 11 August 2026; the run is `review/rebuild-r7-3/grade-r7-3.json`):
@@ -298,6 +298,14 @@ consistency — one film, one answer to the same question. *(Batch B's states
 session inherits the ruling; no work is done on Scene 10 here.)* The revert path
 above is unchanged and stays on file: the ruling is a selection, and a selection
 is changed by changing one word.
+
+**Extended by the presenter, 31 August 2026 (Batch B implementation brief
+§1.2): the bitcoin glyph retires at display scale in Act II.** Wherever a
+drawn glyph stood in for the asset at display scale, the coin render carries
+it — the first site is S9's entrant block (`s9-b2` through `s9-b4`, re-rendered).
+Drawn grammar — network nodes, station marks — is not the asset and stays
+drawn; the on-file candidate cells keep their glyphs per the aesthetic law's
+file-keeping clause.
 
 ---
 

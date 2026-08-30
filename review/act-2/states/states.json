@@ -1,5 +1,5 @@
 {
-  "date": "2026-08-30T13:03:30.797Z",
+  "date": "2026-08-30T21:49:27.202Z",
   "session": "batch-b-impl-1",
   "beatMap": {
     "S5": 8,
@@ -130,11 +130,11 @@
   ],
   "claimTravelerNote": "On S10’s strip the disc is the traveler, never a station (the CERTIFICATE ruling) — its arrival is connective motion, not a settled still.",
   "counts": {
-    "ruled-re-render": 2,
+    "ruled-re-render": 5,
     "pending-review": 2,
     "approved-selection": 2,
     "approved-adapt": 5,
-    "approved-port": 20,
+    "approved-port": 17,
     "determined": 7,
     "on-file": 11
   },
@@ -559,9 +559,9 @@
       "beat": 2,
       "frame": "S9-F2",
       "klass": "PORT",
-      "review": "approved-port",
-      "source": "2-08-the-pattern builds 5–6 — the entrant block in the neutral register",
-      "caption": "Beat 2 · the facts, in the deck’s most neutral register. The rail’s own entrant block, free-standing: the mark, the name in stop typography, and the recorded line — “2009: digital · no state, no company · supply fixed by its own rules.” Description, never argument."
+      "review": "ruled-re-render",
+      "source": "2-08-the-pattern builds 5–6 — the entrant block in the neutral register + the display-scale glyph retirement (31 Aug 2026, Batch B brief §1.2 — the coin render per C1)",
+      "caption": "Beat 2 · the facts, in the deck’s most neutral register. The rail’s own entrant block, free-standing: the coin render at its head (the §1.2 ruling — the bitcoin glyph retires at display scale, per C1), the name in stop typography, and the recorded line — “2009: digital · no state, no company · supply fixed by its own rules.” Description, never argument. The drawn rhythm beneath the head is untouched."
     },
     {
       "id": "s9-b3",
@@ -570,9 +570,9 @@
       "beat": 3,
       "frame": "S9-F2",
       "klass": "PORT",
-      "review": "approved-port",
-      "source": "2-08-the-pattern builds 5–6",
-      "caption": "Beat 3 · the three capabilities that had never coexisted, landing on their own advance while the facts recede to the dimmed-prior step. The caps register is the deck’s; the three names are the architecture’s."
+      "review": "ruled-re-render",
+      "source": "2-08-the-pattern builds 5–6 + the display-scale glyph retirement (31 Aug 2026, Batch B brief §1.2)",
+      "caption": "Beat 3 · the three capabilities that had never coexisted, landing on their own advance while the facts recede to the dimmed-prior step. The caps register is the deck’s; the three names are the architecture’s. Re-rendered with the coin at the block’s head per the §1.2 ruling — nothing else moved."
     },
     {
       "id": "s9-b4",
@@ -581,9 +581,9 @@
       "beat": 4,
       "frame": "S9-F2",
       "klass": "PORT",
-      "review": "approved-port",
-      "source": "2-08-the-pattern build 6 — the limitation as its own advance",
-      "caption": "Beat 4 · the honest line, in the same breath. This is the whole reason S9-F2 is a port: the legacy treatment already gives the limitation ITS OWN ADVANCE at full voice, with everything above it receded — which is what turns “honesty in the same breath” from a hope into a composition. The sentence is the rail’s, verbatim."
+      "review": "ruled-re-render",
+      "source": "2-08-the-pattern build 6 — the limitation as its own advance + the display-scale glyph retirement (31 Aug 2026, Batch B brief §1.2)",
+      "caption": "Beat 4 · the honest line, in the same breath. This is the whole reason S9-F2 is a port: the legacy treatment already gives the limitation ITS OWN ADVANCE at full voice, with everything above it receded — which is what turns “honesty in the same breath” from a hope into a composition. The sentence is the rail’s, verbatim. Re-rendered with the coin at the block’s head per the §1.2 ruling — nothing else moved."
     },
     {
       "id": "s9-b5",

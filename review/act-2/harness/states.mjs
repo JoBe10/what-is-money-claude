@@ -489,12 +489,27 @@ const ENTRANT = {
   limitation: 'Very young. Its price still swings far more than the monies it would compete with. Not yet twenty years into a hundred-year question.'
 };
 
-// WIRING: the block's rows on one vertical rhythm — mark, name, facts,
+// WIRING: the block's rows on one vertical rhythm — the coin, name, facts,
 // capabilities, limitation — centred on the stage.
 function entrantBlock(st, { capabilities = false, limitation = false } = {}) {
   const latest = limitation ? 'limitation' : (capabilities ? 'capabilities' : 'facts');
   const voice = (row) => (row === latest ? 1 : VOICE.labelSpent);
-  mark(st, 'bitcoin', 960, 300, 64, 0.9);
+  // THE COIN, NOT THE GLYPH (presenter-ruled, 31 August 2026 — Batch B
+  // implementation brief §1.2, per the C1 ruling): the bitcoin glyph retires
+  // at display scale in Act II, and the entrant block's head carries the
+  // library's coin render. DERIVED GEOMETRY, recorded because the ruling
+  // fixes the treatment and not the box: the render stands at the act's one
+  // recorded lineup scale for a render at a station — the rails-law band
+  // height (BAND_H, 244) — in a box of its own 4:3 aspect, bottom-anchored
+  // where the retired 64px mark's box ended (y 332), centred on the block's
+  // axis, so the drawn rhythm beneath (the dot terminal at 372, the name at
+  // 404) is untouched. The 0.9 is the retired mark's own recorded voice,
+  // kept.
+  const coinW = Math.round(BAND_H * (4 / 3));
+  photo(st, {
+    subject: 'bitcoin', alt: 'The bitcoin coin', o: 0.9,
+    box: [960 - coinW / 2, 332 - BAND_H, coinW, BAND_H]
+  });
   dot(st.svg, 960, 372, 4.5, 0.85);
   text(st, ENTRANT.name, 'left:0; right:0; top:404px; text-align:center; text-indent:0;' +
     RAIL_LABEL(0.95));
@@ -1161,21 +1176,21 @@ cell('s9-b1', {
 });
 
 cell('s9-b2', {
-  scene: 'S9', beat: 2, frame: 'S9-F2', klass: 'PORT', review: 'approved-port',
-  source: '2-08-the-pattern builds 5–6 — the entrant block in the neutral register',
-  caption: 'Beat 2 · the facts, in the deck’s most neutral register. The rail’s own entrant block, free-standing: the mark, the name in stop typography, and the recorded line — “2009: digital · no state, no company · supply fixed by its own rules.” Description, never argument.'
+  scene: 'S9', beat: 2, frame: 'S9-F2', klass: 'PORT', review: 'ruled-re-render',
+  source: '2-08-the-pattern builds 5–6 — the entrant block in the neutral register + the display-scale glyph retirement (31 Aug 2026, Batch B brief §1.2 — the coin render per C1)',
+  caption: 'Beat 2 · the facts, in the deck’s most neutral register. The rail’s own entrant block, free-standing: the coin render at its head (the §1.2 ruling — the bitcoin glyph retires at display scale, per C1), the name in stop typography, and the recorded line — “2009: digital · no state, no company · supply fixed by its own rules.” Description, never argument. The drawn rhythm beneath the head is untouched.'
 }, (st) => { entrantBlock(st); });
 
 cell('s9-b3', {
-  scene: 'S9', beat: 3, frame: 'S9-F2', klass: 'PORT', review: 'approved-port',
-  source: '2-08-the-pattern builds 5–6',
-  caption: 'Beat 3 · the three capabilities that had never coexisted, landing on their own advance while the facts recede to the dimmed-prior step. The caps register is the deck’s; the three names are the architecture’s.'
+  scene: 'S9', beat: 3, frame: 'S9-F2', klass: 'PORT', review: 'ruled-re-render',
+  source: '2-08-the-pattern builds 5–6 + the display-scale glyph retirement (31 Aug 2026, Batch B brief §1.2)',
+  caption: 'Beat 3 · the three capabilities that had never coexisted, landing on their own advance while the facts recede to the dimmed-prior step. The caps register is the deck’s; the three names are the architecture’s. Re-rendered with the coin at the block’s head per the §1.2 ruling — nothing else moved.'
 }, (st) => { entrantBlock(st, { capabilities: true }); });
 
 cell('s9-b4', {
-  scene: 'S9', beat: 4, frame: 'S9-F2', klass: 'PORT', review: 'approved-port',
-  source: '2-08-the-pattern build 6 — the limitation as its own advance',
-  caption: 'Beat 4 · the honest line, in the same breath. This is the whole reason S9-F2 is a port: the legacy treatment already gives the limitation ITS OWN ADVANCE at full voice, with everything above it receded — which is what turns “honesty in the same breath” from a hope into a composition. The sentence is the rail’s, verbatim.'
+  scene: 'S9', beat: 4, frame: 'S9-F2', klass: 'PORT', review: 'ruled-re-render',
+  source: '2-08-the-pattern build 6 — the limitation as its own advance + the display-scale glyph retirement (31 Aug 2026, Batch B brief §1.2)',
+  caption: 'Beat 4 · the honest line, in the same breath. This is the whole reason S9-F2 is a port: the legacy treatment already gives the limitation ITS OWN ADVANCE at full voice, with everything above it receded — which is what turns “honesty in the same breath” from a hope into a composition. The sentence is the rail’s, verbatim. Re-rendered with the coin at the block’s head per the §1.2 ruling — nothing else moved.'
 }, (st) => { entrantBlock(st, { capabilities: true, limitation: true }); });
 
 cell('s9-b5', {
