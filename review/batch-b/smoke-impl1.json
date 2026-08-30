@@ -1,0 +1,198 @@
+{
+  "date": "2026-08-30T22:08:23.807Z",
+  "session": "batch-b-impl-1",
+  "deck": {
+    "slides": 39,
+    "firstId": "eighty-thousand-hours"
+  },
+  "route": {
+    "slides": 3,
+    "order": [
+      "the-function-stayed",
+      "scarcity-in-matter",
+      "claims-on-gold"
+    ],
+    "builds": [
+      7,
+      8,
+      4
+    ]
+  },
+  "traversal": {
+    "states": 22,
+    "forward": true,
+    "forwardFirstMismatchAt": null,
+    "backwardReachesTop": true,
+    "backwardMonotonic": true,
+    "backwardSteps": 21
+  },
+  "boundaries": [
+    {
+      "name": "S5 end → S6 (forward, the authored cut)",
+      "from": {
+        "idx": 0,
+        "step": 7,
+        "id": "the-function-stayed"
+      },
+      "to": {
+        "idx": 1,
+        "step": 0,
+        "id": "scarcity-in-matter"
+      }
+    },
+    {
+      "name": "S6 b0 → S5 end (backward, the handoff)",
+      "from": {
+        "idx": 1,
+        "step": 0,
+        "id": "scarcity-in-matter"
+      },
+      "to": {
+        "idx": 0,
+        "step": 7,
+        "id": "the-function-stayed"
+      }
+    },
+    {
+      "name": "S6 end → S7 (forward, the morph)",
+      "from": {
+        "idx": 1,
+        "step": 8,
+        "id": "scarcity-in-matter"
+      },
+      "to": {
+        "idx": 2,
+        "step": 0,
+        "id": "claims-on-gold"
+      }
+    },
+    {
+      "name": "S7 b0 → S6 end (backward, the handoff)",
+      "from": {
+        "idx": 2,
+        "step": 0,
+        "id": "claims-on-gold"
+      },
+      "to": {
+        "idx": 1,
+        "step": 8,
+        "id": "scarcity-in-matter"
+      }
+    }
+  ],
+  "directEntry": [
+    "the-function-stayed:0",
+    "the-function-stayed:1",
+    "the-function-stayed:2",
+    "the-function-stayed:3",
+    "the-function-stayed:4",
+    "the-function-stayed:5",
+    "the-function-stayed:6",
+    "the-function-stayed:7",
+    "scarcity-in-matter:0",
+    "scarcity-in-matter:1",
+    "scarcity-in-matter:2",
+    "scarcity-in-matter:3",
+    "scarcity-in-matter:4",
+    "scarcity-in-matter:5",
+    "scarcity-in-matter:6",
+    "scarcity-in-matter:7",
+    "scarcity-in-matter:8",
+    "claims-on-gold:0",
+    "claims-on-gold:1",
+    "claims-on-gold:2",
+    "claims-on-gold:3",
+    "claims-on-gold:4"
+  ],
+  "parity": [
+    {
+      "state": "the-function-stayed:0",
+      "identical": true
+    },
+    {
+      "state": "the-function-stayed:1",
+      "identical": true
+    },
+    {
+      "state": "the-function-stayed:2",
+      "identical": true
+    },
+    {
+      "state": "the-function-stayed:3",
+      "identical": true
+    },
+    {
+      "state": "the-function-stayed:4",
+      "identical": true
+    },
+    {
+      "state": "the-function-stayed:5",
+      "identical": true
+    },
+    {
+      "state": "the-function-stayed:6",
+      "identical": true
+    },
+    {
+      "state": "the-function-stayed:7",
+      "identical": true
+    },
+    {
+      "state": "scarcity-in-matter:0",
+      "identical": true
+    },
+    {
+      "state": "scarcity-in-matter:1",
+      "identical": true
+    },
+    {
+      "state": "scarcity-in-matter:2",
+      "identical": true
+    },
+    {
+      "state": "scarcity-in-matter:3",
+      "identical": true
+    },
+    {
+      "state": "scarcity-in-matter:4",
+      "identical": true
+    },
+    {
+      "state": "scarcity-in-matter:5",
+      "identical": true
+    },
+    {
+      "state": "scarcity-in-matter:6",
+      "identical": true
+    },
+    {
+      "state": "scarcity-in-matter:7",
+      "identical": true
+    },
+    {
+      "state": "scarcity-in-matter:8",
+      "identical": true
+    },
+    {
+      "state": "claims-on-gold:0",
+      "identical": true
+    },
+    {
+      "state": "claims-on-gold:1",
+      "identical": true
+    },
+    {
+      "state": "claims-on-gold:2",
+      "identical": true
+    },
+    {
+      "state": "claims-on-gold:3",
+      "identical": true
+    },
+    {
+      "state": "claims-on-gold:4",
+      "identical": true
+    }
+  ],
+  "consoleErrors": []
+}
