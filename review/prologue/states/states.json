@@ -82,7 +82,23 @@
       "beat": "P1 beat 7",
       "status": "determined",
       "decision": null,
-      "caption": "Beat 7 · LEDGER — ledger per the recorded assignment row (manifest §2.2: ledger serves display-scale ledger appearances; ledger_glow is Scene 8’s). FLAGGED in the report: the architecture’s P1 summary says “glowing ledger entry” — his verdict on this cell settles which study the beat gets"
+      "caption": "Beat 7 · LEDGER — ledger per the recorded assignment row (manifest §2.2: ledger serves display-scale ledger appearances; ledger_glow is Scene 8’s). FLAGGED in the report: the architecture’s P1 summary says “glowing ledger entry” — his verdict on this cell settles which study the beat gets",
+      "ruledReplaced": {
+        "date": "2026-08-29",
+        "ruling": "p1-b7 = ledger_glow (Batch A implementation brief §1.2). The flagged study question is settled: the ledger form is the glowing entry.",
+        "replacedBy": "p1-b7-glow",
+        "note": "This cell stays on file, retired — the aesthetic law's file-keeping clause."
+      }
+    },
+    {
+      "id": "p1-b7-glow",
+      "file": "p1-b7-glow.png",
+      "beat": "P1 beat 7",
+      "status": "approved",
+      "decision": null,
+      "caption": "Beat 7 · LEDGER · APPROVED BY RULING (29 Aug 2026) — ledger_glow, the glowing entry: the script’s line is “it stopped looking like anything at all. Numbers in a ledger,” and the architecture’s P1 summary says “glowing ledger entry.” The register’s one 3:2 render, so the form box takes its aspect at the recorded height and centre (810×540 at 555, 380). Replaces the retired p1-b7",
+      "ruling": "landed",
+      "rulingNote": "The approved P1 b7 state, from the presenter's ruling; rendered through the states pipeline beside the retired original"
     },
     {
       "id": "p1-b8-a",
