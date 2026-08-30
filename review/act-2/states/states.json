@@ -12,6 +12,30 @@
   },
   "beatMapAuthority": "docs/batch-b-package.md §1, frozen 31 August 2026 on the installed scripts’ [→] counts",
   "provenanceAuthority": "docs/act-2-provenance.md, ruled 31 August 2026",
+  "rulingsR2": {
+    "date": "31 August 2026",
+    "recordedBy": "the act-2-states-r2 session, docs/act-2-states-r2-brief.md §1",
+    "selections": {
+      "S6-F3": {
+        "selected": "s6-b5-a",
+        "system": "A — the counted load",
+        "nonSelected": ["s6-b5-b", "s6-b5-c"],
+        "disposition": "The counted load is the mass state. The non-selected candidates stay on file, so the selection can be changed by changing one letter."
+      },
+      "S7-F2": {
+        "selected": "s7-b4-b (the logic)",
+        "system": "B — the custody boundary crossed",
+        "nonSelected": ["s7-b4-a", "s7-b4-c"],
+        "disposition": "The custody-boundary logic is selected, with the restage the r2 brief §3 orders: the frame is rebuilt in the film's real register — the photographic vault render, the photographic gold_certificate render traveled outward, a thin dependency line back — the Act I photograph-plus-line pattern. The drawn circle and the ticket glyph retire to file with the three drawn candidates."
+      },
+      "S9-F1": {
+        "selected": "s9-b1-a",
+        "system": "A — the hub dissolving",
+        "nonSelected": ["s9-b1-b", "s9-b1-c"],
+        "disposition": "The hub dissolving is the network formation. The non-selected candidates stay on file."
+      }
+    }
+  },
   "reviewProtocol": {
     "pending-selection": "one selection per NEW frame, at full size",
     "pending-review": "verify the one ruled change landed and nothing else moved",
