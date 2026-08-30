@@ -1,5 +1,5 @@
 {
-  "date": "2026-08-30T02:26:24.704Z",
+  "date": "2026-08-30T03:59:16.267Z",
   "rule": "walked forward from the top of the deck, one advance at a time, every settled frame of the five new scenes is its approved cell at zero differing pixels, and the canvas layer hint stays released for the whole run",
   "order": [
     "eighty-thousand-hours:0",
@@ -75,7 +75,7 @@
     ]
   },
   "states": 33,
-  "passed": 31,
+  "passed": 30,
   "results": [
     {
       "order": 0,
@@ -119,7 +119,7 @@
     {
       "order": 3,
       "landedAt": "eighty-thousand-hours:3",
-      "cell": "p1-b3",
+      "cell": "p1-b3-ball",
       "fieldBearing": false,
       "vsCell": {
         "diffPixels": 0,
@@ -467,12 +467,12 @@
       "cell": "s3-b8-a",
       "fieldBearing": false,
       "vsCell": {
-        "diffPixels": 12,
-        "maxDelta": 23
+        "diffPixels": 6,
+        "maxDelta": 22
       },
       "vsArchive": {
-        "diffPixels": 12,
-        "maxDelta": 23
+        "diffPixels": 6,
+        "maxDelta": 22
       },
       "pass": false
     },
@@ -482,14 +482,14 @@
       "cell": "s3-b9-a",
       "fieldBearing": false,
       "vsCell": {
-        "diffPixels": 0,
-        "maxDelta": 0
+        "diffPixels": 38,
+        "maxDelta": 39
       },
       "vsArchive": {
-        "diffPixels": 0,
-        "maxDelta": 0
+        "diffPixels": 38,
+        "maxDelta": 39
       },
-      "pass": true
+      "pass": false
     },
     {
       "order": 28,
