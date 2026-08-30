@@ -1,0 +1,301 @@
+{
+  "date": "2026-08-30T04:11:42.040Z",
+  "session": "act-2-systems",
+  "scope": "the five ◆ candidate frames of docs/batch-b-package.md §3, rendered ahead of the Act II scripts",
+  "frames": [
+    {
+      "frame": "S6-F2",
+      "title": "S6-F2 — the elimination funnel",
+      "note": "The act’s one new diagrammatic system, and the frame that sets the film’s diagram grammar. Line grammar only; the content is the funnel’s own frozen sequence. All three candidates render the same mid-elimination state — three stages spent, THE FORGE landed and not yet run — so what is being compared is systems, not moments.",
+      "candidates": [
+        {
+          "id": "s6f2-a",
+          "file": "s6f2-a.png",
+          "system": "A — the element field",
+          "caption": "The population is the periodic table’s own silhouette, in the set’s dot terminals: a field that reads as “every element” in one second. Each stage puts its own region out — the gases at the top right and along the p-block edge, the reactive metals in columns 1–2, the radioactives in period 7 and the actinides — and the sequence is the list at the left. Mid-elimination: three stages spent and receded, THE FORGE landed and not yet run."
+        },
+        {
+          "id": "s6f2-b",
+          "file": "s6f2-b.png",
+          "system": "B — the descending gates",
+          "caption": "The funnel as thresholds: five horizontal gates descending, each narrower than the last, the population falling through and thinning between them. The gate is the icon grammar’s own threshold language — a stroke with dot terminals, crossed rather than entered. Rejected marks settle outside the span at the floor. Mid-elimination: three gates passed, THE FORGE the live gate, the last threshold drawn but unlit and unnamed."
+        },
+        {
+          "id": "s6f2-c",
+          "file": "s6f2-c.png",
+          "system": "C — the tapering corridor",
+          "caption": "The funnel drawn as one continuous narrowing rather than as steps: two converging lines carrying the population left to right, the stages as ticks crossing the corridor in the line’s own language (icon grammar §4.7 — a mark that names a position on a line is a tick, not a glyph). The taper is legible without any label; the labels only name the stages. Same mid-elimination state as A and B."
+        }
+      ]
+    },
+    {
+      "frame": "S10-F1",
+      "title": "S10-F1 — the trade-off strip",
+      "note": "GOLD → CLAIM → LEDGER → BITCOIN, one gain and one dependency each, activated one at a time. Every word on these frames is recorded film material — the per-slot provenance is in systems.json. Two things are flagged rather than decided: the bitcoin position (the register boundary says a diagram takes the glyph; the C1 coin ruling points at the render) and whether the CLAIM station should carry the accent.",
+      "candidates": [
+        {
+          "id": "s10f1-a",
+          "file": "s10f1-a.png",
+          "system": "A — the rail",
+          "caption": "One continuous line threading four stations, everything hanging off it: the mark above, the name on the line, the gain and the dependency below. It rhymes directly with Act I’s own line-and-dot-terminal grammar and with the legacy rail’s vertical rhythm, and it reads as a sequence in time. BITCOIN is the activated station; the three behind it are receded."
+        },
+        {
+          "id": "s10f1-b",
+          "file": "s10f1-b.png",
+          "system": "B — the ledger of trades",
+          "caption": "No connecting line at all: four entries stacked as rows, each with its mark and name at the left and a hairline running right. The gain sits above the rule and the dependency below it — the rule itself is the trade, and the whole strip reads as a record of four bargains rather than a journey. The film’s ledger grammar, applied to its own argument."
+        },
+        {
+          "id": "s10f1-c",
+          "file": "s10f1-c.png",
+          "system": "C — the trade drawn",
+          "caption": "The trade-off drawn instead of listed: each station is a small beam pivoted on the strip’s baseline, tilted — the gain end raised, the dependency end lowered. Four beams along one baseline say “every architecture bought something and owed something” before a single word is read. Pure line grammar: strokes, a pivot dot, dot terminals."
+        }
+      ]
+    },
+    {
+      "frame": "S9-F1",
+      "title": "S9-F1 — the network formation",
+      "note": "The central layer receding, a distributed validation network forming. Line grammar. There is no text on any of the three — which is how “no advocacy vocabulary anywhere on the frame” is satisfied absolutely rather than by careful word choice.",
+      "candidates": [
+        {
+          "id": "s9f1-a",
+          "file": "s9f1-a.png",
+          "system": "A — the hub dissolving",
+          "caption": "The institutional shape and its replacement in one frame: a centre with spokes to a ring, both receded to the floor, and peer-to-peer chords forming between the ring’s own nodes at full voice. Mid-formation — about two thirds of the chords are drawn. The argument is visible in the two weights: what is going out, and what is coming in. No text on the frame."
+        },
+        {
+          "id": "s9f1-b",
+          "file": "s9f1-b.png",
+          "system": "B — the layer breaking",
+          "caption": "The vertical reading: the central layer as one long rule across the top, breaking into segments and receding, while below it a field of independent nodes links to itself. What moves is the centre of gravity — down, and outward. Distinct from A in that nothing is arranged around a centre at all; there is a before and an after in one frame. No text on the frame."
+        },
+        {
+          "id": "s9f1-c",
+          "file": "s9f1-c.png",
+          "system": "C — the record, copied",
+          "caption": "Validation drawn as replication: the record itself is a small stack of ruled lines, and the frame holds one of them receded at the left — the institution’s single copy — and seven identical copies distributed and linked. The mark that repeats is the argument; nothing has to be labelled for “the same record, held independently” to read. No text on the frame."
+        }
+      ]
+    },
+    {
+      "frame": "S5-F3",
+      "title": "S5-F3 — the evidence grammar",
+      "note": "The dated-fact treatment, designed as a system because it returns for every dated fact in the film. Each candidate is rendered twice: on the Zanzibar specimen (place · date · fact) and on the 1971 specimen (date · fact, no place), which is how the system has to degrade. Both specimens are recorded film material; the 1971 cells are system proofs, not Scene 8 style frames.",
+      "candidates": [
+        {
+          "id": "s5f3-a",
+          "file": "s5f3-a.png",
+          "system": "A — the centred dateline",
+          "caption": "Place and date as one kicker line over a short rule, the fact centred beneath at statement scale. The most restrained of the three: the frame is the fact, and the citation is a whisper above it. Degrades to date-only without moving anything. — Specimen: ZANZIBAR · 1800s (architecture, Scene 5 beat 5)."
+        },
+        {
+          "id": "s5f3-a-1971",
+          "file": "s5f3-a-1971.png",
+          "system": "A — the centred dateline · system proof",
+          "caption": "The same system carrying the film’s second dated fact — 1971, which has a date and no place. This cell exists to show the system degrading; the Scene 8 frame itself belongs to Batch B. Place and date as one kicker line over a short rule, the fact centred beneath at statement scale. The most restrained of the three: the frame is the fact, and the citation is a whisper above it. Degrades to date-only without moving anything."
+        },
+        {
+          "id": "s5f3-b",
+          "file": "s5f3-b.png",
+          "system": "B — the hanging citation",
+          "caption": "The citation hangs in the left margin against a vertical hairline and the fact sets left-aligned beside it — a marginal reference rather than a caption. The asymmetry gives the fact a longer line and leaves the right of the frame open. Degrades by dropping the place line; the hairline holds the composition. — Specimen: ZANZIBAR · 1800s (architecture, Scene 5 beat 5)."
+        },
+        {
+          "id": "s5f3-b-1971",
+          "file": "s5f3-b-1971.png",
+          "system": "B — the hanging citation · system proof",
+          "caption": "The same system carrying the film’s second dated fact — 1971, which has a date and no place. This cell exists to show the system degrading; the Scene 8 frame itself belongs to Batch B. The citation hangs in the left margin against a vertical hairline and the fact sets left-aligned beside it — a marginal reference rather than a caption. The asymmetry gives the fact a longer line and leaves the right of the frame open. Degrades by dropping the place line; the hairline holds the composition."
+        },
+        {
+          "id": "s5f3-c",
+          "file": "s5f3-c.png",
+          "system": "C — the ruled entry",
+          "caption": "The film’s ledger grammar turned on its own evidence: one hairline the width of the frame, place at its left end and date at its right, the fact centred below. It reads as a record being entered, which is what a dated fact is. Degrades to a single right-hand date. — Specimen: ZANZIBAR · 1800s (architecture, Scene 5 beat 5)."
+        },
+        {
+          "id": "s5f3-c-1971",
+          "file": "s5f3-c-1971.png",
+          "system": "C — the ruled entry · system proof",
+          "caption": "The same system carrying the film’s second dated fact — 1971, which has a date and no place. This cell exists to show the system degrading; the Scene 8 frame itself belongs to Batch B. The film’s ledger grammar turned on its own evidence: one hairline the width of the frame, place at its left end and date at its right, the fact centred below. It reads as a record being entered, which is what a dated fact is. Degrades to a single right-hand date."
+        }
+      ]
+    },
+    {
+      "frame": "S8-F2",
+      "title": "S8-F2 — the chart at film grade",
+      "note": "The four-currency purchasing-power record restyled to the deck’s system. The data is frozen and untouchable: every candidate reads src/data/purchasing-power.js, plots one vertex per observed year, and keeps the frozen draw order and per-series weight. The candidates vary axes, weight and labeling restraint, and nothing else.",
+      "candidates": [
+        {
+          "id": "s8f2-a",
+          "file": "s8f2-a.png",
+          "system": "A — the bare fall",
+          "caption": "No axes, no gridlines, no frame — four lines leaving one origin and falling, and nothing else on the stage. The only marks are the origin’s note and the four terminals with their end values. Maximum restraint: the shape of the record is the whole argument, and every line the eye can see is data."
+        },
+        {
+          "id": "s8f2-b",
+          "file": "s8f2-b.png",
+          "system": "B — the one line that matters",
+          "caption": "A single hairline at the index level the four series start from, running the width of the plot, and the four lines falling away beneath it. One gridline, chosen because it is the argument: every line, including the strongest, ends far below where it began. Years marked only at the two ends."
+        },
+        {
+          "id": "s8f2-c",
+          "file": "s8f2-c.png",
+          "system": "C — the framed record",
+          "caption": "The conventional reading in the deck’s hand: an L-frame with sparse ticks — 0, 50 and 100 on the value axis, the two end years below — and the four lines inside it. It gives the viewer a scale to read against, at the cost of adding chrome the other two refuse. The most legible and the least austere."
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "rule": "every word on every cell is recorded film material; nothing is drawn from a script that has not been written",
+    "S6-F2 stage names": "GASES · REACTIVES · RADIOACTIVES · THE FORGE · SCARCITY — the funnel's frozen sequence (synthesis-architecture Scene 6 beat 2; batch-b package §2 S6: \"gases escape, reactives corrode, radioactives are lethal; the forge leaves two; scarcity leaves one\")",
+    "S10-F1 GOLD gain": "SCARCITY IN MATTER — synthesis-architecture, Scene 6 beat 1, verbatim display line",
+    "S10-F1 GOLD dependency": "as value grows, weight grows — batch-b package §2 S6, verbatim (\"gold's weakness is mass — as value grows, weight grows\")",
+    "S10-F1 CLAIM gain": "PORTABILITY — synthesis-architecture, Scene 7: \"Portability improved.\" Compressed to the label register; the word is the recorded one",
+    "S10-F1 CLAIM dependency": "trust moved to the issuer — synthesis-architecture, Scene 7, verbatim",
+    "S10-F1 LEDGER gain": "INSTANT TRANSFER — synthesis-architecture, Scene 8 beat 1, verbatim (\"instant transfer\")",
+    "S10-F1 LEDGER dependency": "the window closed — synthesis-architecture, Scene 8 beat 3, verbatim (\"when redemption was demanded, the window closed\")",
+    "S10-F1 BITCOIN gain": "NON-DISCRETIONARY SUPPLY — synthesis-architecture, Scene 9, verbatim capability line",
+    "S10-F1 BITCOIN dependency": "not yet twenty years into a hundred-year question — synthesis-architecture, Scene 9, verbatim honesty line",
+    "S5-F3 Zanzibar specimen": "ZANZIBAR · 1800s; \"Shiploads of cheaper imported cowries collapsed the shell rate.\" — synthesis-architecture Scene 5 beat 5 and batch-b package §2 S5 (tense adjusted for the frame)",
+    "S5-F3 1971 specimen": "1971; \"When redemption was demanded, the window closed.\" — synthesis-architecture, Scene 8 beat 3, verbatim",
+    "S8-F2 data": "src/data/purchasing-power.js, untouched — PURCHASING_POWER, PP_SERIES (frozen draw order and per-series alpha), PP_YEAR_MIN, PP_YEAR_MAX. One vertex per observed year, the legacy chart's own rule",
+    "S9-F1": "no text on any candidate"
+  },
+  "flagged": [
+    "S10-F1, the bitcoin position: the register boundary (master §6.3) says dark-field never enters a diagram, so a diagram-scale strip takes the struck-₿ glyph — which is what these candidates render. The presenter's C1 ruling as recorded (dark-field manifest §2.2) says the physical-coin render governs Scene 10's strip for consistency with P1. The two point different ways at exactly this position. Flagged, not resolved.",
+    "S10-F1, the accent: the CLAIM station is a claim, and the accent is the claim's — but the strip's claim is the paper claim on gold, a carrier, and colouring it would collide with the Claim Mark. All three candidates are monochrome; the selection settles it.",
+    "S6-F2 candidate A: the population is the periodic table's real silhouette and the eliminated regions are the real ones (the gases at the top right and along the p-block edge, columns 1–2 for the reactive metals, period 7 and the actinides for the radioactives). At dot scale no individual element is identifiable, so the frame asserts a shape and a sequence, not a specific chemistry.",
+    "S5-F3: the third dated fact the system must carry — palladium, 1803 — has no recorded one-line form yet, so it is not rendered here. The two specimens that are recorded are."
+  ],
+  "cells": [
+    {
+      "id": "s6f2-a",
+      "file": "s6f2-a.png",
+      "frame": "S6-F2",
+      "system": "A — the element field",
+      "caption": "The population is the periodic table’s own silhouette, in the set’s dot terminals: a field that reads as “every element” in one second. Each stage puts its own region out — the gases at the top right and along the p-block edge, the reactive metals in columns 1–2, the radioactives in period 7 and the actinides — and the sequence is the list at the left. Mid-elimination: three stages spent and receded, THE FORGE landed and not yet run."
+    },
+    {
+      "id": "s6f2-b",
+      "file": "s6f2-b.png",
+      "frame": "S6-F2",
+      "system": "B — the descending gates",
+      "caption": "The funnel as thresholds: five horizontal gates descending, each narrower than the last, the population falling through and thinning between them. The gate is the icon grammar’s own threshold language — a stroke with dot terminals, crossed rather than entered. Rejected marks settle outside the span at the floor. Mid-elimination: three gates passed, THE FORGE the live gate, the last threshold drawn but unlit and unnamed."
+    },
+    {
+      "id": "s6f2-c",
+      "file": "s6f2-c.png",
+      "frame": "S6-F2",
+      "system": "C — the tapering corridor",
+      "caption": "The funnel drawn as one continuous narrowing rather than as steps: two converging lines carrying the population left to right, the stages as ticks crossing the corridor in the line’s own language (icon grammar §4.7 — a mark that names a position on a line is a tick, not a glyph). The taper is legible without any label; the labels only name the stages. Same mid-elimination state as A and B."
+    },
+    {
+      "id": "s10f1-a",
+      "file": "s10f1-a.png",
+      "frame": "S10-F1",
+      "system": "A — the rail",
+      "caption": "One continuous line threading four stations, everything hanging off it: the mark above, the name on the line, the gain and the dependency below. It rhymes directly with Act I’s own line-and-dot-terminal grammar and with the legacy rail’s vertical rhythm, and it reads as a sequence in time. BITCOIN is the activated station; the three behind it are receded."
+    },
+    {
+      "id": "s10f1-b",
+      "file": "s10f1-b.png",
+      "frame": "S10-F1",
+      "system": "B — the ledger of trades",
+      "caption": "No connecting line at all: four entries stacked as rows, each with its mark and name at the left and a hairline running right. The gain sits above the rule and the dependency below it — the rule itself is the trade, and the whole strip reads as a record of four bargains rather than a journey. The film’s ledger grammar, applied to its own argument."
+    },
+    {
+      "id": "s10f1-c",
+      "file": "s10f1-c.png",
+      "frame": "S10-F1",
+      "system": "C — the trade drawn",
+      "caption": "The trade-off drawn instead of listed: each station is a small beam pivoted on the strip’s baseline, tilted — the gain end raised, the dependency end lowered. Four beams along one baseline say “every architecture bought something and owed something” before a single word is read. Pure line grammar: strokes, a pivot dot, dot terminals."
+    },
+    {
+      "id": "s9f1-a",
+      "file": "s9f1-a.png",
+      "frame": "S9-F1",
+      "system": "A — the hub dissolving",
+      "caption": "The institutional shape and its replacement in one frame: a centre with spokes to a ring, both receded to the floor, and peer-to-peer chords forming between the ring’s own nodes at full voice. Mid-formation — about two thirds of the chords are drawn. The argument is visible in the two weights: what is going out, and what is coming in. No text on the frame."
+    },
+    {
+      "id": "s9f1-b",
+      "file": "s9f1-b.png",
+      "frame": "S9-F1",
+      "system": "B — the layer breaking",
+      "caption": "The vertical reading: the central layer as one long rule across the top, breaking into segments and receding, while below it a field of independent nodes links to itself. What moves is the centre of gravity — down, and outward. Distinct from A in that nothing is arranged around a centre at all; there is a before and an after in one frame. No text on the frame."
+    },
+    {
+      "id": "s9f1-c",
+      "file": "s9f1-c.png",
+      "frame": "S9-F1",
+      "system": "C — the record, copied",
+      "caption": "Validation drawn as replication: the record itself is a small stack of ruled lines, and the frame holds one of them receded at the left — the institution’s single copy — and seven identical copies distributed and linked. The mark that repeats is the argument; nothing has to be labelled for “the same record, held independently” to read. No text on the frame."
+    },
+    {
+      "id": "s5f3-a",
+      "file": "s5f3-a.png",
+      "frame": "S5-F3",
+      "system": "A — the centred dateline",
+      "caption": "Place and date as one kicker line over a short rule, the fact centred beneath at statement scale. The most restrained of the three: the frame is the fact, and the citation is a whisper above it. Degrades to date-only without moving anything. — Specimen: ZANZIBAR · 1800s (architecture, Scene 5 beat 5)."
+    },
+    {
+      "id": "s5f3-a-1971",
+      "file": "s5f3-a-1971.png",
+      "frame": "S5-F3",
+      "system": "A — the centred dateline · system proof",
+      "caption": "The same system carrying the film’s second dated fact — 1971, which has a date and no place. This cell exists to show the system degrading; the Scene 8 frame itself belongs to Batch B. Place and date as one kicker line over a short rule, the fact centred beneath at statement scale. The most restrained of the three: the frame is the fact, and the citation is a whisper above it. Degrades to date-only without moving anything."
+    },
+    {
+      "id": "s5f3-b",
+      "file": "s5f3-b.png",
+      "frame": "S5-F3",
+      "system": "B — the hanging citation",
+      "caption": "The citation hangs in the left margin against a vertical hairline and the fact sets left-aligned beside it — a marginal reference rather than a caption. The asymmetry gives the fact a longer line and leaves the right of the frame open. Degrades by dropping the place line; the hairline holds the composition. — Specimen: ZANZIBAR · 1800s (architecture, Scene 5 beat 5)."
+    },
+    {
+      "id": "s5f3-b-1971",
+      "file": "s5f3-b-1971.png",
+      "frame": "S5-F3",
+      "system": "B — the hanging citation · system proof",
+      "caption": "The same system carrying the film’s second dated fact — 1971, which has a date and no place. This cell exists to show the system degrading; the Scene 8 frame itself belongs to Batch B. The citation hangs in the left margin against a vertical hairline and the fact sets left-aligned beside it — a marginal reference rather than a caption. The asymmetry gives the fact a longer line and leaves the right of the frame open. Degrades by dropping the place line; the hairline holds the composition."
+    },
+    {
+      "id": "s5f3-c",
+      "file": "s5f3-c.png",
+      "frame": "S5-F3",
+      "system": "C — the ruled entry",
+      "caption": "The film’s ledger grammar turned on its own evidence: one hairline the width of the frame, place at its left end and date at its right, the fact centred below. It reads as a record being entered, which is what a dated fact is. Degrades to a single right-hand date. — Specimen: ZANZIBAR · 1800s (architecture, Scene 5 beat 5)."
+    },
+    {
+      "id": "s5f3-c-1971",
+      "file": "s5f3-c-1971.png",
+      "frame": "S5-F3",
+      "system": "C — the ruled entry · system proof",
+      "caption": "The same system carrying the film’s second dated fact — 1971, which has a date and no place. This cell exists to show the system degrading; the Scene 8 frame itself belongs to Batch B. The film’s ledger grammar turned on its own evidence: one hairline the width of the frame, place at its left end and date at its right, the fact centred below. It reads as a record being entered, which is what a dated fact is. Degrades to a single right-hand date."
+    },
+    {
+      "id": "s8f2-a",
+      "file": "s8f2-a.png",
+      "frame": "S8-F2",
+      "system": "A — the bare fall",
+      "caption": "No axes, no gridlines, no frame — four lines leaving one origin and falling, and nothing else on the stage. The only marks are the origin’s note and the four terminals with their end values. Maximum restraint: the shape of the record is the whole argument, and every line the eye can see is data."
+    },
+    {
+      "id": "s8f2-b",
+      "file": "s8f2-b.png",
+      "frame": "S8-F2",
+      "system": "B — the one line that matters",
+      "caption": "A single hairline at the index level the four series start from, running the width of the plot, and the four lines falling away beneath it. One gridline, chosen because it is the argument: every line, including the strongest, ends far below where it began. Years marked only at the two ends."
+    },
+    {
+      "id": "s8f2-c",
+      "file": "s8f2-c.png",
+      "frame": "S8-F2",
+      "system": "C — the framed record",
+      "caption": "The conventional reading in the deck’s hand: an L-frame with sparse ticks — 0, 50 and 100 on the value axis, the two end years below — and the four lines inside it. It gives the viewer a scale to read against, at the cost of adding chrome the other two refuse. The most legible and the least austere."
+    }
+  ],
+  "consoleErrors": []
+}
