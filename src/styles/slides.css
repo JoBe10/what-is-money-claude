@@ -4369,6 +4369,56 @@
   }
 }
 
+/* ===== The Prologue — P1, P2 (the film, Batch A) ===== */
+
+/* The Prologue reuses Section 1's type treatments verbatim — the counter, the
+   hours line, the stakes line, the question and the title are the same classes
+   the presenter approved his frames in, so the scenes inherit their proven
+   transitions and their exact metrics. Only two things are the Prologue's own:
+   the condensed mass and the five-form morph. Both are geometry-free here —
+   every coordinate lives in the scene's builders, transcribed from the approved
+   cells — so what is written below is timing and nothing else. */
+
+/* The condensation's landing. It reveals slowly, while the last of the field is
+   still pouring in, and releases at the morph's own pace when the first form
+   takes the frame: the duration is read from the target state, so the two
+   directions get their own. */
+.p1-mass {
+  opacity: 0;
+  transition: opacity 520ms ease-out;
+}
+
+.p1-mass[data-visible="true"] {
+  opacity: 1;
+  transition: opacity 1200ms ease-out;
+}
+
+/* The five-form morph is a cross-dissolve in the dark-field register's own
+   reveal (520ms, `.df`). The outgoing form releases a beat after the incoming
+   has begun to rise, so the frame never dips to black between two objects —
+   one form becomes the next rather than being replaced by it. */
+.p1-form[data-visible="false"] {
+  transition-delay: 180ms;
+}
+
+/* The title's beat of emptiness — 1.03's proven treatment: on the live advance
+   the question clears and the frame holds dark before the title lands.
+   Stepping back is immediate. */
+.p1[data-live="true"] .s1q-what__title[data-visible="true"] {
+  transition-delay: 600ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .p1-mass,
+  .p1-mass[data-visible="true"],
+  .p1-form,
+  .p1-form[data-visible="false"],
+  .p1[data-live="true"] .s1q-what__title[data-visible="true"] {
+    transition-delay: 0ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 /* ===== Section 2 — Where Money Comes From (rebuild R2) ===== */
 
 /* Section 1's austerity carries through: black frames, generous negative
