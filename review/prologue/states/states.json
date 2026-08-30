@@ -143,5 +143,15 @@
       "caption": "Beat 2 · the spoken promise — the screen holds (§1 map: “spoken promise + handoff (screen holds)”; the architecture: no agenda, no map on screen — the waypoint device is retired). Identical to beat 1 by design, rendered as its own cell per the full-coverage rule (the s3-b8 precedent)"
     }
   ],
-  "consoleErrors": []
+  "consoleErrors": [],
+  "rulings": {
+    "date": "2026-08-29",
+    "recordedBy": "the Batch A implementation session, from the presenter's Prologue rulings (docs/batch-a-implementation-brief.md §1)",
+    "C1": {
+      "selection": "A",
+      "cell": "p1-b8-a",
+      "ruling": "C1 = THE COIN. P1's fifth form is the library's `bitcoin` render. p1-b8-b (structured light) stays on file, not selected, per the aesthetic law's file-keeping clause.",
+      "consequence": "The manifest's V-1 flag is closed as a PRESENTER decision (docs/dark-field-manifest.md §2.2): the physical-coin render is presenter-accepted for P1's morph, and Scene 10's trade-off strip follows the same ruling for consistency. Batch B's states session inherits it; no Scene 10 work here."
+    }
+  }
 }

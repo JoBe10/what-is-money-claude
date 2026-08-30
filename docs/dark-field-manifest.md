@@ -222,6 +222,22 @@ Two of the first shoot's renders need a note rather than a regeneration.
 - **`shells` satisfies the brief's "cluster of cowrie shells" contender** outright — the restored render *is* a five-shell cowrie cluster on black. No new generation is required for §4.1's shells; if a distinct Section 2 frame is wanted later, the prompt is in §4 anyway.
 - **`bitcoin` is on-grade and off-argument.** The render is a physical coin, and R7 retired it for exactly that reason (defect V-1: it asserts an object 4.15 spends its script denying, and the deck holds that bitcoin is held directly, with no counterparty and no physical form). R7.2's brief names it among the renders to restore, so it is restored and shipped — but this is a **flagged presenter decision, not an implementation one.** Reverting it is one line: `['bitcoin', 'BITCOIN', 'bitcoin', 'glyph']` in `06-claim-and-carrier.js`'s `CARRIERS` table drops that one position back to the struck ₿ and leaves the other four photographic.
 
+#### V-1 is RULED (presenter, 29 August 2026) — the coin is accepted
+
+The Prologue beat-state sheet put the question directly: P1's fifth form as the
+library's `bitcoin` coin render (`p1-b8-a`, continuous with the four physical
+forms before it, and carrying exactly this flag) or as structured light
+(`p1-b8-b`, on-argument, composed from the unit grammar). **The presenter
+selected the coin — C1 = A.**
+
+The V-1 flag is therefore closed **as a presenter decision, not as an
+implementation one**: the physical-coin render is presenter-accepted for **P1's
+morph**, and the same ruling governs **Scene 10's trade-off strip** for
+consistency — one film, one answer to the same question. *(Batch B's states
+session inherits the ruling; no work is done on Scene 10 here.)* The revert path
+above is unchanged and stays on file: the ruling is a selection, and a selection
+is changed by changing one word.
+
 ---
 
 ## 3. Failed the gate — regeneration required
