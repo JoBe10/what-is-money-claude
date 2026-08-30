@@ -1,24 +1,110 @@
 # Batch B Package — Act II: The Architecture of Money (Scenes 5–10)
-## Scaffolding edition: everything except the spoken words, which arrive from the presenter's essay
+## Complete: the scripts are installed, the maps are frozen, the provenance is ruled
 
-**Status.** This package follows `docs/batch-a-package.md`'s template. Beat maps are **provisional** — they become binding when the scripts are installed, because the script standard (one `[→]` per advance, sequential spoken lines each their own advance) lets the presenter's prose adjust counts, as R1 did in Act I. Script sections are **content contracts**: the checklist each script must satisfy, in whatever words the presenter's essay provides. Claude converts the essay act by act into verbatim `[→]` scripts against these contracts; the presenter approves the conversion; then the maps freeze and the pipeline proceeds.
+**Status — 31 August 2026.** This package follows `docs/batch-a-package.md`'s template. **The scripts are installed and the beat maps are frozen at 33 beats** (§1, §2). The contracts each script had to satisfy are kept at the end of §2 as the record. **The provenance of every §3 frame is ruled** in `docs/act-2-provenance.md`, which governs: a frame is PORT, ADAPT or NEW before anyone touches it, and §3's ◆ marks are now historical — the map decides where candidates apply, and it applies them to **S6-F3, S7-F2 and S9-F1 only**.
 
-**Pipeline for this batch (in order):** essay sections → scripts installed + maps frozen → **full-coverage beat-state sheet** (every state a presenter-approved still, per the standing rule) → **Prototype Gate 3** (the architecture morph, live-judged) → Batch B implementation (Opus, FAST) → exit test.
+**Pipeline for this batch (in order):** ~~essay sections~~ → ~~scripts installed + maps frozen~~ → ~~**full-coverage beat-state sheet**~~ (`review/act-2/states/`, 31 August) → **Prototype Gate 3** (the architecture morph, live-judged) → Batch B implementation (Opus, FAST) → exit test.
 
 **Act II register (binding):** material-to-information transformations, object-led. Dark-field renders at display scale carry the objects; line grammar carries the two diagrammatic systems (the funnel, the strip); the Claim Mark is present throughout as the through-line — orange exists in this act. No new technical term is introduced anywhere in Act II (presenter-ruled). Register boundary law applies: dark-field never enters a diagram; glyphs never carry a sensory beat at display scale.
 
 ---
 
-# 1. Provisional beat maps
+# 1. Beat maps (builds = script `[→]` counts, binding)
 
-**S5 — The Function Stayed. The Carrier Changed.** (~7): the saved claim becomes the through-line, first carrier (shells) forms around it → the carrier transforms with fast verdicts, one wound each — shells → cattle → salt → iron (count may split per script) → gold arrives, the survivor → the Zanzibar receipt → "The function stayed. The carrier changed." → "Why did the carrier keep changing?"
-**S6 — Gold: Scarcity in Matter** (~4): the gold study, SCARCITY IN MATTER → the funnel: every element eliminated in one continuous beat → hard to create, hard to destroy → hard to move: represented value grows, required mass grows.
-**S7 — Claims on Gold: Portability Through Trust** (~5): gold stops in custody (the vault) → the motivation: coins solve the market stall, not the merchant fleet → the paper claim detaches and travels (the certificate) → the dependency line back to the vault → "The gold stayed. The claim moved." / "Portability improved. Trust moved to the issuer."
-**S8 — Fiat: Money Becomes Information** (5): paper dissolves into a ledger entry, MONEY BECAME INFORMATION → the honest strengths → the severance: 1971, dated fact → the four-currency chart, one advance → the residue line.
-**S9 — Bitcoin: Can Scarcity Become Digital?** (~5): the institutional ledger persists, the central layer recedes → a distributed validation network forms → the asset emerges; DIGITAL MOBILITY / NON-DISCRETIONARY SUPPLY / INDEPENDENT VERIFICATION → the facts with the honesty in the same breath → the stability distinction (distributed content, per Ruling 5).
-**S10 — The Trade-Off Keeps Moving** (5): the strip — GOLD → CLAIM → LEDGER → BITCOIN, activated one at a time → "The history of money is a history of changing trade-offs." → palladium: the bar not cleared → the insufficiency line → "Better for what job?"
+**FROZEN 31 August 2026**, on the presenter's approval of the §2 scripts. The maps were provisional until the scripts landed, exactly as this package's header said they would be; they are now binding, and the beat count is the script's own `[→]` count. **Act II is 33 beats.** The presenter's essay voice pass remains the final authority over every word, and a word pass that changes an advance count amends these maps with it.
 
-# 2. Script contracts [words from the presenter's essay; Claude converts; presenter approves]
+**S5 — The Function Stayed. The Carrier Changed.** (8): the claim needs a body, and wears its first — shells → CATTLE falls, one wound → SALT falls → IRON falls → the same experiment, and the metals rise out of the wreckage → the Zanzibar receipt → "The function stayed. The carrier changed." → "Why did the carrier keep changing?"
+**S6 — Gold: Scarcity in Matter** (5): gold, and scarcity in matter → the funnel, every element eliminated in one continuous beat → the furnace decides; two survivors, and the 1803 foreshadow → hard to create, hard to destroy → but not hard to move: as represented value grows, required mass grows.
+**S7 — Claims on Gold: Portability Through Trust** (5): gold's own weaknesses → coinage solves verification and division → the vault, and the receipt that circulates instead → "The gold stayed. The claim moved." → portability improved, trust moved to the issuer.
+**S8 — Fiat: Money Becomes Information** (5): the receipt followed all the way — money became information, with its strengths given full weight → 1971, the window closed → captured, not beaten → the four-currency record → both facts on one screen.
+**S9 — Bitcoin: Can Scarcity Become Digital?** (5): 2009, and the ledger's centre steps away as the network forms → the facts, in the neutral register → the three capabilities → the honest line, in the same breath → the two-question distinction (Ruling 5's distributed content).
+**S10 — The Trade-Off Keeps Moving** (5): the strip — GOLD → CLAIM → LEDGER → BITCOIN, one gain and one dependency each → "The history of money is a history of changing trade-offs." → palladium, the bar not cleared → the insufficiency line → "Better for what job?"
+
+# 2. Scripts [installed verbatim 31 August 2026; presenter’s own pass comes later]
+
+**Approved as drafted** (presenter, 31 August 2026) and installed from `docs/batch-b-scripts-draft.md` §-by-§, **mechanically diffed at zero word differences** — `review/act-2/harness/script-diff.cjs`. The draft's own adaptation ledger (what changed from the legacy notes and why) stays in that document.
+
+## S5 — The Function Stayed. The Carrier Changed.
+
+[→] So you've decided to save — to hold your claim open across time. But a claim is invisible. To survive the trip, it needs a body: something that can carry it from hand to hand, from year to year. Here is the first body it ever wore: shells. Beautiful, scarce, hard to fake. For centuries, across whole coastlines, a life's work slept safely inside them. Hold that thought — and remember these shells; there's a ship on the horizon that will come for them before this chapter ends.
+
+[→] Because shells were not the only candidate. Every culture entered its own. Cattle — genuinely valuable, and genuinely useless the moment you need to make change. You cannot divide a cow and keep it a cow.
+
+[→] Salt — precious, portable, and gone in one bad storm.
+
+[→] Iron — abundant, which is the problem. It rusts, and anyone with a furnace can make more of it.
+
+[→] Different centuries, different continents, same experiment — and the market keeps selecting for the same thing: the good that survives across space, across time, across scale. And out of the wreckage, one family keeps rising, on every continent that has it: the metals. Hard to make more of. Slow to decay. Divisible without dying.
+
+[→] And here is the shell story ending, exactly as promised. When European ships began landing thousands of tons of cheaper Zanzibar cowries in West Africa, the shells' scarcity — which had always been an accident of distance — collapsed. The people holding their savings in shells were not out-traded. They were out-*supplied*. Remember this defeat; it is the oldest version of a very modern problem.
+
+[→] Now look at what just happened across all of it. Shells, cattle, salt, iron, metal — the bodies kept changing. But the thing inside them never did: someone's claim, riding whatever would carry it. The function stayed. The carrier changed.
+
+[→] Which leaves the real question of this whole chapter: *why* did the carrier keep changing? What was the competition actually about? Let's follow the winner and find out.
+
+## S6 — Gold: Scarcity in Matter
+
+[→] Gold. Before it was jewelry, before it was treasure, it was the answer to a question: what, in the physical world, is genuinely hard to make more of? Scarcity — in matter itself.
+
+[→] Here's my favorite way to see how narrow that answer is. Forget history for a moment, and run the competition across every element that exists. The gases are out — your money should not float away. Everything that rusts, burns, or dissolves in water — out; that removes most of the table, including iron, and it's why the rainstorm mattered. The radioactive row — out, for reasons I hope are obvious. And strip away what will not hold a shape — the metal that pours, the ones no fire of the age could work at all. What's left is a small family: the noble metals, the ones that simply refuse to corrode.
+
+[→] And now the furnace decides. The platinum group melts at temperatures no ancient furnace could reach, and hides in ores no ancient chemist could crack — which is why the world would not even meet one of its members until 1803. Remember that date; it has a part to play later. Chemistry and the forge leave two survivors: silver, and gold. Every civilization that could refine metals converged on the same two, without consulting each other. And between them, the scarcer one — the one that doesn't tarnish at all — took the throne.
+
+[→] So the claim had found its strongest body yet: hard to create, hard to destroy.
+
+[→] But not hard to *move*. That is gold's own weakness, and it grows with success: the more value your claim represents, the more metal you must drag through the world to carry it. Watch what people built to escape that weight.
+
+## S7 — Claims on Gold: Portability Through Trust
+
+[→] So why isn't there gold in your pocket? Because winning the properties contest didn't cure gold's weaknesses. It's heavy. It's hard to verify — bite marks and touchstones only get you so far. And moving a fortune in it is an invitation to lose one.
+
+[→] So people built upward. Stamp the metal into standard coins and you've solved verification and division at a stroke — every coin the same weight, the same purity, the same stamp — as long as you trust the mint.
+
+[→] But coins solve the market stall, not the merchant fleet. Move a fortune in coin and you're back to weight, guards, and dangerous roads. And most gold ended up resting in vaults for safekeeping anyway. So: leave the gold where it's safe, and trade the *receipt* — a claim on gold in a vault, light as air, divisible by the stroke of a pen, good across any distance the issuer's name can travel. As long as you trust the vault.
+
+[→] Look at what your claim just did. The gold stayed. The claim moved.
+
+[→] That's the trade, named honestly: portability improved — and trust moved to the issuer. For a long time, that exchange rate looked like a bargain. Now watch what happens when the trust gets stretched to breaking.
+
+## S8 — Fiat: Money Becomes Information
+
+[→] First, see how far the receipt idea goes when you follow it all the way. The paper doesn't even need to exist — the vault can simply keep a ledger, and move your claim by moving a number. Money became information. And be honest about how good that is: payments have never been faster, cheaper, or easier to divide. Value moves at planetary scale, at the speed of a message.
+
+[→] But the whole tower still stood on redemption — and the notes had been over-issued: spent into wars and programs far beyond the gold behind them. Other countries started showing up with dollars, asking for the metal. There wasn't enough. So in August 1971, the redemption window closed. Officially temporary; permanent ever since. Call it what the record shows: the issuer of the claims could not honor them, and cancelled them instead.
+
+[→] And notice what that was *not*. In the free competition, monies fell when something categorically better arrived — metal over shell, coin over ingot. Gold was never out-competed. Nothing categorically better ever arrived. It was *captured*: its custody centralized into a few vaults, the claims on it over-issued, and when the claims came due, redemption was cancelled. The money that reigns today didn't win the competition. It ended it.
+
+[→] So how has the new arrangement performed at the oldest job — carrying value through time? Here is what one unit of the major currencies still buys, measured from that year. Every line on this chart — including the strongest currency of the era, the Swiss franc — ends far below where it began. Not one government's scandal: every issuer, every continent, the same slope. That is not mismanagement. That is a structural property of the design.
+
+[→] Both facts belong on one screen, because both are true: the reigning money is extraordinary at moving value — and measurably poor at storing it. Keep that exact wound in mind. And keep your eye on the ledger, because the story isn't done with it.
+
+## S9 — Bitcoin: Can Scarcity Become Digital?
+
+[→] In 2009, something appeared that had never existed before: a digital good, issued by no state and no company, with a supply fixed by its own rules. Watch what happens to the ledger — the institution at its center steps away, and in its place, a network of independent computers, each holding the whole record, each checking all the others. I'm going to describe this in a strictly neutral register, because describing is all the story has earned so far.
+
+[→] The facts: twenty-one million units — not a promise from an issuer, a property of the thing, fixed by the protocol's own rules. It moves like information, anywhere, at any hour. And it can be held *directly*, with no counterparty — like a bearer asset. Held today by individuals, funds, and lately institutions and states — stated as adoption fact, not as applause.
+
+[→] Three capabilities, then, that had never coexisted: digital mobility. Non-discretionary supply. Independent verification — anyone can check the ledger; no one has to be believed.
+
+[→] And the honest line, in the same breath: it is very young. Its price still swings far more than the monies it would compete with. It is not yet twenty years into a hundred-year question.
+
+[→] One distinction before we go on, because it keeps the thinking clean: the market's valuation of a young asset, and the architecture of the claim itself, are two different questions. Volatility is what the first looks like while adoption is still being decided — a stage, not a verdict. History suggests it can diminish as a monetary good matures; that is an expectation, never a guarantee. The architecture is what the rest of this story knows how to judge.
+
+## S10 — The Trade-Off Keeps Moving
+
+[→] Lay the whole architecture on one line. Gold: scarce in matter — and heavy. The claim on gold: light as paper — and hanging from the issuer's honesty. The ledger: instant — and standing on the very redemption that was cancelled. And the newest mark: digital scarcity — and young, still earning its place. Every architecture bought a gain, and paid for it with a dependency.
+
+[→] The history of money is a history of changing trade-offs.
+
+[→] But be careful — not every improvement moves the crown, and here is the proof. Palladium. Discovered in 1803, scarcer in supply than gold — the world mines about fifteen times as much gold each year — genuinely useful, and in some stretches pricier per ounce than gold itself. And it never became money. Not anywhere. Not in any era. It walked in scarcer than the reigning metal, against a network thousands of years old — and a monetary good's value *is* that network: what everyone else will accept. A latecomer doesn't start a few laps behind; it starts at zero. Rarer, pricier — and monetarily, nothing. Price is not moneyness.
+
+[→] Which gives us the bar, and it may be the most important sentence of this chapter: marginally better is structurally insufficient. Only a categorical difference on the deciding properties has ever moved the crown.
+
+[→] So the question is no longer *which object*. The question is: better for what *job*? Because money, it turns out, is not one job at all. That's next.
+
+## The contracts these scripts were written against (record)
+
+Kept because a satisfied contract is the evidence that the script is complete, and because the presenter's voice pass will want to see what the words had to carry.
 
 **S5 must contain:** the claim as continuity while carriers change; one wound per fallen carrier, one line each, drawn from the legacy competition verdicts (adapt, don't invent new wounds); the **Zanzibar receipt** — 1800s, shiploads of cheaper imported cowries collapse the shell rate, savings out-supplied, "the oldest version of a very modern problem" (evidence rule: dated fact about the money itself); the paired closing lines; the exit question. *Tone: a competition with casualties, told with momentum.*
 
