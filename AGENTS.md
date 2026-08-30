@@ -257,6 +257,29 @@ scenes implemented independently produces a run of unrelated scenes.
 
 Do not defer all validation to the end.
 
+## 4.8 The session-sizing law
+
+**Presenter-ordered, 30 August 2026.** **One major construction task per
+session.**
+
+A batch is not one session. It is a **sequence of small FAST sessions** — each
+under an hour where possible, **each tagged, each independently reviewable** —
+plus one closing session for batch-level verification and the batch tag.
+
+**A brief that bundles multiple major constructions is a process defect**, and
+is to be split before it runs rather than executed as written.
+
+Purpose, and it is the same purpose as §4.1 one level up: a session that builds
+four things cannot be reviewed, cannot be reverted, and cannot be judged. Its
+report becomes a summary rather than an account, its tag marks a state nobody
+chose, and a defect anywhere inside it puts everything else in the session at
+risk with it. Granular commits make a change revertible; small sessions make a
+*decision* revertible.
+
+What counts as one major construction: a scene, a systems or beat-state sheet, a
+prototype gate round, a splice, an ingest with its records. Records, rulings and
+their proofs travel with the construction they belong to.
+
 ---
 
 # 5. Scope and safety
