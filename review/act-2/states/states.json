@@ -34,6 +34,11 @@
         "nonSelected": ["s9-b1-b", "s9-b1-c"],
         "disposition": "The hub dissolving is the network formation. The non-selected candidates stay on file."
       }
+    },
+    "adaptationsVerified": {
+      "cells": ["s5-b6", "s8-b2", "s10-b3", "s10-b4", "s5f3-proof-1803"],
+      "verdict": "Approved, 31 August 2026. The presenter verified that each adaptation's one ruled change landed and nothing else moved. On s10-b3 the placement is confirmed: the beat stands against the strip, out of Act III's judging position, with nothing inside the frame moved. The evidence-grammar 1803 proof is approved with the two beat specimens, so the generalization is demonstrated on all three.",
+      "note": "s6-b2 and s6-b3 — the funnel compression's two cells — are deliberately absent from this list: architecture Ruling 3 is struck (see the freeze register), and the elimination returns to the legacy pacing. Their compressed renders are superseded, preserved at tag act-2-states."
     }
   },
   "reviewProtocol": {
