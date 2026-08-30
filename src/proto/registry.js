@@ -19,6 +19,16 @@ import theDirectExchange from './gate-2/s2-the-direct-exchange.js';
 import theBreakthrough from './gate-2/s3-the-breakthrough.js';
 import spendOrSave from './gate-2/s4-spend-or-save.js';
 
-export const prototypes = [theDirectExchange, theBreakthrough, spendOrSave];
+// Batch B, Session 1 (docs/batch-b-implementation-brief.md §2): Scenes 5–7
+// as one continuous world — `?proto=act2` — running in place behind the
+// existing deck count until Session 2 splices them into the manifest. These
+// are the real scene modules under `src/scenes/`, listed here only while
+// they wait for the splice.
+import theFunctionStayed from '../scenes/act-2-the-architecture-of-money/05-the-function-stayed.js';
+
+export const prototypes = [
+  theDirectExchange, theBreakthrough, spendOrSave,
+  theFunctionStayed
+];
 
 export default prototypes;
