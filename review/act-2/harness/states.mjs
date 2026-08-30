@@ -694,9 +694,9 @@ cell('s5-b4', {
 // fallen goods' renders — the component only defines that recession for
 // contender mode, because renders never rode the drawn rail before this law.
 cell('s5-b5', {
-  scene: 'S5', beat: 5, frame: 'S5-F2', klass: 'PORT', review: 'pending-review',
+  scene: 'S5', beat: 5, frame: 'S5-F2', klass: 'PORT', review: 'approved-port',
   source: '2-04-the-competition-record build 8 + the rails law (31 Aug 2026) — the goods on the object band',
-  caption: 'Beat 5 · the metals rise — THE RAILS LAW STAGED. Beneath the line, the legacy record is untouched: the drawn line, the station markers, the labels and the four wounds, with METALS active. Above it, the goods now ride as an object band of their dark-field renders — the same four studies the contender row uses, receded to the record’s own prior step where their stations have fallen, SHELLS still at full voice — and METALS is carried by the newly gated metals render on the band’s shared baseline. The question for your eye: does the band read as one system with S10’s strip, and is the drawn grammar beneath exactly as it was?'
+  caption: 'Beat 5 · the metals rise — THE RAILS LAW STAGED. Beneath the line, the legacy record is untouched: the drawn line, the station markers, the labels and the four wounds, with METALS active. Above it, the goods ride as an object band of their dark-field renders — the same four studies the contender row uses, receded to the record’s own prior step where their stations have fallen, SHELLS still at full voice — and METALS is carried by the metals render on the band’s shared baseline. APPROVED 31 August 2026 with the post-§1 record (Batch B brief §1.4): the band reads as one system with the strip, and the drawn grammar beneath is exactly as it was.'
 }, (st) => {
   const r = rail(st, {
     camera: FRAMES.metals,
@@ -994,10 +994,10 @@ function photo(st, { subject, box: [x, y, w, h], alt, o = 1 }) {
 }
 
 cell('s7-b4', {
-  scene: 'S7', beat: 4, frame: 'S7-F2', klass: 'NEW', review: 'pending-review',
+  scene: 'S7', beat: 4, frame: 'S7-F2', klass: 'NEW', review: 'approved-selection',
   system: 'B — the custody boundary crossed · restaged photographically',
   source: 'the presenter’s selection of s7-b4-b’s logic + the r2 brief §3 — the Act I photograph-plus-line pattern',
-  caption: 'Beat 4 · THE DETACHMENT, restaged in the film’s real register at your order: the photographic vault holding the gold, the photographic certificate detached and traveled outward across the boundary, and one thin dependency line back — the Act I photograph-plus-line pattern, not a diagram. The drawn circle and the ticket glyph retired to file with the drawn candidates. The question for your eye is the one the brief sets: does this frame sit at the standard of the Act I finals?'
+  caption: 'Beat 4 · THE DETACHMENT, restaged in the film’s real register at the presenter’s order: the photographic vault holding the gold, the photographic certificate detached and traveled outward across the boundary, and one thin dependency line back — the Act I photograph-plus-line pattern, not a diagram. APPROVED 31 August 2026 with the post-§1 record (Batch B brief §1.4 and §2 — the restaged s7-b4 is the settled state); the drawn circle and the ticket glyph stay retired to file with the drawn candidates.'
 }, (st) => {
   photo(st, { subject: 'vault', box: [340, 208, 500, 625], alt: 'The vault, closed, holding the gold' });
   photo(st, { subject: 'gold_certificate', box: [1230, 187, 340, 425], alt: 'The gold certificate, traveled outward' });

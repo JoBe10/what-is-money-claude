@@ -1,5 +1,5 @@
 {
-  "date": "2026-08-30T11:22:08.247Z",
+  "date": "2026-08-30T21:52:30.720Z",
   "limits": {
     "cornerMean": 6,
     "borderMean": 6
@@ -598,8 +598,8 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 12774,
-      "warmPixelsReported": 2082
+      "pxAbove32": 32010,
+      "warmPixelsReported": 25548
     },
     {
       "id": "s9-b3",
@@ -613,8 +613,8 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 22006,
-      "warmPixelsReported": 2883
+      "pxAbove32": 41242,
+      "warmPixelsReported": 26349
     },
     {
       "id": "s9-b4",
@@ -628,8 +628,8 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 35719,
-      "warmPixelsReported": 5001
+      "pxAbove32": 54955,
+      "warmPixelsReported": 28467
     },
     {
       "id": "s9-b5",
@@ -658,11 +658,41 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
+      "pxAbove32": 118132,
+      "warmPixelsReported": 120705
+    },
+    {
+      "id": "s10-b2",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 134264,
+      "warmPixelsReported": 122824
+    },
+    {
+      "id": "s10-b1-disc",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
       "pxAbove32": 107727,
       "warmPixelsReported": 99945
     },
     {
-      "id": "s10-b2",
+      "id": "s10-b2-disc",
       "pass": true,
       "checks": {
         "corner": true,
@@ -741,9 +771,9 @@
   "failures": 0,
   "results": [
     {
-      "name": "CELLS: 47 measured — corner ≤ 6, border ≤ 6, content present, 1920×1080",
+      "name": "CELLS: 49 measured — corner ≤ 6, border ≤ 6, content present, 1920×1080",
       "ok": true,
-      "detail": "47/47"
+      "detail": "49/49"
     },
     {
       "name": "MAP: the ruled classes transcribed here are the classes docs/act-2-provenance.md states",
@@ -758,7 +788,7 @@
     {
       "name": "MAP: no cell is unclassified",
       "ok": true,
-      "detail": "47/47 carry a class"
+      "detail": "49/49 carry a class"
     },
     {
       "name": "MAP: every PORT and ADAPT cell names its legacy source",
@@ -796,9 +826,9 @@
       "detail": "7 diagram cells clean"
     },
     {
-      "name": "RAILS LAW: the strip carries the object band and the disc at CLAIM, and the station marks are retired",
+      "name": "RAILS LAW + CERTIFICATE: every strip station photographic, CLAIM ON GOLD carries the certificate, the disc only in the retired on-file staging",
       "ok": true,
-      "detail": "photo band present · ClaimObject at CLAIM · no station mark() in the strip"
+      "detail": "certificate photo at the claim station · CLAIM ON GOLD label · no station mark · the disc only in discStation, on file"
     }
   ]
 }

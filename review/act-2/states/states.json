@@ -1,5 +1,5 @@
 {
-  "date": "2026-08-30T21:49:27.202Z",
+  "date": "2026-08-30T21:51:58.584Z",
   "session": "batch-b-impl-1",
   "beatMap": {
     "S5": 8,
@@ -131,10 +131,9 @@
   "claimTravelerNote": "On S10’s strip the disc is the traveler, never a station (the CERTIFICATE ruling) — its arrival is connective motion, not a settled still.",
   "counts": {
     "ruled-re-render": 5,
-    "pending-review": 2,
-    "approved-selection": 2,
+    "approved-selection": 3,
     "approved-adapt": 5,
-    "approved-port": 17,
+    "approved-port": 18,
     "determined": 7,
     "on-file": 11
   },
@@ -190,9 +189,9 @@
       "beat": 5,
       "frame": "S5-F2",
       "klass": "PORT",
-      "review": "pending-review",
+      "review": "approved-port",
       "source": "2-04-the-competition-record build 8 + the rails law (31 Aug 2026) — the goods on the object band",
-      "caption": "Beat 5 · the metals rise — THE RAILS LAW STAGED. Beneath the line, the legacy record is untouched: the drawn line, the station markers, the labels and the four wounds, with METALS active. Above it, the goods now ride as an object band of their dark-field renders — the same four studies the contender row uses, receded to the record’s own prior step where their stations have fallen, SHELLS still at full voice — and METALS is carried by the newly gated metals render on the band’s shared baseline. The question for your eye: does the band read as one system with S10’s strip, and is the drawn grammar beneath exactly as it was?"
+      "caption": "Beat 5 · the metals rise — THE RAILS LAW STAGED. Beneath the line, the legacy record is untouched: the drawn line, the station markers, the labels and the four wounds, with METALS active. Above it, the goods ride as an object band of their dark-field renders — the same four studies the contender row uses, receded to the record’s own prior step where their stations have fallen, SHELLS still at full voice — and METALS is carried by the metals render on the band’s shared baseline. APPROVED 31 August 2026 with the post-§1 record (Batch B brief §1.4): the band reads as one system with the strip, and the drawn grammar beneath is exactly as it was."
     },
     {
       "id": "s5-b6",
@@ -400,10 +399,10 @@
       "beat": 4,
       "frame": "S7-F2",
       "klass": "NEW",
-      "review": "pending-review",
+      "review": "approved-selection",
       "system": "B — the custody boundary crossed · restaged photographically",
       "source": "the presenter’s selection of s7-b4-b’s logic + the r2 brief §3 — the Act I photograph-plus-line pattern",
-      "caption": "Beat 4 · THE DETACHMENT, restaged in the film’s real register at your order: the photographic vault holding the gold, the photographic certificate detached and traveled outward across the boundary, and one thin dependency line back — the Act I photograph-plus-line pattern, not a diagram. The drawn circle and the ticket glyph retired to file with the drawn candidates. The question for your eye is the one the brief sets: does this frame sit at the standard of the Act I finals?"
+      "caption": "Beat 4 · THE DETACHMENT, restaged in the film’s real register at the presenter’s order: the photographic vault holding the gold, the photographic certificate detached and traveled outward across the boundary, and one thin dependency line back — the Act I photograph-plus-line pattern, not a diagram. APPROVED 31 August 2026 with the post-§1 record (Batch B brief §1.4 and §2 — the restaged s7-b4 is the settled state); the drawn circle and the ticket glyph stay retired to file with the drawn candidates."
     },
     {
       "id": "s7-b4-a",
