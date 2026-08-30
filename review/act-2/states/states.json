@@ -1,6 +1,6 @@
 {
-  "date": "2026-08-30T11:19:58.077Z",
-  "session": "act-2-states-r2",
+  "date": "2026-08-30T13:03:30.797Z",
+  "session": "batch-b-impl-1",
   "beatMap": {
     "S5": 8,
     "S6": 9,
@@ -10,16 +10,17 @@
     "S10": 5,
     "total": 37
   },
-  "beatMapAuthority": "docs/batch-b-package.md §1 — frozen 31 August 2026 at the installed scripts’ [→] counts, amended the same day to 37 by the Ruling 3 strike (master §13)",
+  "beatMapAuthority": "docs/batch-b-package.md §1 — frozen 31 August 2026, amended the same day to 37 by the Ruling 3 strike (master §13); ruling 4 of the Batch B brief §1 confirms the freeze at 37",
   "provenanceAuthority": "docs/act-2-provenance.md, ruled 31 August 2026, amended by the strike: 9 PORT · 2 ADAPT · 3 NEW",
   "reviewProtocol": {
-    "pending-review": "the ruled re-renders — the plain-English question each cell asks is on the sheet",
+    "ruled-re-render": "re-rendered exactly as a §1 ruling of the Batch B brief orders (the certificate station; the coin in the entrant block); the approved record by ruling 4 — they meet the presenter’s eye at the act viewing, which ruling 3 makes the gate",
+    "pending-review": "awaiting a formal verdict — empty after ruling 4",
     "restored": "the six restored elimination cells — ports, no formal burden; the test is that the run looks like it always did",
-    "approved-selection": "the selected candidates, landed as beat cells, carried byte-identical",
+    "approved-selection": "the selected candidates, landed as beat cells — s6-b9 and s9-b1 carried byte-identical, s7-b4 the ruled photographic restage approved with the post-§1 record",
     "approved-adapt": "verified 31 August 2026 — the one ruled change landed and nothing else moved",
     "approved-port": "approved by provenance; optional spot-check only",
     "determined": "script landings on approved compositions; no decision",
-    "on-file": "non-selected candidates, kept per the aesthetic law; no burden"
+    "on-file": "non-selected candidates and retired stagings, kept per the aesthetic law; no burden"
   },
   "rulingsR2": {
     "date": "31 August 2026",
@@ -65,23 +66,77 @@
       "note": "s6-b2 and s6-b3 — the funnel compression's two cells — are deliberately absent from this list: architecture Ruling 3 is struck (see the freeze register), and the elimination returns to the legacy pacing. Their compressed renders are superseded, preserved at tag act-2-states."
     }
   },
+  "rulingsImpl1": {
+    "date": "31 August 2026",
+    "recordedBy": "Batch B implementation Session 1 — docs/batch-b-implementation-brief.md §1",
+    "stripStation": {
+      "ruling": "CERTIFICATE",
+      "provenance": "The Session 1 prompt’s ruling placeholder arrived unfilled (\"[CERTIFICATE or DISC]\"); the presenter supplied the letter in-session — CERTIFICATE — and it is recorded here per the brief’s own definition.",
+      "effect": "The strip’s second station carries the gold_certificate render, relabeled CLAIM ON GOLD; all four stations are photographic; the ClaimObject disc is never a station — it is the traveler. s10-b1 and s10-b2 re-rendered; the disc-as-station staging retired to file as s10-b1-disc and s10-b2-disc, byte-identical to the r2 renders. The rails law’s CLAIM-station exception is superseded (AGENTS.md §6, master §6.3 — amended with the trail)."
+    },
+    "glyphRetirement": {
+      "ruling": "the bitcoin glyph retires at display scale in Act II",
+      "effect": "s9-b2’s entrant block carries the bitcoin coin render per the C1 ruling; the same builder serves s9-b3 and s9-b4, so the ruling re-renders all three. Sweep result: the entrant block was the only display-scale glyph stand-in for the asset among the act’s beat cells — the strip already carries the coin render by C1 and the rails law, the network formation and station marks are drawn grammar and stay drawn, and the on-file candidates keep their glyphs per the aesthetic law’s file-keeping clause. Nothing ambiguous was found; the legacy 2-08’s entrant glyph leaves the deck at Session 2’s splice."
+    },
+    "gate3": "Collapsed into the implementation review (presenter process amendment) — recorded in docs/batch-b-package.md §4 and master §13. The presenter’s live viewing of the implemented act is the gate; the claim’s connective journey (S5 entry → carrier → certificate travel → strip arrival) is what he judges.",
+    "approvedSetRule": "The beat maps stand frozen at 37; the states record post-§1 is the approved set for every landed-state proof (ruling 4). The four r2 pending-review verdicts land with it: s7-b4 approved as the restaged selection, s5-b5 approved as the rails-law port, s10-b1/s10-b2 re-staged by ruling 1 and approved as the record."
+  },
+  "approvedSet": [
+    "s5-b1",
+    "s5-b2",
+    "s5-b3",
+    "s5-b4",
+    "s5-b5",
+    "s5-b6",
+    "s5-b7",
+    "s5-b8",
+    "s6-b1",
+    "s6-b2",
+    "s6-b3",
+    "s6-b4",
+    "s6-b5",
+    "s6-b6",
+    "s6-b7",
+    "s6-b8",
+    "s6-b9",
+    "s7-b1",
+    "s7-b2",
+    "s7-b3",
+    "s7-b4",
+    "s7-b5",
+    "s8-b1",
+    "s8-b2",
+    "s8-b3",
+    "s8-b4",
+    "s8-b5",
+    "s9-b1",
+    "s9-b2",
+    "s9-b3",
+    "s9-b4",
+    "s9-b5",
+    "s10-b1",
+    "s10-b2",
+    "s10-b3",
+    "s10-b4",
+    "s10-b5"
+  ],
   "claimThroughLine": [
     "s5-b1",
     "s5-b7",
     "s5-b8",
     "s6-b8",
     "s7-b1",
-    "s7-b2",
-    "s10-b1",
-    "s10-b2"
+    "s7-b2"
   ],
+  "claimTravelerNote": "On S10’s strip the disc is the traveler, never a station (the CERTIFICATE ruling) — its arrival is connective motion, not a settled still.",
   "counts": {
-    "pending-review": 4,
+    "ruled-re-render": 2,
+    "pending-review": 2,
     "approved-selection": 2,
     "approved-adapt": 5,
     "approved-port": 20,
     "determined": 7,
-    "on-file": 9
+    "on-file": 11
   },
   "cells": [
     {
@@ -548,9 +603,9 @@
       "beat": 1,
       "frame": "S10-F1",
       "klass": "PORT",
-      "review": "pending-review",
-      "source": "EvolutionRail’s grammar (icon grammar §4.5) + the rails law (31 Aug 2026) — the goods on the object band",
-      "caption": "Beat 1 · THE STRIP — THE RAILS LAW STAGED. Beneath the line, the rail’s own drawn sentence is unchanged: the 12px marker on the line, the name at +26 in 25px/0.16em, the gain and the dependency where the wound sat, one shared rhythm, no staggered baselines. Above it, the goods ride as the object band: GOLD by its render, LEDGER by ledger_glow, BITCOIN by its render per the C1 ruling — each at the band’s shared height in a box of its own aspect — and the CLAIM station carries the ClaimObject disc itself, the through-line arriving from Scene 7, never a photograph, never an icon. BITCOIN is the live station; the three before it recede to the prior step. The question for your eye: does the band read as one system with S5’s rail, and is the drawn grammar beneath exactly as it was?"
+      "review": "ruled-re-render",
+      "source": "EvolutionRail’s grammar (icon grammar §4.5) + the rails law (31 Aug 2026) + the CERTIFICATE ruling (31 Aug 2026, Batch B brief §1.1)",
+      "caption": "Beat 1 · THE STRIP — THE CERTIFICATE RULING STAGED. Beneath the line, the rail’s own drawn sentence is unchanged: the 12px marker on the line, the name at +26 in 25px/0.16em, the gain and the dependency where the wound sat, one shared rhythm, no staggered baselines. Above it, all four stations are now photographic: GOLD by its render, the claim station by the gold_certificate render relabeled CLAIM ON GOLD, LEDGER by ledger_glow, BITCOIN by its render per the C1 ruling — each at the band’s shared height in a box of its own aspect. The ClaimObject disc is never a station — it is the traveler, and its journey across the strip is motion the implementation builds, judged at the act viewing. BITCOIN is the live station; the three before it recede to the prior step. The disc-as-station staging is retired to file as s10-b1-disc."
     },
     {
       "id": "s10-b2",
@@ -559,9 +614,31 @@
       "beat": 2,
       "frame": "—",
       "klass": "determined",
-      "review": "pending-review",
-      "source": "the architecture’s own line, on the beat-1 composition — re-landed on the upgraded strip",
-      "caption": "Beat 2 · the history line, re-landed on the upgraded strip. The line and its register are unchanged; what you are checking is only that it still sits correctly under the object band the rails law put above the line."
+      "review": "ruled-re-render",
+      "source": "the architecture’s own line, on the beat-1 composition — re-landed on the certificate strip",
+      "caption": "Beat 2 · the history line, re-landed on the certificate strip. The line and its register are unchanged; only the station above it changed, by the CERTIFICATE ruling. The disc-as-station variant is retired to file as s10-b2-disc."
+    },
+    {
+      "id": "s10-b1-disc",
+      "file": "s10-b1-disc.png",
+      "scene": "S10",
+      "beat": 1,
+      "frame": "S10-F1",
+      "klass": "PORT",
+      "review": "on-file",
+      "source": "the r2 rails-law staging — the disc at CLAIM, retired by the CERTIFICATE ruling (31 Aug 2026)",
+      "caption": "The disc-as-station strip, RETIRED TO FILE by the CERTIFICATE ruling of 31 August 2026 (Batch B brief §1.1); kept per the aesthetic law so the selection can be changed by changing one word. The render is the r2 staging, carried byte-identical."
+    },
+    {
+      "id": "s10-b2-disc",
+      "file": "s10-b2-disc.png",
+      "scene": "S10",
+      "beat": 2,
+      "frame": "—",
+      "klass": "determined",
+      "review": "on-file",
+      "source": "the r2 rails-law staging — the history line on the disc strip, retired by the CERTIFICATE ruling (31 Aug 2026)",
+      "caption": "The history line on the disc-as-station strip, RETIRED TO FILE by the CERTIFICATE ruling of 31 August 2026; kept per the aesthetic law. The render is the r2 staging, carried byte-identical."
     },
     {
       "id": "s10-b3",

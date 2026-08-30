@@ -381,8 +381,17 @@ monetary-good stations everywhere. On every rail, strip, or timeline of
 monetary goods, the goods are carried by their **dark-field renders as an
 object band above the line at lineup scale**, while the drawn line, station
 marks, labels, wounds and gain/dependency text beneath keep the film's line
-grammar unchanged. **The CLAIM station is the exception: it carries the
-ClaimObject disc itself — never a photograph, never an icon.**
+grammar unchanged. **Every station is photographic; the ClaimObject disc is
+never a station — it is the traveler.**
+
+> **The station clause was amended by the presenter on 31 August 2026** (the
+> CERTIFICATE ruling — Batch B implementation brief §1.1). As adopted, the law
+> made the CLAIM station an exception carrying the ClaimObject disc itself.
+> The ruling supersedes that exception: on Scene 10's strip the claim station
+> carries the **`gold_certificate` render, relabeled CLAIM ON GOLD**, all four
+> stations are photographic, and the disc's role on any rail is the traveler —
+> the through-line moving along it — never a station. The disc-as-station
+> staging is retired to file (`s10-b1-disc` · `s10-b2-disc`).
 
 - The band sits **above** the line, never on it: no render stands on a drawn
   line, which is the form of the register boundary (master §6.3) this law

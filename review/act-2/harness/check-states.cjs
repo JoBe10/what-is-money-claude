@@ -261,15 +261,30 @@ function check(name, ok, detail) {
     check('REGISTER: no line-grammar diagram cell puts a dark-field render inside a diagram',
       offenders.length === 0, offenders.join(', ') || `${diagramCells.length} diagram cells clean`);
 
-    // The rails law, at the source: the strip carries the object band (photo
-    // boxes for the goods) and the ClaimObject disc at the CLAIM station —
-    // and no 40px station mark survives in the strip builder.
-    const stripStart = src.indexOf('function strip(');
-    const stripEnd = src.indexOf('\n}', stripStart);
-    const stripBody = src.slice(stripStart, stripEnd);
-    check('RAILS LAW: the strip carries the object band and the disc at CLAIM, and the station marks are retired',
-      /photo\(/.test(stripBody) && /ClaimObject\(/.test(stripBody) && !/mark\(st, s\.key/.test(stripBody),
-      'photo band present · ClaimObject at CLAIM · no station mark() in the strip');
+    // The rails law, as amended by the CERTIFICATE ruling (presenter, 31 Aug
+    // 2026 — Batch B implementation brief §1.1), at the source: every station
+    // of the strip is a photo box, the claim station carries the
+    // gold_certificate render relabeled CLAIM ON GOLD, no station mark
+    // survives, and the ClaimObject disc appears only in the retired on-file
+    // staging (discStation, reached only through stripDisc). This gate was
+    // brought current with the ruling, not widened — the prior form asserted
+    // the disc at CLAIM, which the ruling superseded.
+    const grab = (name) => {
+      const i = src.indexOf(`function ${name}(`);
+      const j = src.indexOf('\n}', i);
+      return src.slice(i, j > -1 ? j : src.length);
+    };
+    const stations = grab('stripStations');
+    const certificate = grab('certificateStation');
+    const disc = grab('discStation');
+    const stripBody = grab('strip');
+    check('RAILS LAW + CERTIFICATE: every strip station photographic, CLAIM ON GOLD carries the certificate, the disc only in the retired on-file staging',
+      /photo\(/.test(certificate) && /BAND_GOODS\.paper/.test(certificate) &&
+      src.includes("paper: { subject: 'gold_certificate'") &&
+      /certificateStation/.test(stripBody) && /CLAIM ON GOLD/.test(stripBody) &&
+      !/mark\(st, s\.key/.test(stations) && !/ClaimObject\(/.test(stations) &&
+      /ClaimObject\(/.test(disc) && !/ClaimObject\(/.test(certificate),
+      'certificate photo at the claim station · CLAIM ON GOLD label · no station mark · the disc only in discStation, on file');
   }
 
   fs.writeFileSync(path.join(__dirname, 'check-states.json'), JSON.stringify({

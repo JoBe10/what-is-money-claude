@@ -264,7 +264,7 @@ The rule that settled the register war at R7.4, and it is the operative test:
 
 Every display-scale appearance of a monetary object is a dark-field render. Grammar glyphs remain at genuine diagram scale — table headers, strips, small structural marks. **Dark-field never enters a diagram; glyphs never carry a sensory beat at display scale.** Register switches are designed moments, not conveniences.
 
-> **Amended for rails of monetary goods — the rails law** (presenter-ordered, 31 August 2026; recorded in `AGENTS.md` §6): on a rail, strip, or timeline of monetary goods, the goods ride above the drawn line as an **object band of dark-field renders at lineup scale**, while the line and its grammar stay beneath; **the CLAIM station carries the ClaimObject disc itself**. No render stands on the drawn line — that form of the boundary is preserved.
+> **Amended for rails of monetary goods — the rails law** (presenter-ordered, 31 August 2026; recorded in `AGENTS.md` §6): on a rail, strip, or timeline of monetary goods, the goods ride above the drawn line as an **object band of dark-field renders at lineup scale**, while the line and its grammar stay beneath; **every station is photographic — the ClaimObject disc is never a station; it is the traveler** (the CERTIFICATE ruling of 31 August 2026, Batch B brief §1.1, superseding the CLAIM-station exception the law carried at its adoption: the strip's claim station is the `gold_certificate` render, relabeled CLAIM ON GOLD). No render stands on the drawn line — that form of the boundary is preserved.
 
 ---
 

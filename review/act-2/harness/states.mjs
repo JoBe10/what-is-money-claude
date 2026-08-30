@@ -41,9 +41,10 @@
 //
 // THE CLAIM THROUGH-LINE. The claim enters at S5 b1 wearing construction C's
 // carrier and is on stage at every beat where the argument is about the body it
-// wears: S5 b1 · S5 b7 · S6 b8 · S7 b1 · S7 b2, and again in S10's strip as the
-// CLAIM station — where, under the rails law, it is the ClaimObject disc
-// itself. That is the connective object Gate 3 will animate.
+// wears: S5 b1 · S5 b7 · S6 b8 · S7 b1 · S7 b2. On S10's strip the disc is
+// NEVER a station — it is the traveler (the CERTIFICATE ruling, 31 Aug 2026,
+// Batch B brief §1.1); its journey across the strip is connective motion the
+// implementation animates, and no settled still carries it.
 //
 // Composition law in full (master §5): one idea per frame, negative space as a
 // material, nothing touching the frame edges, the brightness floors, the
@@ -526,22 +527,57 @@ function entrantBlock(st, { capabilities = false, limitation = false } = {}) {
 // BITCOIN by their carrier renders (bitcoin per the C1 ruling), LEDGER by
 // `ledger_glow` (its Scene 8 assignment) — each in a box of its own aspect
 // (the framing rule) at the band's shared height, bottom-aligned on one
-// baseline above the line. THE CLAIM STATION IS THE LAW'S NAMED EXCEPTION: it
-// carries the ClaimObject disc itself, at the film's held 116, centred on the
-// band's middle — never a photograph, never an icon. The band's scale is the
-// contender band's own (188 world px at the metals camera's 1.3 = 244 stage px,
-// clearing the line by the rail's own 68), so the two rails read as one
-// system. Receded stations recede to the dimmed-prior step (§9.4 rule 10);
-// nothing beneath the line changed.
+// baseline above the line. The band's scale is the contender band's own
+// (188 world px at the metals camera's 1.3 = 244 stage px, clearing the line
+// by the rail's own 68), so the two rails read as one system. Receded
+// stations recede to the dimmed-prior step (§9.4 rule 10); nothing beneath
+// the line changed.
+//
+// THE CLAIM STATION IS THE CERTIFICATE (presenter-ruled, 31 August 2026 —
+// Batch B implementation brief §1.1, superseding the CLAIM-station exception
+// the rails law carried at its adoption): the station carries the
+// `gold_certificate` render, relabeled CLAIM ON GOLD, so all four stations
+// are photographic; the ClaimObject disc is never a station — it is the
+// traveler, and its journey across the strip is the implementation's motion,
+// not a settled still. The disc-as-station staging retires to file below
+// (`stripDisc` → the `s10-b1-disc` / `s10-b2-disc` cells), so the selection
+// can still be changed by changing one word.
 const BAND_H = 244;          // 188 world × 1.3 — the contender band's stage height
 const BAND_GAP = 68;         // 52 world × 1.3 — the rail's render-baseline clearance
 const BAND_GOODS = {
   gold: { subject: 'gold', aspect: 4 / 3, alt: 'A cast gold bar' },
+  paper: { subject: 'gold_certificate', aspect: 4 / 5, alt: 'The gold certificate — a claim on gold' },
   ledger: { subject: 'ledger_glow', aspect: 3 / 2, alt: 'A glowing ledger entry' },
   bitcoin: { subject: 'bitcoin', aspect: 4 / 3, alt: 'The bitcoin carrier' }
 };
 
-function strip(st, { live = 3 } = {}) {
+// The ruled claim station: the certificate render, photographic like every
+// other station, in the register's own 4:5 at the band's shared height.
+function certificateStation(st, x, bottom, voice) {
+  const g = BAND_GOODS.paper;
+  const w = Math.round(BAND_H * g.aspect);
+  photo(st, {
+    subject: g.subject, alt: g.alt, o: voice,
+    box: [x - w / 2, bottom - BAND_H, w, BAND_H]
+  });
+}
+
+// RETIRED TO FILE (the CERTIFICATE ruling, 31 August 2026): the disc as a
+// station — the r2 staging, kept runnable per the aesthetic law's
+// file-keeping clause. Only the on-file `s10-b1-disc` / `s10-b2-disc` cells
+// build with it.
+function discStation(st, x, bottom, voice) {
+  const wrap = document.createElement('div');
+  wrap.style.cssText = `position:absolute; left:${x - 58}px; top:${bottom - BAND_H / 2 - 58}px;` +
+    `width:116px; height:116px; opacity:${voice};`;
+  const claim = ClaimObject();
+  claim.el.style.transition = 'none';
+  claim.applyState({ visible: true });
+  wrap.appendChild(claim.el);
+  st.el.appendChild(wrap);
+}
+
+function stripStations(st, { live = 3, claimStation, claimLabel }) {
   const Y = 470;
   // WIRING: four stations on the stage, at the rail's own 340px stop width.
   const XS = [345, 750, 1155, 1560];
@@ -552,17 +588,7 @@ function strip(st, { live = 3 } = {}) {
     const a = on ? 1 : 0.55;
     const voice = on ? 1 : 0.58;
     if (s.key === 'paper') {
-      // The CLAIM station: the disc itself, the through-line arriving from
-      // Scene 7. The reveal transition is disabled so the still is the
-      // settled state, exactly as the photo boxes do it.
-      const wrap = document.createElement('div');
-      wrap.style.cssText = `position:absolute; left:${XS[i] - 58}px; top:${BOTTOM - BAND_H / 2 - 58}px;` +
-        `width:116px; height:116px; opacity:${voice};`;
-      const claim = ClaimObject();
-      claim.el.style.transition = 'none';
-      claim.applyState({ visible: true });
-      wrap.appendChild(claim.el);
-      st.el.appendChild(wrap);
+      claimStation(st, XS[i], BOTTOM, voice);
     } else {
       const g = BAND_GOODS[s.key];
       const w = Math.round(BAND_H * g.aspect);
@@ -572,7 +598,8 @@ function strip(st, { live = 3 } = {}) {
       });
     }
     dot(st.svg, XS[i], Y, 6, on ? 0.85 : 0.5);
-    text(st, s.name, `left:${XS[i] - 170}px; top:${Y + 26}px; width:340px; text-align:center; text-indent:0;` +
+    text(st, s.key === 'paper' ? claimLabel : s.name,
+      `left:${XS[i] - 170}px; top:${Y + 26}px; width:340px; text-align:center; text-indent:0;` +
       RAIL_LABEL(on ? 1 : 0.58));
     // The gain takes the stop's own 340px width and the dependency the wound
     // row's 218px measure — both the rail's own numbers. The gain block is
@@ -585,6 +612,16 @@ function strip(st, { live = 3 } = {}) {
     text(st, s.dep, `left:${XS[i] - 109}px; top:${Y + 146}px; width:218px; text-align:center; text-indent:0;` +
       RAIL_ROW(0.58 * a));
   });
+}
+
+// The strip as ruled: the certificate at the claim station, relabeled.
+function strip(st, { live = 3 } = {}) {
+  stripStations(st, { live, claimStation: certificateStation, claimLabel: 'CLAIM ON GOLD' });
+}
+
+// The retired r2 staging, on file only.
+function stripDisc(st, { live = 3 } = {}) {
+  stripStations(st, { live, claimStation: discStation, claimLabel: STATIONS[1].name });
 }
 
 // =========================================================== SCENE 5 (8 beats)
@@ -1154,19 +1191,39 @@ cell('s9-b5', {
 // ========================================================== SCENE 10 (5 beats)
 
 cell('s10-b1', {
-  scene: 'S10', beat: 1, frame: 'S10-F1', klass: 'PORT', review: 'pending-review',
-  source: 'EvolutionRail’s grammar (icon grammar §4.5) + the rails law (31 Aug 2026) — the goods on the object band',
-  caption: 'Beat 1 · THE STRIP — THE RAILS LAW STAGED. Beneath the line, the rail’s own drawn sentence is unchanged: the 12px marker on the line, the name at +26 in 25px/0.16em, the gain and the dependency where the wound sat, one shared rhythm, no staggered baselines. Above it, the goods ride as the object band: GOLD by its render, LEDGER by ledger_glow, BITCOIN by its render per the C1 ruling — each at the band’s shared height in a box of its own aspect — and the CLAIM station carries the ClaimObject disc itself, the through-line arriving from Scene 7, never a photograph, never an icon. BITCOIN is the live station; the three before it recede to the prior step. The question for your eye: does the band read as one system with S5’s rail, and is the drawn grammar beneath exactly as it was?'
+  scene: 'S10', beat: 1, frame: 'S10-F1', klass: 'PORT', review: 'ruled-re-render',
+  source: 'EvolutionRail’s grammar (icon grammar §4.5) + the rails law (31 Aug 2026) + the CERTIFICATE ruling (31 Aug 2026, Batch B brief §1.1)',
+  caption: 'Beat 1 · THE STRIP — THE CERTIFICATE RULING STAGED. Beneath the line, the rail’s own drawn sentence is unchanged: the 12px marker on the line, the name at +26 in 25px/0.16em, the gain and the dependency where the wound sat, one shared rhythm, no staggered baselines. Above it, all four stations are now photographic: GOLD by its render, the claim station by the gold_certificate render relabeled CLAIM ON GOLD, LEDGER by ledger_glow, BITCOIN by its render per the C1 ruling — each at the band’s shared height in a box of its own aspect. The ClaimObject disc is never a station — it is the traveler, and its journey across the strip is motion the implementation builds, judged at the act viewing. BITCOIN is the live station; the three before it recede to the prior step. The disc-as-station staging is retired to file as s10-b1-disc.'
 }, (st) => {
   strip(st);
 });
 
 cell('s10-b2', {
-  scene: 'S10', beat: 2, frame: '—', klass: 'determined', review: 'pending-review',
-  source: 'the architecture’s own line, on the beat-1 composition — re-landed on the upgraded strip',
-  caption: 'Beat 2 · the history line, re-landed on the upgraded strip. The line and its register are unchanged; what you are checking is only that it still sits correctly under the object band the rails law put above the line.'
+  scene: 'S10', beat: 2, frame: '—', klass: 'determined', review: 'ruled-re-render',
+  source: 'the architecture’s own line, on the beat-1 composition — re-landed on the certificate strip',
+  caption: 'Beat 2 · the history line, re-landed on the certificate strip. The line and its register are unchanged; only the station above it changed, by the CERTIFICATE ruling. The disc-as-station variant is retired to file as s10-b2-disc.'
 }, (st) => {
   strip(st);
+  statement(st, 'The history of money is a history of changing trade-offs.', { top: 866, size: 44 });
+});
+
+// The retired disc-as-station staging, kept on file per the aesthetic law:
+// the r2 renders are carried byte-identical to these ids, and the builders
+// below can re-render them if the selection is ever changed back.
+cell('s10-b1-disc', {
+  scene: 'S10', beat: 1, frame: 'S10-F1', klass: 'PORT', review: 'on-file',
+  source: 'the r2 rails-law staging — the disc at CLAIM, retired by the CERTIFICATE ruling (31 Aug 2026)',
+  caption: 'The disc-as-station strip, RETIRED TO FILE by the CERTIFICATE ruling of 31 August 2026 (Batch B brief §1.1); kept per the aesthetic law so the selection can be changed by changing one word. The render is the r2 staging, carried byte-identical.'
+}, (st) => {
+  stripDisc(st);
+});
+
+cell('s10-b2-disc', {
+  scene: 'S10', beat: 2, frame: '—', klass: 'determined', review: 'on-file',
+  source: 'the r2 rails-law staging — the history line on the disc strip, retired by the CERTIFICATE ruling (31 Aug 2026)',
+  caption: 'The history line on the disc-as-station strip, RETIRED TO FILE by the CERTIFICATE ruling of 31 August 2026; kept per the aesthetic law. The render is the r2 staging, carried byte-identical.'
+}, (st) => {
+  stripDisc(st);
   statement(st, 'The history of money is a history of changing trade-offs.', { top: 866, size: 44 });
 });
 
