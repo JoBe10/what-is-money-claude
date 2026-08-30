@@ -12,7 +12,7 @@
 
 > **A frame is classified by its treatment — not by its subject and not by its words.** Putting a different render or a different sentence through a proven treatment does not make the frame new. Changing *how the frame is made* does. Where the architecture ruled a change to the treatment itself, that ruling is the frame's ADAPT ruling.
 
-The consequence is deliberate: Scene 7's vault study is a PORT even though no vault has ever been on screen, because the display-scale study treatment is approved and shipped, and a subject is not a treatment. Narrowing the convention would move S6-F1, S7-F1, S8-F1 and S9-F2 to NEW together.
+**RULED 31 August 2026 — the answer was *treatment*.** The convention stands exactly as proposed; it was confirmed rather than narrowed. That single answer settles four rows: **S6-F1, S7-F1, S8-F1 and S9-F2 are PORT.** Scene 7's vault study is therefore a PORT of an approved study box even though no vault has ever been on screen, because a subject is not a treatment — and any later session tempted to read an unfamiliar picture as a new frame is answered here rather than row by row.
 
 ---
 
