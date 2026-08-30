@@ -26,10 +26,11 @@ import spendOrSave from './gate-2/s4-spend-or-save.js';
 // they wait for the splice.
 import theFunctionStayed from '../scenes/act-2-the-architecture-of-money/05-the-function-stayed.js';
 import scarcityInMatter from '../scenes/act-2-the-architecture-of-money/06-gold-scarcity-in-matter.js';
+import claimsOnGold from '../scenes/act-2-the-architecture-of-money/07-claims-on-gold.js';
 
 export const prototypes = [
   theDirectExchange, theBreakthrough, spendOrSave,
-  theFunctionStayed, scarcityInMatter
+  theFunctionStayed, scarcityInMatter, claimsOnGold
 ];
 
 export default prototypes;
