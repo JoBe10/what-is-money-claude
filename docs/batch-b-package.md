@@ -1,7 +1,7 @@
 # Batch B Package — Act II: The Architecture of Money (Scenes 5–10)
 ## Complete: the scripts are installed, the maps are frozen, the provenance is ruled
 
-**Status — 31 August 2026.** This package follows `docs/batch-a-package.md`'s template. **The scripts are installed and the beat maps are frozen at 33 beats** (§1, §2). The contracts each script had to satisfy are kept at the end of §2 as the record. **The provenance of every §3 frame is ruled** in `docs/act-2-provenance.md`, which governs: a frame is PORT, ADAPT or NEW before anyone touches it, and §3's ◆ marks are now historical — the map decides where candidates apply, and it applies them to **S6-F3, S7-F2 and S9-F1 only**.
+**Status — 31 August 2026.** This package follows `docs/batch-a-package.md`'s template. **The scripts are installed and the beat maps are frozen** (§1, §2) — installed at 33 beats, **amended the same day to 37 by the Ruling 3 strike** (master §13): Scene 6 re-splits to the legacy advance structure, one wave of eliminations per advance. The contracts each script had to satisfy are kept at the end of §2 as the record. **The provenance of every §3 frame is ruled** in `docs/act-2-provenance.md`, which governs: a frame is PORT, ADAPT or NEW before anyone touches it, and §3's ◆ marks are now historical — the map decides where candidates apply, and it applies them to **S6-F3, S7-F2 and S9-F1 only**.
 
 **Pipeline for this batch (in order):** ~~essay sections~~ → ~~scripts installed + maps frozen~~ → ~~**full-coverage beat-state sheet**~~ (`review/act-2/states/`, 31 August) → **Prototype Gate 3** (the architecture morph, live-judged) → Batch B implementation (Opus, FAST) → exit test.
 
@@ -11,10 +11,10 @@
 
 # 1. Beat maps (builds = script `[→]` counts, binding)
 
-**FROZEN 31 August 2026**, on the presenter's approval of the §2 scripts. The maps were provisional until the scripts landed, exactly as this package's header said they would be; they are now binding, and the beat count is the script's own `[→]` count. **Act II is 33 beats.** The presenter's essay voice pass remains the final authority over every word, and a word pass that changes an advance count amends these maps with it.
+**FROZEN 31 August 2026**, on the presenter's approval of the §2 scripts. The maps were provisional until the scripts landed, exactly as this package's header said they would be; they are now binding, and the beat count is the script's own `[→]` count. **Act II is 37 beats** — 33 at the install, amended the same day by the **Ruling 3 strike** (master §13): Scene 6 re-splits from 5 to 9, the elimination returning to the legacy pacing. The presenter's essay voice pass remains the final authority over every word, and a word pass that changes an advance count amends these maps with it.
 
 **S5 — The Function Stayed. The Carrier Changed.** (8): the claim needs a body, and wears its first — shells → CATTLE falls, one wound → SALT falls → IRON falls → the same experiment, and the metals rise out of the wreckage → the Zanzibar receipt → "The function stayed. The carrier changed." → "Why did the carrier keep changing?"
-**S6 — Gold: Scarcity in Matter** (5): gold, and scarcity in matter → the funnel, every element eliminated in one continuous beat → the furnace decides; two survivors, and the 1803 foreshadow → hard to create, hard to destroy → but not hard to move: as represented value grows, required mass grows.
+**S6 — Gold: Scarcity in Matter** (9): gold, and scarcity in matter → the table rises over the record → the gases are out → what rusts, burns, or dissolves is out → the radioactive row is out → what will not hold a shape is out → the furnace decides: two survivors, and the 1803 foreshadow → hard to create, hard to destroy → but not hard to move: as represented value grows, required mass grows.
 **S7 — Claims on Gold: Portability Through Trust** (5): gold's own weaknesses → coinage solves verification and division → the vault, and the receipt that circulates instead → "The gold stayed. The claim moved." → portability improved, trust moved to the issuer.
 **S8 — Fiat: Money Becomes Information** (5): the receipt followed all the way — money became information, with its strengths given full weight → 1971, the window closed → captured, not beaten → the four-currency record → both facts on one screen.
 **S9 — Bitcoin: Can Scarcity Become Digital?** (5): 2009, and the ledger's centre steps away as the network forms → the facts, in the neutral register → the three capabilities → the honest line, in the same breath → the two-question distinction (Ruling 5's distributed content).
@@ -44,11 +44,21 @@
 
 ## S6 — Gold: Scarcity in Matter
 
+*[Re-split 31 August 2026 on the Ruling 3 strike (master §13). The elimination waves are `2-05-two-survivors`' notes **verbatim, one wave per advance**; the beats before and after keep their approved installed text; the table-rise advance keeps the installed approved sentence pair — the legacy intro's own words minus the retired "salability" label (master §3.4) and its dead zoom-out transition. The compressed install of the same day is superseded; `review/act-2/harness/script-r2-diff.cjs` proves the split mechanically.]*
+
 [→] Gold. Before it was jewelry, before it was treasure, it was the answer to a question: what, in the physical world, is genuinely hard to make more of? Scarcity — in matter itself.
 
-[→] Here's my favorite way to see how narrow that answer is. Forget history for a moment, and run the competition across every element that exists. The gases are out — your money should not float away. Everything that rusts, burns, or dissolves in water — out; that removes most of the table, including iron, and it's why the rainstorm mattered. The radioactive row — out, for reasons I hope are obvious. And strip away what will not hold a shape — the metal that pours, the ones no fire of the age could work at all. What's left is a small family: the noble metals, the ones that simply refuse to corrode.
+[→] Here's my favorite way to see how narrow that answer is. Forget history for a moment, and run the competition across every element that exists.
 
-[→] And now the furnace decides. The platinum group melts at temperatures no ancient furnace could reach, and hides in ores no ancient chemist could crack — which is why the world would not even meet one of its members until 1803. Remember that date; it has a part to play later. Chemistry and the forge leave two survivors: silver, and gold. Every civilization that could refine metals converged on the same two, without consulting each other. And between them, the scarcer one — the one that doesn't tarnish at all — took the throne.
+[→] The gases are out — your money should not float away.
+
+[→] Everything that rusts, burns, or dissolves in water — out. That removes most of the table, including iron, and it’s why the rainstorm mattered.
+
+[→] The radioactive row — out, for reasons I hope are obvious.
+
+[→] And strip away what will not hold a shape — the metal that pours, the ones no fire of the age could work at all. What’s left is a small family: the noble metals, the ones that simply refuse to corrode.
+
+[→] And now the furnace decides. The platinum group melts at temperatures no ancient furnace could reach, and hides in ores no ancient chemist could crack — which is why the world would not even meet one of them until 1803. Remember that; it has a part to play later. So: not culture, not politics — chemistry and the forge leave you two survivors: silver, and gold. Every civilization that could refine metals converged on the same two, without consulting each other. That is what convergence on properties looks like at planetary scale. And between the two, the scarcer one, the one that doesn’t tarnish at all, took the throne: gold won everything.
 
 [→] So the claim had found its strongest body yet: hard to create, hard to destroy.
 
@@ -108,7 +118,7 @@ Kept because a satisfied contract is the evidence that the script is complete, a
 
 **S5 must contain:** the claim as continuity while carriers change; one wound per fallen carrier, one line each, drawn from the legacy competition verdicts (adapt, don't invent new wounds); the **Zanzibar receipt** — 1800s, shiploads of cheaper imported cowries collapse the shell rate, savings out-supplied, "the oldest version of a very modern problem" (evidence rule: dated fact about the money itself); the paired closing lines; the exit question. *Tone: a competition with casualties, told with momentum.*
 
-**S6 must contain:** scarcity in matter as gold's crown; the compressed periodic elimination (gases escape, reactives corrode, radioactives are lethal; the forge leaves two; scarcity leaves one) as one continuous told sequence; the honesty: gold's weakness is mass — as value grows, weight grows. *No new term; "salability" concept allowed, label excluded.*
+**S6 must contain:** scarcity in matter as gold's crown; the compressed periodic elimination (gases escape, reactives corrode, radioactives are lethal; the forge leaves two; scarcity leaves one) as one continuous told sequence; the honesty: gold's weakness is mass — as value grows, weight grows. *No new term; "salability" concept allowed, label excluded.* *(The compression clause is superseded: Ruling 3 was struck 31 August 2026 — the elimination is told at the legacy pacing, one wave per advance, the waves verbatim from `2-05`. Everything else in this contract stands.)*
 
 **S7 must contain:** the motivation for paper (fortunes mean weight, guards, roads; the vault receipt circulates instead); **enlargement rung 2, protected phrasing:** a banknote is *"a claim on gold in a vault"* — plain historical usage, no generalization, nothing anticipating Scene 16; the trade named honestly: portability improved, **trust moved to the issuer**; the paired lines verbatim as architecture gives them.
 
