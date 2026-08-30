@@ -1,5 +1,5 @@
 {
-  "date": "2026-08-29T07:56:19.781Z",
+  "date": "2026-08-30T06:11:48.348Z",
   "limits": {
     "cornerMean": 6,
     "borderMean": 6
@@ -62,6 +62,34 @@
       "pxAbove32": 13505
     },
     {
+      "id": "p1-b3-ball",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 76663
+    },
+    {
+      "id": "p1-b3-token",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 245.3,
+      "pxAbove32": 31392
+    },
+    {
       "id": "p1-b4",
       "pass": true,
       "checks": {
@@ -116,6 +144,20 @@
       "borderMean": 0,
       "maxLum": 253.3,
       "pxAbove32": 87566
+    },
+    {
+      "id": "p1-b7-glow",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 253.6,
+      "pxAbove32": 177631
     },
     {
       "id": "p1-b8-a",

@@ -1,5 +1,5 @@
 {
-  "date": "2026-08-30T03:53:40.427Z",
+  "date": "2026-08-30T05:54:49.530Z",
   "checks": 13,
   "failures": 0,
   "results": [
@@ -59,7 +59,7 @@
       "detail": "every raster goes through src/dark-field.js"
     },
     {
-      "name": "REGISTER: no accent, no Claim Mark and no disc anywhere in the Prologue",
+      "name": "REGISTER: no accent color anywhere in the Prologue",
       "ok": true,
       "detail": "3 files clean"
     },

@@ -1,8 +1,8 @@
 {
-  "date": "2026-08-30T04:07:44.057Z",
+  "date": "2026-08-30T06:11:37.635Z",
   "session": "batch-a",
   "settled": 33,
-  "gestures": 8,
+  "gestures": 10,
   "captured": [
     "p1-b0.png",
     "p1-b1.png",
@@ -38,7 +38,9 @@
     "s4-b3.png",
     "s4-b4.png",
     "g-p1-fill.png",
-    "g-p1-condense.png",
+    "g-p1-condense-1.png",
+    "g-p1-condense-2.png",
+    "g-p1-condense-3.png",
     "g-p1-morph.png",
     "g-s2-entry.png",
     "g-s2-strain.png",
