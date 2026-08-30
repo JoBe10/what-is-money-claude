@@ -1,17 +1,26 @@
 {
-  "date": "2026-08-30T07:29:43.094Z",
-  "session": "act-2-states",
+  "date": "2026-08-30T11:13:33.685Z",
+  "session": "act-2-states-r2",
   "beatMap": {
     "S5": 8,
-    "S6": 5,
+    "S6": 9,
     "S7": 5,
     "S8": 5,
     "S9": 5,
     "S10": 5,
-    "total": 33
+    "total": 37
   },
-  "beatMapAuthority": "docs/batch-b-package.md §1, frozen 31 August 2026 on the installed scripts’ [→] counts",
-  "provenanceAuthority": "docs/act-2-provenance.md, ruled 31 August 2026",
+  "beatMapAuthority": "docs/batch-b-package.md §1 — frozen 31 August 2026 at the installed scripts’ [→] counts, amended the same day to 37 by the Ruling 3 strike (master §13)",
+  "provenanceAuthority": "docs/act-2-provenance.md, ruled 31 August 2026, amended by the strike: 9 PORT · 2 ADAPT · 3 NEW",
+  "reviewProtocol": {
+    "pending-review": "the ruled re-renders — the plain-English question each cell asks is on the sheet",
+    "restored": "the six restored elimination cells — ports, no formal burden; the test is that the run looks like it always did",
+    "approved-selection": "the selected candidates, landed as beat cells, carried byte-identical",
+    "approved-adapt": "verified 31 August 2026 — the one ruled change landed and nothing else moved",
+    "approved-port": "approved by provenance; optional spot-check only",
+    "determined": "script landings on approved compositions; no decision",
+    "on-file": "non-selected candidates, kept per the aesthetic law; no burden"
+  },
   "rulingsR2": {
     "date": "31 August 2026",
     "recordedBy": "the act-2-states-r2 session, docs/act-2-states-r2-brief.md §1",
@@ -19,49 +28,60 @@
       "S6-F3": {
         "selected": "s6-b5-a",
         "system": "A — the counted load",
-        "nonSelected": ["s6-b5-b", "s6-b5-c"],
+        "nonSelected": [
+          "s6-b5-b",
+          "s6-b5-c"
+        ],
         "disposition": "The counted load is the mass state. The non-selected candidates stay on file, so the selection can be changed by changing one letter."
       },
       "S7-F2": {
         "selected": "s7-b4-b (the logic)",
         "system": "B — the custody boundary crossed",
-        "nonSelected": ["s7-b4-a", "s7-b4-c"],
+        "nonSelected": [
+          "s7-b4-a",
+          "s7-b4-c"
+        ],
         "disposition": "The custody-boundary logic is selected, with the restage the r2 brief §3 orders: the frame is rebuilt in the film's real register — the photographic vault render, the photographic gold_certificate render traveled outward, a thin dependency line back — the Act I photograph-plus-line pattern. The drawn circle and the ticket glyph retire to file with the three drawn candidates."
       },
       "S9-F1": {
         "selected": "s9-b1-a",
         "system": "A — the hub dissolving",
-        "nonSelected": ["s9-b1-b", "s9-b1-c"],
+        "nonSelected": [
+          "s9-b1-b",
+          "s9-b1-c"
+        ],
         "disposition": "The hub dissolving is the network formation. The non-selected candidates stay on file."
       }
     },
     "adaptationsVerified": {
-      "cells": ["s5-b6", "s8-b2", "s10-b3", "s10-b4", "s5f3-proof-1803"],
+      "cells": [
+        "s5-b6",
+        "s8-b2",
+        "s10-b3",
+        "s10-b4",
+        "s5f3-proof-1803"
+      ],
       "verdict": "Approved, 31 August 2026. The presenter verified that each adaptation's one ruled change landed and nothing else moved. On s10-b3 the placement is confirmed: the beat stands against the strip, out of Act III's judging position, with nothing inside the frame moved. The evidence-grammar 1803 proof is approved with the two beat specimens, so the generalization is demonstrated on all three.",
       "note": "s6-b2 and s6-b3 — the funnel compression's two cells — are deliberately absent from this list: architecture Ruling 3 is struck (see the freeze register), and the elimination returns to the legacy pacing. Their compressed renders are superseded, preserved at tag act-2-states."
     }
-  },
-  "reviewProtocol": {
-    "pending-selection": "one selection per NEW frame, at full size",
-    "pending-review": "verify the one ruled change landed and nothing else moved",
-    "approved-port": "approved by provenance; optional spot-check only",
-    "determined": "script landings on approved compositions; no decision"
   },
   "claimThroughLine": [
     "s5-b1",
     "s5-b7",
     "s5-b8",
-    "s6-b4",
+    "s6-b8",
     "s7-b1",
     "s7-b2",
     "s10-b1",
     "s10-b2"
   ],
   "counts": {
-    "pending-selection": 9,
-    "pending-review": 7,
-    "approved-port": 16,
-    "determined": 8
+    "pending-review": 5,
+    "approved-selection": 1,
+    "approved-adapt": 0,
+    "approved-port": 22,
+    "determined": 8,
+    "on-file": 3
   },
   "cells": [
     {
@@ -169,10 +189,10 @@
       "scene": "S6",
       "beat": 2,
       "frame": "S6-F2",
-      "klass": "ADAPT",
-      "review": "pending-review",
-      "source": "2-05-two-survivors + ElementGrid · ruled change: Ruling 3, compressed to one continuous beat",
-      "caption": "Beat 2 · THE FUNNEL, mid-run. The component is mounted, not redrawn: the population, the eliminated regions and the wave language are the legacy’s exactly. VERIFY THE ONE CHANGE: the legacy showed one wave line at a time, one per advance; the compressed beat shows the run as a list — what has been cut, receded, and the cut now running at full voice."
+      "klass": "PORT",
+      "review": "approved-port",
+      "source": "2-05-two-survivors build 1 + ElementGrid — the legacy pacing (Ruling 3 struck 31 Aug 2026)",
+      "caption": "Beat 2 · the table rises. Legacy build 1, ported whole: the kicker lands and the stylized table stands at its full population, nothing yet eliminated. From here the film advances one wave at a time, exactly as the legacy performed it."
     },
     {
       "id": "s6-b3",
@@ -180,54 +200,110 @@
       "scene": "S6",
       "beat": 3,
       "frame": "S6-F2",
-      "klass": "ADAPT",
-      "review": "pending-review",
-      "source": "2-05-two-survivors, the beat’s end state",
-      "caption": "Beat 3 · the furnace decides, and two survive. ElementGrid’s own step 5 — the noble metals the furnace could not reach are gone and Ag and Au stand alone — with the legacy verdict line. The furnace cut is load-bearing and survives the compression: it is why palladium is a candidate that lost on timing rather than one chemistry had already excluded."
+      "klass": "PORT",
+      "review": "approved-port",
+      "source": "2-05-two-survivors build 2 + ElementGrid — the legacy pacing (Ruling 3 struck 31 Aug 2026)",
+      "caption": "Beat 3 · the gases drift off. Legacy build 2: ElementGrid’s own step 1, and the wave’s single line at full voice — “Anything that floats away is out.” One line on stage at a time, as the legacy showed it."
     },
     {
       "id": "s6-b4",
       "file": "s6-b4.png",
       "scene": "S6",
       "beat": 4,
+      "frame": "S6-F2",
+      "klass": "PORT",
+      "review": "approved-port",
+      "source": "2-05-two-survivors build 3 + ElementGrid — the legacy pacing (Ruling 3 struck 31 Aug 2026)",
+      "caption": "Beat 4 · the corrosion wave. Legacy build 3: everything that rusts, burns, or dissolves goes dark — most of the table, iron included — with the wave’s own line beneath."
+    },
+    {
+      "id": "s6-b5",
+      "file": "s6-b5.png",
+      "scene": "S6",
+      "beat": 5,
+      "frame": "S6-F2",
+      "klass": "PORT",
+      "review": "approved-port",
+      "source": "2-05-two-survivors build 4 + ElementGrid — the legacy pacing (Ruling 3 struck 31 Aug 2026)",
+      "caption": "Beat 5 · the radioactive row pulses out. Legacy build 4: one wave, one line — “Anything that kills the holder is out.”"
+    },
+    {
+      "id": "s6-b6",
+      "file": "s6-b6.png",
+      "scene": "S6",
+      "beat": 6,
+      "frame": "S6-F2",
+      "klass": "PORT",
+      "review": "approved-port",
+      "source": "2-05-two-survivors build 5 + ElementGrid — the legacy pacing (Ruling 3 struck 31 Aug 2026)",
+      "caption": "Beat 6 · the shapeless settle out. Legacy build 5: what will not hold a shape goes, and what remains is the small lit family of noble metals."
+    },
+    {
+      "id": "s6-b7",
+      "file": "s6-b7.png",
+      "scene": "S6",
+      "beat": 7,
+      "frame": "S6-F2",
+      "klass": "PORT",
+      "review": "approved-port",
+      "source": "2-05-two-survivors build 6 + ElementGrid — the legacy pacing (Ruling 3 struck 31 Aug 2026)",
+      "caption": "Beat 7 · the furnace decides, and two survive. Legacy build 6: the furnace wave takes the noble metals no ancient forge could work, Ag and Au stand alone, and the legacy verdict lands — “Workable nobility leaves two.” The 1803 foreshadow is spoken on this advance, where the legacy speaks it, and it is why palladium is a candidate that lost on timing rather than one chemistry had already excluded."
+    },
+    {
+      "id": "s6-b8",
+      "file": "s6-b8.png",
+      "scene": "S6",
+      "beat": 8,
       "frame": "S5-F1",
       "klass": "PORT",
       "review": "approved-port",
       "source": "4-06-claim-and-carrier — the through-line composition, carrier GOLD",
-      "caption": "Beat 4 · the claim has found its strongest body yet. The same ported composition, the carrier now named GOLD — which is what makes the argument visible rather than spoken: the body changed and the thing inside did not."
+      "caption": "Beat 8 · the claim has found its strongest body yet. The same ported composition, the carrier now named GOLD — which is what makes the argument visible rather than spoken: the body changed and the thing inside did not. (Beat 4 of the r1 sheet, renumbered by the restoration; the render is carried byte-identical.)"
+    },
+    {
+      "id": "s6-b9",
+      "file": "s6-b9.png",
+      "scene": "S6",
+      "beat": 9,
+      "frame": "S6-F3",
+      "klass": "NEW",
+      "review": "approved-selection",
+      "system": "A — the counted load",
+      "source": "the presenter’s selection, 31 August 2026 — s6-b5-a carried byte-identical",
+      "caption": "Beat 9 · THE MASS STATE — the selected system: the counted load. The mass is COUNTED, in the metal’s own mark: three stations along one baseline, the represented value named above and the required mass stacked beneath as repeated gold marks — one, four, twelve. The growth is arithmetic and unarguable, and it reads before a word is read. Selected 31 August 2026; the render is the candidate’s, byte-identical."
     },
     {
       "id": "s6-b5-a",
       "file": "s6-b5-a.png",
       "scene": "S6",
-      "beat": 5,
+      "beat": 9,
       "frame": "S6-F3",
       "klass": "NEW",
-      "review": "pending-selection",
+      "review": "on-file",
       "system": "A — the counted load",
-      "caption": "Beat 5 · A. The mass is COUNTED, in the metal’s own mark: three stations along one baseline, the represented value named above and the required mass stacked beneath as repeated gold marks — one, four, twelve. The growth is arithmetic and unarguable, and it reads before a word is read."
+      "caption": "Candidate A — the counted load. SELECTED 31 August 2026: this system lands as the beat cell s6-b9. The candidate keeps its r1 id (the mass state was beat 5 before the restoration) and stays on file per the aesthetic law."
     },
     {
       "id": "s6-b5-b",
       "file": "s6-b5-b.png",
       "scene": "S6",
-      "beat": 5,
+      "beat": 9,
       "frame": "S6-F3",
       "klass": "NEW",
-      "review": "pending-selection",
+      "review": "on-file",
       "system": "B — the column that grows",
-      "caption": "Beat 5 · B. One column on one baseline, with the three represented values ticked on it as thresholds in the line’s own language — the level the mass stands at now drawn as a column, the two it has passed left as the edges where it used to reach. The most austere of the three: nothing is counted and nothing is repeated, and the argument is a single height read against a scale."
+      "caption": "Candidate B — the column that grows, NOT SELECTED (the presenter chose A, 31 August 2026); kept on file per the aesthetic law. One column on one baseline, with the three represented values ticked on it as thresholds in the line’s own language — the level the mass stands at now drawn as a column, the two it has passed left as the edges where it used to reach."
     },
     {
       "id": "s6-b5-c",
       "file": "s6-b5-c.png",
       "scene": "S6",
-      "beat": 5,
+      "beat": 9,
       "frame": "S6-F3",
       "klass": "NEW",
-      "review": "pending-selection",
+      "review": "on-file",
       "system": "C — the load hung from the claim",
-      "caption": "Beat 5 · C. The dependency drawn as literal length: three rows, the claim’s mark fixed at the left of each, and the mass hanging from it as a line that reaches further every time — with the metal’s mark at the far end where the weight actually is. Nothing is counted and nothing is stacked; the frame’s argument is the reach of the three lines."
+      "caption": "Candidate C — the load hung from the claim, NOT SELECTED (the presenter chose A, 31 August 2026); kept on file per the aesthetic law. The dependency drawn as literal length: three rows, the claim’s mark fixed at the left of each, and the mass hanging from it as a line that reaches further every time."
     },
     {
       "id": "s7-b1",

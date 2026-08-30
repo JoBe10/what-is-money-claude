@@ -1,9 +1,20 @@
-// Act II — the beat-state sheet builders (docs/act-2-states-brief.md §2).
+// Act II — the beat-state sheet builders (docs/act-2-states-brief.md §2,
+// re-rendered where ruled by docs/act-2-states-r2-brief.md).
 //
-// All 33 beats of Scenes 5–10, rendered full-size at 1920×1080 through the
+// All 37 beats of Scenes 5–10, rendered full-size at 1920×1080 through the
 // states pipeline, under the full-coverage rule. The beat map is
 // `docs/batch-b-package.md` §1, FROZEN 31 August 2026 at the installed
-// scripts' own `[→]` counts: S5 8 · S6 5 · S7 5 · S8 5 · S9 5 · S10 5.
+// scripts' own `[→]` counts and AMENDED the same day by the Ruling 3 strike
+// (master §13): S5 8 · S6 9 · S7 5 · S8 5 · S9 5 · S10 5 = 37 — Scene 6 at
+// the legacy pacing, one wave of eliminations per advance.
+//
+// THE R2 STATE. The presenter's 31 August rulings are applied throughout:
+// the three NEW-frame selections landed (S6-F3 = the counted load, S7-F2 =
+// the boundary logic restaged photographically, S9-F1 = the hub dissolving),
+// the five adaptations verified, the elimination restored to the legacy
+// builds, and the rails law staged on s5-b5 and s10-b1/s10-b2. Non-selected
+// candidates stay registered here, review class `on-file`, so any selection
+// is still one letter's change.
 //
 // EVERY CELL CARRIES ITS PROVENANCE CLASS AND IS BUILT BY IT. The classes are
 // `docs/act-2-provenance.md`, ruled 31 August 2026, and this file obeys them
@@ -30,8 +41,9 @@
 //
 // THE CLAIM THROUGH-LINE. The claim enters at S5 b1 wearing construction C's
 // carrier and is on stage at every beat where the argument is about the body it
-// wears: S5 b1 · S5 b7 · S6 b4 · S7 b1 · S7 b2, and again in S10's strip as the
-// CLAIM station. That is the connective object Gate 3 will animate.
+// wears: S5 b1 · S5 b7 · S6 b8 · S7 b1 · S7 b2, and again in S10's strip as the
+// CLAIM station — where, under the rails law, it is the ClaimObject disc
+// itself. That is the connective object Gate 3 will animate.
 //
 // Composition law in full (master §5): one idea per frame, negative space as a
 // material, nothing touching the frame edges, the brightness floors, the
@@ -219,13 +231,20 @@ const SPECIMEN = {
   }
 };
 
-// ADAPT (S6-F2) — `2-05`'s ElementGrid, mounted at its own steps. The ONE ruled
-// change (architecture Ruling 3) is that the five separately-advanced waves
-// become one continuous beat, and that is what the wave lines render: the
-// legacy showed exactly one line at a time (`setVisible(line, n === step)`),
-// and the compressed beat shows the sequence together, the run so far spent and
-// the cut now running at full voice. The population, the eliminated regions,
-// the wave language and the verdict are untouched.
+// PORT (S6-F2) — `2-05`'s elimination at the legacy pacing. Architecture
+// Ruling 3 (the compression) was STRUCK by the presenter on 31 August 2026
+// (master §13; trail: ruled 25 Aug, struck 31 Aug, grounds — the legacy
+// treatment is proven and preferred), so the frame reverts to a PORT of the
+// legacy build structure, and this builder is `2-05-two-survivors`'
+// `_build` + `_applyBuild` transcribed: the legacy's own DOM against the
+// legacy's own classes, so the legacy stylesheet does the placing. Per build:
+// the kicker from build 1; the table (`ElementGrid` mounted, not redrawn) at
+// its own step `build − 1`; EXACTLY ONE wave line, visible only on its own
+// build (`setVisible(line, n === step)` — the legacy's rule); the verdict at
+// build 6. Nothing inside any step is changed one bit. What does not carry
+// over is the dimmed rail beneath the legacy slide — the evolution rail as a
+// persistent spine is dead by architecture, and the sheet's r1 funnel cells
+// already established the grid-alone staging.
 const WAVE_LINES = [
   'Anything that floats away is out.',
   'Anything that rusts, burns, or dissolves is out.',
@@ -233,41 +252,36 @@ const WAVE_LINES = [
   'Anything that will not hold a shape is out.'
 ];
 
-function funnel(st, step, { kicker = true, live = -1, verdict = null } = {}) {
-  if (kicker) {
-    const k = document.createElement('p');
-    k.className = 's2o-survivors__kicker';
-    k.dataset.visible = 'true';
-    k.textContent = 'Run the competition over the whole table.';
-    st.el.appendChild(k);
-  }
+function survivors(st, build) {
+  const k = document.createElement('p');
+  k.className = 's2o-survivors__kicker';
+  k.dataset.visible = String(build >= 1);
+  k.textContent = 'Run the competition over the whole table.';
+  st.el.appendChild(k);
+
   const wrap = document.createElement('div');
   wrap.className = 's2o-survivors__grid';
-  wrap.dataset.visible = 'true';
+  wrap.dataset.visible = String(build >= 1);
   const grid = ElementGrid();
   wrap.appendChild(grid.el);
   st.el.appendChild(wrap);
-  grid.applyState(step, { live: false });
+  grid.applyState(Math.max(0, build - 1), { live: false });
   cleanup.push(() => grid.destroy());
 
-  if (verdict) {
-    const v = document.createElement('p');
-    v.className = 's2o-survivors__verdict';
-    v.dataset.visible = 'true';
-    v.textContent = verdict;
-    st.el.appendChild(v);
-    return;
-  }
-  // WIRING: the compressed beat's own list, in `.s2o-survivors__waveline`'s
-  // register (27px/420 italic) on the row that class occupies. The legacy put
-  // one line there; the compression puts the run there.
   WAVE_LINES.forEach((copy, i) => {
-    if (i > live) return;
-    text(st, copy,
-      `left:300px; right:300px; top:${832 + i * 40}px; text-align:center; text-indent:0;` +
-      `font-size:27px; font-weight:420; font-style:italic; letter-spacing:-0.005em;` +
-      `color:rgba(255,255,255,${i === live ? 1 : 0.42});`);
+    const line = document.createElement('p');
+    line.className = 's2o-survivors__waveline';
+    line.dataset.step = String(i + 2);
+    line.dataset.visible = String(build === i + 2);
+    line.textContent = copy;
+    st.el.appendChild(line);
   });
+
+  const verdict = document.createElement('p');
+  verdict.className = 's2o-survivors__verdict';
+  verdict.dataset.visible = String(build >= 6);
+  verdict.textContent = 'Workable nobility leaves two.';
+  st.el.appendChild(verdict);
 }
 
 // PORT (S8-F2) — `2-07`'s chart, rebuilt against the legacy's own classes so
@@ -626,33 +640,73 @@ cell('s6-b1', {
   studyStatement(st, 'SCARCITY IN MATTER');
 });
 
+// --- The restored elimination: beats 2–7, one legacy build per cell. -------
+//
+// PORT cells, approved by provenance, no review burden. The presenter's test
+// is the one he set at the strike: the sequence should simply look like it
+// always did. The compressed r1 cells (the old s6-b2 and s6-b3) are
+// superseded and preserved at tag `act-2-states`.
+
+const RESTORED_SOURCE = (n) =>
+  `2-05-two-survivors build ${n} + ElementGrid — the legacy pacing (Ruling 3 struck 31 Aug 2026)`;
+
 cell('s6-b2', {
-  scene: 'S6', beat: 2, frame: 'S6-F2', klass: 'ADAPT', review: 'pending-review',
-  source: '2-05-two-survivors + ElementGrid · ruled change: Ruling 3, compressed to one continuous beat',
-  caption: 'Beat 2 · THE FUNNEL, mid-run. The component is mounted, not redrawn: the population, the eliminated regions and the wave language are the legacy’s exactly. VERIFY THE ONE CHANGE: the legacy showed one wave line at a time, one per advance; the compressed beat shows the run as a list — what has been cut, receded, and the cut now running at full voice.'
-}, (st) => { funnel(st, 3, { live: 2 }); });
+  scene: 'S6', beat: 2, frame: 'S6-F2', klass: 'PORT', review: 'approved-port',
+  source: RESTORED_SOURCE(1),
+  caption: 'Beat 2 · the table rises. Legacy build 1, ported whole: the kicker lands and the stylized table stands at its full population, nothing yet eliminated. From here the film advances one wave at a time, exactly as the legacy performed it.'
+}, (st) => { survivors(st, 1); });
 
 cell('s6-b3', {
-  scene: 'S6', beat: 3, frame: 'S6-F2', klass: 'ADAPT', review: 'pending-review',
-  source: '2-05-two-survivors, the beat’s end state',
-  caption: 'Beat 3 · the furnace decides, and two survive. ElementGrid’s own step 5 — the noble metals the furnace could not reach are gone and Ag and Au stand alone — with the legacy verdict line. The furnace cut is load-bearing and survives the compression: it is why palladium is a candidate that lost on timing rather than one chemistry had already excluded.'
-}, (st) => { funnel(st, 5, { kicker: false, verdict: 'Workable nobility leaves two.' }); });
+  scene: 'S6', beat: 3, frame: 'S6-F2', klass: 'PORT', review: 'approved-port',
+  source: RESTORED_SOURCE(2),
+  caption: 'Beat 3 · the gases drift off. Legacy build 2: ElementGrid’s own step 1, and the wave’s single line at full voice — “Anything that floats away is out.” One line on stage at a time, as the legacy showed it.'
+}, (st) => { survivors(st, 2); });
 
 cell('s6-b4', {
-  scene: 'S6', beat: 4, frame: 'S5-F1', klass: 'PORT', review: 'approved-port',
+  scene: 'S6', beat: 4, frame: 'S6-F2', klass: 'PORT', review: 'approved-port',
+  source: RESTORED_SOURCE(3),
+  caption: 'Beat 4 · the corrosion wave. Legacy build 3: everything that rusts, burns, or dissolves goes dark — most of the table, iron included — with the wave’s own line beneath.'
+}, (st) => { survivors(st, 3); });
+
+cell('s6-b5', {
+  scene: 'S6', beat: 5, frame: 'S6-F2', klass: 'PORT', review: 'approved-port',
+  source: RESTORED_SOURCE(4),
+  caption: 'Beat 5 · the radioactive row pulses out. Legacy build 4: one wave, one line — “Anything that kills the holder is out.”'
+}, (st) => { survivors(st, 4); });
+
+cell('s6-b6', {
+  scene: 'S6', beat: 6, frame: 'S6-F2', klass: 'PORT', review: 'approved-port',
+  source: RESTORED_SOURCE(5),
+  caption: 'Beat 6 · the shapeless settle out. Legacy build 5: what will not hold a shape goes, and what remains is the small lit family of noble metals.'
+}, (st) => { survivors(st, 5); });
+
+cell('s6-b7', {
+  scene: 'S6', beat: 7, frame: 'S6-F2', klass: 'PORT', review: 'approved-port',
+  source: RESTORED_SOURCE(6),
+  caption: 'Beat 7 · the furnace decides, and two survive. Legacy build 6: the furnace wave takes the noble metals no ancient forge could work, Ag and Au stand alone, and the legacy verdict lands — “Workable nobility leaves two.” The 1803 foreshadow is spoken on this advance, where the legacy speaks it, and it is why palladium is a candidate that lost on timing rather than one chemistry had already excluded.'
+}, (st) => { survivors(st, 6); });
+
+cell('s6-b8', {
+  scene: 'S6', beat: 8, frame: 'S5-F1', klass: 'PORT', review: 'approved-port',
   source: '4-06-claim-and-carrier — the through-line composition, carrier GOLD',
-  caption: 'Beat 4 · the claim has found its strongest body yet. The same ported composition, the carrier now named GOLD — which is what makes the argument visible rather than spoken: the body changed and the thing inside did not.'
+  caption: 'Beat 8 · the claim has found its strongest body yet. The same ported composition, the carrier now named GOLD — which is what makes the argument visible rather than spoken: the body changed and the thing inside did not. (Beat 4 of the r1 sheet, renumbered by the restoration; the render is carried byte-identical.)'
 }, (st) => {
   claimInCarrier(st, { label: 'GOLD', labelVoice: 1 });
   statement(st, 'Hard to create. Hard to destroy.');
 });
 
-// --- S6-F3 · NEW — the mass state. Three genuinely distinct systems. --------
+// --- S6-F3 · NEW — the mass state. SELECTED 31 August 2026: A. -------------
 //
 // The frame: represented value up, physical mass visibly up. Line grammar
 // throughout (a diagram — the register boundary keeps renders out), the film's
 // own stroke, dot terminals and voices. Content is the architecture's own beat
 // and carries no word the installed script has not written.
+//
+// The presenter selected system A — the counted load — on 31 August 2026
+// (states.json `rulingsR2`). The selected builder lands as the beat's cell,
+// `s6-b9` (beat 9 after the restoration), carried byte-identical from the
+// candidate render; the two non-selected systems stay registered `on-file`,
+// so the selection is still one letter's change.
 
 const MASS_STEPS = [
   { value: 'ONE CLAIM', bars: 1 },
@@ -660,11 +714,7 @@ const MASS_STEPS = [
   { value: 'TWELVE', bars: 12 }
 ];
 
-cell('s6-b5-a', {
-  scene: 'S6', beat: 5, frame: 'S6-F3', klass: 'NEW', review: 'pending-selection',
-  system: 'A — the counted load',
-  caption: 'Beat 5 · A. The mass is COUNTED, in the metal’s own mark: three stations along one baseline, the represented value named above and the required mass stacked beneath as repeated gold marks — one, four, twelve. The growth is arithmetic and unarguable, and it reads before a word is read.'
-}, (st) => {
+function massCounted(st) {
   const Y = 380;
   const XS = [430, 960, 1490];
   line(st.svg, 250, Y, 1670, Y, VOICE.lineDim, 2);
@@ -681,12 +731,25 @@ cell('s6-b5-a', {
     }
   });
   statement(st, 'As the value grows, the weight grows.', { top: 848, size: 40 });
-});
+}
+
+cell('s6-b9', {
+  scene: 'S6', beat: 9, frame: 'S6-F3', klass: 'NEW', review: 'approved-selection',
+  system: 'A — the counted load',
+  source: 'the presenter’s selection, 31 August 2026 — s6-b5-a carried byte-identical',
+  caption: 'Beat 9 · THE MASS STATE — the selected system: the counted load. The mass is COUNTED, in the metal’s own mark: three stations along one baseline, the represented value named above and the required mass stacked beneath as repeated gold marks — one, four, twelve. The growth is arithmetic and unarguable, and it reads before a word is read. Selected 31 August 2026; the render is the candidate’s, byte-identical.'
+}, (st) => { massCounted(st); });
+
+cell('s6-b5-a', {
+  scene: 'S6', beat: 9, frame: 'S6-F3', klass: 'NEW', review: 'on-file',
+  system: 'A — the counted load',
+  caption: 'Candidate A — the counted load. SELECTED 31 August 2026: this system lands as the beat cell s6-b9. The candidate keeps its r1 id (the mass state was beat 5 before the restoration) and stays on file per the aesthetic law.'
+}, (st) => { massCounted(st); });
 
 cell('s6-b5-b', {
-  scene: 'S6', beat: 5, frame: 'S6-F3', klass: 'NEW', review: 'pending-selection',
+  scene: 'S6', beat: 9, frame: 'S6-F3', klass: 'NEW', review: 'on-file',
   system: 'B — the column that grows',
-  caption: 'Beat 5 · B. One column on one baseline, with the three represented values ticked on it as thresholds in the line’s own language — the level the mass stands at now drawn as a column, the two it has passed left as the edges where it used to reach. The most austere of the three: nothing is counted and nothing is repeated, and the argument is a single height read against a scale.'
+  caption: 'Candidate B — the column that grows, NOT SELECTED (the presenter chose A, 31 August 2026); kept on file per the aesthetic law. One column on one baseline, with the three represented values ticked on it as thresholds in the line’s own language — the level the mass stands at now drawn as a column, the two it has passed left as the edges where it used to reach.'
 }, (st) => {
   const BASE = 786;
   const CX = 780;
@@ -715,9 +778,9 @@ cell('s6-b5-b', {
 });
 
 cell('s6-b5-c', {
-  scene: 'S6', beat: 5, frame: 'S6-F3', klass: 'NEW', review: 'pending-selection',
+  scene: 'S6', beat: 9, frame: 'S6-F3', klass: 'NEW', review: 'on-file',
   system: 'C — the load hung from the claim',
-  caption: 'Beat 5 · C. The dependency drawn as literal length: three rows, the claim’s mark fixed at the left of each, and the mass hanging from it as a line that reaches further every time — with the metal’s mark at the far end where the weight actually is. Nothing is counted and nothing is stacked; the frame’s argument is the reach of the three lines.'
+  caption: 'Candidate C — the load hung from the claim, NOT SELECTED (the presenter chose A, 31 August 2026); kept on file per the aesthetic law. The dependency drawn as literal length: three rows, the claim’s mark fixed at the left of each, and the mass hanging from it as a line that reaches further every time.'
 }, (st) => {
   const YS = [380, 560, 740];
   const X0 = 420;
