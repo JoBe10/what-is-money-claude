@@ -1,5 +1,5 @@
 {
-  "date": "2026-08-30T11:16:00.312Z",
+  "date": "2026-08-30T11:17:19.909Z",
   "session": "act-2-states-r2",
   "beatMap": {
     "S5": 8,
@@ -76,12 +76,12 @@
     "s10-b2"
   ],
   "counts": {
-    "pending-review": 0,
+    "pending-review": 1,
     "approved-selection": 2,
     "approved-adapt": 5,
     "approved-port": 22,
     "determined": 8,
-    "on-file": 6
+    "on-file": 9
   },
   "cells": [
     {
@@ -339,15 +339,27 @@
       "caption": "Beat 3 · CUSTODY — the gold stops. The same approved study geometry as beat 1 of Scene 6, with a subject that has never been on screen. §0’s convention is what makes this a port rather than a new frame: a subject is not a treatment, and the presenter confirmed §0."
     },
     {
+      "id": "s7-b4",
+      "file": "s7-b4.png",
+      "scene": "S7",
+      "beat": 4,
+      "frame": "S7-F2",
+      "klass": "NEW",
+      "review": "pending-review",
+      "system": "B — the custody boundary crossed · restaged photographically",
+      "source": "the presenter’s selection of s7-b4-b’s logic + the r2 brief §3 — the Act I photograph-plus-line pattern",
+      "caption": "Beat 4 · THE DETACHMENT, restaged in the film’s real register at your order: the photographic vault holding the gold, the photographic certificate detached and traveled outward across the boundary, and one thin dependency line back — the Act I photograph-plus-line pattern, not a diagram. The drawn circle and the ticket glyph retired to file with the drawn candidates. The question for your eye is the one the brief sets: does this frame sit at the standard of the Act I finals?"
+    },
+    {
       "id": "s7-b4-a",
       "file": "s7-b4-a.png",
       "scene": "S7",
       "beat": 4,
       "frame": "S7-F2",
       "klass": "NEW",
-      "review": "pending-selection",
+      "review": "on-file",
       "system": "A — the departure arc",
-      "caption": "Beat 4 · A. The travel is a curve and the dependency is a straight tie: the claim leaves the vault on an arc that visibly bends away, while one hairline runs back along the chord. Two different line qualities carry two different ideas — motion, and obligation — which is the cleanest way to say “it went, and it still owes.”"
+      "caption": "Candidate A — the departure arc, NOT SELECTED (the presenter chose B’s logic, restaged photographically, 31 August 2026); kept on file per the aesthetic law."
     },
     {
       "id": "s7-b4-b",
@@ -356,9 +368,9 @@
       "beat": 4,
       "frame": "S7-F2",
       "klass": "NEW",
-      "review": "pending-selection",
+      "review": "on-file",
       "system": "B — the custody boundary crossed",
-      "caption": "Beat 4 · B. Custody is drawn as a boundary rather than as a place: the vault at the centre of a ring, and the claim outside it, tied back by one line that visibly crosses the ring. The frame says what the beat says — the claim has left custody and has not left its obligation — and the ring is the only new mark it needs."
+      "caption": "Candidate B — the custody boundary crossed. ITS LOGIC WAS SELECTED (31 August 2026) and restaged photographically as the beat cell s7-b4; this drawn form — the ring and the ticket glyph — retires to file per the aesthetic law."
     },
     {
       "id": "s7-b4-c",
@@ -367,9 +379,9 @@
       "beat": 4,
       "frame": "S7-F2",
       "klass": "NEW",
-      "review": "pending-selection",
+      "review": "on-file",
       "system": "C — the two positions",
-      "caption": "Beat 4 · C. No travel path is drawn at all. The claim appears twice — receded where it was, at full voice where it is — and one line joins the two. The movement is read from the pair rather than traced, which is the most restrained of the three and the one that survives being a still."
+      "caption": "Candidate C — the two positions, NOT SELECTED (the presenter chose B’s logic, restaged photographically, 31 August 2026); kept on file per the aesthetic law."
     },
     {
       "id": "s7-b5",

@@ -827,15 +827,58 @@ cell('s7-b3', {
   studyStatement(st, 'THE GOLD STOPS HERE');
 });
 
-// --- S7-F2 · NEW — the detachment. Candidates for the travel's geometry. ----
+// --- S7-F2 · NEW — the detachment. SELECTED 31 August 2026: B's logic, -----
+// --- restaged photographically (the r2 brief §3). ---------------------------
 //
 // Ruled NEW 31 August 2026: the legacy detaching rung's meaning is vertical
-// abstraction; the film's moment is outward travel with a dependency line back.
-// All three render the same instant — the claim arrived at its distance, the
-// tie to the vault intact — so what is compared is the geometry and not the
-// moment. Line grammar; the vault and the claim carry the set's own marks.
+// abstraction; the film's moment is outward travel with a dependency line
+// back. The presenter selected candidate B's logic — the custody boundary
+// crossed — and ordered the restage: the frame rebuilt in the film's real
+// register as the Act I photograph-plus-line pattern (the s2-* finals), not a
+// diagram. The photographic vault render holds the gold; the photographic
+// gold_certificate render is detached and traveled outward; one thin
+// dependency line runs back, in Act I's own service-path grammar (stroke 1.5
+// at 0.35, dot terminals r 3.5 at 0.7 — the values `_exchangeStage.js`
+// ships, with the line clearing each box by ~50px exactly as Scene 2's
+// service path clears its figures). Both renders are 4:5 portraits of the
+// Batch A drop; each box takes the render's own aspect (the framing rule),
+// the vault the larger mass — the heavy thing that stays — the certificate
+// smaller, at its distance, at full voice. The drawn circle and the ticket
+// glyph retire to file with the three drawn candidates below.
 
 const DEP_LINE = 'A claim on gold in a vault.';
+
+// The photograph-plus-line pattern's photo box — the Act I stage's own
+// dark-field handling (`_df` in `_exchangeStage.js`): the register's reveal
+// transition disabled so the still is the settled state.
+function photo(st, { subject, box: [x, y, w, h], alt, o = 1 }) {
+  const df = DarkFieldImage({ name: subject, width: w, height: h, alt });
+  df.el.dataset.visible = 'true';
+  df.el.style.transition = 'none';
+  df.el.style.position = 'absolute';
+  df.el.style.left = `${x}px`;
+  df.el.style.top = `${y}px`;
+  df.el.style.opacity = String(o);
+  st.el.appendChild(df.el);
+  return df.el;
+}
+
+cell('s7-b4', {
+  scene: 'S7', beat: 4, frame: 'S7-F2', klass: 'NEW', review: 'pending-review',
+  system: 'B — the custody boundary crossed · restaged photographically',
+  source: 'the presenter’s selection of s7-b4-b’s logic + the r2 brief §3 — the Act I photograph-plus-line pattern',
+  caption: 'Beat 4 · THE DETACHMENT, restaged in the film’s real register at your order: the photographic vault holding the gold, the photographic certificate detached and traveled outward across the boundary, and one thin dependency line back — the Act I photograph-plus-line pattern, not a diagram. The drawn circle and the ticket glyph retired to file with the drawn candidates. The question for your eye is the one the brief sets: does this frame sit at the standard of the Act I finals?'
+}, (st) => {
+  photo(st, { subject: 'vault', box: [340, 208, 500, 625], alt: 'The vault, closed, holding the gold' });
+  photo(st, { subject: 'gold_certificate', box: [1230, 187, 340, 425], alt: 'The gold certificate, traveled outward' });
+  // The dependency: one thin line back to the vault, dot-terminated — the
+  // service path's exact grammar, sloped because the claim sits at its
+  // distance above the vault's centre of mass.
+  line(st.svg, 890, 512, 1180, 428, 0.35, 1.5);
+  dot(st.svg, 890, 512, 3.5, 0.7);
+  dot(st.svg, 1180, 428, 3.5, 0.7);
+  statement(st, DEP_LINE, { top: 866, size: 46 });
+});
 
 // THE VAULT IS NOT A GLYPH, AND IS NOT DRAWN AS ONE. `vault` is a dark-field
 // subject; the grammar set has no vault mark, and the register boundary keeps
@@ -859,9 +902,9 @@ function vaultMark(st, x, y, { enclosed = true } = {}) {
 }
 
 cell('s7-b4-a', {
-  scene: 'S7', beat: 4, frame: 'S7-F2', klass: 'NEW', review: 'pending-selection',
+  scene: 'S7', beat: 4, frame: 'S7-F2', klass: 'NEW', review: 'on-file',
   system: 'A — the departure arc',
-  caption: 'Beat 4 · A. The travel is a curve and the dependency is a straight tie: the claim leaves the vault on an arc that visibly bends away, while one hairline runs back along the chord. Two different line qualities carry two different ideas — motion, and obligation — which is the cleanest way to say “it went, and it still owes.”'
+  caption: 'Candidate A — the departure arc, NOT SELECTED (the presenter chose B’s logic, restaged photographically, 31 August 2026); kept on file per the aesthetic law.'
 }, (st) => {
   const V = [560, 620];
   const C = [1420, 400];
@@ -878,9 +921,9 @@ cell('s7-b4-a', {
 });
 
 cell('s7-b4-b', {
-  scene: 'S7', beat: 4, frame: 'S7-F2', klass: 'NEW', review: 'pending-selection',
+  scene: 'S7', beat: 4, frame: 'S7-F2', klass: 'NEW', review: 'on-file',
   system: 'B — the custody boundary crossed',
-  caption: 'Beat 4 · B. Custody is drawn as a boundary rather than as a place: the vault at the centre of a ring, and the claim outside it, tied back by one line that visibly crosses the ring. The frame says what the beat says — the claim has left custody and has not left its obligation — and the ring is the only new mark it needs.'
+  caption: 'Candidate B — the custody boundary crossed. ITS LOGIC WAS SELECTED (31 August 2026) and restaged photographically as the beat cell s7-b4; this drawn form — the ring and the ticket glyph — retires to file per the aesthetic law.'
 }, (st) => {
   const CX = 700; const CY = 500; const R = 216;
   // Custody drawn as a boundary rather than as a place: the tie visibly
@@ -902,9 +945,9 @@ cell('s7-b4-b', {
 });
 
 cell('s7-b4-c', {
-  scene: 'S7', beat: 4, frame: 'S7-F2', klass: 'NEW', review: 'pending-selection',
+  scene: 'S7', beat: 4, frame: 'S7-F2', klass: 'NEW', review: 'on-file',
   system: 'C — the two positions',
-  caption: 'Beat 4 · C. No travel path is drawn at all. The claim appears twice — receded where it was, at full voice where it is — and one line joins the two. The movement is read from the pair rather than traced, which is the most restrained of the three and the one that survives being a still.'
+  caption: 'Candidate C — the two positions, NOT SELECTED (the presenter chose B’s logic, restaged photographically, 31 August 2026); kept on file per the aesthetic law.'
 }, (st) => {
   const V = [520, 500];
   const WAS = [800, 500];
