@@ -185,6 +185,30 @@ function condensedMass(st) {
   }
 }
 
+// THE CONDENSATION'S OBJECT (presenter-ruled 30 August 2026, letter B): a
+// smooth luminous ball that is deliberately NOT the Claim Mark. The drawing
+// lives in exactly one place — the `.p1-ball` class in src/styles/slides.css,
+// which states its parameters *against* the disc's — so the cell and the scene
+// cannot drift into two objects that merely resemble each other.
+//
+// The geometry is the REOPENED CELL'S OWN: the retired mass's core radius was
+// 148 at (FORM_CX, FORM_CY), so the ball is 296 across at that same centre.
+// Nothing here is chosen — the ruling said "sized per the reopened cell's box,"
+// and this is that box.
+export const BALL_SIZE = 296;
+
+function condensedBall(st) {
+  const el = document.createElement('div');
+  el.className = 'p1-ball';
+  el.dataset.visible = 'true';
+  el.style.position = 'absolute';
+  el.style.left = `${FORM_CX - BALL_SIZE / 2}px`;
+  el.style.top = `${FORM_CY - BALL_SIZE / 2}px`;
+  el.style.setProperty('--ball-size', `${BALL_SIZE}px`);
+  st.el.appendChild(el);
+  return el;
+}
+
 // C1-B — the fifth form refusing to condense into an object: the material
 // resolved into STRUCTURED light. The same units, no longer scattered and no
 // longer massed — held in exact order, an authored lattice at the forms'
@@ -294,6 +318,13 @@ cell('p1-b3', {
   caption: 'Beat 3 · the condensation’s settled landing — “condenses into… this.”: the field’s own points of light gathered into one dense mass at the forms’ center. A mass, deliberately not a disc (the disc is born in Scene 3) and not yet any form (the shell is the next advance’s reveal)'
 }, (st) => {
   condensedMass(st);
+});
+
+cell('p1-b3-ball', {
+  beat: 'P1 beat 3', status: 'approved', decision: null,
+  caption: 'Beat 3 · APPROVED BY RULING (30 Aug 2026, letter B) — the condensation’s landing is a smooth luminous ball, deliberately NOT the Claim Mark: achromatic white where the disc is warm and ends in the accent, with a halo a little over half the disc’s radius and about two thirds its strength. 296 across at the forms’ centre — the reopened cell’s own box. Replaces the retired p1-b3'
+}, (st) => {
+  condensedBall(st);
 });
 
 cell('p1-b4', {

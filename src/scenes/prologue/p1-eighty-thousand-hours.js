@@ -2,7 +2,7 @@
 // entry black). The film's opening.
 //
 // One continuous world: a field of eighty thousand points of light, one per
-// working hour of a life, that fills, condenses into a mass, and then
+// working hour of a life, that fills, condenses into a single object, and then
 // shape-shifts through five forms before the frame clears to the question and
 // the title. The beat map is `docs/batch-a-package.md` §1 as amended by the
 // presenter's ruling of 29 August 2026 — eleven advances plus the entry black
@@ -10,8 +10,9 @@
 //
 // LANDED STATES ARE APPROVED CELLS, BY CONSTRUCTION. Every settled frame here
 // is a cell of `review/prologue/states/` (states.json `approvedSet`, ruled
-// 29 August 2026): p1-b0 · p1-b1 · p1-b2 · p1-b3 · p1-b4 · p1-b5 · p1-b6 ·
-// p1-b7-glow · p1-b8-a · p1-b9 · p1-b10 · p1-b11. The geometry is transcribed
+// 29 August 2026): p1-b0 · p1-b1 · p1-b2 · p1-b3-ball · p1-b4 · p1-b5 · p1-b6 ·
+// p1-b7-glow · p1-b8-a · p1-b9 · p1-b10 · p1-b11 — with b3 the ruled
+// p1-b3-ball since 30 August 2026. The geometry is transcribed
 // from the builders those cells were rendered from (`_prologueStage.js` and
 // the deck's own type classes); the landed-state proof checks it per pixel.
 // Nothing settled in this scene was derived.
@@ -20,8 +21,10 @@
 // reused with its own timings (1.01: an 8.2s fill behind an authored 800ms
 // hold, the counter fading in with the first countable units and completing
 // with the field). The condensation is the deck's proven collapse (1.02's
-// 4.6s), landing on the mass rather than on a disc — the disc is born in
-// Scene 3 and nowhere earlier. The five-form morph is a cross-dissolve in the
+// 4.6s), landing on the condensation's object — presenter-ruled 30 August 2026
+// (letter B) to be a smooth luminous ball that is deliberately NOT the Claim
+// Mark: achromatic where the disc is warm, tighter-haloed, and larger. The disc
+// itself is still born in Scene 3 and nowhere earlier, and the accent with it. The five-form morph is a cross-dissolve in the
 // dark-field register's own reveal: each form is its own advance, and one
 // object becoming another by dissolve is the scene's argument in a gesture —
 // the form changed, the thing did not. The two lines and the title are the
@@ -33,7 +36,7 @@
 
 import { UnitField } from '../../components/UnitField.js';
 import {
-  setVisible, claimRasterHint, releaseRasterHint, massLayer, formBox, FORMS
+  setVisible, claimRasterHint, releaseRasterHint, condensedBall, formBox, FORMS
 } from './_prologueStage.js';
 
 const HOURS = 80000;
@@ -42,8 +45,10 @@ const FILL_MS = 8200;
 const FILL_DELAY_MS = 800;
 // 1.02's own number: the collapse.
 const COLLAPSE_MS = 4600;
-// The mass resolves while the last of the field is still pouring in.
-const MASS_EMERGE_AT = 0.45;
+// The ball resolves while the last of the field is still pouring in. The
+// threshold and both durations are the condensation's own, unchanged by the
+// ruling: it replaced the object, not the motion.
+const BALL_EMERGE_AT = 0.45;
 
 const MAX_STEP = 11;
 // Beats 4–8 are the five forms, in the morph's order.
@@ -68,8 +73,10 @@ export default {
     const field = UnitField({ preRadial: true, warmAnim: true });
     root.appendChild(field.el);
 
-    const mass = massLayer();
-    root.appendChild(mass);
+    // The condensation's object (presenter-ruled 30 August 2026, letter B):
+    // the smooth luminous ball, deliberately not the Claim Mark.
+    const ball = condensedBall();
+    root.appendChild(ball);
 
     const forms = FORMS.map((form) => {
       const el = formBox(form);
@@ -106,7 +113,7 @@ export default {
 
     this._canvas = claimRasterHint(container);
     this._refs = {
-      root, field, mass, forms, counter, hoursLine, formsLine, question, title,
+      root, field, ball, forms, counter, hoursLine, formsLine, question, title,
       appliedStep: 0,
       reconstruct: false
     };
@@ -144,7 +151,7 @@ export default {
     // Everything above the field is declarative — one settled configuration
     // per build, reconstructed the same way forward, backward and cold.
     setVisible(refs.hoursLine, n === 2);
-    setVisible(refs.mass, n === 3);
+    setVisible(refs.ball, n === 3);
     refs.forms.forEach((el, i) => setVisible(el, n === FIRST_FORM_STEP + i));
     setVisible(refs.formsLine, n === 9);
     setVisible(refs.question, n === 10);
@@ -197,17 +204,17 @@ export default {
     }
 
     if (n === 3 && live) {
-      // The condensation, one gesture: the field streams inward and the mass
+      // The condensation, one gesture: the field streams inward and the ball
       // resolves out of it while the last of the field is still arriving.
-      setVisible(refs.mass, false);
+      setVisible(refs.ball, false);
       refs.field.animate({
         mode: 'collapse',
         duration: COLLAPSE_MS,
         onTick: (t) => {
-          if (t >= MASS_EMERGE_AT) setVisible(refs.mass, true);
+          if (t >= BALL_EMERGE_AT) setVisible(refs.ball, true);
         },
         onDone: () => {
-          setVisible(refs.mass, true);
+          setVisible(refs.ball, true);
           refs.field.el.style.display = 'none';
         }
       });

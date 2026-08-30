@@ -4382,15 +4382,58 @@
 /* The condensation's landing. It reveals slowly, while the last of the field is
    still pouring in, and releases at the morph's own pace when the first form
    takes the frame: the duration is read from the target state, so the two
-   directions get their own. */
-.p1-mass {
+   directions get their own.
+
+   `.p1-mass` is the RETIRED granular landing (presenter-reopened 30 August
+   2026). It stays here because its cell stays on file — the aesthetic law's
+   file-keeping clause — and nothing in the deck renders it any more. */
+.p1-mass,
+.p1-ball {
   opacity: 0;
   transition: opacity 520ms ease-out;
 }
 
-.p1-mass[data-visible="true"] {
+.p1-mass[data-visible="true"],
+.p1-ball[data-visible="true"] {
   opacity: 1;
   transition: opacity 1200ms ease-out;
+}
+
+/* THE CONDENSATION'S OBJECT (presenter-ruled 30 August 2026, letter B).
+   A smooth luminous ball that is deliberately NOT the Claim Mark. Everything
+   about it is set against `.luminous-disc` (the deck-wide block near the top of
+   this file), because the whole point of the ruling is that these two objects
+   must never be mistaken for each other:
+
+     · HUE — the disc is warm and ends in the accent: unit-warm-bright to
+       unit-warm to a rim mixed 18% with `--accent`. The ball is ACHROMATIC:
+       white to near-white to a neutral grey. No warm tone, no chroma at all,
+       and no orange anywhere near it — the accent still enters the film at the
+       birth in Scene 3 and nowhere earlier.
+     · FALLOFF — the disc's glow reaches 0.1932 and 0.625 of its diameter, in
+       the warm rgba(253,233,212). The ball's reaches 0.11 and 0.34, in white:
+       a little over half the radius, at roughly two thirds the strength.
+     · CORE TO HALO — the disc's halo reaches 1.25 core-radii past its edge, a
+       total footprint of 2.25 diameters. The ball's reaches 0.68, a footprint
+       of 1.68. It is the tighter, colder object by construction.
+
+   What they share is the light: the highlight sits at 50% 42% in both, because
+   one film has one key. The distinction is carried by hue and falloff, which is
+   what the ruling asked for — not by lighting the two objects differently. */
+.p1-ball {
+  --ball-size: 296px;
+  width: var(--ball-size);
+  height: var(--ball-size);
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 50% 42%,
+    #FFFFFF 0%,
+    #FAFAFA 46%,
+    #D6D6D6 100%
+  );
+  box-shadow:
+    0 0 calc(var(--ball-size) * 0.11) rgba(255, 255, 255, 0.30),
+    0 0 calc(var(--ball-size) * 0.34) rgba(255, 255, 255, 0.14);
 }
 
 /* The five-form morph is a cross-dissolve in the dark-field register's own
@@ -4411,6 +4454,8 @@
 @media (prefers-reduced-motion: reduce) {
   .p1-mass,
   .p1-mass[data-visible="true"],
+  .p1-ball,
+  .p1-ball[data-visible="true"],
   .p1-form,
   .p1-form[data-visible="false"],
   .p1[data-live="true"] .s1q-what__title[data-visible="true"] {

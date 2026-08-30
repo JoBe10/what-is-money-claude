@@ -26,12 +26,12 @@ fs.mkdirSync(OUT, { recursive: true });
 const SCENES = [
   {
     slide: 1, key: 'p1', title: 'P1 · Eighty Thousand Hours / What Is Money?',
-    note: 'Eleven beats and the authored entry black. The field fills to eighty thousand, condenses into a mass, and shape-shifts through five forms — one advance each — before the frame clears to the question and the title.',
+    note: 'Eleven beats and the authored entry black. The field fills to eighty thousand, condenses into the ruled ball, and shape-shifts through five forms — one advance each — before the frame clears to the question and the title.',
     beats: [
       'entry · the authored black, spoken over',
       'b1 · the field complete, the counter at 80,000',
       'b2 · the hours line',
-      'b3 · the condensation’s landing — a mass, not a disc',
+      'b3 · the condensation’s landing — the ball, not the mark (ruled 30 Aug)',
       'b4 · SHELL',
       'b5 · GOLD',
       'b6 · PAPER',
@@ -89,7 +89,7 @@ const SCENES = [
 // [file, slide, from-build, wait after the advance (ms), caption]
 const GESTURES = [
   ['g-p1-fill', 1, 0, 4200, 'P1 b0→b1 · the hours arriving, the counter climbing'],
-  ['g-p1-condense', 1, 2, 2600, 'P1 b2→b3 · the condensation, mid-collapse'],
+  ['g-p1-condense', 1, 2, 2600, 'P1 b2→b3 · the condensation, mid-collapse — the ball resolving'],
   ['g-p1-morph', 1, 5, 260, 'P1 b5→b6 · gold becoming paper, mid-dissolve'],
   ['g-s2-entry', 3, null, 1500, 'Scene 2 · the light coming up — the cold entry'],
   ['g-s2-strain', 3, 2, 2600, 'Scene 2 b2→b3 · the strain toward the surgeon'],

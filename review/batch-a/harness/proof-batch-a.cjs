@@ -50,7 +50,7 @@ const STATES = [
   [1, 0, 'p1-b0', PROLOGUE, PROLOGUE_CELLS],
   [1, 1, 'p1-b1', PROLOGUE, PROLOGUE_CELLS],
   [1, 2, 'p1-b2', PROLOGUE, PROLOGUE_CELLS],
-  [1, 3, 'p1-b3', PROLOGUE, PROLOGUE_CELLS],
+  [1, 3, 'p1-b3-ball', PROLOGUE, PROLOGUE_CELLS],   // ruled 30 Aug 2026, letter B
   [1, 4, 'p1-b4', PROLOGUE, PROLOGUE_CELLS],
   [1, 5, 'p1-b5', PROLOGUE, PROLOGUE_CELLS],
   [1, 6, 'p1-b6', PROLOGUE, PROLOGUE_CELLS],
