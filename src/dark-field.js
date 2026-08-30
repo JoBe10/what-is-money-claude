@@ -46,7 +46,10 @@ const modules = import.meta.glob('../assets/dark-field/*.{png,jpg,jpeg,webp}', {
 //            shells          Scene 5, the carrier lineup (individual shells stay
 //                            legible at lineup scale)
 //            cowrie_shells   banked — no current scene
-//   ledger   ledger_glow     Scene 8, the transformation (the glowing close-up)
+//   ledger   ledger_glow     P1's morph, the ledger form (presenter-ruled
+//                            29 August 2026 — the script's line is "it stopped
+//                            looking like anything at all"), and Scene 8, the
+//                            transformation (the glowing close-up)
 //            ledger          the carrier lineup and other display-scale
 //                            ledger appearances
 //   note     gold_certificate  Scene 7, the claim on gold

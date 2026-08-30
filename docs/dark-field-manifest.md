@@ -206,7 +206,7 @@ reference, never a deletion, exactly as the aesthetic law requires.
 | cowrie | `single_cowrie` | P1 morph, centre scale — one object, rhyming with the sequence's other single forms, which is what it was generated for |
 | cowrie | `shells` | Scene 5, the carrier lineup — individual shells stay legible at lineup scale |
 | cowrie | `cowrie_shells` | **banked** — no current scene |
-| ledger | `ledger_glow` | Scene 8, the transformation — the glowing close-up it was generated for |
+| ledger | `ledger_glow` | **P1's morph, the ledger form** *(presenter-ruled 29 August 2026)* · Scene 8, the transformation — the glowing close-up it was generated for |
 | ledger | `ledger` | the carrier lineup and other display-scale ledger appearances |
 | note | `gold_certificate` | Scene 7, the claim on gold |
 | note | `paper` | P1 morph's paper form, and generic note appearances |
@@ -216,6 +216,23 @@ The `used at` columns above and in §2 record the same assignments per row.
 has no assignment slot to fill — a subject key resolves to one file, and which
 scene calls that key is a property of the scenes — so the record lives where a
 reader choosing between two cowries will actually be standing.
+
+**The ledger row was amended by presenter ruling, 29 August 2026.** The Prologue
+sheet rendered `p1-b7` with the `ledger` book and flagged it: the architecture's
+P1 summary says *"glowing ledger entry"* and the script's line is *"it stopped
+looking like anything at all. Numbers in a ledger."* — a physical book on that
+line is arguable. **The presenter ruled `p1-b7` = `ledger_glow`.** The study now
+serves two scenes; `ledger` keeps the lineup and every other display-scale
+ledger appearance. Nothing is regenerated and nothing is banked — a selection is
+a change of the key a scene asks for.
+
+One consequence is geometric and is recorded here because it is the one framing
+the ruling forced. `ledger_glow` is the register's single **3:2** render
+(1536 × 1024); P1's other four forms are 4:3 and its cowrie is 4:5. The
+framing rule requires a box of the render's own aspect, and the Prologue's
+recorded form law fixes the box's height and centre (540 tall, centred at
+960 × 650 — the approved P1-F2 placement). Applied to a 3:2 render that is a
+**810 × 540 box at (555, 380)** — transcribed from the recorded rule, not chosen.
 
 Two of the first shoot's renders need a note rather than a regeneration.
 

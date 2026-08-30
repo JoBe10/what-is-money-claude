@@ -102,7 +102,10 @@ function hoursCounter(st) {
 // box center (960, 650), box height 540. Each form's box takes the aspect its
 // render arrives in, which is what the framing rule needs to hold
 // (src/dark-field.js): 4:3 renders in 720×540 boxes at (600, 380); the one
-// 4:5 portrait (single_cowrie) in a 432×540 box at (744, 380).
+// 4:5 portrait (single_cowrie) in a 432×540 box at (744, 380); and — after the
+// presenter's 29 August ruling that b7 is `ledger_glow` — the one 3:2 landscape
+// in an 810×540 box at (555, 380). The height and centre are the rule's; only
+// the width follows the render.
 const FORM_CX = 960;
 const FORM_CY = 650;
 
@@ -111,6 +114,9 @@ function formLandscape(st, name, alt) {
 }
 function formPortrait(st, name, alt) {
   return df(st, name, FORM_CX - 216, FORM_CY - 270, 432, 540, { alt });
+}
+function formThreeTwo(st, name, alt) {
+  return df(st, name, FORM_CX - 405, FORM_CY - 270, 810, 540, { alt });
 }
 
 // ---- seeded randomness (deterministic renders) -----------------------------
@@ -316,6 +322,13 @@ cell('p1-b7', {
   caption: 'Beat 7 · LEDGER — ledger per the recorded assignment row (manifest §2.2: ledger serves display-scale ledger appearances; ledger_glow is Scene 8’s). FLAGGED in the report: the architecture’s P1 summary says “glowing ledger entry” — his verdict on this cell settles which study the beat gets'
 }, (st) => {
   formLandscape(st, 'ledger', 'A bank ledger emerging from darkness');
+});
+
+cell('p1-b7-glow', {
+  beat: 'P1 beat 7', status: 'approved', decision: null,
+  caption: 'Beat 7 · LEDGER · APPROVED BY RULING (29 Aug 2026) — ledger_glow, the glowing entry, per the presenter’s ruling on the flagged cell: the script’s line is “it stopped looking like anything at all. Numbers in a ledger,” and the architecture’s P1 summary says “glowing ledger entry.” The register’s one 3:2 render, so the form box takes its aspect at the recorded height and centre (810×540 at 555, 380). Replaces the retired p1-b7, which stays on file'
+}, (st) => {
+  formThreeTwo(st, 'ledger_glow', 'A glowing ledger entry emerging from darkness');
 });
 
 cell('p1-b8-a', {

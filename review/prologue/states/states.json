@@ -152,6 +152,13 @@
       "cell": "p1-b8-a",
       "ruling": "C1 = THE COIN. P1's fifth form is the library's `bitcoin` render. p1-b8-b (structured light) stays on file, not selected, per the aesthetic law's file-keeping clause.",
       "consequence": "The manifest's V-1 flag is closed as a PRESENTER decision (docs/dark-field-manifest.md §2.2): the physical-coin render is presenter-accepted for P1's morph, and Scene 10's trade-off strip follows the same ruling for consistency. Batch B's states session inherits it; no Scene 10 work here."
+    },
+    "p1b7": {
+      "assignment": "ledger_glow",
+      "cell": "p1-b7-glow",
+      "ruling": "p1-b7 = `ledger_glow`. The flagged cell (report §6.3) is ruled: the ledger form is the glowing entry, not the book. Re-rendered through the states pipeline as p1-b7-glow, beside the retired p1-b7, which stays on file.",
+      "record": "docs/dark-field-manifest.md §2.2 (the ledger row now serves P1's morph as well as Scene 8) and src/dark-field.js's assignment comment.",
+      "forcedGeometry": "ledger_glow is the register's one 3:2 render (1536×1024). The Prologue's recorded form law fixes the box height (540) and centre (960, 650) and requires the render's own aspect, which gives an 810×540 box at (555, 380). Transcribed from the recorded rule, not chosen — recorded here because it is the one geometry the ruling forced."
     }
   }
 }
