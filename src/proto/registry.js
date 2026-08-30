@@ -25,10 +25,11 @@ import spendOrSave from './gate-2/s4-spend-or-save.js';
 // are the real scene modules under `src/scenes/`, listed here only while
 // they wait for the splice.
 import theFunctionStayed from '../scenes/act-2-the-architecture-of-money/05-the-function-stayed.js';
+import scarcityInMatter from '../scenes/act-2-the-architecture-of-money/06-gold-scarcity-in-matter.js';
 
 export const prototypes = [
   theDirectExchange, theBreakthrough, spendOrSave,
-  theFunctionStayed
+  theFunctionStayed, scarcityInMatter
 ];
 
 export default prototypes;
