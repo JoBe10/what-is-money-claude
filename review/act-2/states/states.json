@@ -1,5 +1,5 @@
 {
-  "date": "2026-08-30T11:15:26.593Z",
+  "date": "2026-08-30T11:16:00.312Z",
   "session": "act-2-states-r2",
   "beatMap": {
     "S5": 8,
@@ -77,11 +77,11 @@
   ],
   "counts": {
     "pending-review": 0,
-    "approved-selection": 1,
+    "approved-selection": 2,
     "approved-adapt": 5,
     "approved-port": 22,
     "determined": 8,
-    "on-file": 3
+    "on-file": 6
   },
   "cells": [
     {
@@ -438,16 +438,28 @@
       "caption": "Beat 5 · both facts on one screen, because both are true. The legacy severance’s own closing pair, unchanged — the honest strength above, the measured wound below."
     },
     {
+      "id": "s9-b1",
+      "file": "s9-b1.png",
+      "scene": "S9",
+      "beat": 1,
+      "frame": "S9-F1",
+      "klass": "NEW",
+      "review": "approved-selection",
+      "system": "A — the hub dissolving",
+      "source": "the presenter’s selection, 31 August 2026 — s9-b1-a carried byte-identical (the systems sheet’s own builder)",
+      "caption": "Beat 1 · THE NETWORK FORMATION — the selected system: the hub dissolving. The institutional shape and its replacement in one frame: a centre with spokes to a ring, both receded to the floor, and peer-to-peer chords forming between the ring’s own nodes at full voice. Mid-formation — about two thirds of the chords are drawn. The argument is visible in the two weights: what is going out, and what is coming in. No text on the frame. Selected 31 August 2026; the render is the candidate’s, byte-identical."
+    },
+    {
       "id": "s9-b1-a",
       "file": "s9-b1-a.png",
       "scene": "S9",
       "beat": 1,
       "frame": "S9-F1",
       "klass": "NEW",
-      "review": "pending-selection",
+      "review": "on-file",
       "system": "A — the hub dissolving",
       "source": "review/act-2/systems — the same builder, reused per the ruled map §6",
-      "caption": "Beat 1 · the hub dissolving. The institutional shape and its replacement in one frame: a centre with spokes to a ring, both receded to the floor, and peer-to-peer chords forming between the ring’s own nodes at full voice. Mid-formation — about two thirds of the chords are drawn. The argument is visible in the two weights: what is going out, and what is coming in. No text on the frame. — Carried from the systems sheet unchanged: the map confirms S9-F1 as the one NEW frame whose candidates still apply, so this cell runs that sheet's builder rather than a second drawing of the same idea."
+      "caption": "Candidate A — the hub dissolving. SELECTED 31 August 2026: this system lands as the beat cell s9-b1."
     },
     {
       "id": "s9-b1-b",
@@ -456,10 +468,10 @@
       "beat": 1,
       "frame": "S9-F1",
       "klass": "NEW",
-      "review": "pending-selection",
+      "review": "on-file",
       "system": "B — the layer breaking",
       "source": "review/act-2/systems — the same builder, reused per the ruled map §6",
-      "caption": "Beat 1 · the layer breaking. The vertical reading: the central layer as one long rule across the top, breaking into segments and receding, while below it a field of independent nodes links to itself. What moves is the centre of gravity — down, and outward. Distinct from A in that nothing is arranged around a centre at all; there is a before and an after in one frame. No text on the frame. — Carried from the systems sheet unchanged: the map confirms S9-F1 as the one NEW frame whose candidates still apply, so this cell runs that sheet's builder rather than a second drawing of the same idea."
+      "caption": "Candidate B — the layer breaking. NOT SELECTED (the presenter chose A, 31 August 2026); kept on file per the aesthetic law."
     },
     {
       "id": "s9-b1-c",
@@ -468,10 +480,10 @@
       "beat": 1,
       "frame": "S9-F1",
       "klass": "NEW",
-      "review": "pending-selection",
+      "review": "on-file",
       "system": "C — the record, copied",
       "source": "review/act-2/systems — the same builder, reused per the ruled map §6",
-      "caption": "Beat 1 · the record, copied. Validation drawn as replication: the record itself is a small stack of ruled lines, and the frame holds one of them receded at the left — the institution’s single copy — and seven identical copies distributed and linked. The mark that repeats is the argument; nothing has to be labelled for “the same record, held independently” to read. No text on the frame. — Carried from the systems sheet unchanged: the map confirms S9-F1 as the one NEW frame whose candidates still apply, so this cell runs that sheet's builder rather than a second drawing of the same idea."
+      "caption": "Candidate C — the record, copied. NOT SELECTED (the presenter chose A, 31 August 2026); kept on file per the aesthetic law."
     },
     {
       "id": "s9-b2",

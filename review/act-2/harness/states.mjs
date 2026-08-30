@@ -978,13 +978,27 @@ cell('s8-b5', {
 // ones, so these cells RUN THOSE BUILDERS — the cell on this sheet and the cell
 // on the systems sheet cannot drift, because they are the same function.
 
+// SELECTED 31 August 2026: A — the hub dissolving (states.json `rulingsR2`).
+// The beat cell runs the selected candidate's builder — the systems sheet's
+// own, so the two cannot drift — and its render is the candidate's, carried
+// byte-identical. The non-selected candidates stay registered on file.
+cell('s9-b1', {
+  scene: 'S9', beat: 1, frame: 'S9-F1', klass: 'NEW', review: 'approved-selection',
+  system: SYSTEM_CELLS['s9f1-a'].system,
+  source: 'the presenter’s selection, 31 August 2026 — s9-b1-a carried byte-identical (the systems sheet’s own builder)',
+  caption: `Beat 1 · THE NETWORK FORMATION — the selected system: the hub dissolving. ${SYSTEM_CELLS['s9f1-a'].caption} Selected 31 August 2026; the render is the candidate’s, byte-identical.`
+}, (st) => SYSTEM_CELLS['s9f1-a'].build(st));
+
 ['a', 'b', 'c'].forEach((k) => {
   const src = SYSTEM_CELLS[`s9f1-${k}`];
+  const verdict = k === 'a'
+    ? 'SELECTED 31 August 2026: this system lands as the beat cell s9-b1.'
+    : 'NOT SELECTED (the presenter chose A, 31 August 2026); kept on file per the aesthetic law.';
   cell(`s9-b1-${k}`, {
-    scene: 'S9', beat: 1, frame: 'S9-F1', klass: 'NEW', review: 'pending-selection',
+    scene: 'S9', beat: 1, frame: 'S9-F1', klass: 'NEW', review: 'on-file',
     system: src.system,
     source: 'review/act-2/systems — the same builder, reused per the ruled map §6',
-    caption: `Beat 1 · ${src.system.split('—')[1].trim()}. ${src.caption} — Carried from the systems sheet unchanged: the map confirms S9-F1 as the one NEW frame whose candidates still apply, so this cell runs that sheet's builder rather than a second drawing of the same idea.`
+    caption: `Candidate ${k.toUpperCase()} — ${src.system.split('—')[1].trim()}. ${verdict}`
   }, (st) => src.build(st));
 });
 
