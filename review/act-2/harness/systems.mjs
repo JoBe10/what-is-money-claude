@@ -18,6 +18,11 @@
 // five frames carries the Claim Mark), the brightness floors, and the
 // self-reference ban.
 
+// The type registers, the line-grammar primitives and the strip's recorded
+// station set are EXPORTED (31 August 2026) so `states.mjs` reuses them rather
+// than transcribing the deck a second time. Nothing about any cell changed:
+// the only edit was the word `export`, and the cell checks re-ran green.
+
 import { glyph } from '/src/components/section-2/glyphs.js';
 import {
   PURCHASING_POWER, PP_SERIES, PP_YEAR_MIN, PP_YEAR_MAX
@@ -61,7 +66,7 @@ function stage() {
 // /_exchangeStage.js `_line`, `_dot`, `GEOM.service`).
 
 const STROKE_W = 1.5;
-const VOICE = {
+export const VOICE = {
   line: 0.35,          // a drawn line at full voice
   lineDim: 0.18,       // a line receded (≥ 0.5 of its landed value)
   dot: 0.7,
@@ -71,7 +76,7 @@ const VOICE = {
   faint: 0.12          // an element that has not landed, or a population gone dark
 };
 
-function line(svg, x1, y1, x2, y2, alpha = VOICE.line, w = STROKE_W) {
+export function line(svg, x1, y1, x2, y2, alpha = VOICE.line, w = STROKE_W) {
   const l = document.createElementNS(svgNS, 'line');
   l.setAttribute('x1', x1); l.setAttribute('y1', y1);
   l.setAttribute('x2', x2); l.setAttribute('y2', y2);
@@ -82,7 +87,7 @@ function line(svg, x1, y1, x2, y2, alpha = VOICE.line, w = STROKE_W) {
   return l;
 }
 
-function dot(svg, x, y, r = 3, alpha = VOICE.dot) {
+export function dot(svg, x, y, r = 3, alpha = VOICE.dot) {
   const c = document.createElementNS(svgNS, 'circle');
   c.setAttribute('cx', x); c.setAttribute('cy', y); c.setAttribute('r', r);
   c.setAttribute('fill', `rgba(255,255,255,${alpha})`);
@@ -90,7 +95,7 @@ function dot(svg, x, y, r = 3, alpha = VOICE.dot) {
   return c;
 }
 
-function pathEl(svg, d, alpha = VOICE.line, w = STROKE_W) {
+export function pathEl(svg, d, alpha = VOICE.line, w = STROKE_W) {
   const p = document.createElementNS(svgNS, 'path');
   p.setAttribute('d', d);
   p.setAttribute('fill', 'none');
@@ -102,7 +107,7 @@ function pathEl(svg, d, alpha = VOICE.line, w = STROKE_W) {
   return p;
 }
 
-function text(st, copy, styles) {
+export function text(st, copy, styles) {
   const el = document.createElement('p');
   el.textContent = copy;
   el.style.cssText = 'position:absolute; margin:0; ' + styles;
@@ -111,17 +116,17 @@ function text(st, copy, styles) {
 }
 
 // The deck's registers, at the values Act I and the Prologue ship.
-const KICKER = (a = 0.5) => 'font-size:20px; font-weight:500; letter-spacing:0.32em;' +
+export const KICKER = (a = 0.5) => 'font-size:20px; font-weight:500; letter-spacing:0.32em;' +
   `text-indent:0.32em; text-transform:uppercase; color:rgba(255,255,255,${a});`;
-const CAPS = (a = 0.75, size = 26) => `font-size:${size}px; font-weight:560;` +
+export const CAPS = (a = 0.75, size = 26) => `font-size:${size}px; font-weight:560;` +
   `letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,${a});`;
-const STATEMENT = (a = 1, size = 46) => `font-size:${size}px; font-weight:540;` +
+export const STATEMENT = (a = 1, size = 46) => `font-size:${size}px; font-weight:540;` +
   `letter-spacing:-0.012em; line-height:1.3; color:rgba(255,255,255,${a});`;
-const PLAIN = (a = 0.58, size = 22) => `font-size:${size}px; font-weight:460;` +
+export const PLAIN = (a = 0.58, size = 22) => `font-size:${size}px; font-weight:460;` +
   `letter-spacing:0.005em; line-height:1.35; color:rgba(255,255,255,${a});`;
 
 /** A grammar mark, centred on (cx, cy) at `size`, in the given voice. */
-function mark(st, name, cx, cy, size = 48, alpha = 0.75) {
+export function mark(st, name, cx, cy, size = 48, alpha = 0.75) {
   const box = document.createElement('div');
   box.style.cssText = `position:absolute; left:${cx - size / 2}px; top:${cy - size / 2}px;` +
     `width:${size}px; height:${size}px; color:rgba(255,255,255,${alpha});`;
@@ -132,7 +137,7 @@ function mark(st, name, cx, cy, size = 48, alpha = 0.75) {
 
 // Deterministic scatter — a seeded LCG, never Math.random, so every cell is
 // pixel-stable across re-renders.
-function lcg(seed) {
+export function lcg(seed) {
   let s = seed >>> 0;
   return () => {
     s = (s * 1664525 + 1013904223) >>> 0;
@@ -322,7 +327,7 @@ cell('s6f2-c', {
 // claim, and the accent is the claim's — is a real question the selection
 // settles; it is flagged rather than decided.
 
-const STATIONS = [
+export const STATIONS = [
   { key: 'gold', name: 'GOLD', gain: 'SCARCITY IN MATTER', dep: 'as value grows, weight grows' },
   { key: 'paper', name: 'CLAIM', gain: 'PORTABILITY', dep: 'trust moved to the issuer' },
   { key: 'ledger', name: 'LEDGER', gain: 'INSTANT TRANSFER', dep: 'the window closed' },
