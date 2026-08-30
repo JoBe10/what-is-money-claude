@@ -123,6 +123,7 @@ The ruling is sharper than the proposal's NEW side and worth quoting for that re
 - **Legacy source:** `src/slides/section-3-function/05-the-palladium-test.js` — the hook, the two-panel chart (`ANNUAL MINE SUPPLY · TONNES` as relative bars with the figures stated, beside `PRICE OF ONE OUNCE · MODERN ERA` on a log axis, one vertex per observed year), the 1803 timing line, the narrowed-role line, and the bar sentence. Data real and sourced (`src/data/palladium.js`; SOURCES WIM-PD-001/002).
 - **The ruling that defines the one change:** synthesis architecture, **Ruling 4** — *"Palladium: **RULED: placed in Scene 10**, as the bar the trade-off strip must clear."*
 - **The one change:** the beat moves out of Act III's judging position and stands against the strip, compressed to the architecture's Scene 10 beats 3–4.
+- **PALLADIUM STAYS — presenter, 30 August 2026, recorded so the question does not reopen.** The beat is in the film, compressed into Scene 10 per the freeze ruling. It has been asked twice; it is settled. A session that finds the compression tight tightens the compression, not the beat's existence.
 - **Note:** the two-epoch honesty (R3.1 §C) travels with the port. The price panel invites a fair objection — gold was not the world's money by 1990 — and the beat answers it by running palladium against **both** of gold's eras.
 
 ---
