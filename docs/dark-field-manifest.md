@@ -168,6 +168,22 @@ note — the §3.0 note asked for exactly that, so no denomination reads as a
 specific currency. Measured framing row, pasted into `src/dark-field.js`:
 `fiat: [1.127, 0.9, -1.9]`.
 
+**The Act II states r2 drop — `metals`, ingested 31 August 2026**
+(presenter-generated; gated and ingested through the standard harness for the
+rails law's S5 band — the drop-zone run is `review/act-2/grade-metals-drop.json`,
+and the post-ingest run over the whole shipping set is
+`review/act-2/grade-shipping-set-r2.json` — **24 images, 120 checks, 0 failures**):
+
+| subject key | file | used at | corner / border | dark | R−B |
+|---|---|---|---|---|---|
+| `metals` | `assets/dark-field/metals.png` | S5's rail — the object band above the line (the rails law, 31 Aug 2026); also lights 2.4's dormant featured-moment slot on the legacy deck (R7.3 §7, built for exactly this) | 0.09 / 0.08 | 82.1% | +83.8 |
+
+The render is a stack of cast ingots of different metals — the §6 optional
+prompt answered. It passes all five clauses with a single key (warm fraction
+99.5%, spread 1), and its frame is **1672 × 941 — the `fiat` family's near-16:9**,
+so its box takes that aspect under the framing rule. Measured framing row,
+pasted into `src/dark-field.js`: `metals: [1.457, -0.4, -0.4]`.
+
 **Its frame is a fourth aspect family.** `fiat.png` is 1672 × 941 — near 16:9,
 the widest in the register — where the five-candidate lineup's display box is
 180 × 150 (6:5). That is a 48% aspect departure, well past the framing rule's
@@ -445,9 +461,15 @@ lineup keeps its own:
 
 | status | subjects |
 |---|---|
-| **shipping** (23) | `shoe` · `wine` · `shells` · `gold` · `paper` · `ledger` · `bitcoin` · `cattle` · `salt` · `cowrie_shells` · `iron` · `surgeon` · `meal` · `property` · `shares` · `single_cowrie` · `gold_certificate` · `vault` · `ledger_glow` · `palladium` · `coffee_cup` · `patient` · **`fiat`** |
+| **shipping** (24) | `shoe` · `wine` · `shells` · `gold` · `paper` · `ledger` · `bitcoin` · `cattle` · `salt` · `cowrie_shells` · `iron` · `surgeon` · `meal` · `property` · `shares` · `single_cowrie` · `gold_certificate` · `vault` · `ledger_glow` · `palladium` · `coffee_cup` · `patient` · `fiat` · **`metals`** |
 | **regenerate** (0) | — |
-| **optional** (2) | `metals`, which would light the second featured moment at 2.4 (R7.3 §7 — implemented, dormant, and it does not stub to a glyph because the stop below it already shows that glyph); `gold-native`, only if the two-survivors arrival is ruled in and wants its own study |
+| **optional** (1) | `gold-native`, only if the two-survivors arrival is ruled in and wants its own study |
+
+`metals` was the last optional study with a standing call site; it was
+presenter-generated and ingested 31 August 2026 (the r2 drop above) for the
+rails law's S5 band, and — because the eager glob and 2.4's
+`hasDarkField('metals')` slot were built for exactly this — it also lights the
+legacy competition record's featured moment with no code change.
 
 **The register is complete** (Batch A, 29 August 2026). `fiat` was the last gap
 and it is gated, ingested and rowed (§3.0); the five-candidate lineup no longer

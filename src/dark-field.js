@@ -96,7 +96,9 @@ export const darkField = Object.fromEntries(
 // the 4:5 box the rail's contender row now uses, `ledger_glow`, the Batch A
 // drop's one 3:2 landscape, which needs a 3:2 box (P1's ledger form gives it
 // one), and `fiat`, ingested at Batch A, which is 1672×941 — near 16:9, the
-// widest frame in the register. A box with a materially different aspect would need
+// widest frame in the register. `metals`, ingested at the Act II states r2
+// session for S5's rail band (the rails law), arrives at the same 1672×941 and
+// joins that family. A box with a materially different aspect would need
 // the scale computed against `object-fit: contain`'s actual fit rather than
 // against the frame — which is exactly the defect that showed up when the four
 // portrait renders first landed in the old landscape box: the rule was applied
@@ -119,6 +121,7 @@ const FRAMING = {
   ledger: [1.222, -1.6, 1],
   ledger_glow: [1.122, 3.2, -5.7],
   meal: [0.935, -0.8, 2.4],
+  metals: [1.457, -0.4, -0.4],
   palladium: [1.287, -1.8, 1.5],
   paper: [1.313, 0.8, 2],
   patient: [1.217, 3.4, -5],

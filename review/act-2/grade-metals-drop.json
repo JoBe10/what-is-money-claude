@@ -1,0 +1,82 @@
+{
+  "phase": "R7.2",
+  "dir": "assets/dark-field/incoming",
+  "thresholds": {
+    "cornerMax": 6,
+    "borderMax": 6,
+    "darkFracMin": 0.5,
+    "warmthMin": 18,
+    "warmFracMin": 0.9
+  },
+  "images": 1,
+  "checks": 5,
+  "failures": 0,
+  "frameTarget": 0.88,
+  "framing": {
+    "metals": [
+      1.457,
+      -0.4,
+      -0.4
+    ]
+  },
+  "rows": [
+    {
+      "file": "metals.png",
+      "zone": "integrated",
+      "bytes": 1134388,
+      "width": 1672,
+      "height": 941,
+      "corners": {
+        "tl": 0.07,
+        "tr": 0.09,
+        "bl": 0.09,
+        "br": 0.09
+      },
+      "cornerMax": 0.09,
+      "border": 0.08,
+      "darkFrac": 0.821,
+      "subjectW": 0.528,
+      "subjectH": 0.604,
+      "subjectDX": 0.004,
+      "subjectDY": 0.004,
+      "highlightFrac": 0.0292,
+      "warmth": 83.8,
+      "highlightRGB": [
+        210,
+        170,
+        126
+      ],
+      "warmFrac": 0.995,
+      "keyAzimuth": 32,
+      "keyOffset": 0.016,
+      "spread": 1
+    }
+  ],
+  "results": [
+    {
+      "name": "grade: metals.png — frame corners are black (≤ 6)",
+      "ok": true,
+      "detail": "max corner 0.09 (tl 0.07 tr 0.09 bl 0.09 br 0.09)"
+    },
+    {
+      "name": "grade: metals.png — no environment reaches the border (≤ 6)",
+      "ok": true,
+      "detail": "border ring 0.08"
+    },
+    {
+      "name": "grade: metals.png — the subject emerges from darkness (≥ 50% below L16)",
+      "ok": true,
+      "detail": "82.1% dark"
+    },
+    {
+      "name": "grade: metals.png — the key is warm (R−B ≥ 18)",
+      "ok": true,
+      "detail": "R−B 83.8 on 2.92% of the frame, mean highlight rgb(210, 170, 126)"
+    },
+    {
+      "name": "grade: metals.png — the highlight population is warm throughout (≥ 90%)",
+      "ok": true,
+      "detail": "99.5% of highlight pixels warm"
+    }
+  ]
+}
