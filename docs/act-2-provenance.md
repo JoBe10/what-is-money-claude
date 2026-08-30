@@ -24,7 +24,7 @@
 | **S5-F2** a verdict state | **PORT** | `2-04-the-competition-record` builds 1–4 — one wound, one line, the dimmed-prior settle |
 | **S5-F3 ◆** the Zanzibar receipt | **ADAPT** | `2-07-the-severance`'s dated-fact treatment. **Ruling:** *generalized as the film-wide evidence grammar* — Zanzibar, 1971 and 1803 all speak it |
 | **S6-F1** the gold study, SCARCITY IN MATTER | **PORT** | P1-F2's display-scale study box (`p1-b4`…`p1-b8`, approved) + master §11's display rule |
-| **S6-F2 ◆** the elimination funnel | **ADAPT** | `2-05-two-survivors` + `ElementGrid`. **Ruling 3:** *the periodic elimination — kept, compressed to one continuous beat inside Scene 6* |
+| **S6-F2 ◆** the elimination funnel | **PORT** | `2-05-two-survivors` + `ElementGrid`, at the legacy pacing. **Ruling 3 struck 31 Aug 2026** (master §13): the compression is void; the treatment transplants verbatim — one wave of eliminations per advance, exactly as `2-05` performs it |
 | **S6-F3** the mass state | **NEW** | none — the deck has never drawn represented value against required mass |
 | **S7-F1** custody: the vault study | **PORT** | P1-F2's display-scale study box, subject `vault` |
 | **S7-F2** the detachment | **NEW** | none — the legacy detaching rung's meaning is *vertical abstraction*; the film's moment is *outward travel with a dependency line back*. Candidates for the travel's geometry |
@@ -36,6 +36,8 @@
 | **S10-F2** palladium: the bar | **ADAPT** | `3-05-the-palladium-test`. **Ruling 4:** *palladium — placed in Scene 10, as the bar the trade-off strip must clear* |
 
 **Ruled: 8 PORT · 3 ADAPT · 3 NEW.** Eleven of fourteen frames are made from material the deck had already proven.
+
+**Amended 31 August 2026:** architecture Ruling 3 is struck (master §13), so S6-F2 reverts from ADAPT to **PORT** — the map now stands at **9 PORT · 2 ADAPT · 3 NEW**. The struck ADAPT block is kept in §4 as the record of the ruling this amendment decided against.
 
 ---
 
@@ -91,7 +93,8 @@ The ruling is sharper than the proposal's NEW side and worth quoting for that re
 |---|---|---|
 | **S5-F1 ◆** the through-line | `src/components/section-4/ClaimObject.js` + `CarrierShell.js` (construction C), as `4-06-claim-and-carrier` stages them | The claim inside the carrier: the disc absolutely centred between the bands (the 27 Aug centring ruling, already in `.s4-claim-object__disc`), the shell at the accent held below the disc's brightness so the carried thing stays brightest |
 | **S5-F2** a verdict state | `src/slides/section-2-origin/04-the-competition-record.js`, builds 1–4 | The contender row's verdict rhythm: the fallen carrier's glyph and label, one wound line beneath, the landed wound at full voice while the earlier ones hold the dimmed-prior step (§9.4 rule 10). The wounds are the legacy verdicts — Batch B §2 already says *adapt, don't invent new wounds* |
-| **S6-F1** the gold study | `review/prologue/states/p1-b5.png` (P1-F2, approved 25 Aug, carried byte-identical) + master §11 | The display-scale study box: 540 tall at the forms' centre, the render's own aspect, nothing else in the frame. The statement over it is the master's display rule, not a new treatment |
+| **S6-F1** the gold study | `review/prologue/states/p1-b5.png` (P1-F2, approved 25 Aug, carried byte-identical) + master §11 | The display-scale study box: 540 tall at the forms’ centre, the render’s own aspect, nothing else in the frame. The statement over it is the master’s display rule, not a new treatment |
+| **S6-F2 ◆** the elimination funnel | `src/slides/section-2-origin/05-two-survivors.js` + `src/components/section-2/ElementGrid.js` *(reverted from ADAPT by the 31 Aug strike — §4)* | The legacy build structure whole, at its own pacing: the kicker, the stylized table, then **one wave of eliminations per advance** with its own line rendered exactly as the legacy shows it (one line at a time), the furnace wave, and the verdict *Workable nobility leaves two.* Nothing inside any step changed |
 | **S7-F1** custody: the vault | the same box, subject `vault` (batch-b §5, assigned, in the shipping library) | The identical treatment with a subject that has not been on screen. §0's convention is what makes this a PORT, and the presenter confirmed §0 |
 | **S8-F1** the dissolve landing | P1's five-form morph — `.p1-form`, the dark-field register's 520 ms reveal with the outgoing form released 180 ms late | Not merely the mechanism: `p1-b6` → `p1-b7-glow` **is** paper dissolving into `ledger_glow`, and both cells are presenter-approved |
 | **S8-F2 ◆** the chart | `src/slides/section-2-origin/07-the-severance.js` | The plot entire: `src/data/purchasing-power.js` untouched, one vertex per observed year, the frozen draw order and per-series alpha, the 1971 = 100 reference line, the end-label spread, the index note |
@@ -111,12 +114,14 @@ The ruling is sharper than the proposal's NEW side and worth quoting for that re
 - **The one change:** the treatment stops being one slide's composition and becomes a system that carries **place · date · fact** (Zanzibar) and **date · fact** (1971, 1803) in the same grammar. Nothing else — not the register, not the scale, not the one-sentence discipline.
 - **Note:** the three specimens are all recorded film material. Zanzibar 1800s is architecture Scene 5 beat 5; 1971 is Scene 8's severance; 1803 is Scene 6's foreshadow, paid off at palladium in Scene 10.
 
-## S6-F2 ◆ — the elimination funnel
+## S6-F2 ◆ — the elimination funnel · **STRUCK 31 August 2026 — now a PORT**
+
+> **Ruling 3 is struck** (presenter, 31 August 2026; the trail is master §13: ruled 25 Aug at Stage 0, struck 31 Aug, grounds — the legacy treatment is proven and preferred). The compression below is void; the frame is a **PORT** of the legacy treatment at its own pacing, and the §3 table carries its row. The block is kept as the record of the ruling this strike decided against.
 
 - **Legacy source:** `src/slides/section-2-origin/05-two-survivors.js` and `src/components/section-2/ElementGrid.js` — the stylized periodic table rising over the dimmed rail, then five elimination waves, each an auto-timed gesture on its own advance, each with its own line: *Anything that floats away is out · Anything that rusts, burns, or dissolves is out · Anything that kills the holder is out · Anything that will not hold a shape is out* — then the furnace wave, and the verdict *Workable nobility leaves two.*
-- **The ruling that defines the one change:** synthesis architecture, **Ruling 3** — *"The periodic elimination: **RULED: kept, compressed** to one continuous beat inside Scene 6."*
-- **The one change:** five separately-advanced waves become one continuous beat. Nothing else — not the population, not the eliminated regions, not the wave language, not the verdict.
-- **Note:** the furnace wave is not decoration and must survive the compression. It exists by ruling R-03 (R4.1) because chemistry alone leaves the noble family, not two survivors — and Scene 10 needs palladium to be a candidate that lost on **timing**, not one chemistry had already excluded.
+- **The ruling that defined the one change (struck):** synthesis architecture, **Ruling 3** — *"The periodic elimination: **RULED: kept, compressed** to one continuous beat inside Scene 6."*
+- **The one change (void):** five separately-advanced waves become one continuous beat. Nothing else — not the population, not the eliminated regions, not the wave language, not the verdict.
+- **Note (this clause survives the strike):** the furnace wave is not decoration. It exists by ruling R-03 (R4.1) because chemistry alone leaves the noble family, not two survivors — and Scene 10 needs palladium to be a candidate that lost on **timing**, not one chemistry had already excluded.
 
 ## S10-F2 — palladium: the bar
 
@@ -155,7 +160,7 @@ The ruling is sharper than the proposal's NEW side and worth quoting for that re
 | Systems-sheet frame | Ruled class | Do its candidates apply? |
 |---|---|---|
 | **S9-F1** the network | **NEW** | **YES** — the selection stands as the sheet asks: `s9f1-a` · `s9f1-b` · `s9f1-c` |
-| **S6-F2** the funnel | ADAPT (Ruling 3) | No. Candidate A — *the element field* — is a re-derivation of `ElementGrid`, which is the thing itself |
+| **S6-F2** the funnel | PORT (Ruling 3 struck 31 Aug 2026; was ADAPT) | No. Candidate A — *the element field* — is a re-derivation of `ElementGrid`, which is the thing itself |
 | **S10-F1** the strip | PORT | No. Candidate A — *the rail* — is a re-derivation of `EvolutionRail` |
 | **S8-F2** the chart | PORT | No. The legacy chart ships untouched |
 | **S5-F3** the evidence | ADAPT | No. The treatment ports; only its generalization is the change |

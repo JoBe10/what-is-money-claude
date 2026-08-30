@@ -16,7 +16,7 @@
 |---|---|---|
 | 1 | The waypoint device and all visible structure | **RULED: retired.** The thread — the unfinished exchange, carried by the Claim Mark — is the wayfinding now; act changes are questions the story generates. |
 | 2 | The murmuration | **RULED: retired with honor.** The asset is banked, not deleted from history; its soul survives as one spoken line in Scene 3 (*nobody decided, everyone converged*). |
-| 3 | The periodic elimination | **RULED: kept, compressed** to one continuous beat inside Scene 6. |
+| 3 | The periodic elimination | **RULED: kept, compressed** to one continuous beat inside Scene 6. **STRUCK 31 Aug 2026** (presenter, freeze-register amendment — master §13): the elimination returns to the legacy pacing — one wave of eliminations per advance, exactly as `2-05-two-survivors` performs it, nothing inside any step changed one bit. Grounds: the legacy treatment is proven and preferred. |
 | 4 | Palladium | **RULED: placed in Scene 10**, as the bar the trade-off strip must clear. |
 | 5 | The stability scene | **RULED: cut.** The content distributes — the two-question distinction and the stage-signature inoculation into **Scene 9's script**; the full steelman into **Scene 23's notes** as Q&A armor; the rules line remains in **Scene 29**. |
 
@@ -54,7 +54,7 @@ Beats: (1) the saved claim becomes the through-line as carriers transform around
 This preserves the evidence that money is a competition with casualties, inside their architecture frame, in one scene.
 
 ### Scene 6 — Gold: Scarcity in Matter *(THEIRS + our chemistry beat, compressed)*
-Beats: (1) premium gold render — *"SCARCITY IN MATTER"*; (2) the funnel, fast: run the competition across every element — gases, reactives, radioactives out; the forge leaves two; scarcity leaves one *(our periodic elimination compressed to one continuous beat — **RULED 3: kept, compressed**)*; (3) hard to create, hard to destroy — (4) hard to move: as represented value grows, required mass visibly grows.
+Beats: (1) premium gold render — *"SCARCITY IN MATTER"*; (2) the funnel: run the competition across every element — the table rises, then one wave of eliminations per advance (gases · reactives · radioactives · the shapeless), the forge leaves two, scarcity leaves one *(our periodic elimination at the legacy pacing — **RULED 3 struck 31 Aug 2026**: one wave per advance, exactly as `2-05` performs it)*; (3) hard to create, hard to destroy — (4) hard to move: as represented value grows, required mass visibly grows.
 
 ### Scene 7 — Claims on Gold: Portability Through Trust *(THEIRS + our rung motivation)*
 Gold stops in custody; the paper claim detaches and travels; dependency line back to the vault. Script carries our motivation (coins solve the market stall, not the merchant fleet; fortunes mean weight, guards, roads; the vault receipt circulates instead). *"The gold stayed. The claim moved."* / *"Portability improved. Trust moved to the issuer."*
