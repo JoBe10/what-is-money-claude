@@ -247,3 +247,37 @@ closed on the presenter's recorded word.** The failure language of the film
 is the absence: no return line before the birth; the claim as the answer to
 a void. Batch A implementation now waits only on the Prologue sheet's
 per-cell approvals (§8) and the C1 selection.
+
+---
+
+# 11. The condensation ruling (appended 30 August 2026 — letter B)
+
+The Batch A report flagged the condensation as one of the tensions for the
+presenter's eye. His ruling arrived as a letter in the session prompt, and it is
+**B**:
+
+> **The condensation lands on a smooth luminous ball that is deliberately *not*
+> the mark** — pure-white monochrome per P1's register, no warm tone, no orange
+> anywhere near it, a tighter and cooler glow falloff than the ClaimMark's,
+> sized per the reopened cell's box. It must read as premium and intentional as
+> a still and stay clearly distinct from the Claim Mark at a glance.
+
+**What is reopened, audited rather than assumed.** P1 puts the condensed object
+on stage at exactly one build — `_applyBuild` sets it visible at `n === 3` and
+nowhere else — so **`p1-b3` is the only affected cell**. No adjacent state shows
+the condensed mass before the shell, and the letter changes no other beat.
+`p1-b3` is presenter-reopened and superseded by **`p1-b3-ball`**; the retired
+cell stays on file under the aesthetic law's file-keeping clause, and
+`states.json` carries the ruling (`rulings.condensation`), the retirement and
+the amended `approvedSet`.
+
+**What is *not* amended.** Letter B leaves the master's no-anticipation rule
+exactly where it was. The freeze-register amendment the brief reserves for
+letter A — *"the no-anticipation rule is amended for P1's condensation; the birth
+in Scene 3 is a knowing reappearance"* — is **not made**, because under B the
+condensation is not the mark. Scene 3's birth remains the first appearance of
+both the disc and the accent, and the Prologue stays monochrome plus
+photographic warmth.
+
+The object's own parameters, and the measured distance between it and the Claim
+Mark, are in the fix session's report.

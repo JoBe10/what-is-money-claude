@@ -56,8 +56,14 @@
       "status": "determined",
       "decision": null,
       "caption": "Beat 3 · the condensation’s settled landing — “condenses into… this.”: the field’s own points of light gathered into one dense mass at the forms’ center. A mass, deliberately not a disc (the disc is born in Scene 3) and not yet any form (the shell is the next advance’s reveal)",
-      "ruling": "approved",
-      "rulingNote": "Approved 29 Aug 2026 — the presenter's per-cell verdict on the Prologue sheet"
+      "ruling": "retired",
+      "rulingNote": "Replaced by p1-b3-ball on the condensation ruling. Kept on file (aesthetic-law file-keeping clause)",
+      "ruledReplaced": {
+        "date": "2026-08-30",
+        "ruling": "The condensation ruling, letter B: the landing is a smooth luminous ball, not the field's own units massed.",
+        "replacedBy": "p1-b3-ball",
+        "note": "This cell stays on file, retired — the aesthetic law's file-keeping clause."
+      }
     },
     {
       "id": "p1-b4",
@@ -206,14 +212,26 @@
       "record": "docs/dark-field-manifest.md §2.2 (the ledger row now serves P1's morph as well as Scene 8) and src/dark-field.js's assignment comment.",
       "forcedGeometry": "ledger_glow is the register's one 3:2 render (1536×1024). The Prologue's recorded form law fixes the box height (540) and centre (960, 650) and requires the render's own aspect, which gives an 810×540 box at (555, 380). Transcribed from the recorded rule, not chosen — recorded here because it is the one geometry the ruling forced."
     },
-    "allCells": "ALL REMAINING PROLOGUE CELLS: APPROVED (Batch A implementation brief §1.4). With C1 ruled A and p1-b7 ruled to ledger_glow, every beat of P1 and P2 now has one approved cell and the Prologue is under the full-coverage rule with no open decision."
+    "allCells": "ALL REMAINING PROLOGUE CELLS: APPROVED (Batch A implementation brief §1.4). With C1 ruled A and p1-b7 ruled to ledger_glow, every beat of P1 and P2 now has one approved cell and the Prologue is under the full-coverage rule with no open decision.",
+    "condensation": {
+      "date": "2026-08-30",
+      "recordedBy": "the P1 condensation fix session, from the presenter's letter in the session prompt",
+      "letter": "B",
+      "ruling": "THE CONDENSATION LANDS ON A SMOOTH LUMINOUS BALL THAT IS DELIBERATELY NOT THE MARK. Pure-white monochrome per P1's register — no warm tone, no orange anywhere near it — with a tighter, cooler glow falloff than the ClaimMark's, sized per the reopened cell's box. It must read as premium and intentional as a still and stay clearly distinct from the Claim Mark at a glance.",
+      "reopened": "p1-b3 — the granular condensed mass is presenter-reopened and superseded by p1-b3-ball. The retired cell stays on file (aesthetic-law file-keeping clause).",
+      "scope": "The condensation landing only. Audited rather than assumed: P1's _applyBuild puts the condensed object on stage at exactly one build (setVisible(mass, n === 3)) and nowhere else, so no adjacent state shows the condensed mass before the shell. No other P1 cell is affected, and the letter changes no other beat.",
+      "notAmended": "Letter B leaves the master's no-anticipation rule untouched: the ball is not the mark, so the birth in Scene 3 stays the accent's first appearance and the disc's first appearance. The freeze-register amendment the brief reserves for letter A is NOT made.",
+      "approvedSetAmendments": {
+        "P1 b3": "p1-b3-ball"
+      }
+    }
   },
   "approvedSet": {
-    "note": "the authoritative approved set for the Prologue — the presenter's rulings of 29 August 2026 (rulings block). One cell per beat, plus the authored entry black.",
+    "note": "the authoritative approved set for the Prologue — the presenter's rulings of 29 August 2026 (rulings block). One cell per beat, plus the authored entry black. Amended 30 August 2026 by the condensation ruling (rulings.condensation): P1 b3 is now p1-b3-ball.",
     "P1 entry": "p1-b0",
     "P1 b1": "p1-b1",
     "P1 b2": "p1-b2",
-    "P1 b3": "p1-b3",
+    "P1 b3": "p1-b3-ball",
     "P1 b4": "p1-b4",
     "P1 b5": "p1-b5",
     "P1 b6": "p1-b6",
