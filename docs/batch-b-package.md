@@ -3,7 +3,7 @@
 
 **Status — 31 August 2026.** This package follows `docs/batch-a-package.md`'s template. **The scripts are installed and the beat maps are frozen** (§1, §2) — installed at 33 beats, **amended the same day to 37 by the Ruling 3 strike** (master §13): Scene 6 re-splits to the legacy advance structure, one wave of eliminations per advance. The contracts each script had to satisfy are kept at the end of §2 as the record. **The provenance of every §3 frame is ruled** in `docs/act-2-provenance.md`, which governs: a frame is PORT, ADAPT or NEW before anyone touches it, and §3's ◆ marks are now historical — the map decides where candidates apply, and it applies them to **S6-F3, S7-F2 and S9-F1 only**.
 
-**Pipeline for this batch (in order):** ~~essay sections~~ → ~~scripts installed + maps frozen~~ → ~~**full-coverage beat-state sheet**~~ (`review/act-2/states/`, 31 August) → **Prototype Gate 3** (the architecture morph, live-judged) → Batch B implementation (Opus, FAST) → exit test.
+**Pipeline for this batch (in order):** ~~essay sections~~ → ~~scripts installed + maps frozen~~ → ~~**full-coverage beat-state sheet**~~ (`review/act-2/states/`, 31 August) → ~~**Prototype Gate 3**~~ *(struck 31 August 2026 — collapsed into the implementation review, §4)* → Batch B implementation (two sessions under the sizing law) → **the act viewing — the gate** → exit test.
 
 **Act II register (binding):** material-to-information transformations, object-led. Dark-field renders at display scale carry the objects; line grammar carries the two diagrammatic systems (the funnel, the strip); the Claim Mark is present throughout as the through-line — orange exists in this act. No new technical term is introduced anywhere in Act II (presenter-ruled). Register boundary law applies: dark-field never enters a diagram; glyphs never carry a sensory beat at display scale.
 
@@ -147,9 +147,13 @@ Every frame: 1920×1080, real assets, real type, final composition, brightness r
 - **S10-F1 ◆** — the strip: GOLD → CLAIM → LEDGER → BITCOIN with gain/dependency pairs (candidates for the strip's grammar; must rhyme with the film's line system).
 - **S10-F2** — palladium: the bar against the strip, the insufficiency line.
 
-# 4. Prototype Gate 3 — the architecture morph
+# 4. ~~Prototype Gate 3 — the architecture morph~~ · STRUCK — the implementation review is the gate
 
-**Scope:** the act's signature system — the continuous transformation that carries one value through changing architectures: **gold → claim-on-gold → ledger entry → bitcoin**, threading Scenes 6→9 and returning as Scene 10's strip. Built in the scratch route against approved states, after the beat-state sheet, before implementation. The gate's questions, judged live by the presenter: does the *same value* visibly persist through every transformation (the through-line unbroken, as the Claim Mark was through Act I); does each handoff read as gain-plus-dependency rather than mere succession; does the morph stay object-led until Scene 8's dissolve, where material becomes information on screen. Runtime candidates where the transformation's character is genuinely open. The gate closes on the presenter's word.
+**Presenter process amendment, 31 August 2026 (Batch B implementation brief §1.3).** The prototype gate for the architecture morph is struck from this batch's pipeline: **the presenter's live viewing of the implemented act is the gate.** What he judges there, by name: **the claim's connective journey — the S5 entry from Scene 4's world, the drawn carrier taken and held, the certificate travel out of the vault, the arrival at the strip.** Disappointing seams are fixed by ruled iterations against the pinned states — the approved cells stand; only the motion between them iterates. The amendment is recorded in the freeze trail (master §13).
+
+The struck gate's scope is kept below as the record of what the viewing now carries, because its questions did not die — they moved to the viewing:
+
+> ~~**Scope:** the act's signature system — the continuous transformation that carries one value through changing architectures: **gold → claim-on-gold → ledger entry → bitcoin**, threading Scenes 6→9 and returning as Scene 10's strip. Built in the scratch route against approved states, after the beat-state sheet, before implementation.~~ The gate's questions, now the viewing's: does the *same value* visibly persist through every transformation (the through-line unbroken, as the Claim Mark was through Act I); does each handoff read as gain-plus-dependency rather than mere succession; does the morph stay object-led until Scene 8's dissolve, where material becomes information on screen. The viewing closes on the presenter's word.
 
 # 5. Asset manifest for Act II
 

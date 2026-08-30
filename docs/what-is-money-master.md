@@ -436,6 +436,7 @@ Every freeze and every amendment, in order. **A freeze is reopened only by the p
 | 25 Aug 2026 | **Stage 0 — consolidation.** This document created; the archaeology archived; process law amended into `AGENTS.md`; `film-rebuild` opened. Rules mapped rather than invented, and flagged where mapped: the neutrality boundary (§3.2), the acceptance test (§3.6), the claim ladder (§3.3), D9 (§4), the one-term allocations (§3.4), and the color arc's anchor (§8.5). |
 | 25 Aug 2026 | **The six Stage-0 flags ruled** (presenter, at the Batch A frames session). The neutrality boundary is **before Act IV** (§3.2); the acceptance test runs **before Scene 23** (§3.6); the claim ladder is **replaced by the enlargement sequence** Scenes 3 → 7 → 15 → 16, Scene 16 landing as recognition (§3.3); **D9 is restated as progressive enlargement landing as recognition at the return** (§4); the one-term allocations are **Act I the double coincidence of wants, Act II none, Act III base money** (§3.4); the accent's entry point is **the Claim Mark's birth in Scene 3**, with the Prologue **monochrome plus photographic warmth** (§8.5). |
 | 31 Aug 2026 | **Structure-freeze amendment — architecture Ruling 3 is struck** (presenter). The periodic elimination returns to the legacy pacing: **one wave of eliminations per advance, exactly as `2-05-two-survivors` performs it, nothing inside any step changed one bit.** Trail: ruled 25 Aug 2026 at Stage 0 (*"kept, compressed to one continuous beat inside Scene 6"*); struck 31 Aug 2026; the presenter's grounds: the legacy treatment is proven and preferred. Consequences, recorded where they land: Scene 6's script re-splits to the legacy advance structure and the frozen beat map amends with it (`docs/batch-b-package.md` §1 — S6 = 9 beats, Act II = 37); S6-F2 reverts from ADAPT to **PORT** in `docs/act-2-provenance.md`. |
+| 31 Aug 2026 | **Process amendment — Prototype Gate 3 is collapsed into the implementation review** (presenter, Batch B implementation brief §1.3). The prototype gate for the architecture morph is struck from the Batch B pipeline; **the presenter's live viewing of the implemented act is the gate**, with the claim's connective journey — S5 entry → carrier → certificate travel → strip arrival — named as what he judges. Disappointing seams are fixed by ruled iterations against the pinned states. The gate's questions move to the viewing intact (`docs/batch-b-package.md` §4 carries the record); §14's gate list is annotated. Gates 1 and 2 ran and closed as ordered; gates 4 and 5 stand. |
 
 ---
 
@@ -448,7 +449,7 @@ What belongs in this document is the shape of the work:
 **Prototype gates, before their batches:**
 1. **Claim Mark** — A/B/C contact sheet; the presenter selects. The selection becomes the film-wide protagonist.
 2. **Scenes 2–4 in the scratch route** — the signature system; not proceeding until exceptional.
-3. **The architecture morph** — gold → claim → ledger → bitcoin.
+3. ~~**The architecture morph** — gold → claim → ledger → bitcoin.~~ *Struck 31 Aug 2026 (§13): collapsed into the Batch B implementation review — the act viewing is the gate.*
 4. **HOLD / SPEND / PRICE** legible without narration.
 5. **Late-deck sample renders.**
 
