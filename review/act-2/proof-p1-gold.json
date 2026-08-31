@@ -1,0 +1,39 @@
+{
+  "date": "2026-08-31T10:21:24.180Z",
+  "session": "act-2-rail-states",
+  "cell": "p1-b5",
+  "baseline": "batch-b",
+  "sha256": {
+    "now": "20890fa27fdb83b3d488af436291b2e5034aa7d2f8d931d033da34654a8d33a7",
+    "atTag": "8eb52541aa21a88011ea7207044a8a77770e6163ebbc02fd4a5392742c47d108"
+  },
+  "newBox": {
+    "x0": 480,
+    "y0": 380,
+    "x1": 1440,
+    "y1": 920
+  },
+  "retiredBoxX": {
+    "x0": 600,
+    "x1": 1320
+  },
+  "litBBox": {
+    "x0": 540,
+    "y0": 412,
+    "x1": 1401,
+    "y1": 911,
+    "n": 197027
+  },
+  "cornerMean": 0,
+  "borderMean": 0,
+  "checks": {
+    "reRendered": true,
+    "size": true,
+    "corner": true,
+    "border": true,
+    "content": true,
+    "insideNewBox": true,
+    "widerThanOldBox": true
+  },
+  "failures": 0
+}
