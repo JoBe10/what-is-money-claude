@@ -1,13 +1,14 @@
-// Act II — the shared stage for Scenes 5, 6 and 7 (Batch B, Session 1).
+// Act II — the shared stage for Scenes 5 through 10 (Batch B).
 //
-// One continuous visual world: the three scene modules share this one stage
+// One continuous visual world: the six scene modules share this one stage
 // object, cached on the engine's container across within-group handoffs, so
-// the S5→S6 and S6→S7 boundaries are real shared-DOM continuity and never a
-// remount. Scenes 8–10 join this stage in Session 2. The scenes drive it
-// through two surfaces only, exactly as Act I's stage established:
+// every in-act boundary — S5→S6, S6→S7, S7→S8, S8→S9, S9→S10 — is real
+// shared-DOM continuity and never a remount. Scenes 5–7 landed at Session 1;
+// Scenes 8–10 joined at Session 2. The scenes drive it through two surfaces
+// only, exactly as Act I's stage established:
 //
 //   applyState(sceneId, build)  — reconstructs the COMPLETE settled state of
-//                                 any of the 22 builds, instantly. Direct
+//                                 any of the 37 builds, instantly. Direct
 //                                 entry, backward movement, reduced motion
 //                                 and interrupted animations all resolve
 //                                 here.
@@ -34,6 +35,13 @@
 // components' own — the wound landings, the camera move, the elimination
 // waves are CSS and camera state the components already ship.
 //
+// WHERE THE PORT IS A SLIDE'S OWN COMPOSITION rather than a component — the
+// severance chart (S8 b4) and the palladium panels (S10 b3/b4) — the stage
+// rebuilds that slide's DOM against THE SAME CSS CLASSES and carries the
+// slide root's own class and `data-step` on the stage root, because without
+// them the severance's series labels and the palladium hook's lift do not
+// render. Every plotted number comes from the frozen data modules untouched.
+//
 // THE ROOT'S CLASSES ARE LOAD-BEARING: `s2o s3f s4-opening` are the legacy
 // section roots the states builders carried, which is what lets a ported
 // element rebuild a legacy slide's DOM and have the legacy stylesheet place
@@ -49,6 +57,13 @@ import { ElementGrid } from '../../components/section-2/ElementGrid.js';
 import { EvolutionRail, FRAMES } from '../../components/section-2/EvolutionRail.js';
 import { glyph } from '../../components/section-2/glyphs.js';
 import { claimRasterHint, releaseRasterHint } from '../../components/rasterHint.js';
+import {
+  PURCHASING_POWER, PP_SERIES, PP_YEAR_MIN, PP_YEAR_MAX
+} from '../../data/purchasing-power.js';
+import {
+  MINE_SUPPLY, PD_MINE_SUPPLY_YEAR, PRICES, PRICE_SERIES,
+  PRICE_YEAR_MIN, PRICE_YEAR_MAX
+} from '../../data/palladium.js';
 
 const svgNS = 'http://www.w3.org/2000/svg';
 
@@ -71,19 +86,82 @@ const STATEMENT = (a = 1, size = 46) => `font-size:${size}px; font-weight:540;` 
   `letter-spacing:-0.012em; line-height:1.3; color:rgba(255,255,255,${a});`;
 const RAIL_LABEL = (a = 0.75) => `font-size:25px; font-weight:500; letter-spacing:0.16em;` +
   `color:rgba(255,255,255,${a});`;
+// The rail's second row — the wound's measure, which the strip's dependency
+// line inherits (`.s2o-rail__wound`, 17px/1.45 on 218px).
+const RAIL_ROW = (a = 0.58) => `font-size:17px; font-weight:420; line-height:1.45;` +
+  `color:rgba(255,255,255,${a});`;
+const PLAIN = (a = 0.58, size = 22) => `font-size:${size}px; font-weight:460;` +
+  `letter-spacing:0.005em; line-height:1.35; color:rgba(255,255,255,${a});`;
 
-// The film's line-system voices (systems.mjs VOICE), for the mass diagram.
-const VOICE = { line: 0.35, lineDim: 0.18, dot: 0.7 };
+// The film's line-system voices (systems.mjs VOICE), for the mass diagram,
+// the network and the strip.
+const VOICE = { line: 0.35, lineDim: 0.18, dot: 0.7, labelSpent: 0.42 };
+
+// Deterministic scatter — the seeded LCG the systems sheet ships, never
+// Math.random, so the network's chords are the selected candidate's chords.
+const lcg = (seed) => {
+  let s = seed >>> 0;
+  return () => {
+    s = (s * 1664525 + 1013904223) >>> 0;
+    return s / 4294967296;
+  };
+};
 
 // ---------------------------------------------------------------- geometry law
 //
 // Transcribed from the states builders; nothing settled here is chosen.
 
+// The evidence grammar's specimens (states.mjs SPECIMEN). Every string is
+// recorded film material: Zanzibar is the rail's own receipt text split into
+// place · date · fact; 1971 is `2-07`'s decree, verbatim.
+const SPECIMEN = {
+  zanzibar: {
+    place: 'WEST AFRICA', date: '1800s',
+    fact: 'Shiploads of cheaper Zanzibar cowries collapsed the shell rate. Local savings, out-supplied.'
+  },
+  severance: {
+    place: '', date: '1971',
+    fact: 'Redemption ends. For the first time in the record, the world’s money is pure decree — the trust rung with nothing under it.'
+  }
+};
+
+// The strip's recorded station set (systems.mjs STATIONS) — one gain and one
+// dependency each. The claim station's LABEL is the CERTIFICATE ruling's
+// (CLAIM ON GOLD); its `name` is kept because the retired disc staging on file
+// still speaks it.
+export const STATIONS = [
+  { key: 'gold', name: 'GOLD', gain: 'SCARCITY IN MATTER', dep: 'as value grows, weight grows' },
+  { key: 'paper', name: 'CLAIM', gain: 'PORTABILITY', dep: 'trust moved to the issuer' },
+  { key: 'ledger', name: 'LEDGER', gain: 'INSTANT TRANSFER', dep: 'the window closed' },
+  { key: 'bitcoin', name: 'BITCOIN', gain: 'NON-DISCRETIONARY SUPPLY', dep: 'not yet twenty years into a hundred-year question' }
+];
+
+// The rails law's object band: every station photographic, each render in a
+// box of its own aspect at the band's shared height, bottom-aligned on one
+// baseline above the drawn line. The claim station carries the certificate
+// (the CERTIFICATE ruling, 31 Aug 2026); the disc is never a station.
+const BAND_H = 244;    // 188 world × 1.3 — the contender band's stage height
+const BAND_GAP = 68;   // 52 world × 1.3 — the rail's render-baseline clearance
+const BAND_GOODS = {
+  gold: { subject: 'gold', aspect: 4 / 3, alt: 'A cast gold bar' },
+  paper: { subject: 'gold_certificate', aspect: 4 / 5, alt: 'The gold certificate — a claim on gold' },
+  ledger: { subject: 'ledger_glow', aspect: 3 / 2, alt: 'A glowing ledger entry' },
+  bitcoin: { subject: 'bitcoin', aspect: 4 / 3, alt: 'The bitcoin carrier' }
+};
+
 export const GEOM = {
-  // P1-F2's approved display-scale study box: 540 tall, centred at (960, 650)
-  // — the gold study (s6-b1) and the vault study (s7-b3) both land in the
-  // builders' default landscape box.
+  // P1-F2's approved display-scale study box: 540 tall, centred at (960, 650),
+  // each subject in the aspect its render arrives in (the framing rule). The
+  // gold study (s6-b1) and the vault study (s7-b3) land in the builders'
+  // default landscape box; `ledger_glow` is the register's one 3:2 and takes
+  // the 810-wide box (s8-b1); the 4:5 portrait is the certificate's, and it is
+  // used only mid-gesture, by the S7→S8 dissolve.
   studyBox: [600, 380, 720, 540],
+  studyBoxes: {
+    landscape: [600, 380, 720, 540],
+    portrait: [744, 380, 432, 540],
+    threeTwo: [555, 380, 810, 540]
+  },
   // WIRING (the sheet's): the statement over a study sits at y 246.
   studyStatement: (copy) => [copy,
     'left:200px; right:200px; top:246px; text-align:center; text-indent:0;' + CAPS(0.92, 40)],
@@ -105,17 +183,27 @@ export const GEOM = {
   statement: (copy, top = 812, size = 46, a = 1) => [copy,
     `left:240px; right:240px; top:${top}px; text-align:center; text-indent:0;` + STATEMENT(a, size)],
 
-  // The evidence grammar's Zanzibar specimen (states.mjs evidence + SPECIMEN).
-  evidence: {
-    place: ['WEST AFRICA', 'left:0; right:0; top:372px; text-align:center; text-indent:0;' + KICKER(0.5)],
-    date: ['1800s',
-      'left:0; right:0; top:424px; text-align:center; text-indent:0;' +
-      'font-size:128px; font-weight:650; letter-spacing:-0.02em;' +
-      'font-variant-numeric:tabular-nums; color:rgba(255,255,255,1);'],
-    fact: ['Shiploads of cheaper Zanzibar cowries collapsed the shell rate. Local savings, out-supplied.',
-      'left:300px; right:300px; top:634px; text-align:center; text-indent:0;' +
-      'font-size:33px; font-weight:460; line-height:1.45; letter-spacing:-0.008em;' +
-      'color:rgba(255,255,255,1);']
+  // The evidence grammar (states.mjs `evidence` + SPECIMEN), carrying the two
+  // specimens Act II speaks: place · date · fact (Zanzibar, S5 b6) and
+  // date · fact (1971, S8 b2). The block shifts up when there is no place —
+  // the one ruled generalization of `2-07`'s dated-fact treatment, nothing
+  // else. The third specimen, 1803, lives inside Scene 10's ported frame.
+  evidence: (name) => {
+    const sp = SPECIMEN[name];
+    const p = Boolean(sp.place);
+    return {
+      place: sp.place
+        ? [sp.place, 'left:0; right:0; top:372px; text-align:center; text-indent:0;' + KICKER(0.5)]
+        : null,
+      date: [sp.date,
+        `left:0; right:0; top:${p ? 424 : 400}px; text-align:center; text-indent:0;` +
+        'font-size:128px; font-weight:650; letter-spacing:-0.02em;' +
+        'font-variant-numeric:tabular-nums; color:rgba(255,255,255,1);'],
+      fact: [sp.fact,
+        `left:300px; right:300px; top:${p ? 634 : 610}px; text-align:center; text-indent:0;` +
+        'font-size:33px; font-weight:460; line-height:1.45; letter-spacing:-0.008em;' +
+        'color:rgba(255,255,255,1);']
+    };
   },
 
   // The detachment (s7-b4): the photograph-plus-line pattern's boxes and the
@@ -137,7 +225,68 @@ export const GEOM = {
       { value: 'FOUR', bars: 4 },
       { value: 'TWELVE', bars: 12 }
     ]
-  }
+  },
+
+  // The network formation (s9-b1 — the selected system, the hub dissolving,
+  // run from the systems sheet's own numbers).
+  net: { cx: 960, cy: 540, r: 330, n: 12, seed: 0x9F1A, keep: 0.34, spoke: 0.2 },
+
+  // The entrant block (s9-b2 … s9-b4 — `2-08`'s block free-standing, with the
+  // coin at its head per the display-scale glyph retirement of 31 Aug 2026).
+  // The coin's box is DERIVED GEOMETRY, recorded at the states builder's call
+  // site: the render stands at the act's one lineup scale (the rails-law band
+  // height) in its own 4:3, bottom-anchored where the retired mark's box ended
+  // (y 332), so the drawn rhythm beneath — the dot at 372, the name at 404 —
+  // is untouched. The 0.9 is the retired mark's own recorded voice.
+  entrant: {
+    coin: [960 - Math.round(BAND_H * (4 / 3)) / 2, 332 - BAND_H, Math.round(BAND_H * (4 / 3)), BAND_H],
+    coinVoice: 0.9,
+    dot: [960, 372, 4.5, 0.85],
+    name: 'BITCOIN',
+    facts: '2009: digital · no state, no company · supply fixed by its own rules.',
+    capabilities: ['DIGITAL MOBILITY', 'NON-DISCRETIONARY SUPPLY', 'INDEPENDENT VERIFICATION'],
+    limitation: 'Very young. Its price still swings far more than the monies it would compete with. Not yet twenty years into a hundred-year question.',
+    nameStyle: 'left:0; right:0; top:404px; text-align:center; text-indent:0;' + RAIL_LABEL(0.95),
+    factsStyle: (voice, raised) =>
+      `left:360px; right:360px; top:${raised ? 462 : 470}px; text-align:center; text-indent:0;` +
+      STATEMENT(voice, 33),
+    capStyle: (voice, i) =>
+      `left:0; right:0; top:${568 + i * 52}px; text-align:center; text-indent:0;` + CAPS(voice, 26),
+    limitStyle: (voice) =>
+      'left:340px; right:340px; top:772px; text-align:center; text-indent:0;' + PLAIN(voice, 27)
+  },
+
+  // The trade-off strip (s10-b1 / s10-b2 — EvolutionRail's grammar under the
+  // rails law). WIRING: four stations on the stage at the rail's own 340px
+  // stop width; everything beneath the line is the component's own rhythm.
+  strip: {
+    y: 470, xs: [345, 750, 1155, 1560], lineX: [200, 1720],
+    bandH: BAND_H, bottom: 470 - BAND_GAP, live: 3,
+    claimLabel: 'CLAIM ON GOLD',
+    box: (key, x) => {
+      const g = BAND_GOODS[key];
+      const w = Math.round(BAND_H * g.aspect);
+      return [x - w / 2, (470 - BAND_GAP) - BAND_H, w, BAND_H];
+    },
+    good: (key) => BAND_GOODS[key],
+    nameStyle: (x, on) =>
+      `left:${x - 170}px; top:${470 + 26}px; width:340px; text-align:center; text-indent:0;` +
+      RAIL_LABEL(on ? 1 : 0.58),
+    gainStyle: (x, a) =>
+      `left:${x - 170}px; top:${470 + 64}px; width:340px; height:68px; text-align:center; text-indent:0;` +
+      CAPS(0.75 * a, 20),
+    depStyle: (x, a) =>
+      `left:${x - 109}px; top:${470 + 146}px; width:218px; text-align:center; text-indent:0;` +
+      RAIL_ROW(0.58 * a)
+  },
+
+  // The pivot that opens Act III (s10-b5) — the deck's question register,
+  // `1.03`'s own big-question type.
+  question: [
+    'Better for what job?',
+    'left:240px; right:240px; top:490px; text-align:center; text-indent:0;' +
+    'font-size:64px; font-weight:560; line-height:1.35; letter-spacing:-0.015em; color:#fff;'
+  ]
 };
 
 // The S5 record's rail states (states.mjs s5Row / the s5-b5 builder).
@@ -181,7 +330,19 @@ export const COPY = {
   portability: 'Portability improved.',
   trust: 'Trust moved to the issuer.',
   scarcity: 'SCARCITY IN MATTER',
-  goldStops: 'THE GOLD STOPS HERE'
+  goldStops: 'THE GOLD STOPS HERE',
+  becameInformation: 'MONEY BECAME INFORMATION',
+  captured: 'The last incumbent didn’t fall the way the others did — it was captured: custody centralized, claims over-issued, redemption cancelled.',
+  mostAccepted: 'The most universally accepted medium of exchange in history.',
+  residue: 'Extraordinary at moving value. Measurably poor at storing it.',
+  twoQuestions: 'The market’s valuation of a young asset, and the architecture of the claim, are two different questions.',
+  volatility: 'Volatility is a stage, not a verdict.',
+  historyLine: 'The history of money is a history of changing trade-offs.',
+  // `3-05`'s own lines, ported with the frame (ADAPT S10-F2, Ruling 4).
+  pdHook: 'Palladium: scarcer in supply than gold. Genuinely useful. At times more expensive. It never became money.',
+  pdTiming: 'Discovered in 1803 — facing a monetary network thousands of years old.',
+  pdNarrowed: 'And when gold’s role narrowed to store of value, palladium never touched that either. Central banks hold gold — not palladium.',
+  pdBar: 'Marginally better is structurally insufficient. Only a categorical difference on the deciding properties has ever moved the crown.'
 };
 
 // --------------------------------------------------------------- settled states
@@ -203,7 +364,7 @@ export const STATES = {
     // rail under the rails law, the fallen renders at the dimmed-prior step.
     { rail: S5_RECORD, railBand: true },
     // beat 6 — s5-b6: the Zanzibar receipt, the evidence grammar's specimen.
-    { evidence: true },
+    { evidence: 'zanzibar' },
     // beat 7 — s5-b7: the composition returns, carrier unnamed; the pair.
     { claim: {}, stmts: [[COPY.functionStayed, 812, 46, 1]] },
     // beat 8 — s5-b8: the exit question on the same composition.
@@ -237,14 +398,50 @@ export const STATES = {
     { detachment: true, stmts: [[COPY.claimOnGold, 866, 46, 1]] },
     // beat 5 — s7-b5: the trade named honestly, on cleared black.
     { stmts: [[COPY.portability, 452, 54, 1], [COPY.trust, 560, 54, 1]] }
+  ],
+  'money-becomes-information': [
+    // beat 1 — s8-b1: the dissolve's landing. The Prologue's approved morph
+    // runs the paper claim into the glowing ledger entry; the register's one
+    // 3:2 render takes its own aspect in the approved box.
+    { study: 'ledger_glow', studyBox: 'threeTwo', studyStmt: COPY.becameInformation },
+    // beat 2 — s8-b2: 1971, the evidence grammar's second specimen.
+    { evidence: 'severance' },
+    // beat 3 — s8-b3: captured, not beaten — the pattern slide's own sentence.
+    { stmts: [[COPY.captured, 430, 46, 1]] },
+    // beat 4 — s8-b4: THE RECORD — `2-07`'s chart, ported whole.
+    { chart: 'severance' },
+    // beat 5 — s8-b5: both facts on one screen, because both are true.
+    { stmts: [[COPY.mostAccepted, 434, 46, 0.72], [COPY.residue, 566, 52, 1]] }
+  ],
+  'scarcity-becomes-digital': [
+    // beat 1 — s9-b1: the network formation, the selected system.
+    { net: true },
+    // beats 2–4 — s9-b2 … s9-b4: the entrant block, one row per advance, the
+    // landed row at full voice and the ones before it at the prior step.
+    { entrant: 'facts' },
+    { entrant: 'capabilities' },
+    { entrant: 'limitation' },
+    // beat 5 — s9-b5: the two-question distinction, on cleared black.
+    { stmts: [[COPY.twoQuestions, 430, 46, 1], [COPY.volatility, 616, 40, 0.72]] }
+  ],
+  'the-trade-off-keeps-moving': [
+    // beat 1 — s10-b1: THE STRIP, the certificate ruling staged.
+    { strip: true },
+    // beat 2 — s10-b2: the history line, on the same strip.
+    { strip: true, stmts: [[COPY.historyLine, 866, 44, 1]] },
+    // beats 3–4 — s10-b3 / s10-b4: palladium, and the bar. `3-05`'s frame at
+    // its own steps: the hook lifted, the panels, the timing line; then the
+    // second epoch and the bar, with the two epoch lines settling back.
+    { palladium: 3 },
+    { palladium: 5 },
+    // beat 5 — s10-b5: the pivot that opens Act III.
+    { question: true }
   ]
 };
 
-export const TOTAL_BUILDS = {
-  'the-function-stayed': STATES['the-function-stayed'].length - 1,
-  'scarcity-in-matter': STATES['scarcity-in-matter'].length - 1,
-  'claims-on-gold': STATES['claims-on-gold'].length - 1
-};
+export const TOTAL_BUILDS = Object.fromEntries(
+  Object.entries(STATES).map(([id, states]) => [id, states.length - 1])
+);
 
 const WAVE_LINES = [
   'Anything that floats away is out.',
@@ -367,6 +564,13 @@ class Act2Stage {
     // ---- the studies (P1-F2's box, the register's own reveal)
     this.goldStudy = this._study('gold', 'A cast gold bar emerging from darkness');
     this.vaultStudy = this._study('vault', 'A vault door, closed, emerging from darkness');
+    this.ledgerStudy = this._study('ledger_glow',
+      'A glowing ledger entry emerging from darkness', 'threeTwo');
+    // The S7→S8 dissolve's OUTGOING form — the paper claim, in P1-F2's own
+    // 4:5 box. Motion-only: no settled state carries it, and the dissolve it
+    // serves is the ported one (p1-b6 → p1-b7-glow).
+    this.certForm = this._study('gold_certificate',
+      'The gold certificate, the paper claim', 'portrait');
     this.studyStmtEl = this._text();
 
     // ---- the detachment's photographs (transition disabled — the still is
@@ -376,10 +580,48 @@ class Act2Stage {
     this.depLineEl = this._line();
     this.depDotEls = [this._dot(), this._dot()];
 
-    // ---- the evidence block (the Zanzibar specimen's three elements)
+    // ---- the evidence block (place · date · fact — both Act II specimens)
     this.evPlace = this._text();
     this.evDate = this._text();
     this.evFact = this._text();
+
+    // ---- Scene 9's network (s9-b1 — the selected system, the hub dissolving)
+    //
+    // Built once, from the systems sheet's own numbers and its own seeded LCG,
+    // so the chords are the selected candidate's chords and not a re-roll. The
+    // group's own display carries the state; the elements never move.
+    this.net = this._network();
+
+    // ---- Scene 9's entrant block (`2-08`'s block, free-standing)
+    this.coinPhoto = this._photo('bitcoin', 'The bitcoin coin', GEOM.entrant.coin);
+    this.entrantDot = this._dot();
+    this.entrantName = this._text();
+    this.entrantFacts = this._text();
+    this.entrantCaps = GEOM.entrant.capabilities.map(() => this._text());
+    this.entrantLimit = this._text();
+
+    // ---- Scene 10's strip (the rails law's object band over the rail's own
+    // drawn sentence). Four photographic stations, the line and its markers
+    // beneath — the goods' boxes are fixed, and only the voices change.
+    this.stripLine = this._line();
+    this.stripDots = STATIONS.map(() => this._dot());
+    this.stripPhotos = STATIONS.map((s, i) => {
+      const g = GEOM.strip.good(s.key);
+      return this._photo(g.subject, g.alt, GEOM.strip.box(s.key, GEOM.strip.xs[i]));
+    });
+    this.stripNames = STATIONS.map(() => this._text());
+    this.stripGains = STATIONS.map(() => this._text());
+    this.stripDeps = STATIONS.map(() => this._text());
+
+    // ---- the ported charts, each rebuilding its legacy slide's DOM against
+    // the legacy's own classes. The host is inset 0, so `.s2o-severance__chart`
+    // and `.s3f-palladium__*` resolve against exactly the root's box, and the
+    // stage root carries the slide root's class and `data-step` per state.
+    this.chartHost = document.createElement('div');
+    this.chartHost.style.cssText = 'position:absolute; inset:0;';
+    root.appendChild(this.chartHost);
+    this.sevChart = this._severanceChart();
+    this.palladium = this._palladiumBlock();
 
     // ---- the claim in construction C's carrier (4-06's own scene box; the
     // slide's CSS places it — `.s4-claim-carrier__scene` at (700, 400))
@@ -419,8 +661,8 @@ class Act2Stage {
 
   // ---- element factories ----
 
-  _study(name, alt) {
-    const [x, y, w, h] = GEOM.studyBox;
+  _study(name, alt, box = 'landscape') {
+    const [x, y, w, h] = GEOM.studyBoxes[box];
     const df = DarkFieldImage({ name, width: w, height: h, alt });
     df.el.style.position = 'absolute';
     df.el.style.left = `${x}px`;
@@ -464,6 +706,265 @@ class Act2Stage {
     return c;
   }
 
+  // ---- Scene 9's network, transcribed from the selected candidate --------
+  //
+  // `s9f1-a`, the hub dissolving: a centre with spokes to a ring, both receded
+  // to the floor, and peer-to-peer chords at full voice between the ring's own
+  // nodes — about two thirds of them drawn. The rand() call happens for EVERY
+  // pair whether the chord is kept or not, exactly as the builder writes it,
+  // because the sequence is the drawing.
+  _network() {
+    const { cx, cy, r, n, seed, keep, spoke } = GEOM.net;
+    const g = document.createElementNS(svgNS, 'g');
+    g.style.display = 'none';
+    this.svg.appendChild(g);
+    const seg = (x1, y1, x2, y2, a) => {
+      const l = document.createElementNS(svgNS, 'line');
+      l.setAttribute('x1', x1); l.setAttribute('y1', y1);
+      l.setAttribute('x2', x2); l.setAttribute('y2', y2);
+      l.setAttribute('stroke', `rgba(255,255,255,${a})`);
+      l.setAttribute('stroke-width', 1.5);
+      l.setAttribute('stroke-linecap', 'round');
+      g.appendChild(l);
+      return l;
+    };
+    const node = (x, y, radius, a) => {
+      const c = document.createElementNS(svgNS, 'circle');
+      c.setAttribute('cx', x); c.setAttribute('cy', y); c.setAttribute('r', radius);
+      c.setAttribute('fill', `rgba(255,255,255,${a})`);
+      g.appendChild(c);
+      return c;
+    };
+    const pt = (i) => [cx + r * Math.cos((i / n) * Math.PI * 2 - Math.PI / 2),
+      cy + r * Math.sin((i / n) * Math.PI * 2 - Math.PI / 2)];
+
+    const spokes = [];
+    for (let i = 0; i < n; i += 1) {
+      const [x, y] = pt(i);
+      spokes.push(seg(cx, cy, x, y, spoke));
+    }
+    const rand = lcg(seed);
+    const chords = [];
+    for (let i = 0; i < n; i += 1) {
+      for (let j = i + 1; j < n; j += 1) {
+        if (rand() > keep) continue;
+        const [x1, y1] = pt(i); const [x2, y2] = pt(j);
+        chords.push(seg(x1, y1, x2, y2, VOICE.line));
+      }
+    }
+    const hub = node(cx, cy, 7, 0.3);
+    const ring = [];
+    for (let i = 0; i < n; i += 1) {
+      const [x, y] = pt(i);
+      ring.push(node(x, y, 4.5, 0.8));
+    }
+    return { g, spokes, chords, hub, ring };
+  }
+
+  // ---- Scene 8's chart — `2-07`'s severance plot, ported whole ------------
+  //
+  // The frozen data untouched, one vertex per observed year, the frozen draw
+  // order and per-series alpha, the 1971 = 100 reference line, the end-label
+  // spread where USD and GBP finish within a label's height, the index note.
+  _severanceChart() {
+    const PP = PP_SERIES.map((s) => ({ ...s, values: PURCHASING_POWER[s.id] }));
+    const PLOT_W = 1080;
+    const PLOT_H = 360;
+
+    const chart = document.createElement('div');
+    chart.className = 's2o-severance__chart';
+    chart.dataset.visible = 'true';
+    chart.style.display = 'none';
+
+    const headline = document.createElement('p');
+    headline.className = 's2o-severance__headline';
+    headline.textContent = 'What one unit still buys.';
+    chart.appendChild(headline);
+
+    const svg = document.createElementNS(svgNS, 'svg');
+    svg.setAttribute('viewBox', `-70 -30 ${PLOT_W + 150} ${PLOT_H + 80}`);
+    svg.classList.add('s2o-severance__plot');
+
+    const yAt = (v) => PLOT_H - (v / 105) * PLOT_H;
+    const add = (tag, attrs, cls, copy) => {
+      const el = document.createElementNS(svgNS, tag);
+      Object.entries(attrs).forEach(([k, v]) => el.setAttribute(k, v));
+      if (cls) el.classList.add(cls);
+      if (copy != null) el.textContent = copy;
+      svg.appendChild(el);
+      return el;
+    };
+
+    add('line', { x1: 0, y1: yAt(100), x2: PLOT_W, y2: yAt(100) }, 's2o-severance__refline');
+    add('line', { x1: 0, y1: PLOT_H, x2: PLOT_W, y2: PLOT_H }, 's2o-severance__axis');
+    add('text', { x: -16, y: yAt(100) + 7, 'text-anchor': 'end' }, 's2o-severance__axislabel', '100');
+    add('text', { x: -16, y: PLOT_H + 7, 'text-anchor': 'end' }, 's2o-severance__axislabel', '0');
+    [1971, 1980, 1990, 2000, 2010, 2020].forEach((year) => {
+      add('text', {
+        x: ((year - PP_YEAR_MIN) / (PP_YEAR_MAX - PP_YEAR_MIN)) * PLOT_W,
+        y: PLOT_H + 34,
+        'text-anchor': year === PP_YEAR_MIN ? 'start' : 'middle'
+      }, 's2o-severance__axislabel', String(year));
+    });
+
+    const labelYs = PP.map(({ values }) => yAt(values[values.length - 1]) + 6);
+    const order = labelYs.map((y, i) => [y, i]).sort((a, b) => a[0] - b[0]);
+    for (let k = 1; k < order.length; k += 1) {
+      if (order[k][0] - order[k - 1][0] < 24) order[k][0] = order[k - 1][0] + 24;
+    }
+    order.forEach(([y, i]) => { labelYs[i] = y; });
+
+    const series = [];
+    PP.forEach(({ id, alpha, values }, index) => {
+      const d = values.map((v, i) => `${((i / (values.length - 1)) * PLOT_W).toFixed(1)} ${yAt(v).toFixed(1)}`);
+      const path = add('path', { d: `M ${d.join(' L ')}` }, 's2o-severance__series');
+      path.style.stroke = `rgba(255, 255, 255, ${alpha})`;
+      path.style.setProperty('--i', String(index));
+      // The draw-in is a motion property; a settled frame is the drawn state.
+      path.style.strokeDasharray = 'none';
+      const label = add('text', { x: PLOT_W + 18, y: labelYs[index] }, 's2o-severance__serieslabel', id);
+      label.style.fill = `rgba(255, 255, 255, ${alpha})`;
+      series.push({ path, label });
+    });
+
+    chart.appendChild(svg);
+
+    const note = document.createElement('p');
+    note.className = 's2o-severance__indexnote';
+    note.textContent = 'Purchasing power of one unit · 1971 = 100 · as of 2025';
+    chart.appendChild(note);
+
+    this.chartHost.appendChild(chart);
+    return { chart, headline, series, note };
+  }
+
+  // ---- Scene 10's palladium block — `3-05`'s frame, ported ---------------
+  //
+  // The one ruled change (architecture Ruling 4) is the relocation into Scene
+  // 10; the frame, its real sourced figures and its two-epoch honesty travel
+  // with it. `data-step` on the stage root is what lifts the hook and applies
+  // the rule-10 recession to the epoch lines, so it is carried per state.
+  _palladiumBlock() {
+    const PD_PRICE = PRICE_SERIES.map((s) => ({ ...s, values: PRICES[s.id] }));
+    const PD_W = 660;
+    const PD_H = 330;
+    const V_MIN = 80;
+    const V_MAX = 3600;
+    const SUPPLY_MAX = Math.max(...MINE_SUPPLY.map((s) => s.tonnes));
+
+    const wrap = document.createElement('div');
+    wrap.style.cssText = 'position:absolute; inset:0; display:none;';
+    this.chartHost.appendChild(wrap);
+
+    const para = (cls, copy) => {
+      const p = document.createElement('p');
+      p.className = cls;
+      p.dataset.visible = 'true';
+      p.textContent = copy;
+      wrap.appendChild(p);
+      return p;
+    };
+
+    const hook = para('s3f-palladium__hook', COPY.pdHook);
+
+    const chart = document.createElement('div');
+    chart.className = 's3f-palladium__chart';
+    chart.dataset.visible = 'true';
+
+    const supply = document.createElement('div');
+    supply.className = 's3f-palladium__supply';
+    const supplyTitle = document.createElement('p');
+    supplyTitle.className = 's3f-palladium__paneltitle';
+    supplyTitle.textContent = 'ANNUAL MINE SUPPLY · TONNES';
+    supply.appendChild(supplyTitle);
+    const supplyMark = document.createElement('div');
+    supplyMark.className = 's3f-palladium__supplymark';
+    supplyMark.innerHTML = '';
+    supply.appendChild(supplyMark);
+    MINE_SUPPLY.forEach((spec, index) => {
+      const row = document.createElement('div');
+      row.className = 's3f-palladium__supplyrow';
+      row.dataset.series = spec.id;
+      row.style.setProperty('--i', String(index));
+      const label = document.createElement('span');
+      label.className = 's3f-palladium__supplylabel';
+      label.style.color = `rgba(255, 255, 255, ${spec.alpha})`;
+      label.textContent = `${spec.id}  ${spec.tonnes.toLocaleString('en-US')} t`;
+      row.appendChild(label);
+      const rel = spec.tonnes / SUPPLY_MAX;
+      const bar = document.createElement('span');
+      bar.className = 's3f-palladium__supplybar';
+      bar.style.setProperty('--rel', String(rel));
+      bar.style.background = `rgba(255, 255, 255, ${spec.alpha})`;
+      row.appendChild(bar);
+      const tip = document.createElement('span');
+      tip.className = 's3f-palladium__supplytip';
+      tip.style.setProperty('--rel', String(rel));
+      tip.style.background = `rgba(255, 255, 255, ${spec.alpha})`;
+      row.appendChild(tip);
+      supply.appendChild(row);
+    });
+    const supplyNote = document.createElement('p');
+    supplyNote.className = 's3f-palladium__panelnote';
+    supplyNote.textContent = `world mine production, ${PD_MINE_SUPPLY_YEAR} — shorter is scarcer`;
+    supply.appendChild(supplyNote);
+    chart.appendChild(supply);
+
+    const price = document.createElement('div');
+    price.className = 's3f-palladium__price';
+    const priceTitle = document.createElement('p');
+    priceTitle.className = 's3f-palladium__paneltitle';
+    priceTitle.textContent = 'PRICE OF ONE OUNCE · MODERN ERA';
+    price.appendChild(priceTitle);
+
+    const svg = document.createElementNS(svgNS, 'svg');
+    svg.setAttribute('viewBox', `-14 -20 ${PD_W + 190} ${PD_H + 70}`);
+    svg.classList.add('s3f-palladium__plot');
+    const priceY = (v) => {
+      const t = (Math.log(v) - Math.log(V_MIN)) / (Math.log(V_MAX) - Math.log(V_MIN));
+      return PD_H - t * PD_H;
+    };
+    const add = (tag, attrs, cls, copy) => {
+      const el = document.createElementNS(svgNS, tag);
+      Object.entries(attrs).forEach(([k, v]) => el.setAttribute(k, v));
+      if (cls) el.classList.add(cls);
+      if (copy != null) el.textContent = copy;
+      svg.appendChild(el);
+      return el;
+    };
+    add('line', { x1: 0, y1: PD_H, x2: PD_W, y2: PD_H }, 's3f-palladium__axis');
+    [1990, 2000, 2010, 2020].forEach((year) => {
+      add('text', {
+        x: ((year - PRICE_YEAR_MIN) / (PRICE_YEAR_MAX - PRICE_YEAR_MIN)) * PD_W,
+        y: PD_H + 32,
+        'text-anchor': year === PRICE_YEAR_MIN ? 'start' : 'middle'
+      }, 's3f-palladium__axislabel', String(year));
+    });
+    const endYs = PD_PRICE.map(({ values }) => priceY(values[values.length - 1]) + 5);
+    if (Math.abs(endYs[0] - endYs[1]) < 24) {
+      const upper = endYs[0] < endYs[1] ? 0 : 1;
+      endYs[1 - upper] = endYs[upper] + 24;
+    }
+    PD_PRICE.forEach(({ id, alpha, values }, index) => {
+      const d = values.map((v, i) => `${((i / (values.length - 1)) * PD_W).toFixed(1)} ${priceY(v).toFixed(1)}`);
+      const path = add('path', { d: `M ${d.join(' L ')}` }, 's3f-palladium__series');
+      path.style.stroke = `rgba(255, 255, 255, ${alpha})`;
+      path.style.setProperty('--i', String(index));
+      path.style.strokeDasharray = 'none';
+      const label = add('text', { x: PD_W + 16, y: endYs[index] }, 's3f-palladium__serieslabel', id);
+      label.style.fill = `rgba(255, 255, 255, ${alpha})`;
+    });
+    price.appendChild(svg);
+    chart.appendChild(price);
+    wrap.appendChild(chart);
+
+    const timing = para('s3f-palladium__timing', COPY.pdTiming);
+    const narrowed = para('s3f-palladium__narrowed', COPY.pdNarrowed);
+    const bar = para('s3f-palladium__bar', COPY.pdBar);
+
+    return { wrap, hook, chart, timing, narrowed, bar };
+  }
+
   // ---- shared setters ----
 
   setText(el, copy, styles) {
@@ -497,6 +998,16 @@ class Act2Stage {
     el.style.top = `${y}px`;
     el.style.width = `${w}px`;
     el.style.height = `${h}px`;
+  }
+
+  // A ported chart needs its legacy slide root on the stage root before its own
+  // reveal can play — the severance's labels and the palladium hook's lift are
+  // both `data-step` rules. A gesture claims it here; applyState re-asserts it.
+  chartRoot(kind, step) {
+    this.root.classList.toggle('s2o-severance', kind === 'severance');
+    this.root.classList.toggle('s3f-palladium', kind === 'palladium');
+    if (kind) this.root.dataset.step = String(step);
+    else delete this.root.dataset.step;
   }
 
   setTraveler(cx, cy, opacity) {
@@ -625,6 +1136,8 @@ class Act2Stage {
     };
     study(this.goldStudy, st.study === 'gold');
     study(this.vaultStudy, st.study === 'vault');
+    study(this.ledgerStudy, st.study === 'ledger_glow');
+    study(this.certForm, false);          // motion-only: the dissolve's paper
     if (st.studyStmt) {
       const [copy, styles] = GEOM.studyStatement(st.studyStmt);
       this.setText(this.studyStmtEl, copy, styles);
@@ -650,8 +1163,9 @@ class Act2Stage {
 
     // The evidence.
     if (st.evidence) {
-      const ev = GEOM.evidence;
-      this.setText(this.evPlace, ev.place[0], ev.place[1]);
+      const ev = GEOM.evidence(st.evidence);
+      if (ev.place) this.setText(this.evPlace, ev.place[0], ev.place[1]);
+      else this.hideText(this.evPlace);
       this.setText(this.evDate, ev.date[0], ev.date[1]);
       this.setText(this.evFact, ev.fact[0], ev.fact[1]);
       [this.evPlace, this.evDate, this.evFact].forEach((el) => {
@@ -660,6 +1174,86 @@ class Act2Stage {
     } else {
       [this.evPlace, this.evDate, this.evFact].forEach((el) => this.hideText(el));
     }
+
+    // Scene 9's network — the group's display is the whole state.
+    this.net.g.style.display = st.net ? '' : 'none';
+    gsap.set([this.net.g, ...this.net.spokes, ...this.net.chords, this.net.hub, ...this.net.ring],
+      { clearProps: 'opacity,stroke,fill,scale,transform' });
+
+    // Scene 9's entrant block. The landed row speaks at full voice; the rows
+    // before it hold the dimmed-prior step (§9.4 rule 10), which is carried in
+    // the color alpha, so the whole state is a style write.
+    if (st.entrant) {
+      const E = GEOM.entrant;
+      const voice = (row) => (row === st.entrant ? 1 : VOICE.labelSpent);
+      const raised = st.entrant !== 'facts';
+      this.setBox(this.coinPhoto, E.coin);
+      this.coinPhoto.style.opacity = String(E.coinVoice);
+      this.setDot(this.entrantDot, ...E.dot);
+      this.setText(this.entrantName, E.name, E.nameStyle);
+      this.setText(this.entrantFacts, E.facts, E.factsStyle(voice('facts'), raised));
+      this.entrantCaps.forEach((el, i) => {
+        if (raised) this.setText(el, E.capabilities[i], E.capStyle(voice('capabilities'), i));
+        else this.hideText(el);
+      });
+      if (st.entrant === 'limitation') {
+        this.setText(this.entrantLimit, E.limitation, E.limitStyle(voice('limitation')));
+      } else this.hideText(this.entrantLimit);
+      gsap.set([this.entrantName, this.entrantFacts, ...this.entrantCaps, this.entrantLimit],
+        { clearProps: 'opacity,y' });
+      gsap.set(this.coinPhoto, { clearProps: 'y,scale' });
+    } else {
+      this.coinPhoto.style.opacity = '0';
+      this.setDot(this.entrantDot, 0, 0, 0, 0);
+      [this.entrantName, this.entrantFacts, ...this.entrantCaps, this.entrantLimit]
+        .forEach((el) => this.hideText(el));
+    }
+
+    // Scene 10's strip. The stations are fixed; the live one changes.
+    gsap.set([...this.stripPhotos, ...this.stripNames, ...this.stripGains, ...this.stripDeps],
+      { clearProps: 'opacity,y,scale' });
+    if (st.strip) {
+      const S = GEOM.strip;
+      this.setSeg(this.stripLine, [S.lineX[0], S.y, S.lineX[1], S.y, VOICE.lineDim, 2]);
+      STATIONS.forEach((s, i) => {
+        const x = S.xs[i];
+        const on = i === S.live;
+        const a = on ? 1 : 0.55;
+        this.setBox(this.stripPhotos[i], S.box(s.key, x));
+        this.stripPhotos[i].style.opacity = String(on ? 1 : 0.58);
+        this.setDot(this.stripDots[i], x, S.y, 6, on ? 0.85 : 0.5);
+        this.setText(this.stripNames[i], s.key === 'paper' ? S.claimLabel : s.name,
+          S.nameStyle(x, on));
+        this.setText(this.stripGains[i], s.gain, S.gainStyle(x, a));
+        this.setText(this.stripDeps[i], s.dep, S.depStyle(x, a));
+      });
+    } else {
+      this.stripLine.setAttribute('opacity', '0');
+      this.stripDots.forEach((d) => this.setDot(d, 0, 0, 0, 0));
+      this.stripPhotos.forEach((el) => { el.style.opacity = '0'; });
+      [...this.stripNames, ...this.stripGains, ...this.stripDeps]
+        .forEach((el) => this.hideText(el));
+    }
+
+    // The ported charts, and the slide roots they need. Without the root's own
+    // class and step the severance's series labels and the palladium hook's
+    // lift do not render — carrying them is what makes this the treatment.
+    this.root.classList.toggle('s2o-severance', st.chart === 'severance');
+    this.root.classList.toggle('s3f-palladium', Boolean(st.palladium));
+    if (st.chart === 'severance') this.root.dataset.step = '4';
+    else if (st.palladium) this.root.dataset.step = String(st.palladium);
+    else delete this.root.dataset.step;
+    this.sevChart.chart.style.display = st.chart === 'severance' ? '' : 'none';
+    setVisible(this.sevChart.chart, true);
+    gsap.set(this.sevChart.chart, { clearProps: 'opacity,y' });
+    this.palladium.wrap.style.display = st.palladium ? '' : 'none';
+    [this.palladium.hook, this.palladium.chart, this.palladium.timing]
+      .forEach((el) => setVisible(el, true));
+    setVisible(this.palladium.narrowed, st.palladium === 5);
+    setVisible(this.palladium.bar, st.palladium === 5);
+    gsap.set([this.palladium.wrap, this.palladium.hook, this.palladium.chart,
+      this.palladium.timing, this.palladium.narrowed, this.palladium.bar],
+    { clearProps: 'opacity,y' });
 
     // The claim in its carrier.
     if (st.claim) {
@@ -681,10 +1275,14 @@ class Act2Stage {
     if (st.mass) this.buildMassDiagram();
     else this.clearMassDiagram();
 
-    // The statements.
+    // The statements — and Scene 10's closing question, which takes the deck's
+    // question register rather than the statement one, in the first slot.
     this.stmtEls.forEach((el, i) => {
       const conf = st.stmts && st.stmts[i];
-      if (conf) {
+      if (i === 0 && st.question) {
+        this.setText(el, GEOM.question[0], GEOM.question[1]);
+        gsap.set(el, { clearProps: 'opacity,y' });
+      } else if (conf) {
         const [copy, styles] = GEOM.statement(conf[0], conf[1], conf[2], conf[3]);
         this.setText(el, copy, styles);
         gsap.set(el, { clearProps: 'opacity,y' });
@@ -747,7 +1345,7 @@ class Act2Stage {
         waves: this.waveLines.map((l) => [l.dataset.visible, getComputedStyle(l).opacity]),
         verdict: [this.verdict.dataset.visible, getComputedStyle(this.verdict).opacity]
       },
-      studies: [this.goldStudy, this.vaultStudy].map((el) => [
+      studies: [this.goldStudy, this.vaultStudy, this.ledgerStudy, this.certForm].map((el) => [
         el.dataset.visible, el.style.display, getComputedStyle(el).opacity
       ]),
       studyStmt: text(this.studyStmtEl),
@@ -767,7 +1365,31 @@ class Act2Stage {
         els: this.diagEls.childNodes.length
       },
       stmts: this.stmtEls.map(text),
-      traveler: this.traveler.style.opacity
+      traveler: this.traveler.style.opacity,
+      root: [this.root.className, this.root.dataset.step || ''],
+      net: [this.net.g.style.display, getComputedStyle(this.net.g).opacity,
+        this.net.chords.length],
+      entrant: {
+        coin: [this.coinPhoto.style.left, this.coinPhoto.style.top,
+          this.coinPhoto.style.width, this.coinPhoto.style.height,
+          getComputedStyle(this.coinPhoto).opacity],
+        dot: attr(this.entrantDot, ['cx', 'cy', 'r', 'fill', 'opacity']),
+        rows: [this.entrantName, this.entrantFacts, ...this.entrantCaps, this.entrantLimit].map(text)
+      },
+      strip: {
+        line: attr(this.stripLine, ['x1', 'y1', 'x2', 'y2', 'stroke', 'opacity']),
+        dots: this.stripDots.map((d) => attr(d, ['cx', 'cy', 'r', 'fill', 'opacity'])),
+        photos: this.stripPhotos.map((el) => [el.style.left, el.style.top,
+          el.style.width, el.style.height, getComputedStyle(el).opacity]),
+        rows: [...this.stripNames, ...this.stripGains, ...this.stripDeps].map(text)
+      },
+      charts: {
+        severance: [this.sevChart.chart.style.display,
+          getComputedStyle(this.sevChart.chart).opacity],
+        palladium: [this.palladium.wrap.style.display,
+          getComputedStyle(this.palladium.hook).opacity,
+          this.palladium.narrowed.dataset.visible, this.palladium.bar.dataset.visible]
+      }
     };
   }
 
