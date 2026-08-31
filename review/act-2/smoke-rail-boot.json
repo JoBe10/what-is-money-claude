@@ -1,0 +1,19 @@
+{
+  "date": "2026-08-31T10:37:36.210Z",
+  "session": "act-2-rail-states",
+  "expectedSlides": 39,
+  "deck": {
+    "slides": 39,
+    "firstId": "eighty-thousand-hours",
+    "sections": [
+      "prologue:2",
+      "act-1:3",
+      "act-2:6",
+      "function:8",
+      "ideal-store:19",
+      "close:1"
+    ]
+  },
+  "consoleErrors": [],
+  "pass": true
+}
