@@ -505,7 +505,11 @@ Its states across the film, in order:
 1. born from an unfinished exchange (Scene 3);
 2. detached from the person who created it, and transferable (Scene 3);
 3. spent — travels, redeems, and is gone; or saved — held, the interval open (Scene 4);
-4. the through-line, as the carriers change beneath it (Scenes 5–9);
+4. the through-line, as the carriers change beneath it (Scenes 5–9) — **off
+   the Act II rail as of the presenter's r2 ruling, 1 September 2026**: the
+   disc appears in no Act II rail beat, station illumination and the spoken
+   narrative carry the claim's position there, and the on-screen thread
+   resumes in Act III and at Act IV's return;
 5. detached from custody as a paper claim on a vault (Scene 7);
 6. dematerialized into a ledger entry (Scene 8);
 7. doing one job at a time — held, spent, priced (Scenes 11–14);

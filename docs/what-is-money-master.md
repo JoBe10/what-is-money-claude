@@ -451,7 +451,7 @@ What belongs in this document is the shape of the work:
 **Prototype gates, before their batches:**
 1. **Claim Mark** — A/B/C contact sheet; the presenter selects. The selection becomes the film-wide protagonist.
 2. **Scenes 2–4 in the scratch route** — the signature system; not proceeding until exceptional.
-3. ~~**The architecture morph** — gold → claim → ledger → bitcoin.~~ *Struck 31 Aug 2026 (§13): collapsed into the Batch B implementation review — the act viewing is the gate.*
+3. ~~**The architecture morph** — gold → claim → ledger → bitcoin.~~ *Struck 31 Aug 2026 (§13): collapsed into the Batch B implementation review — the act viewing is the gate.* **Its judgment object was amended on 1 Sep 2026** (§13, the r2 rulings): the claim steps off the Act II rail, so what the act viewing judges there is no longer the claim's connective journey but **the rail's own continuity** — whether the record reads as one continuous, growing history from S5 b1 to S10 b5.
 4. **HOLD / SPEND / PRICE** legible without narration.
 5. **Late-deck sample renders.**
 

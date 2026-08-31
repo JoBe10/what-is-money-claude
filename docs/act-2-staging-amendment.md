@@ -88,3 +88,13 @@ Film-wide law: `AGENTS.md` §6, *The fill-order ruling*.
 **Recorded as the general rule: every station arrives with a line beneath it, always.** Standing = the virtue at the station's own voice; fallen = the wound at the dimmed-prior step. The one other station the rule reaches on this map is **METALS**, which rises at S5 b5 and is never defeated: its virtue is the same script's own sentence, **"Hard to make more of. Slow to decay. Divisible without dying."** — which also answers the r1 flag that metals recedes without a wound. The architecture stations (GOLD, COINAGE, CLAIM ON GOLD, LEDGER, BITCOIN) each arrive with their own landing sentence anchored at them, which settles into the rail's world rows on the following beat.
 
 Film-wide law: `AGENTS.md` §6, *The arrival-line rule*.
+
+## r2.3 — The claim steps off the Act II rail
+
+**The ClaimObject appears in no Act II rail beat.** The traveler is removed from the rail entirely: **station illumination and the spoken narrative carry the claim's position** through Scenes 5–10. The map's line above — *"the claim rides the rail throughout"* — is superseded.
+
+**The consequence, recorded with the ruling.** Prototype Gate 3 was collapsed into the implementation review on 31 August 2026, and the thing it named for the presenter to judge was *the claim's connective journey* — S5 entry → carrier → certificate travel → strip arrival. With the claim off the rail, **that judgment object becomes the rail's own continuity**: whether the record reads as one continuous, growing history from S5 b1 to S10 b5. That is what the presenter's act viewing now judges. The gate itself is unchanged — only what it is looking at.
+
+**The claim's on-screen thread is not cancelled, only paused.** It resumes where the architecture already stages it: in Act III, and at Act IV's return.
+
+Recorded also at `docs/what-is-money-master.md` §13 and §14 (the gate list's annotation) and `AGENTS.md` §7 (the Claim Mark's Act II state).
