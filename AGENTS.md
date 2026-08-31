@@ -435,6 +435,31 @@ CATTLE, SALT and IRON take their wounds around it. The ruling composes with
 full voice and the prior ones hold the dimmed-prior step; this ruling governs
 the *stations*, rule 10 the *sentences beneath them*.
 
+### The arrival-line rule
+
+**Presenter-ordered, 1 September 2026 (the rail r2 session).** The
+survival-brightness ruling made an undefeated station read as alive. This one
+makes it *say something*: **an undefeated station is never blank. Every
+station arrives with a line beneath it, always**, and keeps a line for as long
+as it stands.
+
+- **Standing = the virtue, at the station's own voice.** The line is the
+  station's own recorded reason for being money, in the installed script's own
+  words. SHELLS arrives with **"Beautiful. Scarce. Hard to fake."**; METALS
+  with **"Hard to make more of. Slow to decay. Divisible without dying."**
+- **Fallen = the wound, at the dimmed-prior step.** The virtue is replaced by
+  the wound the moment the defeat lands — SHELLS' virtue gives way to the
+  Zanzibar wound at S5 b6.
+- A station whose own sentence is landing on that beat is not blank: the
+  landing is its line, anchored at it, and settles into the rail's world row
+  register on the following beat.
+
+The rule composes with §9.4 rule 10 unchanged: the latest sentence speaks at
+full voice, the prior ones hold the dimmed-prior step. A virtue is not a
+sentence competing for the beat — it rides at its own station's voice, which
+is why it can stand for five beats without ever shouting over the wound that
+just landed next to it.
+
 ## Anti-slop test
 Before adding a decorative element, ask:
 - Does it explain the argument?

@@ -80,3 +80,11 @@ Recorded as a **presenter staging amendment** in the freeze register (the narrat
 **Recorded with the ruling:** the rail is a **competition record, not a chronology.** The only dates on it are the featured facts. Left to right is the order the film enters carriers into the contest, not the order the world minted them.
 
 Film-wide law: `AGENTS.md` §6, *The fill-order ruling*.
+
+## r2.2 — The shells caption, and the general rule beneath it
+
+**An undefeated station is never blank.** SHELLS arrives at S5 b1 with its virtue beneath it, in the installed S5 script's own words — **"Beautiful. Scarce. Hard to fake."** — and holds it through b5. When Zanzibar lands at b6 the virtue is **replaced by the wound**, at the dimmed-prior step, while the dated-fact block carries the beat at full voice.
+
+**Recorded as the general rule: every station arrives with a line beneath it, always.** Standing = the virtue at the station's own voice; fallen = the wound at the dimmed-prior step. The one other station the rule reaches on this map is **METALS**, which rises at S5 b5 and is never defeated: its virtue is the same script's own sentence, **"Hard to make more of. Slow to decay. Divisible without dying."** — which also answers the r1 flag that metals recedes without a wound. The architecture stations (GOLD, COINAGE, CLAIM ON GOLD, LEDGER, BITCOIN) each arrive with their own landing sentence anchored at them, which settles into the rail's world rows on the following beat.
+
+Film-wide law: `AGENTS.md` §6, *The arrival-line rule*.
