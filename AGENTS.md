@@ -404,6 +404,18 @@ never a station — it is the traveler.**
   sheet); already pre-recorded for Act III's monetization timeline; governs
   all future rails, strips, and timelines of monetary goods.
 
+### The survival-brightness ruling
+
+**Presenter-ordered, 1 September 2026 (the staging amendment's session).** On
+every rail governed by the rails law: **an undefeated station holds full
+voice; fallen stations dim with their wounds.** A station is not receded
+merely because history has moved past it — it recedes when its defeat lands.
+The canonical case: SHELLS reads as alive until Zanzibar lands, even as
+CATTLE, SALT and IRON take their wounds around it. The ruling composes with
+§9.4 rule 10 unchanged: among the wounds already landed, the latest speaks at
+full voice and the prior ones hold the dimmed-prior step; this ruling governs
+the *stations*, rule 10 the *sentences beneath them*.
+
 ## Anti-slop test
 Before adding a decorative element, ask:
 - Does it explain the argument?
