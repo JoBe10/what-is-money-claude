@@ -400,6 +400,37 @@ never a station — it is the traveler.**
   under the framing rule, one band scale across a surface), and the register
   brightness rules apply to the band (a receded station's render recedes with
   its station; the active station's render carries the full voice).
+
+> **The band rule is equal visual weight — presenter-ordered, 1 September
+> 2026 (the rail r2 session).** As first written, "one band scale" meant one
+> shared *height*: every render stood 188 world px tall in a box of its own
+> aspect. Measured across the register that is a **2.22× spread in width** —
+> a near-16:9 render (gold, metals, coinage) runs 334 wide beside a 4:5
+> portrait's 150 — so the wide subjects dominated the tall ones and the band
+> stopped reading as one family.
+>
+> **The band box now caps both axes: 188 × 188 world.** Each render keeps its
+> own aspect and is scaled to *fit inside* the box (contain), bottom-aligned
+> on the band baseline. Tall subjects fill the height; wide subjects fill the
+> width. **One family, one weight, at focus and at recede.**
+>
+> **Re-measured, 1 September 2026** — the shipping set's four aspect families
+> in the shared box:
+>
+> | family | subjects | render px | box |
+> |---|---|---|---|
+> | 4:5 portrait | `cowrie_shells` `cattle` `salt` `iron` `gold_certificate` | 1122 × 1402 | **150.5 × 188.0** |
+> | 4:3 | `bitcoin` | 1448 × 1086 | **188.0 × 141.0** |
+> | 3:2 | `ledger_glow` | 1536 × 1024 | **188.0 × 125.3** |
+> | near-16:9 | `metals` `gold` `coinage` | 1672 × 941 | **188.0 × 105.8** |
+>
+> Width spread falls from **2.220× to 1.250×**; box-area spread from
+> **2.220× to 1.422×**. The height cap is `EvolutionRail`'s own `RENDER_H`,
+> unchanged; the width cap is the icon grid's square live-area normalization
+> (§the framing rule) applied to photography, which is the same rule the
+> framing scales already answer to. A render still sits in a box of its own
+> aspect, so the framing rule's "render and box share an aspect" assumption
+> is untouched.
 - Applied on ruling day to `s5-b5` and `s10-b1`/`s10-b2` (the Act II states
   sheet); already pre-recorded for Act III's monetization timeline; governs
   all future rails, strips, and timelines of monetary goods.

@@ -111,3 +111,11 @@ Recorded also at `docs/what-is-money-master.md` §13 and §14 (the gate list's a
 **S7 stays 5 beats. The script is untouched.** The interlude count for Act II drops from six to five: the periodic table, the mass state, the four-currency chart, the network formation, palladium.
 
 Annotated at `docs/act-2-provenance.md` (rows S7-F1 and S7-F2) so no later session re-stages the retired frame.
+
+## r2.5 — The band rule becomes equal visual weight
+
+**One shared box with a height *and* a width cap.** The band's original rule shared a height only, which let the wide renders — gold, metals, `ledger_glow` — run 334 world px beside a 4:5 portrait's 150 and dominate the tall subjects. **The wide renders now scale to fit the box**, each still in a box of its own aspect. **One family, one weight, at focus and at recede.**
+
+Re-measured and recorded in the band's law entry (`AGENTS.md` §6, the rails law): the box is **188 × 188 world**, the height cap being `EvolutionRail`'s own `RENDER_H` unchanged and the width cap the icon grid's square live-area normalization. Width spread across the register falls from **2.220× to 1.250×**.
+
+Film-wide law: `AGENTS.md` §6, the rails law's band entry.
