@@ -29,17 +29,28 @@ import { makeSceneModule } from './_sceneModule.js';
 const ID = 'the-trade-off-keeps-moving';
 
 const S = GEOM.strip;
-// The traveler rides the line at the claim's own 116, and the labels land
-// behind it — so the disc never crosses a word it has not passed.
+// The traveler rides the line at the claim's own 116, so it spans 58px either
+// side of it and would sit squarely on a station's name (which begins 26px
+// below the line). The walk is therefore timed so THE WORDS LAND BEHIND THE
+// DISC: a station's good and marker light while the claim is standing there,
+// and its name, gain and dependency only begin to rise once the claim has
+// moved far enough along the line to clear the 340px label box. The numbers
+// below are that clearance, not taste — LEAVE at 0.5 and TRAVEL at 0.8 put
+// the disc's near edge past the box by WORDS at 0.95.
 const RIDE_Y = S.y;
+const LEAVE = 0.5;     // the claim holds at a station this long before moving
+const TRAVEL = 0.8;    // and takes this long to reach the next one
+const WORDS = 0.95;    // the words start rising this long after it arrived
+const STEP = LEAVE + TRAVEL;
 // The receded voices are the approved cell's own arithmetic, so a station that
 // recedes during the walk lands on exactly what applyState will write.
 const RECEDED = { name: 0.58, gain: 0.75 * 0.55, dep: 0.58 * 0.55, photo: 0.58 };
 
 const rowsOf = (stage, i) => [stage.stripNames[i], stage.stripGains[i], stage.stripDeps[i]];
 
-// One station activating: the good lights on the band, its marker takes the
-// line, and the gain and dependency land beneath — behind the traveler.
+// One station activating: the good lights on the band and its marker takes the
+// line while the claim is standing there — and the words wait until the claim
+// has moved on.
 function lightStation(stage, tl, i, at) {
   const s = STATIONS[i];
   const x = S.xs[i];
@@ -57,7 +68,7 @@ function lightStation(stage, tl, i, at) {
   tl.to(stage.stripPhotos[i], { opacity: 1, duration: 0.5, ease: 'power1.out' }, at + 0.05);
   tl.to(stage.stripDots[i], { opacity: 1, duration: 0.3, ease: 'power1.out' }, at + 0.1);
   tl.to(rowsOf(stage, i),
-    { opacity: 1, y: 0, duration: 0.45, ease: 'power2.out', stagger: 0.1 }, at + 0.42);
+    { opacity: 1, y: 0, duration: 0.45, ease: 'power2.out', stagger: 0.1 }, at + WORDS);
 }
 
 // And one receding as the claim moves on — the §9.4 rule 10 step, which on
@@ -90,28 +101,32 @@ function stageStrip(stage, tl, at) {
   // The claim enters where the line begins.
   tl.to(stage.traveler, { opacity: 1, duration: 0.4, ease: 'power1.out' }, at + 0.65);
 
-  let t = at + 1.05;
+  // The walk. Each station arrives one STEP after the last, so a station holds
+  // full voice from the moment its own words land until the next station's do
+  // — which is the §9.4 rule 10 step read as a journey rather than a list.
+  const arriveAt = (i) => at + 1.05 + 0.5 + i * STEP;
   S.xs.forEach((x, i) => {
+    const arrive = arriveAt(i);
     tl.to(stage.traveler, {
-      left: `${x - 58}px`, duration: i === 0 ? 0.5 : 0.7, ease: 'power2.inOut'
-    }, t);
-    const arrive = t + (i === 0 ? 0.5 : 0.7);
+      left: `${x - 58}px`, duration: i === 0 ? 0.5 : TRAVEL, ease: 'power2.inOut'
+    }, arrive - (i === 0 ? 0.5 : TRAVEL));
     lightStation(stage, tl, i, arrive);
     if (i < S.live) {
-      // It moves on, and what it leaves behind settles to the prior step.
-      recedeStation(stage, tl, i, arrive + 1.2);
-      t = arrive + 1.2;
+      // What it leaves behind settles to the prior step as the next station's
+      // words arrive, not as the claim departs — so the eye is never asked to
+      // read two stations at full voice or none.
+      recedeStation(stage, tl, i, arriveAt(i + 1) + WORDS);
     } else {
-      // The last body: the claim rises into it and is absorbed.
+      // The last body: the claim rises into it and is absorbed. It leaves the
+      // line upward, so it is clear of every word before any of them lands.
       const box = S.box(STATIONS[i].key, x);
       tl.to(stage.traveler, {
         top: `${box[1] + box[3] / 2 - 58}px`, opacity: 0,
         duration: 0.85, ease: 'power2.inOut'
-      }, arrive + 0.15);
-      t = arrive + 1.1;
+      }, arrive + 0.3);
     }
   });
-  return t + 0.5;
+  return arriveAt(S.xs.length - 1) + WORDS + 0.8;
 }
 
 function entry(mod, stage) {
