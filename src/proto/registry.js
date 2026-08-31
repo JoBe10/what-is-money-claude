@@ -19,18 +19,22 @@ import theDirectExchange from './gate-2/s2-the-direct-exchange.js';
 import theBreakthrough from './gate-2/s3-the-breakthrough.js';
 import spendOrSave from './gate-2/s4-spend-or-save.js';
 
-// Batch B, Session 1 (docs/batch-b-implementation-brief.md §2): Scenes 5–7
-// as one continuous world — `?proto=act2` — running in place behind the
-// existing deck count until Session 2 splices them into the manifest. These
-// are the real scene modules under `src/scenes/`, listed here only while
-// they wait for the splice.
+// Batch B (docs/batch-b-implementation-brief.md §2–§3): Act II as one
+// continuous world — `?proto=act2` — running in place behind the existing
+// deck count until the splice. These are the real scene modules under
+// `src/scenes/`, listed here only while they wait for it; Scenes 5–7 landed
+// at Session 1 and Scenes 8–10 join them at Session 2.
 import theFunctionStayed from '../scenes/act-2-the-architecture-of-money/05-the-function-stayed.js';
 import scarcityInMatter from '../scenes/act-2-the-architecture-of-money/06-gold-scarcity-in-matter.js';
 import claimsOnGold from '../scenes/act-2-the-architecture-of-money/07-claims-on-gold.js';
+import moneyBecomesInformation from '../scenes/act-2-the-architecture-of-money/08-money-becomes-information.js';
+import scarcityBecomesDigital from '../scenes/act-2-the-architecture-of-money/09-scarcity-becomes-digital.js';
+import theTradeOffKeepsMoving from '../scenes/act-2-the-architecture-of-money/10-the-trade-off-keeps-moving.js';
 
 export const prototypes = [
   theDirectExchange, theBreakthrough, spendOrSave,
-  theFunctionStayed, scarcityInMatter, claimsOnGold
+  theFunctionStayed, scarcityInMatter, claimsOnGold,
+  moneyBecomesInformation, scarcityBecomesDigital, theTradeOffKeepsMoving
 ];
 
 export default prototypes;
