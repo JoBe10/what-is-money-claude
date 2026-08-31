@@ -70,7 +70,7 @@ sit beside them on the contact sheet without standing out.
 | `shoe` | `assets/dark-field/shoe.png` | 4.04 wanted goods · 4.05 SPEND | 0.74 / 0.63 | 82.4% | +56 |
 | `wine` | `assets/dark-field/wine.png` | 4.04 wanted goods · 4.05 SPEND | 2.28 / 1.12 | 95.5% | +115 |
 | `shells` | `assets/dark-field/shells.png` | 4.06 carrier lineup | 0.10 / 0.08 | 80.2% | +72 |
-| `gold` | `assets/dark-field/gold.png` | 4.06 carrier lineup · 2.5 two-survivors (flagged) · 2.6 featured moment (flagged) | 0.08 / 0.07 | 86.7% | +181 |
+| `gold` | `assets/dark-field/gold.png` | 4.06 carrier lineup · 2.5 two-survivors (flagged) · 2.6 featured moment (flagged) · **REGENERATED 1 Sep 2026 — see the rail-states drop below**; the first-shoot study is retired to `review/act-2/dark-field/gold--retired.png` | 0.10 / 0.09 | 78.6% | +148 |
 | `paper` | `assets/dark-field/paper.png` | 4.06 carrier lineup | 0.09 / 0.08 | 80.5% | +80 |
 | `ledger` | `assets/dark-field/ledger.png` | 4.06 carrier lineup | 0.10 / 0.08 | 69.0% | +138 |
 | `bitcoin` | `assets/dark-field/bitcoin.png` | 4.06 carrier lineup · P1's fifth form · S9's entrant block · S10's strip | 0.11 / 0.10 | 77.2% | +154 |
@@ -183,6 +183,29 @@ prompt answered. It passes all five clauses with a single key (warm fraction
 99.5%, spread 1), and its frame is **1672 × 941 — the `fiat` family's near-16:9**,
 so its box takes that aspect under the framing rule. Measured framing row,
 pasted into `src/dark-field.js`: `metals: [1.457, -0.4, -0.4]`.
+
+**The rail-states drop — `gold` regenerated, ingested 1 September 2026**
+(presenter-generated and presenter-committed; gated and ingested through the
+standard harness for the staging amendment's rail — the drop-zone run is
+`review/act-2/grade-gold-drop.json`, and the post-ingest run over the whole
+shipping set is `review/act-2/grade-shipping-set-rail.json` — **24 images,
+120 checks, 0 failures**):
+
+| subject key | file | used at | corner / border | dark | R−B |
+|---|---|---|---|---|---|
+| `gold` | `assets/dark-field/gold.png` | the rail's GOLD station (the staging amendment, 1 Sep 2026) · P1 morph, the gold form · every prior gold call site | 0.10 / 0.09 | 78.6% | +147.8 |
+
+The regenerated render is **1672 × 941 — the `fiat`/`metals` near-16:9
+family** — so `gold` leaves the first shoot's 4:3 family, and under the
+framing rule **every box that displays gold derives from the new render's own
+aspect** (the `ledger_glow` precedent), across Act II's rail band and P1's
+morph form (the gold-form box becomes 960 × 540 at (480, 380) — 16:9 to
+within 0.05% of the render). Measured framing row, pasted into
+`src/dark-field.js`: `gold: [1.469, -0.7, -3.5]`. It passes all five clauses
+with a single key (warm fraction 99.2%, spread 0.993). **The retired
+first-shoot study is on file** at `review/act-2/dark-field/gold--retired.png`
+(1448 × 1086) — a regeneration is a change of file behind one key, and the
+old study stays recoverable, per the aesthetic law's file-keeping clause.
 
 **Its frame is a fourth aspect family.** `fiat.png` is 1672 × 941 — near 16:9,
 the widest in the register — where the five-candidate lineup's display box is
