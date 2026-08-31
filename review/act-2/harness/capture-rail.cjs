@@ -1,4 +1,5 @@
-// Act II rail states — the capture pipeline (docs/act-2-rail-states-brief.md §2).
+// Act II rail states — the capture pipeline (docs/act-2-rail-states-brief.md §2,
+// re-run for the r2 rulings — docs/act-2-rail-r2-brief.md §2).
 //
 // Renders every NEW rail state from rail.mjs at 1920×1080, carries the
 // overlay-interior states byte-identically from the approved states sheet
@@ -119,7 +120,7 @@ const SCENES = [
   ids.forEach((id) => { counts[meta[id].kind] = (counts[meta[id].kind] || 0) + 1; });
 
   fs.writeFileSync(path.join(OUT, 'sheet.html'), `<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><title>Act II — the rail states · the staging amendment rendered</title>
+<html lang="en"><head><meta charset="utf-8"><title>Act II — the rail states, r2 · the six rulings executed</title>
 <link rel="stylesheet" href="/src/styles/fonts.css">
 <style>
   body { background:#000; color:#fff; font-family:Inter,sans-serif; margin:0; padding:44px 48px 72px; }
@@ -142,23 +143,27 @@ const SCENES = [
   .pill--carried { color:rgba(255,255,255,.3); }
   a { color:#F7931A; text-decoration:none; }
 </style></head><body>
-<h1>Act II — the rail states · the staging amendment, rendered</h1>
-<p class="note"><b>How to review this sheet: walk it top to bottom like a flipbook of the act.</b>
-The cells are every settled state of Act II's 37 beats, in the exact order the film plays them —
-the rail growing to the right as history advances, the overlays rising over it and returning,
-the statements landing over the receded record. At every frame there is a single question:
-<b>can you follow money's history by eye alone?</b> If the answer stays yes from the first frame
-to the last, the staging is ready for implementation; if any frame breaks the thread, name that
-frame, and it comes back re-staged. There are no candidates on this sheet — this is the approved
-map rendered, and the few places the map genuinely underdetermined a composition are flagged in
-plain English in the report (docs/act-2-rail-states-report.md §flags), each with the one honest
-rendering it received.</p>
-<p class="note">What the frames carry: every prior station stays visible as the rail grows (the
-cumulative rule); the goods ride the object band above the line with the regenerated gold; an
-undefeated station holds full voice and a fallen one dims with its wounds (the survival-brightness
-ruling — watch SHELLS stay alive until Zanzibar lands at S5 b6); the claim disc is the traveler,
-riding the line at its current carrier, never a station; the six overlays enter over the
-deep-dimmed rail and return with their answers landed as station rows. Cells marked
+<h1>Act II — the rail states, r2 · the six rulings executed</h1>
+<p class="note"><b>How to review this sheet: walk it top to bottom, once, like a flipbook of the act.</b>
+The cells are every settled state of Act II's 37 beats, in the exact order the film plays them.
+Three things should now be true of every single frame, and they are what your six rulings asked
+for: <b>the rail fills left to right like history being written</b>; <b>every station has a line
+beneath it</b>; and <b>there is no white ball anywhere</b> — the claim has stepped off the Act II
+rail. If those three hold from the first frame to the last, the go-ahead sends Act II to
+implementation. If any frame breaks the thread, name that frame and it comes back re-staged.</p>
+<p class="note">What changed since the sheet you walked: <b>SHELLS now stands first</b> and the
+record fills rightward, so nothing ever lands to the left of a station already standing, and
+Zanzibar's featured moment returns to the far-left shells. <b>Every station arrives with a line</b> —
+the shells and the metals carry their virtues in the script's own words until they are replaced by
+a wound. <b>The claim disc is gone</b> from every rail beat. <b>The vault overlay has folded into
+the rail</b>: at S7 b3 the certificate takes its station and one thin line arcs back to the gold.
+<b>The band box now caps width as well as height</b>, so the wide renders no longer dominate the
+tall ones. <b>The network forms out of the LEDGER station itself</b> at S9 b1, with that station
+alone left lit. And <b>the coinage station is photographic</b> — your study was gated and ingested
+this session, so the pending stub is gone.</p>
+<p class="note">There are no candidates on this sheet — this is your ruled staging, rendered. The
+few places a ruling genuinely underdetermined a composition got one honest rendering each and are
+named in plain English in the report (docs/act-2-rail-r2-report.md §flags). Cells marked
 <i>carried</i> are the approved overlay interiors, byte-identical to the states sheet — nothing
 about them changed and nothing about them is asked.</p>
 ${sceneSections}
@@ -166,19 +171,24 @@ ${sceneSections}
 
   fs.writeFileSync(path.join(OUT, 'states.json'), JSON.stringify({
     date: new Date().toISOString(),
-    session: 'act-2-rail-states',
-    authority: 'docs/act-2-staging-amendment.md — presenter-approved verbatim, 1 September 2026 (master §13)',
+    session: 'act-2-rail-r2',
+    authority: 'docs/act-2-staging-amendment.md — presenter-approved verbatim, 1 September 2026 (master §13) — as amended by its r2 section, the presenter’s six rulings on this sheet (docs/act-2-rail-r2-brief.md §1)',
     beatMap: { S5: 8, S6: 9, S7: 5, S8: 5, S9: 5, S10: 5, total: 37 },
     sheet: {
       cells: ids.length,
       beats: 37,
       note: 'every beat has exactly one settled frame; the two overlays whose return seam is not itself a mapped beat (the mass state, the chart) carry an extra -return cell, so the sheet is 39 files over 37 beats'
     },
-    reviewProtocol: 'The presenter walks sheet.html top to bottom like a flipbook of the act. The single question at every frame: can I follow money’s history by eye alone? He returns either the go-ahead or the frames that break the thread.',
+    reviewProtocol: 'The presenter walks sheet.html top to bottom once more, like a flipbook of the act. The rail should now fill left to right like history being written, every station should arrive with a line beneath it, and there should be no white ball anywhere. He returns either the go-ahead that sends Act II to implementation, or the frames that break the thread.',
     counts,
-    claimPath: {
-      note: 'the traveler’s station per stretch — derived from the map’s carrier chain, flagged in the report',
-      path: 'shells (S5 b1–b6) → metals (S5 b7–b8) → gold (S6) → coinage (S7 b1–b2) → claim on gold (S7 b3–b5) → ledger (S8 through S10 — the carrier money wears today)'
+    rulings: {
+      'r2.1 fill order': 'narrative order is spatial order — SHELLS first, then CATTLE, SALT, IRON, METALS, GOLD, COINAGE, CLAIM ON GOLD, LEDGER, BITCOIN; the legacy stop positions unchanged, only the assignment. Zanzibar returns to the far-left SHELLS station',
+      'r2.2 arrival lines': 'every station arrives with a line beneath it — standing = the virtue at the station’s own voice (SHELLS and METALS in the installed S5 script’s own words), fallen = the wound at the dimmed-prior step',
+      'r2.3 the claim off the rail': 'the ClaimObject appears in no rail beat; station illumination and the spoken narrative carry the claim’s position. The collapsed Gate 3’s judgment object becomes the rail’s own continuity',
+      'r2.4 the vault folds in': 'the standalone vault overlay retired to file; S7 b3 stages CLAIM ON GOLD’s arrival, the dependency line arcing back to GOLD, and the vault line as the featured line at full voice; b4 keeps the line in the record',
+      'r2.5 the band box': 'one shared box, 188 × 188 world, height and width capped; every render in a box of its own aspect scaled to fit inside it',
+      'r2.6 the network': 'the mesh forms out of the LEDGER station itself at the approved s9-b1-a geometry, anchored where the ledger stood; palladium’s placement confirmed as staged',
+      'r2.7 coinage': 'the presenter’s coinage study gated and ingested through the standard harness; the flagged PENDING station is photographic'
     },
     cells: ids.map((id) => ({ id, file: `${id}.png`, ...meta[id] })),
     consoleErrors: errors
