@@ -132,7 +132,7 @@ and — for the regraded `patient` and the set it joined —
 | subject key | file | used at | corner / border | dark | R−B |
 |---|---|---|---|---|---|
 | `single_cowrie` | `assets/dark-field/single_cowrie.png` | P1 morph, the SHELL form | 0.58 / 0.49 | 89.0% | +105 |
-| `gold_certificate` | `assets/dark-field/gold_certificate.png` | Scene 7, the claim on gold · Scene 10, the strip's CLAIM ON GOLD station | 0.11 / 0.10 | 58.8% | +132 |
+| `gold_certificate` | `assets/dark-field/gold_certificate.png` | Scene 7, the claim on gold · Scene 8, the dissolve's outgoing form (motion only) · Scene 10, the strip's CLAIM ON GOLD station | 0.11 / 0.10 | 58.8% | +132 |
 | `vault` | `assets/dark-field/vault.png` | Scene 7 custody | 0.07 / 0.07 | 84.2% | +84 |
 | `ledger_glow` | `assets/dark-field/ledger_glow.png` | Scene 8, the transformation | 0.12 / 0.10 | 64.9% | +165 |
 | `palladium` | `assets/dark-field/palladium.png` | Scene 10, the bar | 0.10 / 0.09 | 75.3% | +49 |
@@ -252,7 +252,7 @@ reference, never a deletion, exactly as the aesthetic law requires.
 | cowrie | `cowrie_shells` | **banked** — no current scene |
 | ledger | `ledger_glow` | **P1's morph, the ledger form** *(presenter-ruled 29 August 2026)* · Scene 8, the transformation — the glowing close-up it was generated for |
 | ledger | `ledger` | the carrier lineup and other display-scale ledger appearances |
-| note | `gold_certificate` | Scene 7, the claim on gold · **Scene 10, the strip's CLAIM ON GOLD station** *(the CERTIFICATE ruling, 31 August 2026 — Batch B brief §1.1: every strip station photographic, the disc never a station)* |
+| note | `gold_certificate` | Scene 7, the claim on gold · **Scene 10, the strip's CLAIM ON GOLD station** *(the CERTIFICATE ruling, 31 August 2026 — Batch B brief §1.1: every strip station photographic, the disc never a station)* · **Scene 8, the dissolve's outgoing form — motion only** *(Batch B implementation, 31 August 2026: S8-F1 ports P1's cross-dissolve, whose two approved frames are paper → `ledger_glow`. Act II's paper claim is the certificate — `paper` is assigned to the P1 morph and is not in Act II's asset manifest — so the certificate is what dissolves. No settled state carries it; the report flags the choice, and it is one word to change.)* |
 | note | `paper` | P1 morph's paper form, and generic note appearances |
 
 The `used at` columns above and in §2 record the same assignments per row.
