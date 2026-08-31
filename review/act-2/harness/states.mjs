@@ -217,7 +217,12 @@ function evidence(st, { place, date, fact }) {
 // Zanzibar is `EvolutionRail`'s own `receipt` text, split into its place, its
 // date and its fact; 1971 is `2-07`'s decree verbatim; 1803 is `3-05`'s timing
 // line verbatim.
-const SPECIMEN = {
+//
+// EXPORTED at the rail-states session (1 September 2026) so `rail.mjs` stages
+// the featured moments from the same specimen record rather than transcribing
+// the strings a second time — the same one-word edit `systems.mjs` §note
+// records for its primitives. Nothing about any cell changed.
+export const SPECIMEN = {
   zanzibar: {
     place: 'WEST AFRICA', date: '1800s',
     fact: 'Shiploads of cheaper Zanzibar cowries collapsed the shell rate. Local savings, out-supplied.'
@@ -482,7 +487,10 @@ function palladiumChart(st, step) {
 // it, and the honest limitation ON ITS OWN ADVANCE at full voice while the rows
 // before it hold the dimmed-prior step (§9.4 rule 10). Every string is the
 // rail's own.
-const ENTRANT = {
+// EXPORTED at the rail-states session (1 September 2026) with SPECIMEN, for
+// the same reason: `rail.mjs` stages the entrant's landings from the recorded
+// strings rather than transcribing them a second time.
+export const ENTRANT = {
   name: 'BITCOIN',
   facts: '2009: digital · no state, no company · supply fixed by its own rules.',
   capabilities: ['DIGITAL MOBILITY', 'NON-DISCRETIONARY SUPPLY', 'INDEPENDENT VERIFICATION'],
