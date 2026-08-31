@@ -104,7 +104,11 @@ export const darkField = Object.fromEntries(
 // displays gold derives from the new render's own aspect (the ledger_glow
 // precedent): the rail's band boxes and P1's gold-form box (960×540 at 480,
 // 380 — 16:9 to within 0.05%). The retired 4:3 study is on file at
-// review/act-2/dark-field/gold--retired.png. A box with a materially different aspect would need
+// review/act-2/dark-field/gold--retired.png. `coinage`, ingested at the rail
+// r2 session (1 September 2026) for the rail's COINAGE station — the last
+// station in the register with no study — arrives at that same 1672×941 and
+// joins the family too, so the near-16:9 group is now fiat · metals · gold ·
+// coinage. A box with a materially different aspect would need
 // the scale computed against `object-fit: contain`'s actual fit rather than
 // against the frame — which is exactly the defect that showed up when the four
 // portrait renders first landed in the old landscape box: the rule was applied
@@ -119,6 +123,7 @@ const FRAMING = {
   bitcoin: [1.226, 0.3, 1.5],
   cattle: [1.101, -2.1, 3.1],
   coffee_cup: [1.227, -3.1, 13.2],
+  coinage: [1.44, 1.1, -1.3],
   cowrie_shells: [1.13, 1.7, -2.5],
   fiat: [1.127, 0.9, -1.9],
   gold: [1.469, -0.7, -3.5],

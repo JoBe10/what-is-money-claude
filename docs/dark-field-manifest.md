@@ -207,6 +207,29 @@ first-shoot study is on file** at `review/act-2/dark-field/gold--retired.png`
 (1448 × 1086) — a regeneration is a change of file behind one key, and the
 old study stays recoverable, per the aesthetic law's file-keeping clause.
 
+**The rail r2 drop — `coinage`, ingested 1 September 2026** (presenter-generated;
+gated and ingested through the standard harness for the rail's COINAGE station —
+the drop-zone run is `review/act-2/grade-coinage-drop.json`, and the post-ingest
+run over the whole shipping set is `review/act-2/grade-shipping-set-rail-r2.json`
+— **25 images, 125 checks, 0 failures**):
+
+| subject key | file | used at | corner / border | dark | R−B |
+|---|---|---|---|---|---|
+| `coinage` | `assets/dark-field/coinage.png` | the rail's COINAGE station (the staging amendment, S7 b1 onward) | 0.09 / 0.07 | 78.8% | +102.3 |
+
+This closes the register's last gap — **the one the spine itself created.**
+The rails law makes every station photographic, and when the staging amendment
+extended the rail to COINAGE there was no coinage study in the register, so the
+station carried its grammar-glyph stub, `data-pending`, and the rail-states
+report flagged it. The render — a small pile of ancient hammered gold and
+silver coins — passes all five clauses with a single key (warm fraction 99.2%,
+spread 0.99, key azimuth −172°). Its frame is **1672 × 941, the near-16:9
+family** (`fiat` · `metals` · `gold` · `coinage`), so its band box takes that
+aspect under the framing rule and the equal-visual-weight box (`AGENTS.md` §6).
+Measured framing row, pasted into `src/dark-field.js`:
+`coinage: [1.44, 1.1, -1.3]`. **No code change lit the station** — the eager
+glob and the pending stub are what the pipeline was built for.
+
 **Its frame is a fourth aspect family.** `fiat.png` is 1672 × 941 — near 16:9,
 the widest in the register — where the five-candidate lineup's display box is
 180 × 150 (6:5). That is a 48% aspect departure, well past the framing rule's
@@ -492,7 +515,7 @@ lineup keeps its own:
 
 | status | subjects |
 |---|---|
-| **shipping** (24) | `shoe` · `wine` · `shells` · `gold` · `paper` · `ledger` · `bitcoin` · `cattle` · `salt` · `cowrie_shells` · `iron` · `surgeon` · `meal` · `property` · `shares` · `single_cowrie` · `gold_certificate` · `vault` · `ledger_glow` · `palladium` · `coffee_cup` · `patient` · `fiat` · **`metals`** |
+| **shipping** (25) | `shoe` · `wine` · `shells` · `gold` · `paper` · `ledger` · `bitcoin` · `cattle` · `salt` · `cowrie_shells` · `iron` · `surgeon` · `meal` · `property` · `shares` · `single_cowrie` · `gold_certificate` · `vault` · `ledger_glow` · `palladium` · `coffee_cup` · `patient` · `fiat` · `metals` · **`coinage`** |
 | **regenerate** (0) | — |
 | **optional** (1) | `gold-native`, only if the two-survivors arrival is ruled in and wants its own study |
 
@@ -506,6 +529,11 @@ legacy competition record's featured moment with no code change.
 and it is gated, ingested and rowed (§3.0); the five-candidate lineup no longer
 shows a mark at any display-scale position, and the §5 distinctness clause is
 confirmed on file. Nothing in the register is now waiting on a generation.
+
+**One gap opened and closed after that** — `coinage`, created by the staging
+amendment's own spine when it made COINAGE a station on a rail whose law says
+every station is photographic. It was flagged pending in the rail-states report
+on 1 September 2026 and ingested the same day (the rail r2 drop, §2 above).
 
 Two flags stay open, and neither blocks anything: `fiat`'s frame is a fourth
 aspect family and every present call site gives it a 6:5 box (§2, §3.0 — the Act

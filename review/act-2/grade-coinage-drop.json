@@ -1,0 +1,82 @@
+{
+  "phase": "R7.2",
+  "dir": "assets/dark-field/incoming",
+  "thresholds": {
+    "cornerMax": 6,
+    "borderMax": 6,
+    "darkFracMin": 0.5,
+    "warmthMin": 18,
+    "warmFracMin": 0.9
+  },
+  "images": 1,
+  "checks": 5,
+  "failures": 0,
+  "frameTarget": 0.88,
+  "framing": {
+    "coinage": [
+      1.44,
+      1.1,
+      -1.3
+    ]
+  },
+  "rows": [
+    {
+      "file": "coinage.png",
+      "zone": "integrated",
+      "bytes": 1067473,
+      "width": 1672,
+      "height": 941,
+      "corners": {
+        "tl": 0.06,
+        "tr": 0.09,
+        "bl": 0.08,
+        "br": 0.07
+      },
+      "cornerMax": 0.09,
+      "border": 0.07,
+      "darkFrac": 0.788,
+      "subjectW": 0.611,
+      "subjectH": 0.54,
+      "subjectDX": -0.011,
+      "subjectDY": 0.013,
+      "highlightFrac": 0.0446,
+      "warmth": 102.3,
+      "highlightRGB": [
+        216,
+        175,
+        114
+      ],
+      "warmFrac": 0.992,
+      "keyAzimuth": -172,
+      "keyOffset": 0.113,
+      "spread": 0.99
+    }
+  ],
+  "results": [
+    {
+      "name": "grade: coinage.png — frame corners are black (≤ 6)",
+      "ok": true,
+      "detail": "max corner 0.09 (tl 0.06 tr 0.09 bl 0.08 br 0.07)"
+    },
+    {
+      "name": "grade: coinage.png — no environment reaches the border (≤ 6)",
+      "ok": true,
+      "detail": "border ring 0.07"
+    },
+    {
+      "name": "grade: coinage.png — the subject emerges from darkness (≥ 50% below L16)",
+      "ok": true,
+      "detail": "78.8% dark"
+    },
+    {
+      "name": "grade: coinage.png — the key is warm (R−B ≥ 18)",
+      "ok": true,
+      "detail": "R−B 102.3 on 4.46% of the frame, mean highlight rgb(216, 175, 114)"
+    },
+    {
+      "name": "grade: coinage.png — the highlight population is warm throughout (≥ 90%)",
+      "ok": true,
+      "detail": "99.2% of highlight pixels warm"
+    }
+  ]
+}
