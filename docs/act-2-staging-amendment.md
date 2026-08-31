@@ -4,7 +4,7 @@
 **What this is.** A presenter staging amendment to Act II: the act's visual anchor becomes **one continuous timeline (the rail) that never fully leaves the screen and extends to the right as history advances** — the old deck's proven macro-form, carrying the new narrative, the dark-field renders, and the claim through-line. The scripts, the 37 beats, and the spoken order are **unchanged**. Interludes (full-frame moments where the question changes) enter as overlays: the rail recedes, the interlude runs, the rail returns with its answer landed. Statement beats land as station annotations on the rail, not as standalone frames.
 
 **The spine (final state, left to right):**
-CATTLE · SALT · SHELLS · IRON *(the competition band, wounds beneath the fallen)* → METALS → **GOLD** *(crowned)* → COINAGE → CLAIM ON GOLD → LEDGER → BITCOIN — goods carried by their renders in the object band per the rails law; the claim rides the rail throughout; gain/dependency pairs light along it in Scene 10.
+~~CATTLE · SALT · SHELLS · IRON~~ **SHELLS · CATTLE · SALT · IRON** *(the competition band, wounds beneath the fallen)* → METALS → **GOLD** *(crowned)* → COINAGE → CLAIM ON GOLD → LEDGER → BITCOIN — goods carried by their renders in the object band per the rails law; ~~the claim rides the rail throughout;~~ gain/dependency pairs light along it in Scene 10. *(Amended by the r2 rulings below: the order is the narrative's, ruling 1; the claim steps off the Act II rail, ruling 3.)*
 
 **The overlays (each an existing approved cell or ruled restage — nothing new to design):**
 the periodic-table elimination (legacy, wave per advance) · the mass/weight state (s6-b5-a) · the photographic vault (s7-b4 restage) · the four-currency chart (ported) · the network formation (s9-b1-a) · palladium (s10-b3).
@@ -64,3 +64,19 @@ The rail's cumulative states (each beat's settled frame now shows history-so-far
 
 # Process
 Recorded as a **presenter staging amendment** in the freeze register (the narrative structure is untouched; the visual anchor is amended to the proven rail form). Pipeline after the presenter rules this map: one Fable session re-renders the rail states → his sheet pass (rail states only) → implementation r2 (two sessions under the sizing law) rewiring the scenes to the shared rail world → his act viewing, which remains the gate.
+
+---
+
+# The r2 rulings — 1 September 2026
+
+**Ruled by the presenter against the built rail system** (`review/act-2/rail/`, tag `act-2-rail-states`) after his flipbook walk of the sheet. Six confirmed staging rulings, executed in the r2 session (`docs/act-2-rail-r2-brief.md`). **The scripts, the 37 beats and the spoken order remain untouched**; these amend the map above where they touch it, and the three that are film-wide law are recorded beside the rails law in `AGENTS.md` §6.
+
+## r2.1 — Fill order: narrative order is spatial order
+
+**The rail fills strictly left to right at every beat; nothing ever lands to the left of a station already standing.** The spine's first four stations reorder to **SHELLS · CATTLE · SALT · IRON**, so the first carrier the film names stands first on the record, and the rail is written the way history is written — leftward is behind you. The legacy `EvolutionRail` stop positions are unchanged; only which station stands at which stop changes.
+
+**Zanzibar's featured moment returns to the far-left SHELLS station** when it lands (S5 b6), across the whole record the act has built since station one.
+
+**Recorded with the ruling:** the rail is a **competition record, not a chronology.** The only dates on it are the featured facts. Left to right is the order the film enters carriers into the contest, not the order the world minted them.
+
+Film-wide law: `AGENTS.md` §6, *The fill-order ruling*.

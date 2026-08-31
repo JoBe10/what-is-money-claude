@@ -404,6 +404,25 @@ never a station — it is the traveler.**
   sheet); already pre-recorded for Act III's monetization timeline; governs
   all future rails, strips, and timelines of monetary goods.
 
+### The fill-order ruling
+
+**Presenter-ordered, 1 September 2026 (the rail r2 session).** On every rail
+governed by the rails law: **narrative order is spatial order.** A station
+stands where the story reaches it, and **the rail fills strictly left to right
+at every beat — nothing ever lands to the left of a station already standing.**
+
+Act II's spine is therefore **SHELLS · CATTLE · SALT · IRON · METALS · GOLD ·
+COINAGE · CLAIM ON GOLD · LEDGER · BITCOIN**, and Zanzibar's featured moment
+returns to the **far-left SHELLS station** when it lands. The legacy
+`EvolutionRail` stop positions are unchanged; only which station stands at
+which stop changes.
+
+**Recorded with the ruling, because it is what makes the order legitimate:**
+the rail is a **competition record, not a chronology.** The only dates on it
+are the featured facts. A viewer reading it left to right is reading the order
+in which the film enters the carriers into the contest — not the order in
+which the world minted them.
+
 ### The survival-brightness ruling
 
 **Presenter-ordered, 1 September 2026 (the staging amendment's session).** On
