@@ -1,5 +1,5 @@
 {
-  "date": "2026-08-31T23:04:02.474Z",
+  "date": "2026-08-31T23:26:22.922Z",
   "session": "act-2-rail-r2",
   "authority": "docs/act-2-staging-amendment.md — presenter-approved verbatim, 1 September 2026 (master §13) — as amended by its r2 section, the presenter’s six rulings on this sheet (docs/act-2-rail-r2-brief.md §1)",
   "beatMap": {
@@ -34,6 +34,59 @@
     "r2.6 the network": "the mesh forms out of the LEDGER station itself at the approved s9-b1-a geometry, anchored where the ledger stood; palladium’s placement confirmed as staged",
     "r2.7 coinage": "the presenter’s coinage study gated and ingested through the standard harness; the flagged PENDING station is photographic"
   },
+  "approval": {
+    "date": "1 September 2026",
+    "by": "the presenter, on his flipbook walk of review/act-2/rail/sheet.html",
+    "recordedBy": "docs/act-2-rail-impl-brief.md §1.1",
+    "verdict": "APPROVED IN FULL — all 39 cells, including the nine honest-render flags of docs/act-2-rail-r2-report.md §6.",
+    "flagsNamedForHisWord": {
+      "the featured-line register at S7 b3 (flag 1)": "APPROVED AS RENDERED — the deck’s statement register at 36px, anchored at the CLAIM ON GOLD station, the same register the act’s other station arrivals use.",
+      "the mesh as the coin arrives at S9 b2 (flag 6)": "APPROVED AS RENDERED — the mesh belongs to beat 1; beat 2 shows the rail returned with BITCOIN at its station."
+    },
+    "effect": "The flags are closed and no cell is pending. This set is the visual authority for every landed-state proof of the rail implementation; a settled state that is not its approved cell at zero pixels is a defect.",
+    "gateCriterion": "The act’s gate criterion stands as amended (master §13 and §14, docs/act-2-staging-amendment.md r2.3): what the presenter’s act viewing judges is THE RAIL’S OWN CONTINUITY — whether the record reads as one continuous, growing history from S5 b1 to S10 b5. The viewing runs after implementation Session 2."
+  },
+  "approvedSet": [
+    "s5-b1",
+    "s5-b2",
+    "s5-b3",
+    "s5-b4",
+    "s5-b5",
+    "s5-b6",
+    "s5-b7",
+    "s5-b8",
+    "s6-b1",
+    "s6-b2",
+    "s6-b3",
+    "s6-b4",
+    "s6-b5",
+    "s6-b6",
+    "s6-b7",
+    "s6-b8",
+    "s6-b9",
+    "s6-b9-return",
+    "s7-b1",
+    "s7-b2",
+    "s7-b3",
+    "s7-b4",
+    "s7-b5",
+    "s8-b1",
+    "s8-b2",
+    "s8-b3",
+    "s8-b4",
+    "s8-b4-return",
+    "s8-b5",
+    "s9-b1",
+    "s9-b2",
+    "s9-b3",
+    "s9-b4",
+    "s9-b5",
+    "s10-b1",
+    "s10-b2",
+    "s10-b3",
+    "s10-b4",
+    "s10-b5"
+  ],
   "cells": [
     {
       "id": "s5-b1",

@@ -127,3 +127,9 @@ Film-wide law: `AGENTS.md` §6, the rails law's band entry.
 **The approved mesh geometry (`s9-b1-a`, selected 31 August 2026) is reused unchanged; only its origin and its anchoring change.** Twelve nodes on a ring, the same chord set from the same seed, the spokes receding at their approved voice, the hub at its approved receded voice — the whole system, moved from the middle of the stage onto the rail's LEDGER station.
 
 **Palladium's placement is confirmed as staged**, and the question closes: Scene 10 b3 keeps the ported palladium frame as an overlay against the extended rail, exactly as this map already stages it, with b4's insufficiency line inside that frame.
+
+## r2 — approved in full, 1 September 2026
+
+The presenter walked `review/act-2/rail/sheet.html` and **approved all 39 cells**, including the nine honest-render flags of `docs/act-2-rail-r2-report.md` §6; the two named for his word — the featured-line register at S7 b3, and the mesh belonging to beat 1 with beat 2 showing the rail returned and the coin at its station — are **approved as rendered**. No cell is pending, and the flags are closed.
+
+**The approved set is the visual authority for the implementation** (`review/act-2/rail/states.json` — `approval`, `approvedSet`, and master §13). Every settled state of the rewired scenes is its approved cell at zero pixels; a state that is not is a defect, not a variation.

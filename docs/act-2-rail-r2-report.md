@@ -101,6 +101,8 @@ Notes status: no scene module was touched, so no notes moved. Reduced-motion sta
 
 # 6. Flagged, not improvised — where a ruling underdetermined the staging
 
+> **CLOSED, 1 September 2026.** The presenter approved the sheet in full on his flipbook walk — all 39 cells, **all nine flags below approved as rendered**, including the two named for his word (flag 1, the featured-line register at S7 b3; flag 6, the mesh belonging to beat 1). No cell is pending. The record is `review/act-2/rail/states.json` (`approval`, `approvedSet`) and master §13; the approved set is the visual authority for the implementation's landed-state proofs.
+
 Each of these got **exactly one rendering and a plain-English note**. None is a candidate set, and none blocks your go-ahead — each is one small change if you want it different.
 
 1. **What "the featured line at full voice" means in register.** Ruling 4 says the vault line lands as *the featured line*. The film's featured-moment register is the dated-fact typography — a 128px date over a place kicker — and this sentence has no date, so that grammar cannot carry it. It is rendered once in the deck's statement register at 36px, anchored at the CLAIM ON GOLD station, at full voice: the same register and roughly the same size the act's other station arrivals use (coinage 36, gold 40, ledger 40). If "featured" should mean *larger than the other arrivals*, that is one number.
@@ -131,8 +133,10 @@ Everything the standing record already defers: the deck-wide suites, traversals,
 
 # 8. Remaining judgment calls — all yours
 
-- **The flipbook verdict** (§1) — the go-ahead that sends Act II to implementation, or the frames that break the thread.
-- **The nine flags** (§6), each with one honest render standing behind it. The two most likely to want a word from you are flag 1 (how large *the featured line* should be) and flag 6 (whether the mesh is still drawn when the coin arrives).
+> **The first two are answered.** On 1 September 2026 the presenter gave the flipbook verdict — **the go-ahead** — and approved all nine flags as rendered. Implementation began the same day (`docs/act-2-rail-impl-brief.md`).
+
+- ~~**The flipbook verdict** (§1) — the go-ahead that sends Act II to implementation, or the frames that break the thread.~~ **Given: the go-ahead.**
+- ~~**The nine flags** (§6), each with one honest render standing behind it. The two most likely to want a word from you are flag 1 (how large *the featured line* should be) and flag 6 (whether the mesh is still drawn when the coin arrives).~~ **All nine approved as rendered.**
 - **The pair-legibility question on the final frames** — camera motion, or stage register.
 - The `s5-b5` / `s10-b1` / `s10-b2` states-sheet cells now standing under the superseded band rule (flag 9) — leave them as the record of what they were, or fold them forward.
 

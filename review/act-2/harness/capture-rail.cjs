@@ -190,6 +190,23 @@ ${sceneSections}
       'r2.6 the network': 'the mesh forms out of the LEDGER station itself at the approved s9-b1-a geometry, anchored where the ledger stood; palladium’s placement confirmed as staged',
       'r2.7 coinage': 'the presenter’s coinage study gated and ingested through the standard harness; the flagged PENDING station is photographic'
     },
+    // THE APPROVAL (1 September 2026) — recorded per docs/act-2-rail-impl-brief.md
+    // §1.1. This is what makes the sheet an authority rather than a proposal:
+    // every landed-state proof of the implementation compares against these
+    // cells, so the set has to be named, dated and closed.
+    approval: {
+      date: '1 September 2026',
+      by: 'the presenter, on his flipbook walk of review/act-2/rail/sheet.html',
+      recordedBy: 'docs/act-2-rail-impl-brief.md §1.1',
+      verdict: 'APPROVED IN FULL — all 39 cells, including the nine honest-render flags of docs/act-2-rail-r2-report.md §6.',
+      flagsNamedForHisWord: {
+        'the featured-line register at S7 b3 (flag 1)': 'APPROVED AS RENDERED — the deck’s statement register at 36px, anchored at the CLAIM ON GOLD station, the same register the act’s other station arrivals use.',
+        'the mesh as the coin arrives at S9 b2 (flag 6)': 'APPROVED AS RENDERED — the mesh belongs to beat 1; beat 2 shows the rail returned with BITCOIN at its station.'
+      },
+      effect: 'The flags are closed and no cell is pending. This set is the visual authority for every landed-state proof of the rail implementation; a settled state that is not its approved cell at zero pixels is a defect.',
+      gateCriterion: 'The act’s gate criterion stands as amended (master §13 and §14, docs/act-2-staging-amendment.md r2.3): what the presenter’s act viewing judges is THE RAIL’S OWN CONTINUITY — whether the record reads as one continuous, growing history from S5 b1 to S10 b5. The viewing runs after implementation Session 2.'
+    },
+    approvedSet: ids,
     cells: ids.map((id) => ({ id, file: `${id}.png`, ...meta[id] })),
     consoleErrors: errors
   }, null, 2));
