@@ -1,4 +1,5 @@
-// Act II rail states — the per-cell checks (docs/act-2-rail-states-brief.md §4).
+// Act II rail states — the per-cell checks (docs/act-2-rail-states-brief.md §4;
+// re-run over the r2 re-render, docs/act-2-rail-r2-brief.md §4).
 //
 // The pipeline's own gates, in the dark-field gate's terms (limits from
 // docs/dark-field-manifest.md §0), run over every NEW rail cell:
@@ -90,7 +91,7 @@ const OUT = path.join(__dirname, '..', 'rail');
 
   fs.writeFileSync(path.join(__dirname, 'check-rail-cells.json'), JSON.stringify({
     date: new Date().toISOString(),
-    session: 'act-2-rail-states',
+    session: 'act-2-rail-r2',
     limits: { cornerMean: 6, borderMean: 6 },
     skippedCarried: skipped,
     skippedReason: 'carried cells ship the approved states sheet’s bytes, measured green at their own session; byte-identity is by file copy',

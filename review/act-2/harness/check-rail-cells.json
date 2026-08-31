@@ -1,6 +1,6 @@
 {
-  "date": "2026-08-31T10:37:05.529Z",
-  "session": "act-2-rail-states",
+  "date": "2026-08-31T23:05:52.430Z",
+  "session": "act-2-rail-r2",
   "limits": {
     "cornerMean": 6,
     "borderMean": 6
@@ -25,9 +25,9 @@
         "size": true
       },
       "cornerMean": 0,
-      "borderMean": 0.04,
+      "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 28046
+      "pxAbove32": 24177
     },
     {
       "id": "s5-b2",
@@ -41,7 +41,7 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 39247
+      "pxAbove32": 36233
     },
     {
       "id": "s5-b3",
@@ -55,7 +55,7 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 62663
+      "pxAbove32": 61085
     },
     {
       "id": "s5-b4",
@@ -69,7 +69,7 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 65662
+      "pxAbove32": 64312
     },
     {
       "id": "s5-b5",
@@ -83,7 +83,7 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 68691
+      "pxAbove32": 53428
     },
     {
       "id": "s5-b6",
@@ -97,7 +97,7 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 99068
+      "pxAbove32": 82644
     },
     {
       "id": "s5-b7",
@@ -111,7 +111,7 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 31207
+      "pxAbove32": 26495
     },
     {
       "id": "s5-b8",
@@ -125,7 +125,7 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 40670
+      "pxAbove32": 35958
     },
     {
       "id": "s6-b1",
@@ -139,7 +139,7 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 65527
+      "pxAbove32": 46403
     },
     {
       "id": "s6-b2",
@@ -153,7 +153,7 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 202,
-      "pxAbove32": 24075
+      "pxAbove32": 23651
     },
     {
       "id": "s6-b8",
@@ -167,7 +167,7 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 68518
+      "pxAbove32": 49394
     },
     {
       "id": "s6-b9",
@@ -181,7 +181,7 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 22058
+      "pxAbove32": 22053
     },
     {
       "id": "s6-b9-return",
@@ -195,7 +195,7 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 62375
+      "pxAbove32": 43251
     },
     {
       "id": "s7-b1",
@@ -209,7 +209,7 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 55260
+      "pxAbove32": 46718
     },
     {
       "id": "s7-b2",
@@ -223,7 +223,7 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 45450
+      "pxAbove32": 36908
     },
     {
       "id": "s7-b3",
@@ -237,7 +237,7 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 125069
+      "pxAbove32": 44131
     },
     {
       "id": "s7-b4",
@@ -251,7 +251,7 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 49165
+      "pxAbove32": 35407
     },
     {
       "id": "s7-b5",
@@ -265,7 +265,7 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 42933
+      "pxAbove32": 41417
     },
     {
       "id": "s8-b1",
@@ -279,7 +279,7 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 48405
+      "pxAbove32": 39667
     },
     {
       "id": "s8-b2",
@@ -293,7 +293,7 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 52099
+      "pxAbove32": 43361
     },
     {
       "id": "s8-b3",
@@ -307,7 +307,7 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 68726
+      "pxAbove32": 61035
     },
     {
       "id": "s8-b4",
@@ -321,7 +321,7 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 26477
+      "pxAbove32": 26478
     },
     {
       "id": "s8-b4-return",
@@ -335,7 +335,7 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 37753
+      "pxAbove32": 30062
     },
     {
       "id": "s8-b5",
@@ -349,7 +349,7 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 31798
+      "pxAbove32": 30134
     },
     {
       "id": "s9-b1",
@@ -362,8 +362,8 @@
       },
       "cornerMean": 0,
       "borderMean": 0,
-      "maxLum": 249,
-      "pxAbove32": 19198
+      "maxLum": 245,
+      "pxAbove32": 9091
     },
     {
       "id": "s9-b2",
@@ -377,7 +377,7 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 45945
+      "pxAbove32": 38410
     },
     {
       "id": "s9-b3",
@@ -391,7 +391,7 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 52051
+      "pxAbove32": 44516
     },
     {
       "id": "s9-b4",
@@ -405,7 +405,7 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 58860
+      "pxAbove32": 51325
     },
     {
       "id": "s9-b5",
@@ -419,7 +419,7 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 43745
+      "pxAbove32": 42331
     },
     {
       "id": "s10-b1",
@@ -433,7 +433,7 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 36236
+      "pxAbove32": 28701
     },
     {
       "id": "s10-b2",
@@ -447,7 +447,7 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 52368
+      "pxAbove32": 44833
     },
     {
       "id": "s10-b3",
@@ -461,7 +461,7 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 32791
+      "pxAbove32": 31812
     },
     {
       "id": "s10-b5",
@@ -475,7 +475,7 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 20638
+      "pxAbove32": 19092
     }
   ],
   "failures": 0
