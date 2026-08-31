@@ -117,7 +117,7 @@ const transitions = {
     tl.to(stage.railWrap, { opacity: 0, duration: 0.6, ease: 'power1.inOut' }, 0.05);
     tl.add(() => { stage.railWrap.style.display = 'none'; }, 0.7);
     tl.add(() => {
-      const ev = GEOM.evidence;
+      const ev = GEOM.evidence('zanzibar');
       stage.setText(stage.evPlace, ev.place[0], ev.place[1]);
       stage.setText(stage.evDate, ev.date[0], ev.date[1]);
       stage.setText(stage.evFact, ev.fact[0], ev.fact[1]);
