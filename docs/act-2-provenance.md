@@ -26,8 +26,8 @@
 | **S6-F1** the gold study, SCARCITY IN MATTER | **PORT** | P1-F2's display-scale study box (`p1-b4`…`p1-b8`, approved) + master §11's display rule |
 | **S6-F2 ◆** the elimination funnel | **PORT** | `2-05-two-survivors` + `ElementGrid`, at the legacy pacing. **Ruling 3 struck 31 Aug 2026** (master §13): the compression is void; the treatment transplants verbatim — one wave of eliminations per advance, exactly as `2-05` performs it |
 | **S6-F3** the mass state | **NEW** | none — the deck has never drawn represented value against required mass |
-| **S7-F1** custody: the vault study | **PORT** | P1-F2's display-scale study box, subject `vault` |
-| **S7-F2** the detachment | **NEW** | none — the legacy detaching rung's meaning is *vertical abstraction*; the film's moment is *outward travel with a dependency line back*. Candidates for the travel's geometry |
+| **S7-F1** custody: the vault study | **PORT** | P1-F2's display-scale study box, subject `vault`. **RETIRED TO FILE 1 Sep 2026** (r2.4 — the staging amendment's r2 section): the standalone vault overlay leaves Act II; the approved cell and its render stay banked and are not re-opened |
+| **S7-F2** the detachment | **NEW** | none — the legacy detaching rung's meaning is *vertical abstraction*; the film's moment is *outward travel with a dependency line back*. Candidates for the travel's geometry. **RETIRED TO FILE 1 Sep 2026** (r2.4): the detachment folds into the rail — CLAIM ON GOLD arrives as a station and the dependency line arcs back to GOLD on the rail itself. The approved `s7-b4` cell and its builder stay on file |
 | **S8-F1** the dissolve landing | **PORT** | P1's five-form cross-dissolve — and `p1-b6` → `p1-b7-glow` **is** paper → `ledger_glow`, already approved |
 | **S8-F2 ◆** the four-currency chart | **PORT** | `2-07-the-severance`'s chart, untouched — frozen data and all |
 | **S9-F1 ◆** the network formation | **NEW** | none — `2-08` names BITCOIN in stop typography and draws no network. See §5.2 on the murmuration |

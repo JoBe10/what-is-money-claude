@@ -7,7 +7,7 @@
 ~~CATTLE · SALT · SHELLS · IRON~~ **SHELLS · CATTLE · SALT · IRON** *(the competition band, wounds beneath the fallen)* → METALS → **GOLD** *(crowned)* → COINAGE → CLAIM ON GOLD → LEDGER → BITCOIN — goods carried by their renders in the object band per the rails law; ~~the claim rides the rail throughout;~~ gain/dependency pairs light along it in Scene 10. *(Amended by the r2 rulings below: the order is the narrative's, ruling 1; the claim steps off the Act II rail, ruling 3.)*
 
 **The overlays (each an existing approved cell or ruled restage — nothing new to design):**
-the periodic-table elimination (legacy, wave per advance) · the mass/weight state (s6-b5-a) · the photographic vault (s7-b4 restage) · the four-currency chart (ported) · the network formation (s9-b1-a) · palladium (s10-b3).
+the periodic-table elimination (legacy, wave per advance) · the mass/weight state (s6-b5-a) · ~~the photographic vault (s7-b4 restage)~~ *(retired to file — r2.4)* · the four-currency chart (ported) · the network formation (s9-b1-a) *(re-anchored to the LEDGER station — r2.6)* · palladium (s10-b3).
 
 **Featured moments (dated facts staged ON the rail, dated-fact typography kept):** Zanzibar at the SHELLS station · 1971 at the LEDGER station · 1803 spoken inside the palladium overlay as already ruled.
 
@@ -32,8 +32,8 @@ b9 — **overlay: the mass state** (the counted load) — gold's weakness, weigh
 **Scene 7 (5):**
 b1 — COINAGE station arrives; annotation: solves verification and division — trust required: the mint. *(Replaces the empty coinage frame.)*
 b2 — the fleet problem spoken over the rail; the station's limit noted.
-b3 — CLAIM ON GOLD station arrives (the certificate render) + **overlay: the photographic vault** — the certificate leaving custody, the dependency line drawing back.
-b4 — the rail returns; the dependency line persists at the station.
+b3 — CLAIM ON GOLD station arrives (the certificate render) + ~~**overlay: the photographic vault** — the certificate leaving custody, the dependency line drawing back.~~ **r2.4: no overlay — the dependency line arcs back to GOLD on the rail itself, and the vault line lands as the featured line at full voice.**
+b4 — ~~the rail returns;~~ the dependency line persists at the station. *(r2.4)*
 b5 — "The gold stayed. The claim moved." / "Portability improved. Trust moved to the issuer." — statements over the rail.
 
 **Scene 8 (5):**
@@ -57,7 +57,7 @@ b3 — **overlay: palladium** against the extended rail. b4 — the insufficienc
 ---
 
 # What survives untouched
-All scripts and beat counts (37) · all overlays as approved cells · the restored periodic table · the vault restage · all renders and the object band · all featured-moment typography · the claim through-line motion where it rides the rail.
+All scripts and beat counts (37) · all overlays as approved cells · the restored periodic table · ~~the vault restage~~ *(retired to file — r2.4; the approved cell and its builder stay on file)* · all renders and the object band · all featured-moment typography · ~~the claim through-line motion where it rides the rail~~ *(the claim steps off the Act II rail — r2.3)*.
 
 # What re-renders
 The rail's cumulative states (each beat's settled frame now shows history-so-far) and the station-annotation landings — a bounded set, all derived from one rail composition plus the approved band, no open design questions. The retired standalone frames (the empty carrier statements, the standalone Zanzibar) go to file.
@@ -98,3 +98,16 @@ Film-wide law: `AGENTS.md` §6, *The arrival-line rule*.
 **The claim's on-screen thread is not cancelled, only paused.** It resumes where the architecture already stages it: in Act III, and at Act IV's return.
 
 Recorded also at `docs/what-is-money-master.md` §13 and §14 (the gate list's annotation) and `AGENTS.md` §7 (the Claim Mark's Act II state).
+
+## r2.4 — The vault folds into the rail
+
+**The standalone vault overlay is retired to file; its render is banked.** The map above gave S7 b3 an overlay seam pair — the photographic vault rising over the receded rail (the approved `s7-b4` restage). That overlay leaves Act II. The approved cell stays on file at `review/act-2/states/s7-b4.png` and its builder stays registered; nothing is deleted, and nothing about it is re-opened.
+
+**The restage, on the rail:**
+
+- **b3** — **CLAIM ON GOLD arrives** (the `gold_certificate` render takes its station); a **thin dependency line arcs back to the GOLD station** in the service-path grammar; and ***"A claim on gold in a vault. Trust required: the vault."* lands as the featured line, at full voice.**
+- **b4** — the dependency line **persists in the record from that beat onward**, exactly as this map's b4 note already stages it.
+
+**S7 stays 5 beats. The script is untouched.** The interlude count for Act II drops from six to five: the periodic table, the mass state, the four-currency chart, the network formation, palladium.
+
+Annotated at `docs/act-2-provenance.md` (rows S7-F1 and S7-F2) so no later session re-stages the retired frame.
