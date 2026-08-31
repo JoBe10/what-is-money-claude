@@ -640,13 +640,19 @@ cell('s5-b5', {
 cell('s5-b6', {
   scene: 'S5', beat: 6, ord: 6, kind: 'featured',
   source: 'the amendment S5 b6 · the S5-F3 dated-fact grammar (approved) staged at the SHELLS station · the survival-brightness ruling · r2.1, r2.2',
-  caption: 'Beat 6 · ZANZIBAR, the featured moment, at the far-left SHELLS station — the ruling’s own instruction: the dated fact returns to the station it belongs to, across the whole record the act has built since station one. The virtue is replaced by the wound at the dimmed-prior step, and the station goes dark in front of you. This is the frame where the survival-brightness ruling pays: the station that read as alive for five beats is defeated here.'
+  caption: 'Beat 6 · ZANZIBAR, the featured moment, at the far-left SHELLS station — the ruling’s own instruction: the dated fact returns to the station it belongs to, across the whole record the act has built since station one. The virtue is gone from beneath the shells, replaced by the wound itself — which is landing here, at full scale, in the approved dated-fact typography. That landing is the station’s line on this beat; it settles into the rail’s own row at beat 7. The station goes dark in front of you: this is the frame where the survival-brightness ruling pays.'
 }, (st) => {
   const cam = frame('shells', 'metals', { cy: 400 });
   rail(st, {
     head: 'metals', cam,
     st: stAt({ shells: 'prior', ...EARLY_FALLEN, metals: 'alive' }),
-    rows: { ...EARLY_WOUNDS(null), shells: { wound: true }, ...METALS_VIRTUE }
+    // No shells row here: the wound IS the sentence landing on this beat, in
+    // the dated-fact register anchored at the station (r2.2 — a landing is the
+    // station's line, and settles into the world row on the following beat).
+    // Setting the row as well would print the same sentence twice and, at the
+    // far-left station the fill-order ruling gives the shells, would run the
+    // five-line wound straight into the dated block's kicker.
+    rows: { ...EARLY_WOUNDS(null), ...METALS_VIRTUE }
   });
   datedFact(st, SPECIMEN.zanzibar, cam, 'shells', 620);
 });
