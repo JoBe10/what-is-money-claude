@@ -20,7 +20,6 @@ import { ensureStage, destroyStage, TOTAL_BUILDS, reducedMotion } from './_archi
 export function makeSceneModule({ id, number, title, notes, entry, morphIn, transitions, onEnterExtra, onExitExtra }) {
   return {
     id,
-    protoKey: 'act2',
     sceneGroup: 'act2-architecture',
     section: 'act ii — the architecture of money',
     number,

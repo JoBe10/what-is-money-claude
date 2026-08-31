@@ -1,7 +1,8 @@
 // GENERATED DATA — do not hand-edit. Regenerate from the sources below.
 // Audit trail: docs/SOURCES.md entries WIM-FX-001 (USD), WIM-FX-002 (GBP),
-// WIM-FX-003 (JPY), WIM-FX-004 (CHF). Consumed by slide 2.7
-// (`2-07-the-severance`), build 3 — the chart "What one unit still buys."
+// WIM-FX-003 (JPY), WIM-FX-004 (CHF). Consumed by Scene 8 beat 4, the chart
+// "What one unit still buys." — ported whole from slide 2.7's build 3
+// (`2-07-the-severance`, left the manifest at the Batch B splice).
 //
 // WHAT THESE NUMBERS ARE. Purchasing power of one unit of each currency,
 // CPI-deflated, indexed 1971 = 100, annual, 1971 through 2025 (the latest

@@ -1,6 +1,8 @@
 // GENERATED DATA — do not hand-edit. Regenerate from the sources below.
 // Audit trail: docs/SOURCES.md entries WIM-PD-001 (mine supply) and
-// WIM-PD-002 (prices). Consumed by slide 3.5 (`3-05-the-palladium-test`).
+// WIM-PD-002 (prices). Consumed by Scene 10 beats 3–4 — ported whole from
+// slide 3.5 (`3-05-the-palladium-test`, left the manifest at the Batch B
+// splice) by architecture Ruling 4, which placed palladium in Scene 10.
 //
 // ---------------------------------------------------------------------------
 // WHY THE LEFT PANEL IS SUPPLY AND NOT CRUSTAL ABUNDANCE (R4 §1.2.1)
