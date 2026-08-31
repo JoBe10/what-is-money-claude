@@ -1,8 +1,9 @@
-// Act II rail states — the one boot smoke (docs/act-2-rail-states-brief.md §4).
+// Act II rail states — the one boot smoke (docs/act-2-rail-states-brief.md §4;
+// re-run for r2, docs/act-2-rail-r2-brief.md §4).
 //
-// Nothing in the deck changed this session except the regenerated gold render
+// Nothing in the deck changed this session except the ingested coinage render
 // and its framing row, so the deck owes exactly one proof: it boots — 39
-// slides in the spliced order, 0 console errors — with the new gold live in
+// slides in the spliced order, 0 console errors — with the new render live in
 // the register. No traversal, no matrices: adding unrequested checks is a
 // defect this session, same as skipping requested ones.
 //
@@ -40,7 +41,7 @@ const EXPECTED_SLIDES = 39;
 
   fs.writeFileSync(path.join(__dirname, '..', 'smoke-rail-boot.json'), JSON.stringify({
     date: new Date().toISOString(),
-    session: 'act-2-rail-states',
+    session: 'act-2-rail-r2',
     expectedSlides: EXPECTED_SLIDES,
     deck,
     consoleErrors: errors,
