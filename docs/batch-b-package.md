@@ -151,9 +151,17 @@ Every frame: 1920×1080, real assets, real type, final composition, brightness r
 
 **Presenter process amendment, 31 August 2026 (Batch B implementation brief §1.3).** The prototype gate for the architecture morph is struck from this batch's pipeline: **the presenter's live viewing of the implemented act is the gate.** What he judges there, by name: **the claim's connective journey — the S5 entry from Scene 4's world, the drawn carrier taken and held, the certificate travel out of the vault, the arrival at the strip.** Disappointing seams are fixed by ruled iterations against the pinned states — the approved cells stand; only the motion between them iterates. The amendment is recorded in the freeze trail (master §13).
 
+**Amended 1 September 2026 — what the viewing judges (`docs/act-2-rail-impl-brief.md` §1.2).** The staging amendment's r2 ruling took the claim off the Act II rail (`docs/act-2-staging-amendment.md` r2.3; master §13, §14), and the judgment object named above went with it. **The act's gate criterion stands as amended: the rail's own continuity** — whether the record reads as one continuous, growing history from S5 b1 to S10 b5. In plain English, the three holds the presenter checked on the sheet, now in motion:
+
+> **history writes itself left to right; every arrival is introduced by its own line; there is no white ball anywhere.**
+
+And the seams by name: the ship returning to the oldest station, the dependency arc drawing back to the gold, the mesh growing out of the failed ledger, the same rail read twice. **The viewing runs after implementation Session 2**, forward at speaking pace and then backward, motion-on and reduced-motion. The gate itself is unchanged — the act viewing is still the gate, and it still closes on the presenter's word. Only what it is looking at has moved.
+
 The struck gate's scope is kept below as the record of what the viewing now carries, because its questions did not die — they moved to the viewing:
 
 > ~~**Scope:** the act's signature system — the continuous transformation that carries one value through changing architectures: **gold → claim-on-gold → ledger entry → bitcoin**, threading Scenes 6→9 and returning as Scene 10's strip. Built in the scratch route against approved states, after the beat-state sheet, before implementation.~~ The gate's questions, now the viewing's: does the *same value* visibly persist through every transformation (the through-line unbroken, as the Claim Mark was through Act I); does each handoff read as gain-plus-dependency rather than mere succession; does the morph stay object-led until Scene 8's dissolve, where material becomes information on screen. The viewing closes on the presenter's word.
+
+**Of those three questions, the first is re-answered by the r2 amendment and the other two stand.** The *same value persisting* is no longer carried by a disc travelling the act — the claim is off the Act II rail, and its on-screen thread resumes in Act III and at Act IV's return. What carries persistence now is the rail itself: the record never leaves the screen, every station stays on it, and each one keeps its own line beneath it. Gain-plus-dependency still has to read at every handoff — it is written into the record as the pairs — and the dissolve into information still has to be object-led when Session 2 stages it.
 
 # 5. Asset manifest for Act II
 
