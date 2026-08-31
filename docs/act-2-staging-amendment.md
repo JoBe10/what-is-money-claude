@@ -44,7 +44,7 @@ b4 — **overlay: the four-currency chart** (ported); the rail returns with the 
 b5 — "Extraordinary at moving value. Measurably poor at storing it." — statement over the rail.
 
 **Scene 9 (5):**
-b1 — **overlay: the network formation** (the hub dissolving into the mesh).
+b1 — **overlay: the network formation** (the hub dissolving into the mesh) — *r2.6: the mesh forms out of the LEDGER station itself and stays anchored where the ledger stood; the approved geometry is unchanged, only its origin.*
 b2 — BITCOIN station arrives on the rail (the coin render; the facts block as its entrant annotation — 2009 · no state, no company · supply fixed by its own rules).
 b3 — the three capabilities land at the station. b4 — the honesty lands in the same breath.
 b5 — the stability distinction — statement over the rail.
@@ -119,3 +119,11 @@ Annotated at `docs/act-2-provenance.md` (rows S7-F1 and S7-F2) so no later sessi
 Re-measured and recorded in the band's law entry (`AGENTS.md` §6, the rails law): the box is **188 × 188 world**, the height cap being `EvolutionRail`'s own `RENDER_H` unchanged and the width cap the icon grid's square live-area normalization. Width spread across the register falls from **2.220× to 1.250×**.
 
 Film-wide law: `AGENTS.md` §6, the rails law's band entry.
+
+## r2.6 — The network forms out of the LEDGER station
+
+**The S9 b1 overlay no longer arrives as a detached diagram.** The mesh forms **out of the LEDGER station itself**: the station's hub — the issuer the act has just watched fail — dissolves, and **the mesh remains anchored where the ledger stood**. The rail returns, and the coin takes its station beside it (b2).
+
+**The approved mesh geometry (`s9-b1-a`, selected 31 August 2026) is reused unchanged; only its origin and its anchoring change.** Twelve nodes on a ring, the same chord set from the same seed, the spokes receding at their approved voice, the hub at its approved receded voice — the whole system, moved from the middle of the stage onto the rail's LEDGER station.
+
+**Palladium's placement is confirmed as staged**, and the question closes: Scene 10 b3 keeps the ported palladium frame as an overlay against the extended rail, exactly as this map already stages it, with b4's insufficiency line inside that frame.
