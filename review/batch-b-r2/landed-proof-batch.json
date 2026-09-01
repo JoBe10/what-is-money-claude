@@ -1,0 +1,647 @@
+{
+  "date": "2026-09-01T02:50:43.776Z",
+  "session": "batch-b-r2",
+  "authority": "review/act-2/rail/states.json — approval, approvedSet (presenter-approved in full, 1 September 2026)",
+  "rule": "each of the 33 settled rail states of Act II, mounted cold through the real engine in the deck at 1920×1080, is its approved r2 cell at zero differing pixels (channel delta > 2/255 counts). Comparisons: scene↔archived cell, fresh cell↔archived cell, scene↔fresh cell.",
+  "notCovered": "S6 beats 3–7 — the elimination interiors the sheet carries byte-identical from the states sheet, which show the overlay without the rail the deck holds beneath it. Their content is the legacy ElementGrid's own waves, untouched.",
+  "knownControlDrift": {
+    "s10-b3": {
+      "pixels": 69,
+      "maxDelta": 20,
+      "note": "the palladium overlay’s interior — the sheet’s re-render no longer lands on its own archived bytes; reproducible in every run since the r2 session, unaffected by the page-per-cell capture fix. The deck matches the ARCHIVE at zero pixels. Recorded at docs/act-2-rail-impl-1-report.md §7.5 and carried forward here."
+    }
+  },
+  "states": 33,
+  "deckProven": 33,
+  "passed": 33,
+  "results": [
+    {
+      "state": "5:0",
+      "cell": "s5-b1",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "claimOk": true,
+      "controlDeclared": false,
+      "pass": true
+    },
+    {
+      "state": "5:1",
+      "cell": "s5-b2",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "claimOk": true,
+      "controlDeclared": false,
+      "pass": true
+    },
+    {
+      "state": "5:2",
+      "cell": "s5-b3",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "claimOk": true,
+      "controlDeclared": false,
+      "pass": true
+    },
+    {
+      "state": "5:3",
+      "cell": "s5-b4",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "claimOk": true,
+      "controlDeclared": false,
+      "pass": true
+    },
+    {
+      "state": "5:4",
+      "cell": "s5-b5",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "claimOk": true,
+      "controlDeclared": false,
+      "pass": true
+    },
+    {
+      "state": "5:5",
+      "cell": "s5-b6",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "claimOk": true,
+      "controlDeclared": false,
+      "pass": true
+    },
+    {
+      "state": "5:6",
+      "cell": "s5-b7",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "claimOk": true,
+      "controlDeclared": false,
+      "pass": true
+    },
+    {
+      "state": "5:7",
+      "cell": "s5-b8",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "claimOk": true,
+      "controlDeclared": false,
+      "pass": true
+    },
+    {
+      "state": "6:0",
+      "cell": "s6-b1",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "claimOk": true,
+      "controlDeclared": false,
+      "pass": true
+    },
+    {
+      "state": "6:1",
+      "cell": "s6-b2",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 1
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 1
+      },
+      "claimOk": true,
+      "controlDeclared": false,
+      "pass": true
+    },
+    {
+      "state": "6:7",
+      "cell": "s6-b8",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "claimOk": true,
+      "controlDeclared": false,
+      "pass": true
+    },
+    {
+      "state": "6:8",
+      "cell": "s6-b9",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 1
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 1
+      },
+      "claimOk": true,
+      "controlDeclared": false,
+      "pass": true
+    },
+    {
+      "state": "6:8 → scarcity-in-matter:9",
+      "cell": "s6-b9-return",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "claimOk": true,
+      "controlDeclared": false,
+      "pass": true
+    },
+    {
+      "state": "7:0",
+      "cell": "s7-b1",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "claimOk": true,
+      "controlDeclared": false,
+      "pass": true
+    },
+    {
+      "state": "7:1",
+      "cell": "s7-b2",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "claimOk": true,
+      "controlDeclared": false,
+      "pass": true
+    },
+    {
+      "state": "7:2",
+      "cell": "s7-b3",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 1
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 1
+      },
+      "claimOk": true,
+      "controlDeclared": false,
+      "pass": true
+    },
+    {
+      "state": "7:3",
+      "cell": "s7-b4",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 1
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 1
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "claimOk": true,
+      "controlDeclared": false,
+      "pass": true
+    },
+    {
+      "state": "7:4",
+      "cell": "s7-b5",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "claimOk": true,
+      "controlDeclared": false,
+      "pass": true
+    },
+    {
+      "state": "8:0",
+      "cell": "s8-b1",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "claimOk": true,
+      "controlDeclared": false,
+      "pass": true
+    },
+    {
+      "state": "8:1",
+      "cell": "s8-b2",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "claimOk": true,
+      "controlDeclared": false,
+      "pass": true
+    },
+    {
+      "state": "8:2",
+      "cell": "s8-b3",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "claimOk": true,
+      "controlDeclared": false,
+      "pass": true
+    },
+    {
+      "state": "8:3",
+      "cell": "s8-b4",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "claimOk": true,
+      "controlDeclared": false,
+      "pass": true
+    },
+    {
+      "state": "8:4",
+      "cell": "s8-b5",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 1
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 1
+      },
+      "claimOk": true,
+      "controlDeclared": false,
+      "pass": true
+    },
+    {
+      "state": "8:4 → money-becomes-information:5",
+      "cell": "s8-b4-return",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "claimOk": true,
+      "controlDeclared": false,
+      "pass": true
+    },
+    {
+      "state": "9:0",
+      "cell": "s9-b1",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 1
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 1
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 1
+      },
+      "claimOk": true,
+      "controlDeclared": false,
+      "pass": true
+    },
+    {
+      "state": "9:1",
+      "cell": "s9-b2",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "claimOk": true,
+      "controlDeclared": false,
+      "pass": true
+    },
+    {
+      "state": "9:2",
+      "cell": "s9-b3",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "claimOk": true,
+      "controlDeclared": false,
+      "pass": true
+    },
+    {
+      "state": "9:3",
+      "cell": "s9-b4",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "claimOk": true,
+      "controlDeclared": false,
+      "pass": true
+    },
+    {
+      "state": "9:4",
+      "cell": "s9-b5",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 1
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 1
+      },
+      "claimOk": true,
+      "controlDeclared": false,
+      "pass": true
+    },
+    {
+      "state": "10:0",
+      "cell": "s10-b1",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "claimOk": true,
+      "controlDeclared": false,
+      "pass": true
+    },
+    {
+      "state": "10:1",
+      "cell": "s10-b2",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "claimOk": true,
+      "controlDeclared": false,
+      "pass": true
+    },
+    {
+      "state": "10:2",
+      "cell": "s10-b3",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 69,
+        "maxDelta": 20
+      },
+      "sceneVsCell": {
+        "diffPixels": 69,
+        "maxDelta": 20
+      },
+      "claimOk": true,
+      "controlDeclared": true,
+      "pass": true
+    },
+    {
+      "state": "10:4",
+      "cell": "s10-b5",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 1
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 1
+      },
+      "claimOk": true,
+      "controlDeclared": false,
+      "pass": true
+    }
+  ],
+  "consoleErrors": []
+}
