@@ -1,0 +1,481 @@
+{
+  "date": "2026-09-01T05:10:29.062Z",
+  "session": "act-3-states",
+  "limits": {
+    "cornerMean": 6,
+    "borderMean": 6
+  },
+  "frozenBeatMap": {
+    "S11": 5,
+    "S12": 4,
+    "S13": 6,
+    "S14": 4,
+    "S15": 6,
+    "total": 25
+  },
+  "ruledClasses": {
+    "S11-F1": "PORT",
+    "S12-F1": "ADAPT",
+    "S13-F1": "ADAPT",
+    "S14-F1": "ADAPT",
+    "S15-F1": "PORT",
+    "S15-F2": "PORT"
+  },
+  "reportedNotGated": "warmPixelsReported — the act carries the accent by design at the ladder’s foundation state, the tower’s base and the disc’s return, so warmth is evidence here rather than a gate.",
+  "cells": [
+    {
+      "id": "s11-b1",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 179,
+      "pxAbove32": 493,
+      "warmPixelsReported": 0
+    },
+    {
+      "id": "s11-b2",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 250,
+      "pxAbove32": 5342,
+      "warmPixelsReported": 667
+    },
+    {
+      "id": "s11-b3",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 250,
+      "pxAbove32": 11398,
+      "warmPixelsReported": 1549
+    },
+    {
+      "id": "s11-b4",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 250,
+      "pxAbove32": 15214,
+      "warmPixelsReported": 2115
+    },
+    {
+      "id": "s11-b5",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 25836,
+      "warmPixelsReported": 4403
+    },
+    {
+      "id": "s12-b1",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 191,
+      "pxAbove32": 15020,
+      "warmPixelsReported": 610
+    },
+    {
+      "id": "s12-b2",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 191,
+      "pxAbove32": 8052,
+      "warmPixelsReported": 1632
+    },
+    {
+      "id": "s12-b3",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 49334,
+      "warmPixelsReported": 2866
+    },
+    {
+      "id": "s12-b4",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 23528,
+      "warmPixelsReported": 4469
+    },
+    {
+      "id": "s13-b1",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 127,
+      "pxAbove32": 3800,
+      "warmPixelsReported": 214
+    },
+    {
+      "id": "s13-b2",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 17334,
+      "warmPixelsReported": 10825
+    },
+    {
+      "id": "s13-b3",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 28147,
+      "warmPixelsReported": 19122
+    },
+    {
+      "id": "s13-b4",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 40533,
+      "warmPixelsReported": 20534
+    },
+    {
+      "id": "s13-b5",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 253.2,
+      "pxAbove32": 70704,
+      "warmPixelsReported": 38991
+    },
+    {
+      "id": "s13-b6",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 78115,
+      "warmPixelsReported": 40048
+    },
+    {
+      "id": "s14-b1",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 253,
+      "pxAbove32": 48455,
+      "warmPixelsReported": 33934
+    },
+    {
+      "id": "s14-b2",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 63737,
+      "warmPixelsReported": 40030
+    },
+    {
+      "id": "s14-b3",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 67510,
+      "warmPixelsReported": 43487
+    },
+    {
+      "id": "s14-b4",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 30015,
+      "warmPixelsReported": 2513
+    },
+    {
+      "id": "s15-b1",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 193,
+      "pxAbove32": 3558,
+      "warmPixelsReported": 350
+    },
+    {
+      "id": "s15-b2",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 193,
+      "pxAbove32": 8392,
+      "warmPixelsReported": 1151
+    },
+    {
+      "id": "s15-b3",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 193,
+      "pxAbove32": 16604,
+      "warmPixelsReported": 2506
+    },
+    {
+      "id": "s15-b4",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 193,
+      "pxAbove32": 25225,
+      "warmPixelsReported": 4392
+    },
+    {
+      "id": "s15-b5",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 32508,
+      "warmPixelsReported": 4653
+    },
+    {
+      "id": "s15-b6",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 25426,
+      "warmPixelsReported": 5152
+    }
+  ],
+  "checks": 15,
+  "failures": 0,
+  "results": [
+    {
+      "name": "CELLS: 25 measured — corner ≤ 6, border ≤ 6, content present, 1920×1080",
+      "ok": true,
+      "detail": "25/25"
+    },
+    {
+      "name": "MAP: the ruled classes transcribed here are the classes docs/act-3-provenance.md states",
+      "ok": true,
+      "detail": "6/6 rows agree"
+    },
+    {
+      "name": "MAP: the coordination-scales NEW row is recorded as not built",
+      "ok": true,
+      "detail": "recorded"
+    },
+    {
+      "name": "MAP: every cell’s class is the class the map rules for its frame",
+      "ok": true,
+      "detail": "every framed cell agrees with the map"
+    },
+    {
+      "name": "MAP: no cell is unclassified",
+      "ok": true,
+      "detail": "25/25 carry a frame and a class"
+    },
+    {
+      "name": "MAP: every PORT and ADAPT cell names its legacy source",
+      "ok": true,
+      "detail": "all named"
+    },
+    {
+      "name": "BEATS: every beat of the frozen map is on the sheet exactly once, and Act III is 25",
+      "ok": true,
+      "detail": "S11 5 · S12 4 · S13 6 · S14 4 · S15 6 = 25"
+    },
+    {
+      "name": "NO CANDIDATES: every cell is a beat cell — nothing on file, nothing pending selection, no candidate systems",
+      "ok": true,
+      "detail": "25/25 beat cells, 0 candidates"
+    },
+    {
+      "name": "NO CANDIDATES: the only review classes on the sheet are pending-review, determined and approved-port",
+      "ok": true,
+      "detail": "pending-review · determined · approved-port"
+    },
+    {
+      "name": "FLAGS: every pending-review PORT carries its plain-English flag",
+      "ok": true,
+      "detail": "every flagged port says why"
+    },
+    {
+      "name": "THREAD: the ClaimObject is built exactly once, gated behind the disc return, and only s15-b6 asks for it",
+      "ok": true,
+      "detail": "1 construction(s) · gated true · s15-b6 true · nowhere else true"
+    },
+    {
+      "name": "LADDER: the builder removes the stop glyphs and stands renders in the stops (the one ruled change)",
+      "ok": true,
+      "detail": "glyphs removed · DarkFieldImage in the stop · the component’s state machine drives presence"
+    },
+    {
+      "name": "BAND: the stage marks use the 188×188 contain box (the rails law, r2.5)",
+      "ok": true,
+      "detail": "188 cap on both axes, each render in a box of its own aspect"
+    },
+    {
+      "name": "REGISTER: no dark-field render enters the tower diagram — the disc return is the only addition",
+      "ok": true,
+      "detail": "tower builder carries the mounted diagram, the copy rows, and the disc only"
+    },
+    {
+      "name": "ASSIGNMENTS: collectible = single_cowrie (ruled) · gold / coinage / ledger (honest, flagged)",
+      "ok": true,
+      "detail": "as recorded in docs/act-3-provenance.md §2"
+    }
+  ]
+}
