@@ -1,0 +1,72 @@
+{
+  "date": "2026-09-01T04:56:45.601Z",
+  "session": "act-3-states",
+  "rule": "docs/batch-c-package.md §2 is docs/batch-c-scripts-draft.md word for word and character for character; every scene’s [→] count is the frozen map’s; Act III is 25 beats; the notes armor is installed notes-only.",
+  "scenes": [
+    {
+      "scene": "S11",
+      "words": 189,
+      "beats": 5,
+      "expected": 5
+    },
+    {
+      "scene": "S12",
+      "words": 229,
+      "beats": 4,
+      "expected": 4
+    },
+    {
+      "scene": "S13",
+      "words": 443,
+      "beats": 6,
+      "expected": 6
+    },
+    {
+      "scene": "S14",
+      "words": 176,
+      "beats": 4,
+      "expected": 4
+    },
+    {
+      "scene": "S15",
+      "words": 361,
+      "beats": 6,
+      "expected": 6
+    }
+  ],
+  "totalBeats": 25,
+  "checks": 6,
+  "failures": 0,
+  "results": [
+    {
+      "name": "PRESENT: every scene has a draft block and an installed block",
+      "ok": true,
+      "detail": "5/5 located"
+    },
+    {
+      "name": "WORDS: the installed scripts are the draft, word for word",
+      "ok": true,
+      "detail": "zero differences (S11 189 · S12 229 · S13 443 · S14 176 · S15 361)"
+    },
+    {
+      "name": "CHARACTERS: identical to the byte, punctuation and dashes included",
+      "ok": true,
+      "detail": "5/5 identical"
+    },
+    {
+      "name": "BEATS: every scene matches the frozen map, and Act III is 25",
+      "ok": true,
+      "detail": "S11 5 · S12 4 · S13 6 · S14 4 · S15 6 = 25"
+    },
+    {
+      "name": "FREEZE: §1’s beat maps state the same counts as §2’s scripts",
+      "ok": true,
+      "detail": "5/5 agree"
+    },
+    {
+      "name": "ARMOR: the S13 notes-armor block is installed, marked notes-only, with no advance inside it",
+      "ok": true,
+      "detail": "present, never spoken, zero advances"
+    }
+  ]
+}
