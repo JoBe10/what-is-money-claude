@@ -70,6 +70,12 @@ function morphIn(mod, stage) {
   }, 0);
   tl.to([stage.stmtEls[0], stage.stmtEls[1]],
     { opacity: 0, duration: 0.5, ease: 'power1.inOut' }, 0.05);
+  // SEAM STOPGAP, SESSION 1. Scene 7 now hands over a rail world and Scene 8
+  // does not join it until Session 2, so the record is released here on the
+  // same `.s2o-rail` 800ms it recedes on everywhere else rather than cutting
+  // out under the dissolve. Session 2 replaces this with the LEDGER station's
+  // own arrival, which is where the dissolve actually belongs.
+  tl.to(stage.railWorld.el, { opacity: 0, duration: 0.8, ease: 'power1.out' }, 0.05);
   // The paper claim arrives in the forms' own box...
   tl.add(() => setVisible(stage.certForm, true), 0.5);
   // ...and the ledger rises through it, the paper released a beat later.

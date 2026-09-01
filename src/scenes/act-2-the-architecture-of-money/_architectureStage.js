@@ -58,6 +58,12 @@ import { EvolutionRail, FRAMES } from '../../components/section-2/EvolutionRail.
 import { glyph } from '../../components/section-2/glyphs.js';
 import { claimRasterHint, releaseRasterHint } from '../../components/rasterHint.js';
 import {
+  RailWorld, RAIL_TEXT, RECEDE, X as RAIL_X, ORDER as RAIL_ORDER
+} from './_railWorld.js';
+import {
+  RAIL_STATES, RAIL_BUILDS, RAIL_CELL, RAIL_SPECIMEN, S6_RETURN
+} from './_railStates.js';
+import {
   PURCHASING_POWER, PP_SERIES, PP_YEAR_MIN, PP_YEAR_MAX
 } from '../../data/purchasing-power.js';
 import {
@@ -351,54 +357,12 @@ export const COPY = {
 // the beat-state sheet, named in its annotation.
 
 export const STATES = {
-  'the-function-stayed': [
-    // beat 1 — s5-b1: the claim in construction C's carrier, SHELLS.
-    { claim: { label: 'SHELLS', voice: 0.75 } },
-    // beat 2 — s5-b2: CATTLE falls on the contender row.
-    { rail: s5Row(['cattle'], 'cattle') },
-    // beat 3 — s5-b3: SALT falls; CATTLE's wound recedes (§9.4 rule 10).
-    { rail: s5Row(['cattle', 'salt'], 'salt') },
-    // beat 4 — s5-b4: IRON falls; SHELLS still standing.
-    { rail: s5Row(['cattle', 'salt', 'iron'], 'iron') },
-    // beat 5 — s5-b5: the record — METALS active, the object band riding the
-    // rail under the rails law, the fallen renders at the dimmed-prior step.
-    { rail: S5_RECORD, railBand: true },
-    // beat 6 — s5-b6: the Zanzibar receipt, the evidence grammar's specimen.
-    { evidence: 'zanzibar' },
-    // beat 7 — s5-b7: the composition returns, carrier unnamed; the pair.
-    { claim: {}, stmts: [[COPY.functionStayed, 812, 46, 1]] },
-    // beat 8 — s5-b8: the exit question on the same composition.
-    { claim: {}, stmts: [[COPY.whyChanged, 812, 46, 1]] }
-  ],
-  'scarcity-in-matter': [
-    // beat 1 — s6-b1: the gold study with the display rule's statement.
-    { study: 'gold', studyStmt: COPY.scarcity },
-    // beats 2–7 — s6-b2 … s6-b7: the restored elimination, one legacy build
-    // per advance (Ruling 3 struck — the legacy pacing, exactly as 2-05
-    // performs it).
-    { survivors: 1 },
-    { survivors: 2 },
-    { survivors: 3 },
-    { survivors: 4 },
-    { survivors: 5 },
-    { survivors: 6 },
-    // beat 8 — s6-b8: the claim's strongest body yet.
-    { claim: { label: 'GOLD', voice: 1 }, stmts: [[COPY.hardCreate, 812, 46, 1]] },
-    // beat 9 — s6-b9: the mass state — the selected counted load.
-    { mass: true, stmts: [[COPY.massGrows, 848, 40, 1]] }
-  ],
-  'claims-on-gold': [
-    // beat 1 — s7-b1: gold's weaknesses on the body that has them.
-    { claim: { label: 'GOLD', voice: 1 }, stmts: [[COPY.goldWound, 812, 40, 1]] },
-    // beat 2 — s7-b2: the body becomes the coin.
-    { claim: { label: 'COINAGE', voice: 1 }, stmts: [[COPY.mint, 812, 40, 1]] },
-    // beat 3 — s7-b3: custody — the vault study.
-    { study: 'vault', studyStmt: COPY.goldStops },
-    // beat 4 — s7-b4: the detachment, restaged photographically.
-    { detachment: true, stmts: [[COPY.claimOnGold, 866, 46, 1]] },
-    // beat 5 — s7-b5: the trade named honestly, on cleared black.
-    { stmts: [[COPY.portability, 452, 54, 1], [COPY.trust, 560, 54, 1]] }
-  ],
+  // SCENES 5, 6 AND 7 ARE THE RAIL WORLD (the staging amendment, master §13;
+  // the r2 rulings; the sheet approved in full 1 September 2026). Their states
+  // are one transcription of the approved cells, in `_railStates.js` — the
+  // legacy per-beat compositions they replace are retired with the amendment,
+  // and the beat map is untouched at 8 · 9 · 5.
+  ...RAIL_STATES,
   'money-becomes-information': [
     // beat 1 — s8-b1: the dissolve's landing. The Prologue's approved morph
     // runs the paper claim into the glowing ledger entry; the register's one
@@ -439,8 +403,14 @@ export const STATES = {
   ]
 };
 
+// The last build the engine advances to, per scene. It is the states array's
+// last index everywhere except Scene 6, whose array carries ONE STATE PAST ITS
+// LAST BEAT — the rail's return seam, which the sheet records as "not itself a
+// mapped beat" and which Scene 7's morph launches from (`_railStates.js`).
 export const TOTAL_BUILDS = Object.fromEntries(
-  Object.entries(STATES).map(([id, states]) => [id, states.length - 1])
+  Object.entries(STATES).map(([id, states]) => [
+    id, RAIL_BUILDS[id] == null ? states.length - 1 : RAIL_BUILDS[id]
+  ])
 );
 
 const WAVE_LINES = [
@@ -489,6 +459,16 @@ class Act2Stage {
     root.style.cssText = 'position:absolute; inset:0; overflow:hidden;' +
       'font-family:Inter,sans-serif; background:#000;';
     this.root = root;
+
+    // ---- THE RAIL WORLD, first and beneath everything ----
+    //
+    // Act II's anchor: one continuous rail carrying the whole act (the staging
+    // amendment). It mounts before every other layer because that is the
+    // sheet's own stacking — the overlays rise OVER the receded record, and the
+    // stage-register landings sit over both. Scenes 5–7 drive it; Scenes 8–10
+    // join it at Session 2 and the legacy compositions below retire with them.
+    this.railWorld = RailWorld();
+    root.appendChild(this.railWorld.el);
 
     // The drawn layer beneath everything — the dependency line lives here,
     // under the photographs, exactly as the sheet's svg-first stacking has it.
@@ -642,7 +622,10 @@ class Act2Stage {
     this.diagEls.style.cssText = 'position:absolute; inset:0; pointer-events:none;';
     root.appendChild(this.diagEls);
 
-    // ---- the statements (last — over everything, as the builders append)
+    // ---- the statements (last — over everything, as the builders append).
+    // `railLandEls` are the sheet's station-anchored landings: a beat's own
+    // sentence, landed at its station in the deck's registers.
+    this.railLandEls = [this._text(), this._text()];
     this.stmtEls = [this._text(), this._text()];
 
     // ---- the traveler: the held claim in motion between compositions. The
@@ -1029,6 +1012,160 @@ class Act2Stage {
     tl.to(line, { attr: { 'stroke-dashoffset': 0 }, duration: dur, ease }, at + 0.02);
   }
 
+  // ---- the rail's gestures — the legacy rail's own, transcribed ----
+  //
+  // Every duration below is the legacy rail's, and every one of them is a
+  // measured value from a shipped file, not a taste:
+  //
+  //   the camera            1.7s power2.inOut — EvolutionRail's own gsap tween
+  //   a station arriving    800ms ease-out    — `.s2o-rail__stop`'s opacity
+  //   a line landing        900ms fade + a rise from 6px over 1100ms —
+  //                         `.s2o-rail__wound`, which lands by translating up
+  //   the rail growing      1500ms after a 300ms hold — `.s2o-rail__line`'s
+  //                         scaleX transition and its delay
+  //
+  // GSAP eases stand in for the CSS timing functions: `power1.out` for
+  // `ease-out`, `power4.out` for `cubic-bezier(0.22, 1, 0.36, 1)`.
+
+  /**
+   * Move the rail to `spec`. The camera travels from wherever it is; stations
+   * the state adds arrive; named rows land; `grow` runs the line's own
+   * extension out to the new head.
+   */
+  railTo(tl, spec, {
+    at = 0, arrive = null, land = [], grow = false, camera = true, arriveAt = 0.5
+  } = {}) {
+    const world = this.railWorld;
+    const prev = world.state();
+    const headOf = (s) => (s.headX == null ? RAIL_X[s.head] : s.headX);
+    const camFrom = camera && prev ? { ...prev.cam } : { ...spec.cam };
+    const headTo = RAIL_X[spec.head];
+    const growing = grow !== false && grow != null;
+    const headFrom = grow === true
+      ? (prev ? headOf(prev) : headTo)
+      : (typeof grow === 'number' ? grow : headTo);
+    // A station arrives when the state adds it. On a cold entry there is no
+    // previous state to diff, so the caller names them.
+    const arriving = arrive || (prev
+      ? RAIL_ORDER.filter((id) => spec.st[id] && !prev.st[id])
+      : []);
+    const recedeTo = RECEDE[spec.recede || 'none'];
+    const recedeFrom = prev ? RECEDE[prev.recede || 'none'] : recedeTo;
+    const drive = { ...camFrom, headX: headFrom, recedeValue: recedeFrom };
+    const paint = () => world.apply({
+      ...spec,
+      cam: { cx: drive.cx, s: drive.s, cy: drive.cy },
+      headX: drive.headX,
+      recedeValue: drive.recedeValue
+    });
+
+    tl.add(() => {
+      world.el.style.display = '';
+      paint();
+      arriving.forEach((id) => {
+        const S = world.stations[id];
+        gsap.set([S.wrap, S.g], { opacity: 0 });
+      });
+      land.forEach(([id, slot]) => {
+        gsap.set(world.stations[id][slot], { opacity: 0, y: 6 });
+      });
+    }, at);
+
+    if (camera) {
+      tl.to(drive, {
+        cx: spec.cam.cx, s: spec.cam.s, cy: spec.cam.cy,
+        duration: 1.7, ease: 'power2.inOut', onUpdate: paint
+      }, at);
+    }
+    if (growing) {
+      tl.to(drive, {
+        headX: headTo, duration: 1.5, ease: 'power4.out', onUpdate: paint
+      }, at + 0.3);
+    }
+    if (recedeFrom !== recedeTo) {
+      tl.to(drive, {
+        recedeValue: recedeTo, duration: 0.8, ease: 'power1.out', onUpdate: paint
+      }, at);
+    }
+    arriving.forEach((id) => {
+      const S = world.stations[id];
+      tl.to([S.wrap, S.g], { opacity: 1, duration: 0.8, ease: 'power1.out' }, at + arriveAt);
+    });
+    land.forEach(([id, slot], i) => {
+      const el = world.stations[id][slot];
+      const t = at + arriveAt + 0.25 + i * 0.1;
+      tl.to(el, { opacity: 1, duration: 0.9, ease: 'power1.out' }, t);
+      tl.to(el, { y: 0, duration: 1.1, ease: 'power4.out' }, t);
+    });
+    return arriving;
+  }
+
+  /** The dependency arc drawing back from the certificate to the gold. */
+  railDrawDep(tl, at, dur = 0.9) {
+    const p = this.railWorld.depPath;
+    const dots = this.railWorld.depDots;
+    tl.add(() => {
+      const len = p.getTotalLength() || 1;
+      p.setAttribute('stroke-dasharray', String(len));
+      p.setAttribute('stroke-dashoffset', String(len));
+      gsap.set(dots, { opacity: 0 });
+      gsap.set(dots[0], { opacity: 1 });
+    }, at);
+    tl.to(p, { attr: { 'stroke-dashoffset': 0 }, duration: dur, ease: 'power2.out' }, at + 0.02);
+    tl.add(() => gsap.set(dots[1], { opacity: 1 }), at + dur);
+  }
+
+  /**
+   * A stage-register block landing over the rail — the deck's own reveal.
+   * `write` puts the state's own copy on the element, so a gesture and a
+   * reconstruction cannot say different things.
+   */
+  railBlock(tl, el, write, at, { dur = 0.65, rise = 12 } = {}) {
+    tl.add(() => {
+      write();
+      gsap.set(el, { opacity: 0, y: rise });
+    }, at);
+    tl.to(el, { opacity: 1, y: 0, duration: dur, ease: 'power2.out' }, at + 0.02);
+  }
+
+  // The rail's stage-register blocks, written from the state itself so a
+  // gesture and a reconstruction cannot say different things.
+
+  /** The dated fact anchored at its station (S5 b6). */
+  railDatedFact(state) {
+    const [name, stationId, y0] = state.datedFact;
+    const ev = RAIL_TEXT.datedFact(RAIL_SPECIMEN[name], state.rail.cam, stationId, y0);
+    if (ev.place) this.setText(this.evPlace, ev.place[0], ev.place[1]);
+    else this.hideText(this.evPlace);
+    this.setText(this.evDate, ev.date[0], ev.date[1]);
+    this.setText(this.evFact, ev.fact[0], ev.fact[1]);
+    return { place: this.evPlace, date: this.evDate, fact: this.evFact };
+  }
+
+  /** A beat's own sentence, landed at its station. */
+  railLanding(state) {
+    const [copy, id, opts] = state.landing;
+    const [text, styles] = RAIL_TEXT.landing(copy, state.rail.cam, id, opts);
+    this.setText(this.railLandEls[0], text, styles);
+    return this.railLandEls[0];
+  }
+
+  /** A statement over the receded record. */
+  railStatement(state, i) {
+    const [copy, opts] = state.statements[i];
+    const [text, styles] = RAIL_TEXT.statement(copy, opts);
+    this.setText(this.stmtEls[i], text, styles);
+    return this.stmtEls[i];
+  }
+
+  /** The question register over the receded record. */
+  railQuestion(state) {
+    const [copy, top] = state.question;
+    const [text, styles] = RAIL_TEXT.question(copy, top);
+    this.setText(this.stmtEls[0], text, styles);
+    return this.stmtEls[0];
+  }
+
   // ---- the mass diagram (s6-b9 — massCounted(), transcribed) ----
 
   buildMassDiagram() {
@@ -1099,11 +1236,25 @@ class Act2Stage {
     // double-rAF restores them once the state has painted.
     this.root.dataset.snap = 'true';
 
-    // The rail.
+    // THE RAIL WORLD. One state of the act's anchor, written from the sheet's
+    // own camera math; `clearGestureProps` is the settled contract — a
+    // reconstruction never inherits a gesture's leftovers.
     if (st.rail) {
+      this.railWorld.el.style.display = '';
+      this.railWorld.apply(st.rail);
+    } else {
+      this.railWorld.el.style.display = 'none';
+    }
+    this.railWorld.el.style.opacity = '';
+    this.railWorld.clearGestureProps();
+
+    // The legacy contender rail. Scenes 5–7 left it at the rail rewire and
+    // Scenes 8–10 never used it, so nothing sets `legacyRail` any more; the
+    // mount stays until Session 2 retires it with the compositions it served.
+    if (st.legacyRail) {
       this.railWrap.style.display = '';
       this.railWrap.style.opacity = '';
-      this.rail.applyState(st.rail, { live: false });
+      this.rail.applyState(st.legacyRail, { live: false });
     } else {
       this.railWrap.style.display = 'none';
       this.railWrap.style.opacity = '';
@@ -1275,12 +1426,37 @@ class Act2Stage {
     if (st.mass) this.buildMassDiagram();
     else this.clearMassDiagram();
 
-    // The statements — and Scene 10's closing question, which takes the deck's
+    // The rail's dated fact — the evidence grammar anchored at its station
+    // (S5 b6's Zanzibar). It writes the same three elements the legacy
+    // specimens use, and comes after them so the anchored version wins.
+    if (st.datedFact) {
+      this.railDatedFact(st);
+      [this.evPlace, this.evDate, this.evFact].forEach((el) => {
+        gsap.set(el, { clearProps: 'opacity,y' });
+      });
+    }
+
+    // The rail's station-anchored landing — a beat's own sentence, landed at
+    // its station in the deck's registers.
+    this.railLandEls.forEach((el, i) => {
+      if (i === 0 && st.landing) {
+        this.railLanding(st);
+        gsap.set(el, { clearProps: 'opacity,y' });
+      } else this.hideText(el);
+    });
+
+    // The statements — the rail's own over the receded record, the legacy
+    // scenes' `stmts`, and Scene 10's closing question, which takes the deck's
     // question register rather than the statement one, in the first slot.
     this.stmtEls.forEach((el, i) => {
+      const railStmt = st.statements && st.statements[i];
       const conf = st.stmts && st.stmts[i];
       if (i === 0 && st.question) {
-        this.setText(el, GEOM.question[0], GEOM.question[1]);
+        if (Array.isArray(st.question)) this.railQuestion(st);
+        else this.setText(el, GEOM.question[0], GEOM.question[1]);
+        gsap.set(el, { clearProps: 'opacity,y' });
+      } else if (railStmt) {
+        this.railStatement(st, i);
         gsap.set(el, { clearProps: 'opacity,y' });
       } else if (conf) {
         const [copy, styles] = GEOM.statement(conf[0], conf[1], conf[2], conf[3]);
@@ -1325,9 +1501,28 @@ class Act2Stage {
     const text = (el) => [el.textContent, el.style.cssText, getComputedStyle(el).opacity];
     const attr = (el, names) => names.map((n) => el.getAttribute(n));
     const railWorld = this.rail.el.querySelector('.s2o-rail__world');
+    const rw = this.railWorld;
     return {
       scene: this.scene,
       build: this.build,
+      // The rail world — every station's geometry and voice, the line's extent,
+      // the dependency arc. This is what the reduced-motion parity check reads
+      // to prove that a state reached without motion is the same state.
+      world: {
+        display: rw.el.style.display,
+        recede: getComputedStyle(rw.layer).opacity,
+        line: ['x', 'y', 'width', 'height'].map((a) => rw.lineRect.getAttribute(a)),
+        ticks: rw.ticks.map((t) => [t.style.display, t.getAttribute('x'), t.getAttribute('width')]),
+        stations: Object.entries(rw.stations).map(([id, S]) => [
+          id, S.wrap.style.display, S.photo.style.left, S.photo.style.top,
+          S.photo.style.getPropertyValue('--df-w'), S.photo.style.opacity,
+          S.dot.getAttribute('cx'), S.dot.getAttribute('r'), S.dot.getAttribute('fill'),
+          text(S.label), text(S.row64), text(S.row146)
+        ]),
+        dep: [rw.depPath.style.display, rw.depPath.getAttribute('d'),
+          rw.depPath.getAttribute('stroke-width')],
+        landings: this.railLandEls.map(text)
+      },
       rail: {
         display: this.railWrap.style.display,
         datasets: { ...this.rail.el.dataset },
@@ -1416,7 +1611,12 @@ export function ensureStage(container) {
   container.__act2Stage = stage;
   window.__act2 = {
     settled: () => !stage.hasMotion(),
-    state: () => stage.serialize()
+    state: () => stage.serialize(),
+    // The harness's one affordance: apply a stage state by name. It exists for
+    // the state Scene 6 carries past its last beat — the rail's return seam,
+    // which is not a build and so cannot be reached by advancing (the sheet's
+    // `s6-b9-return`). Nothing in the deck calls it.
+    apply: (sceneId, build) => stage.applyState(sceneId, build)
   };
   return stage;
 }

@@ -1,163 +1,134 @@
 // Scene 5 — The Function Stayed. The Carrier Changed. (8 beats).
 //
-// The act opens on the film's through-line made literal: the held claim —
-// resting on Scene 4's save road when Act I left it — enters, travels to the
-// stage's centre, and construction C's carrier forms around it. The carrier
-// then hands the stage to the competition record (the ported 2-04 contender
-// row, mounted as the component the legacy runs), the record transforms
-// under the rails law with the renders riding the band, the Zanzibar receipt
-// lands in the evidence grammar, and the same claim returns for the closing
-// pair — the body changed and the thing inside did not.
+// THE RAIL BEGINS HERE. Act II's anchor is one continuous record that never
+// fully leaves the screen and extends right as history advances (the staging
+// amendment, master §13), and this scene writes its first five stations: the
+// line draws in from the left, SHELLS takes station one with its virtue
+// beneath it, and CATTLE, SALT and IRON arrive to its right and fall, each
+// with its own wound. METALS rises out of the wreckage; the ship comes for the
+// shells at the far-left station; and the act's thesis lands over the receded
+// record.
 //
-// PORTS MOVE LIKE THEY ALWAYS DID. The verdict landings (beats 2–4) and the
-// row-to-record transformation (beat 5) are EvolutionRail's own state
-// transitions and camera move, driven through the states the legacy 2-04
-// drives it through. What this session authors is the connective tissue the
-// brief names: the claim's entry from Scene 4's world, the carrier's handoff
-// to the record, the evidence landing (in the severance's own reveal
-// character), and the claim's return.
+// THE MOTION IS THE LEGACY RAIL'S, TRANSCRIBED. Every gesture here is one of
+// `EvolutionRail`'s own, at its own duration: the camera's 1.7s power2.inOut
+// tween, the stop's 800ms arrival, the wound row's 900ms fade and 1100ms rise
+// from 6px, and the line's 1500ms extension after a 300ms hold. What this
+// session authors is nothing: the rulings fixed the staging, the sheet fixed
+// every settled frame, and the legacy fixed the way a rail moves.
 //
-// Landed states — approved cells, by construction (states.json approvedSet):
-// s5-b1 … s5-b8, with b5 the rails-law record and b6 the evidence grammar's
-// first specimen.
+// THE CLAIM IS NOT HERE, and its absence is a ruling, not an omission (r2.3):
+// the ClaimObject appears in no Act II rail beat, station illumination and the
+// spoken narrative carry the claim's position, and its on-screen thread
+// resumes in Act III and at Act IV's return. So the act no longer opens on the
+// disc arriving from Scene 4's world — it opens on the record starting to be
+// written, which is the amendment's own S5 b1.
+//
+// Landed states — the approved r2 cells, by construction: s5-b1 … s5-b8.
 
 import { gsap } from 'gsap';
-import {
-  GEOM, COPY, s5Row, setVisible, hideInstantly
-} from './_architectureStage.js';
 import { makeSceneModule } from './_sceneModule.js';
 
 const ID = 'the-function-stayed';
 
-// The claim's entry — the new connective motion (Batch B brief §2): the held
-// claim arrives from Scene 4's resting place, finds the stage's centre, and
-// the drawn carrier forms around it. The traveler is the same component at
-// the same 116, so the closing swap to the in-carrier claim is a same-pixel
-// handoff inside one synchronous callback.
+// The act opens: the line draws in out of the dark and the first carrier takes
+// its station. The line's growth is `.s2o-rail__line`'s own scaleX transition
+// — 1500ms after a 300ms hold — run here in world terms, from behind the
+// line's own start so the rail arrives out of nothing.
+const RAIL_OFF = -400;
+
 function entry(mod, stage) {
-  stage.applyState(ID, 0);
+  const st = stage.states[ID][0];
   const tl = stage.timeline();
-  tl.add(() => {
-    hideInstantly(stage.shell.el, () => stage.shell.applyState({ visible: false }));
-    hideInstantly(stage.claim.el, () => stage.claim.applyState({ visible: false }));
-    gsap.set(stage.claimLabelEl, { opacity: 0 });
-    stage.setTraveler(GEOM.s4Rest[0], GEOM.s4Rest[1], 0);
-  }, 0);
-  // The claim finds its light where Scene 4 left it resting...
-  tl.to(stage.traveler, { opacity: 1, duration: 0.6, ease: 'power1.out' }, 0.2);
-  // ...and crosses into the act.
-  tl.to(stage.traveler, {
-    left: `${GEOM.claimCentre[0] - 58}px`,
-    top: `${GEOM.claimCentre[1] - 58}px`,
-    duration: 1.4,
-    ease: 'power2.inOut'
-  }, 0.9);
-  // The first body forms around it — the carrier's own reveal.
-  tl.add(() => stage.shell.applyState({ visible: true }), 2.35);
-  tl.to(stage.claimLabelEl, { opacity: 1, duration: 0.5, ease: 'power1.out' }, 2.7);
-  // The handoff: the in-carrier claim takes over at the same pixel.
-  tl.add(() => stage.applyState(ID, 0), 3.4);
+  stage.railTo(tl, st.rail, {
+    at: 0, grow: RAIL_OFF, camera: false,
+    arrive: ['shells'], arriveAt: 0.9,
+    land: [['shells', 'row64']]
+  });
+  tl.add(() => stage.applyState(ID, 0), 3.1);
 }
 
 const transitions = {
-  // beat 2 — the carrier hands the stage to the record: the composition
-  // withdraws as the contender row rises where it stood, and CATTLE takes
-  // its wound exactly as the legacy landed it.
+  // beat 2 — CATTLE arrives to the RIGHT of the shells and falls. The camera
+  // opens to take it in, the line extends to the new head, and the wound lands
+  // at full voice beneath the station that just took it.
   1: (mod, stage) => {
     const tl = stage.timeline();
-    tl.add(() => {
-      stage.shell.applyState({ visible: false });
-      stage.claim.applyState({ visible: false });
-    }, 0.05);
-    tl.to(stage.claimLabelEl, { opacity: 0, duration: 0.4, ease: 'power1.inOut' }, 0);
-    tl.add(() => {
-      stage.railWrap.style.opacity = '0';
-      stage.railWrap.style.display = '';
-      stage.rail.applyState(s5Row([], null), { live: false });
-    }, 0.3);
-    tl.to(stage.railWrap, { opacity: 1, duration: 0.8, ease: 'power1.inOut' }, 0.35);
-    tl.add(() => stage.rail.applyState(s5Row(['cattle'], 'cattle'), { live: true }), 1.35);
-    tl.add(() => stage.applyState(ID, 1), 2.5);
+    stage.railTo(tl, stage.states[ID][1].rail, {
+      at: 0, grow: true, land: [['cattle', 'row64']]
+    });
+    tl.add(() => stage.applyState(ID, 1), 3.1);
   },
 
-  // beats 3–4 — the verdicts, the component's own landings: the new wound at
-  // full voice, the prior receding to the dimmed step (§9.4 rule 10).
+  // beats 3–4 — SALT, then IRON. The same sentence each time: the rail reaches
+  // one station further right, the newcomer arrives, its wound lands at full
+  // voice, and the one before it recedes to the dimmed-prior step.
   2: (mod, stage) => {
     const tl = stage.timeline();
-    tl.add(() => stage.rail.applyState(s5Row(['cattle', 'salt'], 'salt'), { live: true }), 0.05);
-    tl.add(() => stage.applyState(ID, 2), 1.3);
+    stage.railTo(tl, stage.states[ID][2].rail, {
+      at: 0, grow: true, land: [['salt', 'row64']]
+    });
+    tl.add(() => stage.applyState(ID, 2), 3.1);
   },
   3: (mod, stage) => {
     const tl = stage.timeline();
-    tl.add(() => stage.rail.applyState(s5Row(['cattle', 'salt', 'iron'], 'iron'), { live: true }), 0.05);
-    tl.add(() => stage.applyState(ID, 3), 1.3);
+    stage.railTo(tl, stage.states[ID][3].rail, {
+      at: 0, grow: true, land: [['iron', 'row64']]
+    });
+    tl.add(() => stage.applyState(ID, 3), 3.1);
   },
 
-  // beat 5 — the transformation: the camera opens to the record, the fallen
-  // stops settle, METALS rises with its render, and the goods stay riding
-  // the band (the rails law) — receding with their stations instead of
-  // collapsing into marks.
+  // beat 5 — METALS rises out of the wreckage, and arrives the way every
+  // station arrives: with its own line beneath it (r2.2), in the installed
+  // script's own words. The three wounds have receded; the rising family is
+  // the sentence.
   4: (mod, stage) => {
     const tl = stage.timeline();
-    tl.add(() => stage.rail.applyState(stage.states[ID][4].rail, { live: true }), 0.05);
-    tl.to(stage.fallenRenders, { opacity: 0.58, duration: 1.2, ease: 'power1.inOut' }, 0.5);
-    tl.add(() => {
-      stage.metalsBox.style.display = '';
-      gsap.set(stage.metalsBox, { opacity: 0 });
-    }, 0.9);
-    tl.to(stage.metalsBox, { opacity: 1, duration: 0.9, ease: 'power1.out' }, 1.0);
-    tl.add(() => stage.applyState(ID, 4), 2.6);
+    stage.railTo(tl, stage.states[ID][4].rail, {
+      at: 0, grow: true, land: [['metals', 'row64']]
+    });
+    tl.add(() => stage.applyState(ID, 4), 3.3);
   },
 
-  // beat 6 — the record yields to the receipt: the dated fact lands in the
-  // severance's own reveal character — the place and the date rise first,
-  // the consequence follows.
+  // beat 6 — ZANZIBAR, at the far-left SHELLS station (r2.1): the ship
+  // returns to the oldest station on the record. The camera lifts to make room
+  // beneath, the shells go dark as their virtue leaves them, and the dated
+  // fact lands in the severance's own reveal character — the place and the
+  // date rise together, the consequence follows.
   5: (mod, stage) => {
+    const st = stage.states[ID][5];
     const tl = stage.timeline();
-    tl.to(stage.railWrap, { opacity: 0, duration: 0.6, ease: 'power1.inOut' }, 0.05);
-    tl.add(() => { stage.railWrap.style.display = 'none'; }, 0.7);
+    stage.railTo(tl, st.rail, { at: 0 });
     tl.add(() => {
-      const ev = GEOM.evidence('zanzibar');
-      stage.setText(stage.evPlace, ev.place[0], ev.place[1]);
-      stage.setText(stage.evDate, ev.date[0], ev.date[1]);
-      stage.setText(stage.evFact, ev.fact[0], ev.fact[1]);
-      gsap.set([stage.evPlace, stage.evDate], { opacity: 0, y: 12 });
-      gsap.set(stage.evFact, { opacity: 0, y: 10 });
-    }, 0.5);
-    tl.to([stage.evPlace, stage.evDate], { opacity: 1, y: 0, duration: 0.9, ease: 'power2.out' }, 0.6);
-    tl.to(stage.evFact, { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out' }, 1.35);
-    tl.add(() => stage.applyState(ID, 5), 2.4);
+      const ev = stage.railDatedFact(st);
+      gsap.set([ev.place, ev.date], { opacity: 0, y: 12 });
+      gsap.set(ev.fact, { opacity: 0, y: 10 });
+    }, 0.9);
+    tl.to([stage.evPlace, stage.evDate],
+      { opacity: 1, y: 0, duration: 0.9, ease: 'power2.out' }, 1.0);
+    tl.to(stage.evFact, { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out' }, 1.75);
+    tl.add(() => stage.applyState(ID, 5), 3.4);
   },
 
-  // beat 7 — the return: the receipt clears, and the same claim comes back —
-  // first the thing inside, then the body's wall — under the closing pair.
-  // Five bodies have been and gone; this is the argument made visible.
+  // beat 7 — the thesis. The dated fact clears, the record recedes to the
+  // statement's ground (`.s2o-rail`'s own 800ms), the shells' defeat settles
+  // into their row where the record keeps it, and the sentence lands.
   6: (mod, stage) => {
+    const st = stage.states[ID][6];
     const tl = stage.timeline();
     tl.to([stage.evPlace, stage.evDate, stage.evFact],
-      { opacity: 0, duration: 0.45, ease: 'power1.inOut' }, 0.05);
-    tl.add(() => stage.claim.applyState({ visible: true }), 0.5);
-    tl.add(() => stage.shell.applyState({ visible: true }), 0.7);
-    tl.add(() => {
-      const [copy, styles] = GEOM.statement(COPY.functionStayed, 812, 46, 1);
-      stage.setText(stage.stmtEls[0], copy, styles);
-      gsap.set(stage.stmtEls[0], { opacity: 0, y: 12 });
-    }, 1.1);
-    tl.to(stage.stmtEls[0], { opacity: 1, y: 0, duration: 0.65, ease: 'power2.out' }, 1.15);
-    tl.add(() => stage.applyState(ID, 6), 2.1);
+      { opacity: 0, duration: 0.45, ease: 'power1.inOut' }, 0);
+    stage.railTo(tl, st.rail, { at: 0.5, land: [['shells', 'row64']] });
+    stage.railBlock(tl, stage.stmtEls[0], () => stage.railStatement(st, 0), 2.1);
+    tl.add(() => stage.applyState(ID, 6), 3.4);
   },
 
-  // beat 8 — the exit question, on the composition it leaves.
+  // beat 8 — the exit question, on the record it leaves standing.
   7: (mod, stage) => {
+    const st = stage.states[ID][7];
     const tl = stage.timeline();
-    tl.to(stage.stmtEls[0], { opacity: 0, duration: 0.35, ease: 'power1.in' }, 0.05);
-    tl.add(() => {
-      const [copy, styles] = GEOM.statement(COPY.whyChanged, 812, 46, 1);
-      stage.setText(stage.stmtEls[0], copy, styles);
-      gsap.set(stage.stmtEls[0], { opacity: 0, y: 8 });
-    }, 0.45);
-    tl.to(stage.stmtEls[0], { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' }, 0.5);
-    tl.add(() => stage.applyState(ID, 7), 1.3);
+    tl.to(stage.stmtEls[0], { opacity: 0, duration: 0.35, ease: 'power1.in' }, 0);
+    stage.railBlock(tl, stage.stmtEls[0], () => stage.railQuestion(st), 0.45, { rise: 8 });
+    tl.add(() => stage.applyState(ID, 7), 1.4);
   }
 };
 
@@ -167,8 +138,8 @@ export default makeSceneModule({
   title: 'The Function Stayed. The Carrier Changed.',
   entry,
   // Scene 5 opens the group; a continuous forward entry cannot reach it, so
-  // the morph slot carries the same gesture as the cold entry — the claim
-  // arriving from Scene 4's world either way.
+  // the morph slot carries the same gesture as the cold entry — the rail
+  // beginning either way.
   morphIn: entry,
   transitions,
   notes: `[→] So you've decided to save — to hold your claim open across time. But a claim is invisible. To survive the trip, it needs a body: something that can carry it from hand to hand, from year to year. Here is the first body it ever wore: shells. Beautiful, scarce, hard to fake. For centuries, across whole coastlines, a life's work slept safely inside them. Hold that thought — and remember these shells; there's a ship on the horizon that will come for them before this chapter ends.

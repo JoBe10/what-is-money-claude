@@ -1,62 +1,60 @@
 // Scene 6 — Gold: Scarcity in Matter (9 beats, the legacy pacing).
 //
-// The winner, studied. The gold study lands under the display rule; the
-// stylized table rises and the periodic elimination runs EXACTLY as
-// `2-05-two-survivors` performs it — one wave of eliminations per advance,
-// each wave the ElementGrid's own auto-timed gesture, one wave line at a
-// time, the verdict at the end (Ruling 3 struck, master §13; do not
-// recompress it). Then the claim returns wearing its strongest body yet, and
-// the mass state — the selected counted load — names gold's own weakness.
+// The winner takes its station. GOLD arrives on the rail with SCARCITY IN
+// MATTER landing at it; then the record recedes to the legacy's deep dim and
+// the stylized table rises over it, and the periodic elimination runs EXACTLY
+// as `2-05-two-survivors` performs it — one wave per advance, each wave the
+// ElementGrid's own auto-timed gesture, one wave line at a time, the verdict
+// at the end (Ruling 3 struck, master §13; do not recompress it). The rail
+// waits beneath, all the way through. Then it returns with GOLD crowned, and
+// the mass state names gold's own weakness before the rail comes back carrying
+// it as gold's dependency note.
 //
-// The scene enters from Scene 5 on an authored cut-with-crossfade: the
-// question changed ("why did the carrier keep changing?" → the winner's
-// answer), so the composition clears as the study reveals — overlapping,
-// never through black.
+// The scene enters from Scene 5 as a continuous world, because the world IS
+// continuous now: the exit question clears, the camera opens right, and GOLD
+// arrives. There is no cut — the amendment's rail never fully leaves the
+// screen, and the seam between two scenes is a camera move like any other.
 //
-// Landed states — approved cells, by construction: s6-b1 … s6-b9, with
-// b2–b7 the restored elimination and b9 the selected mass state carried
-// from candidate A.
+// Landed states — the approved r2 cells, by construction: s6-b1, s6-b2, the
+// five carried elimination interiors, s6-b8, s6-b9 — and `s6-b9-return` one
+// state past the last beat, the rail returned with gold's dependency note,
+// which is where Scene 7's morph launches from (`_railStates.js`).
 
 import { gsap } from 'gsap';
-import { GEOM, COPY, setVisible, hideInstantly } from './_architectureStage.js';
+import { GEOM, setVisible } from './_architectureStage.js';
 import { makeSceneModule } from './_sceneModule.js';
+import { S6_RETURN } from './_railStates.js';
 
 const ID = 'scarcity-in-matter';
 
-function entry(mod, stage) {
-  stage.applyState(ID, 0);
-  const tl = stage.timeline();
-  tl.add(() => {
-    hideInstantly(stage.goldStudy, () => setVisible(stage.goldStudy, false));
-    gsap.set(stage.studyStmtEl, { opacity: 0 });
-  }, 0);
-  tl.add(() => setVisible(stage.goldStudy, true), 0.25);
-  tl.to(stage.studyStmtEl, { opacity: 1, duration: 0.55, ease: 'power2.out' }, 0.85);
-  tl.add(() => stage.applyState(ID, 0), 1.6);
+// GOLD arrives: the camera opens right to take in the new head, the station
+// comes up at the legacy stop's own 800ms, and the beat's sentence lands at it.
+function arriveGold(mod, stage, tl, at = 0) {
+  const st = stage.states[ID][0];
+  stage.railTo(tl, st.rail, { at, grow: true });
+  stage.railBlock(tl, stage.railLandEls[0], () => stage.railLanding(st), at + 2.0);
 }
 
-// The cut from Scene 5: the through-line composition clears as the study
-// reveals — the register's own 520ms — and the statement follows.
+function entry(mod, stage) {
+  const tl = stage.timeline();
+  arriveGold(mod, stage, tl, 0);
+  tl.add(() => stage.applyState(ID, 0), 3.1);
+}
+
+// The seam from Scene 5: the question clears off the receded record, the record
+// comes back up as the camera opens, and GOLD takes its station. One world.
 function morphIn(mod, stage) {
   stage.applyState('the-function-stayed', 7);
   const tl = stage.timeline();
-  tl.add(() => {
-    stage.shell.applyState({ visible: false });
-    stage.claim.applyState({ visible: false });
-  }, 0.05);
-  tl.to(stage.stmtEls[0], { opacity: 0, duration: 0.45, ease: 'power1.inOut' }, 0.05);
-  tl.add(() => setVisible(stage.goldStudy, true), 0.4);
-  tl.add(() => {
-    const [copy, styles] = GEOM.studyStatement(COPY.scarcity);
-    stage.setText(stage.studyStmtEl, copy, styles);
-    gsap.set(stage.studyStmtEl, { opacity: 0, y: 8 });
-  }, 0.95);
-  tl.to(stage.studyStmtEl, { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }, 1.0);
-  tl.add(() => stage.applyState(ID, 0), 1.8);
+  tl.to(stage.stmtEls[0], { opacity: 0, duration: 0.4, ease: 'power1.inOut' }, 0);
+  arriveGold(mod, stage, tl, 0.4);
+  tl.add(() => stage.applyState(ID, 0), 3.5);
 }
 
-// One elimination wave, exactly as the legacy performs it: the grid's own
-// live wave, exactly one wave line visible, the verdict with the furnace.
+// One elimination wave, exactly as the legacy performs it: the grid's own live
+// wave, exactly one wave line visible, the verdict with the furnace. The rail
+// holds its deep dim beneath, untouched — the interiors are the approved cells
+// and nothing about them moves.
 const wave = (n, settle) => (mod, stage) => {
   const tl = stage.timeline();
   tl.add(() => {
@@ -68,12 +66,14 @@ const wave = (n, settle) => (mod, stage) => {
 };
 
 const transitions = {
-  // beat 2 — the study yields and the table rises: the legacy's own
-  // arrival (kicker at 800ms, the grid's 900/1100ms rise).
+  // beat 2 — the record recedes to the legacy's deep dim and the table rises
+  // over it: `.s2o-rail`'s own 800ms out, and the legacy's own arrival (kicker
+  // at 800ms, the grid's 900/1100ms rise). Gold's gain settles into the record
+  // beneath as its landing leaves.
   1: (mod, stage) => {
     const tl = stage.timeline();
-    tl.add(() => setVisible(stage.goldStudy, false), 0.05);
-    tl.to(stage.studyStmtEl, { opacity: 0, duration: 0.4, ease: 'power1.inOut' }, 0.05);
+    tl.to(stage.railLandEls[0], { opacity: 0, duration: 0.4, ease: 'power1.inOut' }, 0);
+    stage.railTo(tl, stage.states[ID][1].rail, { at: 0, camera: false });
     tl.add(() => {
       stage.grid.applyState(0, { live: false });
       setVisible(stage.survKicker, true);
@@ -82,41 +82,31 @@ const transitions = {
     tl.add(() => stage.applyState(ID, 1), 1.9);
   },
 
-  // beats 3–7 — the waves, one per advance: gases drift, corrosion sweeps,
-  // the radioactive row pulses out, the shapeless settle, the furnace
-  // decides. Settle times cover each wave's own auto-timing.
+  // beats 3–7 — the waves, one per advance: gases drift, corrosion sweeps, the
+  // radioactive row pulses out, the shapeless settle, the furnace decides.
+  // Settle times cover each wave's own auto-timing.
   2: wave(2, 3.3),
   3: wave(3, 2.7),
   4: wave(4, 2.3),
   5: wave(5, 2.1),
   6: wave(6, 2.6),
 
-  // beat 8 — the elimination gives the stage back to the claim: the table
-  // recedes and the through-line composition returns, the carrier named for
-  // the first time by the winner it became.
+  // beat 8 — the table gives the stage back to the record: the elimination
+  // clears, the rail comes back up out of its deep dim, and the answer lands
+  // at the station it was about. GOLD crowned.
   7: (mod, stage) => {
+    const st = stage.states[ID][7];
     const tl = stage.timeline();
     tl.to([stage.survKicker, stage.gridWrap, ...stage.waveLines, stage.verdict],
-      { opacity: 0, duration: 0.6, ease: 'power1.inOut' }, 0.05);
-    tl.add(() => stage.claim.applyState({ visible: true }), 0.55);
-    tl.add(() => stage.shell.applyState({ visible: true }), 0.75);
-    tl.add(() => {
-      stage.setText(stage.claimLabelEl, 'GOLD', GEOM.claimLabel(1));
-      gsap.set(stage.claimLabelEl, { opacity: 0 });
-    }, 0.8);
-    tl.to(stage.claimLabelEl, { opacity: 1, duration: 0.5, ease: 'power1.out' }, 0.85);
-    tl.add(() => {
-      const [copy, styles] = GEOM.statement(COPY.hardCreate, 812, 46, 1);
-      stage.setText(stage.stmtEls[0], copy, styles);
-      gsap.set(stage.stmtEls[0], { opacity: 0, y: 12 });
-    }, 1.25);
-    tl.to(stage.stmtEls[0], { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' }, 1.3);
-    tl.add(() => stage.applyState(ID, 7), 2.2);
+      { opacity: 0, duration: 0.6, ease: 'power1.inOut' }, 0);
+    stage.railTo(tl, st.rail, { at: 0.35 });
+    stage.railBlock(tl, stage.railLandEls[0], () => stage.railLanding(st), 1.7);
+    tl.add(() => stage.applyState(ID, 7), 2.9);
   },
 
-  // beat 9 — the mass state draws: the baseline draws on, the three
-  // stations land left to right, and the counted load stacks course by
-  // course — one, four, twelve — the growth arithmetic and unarguable.
+  // beat 9 — the mass state. The record recedes again and the counted load
+  // stacks course by course — one, four, twelve — the growth arithmetic and
+  // unarguable; the baseline draws on, the three stations land left to right.
   8: (mod, stage) => {
     const refs = stage.buildMassDiagram();
     const len = GEOM.mass.lineX[1] - GEOM.mass.lineX[0];
@@ -129,12 +119,8 @@ const transitions = {
     });
 
     const tl = stage.timeline();
-    tl.add(() => {
-      stage.shell.applyState({ visible: false });
-      stage.claim.applyState({ visible: false });
-    }, 0.05);
-    tl.to([stage.claimLabelEl, stage.stmtEls[0]],
-      { opacity: 0, duration: 0.45, ease: 'power1.inOut' }, 0.05);
+    tl.to(stage.railLandEls[0], { opacity: 0, duration: 0.45, ease: 'power1.inOut' }, 0);
+    stage.railTo(tl, stage.states[ID][8].rail, { at: 0, camera: false });
     tl.to(refs.baseline, { attr: { 'stroke-dashoffset': 0 }, duration: 0.9, ease: 'power2.out' }, 0.6);
     refs.stations.forEach((s, i) => {
       const at = 1.1 + i * 0.55;
@@ -142,15 +128,24 @@ const transitions = {
       tl.to(s.label, { opacity: 1, duration: 0.4, ease: 'power1.out' }, at + 0.05);
       tl.to(s.marks, { opacity: 1, y: 0, duration: 0.35, ease: 'power2.out', stagger: 0.07 }, at + 0.15);
     });
-    tl.add(() => {
-      const [copy, styles] = GEOM.statement(COPY.massGrows, 848, 40, 1);
-      stage.setText(stage.stmtEls[0], copy, styles);
-      gsap.set(stage.stmtEls[0], { opacity: 0, y: 10 });
-    }, 3.55);
-    tl.to(stage.stmtEls[0], { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' }, 3.6);
-    tl.add(() => stage.applyState(ID, 8), 4.4);
+    stage.railBlock(tl, stage.stmtEls[0],
+      () => stage.railStatement(stage.states[ID][8], 0), 3.0, { rise: 10, dur: 0.6 });
+    tl.add(() => stage.applyState(ID, 8), 4.2);
   }
 };
+
+// The return seam, played by Scene 7's morph: the mass state clears, the rail
+// comes back up, and the overlay's answer lands as GOLD's dependency note at
+// full voice — the state the sheet records as `s6-b9-return`.
+export function railReturn(stage, tl, at = 0) {
+  const st = stage.states[ID][S6_RETURN];
+  tl.to([stage.diagSvg, stage.diagEls],
+    { opacity: 0, duration: 0.5, ease: 'power1.inOut' }, at);
+  stage.railTo(tl, st.rail, {
+    at: at + 0.45, camera: false, land: [['gold', 'row146']], arriveAt: 0
+  });
+  return at + 2.0;
+}
 
 export default makeSceneModule({
   id: ID,

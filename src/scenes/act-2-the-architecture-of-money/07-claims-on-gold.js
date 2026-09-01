@@ -1,165 +1,104 @@
 // Scene 7 — Claims on Gold: Portability Through Trust (5 beats).
 //
-// Gold's weight, answered by architecture. The scene morphs in from Scene 6
-// — the idea persists (the mass state's sentence becomes the weakness list)
-// — with the through-line composition returning under gold's own recorded
-// wound. The carrier renames to COINAGE with the claim never blinking; the
-// vault study lands; and then the act's signature new motion: THE
-// CERTIFICATE TRAVEL — the vault settles into custody, the certificate
-// leaves its orbit and travels outward across the boundary, and the
-// dependency line draws BACK from the claim to the vault, dot-terminated, in
-// Act I's own service-path grammar. It went, and it still owes. The trade is
-// then named honestly on cleared black.
+// Gold's weight, answered by architecture — and answered ON THE RAIL. The
+// scene morphs in from Scene 6 by playing that scene's return seam: the mass
+// state clears, the record comes back, and gold's dependency note lands at its
+// station. Then COINAGE arrives — photographic for the first time, its study
+// gated and ingested at the r2 session — and takes the mint's terms as its
+// annotation before the fleet problem writes its limit beneath it.
 //
-// Landed states — approved cells, by construction: s7-b1 … s7-b5, with b4
-// the presenter-selected custody-boundary logic restaged photographically
-// (approved with the post-§1 record, 31 August 2026).
+// THE VAULT FOLDS INTO THE RAIL (r2.4). There is no standalone vault overlay
+// any more; it is retired to file, banked. Beat 3 is the act's signature
+// motion, restaged: CLAIM ON GOLD arrives as a station, and the dependency arc
+// draws BACK from the certificate to the gold — through the corridor between
+// the band and the line that the traveler vacated when the claim stepped off
+// the rail (r2.3) — in Act I's own service-path grammar. It went, and it still
+// owes. The arc persists in the record from that beat onward; the sentence
+// that landed at full voice condenses into the station's own row; and the
+// trade is named honestly over the receded record.
+//
+// Landed states — the approved r2 cells, by construction: s7-b1 … s7-b5.
 
 import { gsap } from 'gsap';
-import { GEOM, COPY, setVisible, hideInstantly } from './_architectureStage.js';
 import { makeSceneModule } from './_sceneModule.js';
+import { railReturn } from './06-gold-scarcity-in-matter.js';
 
 const ID = 'claims-on-gold';
 
-function entry(mod, stage) {
-  stage.applyState(ID, 0);
-  const tl = stage.timeline();
-  tl.add(() => {
-    hideInstantly(stage.shell.el, () => stage.shell.applyState({ visible: false }));
-    hideInstantly(stage.claim.el, () => stage.claim.applyState({ visible: false }));
-    gsap.set([stage.claimLabelEl, stage.stmtEls[0]], { opacity: 0 });
-  }, 0);
-  tl.add(() => stage.claim.applyState({ visible: true }), 0.2);
-  tl.add(() => stage.shell.applyState({ visible: true }), 0.4);
-  tl.to(stage.claimLabelEl, { opacity: 1, duration: 0.5, ease: 'power1.out' }, 0.7);
-  tl.to(stage.stmtEls[0], { opacity: 1, duration: 0.6, ease: 'power2.out' }, 1.0);
-  tl.add(() => stage.applyState(ID, 0), 1.8);
+// COINAGE arrives: the camera opens right to the new head, the line extends,
+// the station comes up, and the mint's terms land at it.
+function arriveCoinage(mod, stage, tl, at = 0) {
+  const st = stage.states[ID][0];
+  stage.railTo(tl, st.rail, { at, grow: true });
+  stage.railBlock(tl, stage.railLandEls[0], () => stage.railLanding(st), at + 2.0);
 }
 
-// The morph from Scene 6: the mass diagram recedes and the composition it
-// interrupted returns — the same claim, the same body, its weaknesses now
-// named on it. The idea persists; the world does not cut.
+function entry(mod, stage) {
+  const tl = stage.timeline();
+  arriveCoinage(mod, stage, tl, 0);
+  tl.add(() => stage.applyState(ID, 0), 3.1);
+}
+
+// The morph from Scene 6: the idea persists, so the world does not cut. Scene
+// 6's own return seam plays first — the counted load clears and the rail comes
+// back carrying gold's dependency note — and COINAGE arrives out of it.
 function morphIn(mod, stage) {
   stage.applyState('scarcity-in-matter', 8);
   const tl = stage.timeline();
-  tl.to([stage.diagSvg, stage.diagEls, stage.stmtEls[0]],
-    { opacity: 0, duration: 0.5, ease: 'power1.inOut' }, 0.05);
-  tl.add(() => stage.claim.applyState({ visible: true }), 0.5);
-  tl.add(() => stage.shell.applyState({ visible: true }), 0.7);
-  tl.add(() => {
-    stage.setText(stage.claimLabelEl, 'GOLD', GEOM.claimLabel(1));
-    gsap.set(stage.claimLabelEl, { opacity: 0 });
-  }, 0.75);
-  tl.to(stage.claimLabelEl, { opacity: 1, duration: 0.5, ease: 'power1.out' }, 0.8);
-  tl.add(() => {
-    const [copy, styles] = GEOM.statement(COPY.goldWound, 812, 40, 1);
-    stage.setText(stage.stmtEls[0], copy, styles);
-    gsap.set(stage.stmtEls[0], { opacity: 0, y: 12 });
-  }, 1.2);
-  tl.to(stage.stmtEls[0], { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' }, 1.25);
-  tl.add(() => stage.applyState(ID, 0), 2.1);
+  const after = railReturn(stage, tl, 0);
+  arriveCoinage(mod, stage, tl, after);
+  tl.add(() => stage.applyState(ID, 0), after + 3.1);
 }
 
 const transitions = {
-  // beat 2 — the body becomes the coin: the claim never blinks; only the
-  // carrier's name and the trade's terms change hands.
+  // beat 2 — the fleet problem, spoken over the rail. The mint's terms leave
+  // the stage register and the station's limit takes its place in the record
+  // beneath, at full voice — the wound row's own 900ms landing.
   1: (mod, stage) => {
     const tl = stage.timeline();
-    tl.to([stage.claimLabelEl, stage.stmtEls[0]],
-      { opacity: 0, duration: 0.3, ease: 'power1.in' }, 0.05);
-    tl.add(() => {
-      stage.setText(stage.claimLabelEl, 'COINAGE', GEOM.claimLabel(1));
-      gsap.set(stage.claimLabelEl, { opacity: 0 });
-      const [copy, styles] = GEOM.statement(COPY.mint, 812, 40, 1);
-      stage.setText(stage.stmtEls[0], copy, styles);
-      gsap.set(stage.stmtEls[0], { opacity: 0, y: 8 });
-    }, 0.4);
-    tl.to(stage.claimLabelEl, { opacity: 1, duration: 0.45, ease: 'power1.out' }, 0.45);
-    tl.to(stage.stmtEls[0], { opacity: 1, y: 0, duration: 0.55, ease: 'power2.out' }, 0.55);
-    tl.add(() => stage.applyState(ID, 1), 1.3);
+    tl.to(stage.railLandEls[0], { opacity: 0, duration: 0.4, ease: 'power1.inOut' }, 0);
+    stage.railTo(tl, stage.states[ID][1].rail, {
+      at: 0.2, land: [['coinage', 'row64']], arriveAt: 0
+    });
+    tl.add(() => stage.applyState(ID, 1), 2.2);
   },
 
-  // beat 3 — custody: the composition clears and the vault study lands,
-  // the register's own reveal, the statement over it.
+  // beat 3 — THE VAULT FOLDS INTO THE RAIL. The camera opens to the new head,
+  // CLAIM ON GOLD arrives with the certificate in the band, the dependency arc
+  // draws back from it to the gold that has not moved, and the vault line
+  // lands as the featured line at full voice.
   2: (mod, stage) => {
+    const st = stage.states[ID][2];
     const tl = stage.timeline();
-    tl.add(() => {
-      stage.shell.applyState({ visible: false });
-      stage.claim.applyState({ visible: false });
-    }, 0.05);
-    tl.to([stage.claimLabelEl, stage.stmtEls[0]],
-      { opacity: 0, duration: 0.45, ease: 'power1.inOut' }, 0.05);
-    tl.add(() => setVisible(stage.vaultStudy, true), 0.5);
-    tl.add(() => {
-      const [copy, styles] = GEOM.studyStatement(COPY.goldStops);
-      stage.setText(stage.studyStmtEl, copy, styles);
-      gsap.set(stage.studyStmtEl, { opacity: 0, y: 8 });
-    }, 1.0);
-    tl.to(stage.studyStmtEl, { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }, 1.05);
-    tl.add(() => stage.applyState(ID, 2), 1.9);
+    stage.railTo(tl, st.rail, { at: 0, grow: true });
+    stage.railDrawDep(tl, 2.0, 0.9);
+    stage.railBlock(tl, stage.railLandEls[0], () => stage.railLanding(st), 2.7);
+    tl.add(() => stage.applyState(ID, 2), 3.9);
   },
 
-  // beat 4 — THE CERTIFICATE TRAVEL. The study becomes the photograph
-  // mid-frame (a same-pixel swap); the vault settles into its custody
-  // position — the heavy thing that stays — while the certificate leaves
-  // its orbit and travels outward across the boundary; the dependency line
-  // draws BACK from the claim to the vault in the service path's exact
-  // grammar; the protected phrase lands.
+  // beat 4 — the sentence condenses into the record. What was landed at full
+  // voice a beat ago becomes the station's own row, in the rail's register,
+  // where the record keeps it; the arc stays drawn.
   3: (mod, stage) => {
     const tl = stage.timeline();
-    tl.to(stage.studyStmtEl, { opacity: 0, duration: 0.35, ease: 'power1.in' }, 0.05);
-    tl.add(() => {
-      stage.setBox(stage.vaultPhoto, GEOM.studyBox);
-      stage.vaultPhoto.style.opacity = '1';
-      stage.vaultStudy.style.display = 'none';
-    }, 0.1);
-    tl.to(stage.vaultPhoto, {
-      left: `${GEOM.vaultPhoto[0]}px`, top: `${GEOM.vaultPhoto[1]}px`,
-      width: `${GEOM.vaultPhoto[2]}px`, height: `${GEOM.vaultPhoto[3]}px`,
-      duration: 1.2, ease: 'power2.inOut'
-    }, 0.2);
-    tl.add(() => {
-      stage.setBox(stage.certPhoto, [632, 345, 136, 170]);
-      stage.certPhoto.style.opacity = '0';
-    }, 0.7);
-    tl.to(stage.certPhoto, { opacity: 1, duration: 0.35, ease: 'power1.out' }, 0.8);
-    tl.to(stage.certPhoto, {
-      left: `${GEOM.certPhoto[0]}px`, top: `${GEOM.certPhoto[1]}px`,
-      width: `${GEOM.certPhoto[2]}px`, height: `${GEOM.certPhoto[3]}px`,
-      duration: 1.35, ease: 'power2.inOut'
-    }, 0.85);
-    tl.add(() => stage.setDot(stage.depDotEls[1], 1180, 428, 3.5, 0.7), 2.3);
-    stage.drawSeg(tl, stage.depLineEl, 2.4, 0.7, 'power2.out', [1180, 428, 890, 512, 0.35, 1.5]);
-    tl.add(() => stage.setDot(stage.depDotEls[0], 890, 512, 3.5, 0.7), 3.15);
-    tl.add(() => {
-      const [copy, styles] = GEOM.statement(COPY.claimOnGold, 866, 46, 1);
-      stage.setText(stage.stmtEls[0], copy, styles);
-      gsap.set(stage.stmtEls[0], { opacity: 0, y: 12 });
-    }, 3.25);
-    tl.to(stage.stmtEls[0], { opacity: 1, y: 0, duration: 0.65, ease: 'power2.out' }, 3.3);
-    tl.add(() => stage.applyState(ID, 3), 4.15);
+    tl.to(stage.railLandEls[0], { opacity: 0, duration: 0.45, ease: 'power1.inOut' }, 0);
+    stage.railTo(tl, stage.states[ID][3].rail, {
+      at: 0.3, camera: false, land: [['claim', 'row64']], arriveAt: 0
+    });
+    tl.add(() => stage.applyState(ID, 3), 2.2);
   },
 
-  // beat 5 — the trade named honestly: the detachment clears, and the pair
-  // lands sequenced on the black it leaves.
+  // beat 5 — the trade named honestly, over the receded record: the gold
+  // stayed, the claim moved; portability improved, trust moved to the issuer.
+  // The arc still hangs in the record behind the words, which is why the
+  // second sentence is not an opinion.
   4: (mod, stage) => {
+    const st = stage.states[ID][4];
     const tl = stage.timeline();
-    tl.to([stage.vaultPhoto, stage.certPhoto],
-      { opacity: 0, duration: 0.55, ease: 'power1.inOut' }, 0.05);
-    tl.to([stage.depLineEl, ...stage.depDotEls],
-      { attr: { opacity: 0 }, duration: 0.4, ease: 'power1.inOut' }, 0.05);
-    tl.to(stage.stmtEls[0], { opacity: 0, duration: 0.4, ease: 'power1.in' }, 0.1);
-    tl.add(() => {
-      const a = GEOM.statement(COPY.portability, 452, 54, 1);
-      stage.setText(stage.stmtEls[0], a[0], a[1]);
-      gsap.set(stage.stmtEls[0], { opacity: 0, y: 10 });
-      const b = GEOM.statement(COPY.trust, 560, 54, 1);
-      stage.setText(stage.stmtEls[1], b[0], b[1]);
-      gsap.set(stage.stmtEls[1], { opacity: 0, y: 10 });
-    }, 0.65);
-    tl.to(stage.stmtEls[0], { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' }, 0.7);
-    tl.to(stage.stmtEls[1], { opacity: 1, y: 0, duration: 0.65, ease: 'power2.out' }, 1.25);
-    tl.add(() => stage.applyState(ID, 4), 2.1);
+    stage.railTo(tl, st.rail, { at: 0 });
+    stage.railBlock(tl, stage.stmtEls[0], () => stage.railStatement(st, 0), 1.5, { rise: 10 });
+    stage.railBlock(tl, stage.stmtEls[1], () => stage.railStatement(st, 1), 2.05, { rise: 10 });
+    tl.add(() => stage.applyState(ID, 4), 3.2);
   }
 };
 
