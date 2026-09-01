@@ -73,9 +73,18 @@ const SCENES = [
   // ---- renders --------------------------------------------------------------
   const toRender = ids.filter((id) => !meta[id].carriedFrom)
     .filter((id) => !ONLY.length || ONLY.includes(id));
+  // ONE PAGE PER CELL. This was every eighth cell until the rail
+  // implementation's landed-state proof caught what page reuse costs: a page
+  // that has already built several cells has created and destroyed the same
+  // <img> elements at many different box sizes, and Chromium's image
+  // rasterization does not always land on the same downscale afterwards. Four
+  // cells on this sheet carried that artifact — s7-b1, s7-b2, s7-b3 and
+  // s10-b3 differed from a fresh render of their own builder by up to 37/255
+  // inside the photographs. A cell must be what its builder draws, so the
+  // capture pays a page per cell for it.
   let shots = 0;
   for (const id of toRender) {
-    if (shots > 0 && shots % 8 === 0) await freshPage();
+    if (shots > 0) await freshPage();
     shots += 1;
     await page.evaluate((cellId) => window.__rail.buildCell(cellId), id);
     await page.evaluate(async () => {
