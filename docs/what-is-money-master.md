@@ -73,7 +73,7 @@ Consequences of the recorded format:
 | 10 | The Trade-Off Keeps Moving (palladium bar) | Act II |
 | 11 | Three Familiar Jobs | Act III — the jobs of money; clean, diagrammatic |
 | 12 | We Already Split Those Jobs (Argentina) | Act III |
-| 13 | Different Jobs, Different Coordination | Act III |
+| 13 | The Order of Monetization *(the ladder restored — the LADDER amendment, 2 Sep 2026, §13)* | Act III |
 | 14 | The Coffee Objection | Act III |
 | 15 | The Tower | Act III |
 | 16 | Return to the Open Exchange — the claim on value | Act IV — the store-of-value test; black/white/orange |
@@ -96,7 +96,7 @@ Consequences of the recorded format:
 
 ## 1.4 What died, and what survives
 
-**Dead, for the record** (the architecture's own list): the waypoint device and the 1.5 map scene · the murmuration · the exchange triad · the evolution rail as a persistent spine (its content redistributes into Scenes 5–9) · the monetization ladder (→ coordination logic; Boyapati to the notes) · the standalone falsifiability slide (→ script, already ruled) · the section openers and all visible chapter structure · the "How do you understand anything" scene (its promise moves to spoken P2) · the stability scene (Ruling 5).
+**Dead, for the record** (the architecture's own list): the waypoint device and the 1.5 map scene · the murmuration · the exchange triad · the evolution rail as a persistent spine (its content redistributes into Scenes 5–9) · ~~the monetization ladder (→ coordination logic; Boyapati to the notes)~~ *(struck 2 Sep 2026 — the LADDER freeze amendment, §13: Scene 13 is the ladder restored, Boyapati attributed on screen)* · the standalone falsifiability slide (→ script, already ruled) · the section openers and all visible chapter structure · the "How do you understand anything" scene (its promise moves to spoken P2) · the stability scene (Ruling 5).
 
 **Retired with honor:** the murmuration asset is banked, not deleted from history. Its soul survives as one spoken line in Scene 3 — *nobody decided, and everyone converged.*
 
@@ -186,7 +186,7 @@ Every such moment is a defect. This runs as a formal pass, not as a feeling. *(M
 - Row header **PROPERTY**; the real-estate asset is labeled **REAL ESTATE**.
 - "The monetary competition is decided at the margin" remains spoken-only.
 - **Scene 29 is the true final frame of the argument**; Scene 30 is the close — silence, the callback, the covenant, the disclaimer, a silent *Thank you.*
-- Boyapati is attributed where the monetization stages appear (now the notes of Scene 13). Florian Bruce-Boye's attribution rules are in §11.
+- Boyapati is attributed where the monetization stages appear — **on stage in Scene 13** *(the LADDER freeze amendment, 2 Sep 2026, §13; Boyapati-to-notes is struck)*. Florian Bruce-Boye's attribution rules are in §11.
 
 ---
 
@@ -199,7 +199,7 @@ Act IV's argument presupposes nine deposits in the audience's head. **Every beat
 - **D3 — Properties decide the competition.** The most load-bearing deposit: history told as evidence for this law, so Act IV's method feels obviously correct. *(Scenes 5, 6, 10.)*
 - **D4 — Every money so far has failed or been displaced — and the record includes today's.** The humility that legitimizes the 100-Year Test, and the fiat purchasing-power evidence deposited where Act V can harvest it. *(Scenes 5, 7, 8 — the four-currency chart.)*
 - **D5 — The jobs: what they are, that they separate, and why store of value is the entry point.** *(Scenes 11, 12, 14.)*
-- **D6 — Coordination, not stages: holding needs one person, spending needs two, pricing needs a network.** Young monetary goods therefore do the jobs in order — a structural fact, not a verdict. *(Scene 13; Boyapati's stages corroborate in the notes.)*
+- **D6 — The order of monetization, gated by coordination: holding needs one person, spending needs two, pricing needs a network.** Young monetary goods therefore do the jobs in order — a structural fact, not a verdict. *(Scene 13 — the ladder restored (the LADDER freeze amendment, 2 Sep 2026, §13), with the coordination logic spoken inside the scene as the proof of why the stages gate; Boyapati attributed on screen.)*
 - **D7 — Incumbency logic: only a categorical difference on the deciding properties has ever moved the crown.** The bar Act IV's comparison holds every candidate to. *(Scene 10, the palladium bar.)*
 - **D8 — Minimal neutral Bitcoin literacy.** No state, no company, 2009; 21,000,000 fixed by the protocol's rules; holdable directly, like a bearer asset — with the honest limitation in the same breath. *(Scene 9, completed at Scene 14.)*
 - **D9 — The claim is the thread, progressively enlarged.** *(Amended at Stage 0; **presenter-ruled 25 August 2026.** The old D9 seeded a claim intuition that stayed unnamed until Section 4. The architecture names it in Act I instead. What D9 now requires is progressive enlargement: the claim, once born in Scene 3, is present in every act — carried, saved, transferred, layered — and each rung of the enlargement sequence (§3.3) widens it a step, so that the generalization lands as recognition at the return, Scene 16 — recognition of an object the viewer has been watching for forty minutes.)*
@@ -398,7 +398,7 @@ The ten failure modes — diluted · indivisible · illiquid · trapped · consu
 
 **The presenter's own:** the ten properties, the five candidates, all fifty scores, the table and its interpretation, the 100-Year Test, the claim/carrier arc as built, the surgeon derivation.
 
-**Attributed on stage:** Vijay Boyapati, for the monetization stages — now in Scene 13's notes, where the stages corroborate the coordination logic; attribution travels with the material.
+**Attributed on stage:** Vijay Boyapati, for the monetization stages — Scene 13's ladder, on screen *(the LADDER freeze amendment, 2 Sep 2026, §13: the ladder is restored and the attribution returns to the stage with it; attribution travels with the material)*.
 
 **Acknowledged restrainedly** (notes, sources page, video description — never interrupting the visible narrative): Alfred Lansburgh (Argentarius) for the claim framework's inspiration; Charlie Munger for *invert, always invert*.
 
@@ -440,6 +440,7 @@ Every freeze and every amendment, in order. **A freeze is reopened only by the p
 | 1 Sep 2026 | **Presenter staging amendment — Act II's visual anchor is the continuous rail** (`docs/act-2-staging-amendment.md`, approved verbatim). At the Batch B act viewing the presenter judged the implementation as too much movement away from the monetary timeline; the act's visual anchor is amended to **one continuous rail that never fully leaves the screen and extends right as history advances** — the old deck's proven macro-form — with the interludes entering as overlays and the statement beats landing as station annotations. The amendment maps all 37 beats and is the authority for the rail-states session. **The narrative structure, the scripts, and the 37 beats are untouched** — this is a staging amendment, not a structure reopening. |
 | 1 Sep 2026 | **Presenter staging amendment, r2 — six rulings on the built rail** (`docs/act-2-staging-amendment.md`, the r2 section; executed per `docs/act-2-rail-r2-brief.md`). Ruled against the rendered sheet at tag `act-2-rail-states`: (1) **the rail fills left to right** — narrative order is spatial order, SHELLS first; (2) **every station arrives with a line beneath it**, always — an undefeated station is never blank; (3) **the claim steps off the Act II rail** — the ClaimObject appears in no Act II rail beat, and **the collapsed Gate 3's judgment object becomes the rail's own continuity**, which the act viewing judges; (4) **the vault overlay folds into the rail** — the standalone seam pair retires to file, S7 b3/b4 restage on the rail; (5) **the band rule becomes equal visual weight** — one shared box, height *and* width capped; (6) **the network forms out of the LEDGER station**, and palladium's placement is confirmed as staged. **The scripts, the 37 beats and the spoken order are untouched** — staging only. Rulings 1, 2 and 5 are film-wide law at `AGENTS.md` §6. |
 | 1 Sep 2026 | **The r2 rail sheet is presenter-approved in full** (`docs/act-2-rail-impl-brief.md` §1.1). All **39 cells** approved on his flipbook walk, **including the nine honest-render flags** of `docs/act-2-rail-r2-report.md` §6; the two flags named for his word are **approved as rendered** — the featured-line register at S7 b3, and the mesh belonging to beat 1 with beat 2 showing the rail returned and the coin at its station. The flags are closed and no cell is pending. **The approved set is the visual authority for every landed-state proof of the rail implementation** (`review/act-2/rail/states.json` — `approval`, `approvedSet`): a settled state that is not its approved cell at zero pixels is a defect. |
+| 2 Sep 2026 | **Structure-freeze amendment — the LADDER ruling: Scene 13 is the monetization ladder, restored** (presenter; recorded by the act-3-states session). The architecture's *"what dies"* entry retiring the monetization ladder is **amended**: legacy `3-03`'s treatment and script are restored as Scene 13, **Boyapati attributed on screen**, with the standing icons-to-renders ADAPT applied — the stage marks become dark-field renders at lineup scale, staged as an object sequence, nothing else in the treatment moving (`docs/act-3-provenance.md` §1, the 30 Aug pre-classification; its register-boundary test is the frame's *first* test). The coordination logic **survives inside the scene as its proof** (D6 amended, §4); **Boyapati-to-notes is struck** (§1.3, §1.4, §3.5 and §11 amended with this row). The coordination-scales replacement was never built; its NEW row is recorded as *not built* in the ruled Act III provenance map. **Trail:** retired by the architecture, 24 Aug 2026 (*"the monetization ladder (→ coordination logic; Boyapati to notes)"*); the conflict with the standing icons-to-renders ADAPT flagged at the cheapest moment, 31 Aug 2026 (`docs/act-3-provenance.md` §2, and `docs/act-2-states-report.md` §7 so it reached the presenter in a report); raised as the one ruling that unblocks Act III's scripts, with the LADDER recommendation, in `docs/act-3-kickoff.md` §1 (2 Sep 2026); **ruled LADDER by the presenter, 2 Sep 2026** (the Act III states brief §1.1); grounds — proven organ, no true redundancy, the attribution belongs on screen. |
 
 ---
 
