@@ -357,56 +357,20 @@ export const COPY = {
 // the beat-state sheet, named in its annotation.
 
 export const STATES = {
-  // SCENES 5, 6 AND 7 ARE THE RAIL WORLD (the staging amendment, master §13;
-  // the r2 rulings; the sheet approved in full 1 September 2026). Their states
-  // are one transcription of the approved cells, in `_railStates.js` — the
-  // legacy per-beat compositions they replace are retired with the amendment,
-  // and the beat map is untouched at 8 · 9 · 5.
-  ...RAIL_STATES,
-  'money-becomes-information': [
-    // beat 1 — s8-b1: the dissolve's landing. The Prologue's approved morph
-    // runs the paper claim into the glowing ledger entry; the register's one
-    // 3:2 render takes its own aspect in the approved box.
-    { study: 'ledger_glow', studyBox: 'threeTwo', studyStmt: COPY.becameInformation },
-    // beat 2 — s8-b2: 1971, the evidence grammar's second specimen.
-    { evidence: 'severance' },
-    // beat 3 — s8-b3: captured, not beaten — the pattern slide's own sentence.
-    { stmts: [[COPY.captured, 430, 46, 1]] },
-    // beat 4 — s8-b4: THE RECORD — `2-07`'s chart, ported whole.
-    { chart: 'severance' },
-    // beat 5 — s8-b5: both facts on one screen, because both are true.
-    { stmts: [[COPY.mostAccepted, 434, 46, 0.72], [COPY.residue, 566, 52, 1]] }
-  ],
-  'scarcity-becomes-digital': [
-    // beat 1 — s9-b1: the network formation, the selected system.
-    { net: true },
-    // beats 2–4 — s9-b2 … s9-b4: the entrant block, one row per advance, the
-    // landed row at full voice and the ones before it at the prior step.
-    { entrant: 'facts' },
-    { entrant: 'capabilities' },
-    { entrant: 'limitation' },
-    // beat 5 — s9-b5: the two-question distinction, on cleared black.
-    { stmts: [[COPY.twoQuestions, 430, 46, 1], [COPY.volatility, 616, 40, 0.72]] }
-  ],
-  'the-trade-off-keeps-moving': [
-    // beat 1 — s10-b1: THE STRIP, the certificate ruling staged.
-    { strip: true },
-    // beat 2 — s10-b2: the history line, on the same strip.
-    { strip: true, stmts: [[COPY.historyLine, 866, 44, 1]] },
-    // beats 3–4 — s10-b3 / s10-b4: palladium, and the bar. `3-05`'s frame at
-    // its own steps: the hook lifted, the panels, the timing line; then the
-    // second epoch and the bar, with the two epoch lines settling back.
-    { palladium: 3 },
-    { palladium: 5 },
-    // beat 5 — s10-b5: the pivot that opens Act III.
-    { question: true }
-  ]
+  // ACT II IS THE RAIL WORLD, ALL SIX SCENES (the staging amendment, master
+  // §13; the r2 rulings; the sheet approved in full 1 September 2026). Every
+  // settled state is one transcription of the approved cells, in
+  // `_railStates.js` — the legacy per-beat compositions they replace are
+  // retired with the amendment, and the beat map is untouched at 8 · 9 · 5 ·
+  // 5 · 5 · 5.
+  ...RAIL_STATES
 };
 
 // The last build the engine advances to, per scene. It is the states array's
-// last index everywhere except Scene 6, whose array carries ONE STATE PAST ITS
-// LAST BEAT — the rail's return seam, which the sheet records as "not itself a
-// mapped beat" and which Scene 7's morph launches from (`_railStates.js`).
+// last index everywhere except Scenes 6 and 8, whose arrays carry ONE STATE
+// PAST THEIR LAST BEAT — the rail's two return seams, which the sheet records
+// as "not itself a mapped beat" and which the gestures after them launch from
+// (`_railStates.js`).
 export const TOTAL_BUILDS = Object.fromEntries(
   Object.entries(STATES).map(([id, states]) => [
     id, RAIL_BUILDS[id] == null ? states.length - 1 : RAIL_BUILDS[id]
@@ -625,7 +589,9 @@ class Act2Stage {
     // ---- the statements (last — over everything, as the builders append).
     // `railLandEls` are the sheet's station-anchored landings: a beat's own
     // sentence, landed at its station in the deck's registers.
-    this.railLandEls = [this._text(), this._text()];
+    // Five, because Scene 9's entrant beats land four rows at once — the facts
+    // and the three capabilities — at the BITCOIN station.
+    this.railLandEls = [this._text(), this._text(), this._text(), this._text(), this._text()];
     this.stmtEls = [this._text(), this._text()];
 
     // ---- the traveler: the held claim in motion between compositions. The
@@ -1064,7 +1030,7 @@ class Act2Stage {
       paint();
       arriving.forEach((id) => {
         const S = world.stations[id];
-        gsap.set([S.wrap, S.g], { opacity: 0 });
+        gsap.set([S.mark, S.rowsWrap, S.g], { opacity: 0 });
       });
       land.forEach(([id, slot]) => {
         gsap.set(world.stations[id][slot], { opacity: 0, y: 6 });
@@ -1089,7 +1055,7 @@ class Act2Stage {
     }
     arriving.forEach((id) => {
       const S = world.stations[id];
-      tl.to([S.wrap, S.g], { opacity: 1, duration: 0.8, ease: 'power1.out' }, at + arriveAt);
+      tl.to([S.mark, S.rowsWrap, S.g], { opacity: 1, duration: 0.8, ease: 'power1.out' }, at + arriveAt);
     });
     land.forEach(([id, slot], i) => {
       const el = world.stations[id][slot];
@@ -1098,6 +1064,43 @@ class Act2Stage {
       tl.to(el, { y: 0, duration: 1.1, ease: 'power4.out' }, t);
     });
     return arriving;
+  }
+
+  /**
+   * The mesh forming out of the station it is anchored to (r2.6).
+   *
+   * The choreography is the batch's own, authored for the selected system at
+   * Batch B and transcribed here move for move: the institutional shape stands
+   * FIRST — the hub at full voice with its spokes out to the ring — and then
+   * the centre steps away, the hub and its spokes settling to the receded
+   * voices the candidate gives them, while the peer-to-peer chords come in
+   * over them. What changed is where it happens: the hub is the LEDGER
+   * station's own point on the rail, so the issuer the act has just watched
+   * fail is the thing that dissolves.
+   */
+  railMesh(tl, at) {
+    const w = this.railWorld;
+    const SPOKE_LIVE = 'rgba(255,255,255,0.35)';
+    const SPOKE_GONE = 'rgba(255,255,255,0.2)';
+    const HUB_LIVE = 'rgba(255,255,255,0.8)';
+    const HUB_GONE = 'rgba(255,255,255,0.3)';
+    tl.add(() => {
+      w.meshLayer.style.display = '';
+      gsap.set(w.meshLayer, { opacity: 1 });
+      gsap.set(w.meshChords, { opacity: 0 });
+      gsap.set([...w.meshSpokes, w.meshHub, ...w.meshNodes], { opacity: 0 });
+      gsap.set(w.meshSpokes, { stroke: SPOKE_LIVE });
+      gsap.set(w.meshHub, { fill: HUB_LIVE });
+    }, at);
+    // The institution, holding the record.
+    tl.to(w.meshHub, { opacity: 1, duration: 0.5, ease: 'power1.out' }, at + 0.05);
+    tl.to(w.meshSpokes, { opacity: 1, duration: 0.6, ease: 'power1.out', stagger: 0.03 }, at + 0.25);
+    tl.to(w.meshNodes, { opacity: 1, duration: 0.5, ease: 'power1.out', stagger: 0.03 }, at + 0.4);
+    // The centre steps away...
+    tl.to(w.meshHub, { fill: HUB_GONE, duration: 1.1, ease: 'power1.inOut' }, at + 1.25);
+    tl.to(w.meshSpokes, { stroke: SPOKE_GONE, duration: 1.1, ease: 'power1.inOut' }, at + 1.25);
+    // ...and in its place, each node checking all the others.
+    tl.to(w.meshChords, { opacity: 1, duration: 0.5, ease: 'power1.out', stagger: 0.035 }, at + 1.45);
   }
 
   /** The dependency arc drawing back from the certificate to the gold. */
@@ -1142,12 +1145,21 @@ class Act2Stage {
     return { place: this.evPlace, date: this.evDate, fact: this.evFact };
   }
 
-  /** A beat's own sentence, landed at its station. */
-  railLanding(state) {
-    const [copy, id, opts] = state.landing;
+  /**
+   * A beat's own sentence, landed at its station. `landing` is the single
+   * case; `landings` is the list Scene 9's entrant beats need, and the two are
+   * the same shape so a state can use either.
+   */
+  railLandingList(state) {
+    if (state.landings) return state.landings;
+    return state.landing ? [state.landing] : [];
+  }
+
+  railLanding(state, i = 0) {
+    const [copy, id, opts] = this.railLandingList(state)[i];
     const [text, styles] = RAIL_TEXT.landing(copy, state.rail.cam, id, opts);
-    this.setText(this.railLandEls[0], text, styles);
-    return this.railLandEls[0];
+    this.setText(this.railLandEls[i], text, styles);
+    return this.railLandEls[i];
   }
 
   /** A statement over the receded record. */
@@ -1438,9 +1450,10 @@ class Act2Stage {
 
     // The rail's station-anchored landing — a beat's own sentence, landed at
     // its station in the deck's registers.
+    const landings = this.railLandingList(st);
     this.railLandEls.forEach((el, i) => {
-      if (i === 0 && st.landing) {
-        this.railLanding(st);
+      if (i < landings.length) {
+        this.railLanding(st, i);
         gsap.set(el, { clearProps: 'opacity,y' });
       } else this.hideText(el);
     });
@@ -1514,13 +1527,19 @@ class Act2Stage {
         line: ['x', 'y', 'width', 'height'].map((a) => rw.lineRect.getAttribute(a)),
         ticks: rw.ticks.map((t) => [t.style.display, t.getAttribute('x'), t.getAttribute('width')]),
         stations: Object.entries(rw.stations).map(([id, S]) => [
-          id, S.wrap.style.display, S.photo.style.left, S.photo.style.top,
+          id, S.mark.style.display, S.photo.style.left, S.photo.style.top,
           S.photo.style.getPropertyValue('--df-w'), S.photo.style.opacity,
           S.dot.getAttribute('cx'), S.dot.getAttribute('r'), S.dot.getAttribute('fill'),
           text(S.label), text(S.row64), text(S.row146)
         ]),
         dep: [rw.depPath.style.display, rw.depPath.getAttribute('d'),
           rw.depPath.getAttribute('stroke-width')],
+        mesh: [rw.meshLayer.style.display, getComputedStyle(rw.meshLayer).opacity,
+          rw.meshHub.getAttribute('cx'), rw.meshHub.getAttribute('r'),
+          rw.meshChords.length,
+          rw.meshNodes.map((c) => [c.getAttribute('cx'), c.getAttribute('r'),
+            getComputedStyle(c).opacity]),
+          rw.meshSpokes.map((l) => [l.getAttribute('x2'), getComputedStyle(l).opacity])],
         landings: this.railLandEls.map(text)
       },
       rail: {

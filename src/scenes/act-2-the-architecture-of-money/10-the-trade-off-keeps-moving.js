@@ -1,150 +1,74 @@
 // Scene 10 — The Trade-Off Keeps Moving (5 beats).
 //
-// The act's own recapitulation, and the last leg of the claim's journey. The
-// scene morphs in from Scene 9 — the idea persists; the word "architecture"
-// crosses the boundary intact — and the strip is STAGED RATHER THAN STATED:
-// the line draws, the held claim enters at its left end, and it WALKS THE
-// STRIP, lighting one station at a time, the station it leaves receding to the
-// prior step behind it. At BITCOIN the traveler rises into the newest body and
-// is absorbed. That is the arrival: the disc has worn every good on that line,
-// which is exactly why it is never a station — it is the thing moving along it
-// (the CERTIFICATE ruling, 31 August 2026).
+// The act's own recapitulation — and NO SECOND STRIP. This scene used to draw
+// its own four-station strip and walk the claim along it. It draws nothing
+// now: the rail it reads is the rail the act has been building since station
+// one, ten stations wide, and Scene 10's whole job is to read it again as an
+// argument rather than as a history. That is the amendment's own line — "this
+// is the same rail" — and it is the reason the strip's geometry is gone.
+//
+// So the recapitulation is a RE-LIGHTING. The record comes back from the
+// statement it receded under, and the gain-and-dependency pairs light station
+// by station along the four architecture stops — gold, the claim on it, the
+// ledger, the entrant — each pair landing in the rail's own row register at
+// the wound row's own 900ms. Every earlier station still says why it entered
+// and how it left. Then the history line lands ON the complete record, not
+// over a receded one: the sentence and its evidence share the frame.
 //
 // Then palladium — `3-05`'s frame ported with its real sourced figures and its
-// two-epoch honesty, standing against the strip as the bar it must clear — and
-// the pivot that opens Act III.
+// two-epoch honesty, standing against the deep-dimmed record as the bar any
+// candidate must clear — and the pivot that opens Act III over the receded
+// rail. THE CLAIM IS NOT HERE: it stepped off the Act II rail at r2.3, so the
+// walk that used to end this scene ends nothing now. The record is the
+// through-line, and it has never left the screen.
 //
 // PORTS MOVE LIKE THEY ALWAYS DID. The palladium frame arrives in the legacy's
 // own `[data-visible]` reveals off the slide root the stage carries, and the
-// epoch lines settle back by the legacy's own `data-step` rule; the strip's
-// drawn sentence beneath the band is EvolutionRail's rhythm, unchanged.
+// epoch lines settle back by the legacy's own `data-step` rule.
 //
-// Landed states — approved cells, by construction: s10-b1 … s10-b5, with b1
-// and b2 the certificate strip re-rendered by the §1.1 ruling.
+// Landed states — the approved r2 cells, by construction: s10-b1 … s10-b5.
+// Beat 4 is the one state of the act with no pixel proof: the sheet carries
+// `s10-b4` byte-identical from the states sheet, so the approved cell holds
+// the palladium frame WITHOUT the rail the film keeps deep-dimmed beneath it,
+// exactly as Scene 6's elimination interiors do.
 
-import { gsap } from 'gsap';
-import { GEOM, COPY, STATIONS, setVisible, hideInstantly } from './_architectureStage.js';
+import { setVisible, hideInstantly } from './_architectureStage.js';
 import { makeSceneModule } from './_sceneModule.js';
 
 const ID = 'the-trade-off-keeps-moving';
 
-const S = GEOM.strip;
-// The traveler rides the line at the claim's own 116, so it spans 58px either
-// side of it and would sit squarely on a station's name (which begins 26px
-// below the line). The walk is therefore timed so THE WORDS LAND BEHIND THE
-// DISC: a station's good and marker light while the claim is standing there,
-// and its name, gain and dependency only begin to rise once the claim has
-// moved far enough along the line to clear the 340px label box. The numbers
-// below are that clearance, not taste — LEAVE at 0.5 and TRAVEL at 0.8 put
-// the disc's near edge past the box by WORDS at 0.95.
-const RIDE_Y = S.y;
-const LEAVE = 0.5;     // the claim holds at a station this long before moving
-const TRAVEL = 0.8;    // and takes this long to reach the next one
-const WORDS = 0.95;    // the words start rising this long after it arrived
-const STEP = LEAVE + TRAVEL;
-// The receded voices are the approved cell's own arithmetic, so a station that
-// recedes during the walk lands on exactly what applyState will write.
-const RECEDED = { name: 0.58, gain: 0.75 * 0.55, dep: 0.58 * 0.55, photo: 0.58 };
+// The four architecture stations, in the order the act reached them. The pairs
+// light along the record in that order, which is the amendment's own
+// "station by station".
+const PAIRS = [
+  ['gold', 'row64'], ['gold', 'row146'],
+  ['claim', 'row64'], ['claim', 'row146'],
+  ['ledger', 'row64'], ['ledger', 'row146'],
+  ['bitcoin', 'row64'], ['bitcoin', 'row146']
+];
 
-const rowsOf = (stage, i) => [stage.stripNames[i], stage.stripGains[i], stage.stripDeps[i]];
-
-// One station activating: the good lights on the band and its marker takes the
-// line while the claim is standing there — and the words wait until the claim
-// has moved on.
-function lightStation(stage, tl, i, at) {
-  const s = STATIONS[i];
-  const x = S.xs[i];
-  tl.add(() => {
-    stage.setBox(stage.stripPhotos[i], S.box(s.key, x));
-    stage.stripPhotos[i].style.opacity = '0';
-    stage.setDot(stage.stripDots[i], x, S.y, 6, 0.85);
-    gsap.set(stage.stripDots[i], { opacity: 0 });
-    stage.setText(stage.stripNames[i], s.key === 'paper' ? S.claimLabel : s.name,
-      S.nameStyle(x, true));
-    stage.setText(stage.stripGains[i], s.gain, S.gainStyle(x, 1));
-    stage.setText(stage.stripDeps[i], s.dep, S.depStyle(x, 1));
-    gsap.set(rowsOf(stage, i), { opacity: 0, y: 8 });
-  }, at);
-  tl.to(stage.stripPhotos[i], { opacity: 1, duration: 0.5, ease: 'power1.out' }, at + 0.05);
-  tl.to(stage.stripDots[i], { opacity: 1, duration: 0.3, ease: 'power1.out' }, at + 0.1);
-  tl.to(rowsOf(stage, i),
-    { opacity: 1, y: 0, duration: 0.45, ease: 'power2.out', stagger: 0.1 }, at + WORDS);
-}
-
-// And one receding as the claim moves on — the §9.4 rule 10 step, which on
-// this strip is carried entirely in the color alpha.
-function recedeStation(stage, tl, i, at) {
-  const x = S.xs[i];
-  tl.to(stage.stripNames[i],
-    { color: `rgba(255,255,255,${RECEDED.name})`, duration: 0.5, ease: 'power1.inOut' }, at);
-  tl.to(stage.stripGains[i],
-    { color: `rgba(255,255,255,${RECEDED.gain})`, duration: 0.5, ease: 'power1.inOut' }, at);
-  tl.to(stage.stripDeps[i],
-    { color: `rgba(255,255,255,${RECEDED.dep})`, duration: 0.5, ease: 'power1.inOut' }, at);
-  tl.to(stage.stripPhotos[i],
-    { opacity: RECEDED.photo, duration: 0.5, ease: 'power1.inOut' }, at);
-  tl.add(() => stage.setDot(stage.stripDots[i], x, S.y, 6, 0.5), at + 0.25);
-}
-
-// THE WALK — the strip staged, and the claim's arrival with it.
-function stageStrip(stage, tl, at) {
-  tl.add(() => {
-    stage.stripLine.setAttribute('opacity', '0');
-    stage.stripDots.forEach((d) => stage.setDot(d, 0, 0, 0, 0));
-    stage.stripPhotos.forEach((el) => { el.style.opacity = '0'; });
-    [...stage.stripNames, ...stage.stripGains, ...stage.stripDeps]
-      .forEach((el) => stage.hideText(el));
-    stage.setTraveler(S.lineX[0], RIDE_Y, 0);
-  }, at);
-  stage.drawSeg(tl, stage.stripLine, at + 0.05, 0.85, 'power2.out',
-    [S.lineX[0], S.y, S.lineX[1], S.y, 0.18, 2]);
-  // The claim enters where the line begins.
-  tl.to(stage.traveler, { opacity: 1, duration: 0.4, ease: 'power1.out' }, at + 0.65);
-
-  // The walk. Each station arrives one STEP after the last, so a station holds
-  // full voice from the moment its own words land until the next station's do
-  // — which is the §9.4 rule 10 step read as a journey rather than a list.
-  const arriveAt = (i) => at + 1.05 + 0.5 + i * STEP;
-  S.xs.forEach((x, i) => {
-    const arrive = arriveAt(i);
-    tl.to(stage.traveler, {
-      left: `${x - 58}px`, duration: i === 0 ? 0.5 : TRAVEL, ease: 'power2.inOut'
-    }, arrive - (i === 0 ? 0.5 : TRAVEL));
-    lightStation(stage, tl, i, arrive);
-    if (i < S.live) {
-      // What it leaves behind settles to the prior step as the next station's
-      // words arrive, not as the claim departs — so the eye is never asked to
-      // read two stations at full voice or none.
-      recedeStation(stage, tl, i, arriveAt(i + 1) + WORDS);
-    } else {
-      // The last body: the claim rises into it and is absorbed. It leaves the
-      // line upward, so it is clear of every word before any of them lands.
-      const box = S.box(STATIONS[i].key, x);
-      tl.to(stage.traveler, {
-        top: `${box[1] + box[3] / 2 - 58}px`, opacity: 0,
-        duration: 0.85, ease: 'power2.inOut'
-      }, arrive + 0.3);
-    }
-  });
-  return arriveAt(S.xs.length - 1) + WORDS + 0.8;
+// The record read again as argument: it comes back from the recession and the
+// pairs light along it, one station at a time.
+function readAgain(mod, stage, tl, at = 0) {
+  stage.railTo(tl, stage.states[ID][0].rail, { at, land: PAIRS, arriveAt: 0 });
 }
 
 function entry(mod, stage) {
-  stage.applyState(ID, 0);
   const tl = stage.timeline();
-  const settle = stageStrip(stage, tl, 0.1);
-  tl.add(() => stage.applyState(ID, 0), settle);
+  readAgain(mod, stage, tl, 0);
+  tl.add(() => stage.applyState(ID, 0), 2.9);
 }
 
-// The morph from Scene 9: the distinction clears, and the whole architecture
-// is laid on one line — the four bodies the claim has worn, in order.
+// The morph from Scene 9: the idea persists — the word "architecture" crosses
+// the boundary intact — so the world does not cut. The distinction clears and
+// the record it stood over comes back up to be read.
 function morphIn(mod, stage) {
   stage.applyState('scarcity-becomes-digital', 4);
   const tl = stage.timeline();
   tl.to([stage.stmtEls[0], stage.stmtEls[1]],
     { opacity: 0, duration: 0.5, ease: 'power1.inOut' }, 0.05);
-  const settle = stageStrip(stage, tl, 0.55);
-  tl.add(() => stage.applyState(ID, 0), settle);
+  readAgain(mod, stage, tl, 0.5);
+  tl.add(() => stage.applyState(ID, 0), 3.4);
 }
 
 // The palladium frame's arrival, in the legacy's own reveals. The slide root
@@ -167,29 +91,23 @@ function landPalladium(stage, tl, at) {
 }
 
 const transitions = {
-  // beat 2 — the history line, on the strip it names.
+  // beat 2 — the history line, on the record it names.
   1: (mod, stage) => {
+    const st = stage.states[ID][1];
     const tl = stage.timeline();
-    tl.add(() => {
-      const [copy, styles] = GEOM.statement(COPY.historyLine, 866, 44, 1);
-      stage.setText(stage.stmtEls[0], copy, styles);
-      gsap.set(stage.stmtEls[0], { opacity: 0, y: 12 });
-    }, 0.05);
-    tl.to(stage.stmtEls[0], { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out' }, 0.1);
+    stage.railBlock(tl, stage.stmtEls[0], () => stage.railStatement(st, 0), 0.05, { dur: 0.7 });
     tl.add(() => stage.applyState(ID, 1), 1.1);
   },
 
-  // beat 3 — PALLADIUM, against the strip. The strip clears entirely: the bar
-  // has to be judged on its own figures, not read off the line it is testing.
+  // beat 3 — PALLADIUM, against the extended rail. The record recedes to the
+  // legacy's deep dim rather than clearing: the bar is being held up against
+  // the history it has to clear, and that history stays in the room.
   2: (mod, stage) => {
     const tl = stage.timeline();
-    tl.to([...stage.stripPhotos, ...stage.stripNames, ...stage.stripGains,
-      ...stage.stripDeps, stage.stmtEls[0]],
-    { opacity: 0, duration: 0.55, ease: 'power1.inOut' }, 0.05);
-    tl.to([stage.stripLine, ...stage.stripDots],
-      { attr: { opacity: 0 }, duration: 0.45, ease: 'power1.inOut' }, 0.05);
-    landPalladium(stage, tl, 0.7);
-    tl.add(() => stage.applyState(ID, 2), 4.1);
+    tl.to(stage.stmtEls[0], { opacity: 0, duration: 0.5, ease: 'power1.inOut' }, 0.05);
+    stage.railTo(tl, stage.states[ID][2].rail, { at: 0, camera: false });
+    landPalladium(stage, tl, 0.8);
+    tl.add(() => stage.applyState(ID, 2), 4.2);
   },
 
   // beat 4 — THE BAR. The second epoch lands, then the sentence every later
@@ -204,8 +122,11 @@ const transitions = {
     tl.add(() => stage.applyState(ID, 3), 2.4);
   },
 
-  // beat 5 — the pivot that opens Act III, alone on cleared black.
+  // beat 5 — the pivot that opens Act III, over the receded complete record.
+  // Ten stations, each with its line beneath it, and one question none of them
+  // has answered.
   4: (mod, stage) => {
+    const st = stage.states[ID][4];
     const tl = stage.timeline();
     const P = stage.palladium;
     tl.add(() => {
@@ -214,11 +135,10 @@ const transitions = {
     tl.add(() => {
       stage.chartRoot(null);
       P.wrap.style.display = 'none';
-      stage.setText(stage.stmtEls[0], GEOM.question[0], GEOM.question[1]);
-      gsap.set(stage.stmtEls[0], { opacity: 0, y: 12 });
     }, 0.95);
-    tl.to(stage.stmtEls[0], { opacity: 1, y: 0, duration: 0.75, ease: 'power2.out' }, 1.0);
-    tl.add(() => stage.applyState(ID, 4), 2.0);
+    stage.railTo(tl, st.rail, { at: 0.6 });
+    stage.railBlock(tl, stage.stmtEls[0], () => stage.railQuestion(st), 1.6, { dur: 0.75 });
+    tl.add(() => stage.applyState(ID, 4), 2.9);
   }
 };
 

@@ -1,157 +1,141 @@
 // Scene 8 — Fiat: Money Becomes Information (5 beats).
 //
-// The receipt idea followed all the way, and what it cost. The scene morphs in
-// from Scene 7 on THE PORTED DISSOLVE — P1's five-form cross-dissolve, whose
-// two frames the provenance map names as already approved (`p1-b6` →
-// `p1-b7-glow` IS paper → `ledger_glow`): the paper claim takes the study box,
-// and the glowing ledger entry rises through it while the paper releases a
-// beat later, so the frame never dips to black between two objects. Money
-// becomes information on screen rather than in a sentence.
+// The receipt idea followed all the way, and what it cost — on the rail.
 //
-// Then 1971 in the evidence grammar's second specimen, the capture named in
-// the pattern slide's own words, `2-07`'s chart ported whole with the frozen
-// data untouched, and the two balance lines that leave the wound standing.
+// THE DISSOLVE, RESTAGED. The ported dissolve was a crossfade inside a study
+// box: the paper claim becoming the glowing ledger entry. On the rail the same
+// sentence is said by the record itself, and it is said more exactly. The
+// certificate's dependency arc — the one thing on screen asserting that the
+// paper still owes gold — RELEASES, on the register's own 520 ms with the
+// outgoing form let go 180 ms late, the exact mechanism `.p1-form` ships; the
+// note it carried gives way to the named trade in the station's own rows; and
+// the LEDGER station rises to the right of it as the rail returns. The claim
+// stops being a thing and becomes an entry, and the frame never dips to black
+// between the two.
 //
-// PORTS MOVE LIKE THEY ALWAYS DID. The dissolve is the dark-field register's
-// own 520 ms reveal with the outgoing form released 180 ms late — the exact
-// mechanism `.p1-form[data-visible="false"]` ships. The chart's arrival is the
-// legacy's own `[data-visible]` reveal off the slide root it carries.
+// Then 1971 in the dated-fact grammar AT THE LEDGER STATION — the ship's own
+// treatment, three scenes on — with gold and its claim dimming together:
+// captured, not beaten. Then `2-07`'s chart ported whole over the deep-dimmed
+// record, the rail returning with the residue noted as the ledger's own
+// dependency row, and the measured wound over the receded rail.
 //
-// Landed states — approved cells, by construction: s8-b1 … s8-b5.
+// Landed states — the approved r2 cells, by construction: s8-b1 … s8-b5, with
+// `s8-b4-return` one state past the last beat, the rail returned with the
+// residue landed, which beat 5 launches from (`_railStates.js`).
 
 import { gsap } from 'gsap';
-import { GEOM, COPY, setVisible, hideInstantly } from './_architectureStage.js';
+import { setVisible, hideInstantly } from './_architectureStage.js';
 import { makeSceneModule } from './_sceneModule.js';
+import { S8_RETURN } from './_railStates.js';
 
 const ID = 'money-becomes-information';
 
-// The register's own reveal, and the release the morph is built on.
+// The dark-field register's own reveal, and the release the dissolve is built
+// on — the values `.p1-form[data-visible="false"]` ships.
 const REVEAL = 0.52;
 const RELEASE = 0.18;
 
-// The evidence grammar landing, in the severance's own reveal character: the
-// date rises first, the consequence follows. Shared by the cold entry and the
-// beat-2 gesture so the specimen lands the same way either way.
-function landEvidence(stage, tl, at) {
-  tl.add(() => {
-    const ev = GEOM.evidence('severance');
-    stage.setText(stage.evDate, ev.date[0], ev.date[1]);
-    stage.setText(stage.evFact, ev.fact[0], ev.fact[1]);
-    gsap.set(stage.evDate, { opacity: 0, y: 12 });
-    gsap.set(stage.evFact, { opacity: 0, y: 10 });
-  }, at);
-  tl.to(stage.evDate, { opacity: 1, y: 0, duration: 0.9, ease: 'power2.out' }, at + 0.1);
-  tl.to(stage.evFact, { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out' }, at + 0.85);
+// LEDGER arrives: the camera opens right to the new head, the line extends,
+// the station comes up at the legacy stop's own 800ms, and MONEY BECAME
+// INFORMATION lands at it.
+function arriveLedger(mod, stage, tl, at = 0) {
+  const st = stage.states[ID][0];
+  stage.railTo(tl, st.rail, { at, grow: true });
+  stage.railBlock(tl, stage.railLandEls[0], () => stage.railLanding(st), at + 2.0);
 }
 
 function entry(mod, stage) {
-  stage.applyState(ID, 0);
   const tl = stage.timeline();
-  tl.add(() => {
-    hideInstantly(stage.ledgerStudy, () => setVisible(stage.ledgerStudy, false));
-    gsap.set(stage.studyStmtEl, { opacity: 0 });
-  }, 0);
-  tl.add(() => setVisible(stage.ledgerStudy, true), 0.25);
-  tl.to(stage.studyStmtEl, { opacity: 1, duration: 0.55, ease: 'power2.out' }, 0.85);
-  tl.add(() => stage.applyState(ID, 0), 1.6);
+  arriveLedger(mod, stage, tl, 0);
+  tl.add(() => stage.applyState(ID, 0), 3.1);
 }
 
-// THE DISSOLVE. The morph from Scene 7: the trade's two lines clear, the paper
-// claim takes the approved study box — the thing Scene 7 just sent out of the
-// vault — and the ledger entry rises through it as the paper releases. The
-// idea persists all the way through; only its body stops being a thing.
+// THE DISSOLVE. The morph from Scene 7: the trade's two lines clear, the
+// dependency arc releases — the paper's claim on gold dematerializing — and
+// the ledger rises as the rail returns.
 function morphIn(mod, stage) {
   stage.applyState('claims-on-gold', 4);
   const tl = stage.timeline();
-  tl.add(() => {
-    hideInstantly(stage.certForm, () => setVisible(stage.certForm, false));
-    hideInstantly(stage.ledgerStudy, () => setVisible(stage.ledgerStudy, false));
-    gsap.set(stage.studyStmtEl, { opacity: 0 });
-  }, 0);
   tl.to([stage.stmtEls[0], stage.stmtEls[1]],
     { opacity: 0, duration: 0.5, ease: 'power1.inOut' }, 0.05);
-  // SEAM STOPGAP, SESSION 1. Scene 7 now hands over a rail world and Scene 8
-  // does not join it until Session 2, so the record is released here on the
-  // same `.s2o-rail` 800ms it recedes on everywhere else rather than cutting
-  // out under the dissolve. Session 2 replaces this with the LEDGER station's
-  // own arrival, which is where the dissolve actually belongs.
-  tl.to(stage.railWorld.el, { opacity: 0, duration: 0.8, ease: 'power1.out' }, 0.05);
-  // The paper claim arrives in the forms' own box...
-  tl.add(() => setVisible(stage.certForm, true), 0.5);
-  // ...and the ledger rises through it, the paper released a beat later.
-  tl.add(() => setVisible(stage.ledgerStudy, true), 0.5 + REVEAL + 0.5);
-  tl.add(() => setVisible(stage.certForm, false), 0.5 + REVEAL + 0.5 + RELEASE);
-  tl.add(() => {
-    const [copy, styles] = GEOM.studyStatement(COPY.becameInformation);
-    stage.setText(stage.studyStmtEl, copy, styles);
-    gsap.set(stage.studyStmtEl, { opacity: 0, y: 8 });
-  }, 2.15);
-  tl.to(stage.studyStmtEl, { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }, 2.2);
-  tl.add(() => stage.applyState(ID, 0), 3.0);
+  tl.to([stage.railWorld.depPath, ...stage.railWorld.depDots],
+    { opacity: 0, duration: REVEAL, ease: 'power1.out' }, 0.05);
+  arriveLedger(mod, stage, tl, REVEAL + RELEASE);
+  tl.add(() => stage.applyState(ID, 0), REVEAL + RELEASE + 3.1);
 }
 
 const transitions = {
-  // beat 2 — the study yields to the dated fact: 1971, alone, in the grammar
-  // the Zanzibar receipt established three scenes earlier.
+  // beat 2 — the honest strengths land at the station, and INSTANT TRANSFER
+  // settles into the record beneath them.
   1: (mod, stage) => {
+    const st = stage.states[ID][1];
     const tl = stage.timeline();
-    tl.add(() => setVisible(stage.ledgerStudy, false), 0.05);
-    tl.to(stage.studyStmtEl, { opacity: 0, duration: 0.4, ease: 'power1.inOut' }, 0.05);
-    landEvidence(stage, tl, 0.5);
-    tl.add(() => stage.applyState(ID, 1), 2.4);
+    tl.to(stage.railLandEls[0], { opacity: 0, duration: 0.4, ease: 'power1.inOut' }, 0);
+    stage.railTo(tl, st.rail, {
+      at: 0.2, camera: false, land: [['ledger', 'row64']], arriveAt: 0
+    });
+    stage.railBlock(tl, stage.railLandEls[0], () => stage.railLanding(st), 1.5);
+    tl.add(() => stage.applyState(ID, 1), 2.6);
   },
 
-  // beat 3 — the capture, named: the record clears and the sentence lands on
-  // the black it leaves. This is the beat the whole history turns on, so it
-  // gets the frame to itself.
+  // beat 3 — 1971, the featured moment at the LEDGER station. The camera lifts
+  // to make room beneath, gold and its claim dim together as the redemption
+  // they stood on is cancelled, and the decree lands in the dated-fact
+  // grammar's own reveal character: the date first, the consequence after.
   2: (mod, stage) => {
+    const st = stage.states[ID][2];
     const tl = stage.timeline();
-    tl.to([stage.evDate, stage.evFact],
-      { opacity: 0, duration: 0.45, ease: 'power1.inOut' }, 0.05);
+    tl.to(stage.railLandEls[0], { opacity: 0, duration: 0.4, ease: 'power1.inOut' }, 0);
+    stage.railTo(tl, st.rail, { at: 0 });
     tl.add(() => {
-      const [copy, styles] = GEOM.statement(COPY.captured, 430, 46, 1);
-      stage.setText(stage.stmtEls[0], copy, styles);
-      gsap.set(stage.stmtEls[0], { opacity: 0, y: 12 });
-    }, 0.6);
-    tl.to(stage.stmtEls[0], { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out' }, 0.65);
-    tl.add(() => stage.applyState(ID, 2), 1.6);
+      const ev = stage.railDatedFact(st);
+      gsap.set(ev.date, { opacity: 0, y: 12 });
+      gsap.set(ev.fact, { opacity: 0, y: 10 });
+    }, 0.9);
+    tl.to(stage.evDate, { opacity: 1, y: 0, duration: 0.9, ease: 'power2.out' }, 1.0);
+    tl.to(stage.evFact, { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out' }, 1.75);
+    tl.add(() => stage.applyState(ID, 2), 3.4);
   },
 
-  // beat 4 — THE RECORD. The sentence clears and the ported chart arrives in
-  // the legacy's own reveal — the slide root claimed first, because the series
-  // labels are a `data-step` rule and the port is not the port without it.
+  // beat 4 — THE RECORD. The dated fact clears, the rail recedes to the
+  // legacy's deep dim, and the ported chart arrives in the legacy's own reveal
+  // — the slide root claimed first, because the series labels are a
+  // `data-step` rule and the port is not the port without it.
   3: (mod, stage) => {
     const tl = stage.timeline();
-    tl.to(stage.stmtEls[0], { opacity: 0, duration: 0.45, ease: 'power1.in' }, 0.05);
+    tl.to([stage.evDate, stage.evFact],
+      { opacity: 0, duration: 0.45, ease: 'power1.inOut' }, 0);
+    stage.railTo(tl, stage.states[ID][3].rail, { at: 0 });
     tl.add(() => {
       stage.chartRoot('severance', 4);
       hideInstantly(stage.sevChart.chart, () => {
         stage.sevChart.chart.style.display = '';
         setVisible(stage.sevChart.chart, false);
       });
-    }, 0.5);
-    tl.add(() => setVisible(stage.sevChart.chart, true), 0.6);
-    tl.add(() => stage.applyState(ID, 3), 2.0);
+    }, 0.6);
+    tl.add(() => setVisible(stage.sevChart.chart, true), 0.7);
+    tl.add(() => stage.applyState(ID, 3), 2.4);
   },
 
-  // beat 5 — both facts on one screen: the chart clears and the pair lands
-  // sequenced — the honest strength above, the measured wound below.
+  // beat 5 — the return, then the measured wound. The chart clears and the
+  // rail comes back with the residue noted at the LEDGER station — the
+  // chart's slope becoming one line of the record — and only then does the
+  // record recede again under the sentence that names it.
   4: (mod, stage) => {
+    const st = stage.states[ID][4];
+    const ret = stage.states[ID][S8_RETURN];
     const tl = stage.timeline();
     tl.add(() => setVisible(stage.sevChart.chart, false), 0.05);
     tl.add(() => {
       stage.chartRoot(null);
       stage.sevChart.chart.style.display = 'none';
-      const a = GEOM.statement(COPY.mostAccepted, 434, 46, 0.72);
-      stage.setText(stage.stmtEls[0], a[0], a[1]);
-      gsap.set(stage.stmtEls[0], { opacity: 0, y: 10 });
-      const b = GEOM.statement(COPY.residue, 566, 52, 1);
-      stage.setText(stage.stmtEls[1], b[0], b[1]);
-      gsap.set(stage.stmtEls[1], { opacity: 0, y: 10 });
-    }, 0.85);
-    tl.to(stage.stmtEls[0], { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' }, 0.9);
-    tl.to(stage.stmtEls[1], { opacity: 1, y: 0, duration: 0.65, ease: 'power2.out' }, 1.5);
-    tl.add(() => stage.applyState(ID, 4), 2.35);
+    }, 0.7);
+    stage.railTo(tl, ret.rail, {
+      at: 0.5, camera: false, land: [['ledger', 'row146']], arriveAt: 0
+    });
+    stage.railTo(tl, st.rail, { at: 2.0 });
+    stage.railBlock(tl, stage.stmtEls[0], () => stage.railStatement(st, 0), 2.6);
+    tl.add(() => stage.applyState(ID, 4), 3.9);
   }
 };
 

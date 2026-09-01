@@ -130,6 +130,39 @@ export const RECEDE = { none: 1, statement: 0.35, deep: 0.08 };
 const VOICE_LINE = 0.35;
 const VOICE_DOT = 0.7;
 
+// THE APPROVED NETWORK FORMATION (`s9-b1-a` — system A, the hub dissolving,
+// selected 31 August 2026), transcribed from the sheet's own `mesh()`: twelve
+// nodes on a ring, the spokes to the centre receded to 0.2, the peer-to-peer
+// chords from the same seeded draw at the full line voice, the hub at r 7 /
+// 0.3 and the nodes at r 4.5 / 0.8. r2.6 changed only its origin and its
+// anchoring — it forms at the LEDGER station's own point on the rail and rides
+// the rail's camera scale, because a thing anchored to the rail is drawn at
+// the rail's scale.
+export const MESH_R = 330;
+const MESH_N = 12;
+// The seeded LCG the systems sheet ships, never Math.random, so the chords are
+// the selected candidate's chords. The rand() call happens for EVERY pair
+// whether the chord is kept or not, exactly as the builder writes it, because
+// the sequence is the drawing.
+const lcg = (seed) => {
+  let s = seed >>> 0;
+  return () => {
+    s = (s * 1664525 + 1013904223) >>> 0;
+    return s / 4294967296;
+  };
+};
+const MESH_CHORDS = (() => {
+  const rand = lcg(0x9F1A);
+  const kept = [];
+  for (let i = 0; i < MESH_N; i += 1) {
+    for (let j = i + 1; j < MESH_N; j += 1) {
+      if (rand() > 0.34) continue;
+      kept.push([i, j]);
+    }
+  }
+  return kept;
+})();
+
 // ------------------------------------------------------------------- camera
 
 export const w2s = (cam, wx, wy = 0) => [960 + (wx - cam.cx) * cam.s, cam.cy + wy * cam.s];
@@ -300,21 +333,66 @@ export function RailWorld() {
     const dot = document.createElementNS(svgNS, 'circle');
     g.appendChild(dot);
 
-    const wrap = document.createElement('div');
-    wrap.style.cssText = 'position:absolute; inset:0;';
+    // A station is two containers, not one, and the split is load-bearing:
+    // when a station is LIT it rides outside the recession, but only its MARK
+    // does — its render and its name. Its rows stay down in the record with
+    // everything else, because they are the record. The sheet writes exactly
+    // that (`rail()` sends the mark to the lit layer and the rows to `L`), and
+    // one wrapper carrying both would light the ledger's own gain and
+    // dependency at the moment the act is showing them failing.
+    const mark = document.createElement('div');
+    mark.style.cssText = 'position:absolute; inset:0;';
     const df = DarkFieldImage({
       name: info.subject, width: BAND_W, height: BAND_H, alt: info.alt, stubSize: 96
     });
     df.el.dataset.visible = 'true';
     df.el.style.transition = 'none';
     df.el.style.position = 'absolute';
-    wrap.appendChild(df.el);
-    const label = mkText(wrap);
-    const row64 = mkText(wrap);
-    const row146 = mkText(wrap);
-    layer.appendChild(wrap);
+    mark.appendChild(df.el);
+    const label = mkText(mark);
+    layer.appendChild(mark);
 
-    stations[id] = { g, dot, wrap, photo: df.el, label, row64, row146, lit: false };
+    const rowsWrap = document.createElement('div');
+    rowsWrap.style.cssText = 'position:absolute; inset:0;';
+    const row64 = mkText(rowsWrap);
+    const row146 = mkText(rowsWrap);
+    layer.appendChild(rowsWrap);
+
+    stations[id] = { g, dot, mark, rowsWrap, photo: df.el, label, row64, row146, lit: false };
+  });
+
+  // ---- the network mesh (r2.6), in its own layer over the record ----
+  //
+  // Built once in the sheet's own draw order — spokes, then chords, then the
+  // hub, then the nodes — so the layer reads exactly as the approved cell does
+  // when `applyMesh` writes its geometry.
+  const meshLayer = document.createElement('div');
+  meshLayer.style.cssText = 'position:absolute; inset:0; display:none;';
+  const msvg = document.createElementNS(svgNS, 'svg');
+  msvg.setAttribute('viewBox', '0 0 1920 1080');
+  msvg.setAttribute('width', '1920');
+  msvg.setAttribute('height', '1080');
+  msvg.style.cssText = 'position:absolute; inset:0;';
+  meshLayer.appendChild(msvg);
+  el.appendChild(meshLayer);
+
+  const meshSeg = (alpha) => {
+    const l = document.createElementNS(svgNS, 'line');
+    l.setAttribute('stroke', `rgba(255,255,255,${alpha})`);
+    l.setAttribute('stroke-linecap', 'round');
+    msvg.appendChild(l);
+    return l;
+  };
+  const meshSpokes = Array.from({ length: MESH_N }, () => meshSeg(0.2));
+  const meshChords = MESH_CHORDS.map(() => meshSeg(VOICE_LINE));
+  const meshHub = document.createElementNS(svgNS, 'circle');
+  meshHub.setAttribute('fill', 'rgba(255,255,255,0.3)');
+  msvg.appendChild(meshHub);
+  const meshNodes = Array.from({ length: MESH_N }, () => {
+    const c = document.createElementNS(svgNS, 'circle');
+    c.setAttribute('fill', 'rgba(255,255,255,0.8)');
+    msvg.appendChild(c);
+    return c;
   });
 
   // ---- the dependency arc (r2.4), last in the drawn layer ----
@@ -385,11 +463,13 @@ export function RailWorld() {
       const S = stations[id];
       const state = spec.st[id];
       if (!state) {
-        S.wrap.style.display = 'none';
+        S.mark.style.display = 'none';
+        S.rowsWrap.style.display = 'none';
         S.g.style.display = 'none';
         return;
       }
-      S.wrap.style.display = '';
+      S.mark.style.display = '';
+      S.rowsWrap.style.display = '';
       S.g.style.display = '';
       const v = S_VOICE[state];
       const info = STATION[id];
@@ -397,8 +477,10 @@ export function RailWorld() {
       const isLit = spec.lit === id;
       // The lit station rides the un-receded layer; its dot is left to the
       // mesh's hub, which is what "the hub dissolves" means on a still.
+      // Only the MARK crosses into the lit layer; the rows stay in the record.
       const host = isLit ? top : layer;
-      if (S.wrap.parentNode !== host) host.appendChild(S.wrap);
+      if (S.mark.parentNode !== host) host.appendChild(S.mark);
+      if (S.rowsWrap.parentNode !== layer) layer.appendChild(S.rowsWrap);
       const gHost = isLit ? tsvg : lsvg;
       if (S.g.parentNode !== gHost) gHost.appendChild(S.g);
       S.lit = isLit;
@@ -489,6 +571,42 @@ export function RailWorld() {
       depPath.style.display = 'none';
       depDots.forEach((d) => { d.style.display = 'none'; });
     }
+
+    // The mesh, anchored at the station it forms out of (r2.6). Its origin is
+    // that station's own point on the line and its scale is the rail's.
+    if (spec.mesh) {
+      meshLayer.style.display = '';
+      const [mx, my] = w2s(cam, X[spec.mesh], 0);
+      const R = MESH_R * cam.s;
+      const pt = (i) => [
+        mx + R * Math.cos((i / MESH_N) * Math.PI * 2 - Math.PI / 2),
+        my + R * Math.sin((i / MESH_N) * Math.PI * 2 - Math.PI / 2)
+      ];
+      const stroke = Math.max(1, 1.5 * cam.s);
+      meshSpokes.forEach((l, i) => {
+        const [x, y] = pt(i);
+        l.setAttribute('x1', mx); l.setAttribute('y1', my);
+        l.setAttribute('x2', x); l.setAttribute('y2', y);
+        l.setAttribute('stroke-width', stroke);
+      });
+      MESH_CHORDS.forEach(([i, j], k) => {
+        const [x1, y1] = pt(i); const [x2, y2] = pt(j);
+        const l = meshChords[k];
+        l.setAttribute('x1', x1); l.setAttribute('y1', y1);
+        l.setAttribute('x2', x2); l.setAttribute('y2', y2);
+        l.setAttribute('stroke-width', stroke);
+      });
+      meshHub.setAttribute('cx', mx);
+      meshHub.setAttribute('cy', my);
+      meshHub.setAttribute('r', 7 * cam.s);
+      meshNodes.forEach((c, i) => {
+        const [x, y] = pt(i);
+        c.setAttribute('cx', x); c.setAttribute('cy', y);
+        c.setAttribute('r', 4.5 * cam.s);
+      });
+    } else {
+      meshLayer.style.display = 'none';
+    }
   }
 
   /** Re-apply the current state at a new camera — what a camera tween drives. */
@@ -500,8 +618,10 @@ export function RailWorld() {
   function clearGestureProps() {
     ORDER.forEach((id) => {
       const S = stations[id];
-      S.wrap.style.opacity = '';
-      S.wrap.style.transform = '';
+      [S.mark, S.rowsWrap].forEach((c) => {
+        c.style.opacity = '';
+        c.style.transform = '';
+      });
       S.g.removeAttribute('opacity');
       [S.label, S.row64, S.row146].forEach((p) => {
         p.style.opacity = '';
@@ -512,12 +632,24 @@ export function RailWorld() {
     depPath.removeAttribute('stroke-dashoffset');
     depPath.removeAttribute('opacity');
     depDots.forEach((d) => d.removeAttribute('opacity'));
+    [...meshSpokes, ...meshChords].forEach((l) => {
+      l.removeAttribute('stroke-dasharray');
+      l.removeAttribute('stroke-dashoffset');
+      l.style.opacity = '';
+      l.style.stroke = '';
+    });
+    [meshHub, ...meshNodes].forEach((c) => {
+      c.style.opacity = '';
+      c.style.fill = '';
+    });
+    meshLayer.style.opacity = '';
     layer.style.transform = '';
     top.style.opacity = '';
   }
 
   return {
     el, layer, top, lineRect, ticks, stations, depPath, depDots,
+    meshLayer, meshSpokes, meshChords, meshHub, meshNodes,
     apply, camTo, clearGestureProps,
     state: () => current
   };
