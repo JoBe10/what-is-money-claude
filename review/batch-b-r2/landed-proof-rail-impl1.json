@@ -1,5 +1,5 @@
 {
-  "date": "2026-09-01T00:05:10.975Z",
+  "date": "2026-09-01T00:20:27.539Z",
   "session": "act-2-rail-impl-1",
   "authority": "review/act-2/rail/states.json — approval, approvedSet (presenter-approved in full, 1 September 2026)",
   "rule": "each of the 18 settled rail states of Scenes 5–7, mounted cold through the real engine in the deck at 1920×1080, is its approved r2 cell at zero differing pixels (channel delta > 2/255 counts). Comparisons: scene↔archived cell, fresh cell↔archived cell, scene↔fresh cell.",
@@ -271,11 +271,11 @@
       },
       "cellVsArchive": {
         "diffPixels": 0,
-        "maxDelta": 1
+        "maxDelta": 0
       },
       "sceneVsCell": {
         "diffPixels": 0,
-        "maxDelta": 0
+        "maxDelta": 1
       },
       "pass": true
     },
@@ -288,11 +288,11 @@
       },
       "cellVsArchive": {
         "diffPixels": 0,
-        "maxDelta": 0
+        "maxDelta": 1
       },
       "sceneVsCell": {
         "diffPixels": 0,
-        "maxDelta": 1
+        "maxDelta": 0
       },
       "pass": true
     },

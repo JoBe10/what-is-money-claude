@@ -24,9 +24,7 @@
 //     allows reading beat 9 as settling on the return instead, which is one
 //     line here.
 
-import {
-  frame, RECEDE
-} from './_railWorld.js';
+import { frame } from './_railWorld.js';
 
 // The specimens the evidence grammar carries (states.mjs SPECIMEN, verbatim).
 export const RAIL_SPECIMEN = {
@@ -272,5 +270,3 @@ export const RAIL_BUILDS = {
 
 // The one state that is not a build: S6's return seam, addressed by index.
 export const S6_RETURN = 9;
-
-export { RECEDE };

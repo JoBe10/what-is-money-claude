@@ -19,7 +19,6 @@
 //
 // Landed states — the approved r2 cells, by construction: s7-b1 … s7-b5.
 
-import { gsap } from 'gsap';
 import { makeSceneModule } from './_sceneModule.js';
 import { railReturn } from './06-gold-scarcity-in-matter.js';
 
