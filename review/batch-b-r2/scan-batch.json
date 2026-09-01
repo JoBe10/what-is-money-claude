@@ -1,0 +1,80 @@
+{
+  "date": "2026-09-01T03:06:26.975Z",
+  "session": "batch-b-r2",
+  "baseline": "batch-b",
+  "scripts": [
+    {
+      "file": "05-the-function-stayed.js",
+      "identicalToBaseline": true,
+      "chars": 2012
+    },
+    {
+      "file": "06-gold-scarcity-in-matter.js",
+      "identicalToBaseline": true,
+      "chars": 1778
+    },
+    {
+      "file": "07-claims-on-gold.js",
+      "identicalToBaseline": true,
+      "chars": 1191
+    },
+    {
+      "file": "08-money-becomes-information.js",
+      "identicalToBaseline": true,
+      "chars": 1963
+    },
+    {
+      "file": "09-scarcity-becomes-digital.js",
+      "identicalToBaseline": true,
+      "chars": 1667
+    },
+    {
+      "file": "10-the-trade-off-keeps-moving.js",
+      "identicalToBaseline": true,
+      "chars": 1451
+    }
+  ],
+  "beats": [
+    {
+      "file": "05-the-function-stayed.js",
+      "beats": 8,
+      "arrows": 8,
+      "oneToOne": true
+    },
+    {
+      "file": "06-gold-scarcity-in-matter.js",
+      "beats": 9,
+      "arrows": 9,
+      "oneToOne": true
+    },
+    {
+      "file": "07-claims-on-gold.js",
+      "beats": 5,
+      "arrows": 5,
+      "oneToOne": true
+    },
+    {
+      "file": "08-money-becomes-information.js",
+      "beats": 5,
+      "arrows": 5,
+      "oneToOne": true
+    },
+    {
+      "file": "09-scarcity-becomes-digital.js",
+      "beats": 5,
+      "arrows": 5,
+      "oneToOne": true
+    },
+    {
+      "file": "10-the-trade-off-keeps-moving.js",
+      "beats": 5,
+      "arrows": 5,
+      "oneToOne": true
+    }
+  ],
+  "selfReference": {
+    "scanned": 653,
+    "hits": []
+  },
+  "failures": 0
+}
