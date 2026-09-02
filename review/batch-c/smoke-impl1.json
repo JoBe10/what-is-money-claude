@@ -1,0 +1,163 @@
+{
+  "date": "2026-09-02T09:41:31.104Z",
+  "session": "batch-c-impl-1",
+  "deck": {
+    "slides": 39,
+    "firstId": "eighty-thousand-hours"
+  },
+  "route": {
+    "slides": 3,
+    "order": [
+      "three-familiar-jobs",
+      "we-already-split-those-jobs",
+      "the-order-of-monetization"
+    ],
+    "builds": [
+      4,
+      3,
+      5
+    ]
+  },
+  "traversal": {
+    "states": 15,
+    "forward": true,
+    "forwardFirstMismatchAt": null,
+    "backwardReachesTop": true,
+    "backwardMonotonic": true,
+    "backwardSteps": 14
+  },
+  "boundaries": [
+    {
+      "name": "S11 end → S12 (forward, the morph)",
+      "from": {
+        "idx": 0,
+        "step": 4,
+        "id": "three-familiar-jobs"
+      },
+      "to": {
+        "idx": 1,
+        "step": 0,
+        "id": "we-already-split-those-jobs"
+      }
+    },
+    {
+      "name": "S12 b0 → S11 end (backward, the handoff)",
+      "from": {
+        "idx": 1,
+        "step": 0,
+        "id": "we-already-split-those-jobs"
+      },
+      "to": {
+        "idx": 0,
+        "step": 4,
+        "id": "three-familiar-jobs"
+      }
+    },
+    {
+      "name": "S12 end → S13 (forward, the authored cut)",
+      "from": {
+        "idx": 1,
+        "step": 3,
+        "id": "we-already-split-those-jobs"
+      },
+      "to": {
+        "idx": 2,
+        "step": 0,
+        "id": "the-order-of-monetization"
+      }
+    },
+    {
+      "name": "S13 b0 → S12 end (backward, the handoff)",
+      "from": {
+        "idx": 2,
+        "step": 0,
+        "id": "the-order-of-monetization"
+      },
+      "to": {
+        "idx": 1,
+        "step": 3,
+        "id": "we-already-split-those-jobs"
+      }
+    }
+  ],
+  "directEntry": [
+    "three-familiar-jobs:0",
+    "three-familiar-jobs:1",
+    "three-familiar-jobs:2",
+    "three-familiar-jobs:3",
+    "three-familiar-jobs:4",
+    "we-already-split-those-jobs:0",
+    "we-already-split-those-jobs:1",
+    "we-already-split-those-jobs:2",
+    "we-already-split-those-jobs:3",
+    "the-order-of-monetization:0",
+    "the-order-of-monetization:1",
+    "the-order-of-monetization:2",
+    "the-order-of-monetization:3",
+    "the-order-of-monetization:4",
+    "the-order-of-monetization:5"
+  ],
+  "parity": [
+    {
+      "state": "three-familiar-jobs:0",
+      "identical": true
+    },
+    {
+      "state": "three-familiar-jobs:1",
+      "identical": true
+    },
+    {
+      "state": "three-familiar-jobs:2",
+      "identical": true
+    },
+    {
+      "state": "three-familiar-jobs:3",
+      "identical": true
+    },
+    {
+      "state": "three-familiar-jobs:4",
+      "identical": true
+    },
+    {
+      "state": "we-already-split-those-jobs:0",
+      "identical": true
+    },
+    {
+      "state": "we-already-split-those-jobs:1",
+      "identical": true
+    },
+    {
+      "state": "we-already-split-those-jobs:2",
+      "identical": true
+    },
+    {
+      "state": "we-already-split-those-jobs:3",
+      "identical": true
+    },
+    {
+      "state": "the-order-of-monetization:0",
+      "identical": true
+    },
+    {
+      "state": "the-order-of-monetization:1",
+      "identical": true
+    },
+    {
+      "state": "the-order-of-monetization:2",
+      "identical": true
+    },
+    {
+      "state": "the-order-of-monetization:3",
+      "identical": true
+    },
+    {
+      "state": "the-order-of-monetization:4",
+      "identical": true
+    },
+    {
+      "state": "the-order-of-monetization:5",
+      "identical": true
+    }
+  ],
+  "consoleErrors": []
+}
