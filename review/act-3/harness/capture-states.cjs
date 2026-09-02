@@ -1,19 +1,28 @@
-// Act III — the beat-state sheet capture (the Act III states brief §2).
+// Act III — the beat-state sheet capture, r2 (the Act III states r2 brief §2).
 //
-// All 25 beats of Scenes 11–15, full-size at 1920×1080 through the states
-// pipeline, with the flipbook the presenter reviews from and the per-cell
-// record.
+// The r1 sheet re-cut under the five presenter rulings of 2 September 2026:
+// all S11 cells (the disc at center, the job objects at the spokes), all S12
+// cells (the proven staging, the block retired), all S13 cells (the neutral
+// marks), S14 b2–b4 (the marks, the coin's landing unchanged in logic; b4
+// under ruling 1), and S15 as the two candidate runs — 12 cells, A and B
+// across all six beats. 31 cells; 25 beats.
 //
-// THE SHEET IS IN BEAT ORDER — THE FLIPBOOK. The brief's protocol is one
-// walk in beat order: can the act's argument be followed by eye alone —
-// three jobs, the split, the climb, the objection answered on the ladder,
-// the tower, the held question? The review classes are the legend, and the
-// flags are gathered at the top in plain English so nothing decided honestly
-// is decided silently.
+// CARRIED CELLS ARE NOT RE-CAPTURED. A cell whose meta says `carried: true`
+// (s14-b1 — the one cell no ruling touches) keeps its r1 PNG byte-identical;
+// this capture verifies the file exists and skips the screenshot, and the
+// check harness proves the bytes against the recorded r1 hash.
+//
+// RETIRED TO FILE (the aesthetic law's file-keeping clause): s12-b3-block
+// (the r1 dated-fact block staging) and s15-b1-boxes … s15-b6-boxes (the r1
+// three-box tower). They stay in review/act-3/states/ under their retired
+// names and are recorded in states.json, not walked in the flipbook.
+//
+// THE SHEET IS IN BEAT ORDER — THE FLIPBOOK — with Scene 15 as two candidate
+// runs, A then B, each the scene played whole. THE REVIEW PROTOCOL IS TWO
+// ANSWERS, and the sheet says so in plain English.
 //
 // DETERMINISM. No builder in states.mjs uses Math.random, but the same LCG
-// every capture in this project installs is installed anyway, so a component
-// that seeds motion variables cannot make a re-render unstable.
+// every capture in this project installs is installed anyway.
 //
 // Usage: node capture-states.cjs [--port 5273]
 const { chromium } = require('playwright');
@@ -41,16 +50,26 @@ const SCENES = [
   ['S12', 'Scene 12 — We Already Split Those Jobs (4 beats)'],
   ['S13', 'Scene 13 — The Order of Monetization (6 beats)'],
   ['S14', 'Scene 14 — The Coffee Objection (4 beats)'],
-  ['S15', 'Scene 15 — The Tower (6 beats)']
+  ['S15', 'Scene 15 — The Tower, reopened (6 beats × 2 candidate systems)']
+];
+
+const RETIRED = [
+  { file: 's12-b3-block.png', was: 's12-b3', staging: 'the r1 dated-fact block over the deep-dimmed columns — retired by r2 ruling 2' },
+  { file: 's15-b1-boxes.png', was: 's15-b1', staging: 'the three-box tower, build 1 — superseded by r2 ruling 4' },
+  { file: 's15-b2-boxes.png', was: 's15-b2', staging: 'the three-box tower, build 2 — superseded by r2 ruling 4' },
+  { file: 's15-b3-boxes.png', was: 's15-b3', staging: 'the three-box tower, build 3 — superseded by r2 ruling 4' },
+  { file: 's15-b4-boxes.png', was: 's15-b4', staging: 'the three-box tower, build 4 — superseded by r2 ruling 4' },
+  { file: 's15-b5-boxes.png', was: 's15-b5', staging: 'the three-box tower, build 5 — superseded by r2 ruling 4' },
+  { file: 's15-b6-boxes.png', was: 's15-b6', staging: 'the three-box tower, build 6 with the r1 disc — superseded by r2 rulings 1 and 4' }
 ];
 
 const CLASS_NOTE = {
-  'pending-review': ['VERIFY — the adaptations and the flagged ports',
-    'Each of these renders a proven treatment with exactly one ruled change (the evidence grammar on the split; renders for the ladder’s stage marks; the coffee cup at display scale) or with one honestly flagged staging call on a port (the triad’s center; the disc’s return). Every caption says in plain English what to look for. What is wanted is not a taste verdict but a check: did the ruled change land, is the flagged call acceptable, and did anything else move?'],
+  'pending-selection': ['THE SELECTION — Scene 15’s two candidate systems',
+    'The act’s one open design, reopened by your ruling. Candidate A is the proportional inverted tower you specified — width is claim volume, solidity is realness, the reveal descending from PAYMENT APPS at the frame’s top to the small bright foundation. Candidate B is this session’s design under the same argument — the convergence of claims: many faint app marks fanning onto few deposit marks, converging on one bright base point, so “more claims than base” is drawn as counting instead of width. Walk each run whole, then pick the system: A or B. Both stay on file either way.'],
+  'pending-review': ['VERIFY — the rulings landed, and the standing honest calls',
+    'Each of these renders a ruling of this round (the disc at the center, the reverted Argentina landing, the neutral marks) or carries an honest call still standing from r1 (the household words, the berth readings, the word-pass items). Every caption says in plain English what to look for: did the ruling land, is the flagged call acceptable, and did anything else move?'],
   determined: ['DETERMINED',
-    'A script landing on a composition approved above — no new treatment, no decision; rendered so the flipbook is complete.'],
-  'approved-port': ['APPROVED BY PROVENANCE',
-    'Ports. Proven legacy treatments transplanted — several by mounting the very component the legacy slides run, at the states they run it. They carry no review burden: look only if something appears wrong.']
+    'Ruled outcomes with no open question — rendered so the flipbook is complete.']
 };
 
 (async () => {
@@ -75,6 +94,13 @@ const CLASS_NOTE = {
 
   let shots = 0;
   for (const id of ids) {
+    if (meta[id].carried) {
+      if (!fs.existsSync(path.join(OUT, `${id}.png`))) {
+        throw new Error(`carried cell ${id} has no PNG on disk`);
+      }
+      console.log(`cell   ${id.padEnd(10)} ${String(meta[id].klass).padEnd(6)} CARRIED — byte-identical from r1, not re-captured`);
+      continue;
+    }
     if (shots > 0 && shots % 8 === 0) await freshPage();
     shots += 1;
     await page.evaluate((cellId) => window.__states.buildCell(cellId), id);
@@ -87,7 +113,7 @@ const CLASS_NOTE = {
       path: path.join(OUT, `${id}.png`),
       clip: { x: 0, y: 0, width: 1920, height: 1080 }
     });
-    console.log(`cell   ${id.padEnd(10)} ${String(meta[id].klass).padEnd(6)} ${meta[id].review}${meta[id].flag ? '  [flagged]' : ''}`);
+    console.log(`cell   ${id.padEnd(10)} ${String(meta[id].klass).padEnd(6)} ${meta[id].review}${meta[id].system ? `  [candidate ${meta[id].system}]` : ''}${meta[id].flag ? '  [flagged]' : ''}`);
   }
   await page.evaluate(() => window.__states.teardown());
 
@@ -99,8 +125,8 @@ const CLASS_NOTE = {
     <figure data-review="${m.review}">
       <a href="./${id}.png" target="_blank"><img src="./${id}.png" alt="${id}" loading="lazy" /></a>
       <figcaption>
-        <b>${id}</b> · ${esc(m.scene)} b${m.beat} · <span class="frame">${esc(m.frame)}</span>
-        <span class="pill pill--${m.review}">${esc(m.klass)}</span>
+        <b>${id}</b> · ${esc(m.scene)} b${m.beat}${m.system ? ` · <span class="cand">CANDIDATE ${m.system}</span>` : ''} · <span class="frame">${esc(m.frame)}</span>
+        <span class="pill pill--${m.review}">${esc(m.klass)}</span>${m.carried ? ' <span class="pill pill--carried">CARRIED</span>' : ''}
         <br>${esc(m.caption)}
         ${m.flag ? `<br><span class="flagline"><b>FLAG:</b> ${esc(m.flag)}</span>` : ''}
         ${m.source ? `<br><span class="src">source: ${esc(m.source)}</span>` : ''}
@@ -113,6 +139,16 @@ const CLASS_NOTE = {
   const flagged = ids.filter((id) => meta[id].flag);
 
   const sceneSections = SCENES.map(([key, title]) => {
+    if (key === 'S15') {
+      const run = (sys, name) => {
+        const list = ids.filter((id) => meta[id].scene === 'S15' && meta[id].system === sys)
+          .sort((a, b) => meta[a].beat - meta[b].beat);
+        return `<h3 class="run">${name}</h3><div class="row">${list.map(figure).join('')}</div>`;
+      };
+      return `<h2>${title}</h2>
+${run('A', 'Candidate A — the proportional inverted tower (your spec): walk it as the scene, b1 → b6')}
+${run('B', 'Candidate B — the convergence of claims (this session’s design): the same scene, same beats, same copy')}`;
+    }
     const list = ids.filter((id) => meta[id].scene === key)
       .sort((a, b) => meta[a].beat - meta[b].beat);
     return `<h2>${title}</h2><div class="row">${list.map(figure).join('')}</div>`;
@@ -124,11 +160,11 @@ const CLASS_NOTE = {
   const flagList = flagged.map((id) =>
     `<li><b>${id}</b> — ${esc(meta[id].flag)}</li>`).join('\n');
 
-  const counts = ['pending-review', 'determined', 'approved-port']
+  const counts = ['pending-selection', 'pending-review', 'determined']
     .map((r) => `${byReview(r).length} ${r}`).join(' · ');
 
   fs.writeFileSync(path.join(OUT, 'sheet.html'), `<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><title>Act III — the beat-state sheet · the flipbook</title>
+<html lang="en"><head><meta charset="utf-8"><title>Act III — the beat-state sheet, r2 · the flipbook</title>
 <link rel="stylesheet" href="/src/styles/fonts.css">
 <style>
   body { background:#000; color:#fff; font-family:Inter,sans-serif; margin:0; padding:44px 48px 72px; }
@@ -136,47 +172,53 @@ const CLASS_NOTE = {
   p.note { font-size:13px; color:rgba(255,255,255,.55); margin:0 0 10px; max-width:1020px; line-height:1.65; }
   h2 { font-size:13px; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.85); margin:52px 0 6px; font-weight:500; }
   h3 { font-size:12px; letter-spacing:.18em; text-transform:uppercase; margin:22px 0 4px; font-weight:500; }
-  h3.h--pending-review { color:#F7931A; }
+  h3.run { color:#F7931A; margin-top:30px; }
+  h3.h--pending-selection { color:#F7931A; }
+  h3.h--pending-review { color:rgba(255,255,255,.75); }
   h3.h--determined { color:rgba(255,255,255,.6); }
-  h3.h--approved-port { color:rgba(255,255,255,.6); }
   p.lang { font-size:12.5px; color:rgba(255,255,255,.55); margin:0 0 10px; max-width:1020px; line-height:1.7; }
   ul.flags { max-width:1020px; margin:0 0 14px; padding-left:20px; }
   ul.flags li { font-size:12.5px; color:rgba(255,255,255,.62); line-height:1.7; margin-bottom:8px; }
   .row { display:flex; flex-wrap:wrap; gap:26px; }
   figure { margin:0; width:560px; }
   img { display:block; width:560px; height:315px; outline:1px solid rgba(255,255,255,.09); }
-  figure[data-review="pending-review"] img { outline:1px solid rgba(247,147,26,.55); }
+  figure[data-review="pending-review"] img { outline:1px solid rgba(255,255,255,.3); }
+  figure[data-review="pending-selection"] img { outline:1px solid rgba(247,147,26,.55); }
   figcaption { margin-top:8px; font-size:11.5px; color:rgba(255,255,255,.52); line-height:1.6; }
   figcaption b { color:rgba(255,255,255,.85); font-weight:600; }
   .frame { color:rgba(255,255,255,.68); }
+  .cand { color:#F7931A; letter-spacing:.12em; }
   .src { color:rgba(255,255,255,.34); font-style:italic; }
   .flagline { color:#FFD9A6; }
   .flagline b { color:#F7931A; }
   .pill { display:inline-block; margin-left:6px; padding:1px 7px; border-radius:9px; font-size:9.5px;
           letter-spacing:.12em; text-transform:uppercase; border:1px solid rgba(255,255,255,.2); }
-  .pill--pending-review { color:#F7931A; border-color:rgba(247,147,26,.5); }
+  .pill--pending-selection { color:#F7931A; border-color:rgba(247,147,26,.5); }
+  .pill--pending-review { color:rgba(255,255,255,.6); }
   .pill--determined { color:rgba(255,255,255,.35); }
-  .pill--approved-port { color:rgba(255,255,255,.45); }
+  .pill--carried { color:rgba(255,255,255,.4); border-style:dashed; }
   a { color:#F7931A; text-decoration:none; }
   hr { border:0; border-top:1px solid rgba(255,255,255,.1); margin:56px 0 0; }
 </style></head><body>
-<h1>Act III — the beat-state sheet · all 25 beats of Scenes 11–15, in beat order</h1>
-<p class="note"><b>The protocol, in plain English: walk this page once, top to bottom — it is the act, played as stills.</b>
-The question at every frame is the same one: can you follow the act's argument by eye alone — the three jobs, the split,
-the climb, the objection answered on the ladder, the tower, the held question? When the walk is done, two things are
-asked of you: per-cell verdicts on the <b>${byReview('pending-review').length} pending-review cells</b> (each caption
-says exactly what to check, and every honest judgment this sheet had to make is flagged in orange rather than decided
-silently), and the go-ahead that unlocks implementation. The ports are approved by provenance and need you only if
-something looks wrong.</p>
-<p class="note">The beat maps are frozen at <b>25 beats</b> on the installed scripts' own <code>[→]</code> counts
-(batch-c package §1: S11 5 · S12 4 · S13 6 · S14 4 · S15 6). The triad is the act's home base: drawn in Scene 11, split
-into the columns in Scene 12, risen through by the ladder in Scene 13, returned to in Scene 14, left through the STORE
-corner into the tower in Scene 15. <b>The ClaimObject returns at the held question — s15-b6 — and appears nowhere
-earlier in the act.</b> Cell classes: <b>${counts}</b>. Every cell is examined at full size — click any image.</p>
+<h1>Act III — the beat-state sheet, r2 · the five rulings landed, the tower reopened</h1>
+<p class="note"><b>The protocol, in plain English: walk this page once, top to bottom — it is the act, played as stills —
+and return two answers.</b> First: <b>the Scene 15 selection — candidate A or candidate B.</b> The scene renders twice,
+each system across all six beats; walk each run whole and pick the one whose shape argues best. Second: <b>the
+go-ahead.</b> Those two answers close Act III's states and unlock implementation. Along the way, the
+${byReview('pending-review').length} pending-review cells show your five rulings landed (the disc at the triad's
+center, Argentina landing the legacy way, the neutral marks on the ladder and at the spokes) plus the honest calls
+still standing from r1 — each caption says exactly what to check, and every judgment this sheet had to make is
+flagged in orange rather than decided silently.</p>
+<p class="note">The beat maps are frozen at <b>25 beats</b> (S11 5 · S12 4 · S13 6 · S14 4 · S15 6); Scene 15 renders
+its six beats twice, once per candidate — <b>31 cells</b>. The triad is the act's home base, and <b>the disc holds its
+center wherever the home base appears</b> (S11 b1–b5 · S12 b1, receded · S14 b4) — never the tower. Monetary assets
+appear on the ladder only as climbers: S14 b3's coin is the only monetary object in sight. <b>s14-b1 is carried
+byte-identical from r1</b>; the superseded r1 stagings stay on file (s12-b3-block, s15-b1-boxes … s15-b6-boxes) and
+are not part of the walk. Cell classes: <b>${counts}</b>. Every cell is examined at full size — click any image.</p>
 ${legend}
 <h2>The flags — every honest call, gathered (${flagged.length})</h2>
-<p class="lang">Each of these is also on its own cell. Nothing here was improvised silently: where a port or the approved
-staging left something genuinely open, the sheet stands one honest render and asks.</p>
+<p class="lang">Each of these is also on its own cell. Nothing here was improvised silently: where a ruling left
+something genuinely open, the sheet stands one honest render and asks.</p>
 <ul class="flags">
 ${flagList}
 </ul>
@@ -186,26 +228,36 @@ ${sceneSections}
 
   fs.writeFileSync(path.join(OUT, 'states.json'), JSON.stringify({
     date: new Date().toISOString(),
-    session: 'act-3-states',
+    session: 'act-3-states-r2',
     beatMap: { S11: 5, S12: 4, S13: 6, S14: 4, S15: 6, total: 25 },
-    beatMapAuthority: 'docs/batch-c-package.md §1 — frozen 2 September 2026 on the installed scripts’ [→] counts (ruling 4 of the Act III states brief)',
-    provenanceAuthority: 'docs/act-3-provenance.md, ruled 2 September 2026 — 3 PORT · 3 ADAPT · the coordination-scales NEW row recorded as not built; no live NEW frame, no candidates anywhere',
+    cellCount: ids.length,
+    beatMapAuthority: 'docs/batch-c-package.md §1 — frozen 2 September 2026; S15 renders its six beats once per candidate under the r2 reopening',
+    provenanceAuthority: 'docs/act-3-provenance.md as amended 2 September 2026 (the r2 rulings) — 1 PORT (S12) · 3 ADAPT (S11, S13, S14) · 2 NEW live (S15, presenter-reopened by name) · the coordination-scales row not built',
     rulings: {
-      ladder: 'The LADDER freeze amendment (master §13, 2 Sep 2026): Scene 13 is the ladder restored, Boyapati attributed on screen, stage marks as renders at lineup scale, the coordination logic inside the scene as its proof.',
-      socialTechnology: 'Scene 13 beat 4 as drafted — the one good you use because everyone else uses it, in plain words; vocabulary confined to the notes armor; terminology law unamended.',
-      staging: 'The kickoff’s staging map approved: the triad is the act’s home base; overlays follow the Act II overlay grammar.',
-      scripts: 'Approved as drafted, installed at zero word differences, maps frozen at 25 (review/act-3/script-diff.json).',
-      thread: 'The ClaimObject returns at the held question (s15-b6) and nowhere earlier in the act.'
+      thread: 'r2.1 — the ClaimObject returns at S11 b1, the triad’s center, and lives there wherever the home base appears; the “held question and nowhere earlier” clause struck as over-extension with its trail (master §13); the disc is not on the tower.',
+      argentina: 'r2.2 — Scene 12 reverts to its proven staging; the r1 dated-fact block retired to file (s12-b3-block); the row arrives in the columns under the legacy kicker, the span and the every-stripe clause spoken; S12-F1 is PORT again; the dated-fact grammar remains film law for Act II.',
+      neutralMarks: 'r2.3 — the four presenter renders (collectible · store · medium · unit) gated and ingested, carry the ladder’s stages at the band scale, and replace S11’s grammar glyphs at the spokes; monetary assets on the ladder only as climbers — S14’s coin at stage two is the only monetary object in sight.',
+      towerReopened: 'r2.4 — Scene 15 presenter-reopened by name; the three-box tower superseded and on file; two candidates across all six beats: A the proportional inverted tower (the presenter’s spec), B the convergence of claims (the session’s design); line grammar only, the shiver kept at b4, all legacy copy in its slots.',
+      gate4: 'r2.5 — Prototype Gate 4 recorded as spent; the ladder’s motion is judged at the presenter’s act viewing, per the collapsed-gate precedent.'
     },
     reviewProtocol: {
-      walk: 'One walk in beat order — the flipbook. The question at every frame: can the act’s argument be followed by eye alone (three jobs, the split, the climb, the objection answered on the ladder, the tower, the held question)?',
-      'pending-review': 'per-cell verdicts: did the one ruled change land, is the flagged honest call acceptable, did anything else move?',
-      determined: 'script landings on approved compositions; no decision',
-      'approved-port': 'approved by provenance; optional spot-check only',
-      then: 'the go-ahead that unlocks implementation'
+      walk: 'One walk in beat order — the flipbook, Scene 15 as two whole candidate runs.',
+      answers: [
+        'THE SELECTION: Scene 15, candidate A or candidate B.',
+        'THE GO-AHEAD: the word that closes Act III’s states and unlocks implementation.'
+      ],
+      'pending-review': 'did the ruling land, is the standing flagged call acceptable, did anything else move?',
+      determined: 'ruled outcomes; no decision'
     },
-    claimThroughLine: ['s15-b6'],
-    counts: Object.fromEntries(['pending-review', 'determined', 'approved-port']
+    discCells: ids.filter((id) => ['s11-b1', 's11-b2', 's11-b3', 's11-b4', 's11-b5', 's12-b1', 's14-b4'].includes(id)),
+    carried: ids.filter((id) => meta[id].carried).map((id) => ({
+      id,
+      file: `${id}.png`,
+      sha256: 'e7cc6fff9a1142573f5a30878505e8625f1c57ca1cac1b95f881167458821081',
+      note: 'byte-identical from r1 — no ruling touches this cell; proven by the check harness against this hash'
+    })),
+    retired: RETIRED,
+    counts: Object.fromEntries(['pending-selection', 'pending-review', 'determined']
       .map((r) => [r, byReview(r).length])),
     flags: flagged.map((id) => ({ id, flag: meta[id].flag })),
     cells: ids.map((id) => ({ id, file: `${id}.png`, ...meta[id] })),
