@@ -776,7 +776,7 @@ function candidateB(st, beat) {
 // ============================================================ SCENE 11 (5 beats)
 
 cell('s11-b1', {
-  scene: 'S11', beat: 1, frame: 'S11-F1', klass: 'ADAPT', review: 'determined',
+  scene: 'S11', beat: 1, frame: 'S11-F1', klass: 'ADAPT', review: 'approved',
   source: '3-01-the-three-functions, build 1 — the token returns center, AS THE DISC (r2 ruling 1)',
   caption: 'Beat 1 · the go-between good again — and the center is the disc itself, as you ruled it: the legacy token by its own classes, literally 1.2’s luminous disc at the token’s own 120px box, restored glow included. The r1 footprint ring is gone. This is the thread on stage from the act’s first beat, at the triad’s center, where the legacy composition always held it.'
 }, (st) => {
@@ -784,7 +784,7 @@ cell('s11-b1', {
 });
 
 cell('s11-b2', {
-  scene: 'S11', beat: 2, frame: 'S11-F1', klass: 'ADAPT', review: 'pending-review',
+  scene: 'S11', beat: 2, frame: 'S11-F1', klass: 'ADAPT', review: 'approved',
   source: '3-01 build 2 + r2 ruling 3 — the store job object at the first spoke',
   caption: 'Beat 2 · the first job radiates: STORE OF VALUE — moves value through time. The spoke and the entry are the legacy slide’s own; the grammar glyph (the time-gap mark) is retired, and the hourglass — your store mark — stands above the spoke in the rails-law band box, the entry’s words beneath the line.',
   flag: 'Your ruling names the objects but not their scale or position at the spokes. The band box (188) standing in the glyph’s own slot would cross the drawn spoke at store and medium — a render on a drawn line, which the register boundary forbids — so this sheet stands those two marks ABOVE the spoke axis, bottoms 32px clear of the line, entries’ text at its legacy position beneath: the rails-law band form. One number (the clearance, or a smaller cap) re-places them.'
@@ -793,7 +793,7 @@ cell('s11-b2', {
 });
 
 cell('s11-b3', {
-  scene: 'S11', beat: 3, frame: 'S11-F1', klass: 'ADAPT', review: 'pending-review',
+  scene: 'S11', beat: 3, frame: 'S11-F1', klass: 'ADAPT', review: 'approved',
   source: '3-01 build 3 + r2 ruling 3 — the medium job object',
   caption: 'Beat 3 · the second job: MEDIUM OF EXCHANGE — moves value between people. The handshake — your medium mark — above the right spoke in the same band form, mirroring store. The disc holds the center between them.'
 }, (st) => {
@@ -801,7 +801,7 @@ cell('s11-b3', {
 });
 
 cell('s11-b4', {
-  scene: 'S11', beat: 4, frame: 'S11-F1', klass: 'ADAPT', review: 'pending-review',
+  scene: 'S11', beat: 4, frame: 'S11-F1', klass: 'ADAPT', review: 'approved',
   source: '3-01 build 4 + r2 ruling 3 — the unit job object',
   caption: 'Beat 4 · the quiet third: UNIT OF ACCOUNT — measures value. The balance scale — your unit mark — and the triad complete: the act’s home frame, standing, with the disc at its center and the three job objects at its spokes, one visual family with the ladder to come.',
   flag: 'Unit of account’s spoke is vertical, so there is no “above the line” for its mark to stand in: the balance scale takes the vacated glyph slot instead, and the entry’s words flow beneath it — about 50px lower than the legacy text position. The three marks therefore read symmetrically as objects but not identically in placement; if you want all three re-placed on one rule, it is one ruling.'
@@ -810,7 +810,7 @@ cell('s11-b4', {
 });
 
 cell('s11-b5', {
-  scene: 'S11', beat: 5, frame: 'S11-F1', klass: 'ADAPT', review: 'pending-review',
+  scene: 'S11', beat: 5, frame: 'S11-F1', klass: 'ADAPT', review: 'approved',
   source: '3-01-the-three-functions, build 5 — the continuity line',
   caption: 'Beat 5 · the continuity lands under the whole triad, verbatim from the legacy slide: the competition’s three dimensions, seen from the inside.',
   flag: 'One measured crowding, in plain English: with the unit mark in the glyph slot, the unit entry’s wrapped text ends roughly 14px above the continuity line’s slot. Nothing overlaps, but the two read close at the frame’s center; one number (the unit mark’s scale, or the continuity’s legacy top) relieves it if your eye wants air.'
@@ -821,7 +821,7 @@ cell('s11-b5', {
 // ============================================================ SCENE 12 (4 beats)
 
 cell('s12-b1', {
-  scene: 'S12', beat: 1, frame: 'S12-F1', klass: 'PORT', review: 'pending-review',
+  scene: 'S12', beat: 1, frame: 'S12-F1', klass: 'PORT', review: 'approved',
   source: '3-02-the-functions-separate, build 1 — the three heads land empty',
   caption: 'Beat 1 · the split begins: the home frame recedes to the overlay grammar’s still voice (0.35) — the disc receding at its center with it, per ruling 1 — and the three column heads land empty over it: PRICED IN · PAID IN · SAVED IN, the jobs re-stated as columns. The seam where the spokes become columns is the implementation’s motion; the settled state is this.'
 }, (st) => {
@@ -830,7 +830,7 @@ cell('s12-b1', {
 });
 
 cell('s12-b2', {
-  scene: 'S12', beat: 2, frame: 'S12-F1', klass: 'PORT', review: 'pending-review',
+  scene: 'S12', beat: 2, frame: 'S12-F1', klass: 'PORT', review: 'approved',
   source: 'the installed household beat through 3-02’s column treatment',
   caption: 'Beat 2 · the household beat: you may already live the split. The columns fill in the legacy’s own word register — one money · the same money · property · shares · gold.',
   flag: 'The household row’s on-screen words are drafted from the installed script (paid in one money, your home priced in it, savings in property, shares, gold) — the legacy columns only ever carried Argentina. Your word pass owns the final copy; the treatment is the legacy’s.'
@@ -839,7 +839,7 @@ cell('s12-b2', {
 });
 
 cell('s12-b3', {
-  scene: 'S12', beat: 3, frame: 'S12-F1', klass: 'PORT', review: 'pending-review',
+  scene: 'S12', beat: 3, frame: 'S12-F1', klass: 'PORT', review: 'approved',
   source: '3-02-the-functions-separate, build 2 — THE REVERT LANDED (r2 ruling 2)',
   caption: 'Beat 3 · Argentina lands the legacy way, as you ruled it: the row arrives in the columns — USD · ARS · USD and the brick — under the legacy kicker, “Argentina, five decades.”, at full voice, exactly as 3-02 builds it. The five-decade span and the every-stripe clause ride the spoken beat, not a block. The r1 dated-fact block staging is retired to file as s12-b3-block.'
 }, (st) => {
@@ -847,7 +847,7 @@ cell('s12-b3', {
 });
 
 cell('s12-b4', {
-  scene: 'S12', beat: 4, frame: 'S12-F1', klass: 'PORT', review: 'pending-review',
+  scene: 'S12', beat: 4, frame: 'S12-F1', klass: 'PORT', review: 'approved',
   source: '3-02-the-functions-separate, build 3 — the principle',
   caption: 'Beat 4 · the principle lands at full voice in the legacy’s own slot, over the standing Argentina row and its kicker — the legacy slide’s own final state.',
   flag: 'The principle reads “jobs” where the legacy read “functions,” following the installed script and the act’s titles — one word, twice, flagged for your word pass as in r1.'
@@ -858,7 +858,7 @@ cell('s12-b4', {
 // ============================================================ SCENE 13 (6 beats)
 
 cell('s13-b1', {
-  scene: 'S13', beat: 1, frame: 'S13-F1', klass: 'ADAPT', review: 'pending-review',
+  scene: 'S13', beat: 1, frame: 'S13-F1', klass: 'ADAPT', review: 'approved',
   source: '3-03-the-order-of-monetization, build 1 — the empty rising line, the attribution',
   caption: 'Beat 1 · there is an order. The empty rising line enters — the ladder’s drawn grammar untouched — and the attribution stands on stage per your ruling: “after Vijay Boyapati.” Nothing else yet; the ascent is genuinely empty.'
 }, (st) => {
@@ -867,7 +867,7 @@ cell('s13-b1', {
 });
 
 cell('s13-b2', {
-  scene: 'S13', beat: 2, frame: 'S13-F1', klass: 'ADAPT', review: 'pending-review',
+  scene: 'S13', beat: 2, frame: 'S13-F1', klass: 'ADAPT', review: 'approved',
   source: '3-03 build 2 + r2 ruling 3 — collectible = your neutral mark',
   caption: 'Beat 2 · COLLECTIBLE stands on the line — the raw gem crystal, your neutral mark, in the rails-law band box above the line at the stop’s own clearance, never on it. No monetary asset is a stage mark anymore: the marks are the stages, not the climbers. Its arrival line beneath, in the script’s own words: “Held by a few people for their own strange reasons.” The first threshold tick sits dim above it.'
 }, (st) => {
@@ -876,7 +876,7 @@ cell('s13-b2', {
 });
 
 cell('s13-b3', {
-  scene: 'S13', beat: 3, frame: 'S13-F1', klass: 'ADAPT', review: 'pending-review',
+  scene: 'S13', beat: 3, frame: 'S13-F1', klass: 'ADAPT', review: 'approved',
   source: '3-03 build 3 + r2 ruling 3 — store of value = the hourglass',
   caption: 'Beat 3 · STORE OF VALUE arrives: the hourglass steps up the line — the same object that marks the job at the triad’s spoke, one visual family — its arrival line beneath: “A place to park purchasing power on purpose.” The first gate brightens as its logic becomes visible; the second sits dim. The r1 stand-ins (gold · coinage · ledger) are retired by your ruling.'
 }, (st) => {
@@ -885,7 +885,7 @@ cell('s13-b3', {
 });
 
 cell('s13-b4', {
-  scene: 'S13', beat: 4, frame: 'S13-F1', klass: 'ADAPT', review: 'pending-review',
+  scene: 'S13', beat: 4, frame: 'S13-F1', klass: 'ADAPT', review: 'approved',
   source: 'the social-technology beat (presenter-ruled, 2 Sep 2026) against 3-03’s standing state',
   caption: 'Beat 4 · the social-technology beat, as you ruled it: the ladder holds at two stages while the reason the order cannot run backward lands in the clear sky the un-arrived stages leave open — “The one good you use because everyone else uses it.” The coordination logic (one person holds, two agree, everyone converges) rides in the spoken beat; the vocabulary stays in the notes armor.',
   flag: 'The on-screen line is the installed script’s own clause, distilled by this sheet; its position in the upper-left sky is wiring. Your word pass owns the distillation.'
@@ -896,7 +896,7 @@ cell('s13-b4', {
 });
 
 cell('s13-b5', {
-  scene: 'S13', beat: 5, frame: 'S13-F1', klass: 'ADAPT', review: 'pending-review',
+  scene: 'S13', beat: 5, frame: 'S13-F1', klass: 'ADAPT', review: 'approved',
   source: '3-03 builds 4–5 (merged by the frozen 6-beat map) + r2 ruling 3',
   caption: 'Beat 5 · the two gates open in one advance, as the frozen map splits it: MEDIUM OF EXCHANGE and UNIT OF ACCOUNT stand — the handshake and the balance scale completing the neutral object sequence — every threshold lit, and the two gate lines landing as a pair in the legacy’s own slots: “Nobody accepts as payment what they don’t expect to hold value.” / “Nobody writes contracts in what nobody accepts.” The social line recedes to the dimmed-prior step.',
   flag: 'The installed script speaks both gates on one advance, so both legacy gate lines land together here — the one beat on the sheet that lands a pair. The arrival lines beneath the two new stages speak S11’s own job lines.'
@@ -907,7 +907,7 @@ cell('s13-b5', {
 });
 
 cell('s13-b6', {
-  scene: 'S13', beat: 6, frame: 'S13-F1', klass: 'ADAPT', review: 'pending-review',
+  scene: 'S13', beat: 6, frame: 'S13-F1', klass: 'ADAPT', review: 'approved',
   source: '3-03 build 6 — the foundation state, the ladder’s only orange',
   caption: 'Beat 6 · the foundation: the store-of-value stop takes the accent — the ladder’s only orange, the component’s own foundation state, under the hourglass — and the foundation line lands at full voice while the gate lines settle to the legacy’s own dimmed step. The neutral object sequence stands complete above the drawn ascent.',
   flag: 'The foundation line reads “job” where the legacy read “function,” following the installed script — flagged for your word pass with S12’s principle.'
@@ -920,7 +920,7 @@ cell('s13-b6', {
 // ============================================================ SCENE 14 (4 beats)
 
 cell('s14-b1', {
-  scene: 'S14', beat: 1, frame: 'S14-F1', klass: 'ADAPT', review: 'pending-review', carried: true,
+  scene: 'S14', beat: 1, frame: 'S14-F1', klass: 'ADAPT', review: 'approved', carried: true,
   source: 'the legacy objection beat + P1-F2’s display-scale study box — THE ONE RULED CHANGE: the coffee_cup render at display scale against the triad',
   caption: 'Beat 1 · the objection, made sensory: the coffee cup at display scale in the approved study geometry, the objection’s own words over it in the display register, and the triad beneath in its condensed home-base row — MEDIUM OF EXCHANGE at full voice, because that is the one job the objection is actually about. CARRIED BYTE-IDENTICAL FROM R1 — no ruling touches this cell.',
   flag: 'The full radial triad and a 540px study box cannot share the frame — the legacy triad geometry crosses the display box — so the home base recedes to its condensed row beneath the study, the way Act II’s rail kept its world rows beneath a featured moment. If you want the radial triad held instead (at a smaller render, or offset), that is a staging ruling. (Stands from r1, unanswered.)'
@@ -931,7 +931,7 @@ cell('s14-b1', {
 });
 
 cell('s14-b2', {
-  scene: 'S14', beat: 2, frame: 'S13-F1', klass: 'ADAPT', review: 'pending-review',
+  scene: 'S14', beat: 2, frame: 'S13-F1', klass: 'ADAPT', review: 'approved',
   source: '3-07-where-bitcoin-is, build 1 (the ladder returns resolved) + r2 ruling 3',
   caption: 'Beat 2 · the objection goes on the ladder you just built: the ladder returns in 3-07’s own resolved state — every stage standing under its neutral mark, every threshold lit — with the coffee cup placed at the MEDIUM OF EXCHANGE berth, above the handshake, and the beat’s line beneath: “A monetary good reaches everyday payments last.”',
   flag: 'Placing the coffee render at the medium stage’s berth is this sheet’s honest reading of “put that objection on the ladder” — one word retires it. The landing line is distilled from the installed script; your word pass owns it. (Stands from r1.)'
@@ -944,7 +944,7 @@ cell('s14-b2', {
 });
 
 cell('s14-b3', {
-  scene: 'S14', beat: 3, frame: 'S13-F1', klass: 'ADAPT', review: 'pending-review',
+  scene: 'S14', beat: 3, frame: 'S13-F1', klass: 'ADAPT', review: 'approved',
   source: '3-07-where-bitcoin-is, builds 2–3 (the entity berth at store of value) + r2 ruling 3',
   caption: 'Beat 3 · the placement — the scene’s payoff, now protected by your ruling: bitcoin’s coin stands at the entity berth above STORE OF VALUE, stage two of the ladder, THE ONLY MONETARY OBJECT IN SIGHT — the neutral marks beneath it are a crystal, an hourglass, a handshake, a scale, so the coin’s landing has the frame to itself. The coffee recedes at its berth, answered. The line: “Held on purpose, across years — one job: store of value.”',
   flag: 'The berth carries the coin render at the visitor cap (132 against the band’s 188) so the climber reads as a climber, not a fifth station. The landing line is distilled from the installed script. (Stands from r1.)'
@@ -960,7 +960,7 @@ cell('s14-b3', {
 });
 
 cell('s14-b4', {
-  scene: 'S14', beat: 4, frame: 'S11-F1', klass: 'ADAPT', review: 'pending-review',
+  scene: 'S14', beat: 4, frame: 'S11-F1', klass: 'ADAPT', review: 'approved',
   source: '3-01’s triad (the home base returning) + r2 rulings 1 and 3 + the architecture’s own Scene 14 closing question',
   caption: 'Beat 4 · the pivot: the triad returns whole — the disc at its center, the job objects at its spokes — STORE OF VALUE at full voice while the other two jobs recede, and the act’s hinge question lands in the home frame’s own statement slot: “What makes something a good store of value?” This is also the door into the tower: Scene 15 enters through this corner.',
   flag: 'The brief’s re-render list names S14 b2–b3 only, but ruling 1 says the disc lives at the triad’s center wherever the home base appears — and this beat is the home base returning whole. The sheet re-rendered it under rulings 1 and 3 rather than carry a footprint that contradicts the ruling; the r1 cell is in the history if you wanted it untouched.'

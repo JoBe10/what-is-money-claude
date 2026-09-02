@@ -176,6 +176,10 @@ function check(name, ok, detail) {
     check('MAP: Scene 15 is recorded as presenter-reopened by name (ruling 4)',
       reopened, reopened ? 'recorded' : 'MISSING');
 
+    const selected = /SELECTED: CANDIDATE A/.test(map);
+    check('MAP: the candidate-A selection is recorded on the S15 row (Batch C ruling 1)',
+      selected, selected ? 'recorded' : 'MISSING');
+
     const bad = cells
       .filter((c) => c.frame && RULED[c.frame])
       .filter((c) => c.klass !== RULED[c.frame])
@@ -192,53 +196,45 @@ function check(name, ok, detail) {
       sourceless.length === 0, sourceless.join(', ') || 'all named');
   }
 
-  // ---- BEAT COVERAGE --------------------------------------------------------
+  // ---- BEAT COVERAGE (the approved set) -------------------------------------
   {
     const bad = [];
     let total = 0;
     const detail = [];
     Object.entries(FROZEN).forEach(([scene, n]) => {
-      const live = cells.filter((c) => c.scene === scene && c.beat);
-      const per = scene === 'S15' ? 2 : 1;
+      const live = cells.filter((c) => c.scene === scene && c.beat && c.review === 'approved');
       const beats = new Set(live.map((c) => c.beat));
       total += beats.size;
-      detail.push(`${scene} ${beats.size}×${per}`);
-      if (beats.size !== n) bad.push(`${scene}: ${beats.size} beats vs the frozen ${n}`);
-      if (live.length !== n * per) bad.push(`${scene}: ${live.length} cells vs ${n * per}`);
-      for (let b = 1; b <= n; b += 1) {
-        const at = live.filter((c) => c.beat === b);
-        if (at.length !== per) bad.push(`${scene} b${b}: ${at.length} cells vs ${per}`);
-        if (scene === 'S15') {
-          const systems = at.map((c) => c.system).sort().join('');
-          if (systems !== 'AB') bad.push(`S15 b${b}: systems [${systems}] vs one A and one B`);
-        }
-      }
+      detail.push(`${scene} ${beats.size}`);
+      if (live.length !== beats.size) bad.push(`${scene}: ${live.length} approved cells over ${beats.size} beats — a beat is covered twice`);
+      if (beats.size !== n) bad.push(`${scene}: ${beats.size} approved beats vs the frozen ${n}`);
+      for (let b = 1; b <= n; b += 1) if (!beats.has(b)) bad.push(`${scene} b${b} missing from the approved set`);
     });
     if (total !== TOTAL_BEATS) bad.push(`total ${total} vs ${TOTAL_BEATS}`);
-    check(`BEATS: every beat of the frozen map is covered — S15 once per candidate, all others once, Act III is ${TOTAL_BEATS}`,
-      bad.length === 0, bad.join(' · ') || `${detail.join(' · ')} = ${total} beats, ${cells.length} cells`);
+    check(`BEATS: the approved set covers every beat of the frozen map exactly once — Act III is ${TOTAL_BEATS}`,
+      bad.length === 0, bad.join(' · ') || `${detail.join(' · ')} = ${total} approved beats`);
   }
 
-  // ---- CANDIDATES ONLY WHERE REOPENED ---------------------------------------
+  // ---- THE SELECTION (Batch C ruling 1) -------------------------------------
   {
+    const aCells = cells.filter((c) => c.scene === 'S15' && c.system === 'A');
+    const bCells = cells.filter((c) => c.scene === 'S15' && c.system === 'B');
+    const aOk = aCells.length === 6 && aCells.every((c) => c.review === 'approved');
+    const bOk = bCells.length === 6 && bCells.every((c) => c.review === 'on-file');
+    check('SELECTION: the six candidate-A cells are the approved S15 states, and the six B cells are on file',
+      aOk && bOk, `A approved ${aCells.filter((c) => c.review === 'approved').length}/6 · B on-file ${bCells.filter((c) => c.review === 'on-file').length}/6`);
+
     const strayCandidate = cells
       .filter((c) => c.scene !== 'S15')
-      .filter((c) => c.system || c.review === 'pending-selection')
+      .filter((c) => c.system)
       .map((c) => c.id);
-    check('CANDIDATES: no cell outside the reopened Scene 15 carries a system or a selection class',
+    check('SELECTION: no cell outside Scene 15 carries a candidate system',
       strayCandidate.length === 0, strayCandidate.join(', ') || `${cells.filter((c) => c.scene !== 'S15').length} non-S15 cells clean`);
 
-    const s15Bad = cells
-      .filter((c) => c.scene === 'S15')
-      .filter((c) => !['A', 'B'].includes(c.system) || c.review !== 'pending-selection')
-      .map((c) => c.id);
-    check('CANDIDATES: every S15 cell is one of the two ruled systems and stands pending the presenter’s selection',
-      s15Bad.length === 0, s15Bad.join(', ') || '12/12 candidate cells, A and B');
-
     const reviews = new Set(cells.map((c) => c.review));
-    const allowed = ['pending-review', 'determined', 'pending-selection'];
+    const allowed = ['approved', 'on-file'];
     const stray = [...reviews].filter((r) => !allowed.includes(r));
-    check('CANDIDATES: the only review classes on the sheet are pending-review, determined and pending-selection',
+    check('SELECTION: the only review classes on the record are approved and on-file (the go-ahead is given)',
       stray.length === 0, stray.join(', ') || allowed.join(' · '));
   }
 
@@ -325,7 +321,7 @@ function check(name, ok, detail) {
 
   fs.writeFileSync(path.join(__dirname, 'check-cells.json'), JSON.stringify({
     date: new Date().toISOString(),
-    session: 'act-3-states-r2',
+    session: 'batch-c-impl-1',
     limits: { cornerMean: 6, borderMean: 6 },
     frozenBeatMap: { ...FROZEN, total: TOTAL_BEATS, cells: TOTAL_CELLS },
     ruledClasses: RULED,
