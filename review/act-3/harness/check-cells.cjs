@@ -14,8 +14,9 @@
 //   docs/act-3-provenance.md rules for its frame (S11 ADAPT · S12 PORT ·
 //   S13 ADAPT · S14 ADAPT · S15 NEW, presenter-reopened).
 //
-//   BEAT COVERAGE — all 25 beats of the frozen map; S15's six beats exactly
-//   twice, once per candidate system; every other beat exactly once. 31 cells.
+//   BEAT COVERAGE — all 26 beats of the map as amended by Batch C r2 ruling 3
+//   (S13 = 7); S15's six beats exactly twice, once per candidate system;
+//   every other beat exactly once. 32 cells.
 //
 //   CANDIDATES ONLY WHERE REOPENED — S15's cells are the two ruled systems
 //   (one A and one B per beat, pending-selection); no other cell carries a
@@ -31,9 +32,9 @@
 //   MONETARY ASSET IS A STAGE MARK — monetary renders reach the ladder only
 //   through the berths (the climbers).
 //
-//   CARRIED BYTES (the brief §4) — s14-b1.png is byte-identical to r1,
-//   proven against the recorded sha256, and the retired r1 stagings are on
-//   file under their retired names.
+//   CARRIED BYTES — the retired study (s14-b1-study.png, r2 ruling 4)
+//   carries the r1 cell's exact bytes into retirement, proven against the
+//   recorded sha256, and every retired staging is on file under its name.
 //
 // Usage: node check-cells.cjs [--port 5273]
 const { chromium } = require('playwright');
@@ -47,9 +48,10 @@ const PORT = flag('--port', '5273');
 const REPO = path.join(__dirname, '..', '..', '..');
 const OUT = path.join(__dirname, '..', 'states');
 
-const FROZEN = { S11: 5, S12: 4, S13: 6, S14: 4, S15: 6 };
-const TOTAL_BEATS = 25;
-const TOTAL_CELLS = 31;
+// The map as amended by Batch C r2 ruling 3 (master §13, 2 Sep 2026): S13 = 7.
+const FROZEN = { S11: 5, S12: 4, S13: 7, S14: 4, S15: 6 };
+const TOTAL_BEATS = 26;
+const TOTAL_CELLS = 32;
 
 // The ruled map as amended 2 September 2026 (the r2 rulings), transcribed.
 // The MAP AGREEMENT check compares this against docs/act-3-provenance.md
@@ -64,16 +66,18 @@ const RULED = {
   'S15-F2': 'NEW'
 };
 
-// The carried cell's r1 bytes (the brief §4's byte-identity proof).
+// The retired study's r1 bytes (r2 ruling 4 — the fold): the cell that was
+// carried byte-identical from r1 carries those same bytes into retirement.
 const CARRIED_SHA = {
-  's14-b1.png': 'e7cc6fff9a1142573f5a30878505e8625f1c57ca1cac1b95f881167458821081'
+  's14-b1-study.png': 'e7cc6fff9a1142573f5a30878505e8625f1c57ca1cac1b95f881167458821081'
 };
 
-// The retired r1 stagings, on file under the aesthetic law.
+// The retired stagings, on file under the aesthetic law.
 const RETIRED_FILES = [
   's12-b3-block.png',
   's15-b1-boxes.png', 's15-b2-boxes.png', 's15-b3-boxes.png',
-  's15-b4-boxes.png', 's15-b5-boxes.png', 's15-b6-boxes.png'
+  's15-b4-boxes.png', 's15-b5-boxes.png', 's15-b6-boxes.png',
+  's13-b5-pair.png', 's14-b1-study.png'
 ];
 
 const results = [];
@@ -154,7 +158,7 @@ function check(name, ok, detail) {
   await browser.close();
   check(`CELLS: ${cells.length} measured — corner ≤ 6, border ≤ 6, content present, 1920×1080`,
     cellFailures === 0, cellFailures ? `${cellFailures} failing` : `${cells.length}/${cells.length}`);
-  check(`CELLS: the sheet carries exactly ${TOTAL_CELLS} cells (25 beats; S15 twice, once per candidate)`,
+  check(`CELLS: the sheet carries exactly ${TOTAL_CELLS} cells (${TOTAL_BEATS} beats; S15 twice, once per candidate)`,
     cells.length === TOTAL_CELLS, `${cells.length}`);
 
   // ---- MAP AGREEMENT --------------------------------------------------------
@@ -307,21 +311,22 @@ function check(name, ok, detail) {
       const now = crypto.createHash('sha256').update(fs.readFileSync(path.join(OUT, file))).digest('hex');
       if (now !== sha) bad.push(`${file}: ${now.slice(0, 16)}… vs r1 ${sha.slice(0, 16)}…`);
     });
-    check('CARRIED: s14-b1.png is byte-identical to its r1 bytes (sha256 proven)',
+    check('CARRIED-INTO-RETIREMENT: s14-b1-study.png carries the r1 study’s exact bytes (sha256 proven — r2 ruling 4)',
       bad.length === 0, bad.join(' · ') || 'e7cc6fff… matches');
 
-    const carriedRecorded = (record.carried || []).some((c) => c.id === 's14-b1');
-    check('CARRIED: states.json records the carried cell and its hash',
-      carriedRecorded, carriedRecorded ? 'recorded' : 'MISSING');
+    const studyRetired = (record.retired || []).some((c) => c.file === 's14-b1-study.png');
+    const pairRetired = (record.retired || []).some((c) => c.file === 's13-b5-pair.png');
+    check('RETIRED: states.json records the r2 retirements (the study, the pair staging)',
+      studyRetired && pairRetired, `study ${studyRetired} · pair ${pairRetired}`);
 
     const missingRetired = RETIRED_FILES.filter((f) => !fs.existsSync(path.join(OUT, f)));
-    check('RETIRED: the superseded r1 stagings are on file under their retired names (s12-b3-block, s15-b*-boxes)',
+    check('RETIRED: the superseded stagings are on file under their retired names (s12-b3-block, s15-b*-boxes, s13-b5-pair, s14-b1-study)',
       missingRetired.length === 0, missingRetired.join(', ') || `${RETIRED_FILES.length}/${RETIRED_FILES.length} on file`);
   }
 
   fs.writeFileSync(path.join(__dirname, 'check-cells.json'), JSON.stringify({
     date: new Date().toISOString(),
-    session: 'batch-c-impl-1',
+    session: 'batch-c-r2',
     limits: { cornerMean: 6, borderMean: 6 },
     frozenBeatMap: { ...FROZEN, total: TOTAL_BEATS, cells: TOTAL_CELLS },
     ruledClasses: RULED,

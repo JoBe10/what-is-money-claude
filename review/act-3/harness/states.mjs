@@ -58,15 +58,39 @@
 // slot at unit of account, whose spoke is vertical and leaves no "above the
 // line" to stand in. The tower candidates are pure line grammar.
 //
-// CARRIED CELLS ARE NOT REBUILT: s14-b1 carries byte-identical from r1 (its
-// meta says so and the capture skips it). The r1 stagings this sheet
-// supersedes stay on file: s12-b3-block, s15-b1-boxes … s15-b6-boxes.
+// THE R1 STAGINGS THIS SHEET SUPERSEDES STAY ON FILE: s12-b3-block,
+// s15-b1-boxes … s15-b6-boxes.
+//
+// AMENDED AT BATCH C r2 (the Batch C r2 brief §1; master §13, 2 Sep 2026 —
+// the five r2 rulings, recorded before this file was touched):
+//   · THE CLEAN HANDOFF (ruling 1): s12-b1 loses the receded triad — the
+//     column heads land on clean black, and the cell leaves the disc-cell
+//     record. The disc's Act III appearances are S11 b1–b5 and S14 b4.
+//   · THE COLUMNS' OBJECTS (ruling 2): the Argentina columns carry their
+//     renders at the rails-law band scale above the codes — usd over
+//     priced-in, ars over paid-in, usd plus the located real-estate render
+//     (`property`) over saved-in. The legacy brick glyph retires to file,
+//     superseded by the render. Recognizability is ruled content for the
+//     two notes (the exception to the fiat study's no-specific-currency
+//     rule, recorded in master §13 and the dark-field manifest).
+//   · THE SPLIT (ruling 3): S13 = 7 beats — the frozen map's merged
+//     two-gate advance splits at the legacy slide's own seam, restoring
+//     3-03's own state table: the MOE beat (stages(3), g3 dim, gate line
+//     one alone) and the UOA beat (stages(4), all lit, gate line two).
+//     The foundation beat renumbers to b7, its look unchanged. The retired
+//     pair cell is on file as s13-b5-pair.
+//   · THE FOLD (ruling 4): S14 stages continuously on the S13 ladder — the
+//     display-scale coffee study retires to file as s14-b1-study (its r1
+//     bytes carried into the retired name), and b1 becomes the coffee at
+//     the MEDIUM berth with the objection landing as the statement line.
+//   · Ruling 5 (Scene 9's network forms exactly once) is a gesture-wiring
+//     fix in the scene module — nothing on this sheet.
 
 import { DarkFieldImage } from '/src/components/DarkField.js';
 import { StageLadder } from '/src/components/section-3/StageLadder.js';
 import { glyph } from '/src/components/section-2/glyphs.js';
 import {
-  text, KICKER, CAPS, STATEMENT
+  text, STATEMENT
 } from '/review/act-2/harness/systems.mjs';
 
 const svgNS = 'http://www.w3.org/2000/svg';
@@ -258,19 +282,6 @@ function triad(st, { jobs = 3, hub = true, continuity = false, voice = 1, lit = 
   return L;
 }
 
-// The home base in its condensed register: the three job names on one row —
-// the settled record the overlay grammar keeps beneath a sensory landing,
-// the way the rail kept its world rows beneath a featured moment.
-function triadRow(st, { lit = null, y = 940 } = {}) {
-  const XS = [340, 960, 1580];
-  JOBS.forEach((spec, i) => {
-    const on = lit === spec.key;
-    text(st, spec.name,
-      `left:${XS[i] - 260}px; top:${y}px; width:520px; text-align:center; text-indent:0;` +
-      CAPS(on ? 0.95 : 0.42, 24));
-  });
-}
-
 // =============================================== S12-F1 · THE SPLIT (PORT)
 //
 // `3-02-the-functions-separate`'s own DOM against its own classes — THE
@@ -282,10 +293,34 @@ function triadRow(st, { lit = null, y = 940 } = {}) {
 // installed script's words, flagged for the word pass as in r1.
 
 const COLS = ['PRICED IN', 'PAID IN', 'SAVED IN'];
+// The brick glyph retired to file 2 Sep 2026 (r2 ruling 2 — superseded by
+// the located real-estate render): the saved column's marks row carries the
+// USD code alone, and the renders above carry the objects.
 const ARGENTINA_CELLS = [
   { marks: [{ text: 'USD' }], word: 'dollars' },
   { marks: [{ text: 'ARS' }], word: 'pesos' },
-  { marks: [{ text: 'USD' }, { glyph: 'brick' }], word: 'dollars · real estate' }
+  { marks: [{ text: 'USD' }], word: 'dollars · real estate' }
+];
+
+// The column objects (r2 ruling 2): the note renders — and the located
+// real-estate render, `property` — in the rails-law band box, one per code
+// row. WIRING, flagged on the cells: "above the codes at the band scale"
+// has exactly one clear sky, over the column heads — between the heads and
+// the codes the kicker and the heads themselves stand in the way — so the
+// band rides the columns' sky on one shared baseline: box bottoms at y 232
+// (64 above the heads' top — the act's own band clearance), the saved
+// pair opened at the marks row's own 26px gap, each render in a box of its
+// own aspect inside the 188 cap, riding INSIDE its cell so the legacy
+// column arrival carries it.
+const NOTE_AR = 1672 / 941;
+const CELL_TOP = 496;          // .s3f-separate__cell's own top
+const COL_BAND_BOTTOM = 232;   // heads at 296 − the 64 clearance
+const COL_GAP = 26;            // .s3f-separate__glyphs' own gap
+const ARGENTINA_RENDERS = [
+  [{ subject: 'usd', ar: NOTE_AR, alt: 'A folded dollar note' }],
+  [{ subject: 'ars', ar: NOTE_AR, alt: 'A folded thousand-peso note' }],
+  [{ subject: 'usd', ar: NOTE_AR, alt: 'A folded dollar note' },
+    { subject: 'property', ar: 1254 / 1254, alt: 'A house — the real-estate render' }]
 ];
 // The household beat's row (the installed script's own beat: paid in one
 // money, the home priced in it, savings elsewhere). The word rows are
@@ -301,7 +336,7 @@ const LEGACY_KICKER = 'Argentina, five decades.';
 const PRINCIPLE_SPLIT =
   'The jobs are separable — across goods, and across time. A good can be money in one job before it’s money in the others.';
 
-function split(st, { cells = null, kicker = false, principle = false, voice = 1 } = {}) {
+function split(st, { cells = null, kicker = false, principle = false, voice = 1, renders = null } = {}) {
   const L = layer(st, { classes: 's3f-separate', voice });
   L.dataset.live = 'false';
   COLS.forEach((head, i) => {
@@ -336,6 +371,25 @@ function split(st, { cells = null, kicker = false, principle = false, voice = 1 
       w.className = 's3f-separate__word';
       w.textContent = spec.word;
       c.appendChild(w);
+      // The column objects (r2 ruling 2), inside the cell so the legacy
+      // column arrival carries them: bottoms on the shared band baseline,
+      // the pair at the marks row's own gap, cell-relative coordinates.
+      const row = renders && renders[i];
+      if (row && row.length) {
+        const boxes = row.map((r) => [r, bandBox(r.ar)]);
+        const total = boxes.reduce((sum, [, [bw]]) => sum + bw, 0) + COL_GAP * (boxes.length - 1);
+        let x = 200 - total / 2;
+        boxes.forEach(([r, [bw, bh]]) => {
+          const df = DarkFieldImage({ name: r.subject, width: bw, height: bh, alt: r.alt });
+          df.el.dataset.visible = 'true';
+          df.el.style.transition = 'none';
+          df.el.style.position = 'absolute';
+          df.el.style.left = `${x}px`;
+          df.el.style.top = `${COL_BAND_BOTTOM - CELL_TOP - bh}px`;
+          c.appendChild(df.el);
+          x += bw + COL_GAP;
+        });
+      }
       L.appendChild(c);
     });
   }
@@ -403,13 +457,15 @@ const stageState = (revealed, foundation) => {
   if (foundation) stages.sov = 'foundation';
   return stages;
 };
-// `3-03`'s own state table, at the frozen 6-beat map: beats 4 and 5 of the
-// installed script land against states 3 and 5 (the draft merges the legacy
-// builds 4+5 into one advance and adds the social-technology beat at 4).
+// `3-03`'s own state table, at the amended 7-beat map (r2 ruling 3): the
+// merged two-gate advance splits back to the legacy slide's own builds 4
+// and 5 — `moe` is legacy build 4 verbatim (g3 sits dim until the
+// contracts gate lights it), `all` is legacy build 5.
 const LADDER_STATES = {
   line: { line: true, stages: stageState(0), gates: {} },
   collectible: { line: true, stages: stageState(1), gates: { g1: 'dim' } },
   sov: { line: true, stages: stageState(2), gates: { g1: 'bright', g2: 'dim' } },
+  moe: { line: true, stages: stageState(3), gates: { g1: 'bright', g2: 'bright', g3: 'dim' } },
   all: { line: true, stages: stageState(4), gates: { g1: 'bright', g2: 'bright', g3: 'bright' } },
   foundation: { line: true, stages: stageState(4, true), gates: { g1: 'bright', g2: 'bright', g3: 'bright' } },
   // `3-07`'s own resolved state — the ladder as it returns for the placement.
@@ -487,7 +543,10 @@ const GATELINE_TWO = 'Nobody writes contracts in what nobody accepts.';
 const FOUNDATION_LINE =
   'Store of value is the foundation job. The other jobs are built on it.';
 
-function orderOverlay(st, { step, gatelines = false, foundation = false } = {}) {
+// `gatelines` is a count under the amended map (r2 ruling 3): the MOE beat
+// lands line one alone, the UOA beat completes the pair — one gate line per
+// beat, exactly as the legacy slide landed them.
+function orderOverlay(st, { step, gatelines = 0, foundation = false } = {}) {
   const L = layer(st, { classes: 's3f-order' });
   L.dataset.step = String(step);
   const k = document.createElement('p');
@@ -495,16 +554,14 @@ function orderOverlay(st, { step, gatelines = false, foundation = false } = {}) 
   k.dataset.visible = 'true';
   k.textContent = 'after Vijay Boyapati.';
   L.appendChild(k);
-  if (gatelines) {
-    [GATELINE_ONE, GATELINE_TWO].forEach((copy, i) => {
-      const p = document.createElement('p');
-      p.className = 's3f-order__gateline';
-      p.dataset.q = String(i + 1);
-      p.dataset.visible = 'true';
-      p.textContent = copy;
-      L.appendChild(p);
-    });
-  }
+  [GATELINE_ONE, GATELINE_TWO].slice(0, gatelines).forEach((copy, i) => {
+    const p = document.createElement('p');
+    p.className = 's3f-order__gateline';
+    p.dataset.q = String(i + 1);
+    p.dataset.visible = 'true';
+    p.textContent = copy;
+    L.appendChild(p);
+  });
   if (foundation) {
     const p = document.createElement('p');
     p.className = 's3f-order__foundation';
@@ -526,15 +583,13 @@ function socialStatement(st, { a = 1 } = {}) {
 
 // ====================================== S14-F1 · THE COFFEE OBJECTION (ADAPT)
 //
-// The legacy objection beat with the one ruled change: the coffee_cup render
-// at display scale against the triad. The display box is P1-F2's approved
-// study geometry (540 tall at the forms' centre, the render's own 4:5), and
-// the statement over it is the master's display rule — the same pairing
-// S6-F1 shipped (review/act-2/harness/states.mjs `study`/`studyStatement`).
-function studyStatement(st, copy) {
-  return text(st, copy,
-    'left:200px; right:200px; top:246px; text-align:center; text-indent:0;' + CAPS(0.92, 40));
-}
+// FOLDED INTO THE LADDER WORLD (r2 ruling 4): the display-scale coffee study
+// over the condensed home row is retired to file (s14-b1-study — its r1
+// bytes carried into the retired name), and the scene stages continuously
+// on the S13 ladder. b1 is the coffee at the MEDIUM OF EXCHANGE berth with
+// the objection landing as the statement line; b2–b3 stand as approved;
+// b4 is the home base returning (S11-F1). The coffee_cup render stays in
+// the register — the berth still carries it.
 
 // ================================== S15 · THE TOWER, REOPENED (NEW — r2 ruling 4)
 //
@@ -828,10 +883,9 @@ cell('s11-b5', {
 
 cell('s12-b1', {
   scene: 'S12', beat: 1, frame: 'S12-F1', klass: 'PORT', review: 'approved',
-  source: '3-02-the-functions-separate, build 1 — the three heads land empty',
-  caption: 'Beat 1 · the split begins: the home frame recedes to the overlay grammar’s still voice (0.35) — the disc receding at its center with it, per ruling 1 — and the three column heads land empty over it: PRICED IN · PAID IN · SAVED IN, the jobs re-stated as columns. The seam where the spokes become columns is the implementation’s motion; the settled state is this.'
+  source: '3-02-the-functions-separate, build 1 — the three heads land empty, ON CLEAN BLACK (r2 ruling 1)',
+  caption: 'Beat 1 · the clean handoff, as you ruled it: the triad completes its recede before the heads land, and the three column heads stand empty on clean black — PRICED IN · PAID IN · SAVED IN, the jobs re-stated as columns, no element of the home frame beneath them. This is the legacy slide’s own build 1; the r2 staging that held the receded triad under the heads is superseded, and the cell leaves the disc-cell record.'
 }, (st) => {
-  triad(st, { jobs: 3, voice: RECEDE.statement });
   split(st, {});
 });
 
@@ -846,19 +900,20 @@ cell('s12-b2', {
 
 cell('s12-b3', {
   scene: 'S12', beat: 3, frame: 'S12-F1', klass: 'PORT', review: 'approved',
-  source: '3-02-the-functions-separate, build 2 — THE REVERT LANDED (r2 ruling 2)',
-  caption: 'Beat 3 · Argentina lands the legacy way, as you ruled it: the row arrives in the columns — USD · ARS · USD and the brick — under the legacy kicker, “Argentina, five decades.”, at full voice, exactly as 3-02 builds it. The five-decade span and the every-stripe clause ride the spoken beat, not a block. The r1 dated-fact block staging is retired to file as s12-b3-block.'
+  source: '3-02-the-functions-separate, build 2 + r2 ruling 2 — the columns carry their objects',
+  caption: 'Beat 3 · Argentina lands the legacy way, and the columns carry their objects as you ruled it: the row arrives in the columns — the folded dollar over the USD code, the folded peso note over ARS, and the dollar with the register’s real-estate render over the saved column — under the legacy kicker, “Argentina, five decades.”, at full voice. The brick glyph is retired to file, superseded by the render; the five-decade span and the every-stripe clause ride the spoken beat.',
+  flag: 'Your ruling names the objects and the band scale but not the band’s elevation or the pair’s gap. Directly above the codes the heads and the kicker stand in the way at 188, so the objects ride the columns’ clear sky on one shared baseline — box bottoms 64px above the heads’ top, the saved pair at the marks row’s own 26px gap. The real-estate render is square, so its box fills the band’s full height and its top edge runs 16px above the title-safe line; one number (the baseline, or a smaller cap) re-places everything.'
 }, (st) => {
-  split(st, { cells: ARGENTINA_CELLS, kicker: true });
+  split(st, { cells: ARGENTINA_CELLS, kicker: true, renders: ARGENTINA_RENDERS });
 });
 
 cell('s12-b4', {
   scene: 'S12', beat: 4, frame: 'S12-F1', klass: 'PORT', review: 'approved',
-  source: '3-02-the-functions-separate, build 3 — the principle',
-  caption: 'Beat 4 · the principle lands at full voice in the legacy’s own slot, over the standing Argentina row and its kicker — the legacy slide’s own final state.',
+  source: '3-02-the-functions-separate, build 3 — the principle, over the object-bearing columns',
+  caption: 'Beat 4 · the principle lands at full voice in the legacy’s own slot, over the standing Argentina row — its objects above the codes — and its kicker: the legacy slide’s own final state, carrying the ruled objects.',
   flag: 'The principle reads “jobs” where the legacy read “functions,” following the installed script and the act’s titles — one word, twice, flagged for your word pass as in r1.'
 }, (st) => {
-  split(st, { cells: ARGENTINA_CELLS, kicker: true, principle: true });
+  split(st, { cells: ARGENTINA_CELLS, kicker: true, principle: true, renders: ARGENTINA_RENDERS });
 });
 
 // ============================================================ SCENE 13 (6 beats)
@@ -903,37 +958,49 @@ cell('s13-b4', {
 
 cell('s13-b5', {
   scene: 'S13', beat: 5, frame: 'S13-F1', klass: 'ADAPT', review: 'approved',
-  source: '3-03 builds 4–5 (merged by the frozen 6-beat map) + r2 ruling 3',
-  caption: 'Beat 5 · the two gates open in one advance, as the frozen map splits it: MEDIUM OF EXCHANGE and UNIT OF ACCOUNT stand — the hand-off and the balance scale completing the neutral object sequence — every threshold lit, and the two gate lines landing as a pair in the legacy’s own slots: “Nobody accepts as payment what they don’t expect to hold value.” / “Nobody writes contracts in what nobody accepts.” The social line recedes to the dimmed-prior step.',
-  flag: 'The installed script speaks both gates on one advance, so both legacy gate lines land together here — the one beat on the sheet that lands a pair. The arrival lines beneath the two new stages speak S11’s own job lines.'
+  source: '3-03 build 4 (restored by the split — r2 ruling 3) + the standing icons-to-renders change',
+  caption: 'Beat 5 · the acceptance gate, as the split rules it: MEDIUM OF EXCHANGE stands — the hand-off joining the ascent — and its gate line lands alone in the legacy slot: “Nobody accepts as payment what they don’t expect to hold value.” The third threshold sits dim above it, exactly as legacy 3-03’s own build 4 holds it; the social line recedes to the dimmed-prior step; the arrival line beneath the new stage speaks S11’s own job line. The retired pair staging is on file as s13-b5-pair.',
+  flag: 'The split restores the legacy state table verbatim; the one wiring reading is the arrival lines’ voice — this sheet keeps the approved pair beat’s treatment (every arrival line at the dimmed row step, the gate line carrying the beat’s voice). One word makes the MOE line the latest instead.'
 }, (st) => {
-  ladder(st, LADDER_STATES.all, { lines: ['collectible', 'sov', 'moe', 'uoa'] });
-  orderOverlay(st, { step: 5, gatelines: true });
+  ladder(st, LADDER_STATES.moe, { lines: ['collectible', 'sov', 'moe'] });
+  orderOverlay(st, { step: 5, gatelines: 1 });
   socialStatement(st, { a: 0.55 });
 });
 
 cell('s13-b6', {
   scene: 'S13', beat: 6, frame: 'S13-F1', klass: 'ADAPT', review: 'approved',
-  source: '3-03 build 6 — the foundation state, the ladder’s only orange',
-  caption: 'Beat 6 · the foundation: the store-of-value stop takes the accent — the ladder’s only orange, the component’s own foundation state, under the hourglass — and the foundation line lands at full voice while the gate lines settle to the legacy’s own dimmed step. The neutral object sequence stands complete above the drawn ascent.',
+  source: '3-03 build 5 (restored by the split — r2 ruling 3) + the standing icons-to-renders change',
+  caption: 'Beat 6 · the contracts gate: UNIT OF ACCOUNT stands — the balance scale completing the neutral object sequence — every threshold lit (legacy 3-03’s own build 5), and the second gate line landing beneath the first: “Nobody writes contracts in what nobody accepts.” Both gate lines hold their own voice until the foundation settles them.'
+}, (st) => {
+  ladder(st, LADDER_STATES.all, { lines: ['collectible', 'sov', 'moe', 'uoa'] });
+  orderOverlay(st, { step: 6, gatelines: 2 });
+  socialStatement(st, { a: 0.55 });
+});
+
+cell('s13-b7', {
+  scene: 'S13', beat: 7, frame: 'S13-F1', klass: 'ADAPT', review: 'approved',
+  source: '3-03 build 6 — the foundation state, renumbered b6 → b7 by the split (r2 ruling 3), the look unchanged',
+  caption: 'Beat 7 · the foundation, renumbered from b6 by the split with its look unchanged: the store-of-value stop takes the accent — the ladder’s only orange, the component’s own foundation state, under the hourglass — and the foundation line lands at full voice while the gate lines settle to the legacy’s own dimmed step. The neutral object sequence stands complete above the drawn ascent.',
   flag: 'The foundation line reads “job” where the legacy read “function,” following the installed script — flagged for your word pass with S12’s principle.'
 }, (st) => {
   ladder(st, LADDER_STATES.foundation, { lines: ['collectible', 'sov', 'moe', 'uoa'] });
-  orderOverlay(st, { step: 6, gatelines: true, foundation: true });
+  orderOverlay(st, { step: 7, gatelines: 2, foundation: true });
   socialStatement(st, { a: 0.55 });
 });
 
 // ============================================================ SCENE 14 (4 beats)
 
 cell('s14-b1', {
-  scene: 'S14', beat: 1, frame: 'S14-F1', klass: 'ADAPT', review: 'approved', carried: true,
-  source: 'the legacy objection beat + P1-F2’s display-scale study box — THE ONE RULED CHANGE: the coffee_cup render at display scale against the triad',
-  caption: 'Beat 1 · the objection, made sensory: the coffee cup at display scale in the approved study geometry, the objection’s own words over it in the display register, and the triad beneath in its condensed home-base row — MEDIUM OF EXCHANGE at full voice, because that is the one job the objection is actually about. CARRIED BYTE-IDENTICAL FROM R1 — no ruling touches this cell.',
-  flag: 'The full radial triad and a 540px study box cannot share the frame — the legacy triad geometry crosses the display box — so the home base recedes to its condensed row beneath the study, the way Act II’s rail kept its world rows beneath a featured moment. If you want the radial triad held instead (at a smaller render, or offset), that is a staging ruling. (Stands from r1, unanswered.)'
+  scene: 'S14', beat: 1, frame: 'S13-F1', klass: 'ADAPT', review: 'approved',
+  source: '3-07-where-bitcoin-is, build 1 (the resolved ladder with the placed visitor) + r2 ruling 4 — the fold',
+  caption: 'Beat 1 · the objection arrives IN the ladder world, as the fold rules it: the ladder stands in 3-07’s own resolved state — every stage under its neutral mark, every threshold lit — the coffee cup at the MEDIUM OF EXCHANGE berth at its established perch scale, and the objection landing as the statement line: “But I can’t buy my coffee with Bitcoin.” The display-scale study frame is retired to file (s14-b1-study); the render lives on at the berth, and the S13 → S14 boundary is a pure morph — one world.',
+  flag: 'The ruling names the statement line but not its register: this sheet lands the objection in the deck’s statement slot at the scene’s own landing register (top 850, 40px — the slot the b2 placement line uses), so the two lines hand off in place. One number or one word re-registers it.'
 }, (st) => {
-  photo(st.el, { subject: 'coffee_cup', alt: 'A cup of coffee', box: [744, 380, 432, 540] });
-  studyStatement(st, '“But I can’t buy my coffee with Bitcoin.”');
-  triadRow(st, { lit: 'moe' });
+  ladder(st, LADDER_STATES.resolved, {
+    lines: ['collectible', 'sov', 'moe', 'uoa'],
+    berths: [{ at: 'moe', subject: 'coffee_cup', ar: 1122 / 1402, alt: 'The coffee objection, placed' }]
+  });
+  statement(st, '“But I can’t buy my coffee with Bitcoin.”', { top: 850, size: 40 });
 });
 
 cell('s14-b2', {

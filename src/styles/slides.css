@@ -7068,8 +7068,13 @@
   transform: translateX(-50%) translateY(0);
 }
 
-/* The gate quotes settle once the foundation lands. */
-.s3f-order[data-step="6"] .s3f-order__gateline[data-visible="true"] {
+/* The gate quotes settle once the foundation lands. Step 6 is the legacy
+   slide's own foundation step; step 7 is the same state under the amended
+   7-beat Scene 13 map (Batch C r2 ruling 3 — the beat split renumbered the
+   foundation beat; the legacy slide never reaches step 7, so its behavior
+   is untouched). */
+.s3f-order[data-step="6"] .s3f-order__gateline[data-visible="true"],
+.s3f-order[data-step="7"] .s3f-order__gateline[data-visible="true"] {
   opacity: 0.55;
 }
 

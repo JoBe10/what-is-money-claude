@@ -1,16 +1,16 @@
 {
-  "date": "2026-09-02T08:00:18.612Z",
-  "session": "batch-c-impl-1",
+  "date": "2026-09-02T12:42:50.429Z",
+  "session": "batch-c-r2",
   "beatMap": {
     "S11": 5,
     "S12": 4,
-    "S13": 6,
+    "S13": 7,
     "S14": 4,
     "S15": 6,
-    "total": 25
+    "total": 26
   },
-  "cellCount": 31,
-  "beatMapAuthority": "docs/batch-c-package.md §1 — frozen 2 September 2026",
+  "cellCount": 32,
+  "beatMapAuthority": "docs/batch-c-package.md §1 — frozen 2 September 2026, amended the same day by Batch C r2 ruling 3 (S13 = 7, master §13)",
   "provenanceAuthority": "docs/act-3-provenance.md as amended — 1 PORT (S12) · 3 ADAPT (S11, S13, S14) · S15 NEW closed by the candidate-A selection",
   "approval": {
     "date": "2 September 2026",
@@ -19,6 +19,18 @@
     "goAhead": "the r2 sheet approved in full — the S12 brick glyph and the deliberate s14-b4 re-render seen and accepted by name; the fourteen flags closed as accepted records",
     "mediumSwap": "the medium render replaced (the handshake read as agreement, not exchange); the nine medium-bearing cells re-rendered as the updated approved states — s11-b3, s11-b4, s11-b5, s12-b1, s13-b5, s13-b6, s14-b2, s14-b3, s14-b4",
     "gate": "the act viewing, after the Session 2 splice"
+  },
+  "r2": {
+    "date": "2 September 2026",
+    "authority": "the Batch C r2 brief §1 (master §13, the five r2 rulings — recorded before the pipeline was touched)",
+    "rulings": [
+      "the clean handoff (1): s12-b1 re-rendered — the columns arrive on clean black; the cell leaves the disc-cell record",
+      "the columns’ objects (2): usd · ars gated and ingested, recognizability their ruled content; the renders at the band scale above the codes, usd + the located real-estate render (property) over the saved column; the brick glyph retired; s12-b2 re-rendered through the pipeline and expected pixel-identical",
+      "the split (3): S13 = 7 beats — s13-b5/b6 are the restored legacy gate beats, the foundation renumbered to b7 with its bytes carried; the pair staging on file as s13-b5-pair",
+      "the fold (4): S14 staged continuously on the ladder — the study cell retired to file as s14-b1-study (its r1 bytes carried), the new b1 the coffee at the MEDIUM berth with the objection as the statement line",
+      "forms-once (5): Scene 9’s formation is a gesture fix in the scene module — nothing on this sheet"
+    ],
+    "gate": "the presenter’s re-walk of Scenes 9 and 11–15 in the deck"
   },
   "approvedSet": [
     "s11-b1",
@@ -36,6 +48,7 @@
     "s13-b4",
     "s13-b5",
     "s13-b6",
+    "s13-b7",
     "s14-b1",
     "s14-b2",
     "s14-b3",
@@ -53,22 +66,24 @@
     "s11-b3",
     "s11-b4",
     "s11-b5",
-    "s12-b1",
     "s14-b4"
   ],
-  "carried": [
-    {
-      "id": "s14-b1",
-      "file": "s14-b1.png",
-      "sha256": "e7cc6fff9a1142573f5a30878505e8625f1c57ca1cac1b95f881167458821081",
-      "note": "byte-identical from r1 — no ruling touches this cell"
-    }
-  ],
+  "carried": [],
   "retired": [
     {
       "file": "s12-b3-block.png",
       "was": "s12-b3",
       "staging": "the r1 dated-fact block over the deep-dimmed columns — retired by r2 ruling 2"
+    },
+    {
+      "file": "s13-b5-pair.png",
+      "was": "s13-b5",
+      "staging": "the merged two-gate advance — superseded by Batch C r2 ruling 3 (the beat split)"
+    },
+    {
+      "file": "s14-b1-study.png",
+      "was": "s14-b1",
+      "staging": "the display-scale coffee study over the condensed home row — retired by Batch C r2 ruling 4 (the fold); its r1 bytes carried into this name"
     },
     {
       "file": "s15-b1-boxes.png",
@@ -102,7 +117,7 @@
     }
   ],
   "counts": {
-    "approved": 25,
+    "approved": 26,
     "on-file": 6
   },
   "flags": [
@@ -127,6 +142,11 @@
       "status": "closed by the approval of 2 September 2026"
     },
     {
+      "id": "s12-b3",
+      "flag": "Your ruling names the objects and the band scale but not the band’s elevation or the pair’s gap. Directly above the codes the heads and the kicker stand in the way at 188, so the objects ride the columns’ clear sky on one shared baseline — box bottoms 64px above the heads’ top, the saved pair at the marks row’s own 26px gap. The real-estate render is square, so its box fills the band’s full height and its top edge runs 16px above the title-safe line; one number (the baseline, or a smaller cap) re-places everything.",
+      "status": "closed by the approval of 2 September 2026"
+    },
+    {
       "id": "s12-b4",
       "flag": "The principle reads “jobs” where the legacy read “functions,” following the installed script and the act’s titles — one word, twice, flagged for your word pass as in r1.",
       "status": "closed by the approval of 2 September 2026"
@@ -138,17 +158,17 @@
     },
     {
       "id": "s13-b5",
-      "flag": "The installed script speaks both gates on one advance, so both legacy gate lines land together here — the one beat on the sheet that lands a pair. The arrival lines beneath the two new stages speak S11’s own job lines.",
+      "flag": "The split restores the legacy state table verbatim; the one wiring reading is the arrival lines’ voice — this sheet keeps the approved pair beat’s treatment (every arrival line at the dimmed row step, the gate line carrying the beat’s voice). One word makes the MOE line the latest instead.",
       "status": "closed by the approval of 2 September 2026"
     },
     {
-      "id": "s13-b6",
+      "id": "s13-b7",
       "flag": "The foundation line reads “job” where the legacy read “function,” following the installed script — flagged for your word pass with S12’s principle.",
       "status": "closed by the approval of 2 September 2026"
     },
     {
       "id": "s14-b1",
-      "flag": "The full radial triad and a 540px study box cannot share the frame — the legacy triad geometry crosses the display box — so the home base recedes to its condensed row beneath the study, the way Act II’s rail kept its world rows beneath a featured moment. If you want the radial triad held instead (at a smaller render, or offset), that is a staging ruling. (Stands from r1, unanswered.)",
+      "flag": "The ruling names the statement line but not its register: this sheet lands the objection in the deck’s statement slot at the scene’s own landing register (top 850, 40px — the slot the b2 placement line uses), so the two lines hand off in place. One number or one word re-registers it.",
       "status": "closed by the approval of 2 September 2026"
     },
     {
@@ -244,8 +264,8 @@
       "frame": "S12-F1",
       "klass": "PORT",
       "review": "approved",
-      "source": "3-02-the-functions-separate, build 1 — the three heads land empty",
-      "caption": "Beat 1 · the split begins: the home frame recedes to the overlay grammar’s still voice (0.35) — the disc receding at its center with it, per ruling 1 — and the three column heads land empty over it: PRICED IN · PAID IN · SAVED IN, the jobs re-stated as columns. The seam where the spokes become columns is the implementation’s motion; the settled state is this."
+      "source": "3-02-the-functions-separate, build 1 — the three heads land empty, ON CLEAN BLACK (r2 ruling 1)",
+      "caption": "Beat 1 · the clean handoff, as you ruled it: the triad completes its recede before the heads land, and the three column heads stand empty on clean black — PRICED IN · PAID IN · SAVED IN, the jobs re-stated as columns, no element of the home frame beneath them. This is the legacy slide’s own build 1; the r2 staging that held the receded triad under the heads is superseded, and the cell leaves the disc-cell record."
     },
     {
       "id": "s12-b2",
@@ -267,8 +287,9 @@
       "frame": "S12-F1",
       "klass": "PORT",
       "review": "approved",
-      "source": "3-02-the-functions-separate, build 2 — THE REVERT LANDED (r2 ruling 2)",
-      "caption": "Beat 3 · Argentina lands the legacy way, as you ruled it: the row arrives in the columns — USD · ARS · USD and the brick — under the legacy kicker, “Argentina, five decades.”, at full voice, exactly as 3-02 builds it. The five-decade span and the every-stripe clause ride the spoken beat, not a block. The r1 dated-fact block staging is retired to file as s12-b3-block."
+      "source": "3-02-the-functions-separate, build 2 + r2 ruling 2 — the columns carry their objects",
+      "caption": "Beat 3 · Argentina lands the legacy way, and the columns carry their objects as you ruled it: the row arrives in the columns — the folded dollar over the USD code, the folded peso note over ARS, and the dollar with the register’s real-estate render over the saved column — under the legacy kicker, “Argentina, five decades.”, at full voice. The brick glyph is retired to file, superseded by the render; the five-decade span and the every-stripe clause ride the spoken beat.",
+      "flag": "Your ruling names the objects and the band scale but not the band’s elevation or the pair’s gap. Directly above the codes the heads and the kicker stand in the way at 188, so the objects ride the columns’ clear sky on one shared baseline — box bottoms 64px above the heads’ top, the saved pair at the marks row’s own 26px gap. The real-estate render is square, so its box fills the band’s full height and its top edge runs 16px above the title-safe line; one number (the baseline, or a smaller cap) re-places everything."
     },
     {
       "id": "s12-b4",
@@ -278,8 +299,8 @@
       "frame": "S12-F1",
       "klass": "PORT",
       "review": "approved",
-      "source": "3-02-the-functions-separate, build 3 — the principle",
-      "caption": "Beat 4 · the principle lands at full voice in the legacy’s own slot, over the standing Argentina row and its kicker — the legacy slide’s own final state.",
+      "source": "3-02-the-functions-separate, build 3 — the principle, over the object-bearing columns",
+      "caption": "Beat 4 · the principle lands at full voice in the legacy’s own slot, over the standing Argentina row — its objects above the codes — and its kicker: the legacy slide’s own final state, carrying the ruled objects.",
       "flag": "The principle reads “jobs” where the legacy read “functions,” following the installed script and the act’s titles — one word, twice, flagged for your word pass as in r1."
     },
     {
@@ -335,9 +356,9 @@
       "frame": "S13-F1",
       "klass": "ADAPT",
       "review": "approved",
-      "source": "3-03 builds 4–5 (merged by the frozen 6-beat map) + r2 ruling 3",
-      "caption": "Beat 5 · the two gates open in one advance, as the frozen map splits it: MEDIUM OF EXCHANGE and UNIT OF ACCOUNT stand — the hand-off and the balance scale completing the neutral object sequence — every threshold lit, and the two gate lines landing as a pair in the legacy’s own slots: “Nobody accepts as payment what they don’t expect to hold value.” / “Nobody writes contracts in what nobody accepts.” The social line recedes to the dimmed-prior step.",
-      "flag": "The installed script speaks both gates on one advance, so both legacy gate lines land together here — the one beat on the sheet that lands a pair. The arrival lines beneath the two new stages speak S11’s own job lines."
+      "source": "3-03 build 4 (restored by the split — r2 ruling 3) + the standing icons-to-renders change",
+      "caption": "Beat 5 · the acceptance gate, as the split rules it: MEDIUM OF EXCHANGE stands — the hand-off joining the ascent — and its gate line lands alone in the legacy slot: “Nobody accepts as payment what they don’t expect to hold value.” The third threshold sits dim above it, exactly as legacy 3-03’s own build 4 holds it; the social line recedes to the dimmed-prior step; the arrival line beneath the new stage speaks S11’s own job line. The retired pair staging is on file as s13-b5-pair.",
+      "flag": "The split restores the legacy state table verbatim; the one wiring reading is the arrival lines’ voice — this sheet keeps the approved pair beat’s treatment (every arrival line at the dimmed row step, the gate line carrying the beat’s voice). One word makes the MOE line the latest instead."
     },
     {
       "id": "s13-b6",
@@ -347,8 +368,19 @@
       "frame": "S13-F1",
       "klass": "ADAPT",
       "review": "approved",
-      "source": "3-03 build 6 — the foundation state, the ladder’s only orange",
-      "caption": "Beat 6 · the foundation: the store-of-value stop takes the accent — the ladder’s only orange, the component’s own foundation state, under the hourglass — and the foundation line lands at full voice while the gate lines settle to the legacy’s own dimmed step. The neutral object sequence stands complete above the drawn ascent.",
+      "source": "3-03 build 5 (restored by the split — r2 ruling 3) + the standing icons-to-renders change",
+      "caption": "Beat 6 · the contracts gate: UNIT OF ACCOUNT stands — the balance scale completing the neutral object sequence — every threshold lit (legacy 3-03’s own build 5), and the second gate line landing beneath the first: “Nobody writes contracts in what nobody accepts.” Both gate lines hold their own voice until the foundation settles them."
+    },
+    {
+      "id": "s13-b7",
+      "file": "s13-b7.png",
+      "scene": "S13",
+      "beat": 7,
+      "frame": "S13-F1",
+      "klass": "ADAPT",
+      "review": "approved",
+      "source": "3-03 build 6 — the foundation state, renumbered b6 → b7 by the split (r2 ruling 3), the look unchanged",
+      "caption": "Beat 7 · the foundation, renumbered from b6 by the split with its look unchanged: the store-of-value stop takes the accent — the ladder’s only orange, the component’s own foundation state, under the hourglass — and the foundation line lands at full voice while the gate lines settle to the legacy’s own dimmed step. The neutral object sequence stands complete above the drawn ascent.",
       "flag": "The foundation line reads “job” where the legacy read “function,” following the installed script — flagged for your word pass with S12’s principle."
     },
     {
@@ -356,13 +388,12 @@
       "file": "s14-b1.png",
       "scene": "S14",
       "beat": 1,
-      "frame": "S14-F1",
+      "frame": "S13-F1",
       "klass": "ADAPT",
       "review": "approved",
-      "carried": true,
-      "source": "the legacy objection beat + P1-F2’s display-scale study box — THE ONE RULED CHANGE: the coffee_cup render at display scale against the triad",
-      "caption": "Beat 1 · the objection, made sensory: the coffee cup at display scale in the approved study geometry, the objection’s own words over it in the display register, and the triad beneath in its condensed home-base row — MEDIUM OF EXCHANGE at full voice, because that is the one job the objection is actually about. CARRIED BYTE-IDENTICAL FROM R1 — no ruling touches this cell.",
-      "flag": "The full radial triad and a 540px study box cannot share the frame — the legacy triad geometry crosses the display box — so the home base recedes to its condensed row beneath the study, the way Act II’s rail kept its world rows beneath a featured moment. If you want the radial triad held instead (at a smaller render, or offset), that is a staging ruling. (Stands from r1, unanswered.)"
+      "source": "3-07-where-bitcoin-is, build 1 (the resolved ladder with the placed visitor) + r2 ruling 4 — the fold",
+      "caption": "Beat 1 · the objection arrives IN the ladder world, as the fold rules it: the ladder stands in 3-07’s own resolved state — every stage under its neutral mark, every threshold lit — the coffee cup at the MEDIUM OF EXCHANGE berth at its established perch scale, and the objection landing as the statement line: “But I can’t buy my coffee with Bitcoin.” The display-scale study frame is retired to file (s14-b1-study); the render lives on at the berth, and the S13 → S14 boundary is a pure morph — one world.",
+      "flag": "The ruling names the statement line but not its register: this sheet lands the objection in the deck’s statement slot at the scene’s own landing register (top 850, 40px — the slot the b2 placement line uses), so the two lines hand off in place. One number or one word re-registers it."
     },
     {
       "id": "s14-b2",

@@ -14,15 +14,23 @@
 // as THE UPDATED APPROVED STATES — s11-b3 · s11-b4 · s11-b5 · s12-b1 ·
 // s13-b5 · s13-b6 · s14-b2 · s14-b3 · s14-b4.
 //
+// AMENDED AT BATCH C r2 (the Batch C r2 brief §1; master §13, 2 Sep 2026):
+// s12-b1 re-renders clean (ruling 1) and leaves the disc-cell record; the
+// Argentina cells carry their objects (ruling 2); S13 = 7 beats — b5/b6 are
+// the split gate beats and the foundation renumbers to b7 with its bytes
+// carried (ruling 3); S14 folds into the ladder world and the study cell
+// retires to file as s14-b1-study, its r1 bytes carried into the retired
+// name (ruling 4). Ruling 5 is a gesture fix; nothing on this sheet.
+//
 // Modes:
-//   (default)        capture every non-carried cell, then cut the record.
+//   (default)        capture every cell, then cut the record.
 //   --record-only    re-cut sheet.html + states.json from the meta and the
 //                    PNGs on disk; no browser screenshots of cells.
 //   --only a,b,c     capture exactly the named cells; every other PNG stays
 //                    byte-identical on disk (the record proof checks this).
 //
-// CARRIED: s14-b1 keeps its r1 bytes always (meta `carried`).
-// RETIRED: the r1 stagings stay on file — s12-b3-block, s15-b*-boxes.
+// RETIRED: the superseded stagings stay on file — s12-b3-block,
+// s15-b*-boxes, s13-b5-pair, s14-b1-study.
 //
 // Usage: node capture-states.cjs [--port 5273] [--record-only] [--only ids]
 const { chromium } = require('playwright');
@@ -50,14 +58,16 @@ const SEED_SCRIPT = () => {
 
 const SCENES = [
   ['S11', 'Scene 11 — Three Familiar Jobs (5 beats)'],
-  ['S12', 'Scene 12 — We Already Split Those Jobs (4 beats)'],
-  ['S13', 'Scene 13 — The Order of Monetization (6 beats)'],
-  ['S14', 'Scene 14 — The Coffee Objection (4 beats)'],
+  ['S12', 'Scene 12 — We Already Split Those Jobs (4 beats · the clean handoff, the columns’ objects)'],
+  ['S13', 'Scene 13 — The Order of Monetization (7 beats — the r2 split)'],
+  ['S14', 'Scene 14 — The Coffee Objection (4 beats · folded into the ladder world)'],
   ['S15', 'Scene 15 — The Tower (6 beats · CANDIDATE A SELECTED)']
 ];
 
 const RETIRED = [
   { file: 's12-b3-block.png', was: 's12-b3', staging: 'the r1 dated-fact block over the deep-dimmed columns — retired by r2 ruling 2' },
+  { file: 's13-b5-pair.png', was: 's13-b5', staging: 'the merged two-gate advance — superseded by Batch C r2 ruling 3 (the beat split)' },
+  { file: 's14-b1-study.png', was: 's14-b1', staging: 'the display-scale coffee study over the condensed home row — retired by Batch C r2 ruling 4 (the fold); its r1 bytes carried into this name' },
   { file: 's15-b1-boxes.png', was: 's15-b1', staging: 'the three-box tower, build 1 — superseded by r2 ruling 4' },
   { file: 's15-b2-boxes.png', was: 's15-b2', staging: 'the three-box tower, build 2 — superseded by r2 ruling 4' },
   { file: 's15-b3-boxes.png', was: 's15-b3', staging: 'the three-box tower, build 3 — superseded by r2 ruling 4' },
@@ -68,7 +78,7 @@ const RETIRED = [
 
 const CLASS_NOTE = {
   approved: ['THE APPROVED SET',
-    'Every beat state of the act, approved in full at the flipbook walk of 2 September 2026 — the go-ahead is given, the fourteen flags are closed as accepted records, and these cells are the visual authority for the Batch C implementation: a settled scene state that is not its approved cell at zero pixels is a defect. The nine medium-bearing cells carry the replaced medium mark (ruling 3) as the updated approved states.'],
+    'Every beat state of the act, approved in full at the flipbook walk of 2 September 2026 — the go-ahead is given, the fourteen flags are closed as accepted records, and these cells are the visual authority for the Batch C implementation: a settled scene state that is not its approved cell at zero pixels is a defect. The nine medium-bearing cells carry the replaced medium mark (ruling 3 of the implementation brief) as the updated approved states — and the Batch C r2 rulings (master §13, 2 Sep 2026) re-render the S12 cells (the clean handoff, the columns’ objects), split S13 to seven beats, and fold S14 into the ladder world, each amended cell the updated approved state on its ruling’s authority. The gate is the presenter’s re-walk of Scenes 9 and 11–15 in the deck.'],
   'on-file': ['ON FILE — the unselected candidate',
     'Candidate B, the convergence of claims. Scene 15 is candidate A by the presenter’s selection; B stays on file under the aesthetic law so the selection can be changed by changing one letter, never by redrawing.']
 };
@@ -217,10 +227,12 @@ S12 brick glyph and the s14-b4 re-render seen and accepted by name, all fourteen
 By ruling 3 of the same brief the <b>medium</b> render is replaced (the handshake read as agreement, not exchange)
 and the nine medium-bearing cells — s11-b3 · s11-b4 · s11-b5 · s12-b1 · s13-b5 · s13-b6 · s14-b2 · s14-b3 · s14-b4 —
 are re-rendered here as <b>the updated approved states</b>.</p>
-<p class="note">The beat map stands at <b>25 beats</b> (S11 5 · S12 4 · S13 6 · S14 4 · S15 6). The disc holds the
-triad's center wherever the home base appears; monetary assets appear on the ladder only as climbers; s14-b1 is
-carried byte-identical from r1; the superseded r1 stagings stay on file (s12-b3-block, s15-b*-boxes). Cell classes:
-<b>${counts}</b>. <b>The next gate is the act viewing</b>, after Session 2 splices the act into the deck.</p>
+<p class="note">The beat map stands at <b>26 beats</b> (S11 5 · S12 4 · <b>S13 7</b> · S14 4 · S15 6 — amended by
+Batch C r2 ruling 3, master §13). The disc holds the triad's center wherever the home base appears (S11, S14 b4 —
+s12-b1 left the disc record at the clean-handoff ruling); monetary assets appear on the ladder only as climbers;
+the superseded stagings stay on file (s12-b3-block, s15-b*-boxes, s13-b5-pair, s14-b1-study — the last carrying its
+r1 bytes into retirement). Cell classes: <b>${counts}</b>. <b>The next gate is the presenter's re-walk of Scenes 9
+and 11–15 in the deck.</b></p>
 ${legend}
 <hr>
 ${sceneSections}
@@ -228,10 +240,10 @@ ${sceneSections}
 
   fs.writeFileSync(path.join(OUT, 'states.json'), JSON.stringify({
     date: new Date().toISOString(),
-    session: 'batch-c-impl-1',
-    beatMap: { S11: 5, S12: 4, S13: 6, S14: 4, S15: 6, total: 25 },
+    session: 'batch-c-r2',
+    beatMap: { S11: 5, S12: 4, S13: 7, S14: 4, S15: 6, total: 26 },
     cellCount: ids.length,
-    beatMapAuthority: 'docs/batch-c-package.md §1 — frozen 2 September 2026',
+    beatMapAuthority: 'docs/batch-c-package.md §1 — frozen 2 September 2026, amended the same day by Batch C r2 ruling 3 (S13 = 7, master §13)',
     provenanceAuthority: 'docs/act-3-provenance.md as amended — 1 PORT (S12) · 3 ADAPT (S11, S13, S14) · S15 NEW closed by the candidate-A selection',
     approval: {
       date: '2 September 2026',
@@ -241,14 +253,21 @@ ${sceneSections}
       mediumSwap: 'the medium render replaced (the handshake read as agreement, not exchange); the nine medium-bearing cells re-rendered as the updated approved states — s11-b3, s11-b4, s11-b5, s12-b1, s13-b5, s13-b6, s14-b2, s14-b3, s14-b4',
       gate: 'the act viewing, after the Session 2 splice'
     },
+    r2: {
+      date: '2 September 2026',
+      authority: 'the Batch C r2 brief §1 (master §13, the five r2 rulings — recorded before the pipeline was touched)',
+      rulings: [
+        'the clean handoff (1): s12-b1 re-rendered — the columns arrive on clean black; the cell leaves the disc-cell record',
+        'the columns’ objects (2): usd · ars gated and ingested, recognizability their ruled content; the renders at the band scale above the codes, usd + the located real-estate render (property) over the saved column; the brick glyph retired; s12-b2 re-rendered through the pipeline and expected pixel-identical',
+        'the split (3): S13 = 7 beats — s13-b5/b6 are the restored legacy gate beats, the foundation renumbered to b7 with its bytes carried; the pair staging on file as s13-b5-pair',
+        'the fold (4): S14 staged continuously on the ladder — the study cell retired to file as s14-b1-study (its r1 bytes carried), the new b1 the coffee at the MEDIUM berth with the objection as the statement line',
+        'forms-once (5): Scene 9’s formation is a gesture fix in the scene module — nothing on this sheet'
+      ],
+      gate: 'the presenter’s re-walk of Scenes 9 and 11–15 in the deck'
+    },
     approvedSet,
-    discCells: ids.filter((id) => ['s11-b1', 's11-b2', 's11-b3', 's11-b4', 's11-b5', 's12-b1', 's14-b4'].includes(id)),
-    carried: ids.filter((id) => meta[id].carried).map((id) => ({
-      id,
-      file: `${id}.png`,
-      sha256: 'e7cc6fff9a1142573f5a30878505e8625f1c57ca1cac1b95f881167458821081',
-      note: 'byte-identical from r1 — no ruling touches this cell'
-    })),
+    discCells: ids.filter((id) => ['s11-b1', 's11-b2', 's11-b3', 's11-b4', 's11-b5', 's14-b4'].includes(id)),
+    carried: [],
     retired: RETIRED,
     counts: Object.fromEntries(['approved', 'on-file'].map((r) => [r, byReview(r).length])),
     flags: flagged.map((id) => ({ id, flag: meta[id].flag, status: 'closed by the approval of 2 September 2026' })),
