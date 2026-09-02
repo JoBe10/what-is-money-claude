@@ -26,7 +26,10 @@
 //   4. SCENE 15 IS PRESENTER-REOPENED — the act's one open design. The
 //      three-box tower is superseded. Two genuinely distinct candidate
 //      systems, each across all six beats, line grammar only, the shiver
-//      kept as the b4 event, all legacy copy in its slots:
+//      kept as the b4 event, all legacy copy in its slots.
+//      RULED AT THE FLIPBOOK WALK (the Batch C implementation brief §1.1):
+//      SCENE 15 IS CANDIDATE A — the A cells are the approved S15 states,
+//      and candidate B retires to file (review 'on-file', kept on disk).
 //        A — THE PROPORTIONAL INVERTED TOWER: width is claim volume,
 //            solidity is realness; base money narrow, solid, near-luminous
 //            at the bottom; deposits far wider, outlined; apps widest and
@@ -973,7 +976,7 @@ const A_SOURCE = 'r2 ruling 4, candidate A — the proportional inverted tower (
 const B_SOURCE = 'r2 ruling 4, candidate B — the convergence of claims (this session’s design)';
 
 cell('s15-b1-a', {
-  scene: 'S15', beat: 1, frame: 'S15-F1', klass: 'NEW', review: 'pending-selection', system: 'A',
+  scene: 'S15', beat: 1, frame: 'S15-F1', klass: 'NEW', review: 'approved', system: 'A',
   source: A_SOURCE,
   caption: 'A · Beat 1 · the reveal opens where you live, at the frame’s top: PAYMENT APPS — the widest slab and the faintest, barely more than a trace. Width is claim volume, solidity is realness, and the top layer has the most claims and the least reality.'
 }, (st) => {
@@ -981,7 +984,7 @@ cell('s15-b1-a', {
 });
 
 cell('s15-b2-a', {
-  scene: 'S15', beat: 2, frame: 'S15-F1', klass: 'NEW', review: 'pending-selection', system: 'A',
+  scene: 'S15', beat: 2, frame: 'S15-F1', klass: 'NEW', review: 'approved', system: 'A',
   source: A_SOURCE,
   caption: 'A · Beat 2 · the app balance is not money: BANK DEPOSITS lands beneath — narrower, more solid, a real outline — and the first claim line hangs in the gap with the legacy caption in its slot: “a claim on your deposit.” The tower is descending toward something.'
 }, (st) => {
@@ -989,7 +992,7 @@ cell('s15-b2-a', {
 });
 
 cell('s15-b3-a', {
-  scene: 'S15', beat: 3, frame: 'S15-F1', klass: 'NEW', review: 'pending-selection', system: 'A',
+  scene: 'S15', beat: 3, frame: 'S15-F1', klass: 'NEW', review: 'approved', system: 'A',
   source: A_SOURCE,
   caption: 'A · Beat 3 · BASE MONEY — Act III’s one term, landing at the bottom as a narrow, SOLID, near-luminous block, the one solid object in the frame, its label dark against the light. The shape is complete and it argues by itself: wide and faint above, small and real beneath. The run line lands in its slot: “More claims than base. That is what a bank run runs on.”',
   flag: 'The proportions (1240 · 880 · 260) are qualitative and deliberately not a displayed ratio — the legacy tower’s own recorded law, with the drama turned up as your spec orders. If you want measured ratios, that is a data decision with a source, not a drawing change.'
@@ -998,7 +1001,7 @@ cell('s15-b3-a', {
 });
 
 cell('s15-b4-a', {
-  scene: 'S15', beat: 4, frame: 'S15-F1', klass: 'NEW', review: 'pending-selection', system: 'A',
+  scene: 'S15', beat: 4, frame: 'S15-F1', klass: 'NEW', review: 'approved', system: 'A',
   source: A_SOURCE,
   caption: 'A · Beat 4 · fair in both directions: the principle lands — “Layers are not a scam — they are how money scales. But layers inherit the soundness of their base.” THE SHIVER IS THIS BEAT’S EVENT, kept per your ruling: the luminous base flickers once and the shudder travels up through the outlined layers — choreography over this unchanged state; the still holds the state.'
 }, (st) => {
@@ -1006,7 +1009,7 @@ cell('s15-b4-a', {
 });
 
 cell('s15-b5-a', {
-  scene: 'S15', beat: 5, frame: 'S15-F1', klass: 'NEW', review: 'pending-selection', system: 'A',
+  scene: 'S15', beat: 5, frame: 'S15-F1', klass: 'NEW', review: 'approved', system: 'A',
   source: A_SOURCE,
   caption: 'A · Beat 5 · the scoping: the wide faint layers recede further — engineering on top, excellent but not the question — and the solid base takes the scene’s single allowed orange in its glow. The scoping line at full voice in its slot: “The real question is about the foundation asset — underneath them all.”'
 }, (st) => {
@@ -1014,7 +1017,7 @@ cell('s15-b5-a', {
 });
 
 cell('s15-b6-a', {
-  scene: 'S15', beat: 6, frame: 'S15-F2', klass: 'NEW', review: 'pending-selection', system: 'A',
+  scene: 'S15', beat: 6, frame: 'S15-F2', klass: 'NEW', review: 'approved', system: 'A',
   source: A_SOURCE + ' + 3-06’s own held-question beat',
   caption: 'A · Beat 6 · the held question, as 3-06 always played it: every line of copy off stage, and the bottom-most claim line — the legacy drop drawing itself — reaching from the solid base into empty black and dissolving, pointing at nothing. No disc, per ruling 1: the question is spoken and held, and Scene 16 opens through it.'
 }, (st) => {
@@ -1022,7 +1025,7 @@ cell('s15-b6-a', {
 });
 
 cell('s15-b1-b', {
-  scene: 'S15', beat: 1, frame: 'S15-F1', klass: 'NEW', review: 'pending-selection', system: 'B',
+  scene: 'S15', beat: 1, frame: 'S15-F1', klass: 'NEW', review: 'on-file', system: 'B',
   source: B_SOURCE,
   caption: 'B · Beat 1 · the same opening, drawn as counting: PAYMENT APPS is twenty-four faint open marks scattered across the frame’s top — the balances where you live, many and thin. No boxes anywhere in this system: claim volume is multiplicity.'
 }, (st) => {
@@ -1030,7 +1033,7 @@ cell('s15-b1-b', {
 });
 
 cell('s15-b2-b', {
-  scene: 'S15', beat: 2, frame: 'S15-F1', klass: 'NEW', review: 'pending-selection', system: 'B',
+  scene: 'S15', beat: 2, frame: 'S15-F1', klass: 'NEW', review: 'on-file', system: 'B',
   source: B_SOURCE,
   caption: 'B · Beat 2 · every app mark hangs by a drawn claim-line on one of SIX deposit marks beneath — the first fan, twenty-four lines onto six points, with the legacy caption beside it: “a claim on your deposit.” A number that points at another number, drawn literally.'
 }, (st) => {
@@ -1038,7 +1041,7 @@ cell('s15-b2-b', {
 });
 
 cell('s15-b3-b', {
-  scene: 'S15', beat: 3, frame: 'S15-F1', klass: 'NEW', review: 'pending-selection', system: 'B',
+  scene: 'S15', beat: 3, frame: 'S15-F1', klass: 'NEW', review: 'on-file', system: 'B',
   source: B_SOURCE,
   caption: 'B · Beat 3 · BASE MONEY — the six deposit marks converge onto ONE small bright point at the bottom: 24 → 6 → 1, more lines above than points below, the bank-run arithmetic drawn as counting rather than width. The legacy caption beside the convergence — “a claim on base money.” — and the run line in its slot.',
   flag: 'The counts (24 apps · 6 deposits · 1 base) are wiring — the argument is the convergence, not the numbers, and no ratio is displayed or implied. One number changes any row.'
@@ -1047,7 +1050,7 @@ cell('s15-b3-b', {
 });
 
 cell('s15-b4-b', {
-  scene: 'S15', beat: 4, frame: 'S15-F1', klass: 'NEW', review: 'pending-selection', system: 'B',
+  scene: 'S15', beat: 4, frame: 'S15-F1', klass: 'NEW', review: 'on-file', system: 'B',
   source: B_SOURCE,
   caption: 'B · Beat 4 · the principle lands in its slot, fair in both directions — and THE SHIVER IS THIS BEAT’S EVENT here too: the base point flickers once and the shudder travels up every claim-line of both fans — the same proven choreography, carried by lines instead of slabs. The still holds the state.'
 }, (st) => {
@@ -1055,7 +1058,7 @@ cell('s15-b4-b', {
 });
 
 cell('s15-b5-b', {
-  scene: 'S15', beat: 5, frame: 'S15-F1', klass: 'NEW', review: 'pending-selection', system: 'B',
+  scene: 'S15', beat: 5, frame: 'S15-F1', klass: 'NEW', review: 'on-file', system: 'B',
   source: B_SOURCE,
   caption: 'B · Beat 5 · the scoping: both fans and the upper rows recede to a third of their voice, and the one base point takes the scene’s single allowed orange in its glow — the question narrowing visibly from many, through few, to one. The scoping line at full voice in its slot.'
 }, (st) => {
@@ -1063,7 +1066,7 @@ cell('s15-b5-b', {
 });
 
 cell('s15-b6-b', {
-  scene: 'S15', beat: 6, frame: 'S15-F2', klass: 'NEW', review: 'pending-selection', system: 'B',
+  scene: 'S15', beat: 6, frame: 'S15-F2', klass: 'NEW', review: 'on-file', system: 'B',
   source: B_SOURCE + ' + 3-06’s own held-question beat',
   caption: 'B · Beat 6 · the held question: all copy off stage, and from the one bright point the bottom-most claim line — the legacy drop drawing — continues downward into empty black and dissolves. Everything above converged on this point; what does the point rest on? No disc, per ruling 1.'
 }, (st) => {
