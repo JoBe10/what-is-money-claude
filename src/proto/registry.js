@@ -24,8 +24,19 @@ import spendOrSave from './gate-2/s4-spend-or-save.js';
 // batch lands, which is this file's own rule. The scenes are in the film now;
 // `src/slides/manifest.js` is where they live.
 
+// Act III (Scenes 11–15) runs here as `?proto=act3` while Batch C builds it
+// (Scenes 11–13 at Session 1); the entries leave at Session 2's splice.
+import threeFamiliarJobs from '../scenes/act-3-the-jobs-of-money/11-three-familiar-jobs.js';
+import weAlreadySplitThoseJobs from '../scenes/act-3-the-jobs-of-money/12-we-already-split-those-jobs.js';
+import theOrderOfMonetization from '../scenes/act-3-the-jobs-of-money/13-the-order-of-monetization.js';
+
+threeFamiliarJobs.protoKey = 'act3';
+weAlreadySplitThoseJobs.protoKey = 'act3';
+theOrderOfMonetization.protoKey = 'act3';
+
 export const prototypes = [
-  theDirectExchange, theBreakthrough, spendOrSave
+  theDirectExchange, theBreakthrough, spendOrSave,
+  threeFamiliarJobs, weAlreadySplitThoseJobs, theOrderOfMonetization
 ];
 
 export default prototypes;
