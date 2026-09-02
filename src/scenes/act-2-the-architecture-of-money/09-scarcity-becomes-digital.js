@@ -25,9 +25,17 @@ const ID = 'scarcity-becomes-digital';
 
 // The hub dissolving, at the LEDGER station. Shared by the cold entry and the
 // morph so the formation plays the same way either way.
+//
+// THE NETWORK FORMS EXACTLY ONCE (Batch C r2 ruling 5): the b1 state spec
+// carries `mesh`, so railTo's paint would show the COMPLETED mesh from the
+// first frame — the network appearing, vanishing at the formation's reset,
+// and forming again. `initAt: at` hides every mesh element in the same
+// timeline tick as that first paint, so the overlay enters empty, the hub
+// and its spokes stand first, and the formation is the network's only
+// appearance. The settled state (the formed mesh, s9-b1) is untouched.
 function formNetwork(mod, stage, tl, at = 0) {
   stage.railTo(tl, stage.states[ID][0].rail, { at });
-  stage.railMesh(tl, at + 1.6);
+  stage.railMesh(tl, at + 1.6, { initAt: at });
 }
 
 function entry(mod, stage) {

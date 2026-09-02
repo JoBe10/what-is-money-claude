@@ -1077,8 +1077,19 @@ class Act2Stage {
    * over them. What changed is where it happens: the hub is the LEDGER
    * station's own point on the rail, so the issuer the act has just watched
    * fail is the thing that dissolves.
+   *
+   * THE NETWORK FORMS EXACTLY ONCE (Batch C r2 ruling 5, master §13).
+   * `initAt` hides every mesh element at the moment the mesh layer first
+   * displays — for S9's entry that is the rail paint's own timeline position,
+   * where `apply()` would otherwise write the COMPLETED mesh and show it for
+   * the camera's whole opening move before the formation reset it. The init
+   * callback is inserted after that paint at the same position, so both run
+   * in one timeline tick and the completed mesh never reaches a painted
+   * frame: nothing of the network shows before the hub, and the formation is
+   * the only appearance it ever makes. The settled state is untouched — the
+   * formed mesh, applyState's own attribute values, s9-b1 at zero pixels.
    */
-  railMesh(tl, at) {
+  railMesh(tl, at, { initAt = at } = {}) {
     const w = this.railWorld;
     const SPOKE_LIVE = 'rgba(255,255,255,0.35)';
     const SPOKE_GONE = 'rgba(255,255,255,0.2)';
@@ -1091,7 +1102,7 @@ class Act2Stage {
       gsap.set([...w.meshSpokes, w.meshHub, ...w.meshNodes], { opacity: 0 });
       gsap.set(w.meshSpokes, { stroke: SPOKE_LIVE });
       gsap.set(w.meshHub, { fill: HUB_LIVE });
-    }, at);
+    }, initAt);
     // The institution, holding the record.
     tl.to(w.meshHub, { opacity: 1, duration: 0.5, ease: 'power1.out' }, at + 0.05);
     tl.to(w.meshSpokes, { opacity: 1, duration: 0.6, ease: 'power1.out', stagger: 0.03 }, at + 0.25);
