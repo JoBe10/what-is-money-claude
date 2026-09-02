@@ -24,8 +24,9 @@ const ACT3 = path.join(REPO, 'src', 'scenes', 'act-3-the-jobs-of-money');
 const SCENES = [
   ['S11', '11-three-familiar-jobs.js'],
   ['S12', '12-we-already-split-those-jobs.js'],
-  ['S13', '13-the-order-of-monetization.js']
-  // S14 and S15 join at Session 2.
+  ['S13', '13-the-order-of-monetization.js'],
+  ['S14', '14-the-coffee-objection.js'],
+  ['S15', '15-the-tower.js']
 ];
 const ALL_KEYS = ['S11', 'S12', 'S13', 'S14', 'S15'];
 

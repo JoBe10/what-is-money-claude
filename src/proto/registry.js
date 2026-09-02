@@ -29,14 +29,19 @@ import spendOrSave from './gate-2/s4-spend-or-save.js';
 import threeFamiliarJobs from '../scenes/act-3-the-jobs-of-money/11-three-familiar-jobs.js';
 import weAlreadySplitThoseJobs from '../scenes/act-3-the-jobs-of-money/12-we-already-split-those-jobs.js';
 import theOrderOfMonetization from '../scenes/act-3-the-jobs-of-money/13-the-order-of-monetization.js';
+import theCoffeeObjection from '../scenes/act-3-the-jobs-of-money/14-the-coffee-objection.js';
+import theTower from '../scenes/act-3-the-jobs-of-money/15-the-tower.js';
 
 threeFamiliarJobs.protoKey = 'act3';
 weAlreadySplitThoseJobs.protoKey = 'act3';
 theOrderOfMonetization.protoKey = 'act3';
+theCoffeeObjection.protoKey = 'act3';
+theTower.protoKey = 'act3';
 
 export const prototypes = [
   theDirectExchange, theBreakthrough, spendOrSave,
-  threeFamiliarJobs, weAlreadySplitThoseJobs, theOrderOfMonetization
+  threeFamiliarJobs, weAlreadySplitThoseJobs, theOrderOfMonetization,
+  theCoffeeObjection, theTower
 ];
 
 export default prototypes;

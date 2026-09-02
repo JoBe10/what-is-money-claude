@@ -163,7 +163,13 @@ export const LADDER_STATES = {
   collectible: { line: true, stages: stageState(1), gates: { g1: 'dim' } },
   sov: { line: true, stages: stageState(2), gates: { g1: 'bright', g2: 'dim' } },
   all: { line: true, stages: stageState(4), gates: { g1: 'bright', g2: 'bright', g3: 'bright' } },
-  foundation: { line: true, stages: stageState(4, true), gates: { g1: 'bright', g2: 'bright', g3: 'bright' } }
+  foundation: { line: true, stages: stageState(4, true), gates: { g1: 'bright', g2: 'bright', g3: 'bright' } },
+  // `3-07`'s own resolved state — the ladder as it returns for the placement.
+  resolved: {
+    line: true,
+    stages: { collectible: 'revealed', sov: 'revealed', moe: 'revealed', uoa: 'revealed' },
+    gates: { g1: 'bright', g2: 'bright', g3: 'bright' }
+  }
 };
 
 const GATELINE_ONE = 'Nobody accepts as payment what they don’t expect to hold value.';
@@ -172,6 +178,75 @@ const FOUNDATION_LINE =
   'Store of value is the foundation job. The other jobs are built on it.';
 const SOCIAL_LINE = 'The one good you use because everyone else uses it.';
 const ORDER_KICKER = 'after Vijay Boyapati.';
+
+// The coffee objection (S14-F1, ADAPT): the display-scale study box (P1-F2's
+// approved geometry), the display-rule statement over it, and the entity
+// berths — 3-07's placement staging with the icons-to-renders change at the
+// berth's visitor cap (132 against the band's 188). The coin is the ladder's
+// only monetary object (the climbers ruling).
+const STUDY_BOX = [744, 380, 432, 540];
+const STUDY_LINE = '“But I can’t buy my coffee with Bitcoin.”';
+const ROW_XS = [340, 960, 1580];
+const BERTHS = {
+  bitcoin: { at: 'sov', subject: 'bitcoin', ar: 1448 / 1086, alt: 'The bitcoin coin, placed at store of value' },
+  coffee: { at: 'moe', subject: 'coffee_cup', ar: 1122 / 1402, alt: 'The coffee objection, placed' }
+};
+const S14_LINES = {
+  placed: 'A monetary good reaches everyday payments last.',
+  landed: 'Held on purpose, across years — one job: store of value.',
+  question: 'What makes something a good store of value?'
+};
+
+// The tower (S15, candidate A — the presenter's selection): the proportional
+// inverted tower. Width is claim volume, solidity is realness; all legacy
+// copy in its slots. Transcribed from the approved A cells' builder.
+const LINK_ONE = 'a claim on your deposit.';
+const LINK_TWO = 'a claim on base money.';
+const TOWER_RUN = 'More claims than base. That is what a bank run runs on.';
+const TOWER_PRINCIPLE =
+  'Layers are not a scam — they are how money scales. But layers inherit the soundness of their base.';
+const TOWER_SCOPING =
+  'The real question is about the foundation asset — underneath them all.';
+export const A_SLABS = [
+  { key: 'apps', label: 'PAYMENT APPS', w: 1240, top: 150, h: 88 },
+  { key: 'deposits', label: 'BANK DEPOSITS', w: 880, top: 330, h: 88 },
+  { key: 'base', label: 'BASE MONEY', w: 260, top: 498, h: 60 }
+];
+const A_LINKS = [
+  { key: 'l1', from: 'apps', top: 238, height: 92, caption: LINK_ONE },
+  { key: 'l2', from: 'deposits', top: 418, height: 80, caption: LINK_TWO }
+];
+
+// The slab looks, exactly as the approved cells' builder writes them —
+// settled state is a cssText swap; the b5 gesture transitions the same
+// properties the legacy tower transitioned (border-color, background,
+// box-shadow, color at 900ms).
+export function slabLook(key, foundation) {
+  if (key === 'base') {
+    const border = foundation ? 'border:1.5px solid rgba(247, 147, 26, 0.85);' : 'border:none;';
+    const glow = foundation
+      ? '0 0 30px rgba(247, 147, 26, 0.5), 0 0 80px rgba(247, 147, 26, 0.2)'
+      : '0 0 26px rgba(253, 233, 212, 0.28), 0 0 70px rgba(253, 233, 212, 0.12)';
+    return {
+      look: `${border} background:rgba(253,233,212,0.94); box-shadow:${glow};`,
+      labelColor: 'rgba(24, 14, 4, 0.92)'
+    };
+  }
+  if (key === 'deposits') {
+    return {
+      look: foundation
+        ? 'border:1px solid rgba(255,255,255,0.14); background:rgba(255,255,255,0.012);'
+        : 'border:1px solid rgba(255,255,255,0.34); background:rgba(255,255,255,0.03);',
+      labelColor: foundation ? 'var(--text-dim)' : 'rgba(255,255,255,0.68)'
+    };
+  }
+  return {
+    look: foundation
+      ? 'border:1px solid rgba(255,255,255,0.07); background:transparent;'
+      : 'border:1px solid rgba(255,255,255,0.15); background:rgba(255,255,255,0.008);',
+    labelColor: foundation ? 'rgba(255,255,255,0.18)' : 'rgba(255,255,255,0.40)'
+  };
+}
 
 // ------------------------------------------------------------------ the states
 //
@@ -202,6 +277,24 @@ export const STATES = {
     { ladder: 'sov', lines: ['collectible', 'sov'], social: 1, step: 4 },
     { ladder: 'all', lines: ['collectible', 'sov', 'moe', 'uoa'], social: 0.55, gatelines: true, step: 5 },
     { ladder: 'foundation', lines: ['collectible', 'sov', 'moe', 'uoa'], social: 0.55, gatelines: true, foundation: true, step: 6 }
+  ],
+  // S14 — the approved cells s14-b1 … s14-b4 (the ladder cells with no order
+  // overlay: 3-07's own staging carries no kicker).
+  'the-coffee-objection': [
+    { study: true, row: 'moe' },
+    {
+      ladder: 'resolved', lines: ['collectible', 'sov', 'moe', 'uoa'],
+      berths: { coffee: 1 }, statement: S14_LINES.placed
+    },
+    {
+      ladder: 'resolved', lines: ['collectible', 'sov', 'moe', 'uoa'],
+      berths: { bitcoin: 1, coffee: 0.5 }, statement: S14_LINES.landed
+    },
+    { triad: { jobs: 3, lit: 'sov' }, question: S14_LINES.question }
+  ],
+  // S15 — the approved candidate-A cells s15-b1-a … s15-b6-a.
+  'the-tower': [
+    { tower: 1 }, { tower: 2 }, { tower: 3 }, { tower: 4 }, { tower: 5 }, { tower: 6 }
   ]
 };
 
@@ -416,6 +509,34 @@ class Act3Stage {
       this.arrivalEls[key] = p;
     });
 
+    // The entity berths (S14): a render pinned above a stage's own render at
+    // the visitor cap (132 vs the band's 188), its dot beneath — 3-07's berth
+    // treatment with the standing icons-to-renders change, the cell builders'
+    // geometry verbatim. The coin and the coffee are the only monetary-object
+    // and objection visitors the ladder ever carries.
+    this.berths = {};
+    ['bitcoin', 'coffee'].forEach((name) => {
+      const spec = BERTHS[name];
+      const [sx, sy] = LADDER_STOPS[spec.at];
+      const stageH = bandBox(STAGE_RENDERS[spec.at].ar)[1];
+      const cap = 132;
+      const bh = Math.min(cap, cap / spec.ar);
+      const bw = bh * spec.ar;
+      const bottom = sy - (BAND_CLEAR + stageH + 48);
+      const df = DarkFieldImage({ name: spec.subject, width: bw, height: bh, alt: spec.alt });
+      df.el.dataset.visible = 'true';
+      df.el.style.position = 'absolute';
+      df.el.style.left = `${sx - bw / 2}px`;
+      df.el.style.top = `${bottom - bh}px`;
+      df.el.style.display = 'none';
+      ladderLayer.appendChild(df.el);
+      const dot = document.createElement('div');
+      dot.style.cssText = `position:absolute; left:${sx - 4.5}px; top:${sy - (BAND_CLEAR + stageH + 24) - 4.5}px;` +
+        'width:9px; height:9px; border-radius:50%; display:none;';
+      ladderLayer.appendChild(dot);
+      this.berths[name] = { df: df.el, dot };
+    });
+
     // ---- the order overlay — 3-03's copy against its own classes ----
     const orderLayer = document.createElement('div');
     orderLayer.className = 's3f-order';
@@ -456,6 +577,108 @@ class Act3Stage {
     social.style.opacity = '0';
     root.appendChild(social);
     this.social = social;
+
+    // ---- THE TOWER — candidate A, the presenter's selection ----
+    //
+    // The proportional inverted tower: three slabs on one spine, the two
+    // claim links, the legacy copy rows in their legacy slots, and the drop.
+    // The `s3f-money` class carries the copy rows' CSS and the data-step
+    // settle, exactly as the approved cells use it. Line grammar only; the
+    // disc is never here (the r2 thread ruling).
+    const towerLayer = document.createElement('div');
+    towerLayer.className = 's3f-money';
+    towerLayer.style.cssText = 'position:absolute; inset:0; background:transparent; opacity:1;';
+    towerLayer.style.display = 'none';
+    towerLayer.dataset.step = '0';
+    towerLayer.dataset.live = 'false';
+    root.appendChild(towerLayer);
+    this.towerLayer = towerLayer;
+
+    this.slabs = {};
+    A_SLABS.forEach((s) => {
+      const slab = document.createElement('div');
+      slab.style.cssText = 'display:none;';
+      const label = document.createElement('div');
+      label.textContent = s.label;
+      slab.appendChild(label);
+      towerLayer.appendChild(slab);
+      this.slabs[s.key] = { el: slab, label, spec: s };
+    });
+
+    this.links = {};
+    A_LINKS.forEach((lk) => {
+      const line = document.createElement('div');
+      line.style.cssText = 'display:none;';
+      towerLayer.appendChild(line);
+      const caption = document.createElement('p');
+      caption.textContent = lk.caption;
+      caption.style.cssText = 'display:none;';
+      towerLayer.appendChild(caption);
+      this.links[lk.key] = { line, caption, spec: lk };
+    });
+
+    this.towerRows = {};
+    [['run', 's3f-money__run', TOWER_RUN],
+      ['principle', 's3f-money__principle', TOWER_PRINCIPLE],
+      ['scoping', 's3f-money__scoping', TOWER_SCOPING]].forEach(([key, cls, copy]) => {
+      const p = document.createElement('p');
+      p.className = cls;
+      p.dataset.visible = 'false';
+      p.textContent = copy;
+      towerLayer.appendChild(p);
+      this.towerRows[key] = p;
+    });
+
+    // The held question's drop — the legacy drawing itself, at the A base.
+    const drop = document.createElement('div');
+    drop.className = 's3f-tower__drop';
+    drop.dataset.visible = 'false';
+    drop.style.left = '960px';
+    drop.style.top = '566px';
+    towerLayer.appendChild(drop);
+    this.drop = drop;
+
+    // ---- the coffee study, the condensed home row, the statement slot ----
+    //
+    // Root-level elements, after the layers, exactly as the cell builders
+    // append them: the display-scale study photo first, then the texts.
+    const study = DarkFieldImage({
+      name: 'coffee_cup', width: STUDY_BOX[2], height: STUDY_BOX[3], alt: 'A cup of coffee'
+    });
+    study.el.dataset.visible = 'true';
+    study.el.style.position = 'absolute';
+    study.el.style.left = `${STUDY_BOX[0]}px`;
+    study.el.style.top = `${STUDY_BOX[1]}px`;
+    study.el.style.display = 'none';
+    root.appendChild(study.el);
+    this.study = study.el;
+
+    const studyStmt = document.createElement('p');
+    studyStmt.textContent = STUDY_LINE;
+    studyStmt.style.cssText = 'position:absolute; margin:0; ' +
+      'left:200px; right:200px; top:246px; text-align:center; text-indent:0;' + CAPS(0.92, 40);
+    studyStmt.style.opacity = '0';
+    root.appendChild(studyStmt);
+    this.studyStmt = studyStmt;
+
+    // The home base in its condensed register (the row beneath the study).
+    this.rowEls = JOBS.map((spec, i) => {
+      const p = document.createElement('p');
+      p.textContent = spec.name;
+      p.style.cssText = 'position:absolute; margin:0; ' +
+        `left:${ROW_XS[i] - 260}px; top:940px; width:520px; text-align:center; text-indent:0;` +
+        CAPS(0.42, 24);
+      p.style.opacity = '0';
+      root.appendChild(p);
+      return p;
+    });
+
+    // The deck's statement slot (S14's landings, and the b4 question in the
+    // home frame's own register) — rebuilt per state.
+    const stmt = document.createElement('p');
+    stmt.style.cssText = 'position:absolute; margin:0; opacity:0;';
+    root.appendChild(stmt);
+    this.stmt = stmt;
   }
 
   // ---- per-element appliers (each writes exactly the cell builders' form) ----
@@ -551,8 +774,11 @@ class Act3Stage {
 
   _applyLadder(conf) {
     const on = Boolean(conf && conf.ladder);
+    // The order overlay rides only the S13 states (3-07's own return staging
+    // carries no kicker), so its presence follows `step`, not the ladder.
+    const orderOn = Boolean(conf && conf.step);
     this.ladderLayer.style.display = on ? '' : 'none';
-    this.orderLayer.style.display = on ? '' : 'none';
+    this.orderLayer.style.display = orderOn ? '' : 'none';
     if (!on) {
       this.social.style.opacity = '0';
       return;
@@ -567,10 +793,26 @@ class Act3Stage {
         this.arrivalEls[key].style.opacity = '0';
       }
     });
-    this.orderLayer.dataset.step = String(conf.step);
-    setVisible(this.orderKicker, true);
-    this.gatelines.forEach((g) => setVisible(g, Boolean(conf.gatelines)));
-    setVisible(this.foundationLine, Boolean(conf.foundation));
+    // The berths: the coin and the coffee, at the recorded voices — the
+    // cell builders' own opacity and dot alpha per state.
+    Object.entries(this.berths).forEach(([name, b]) => {
+      const o = conf.berths ? conf.berths[name] : null;
+      if (o == null) {
+        b.df.style.display = 'none';
+        b.dot.style.display = 'none';
+      } else {
+        b.df.style.display = '';
+        b.df.style.opacity = String(o);
+        b.dot.style.display = '';
+        b.dot.style.background = `rgba(255,255,255,${0.8 * o})`;
+      }
+    });
+    if (orderOn) {
+      this.orderLayer.dataset.step = String(conf.step);
+      setVisible(this.orderKicker, true);
+      this.gatelines.forEach((g) => setVisible(g, Boolean(conf.gatelines)));
+      setVisible(this.foundationLine, Boolean(conf.foundation));
+    }
     if (conf.social) {
       this.social.style.cssText = 'position:absolute; margin:0; ' +
         'left:200px; top:200px; width:640px; text-indent:0;' + STATEMENT(conf.social, 40);
@@ -580,6 +822,83 @@ class Act3Stage {
     }
   }
 
+  // The statement slot's two registers — the S14 landings and the b4 hinge
+  // question, the cell builders' own strings.
+  setStatement(copy, { question = false } = {}) {
+    this.stmt.textContent = copy;
+    this.stmt.style.cssText = question
+      ? ('position:absolute; margin:0; ' +
+        'left:180px; right:180px; top:872px; text-align:center; text-indent:0;' + STATEMENT(1, 46))
+      : ('position:absolute; margin:0; ' +
+        'left:240px; right:240px; top:850px; text-align:center; text-indent:0;' + STATEMENT(1, 40));
+    return this.stmt;
+  }
+
+  _applyExtras(st) {
+    const studyOn = Boolean(st.study);
+    this.study.style.display = studyOn ? '' : 'none';
+    this.studyStmt.style.opacity = studyOn ? '' : '0';
+    this.rowEls.forEach((p, i) => {
+      if (st.row) {
+        const lit = JOBS[i].key === st.row;
+        p.style.cssText = 'position:absolute; margin:0; ' +
+          `left:${ROW_XS[i] - 260}px; top:940px; width:520px; text-align:center; text-indent:0;` +
+          CAPS(lit ? 0.95 : 0.42, 24);
+        p.style.opacity = '';
+      } else {
+        p.style.opacity = '0';
+      }
+    });
+    if (st.question) {
+      this.setStatement(st.question, { question: true });
+      this.stmt.style.opacity = '';
+    } else if (st.statement) {
+      this.setStatement(st.statement);
+      this.stmt.style.opacity = '';
+    } else {
+      this.stmt.style.opacity = '0';
+    }
+  }
+
+  _applyTower(conf) {
+    const on = Boolean(conf && conf.tower);
+    this.towerLayer.style.display = on ? '' : 'none';
+    if (!on) return;
+    const beat = conf.tower;
+    const foundation = beat >= 5;
+    this.towerLayer.dataset.step = String(beat);
+    this.towerLayer.dataset.live = 'false';
+    const shown = { apps: beat >= 1, deposits: beat >= 2, base: beat >= 3 };
+    A_SLABS.forEach((s) => {
+      const slab = this.slabs[s.key];
+      if (!shown[s.key]) {
+        slab.el.style.cssText = 'display:none;';
+        return;
+      }
+      const { look, labelColor } = slabLook(s.key, foundation);
+      slab.el.style.cssText = `position:absolute; left:${960 - s.w / 2}px; top:${s.top}px;` +
+        `width:${s.w}px; height:${s.h}px; display:grid; place-items:center; box-sizing:border-box; ${look}`;
+      slab.label.style.cssText = `font-size:25px; font-weight:500; letter-spacing:0.18em; color:${labelColor};`;
+    });
+    Object.values(this.links).forEach(({ line, caption, spec }) => {
+      const lit = (spec.key === 'l1' && beat >= 2) || (spec.key === 'l2' && beat >= 3);
+      if (!lit) {
+        line.style.cssText = 'display:none;';
+        caption.style.cssText = 'display:none;';
+        return;
+      }
+      line.style.cssText = `position:absolute; left:${960 - 0.5}px; top:${spec.top}px; width:1px;` +
+        `height:${spec.height}px; background:rgba(255,255,255,${foundation ? 0.2 : 0.5});`;
+      caption.style.cssText = `position:absolute; left:${960 + 34}px; top:${spec.top + spec.height / 2}px;` +
+        'transform:translateY(-50%); width:460px; margin:0; font-size:22px; line-height:1.4;' +
+        `color:${foundation ? 'var(--text-dim)' : 'var(--text-secondary)'};`;
+    });
+    this.towerRows.run.dataset.visible = String(beat >= 3 && beat <= 5);
+    this.towerRows.principle.dataset.visible = String(beat >= 4 && beat <= 5);
+    this.towerRows.scoping.dataset.visible = String(beat === 5);
+    this.drop.dataset.visible = String(beat === 6);
+  }
+
   applyState(sceneId, build) {
     this.killMotion();
     const st = this.states[sceneId][build];
@@ -587,18 +906,29 @@ class Act3Stage {
     this.build = build;
 
     this.root.dataset.snap = 'true';
-    gsap.killTweensOf([
-      this.triadLayer, this.splitLayer, this.social, this.token,
-      ...this.cells, ...Object.values(this.arrivalEls), ...this.gatelines
-    ]);
-    gsap.set([
-      this.triadLayer, this.splitLayer, this.social,
-      ...this.cells, ...Object.values(this.arrivalEls), ...this.gatelines
-    ], { clearProps: 'opacity,y,x,scale' });
+    // Every element a gesture ever touches with GSAP: killed and cleared, so
+    // no inline motion value survives a reconstruction (the continuity line's
+    // fade in the S11→S12 morph included — an uncleared inline opacity there
+    // would shadow the dataset reveal on the backward walk).
+    const animated = [
+      this.triadLayer, this.splitLayer, this.ladderLayer, this.orderLayer,
+      this.towerLayer, this.social, this.token, this.continuity,
+      this.study, this.studyStmt, this.stmt,
+      ...this.rowEls, ...this.heads, ...this.cells,
+      ...Object.values(this.arrivalEls), ...this.gatelines,
+      ...Object.values(this.berths).flatMap((b) => [b.df, b.dot]),
+      ...Object.values(this.slabs).flatMap((s) => [s.el, s.label]),
+      ...Object.values(this.links).flatMap((l) => [l.line, l.caption]),
+      ...Object.values(this.towerRows), this.drop
+    ];
+    gsap.killTweensOf(animated);
+    gsap.set(animated, { clearProps: 'opacity,y,x,scale,transform' });
 
     this._applyTriad(st.triad);
     this._applySplit(st.split);
     this._applyLadder(st);
+    this._applyExtras(st);
+    this._applyTower(st);
 
     // Force style resolution while snapped, then restore transitions.
     // eslint-disable-next-line no-unused-expressions
@@ -675,6 +1005,28 @@ class Act3Stage {
         foundation: [this.foundationLine.dataset.visible, getComputedStyle(this.foundationLine).opacity]
       },
       social: text(this.social),
+      study: [this.study.style.display, getComputedStyle(this.study).opacity],
+      studyStmt: text(this.studyStmt),
+      row: this.rowEls.map(text),
+      stmt: text(this.stmt),
+      berths: Object.entries(this.berths).map(([name, b]) => [
+        name, b.df.style.display, b.df.style.opacity,
+        b.dot.style.display, b.dot.style.background
+      ]),
+      tower: {
+        display: this.towerLayer.style.display,
+        step: this.towerLayer.dataset.step,
+        slabs: Object.entries(this.slabs).map(([k, s]) => [
+          k, s.el.style.cssText, s.label.style.cssText
+        ]),
+        links: Object.entries(this.links).map(([k, l]) => [
+          k, l.line.style.cssText, l.caption.style.cssText
+        ]),
+        rows: Object.entries(this.towerRows).map(([k, p]) => [
+          k, p.dataset.visible, getComputedStyle(p).opacity
+        ]),
+        drop: [this.drop.dataset.visible, this.drop.style.left, this.drop.style.top]
+      },
       root: [this.root.className, this.root.dataset.step || '']
     };
   }
