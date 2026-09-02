@@ -1,0 +1,346 @@
+{
+  "date": "2026-09-02T10:06:21.492Z",
+  "session": "batch-c",
+  "deck": {
+    "slides": 39,
+    "firstId": "eighty-thousand-hours",
+    "builds": [
+      11,
+      1,
+      4,
+      8,
+      4,
+      7,
+      8,
+      4,
+      4,
+      4,
+      4,
+      4,
+      3,
+      5,
+      3,
+      5,
+      2,
+      2,
+      2,
+      4,
+      4,
+      5,
+      3,
+      5,
+      2,
+      5,
+      5,
+      2,
+      2,
+      4,
+      2,
+      3,
+      3,
+      5,
+      7,
+      2,
+      3,
+      2,
+      2
+    ],
+    "act3At": 11
+  },
+  "traversal": {
+    "states": 194,
+    "forward": true,
+    "forwardFirstMismatchAt": null,
+    "backwardReachesTop": true,
+    "backwardMonotonic": true,
+    "backwardSteps": 94
+  },
+  "boundaries": [
+    {
+      "name": "S10 end → S11 (the splice seam, forward)",
+      "from": {
+        "idx": 10,
+        "step": 4,
+        "id": "the-trade-off-keeps-moving"
+      },
+      "to": {
+        "idx": 11,
+        "step": 0,
+        "id": "three-familiar-jobs"
+      }
+    },
+    {
+      "name": "S11 b0 → S10 end (the splice seam, backward)",
+      "from": {
+        "idx": 11,
+        "step": 0,
+        "id": "three-familiar-jobs"
+      },
+      "to": {
+        "idx": 10,
+        "step": 0,
+        "id": "the-trade-off-keeps-moving"
+      }
+    },
+    {
+      "name": "three-familiar-jobs end → we-already-split-those-jobs (forward)",
+      "from": {
+        "idx": 11,
+        "step": 4,
+        "id": "three-familiar-jobs"
+      },
+      "to": {
+        "idx": 12,
+        "step": 0,
+        "id": "we-already-split-those-jobs"
+      }
+    },
+    {
+      "name": "we-already-split-those-jobs b0 → three-familiar-jobs end (backward)",
+      "from": {
+        "idx": 12,
+        "step": 0,
+        "id": "we-already-split-those-jobs"
+      },
+      "to": {
+        "idx": 11,
+        "step": 4,
+        "id": "three-familiar-jobs"
+      }
+    },
+    {
+      "name": "we-already-split-those-jobs end → the-order-of-monetization (forward)",
+      "from": {
+        "idx": 12,
+        "step": 3,
+        "id": "we-already-split-those-jobs"
+      },
+      "to": {
+        "idx": 13,
+        "step": 0,
+        "id": "the-order-of-monetization"
+      }
+    },
+    {
+      "name": "the-order-of-monetization b0 → we-already-split-those-jobs end (backward)",
+      "from": {
+        "idx": 13,
+        "step": 0,
+        "id": "the-order-of-monetization"
+      },
+      "to": {
+        "idx": 12,
+        "step": 3,
+        "id": "we-already-split-those-jobs"
+      }
+    },
+    {
+      "name": "the-order-of-monetization end → the-coffee-objection (forward)",
+      "from": {
+        "idx": 13,
+        "step": 5,
+        "id": "the-order-of-monetization"
+      },
+      "to": {
+        "idx": 14,
+        "step": 0,
+        "id": "the-coffee-objection"
+      }
+    },
+    {
+      "name": "the-coffee-objection b0 → the-order-of-monetization end (backward)",
+      "from": {
+        "idx": 14,
+        "step": 0,
+        "id": "the-coffee-objection"
+      },
+      "to": {
+        "idx": 13,
+        "step": 5,
+        "id": "the-order-of-monetization"
+      }
+    },
+    {
+      "name": "the-coffee-objection end → the-tower (forward)",
+      "from": {
+        "idx": 14,
+        "step": 3,
+        "id": "the-coffee-objection"
+      },
+      "to": {
+        "idx": 15,
+        "step": 0,
+        "id": "the-tower"
+      }
+    },
+    {
+      "name": "the-tower b0 → the-coffee-objection end (backward)",
+      "from": {
+        "idx": 15,
+        "step": 0,
+        "id": "the-tower"
+      },
+      "to": {
+        "idx": 14,
+        "step": 3,
+        "id": "the-coffee-objection"
+      }
+    },
+    {
+      "name": "S15 end → the surviving legacy deck (forward)",
+      "from": {
+        "idx": 15,
+        "step": 5,
+        "id": "the-tower"
+      },
+      "to": {
+        "idx": 16,
+        "step": 0,
+        "id": "3-00-waypoint-function"
+      }
+    },
+    {
+      "name": "3-00 b0 → S15 end (backward)",
+      "from": {
+        "idx": 16,
+        "step": 0,
+        "id": "3-00-waypoint-function"
+      },
+      "to": {
+        "idx": 15,
+        "step": 0,
+        "id": "the-tower"
+      }
+    }
+  ],
+  "directEntry": [
+    "three-familiar-jobs:0",
+    "three-familiar-jobs:1",
+    "three-familiar-jobs:2",
+    "three-familiar-jobs:3",
+    "three-familiar-jobs:4",
+    "we-already-split-those-jobs:0",
+    "we-already-split-those-jobs:1",
+    "we-already-split-those-jobs:2",
+    "we-already-split-those-jobs:3",
+    "the-order-of-monetization:0",
+    "the-order-of-monetization:1",
+    "the-order-of-monetization:2",
+    "the-order-of-monetization:3",
+    "the-order-of-monetization:4",
+    "the-order-of-monetization:5",
+    "the-coffee-objection:0",
+    "the-coffee-objection:1",
+    "the-coffee-objection:2",
+    "the-coffee-objection:3",
+    "the-tower:0",
+    "the-tower:1",
+    "the-tower:2",
+    "the-tower:3",
+    "the-tower:4",
+    "the-tower:5"
+  ],
+  "parity": [
+    {
+      "state": "three-familiar-jobs:0",
+      "identical": true
+    },
+    {
+      "state": "three-familiar-jobs:1",
+      "identical": true
+    },
+    {
+      "state": "three-familiar-jobs:2",
+      "identical": true
+    },
+    {
+      "state": "three-familiar-jobs:3",
+      "identical": true
+    },
+    {
+      "state": "three-familiar-jobs:4",
+      "identical": true
+    },
+    {
+      "state": "we-already-split-those-jobs:0",
+      "identical": true
+    },
+    {
+      "state": "we-already-split-those-jobs:1",
+      "identical": true
+    },
+    {
+      "state": "we-already-split-those-jobs:2",
+      "identical": true
+    },
+    {
+      "state": "we-already-split-those-jobs:3",
+      "identical": true
+    },
+    {
+      "state": "the-order-of-monetization:0",
+      "identical": true
+    },
+    {
+      "state": "the-order-of-monetization:1",
+      "identical": true
+    },
+    {
+      "state": "the-order-of-monetization:2",
+      "identical": true
+    },
+    {
+      "state": "the-order-of-monetization:3",
+      "identical": true
+    },
+    {
+      "state": "the-order-of-monetization:4",
+      "identical": true
+    },
+    {
+      "state": "the-order-of-monetization:5",
+      "identical": true
+    },
+    {
+      "state": "the-coffee-objection:0",
+      "identical": true
+    },
+    {
+      "state": "the-coffee-objection:1",
+      "identical": true
+    },
+    {
+      "state": "the-coffee-objection:2",
+      "identical": true
+    },
+    {
+      "state": "the-coffee-objection:3",
+      "identical": true
+    },
+    {
+      "state": "the-tower:0",
+      "identical": true
+    },
+    {
+      "state": "the-tower:1",
+      "identical": true
+    },
+    {
+      "state": "the-tower:2",
+      "identical": true
+    },
+    {
+      "state": "the-tower:3",
+      "identical": true
+    },
+    {
+      "state": "the-tower:4",
+      "identical": true
+    },
+    {
+      "state": "the-tower:5",
+      "identical": true
+    }
+  ],
+  "consoleErrors": []
+}
