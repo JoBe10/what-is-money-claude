@@ -17,7 +17,8 @@
 //      row arriving in the columns under the legacy kicker, the span and the
 //      every-stripe clause spoken, not blocked. S12-F1 is PORT again.
 //   3. THE NEUTRAL STAGE SYSTEM. The four presenter renders — collectible
-//      (a raw gem crystal) · store (an hourglass) · medium (a handshake) ·
+//      (a raw gem crystal) · store (an hourglass) · medium (the hand-off;
+//      REPLACED 2 Sep 2026, Batch C ruling 3 — the handshake retired) ·
 //      unit (a balance scale) — gated and ingested 2 Sep 2026, carry the
 //      ladder's stages at the rails-law band scale, and the same three job
 //      objects replace S11's grammar glyphs at the triad's spokes. MONETARY
@@ -140,9 +141,13 @@ const bandBox = (ar) => {
   return [h * ar, h];
 };
 
-// The four neutral marks all arrive at 1672 × 941 — the near-16:9 family —
-// so every band box on this sheet is 188 × 105.8.
+// The neutral marks arrive in the near-16:9 family, so every band box on
+// this sheet is 188 × ~105.8. `medium` was REPLACED 2 September 2026 (Batch C
+// ruling 3 — the handshake read as agreement, not exchange; the new study is
+// the mid-transfer hand-off, 842 × 474): same family, its own measured
+// aspect, per the rails law's own-aspect box.
 const MARK_AR = 1672 / 941;
+const MEDIUM_AR = 842 / 474;
 
 // The deck's statement slot, centred (review/act-2 states `statement`).
 function statement(st, copy, { top = 812, size = 46, a = 1 } = {}) {
@@ -159,7 +164,7 @@ function statement(st, copy, { top = 812, size = 46, a = 1 } = {}) {
 // luminous disc at the token's own 120px box (900, 340), restored glow
 // radii included. The ONE RULED CHANGE (r2 ruling 3): the three grammar
 // glyphs at the spokes are replaced by the neutral job objects — store (an
-// hourglass), medium (a handshake), unit (a balance scale) — in the
+// hourglass), medium (the mid-transfer hand-off), unit (a balance scale) — in the
 // rails-law band box. WIRING, flagged on the cells: at store/medium the
 // band box in the glyph's own slot would cross the drawn spoke, so the mark
 // stands ABOVE the spoke axis (bottom 32px clear), the entry's text kept at
@@ -169,7 +174,7 @@ function statement(st, copy, { top = 812, size = 46, a = 1 } = {}) {
 
 const JOBS = [
   { key: 'sov', subject: 'store', alt: 'An hourglass', name: 'STORE OF VALUE', sub: 'moves value through time.' },
-  { key: 'moe', subject: 'medium', alt: 'A handshake', name: 'MEDIUM OF EXCHANGE', sub: 'moves value between people.' },
+  { key: 'moe', subject: 'medium', ar: 842 / 474, alt: 'A hand-off in mid-transfer', name: 'MEDIUM OF EXCHANGE', sub: 'moves value between people.' },
   { key: 'uoa', subject: 'unit', alt: 'A balance scale', name: 'UNIT OF ACCOUNT', sub: 'measures value.' }
 ];
 const CONTINUITY =
@@ -205,8 +210,9 @@ function triad(st, { jobs = 3, hub = true, continuity = false, voice = 1, lit = 
     fn.dataset.visible = 'true';
     if (lit) fn.style.opacity = spec.key === lit ? '1' : '0.55';
 
-    // THE ONE RULED CHANGE: the job object in the rails-law band box.
-    const [w, h] = bandBox(MARK_AR);
+    // THE ONE RULED CHANGE: the job object in the rails-law band box, each
+    // render in a box of its own aspect.
+    const [w, h] = bandBox(spec.ar || MARK_AR);
     const df = DarkFieldImage({ name: spec.subject, width: w, height: h, alt: spec.alt });
     df.el.dataset.visible = 'true';
     df.el.style.transition = 'none';
@@ -371,7 +377,7 @@ const LADDER_STOPS = {
 const STAGE_RENDERS = {
   collectible: { subject: 'collectible', ar: MARK_AR, alt: 'A raw uncut gem crystal' },
   sov: { subject: 'store', ar: MARK_AR, alt: 'An hourglass' },
-  moe: { subject: 'medium', ar: MARK_AR, alt: 'A handshake' },
+  moe: { subject: 'medium', ar: MEDIUM_AR, alt: 'A hand-off in mid-transfer' },
   uoa: { subject: 'unit', ar: MARK_AR, alt: 'A balance scale' }
 };
 const BAND_CLEAR = 64;
@@ -795,7 +801,7 @@ cell('s11-b2', {
 cell('s11-b3', {
   scene: 'S11', beat: 3, frame: 'S11-F1', klass: 'ADAPT', review: 'approved',
   source: '3-01 build 3 + r2 ruling 3 — the medium job object',
-  caption: 'Beat 3 · the second job: MEDIUM OF EXCHANGE — moves value between people. The handshake — your medium mark — above the right spoke in the same band form, mirroring store. The disc holds the center between them.'
+  caption: 'Beat 3 · the second job: MEDIUM OF EXCHANGE — moves value between people. The hand-off in mid-transfer — your replaced medium mark (Batch C ruling 3) — above the right spoke in the same band form, mirroring store. The disc holds the center between them.'
 }, (st) => {
   triad(st, { jobs: 2 });
 });
@@ -898,7 +904,7 @@ cell('s13-b4', {
 cell('s13-b5', {
   scene: 'S13', beat: 5, frame: 'S13-F1', klass: 'ADAPT', review: 'approved',
   source: '3-03 builds 4–5 (merged by the frozen 6-beat map) + r2 ruling 3',
-  caption: 'Beat 5 · the two gates open in one advance, as the frozen map splits it: MEDIUM OF EXCHANGE and UNIT OF ACCOUNT stand — the handshake and the balance scale completing the neutral object sequence — every threshold lit, and the two gate lines landing as a pair in the legacy’s own slots: “Nobody accepts as payment what they don’t expect to hold value.” / “Nobody writes contracts in what nobody accepts.” The social line recedes to the dimmed-prior step.',
+  caption: 'Beat 5 · the two gates open in one advance, as the frozen map splits it: MEDIUM OF EXCHANGE and UNIT OF ACCOUNT stand — the hand-off and the balance scale completing the neutral object sequence — every threshold lit, and the two gate lines landing as a pair in the legacy’s own slots: “Nobody accepts as payment what they don’t expect to hold value.” / “Nobody writes contracts in what nobody accepts.” The social line recedes to the dimmed-prior step.',
   flag: 'The installed script speaks both gates on one advance, so both legacy gate lines land together here — the one beat on the sheet that lands a pair. The arrival lines beneath the two new stages speak S11’s own job lines.'
 }, (st) => {
   ladder(st, LADDER_STATES.all, { lines: ['collectible', 'sov', 'moe', 'uoa'] });
@@ -933,7 +939,7 @@ cell('s14-b1', {
 cell('s14-b2', {
   scene: 'S14', beat: 2, frame: 'S13-F1', klass: 'ADAPT', review: 'approved',
   source: '3-07-where-bitcoin-is, build 1 (the ladder returns resolved) + r2 ruling 3',
-  caption: 'Beat 2 · the objection goes on the ladder you just built: the ladder returns in 3-07’s own resolved state — every stage standing under its neutral mark, every threshold lit — with the coffee cup placed at the MEDIUM OF EXCHANGE berth, above the handshake, and the beat’s line beneath: “A monetary good reaches everyday payments last.”',
+  caption: 'Beat 2 · the objection goes on the ladder you just built: the ladder returns in 3-07’s own resolved state — every stage standing under its neutral mark, every threshold lit — with the coffee cup placed at the MEDIUM OF EXCHANGE berth, above the hand-off, and the beat’s line beneath: “A monetary good reaches everyday payments last.”',
   flag: 'Placing the coffee render at the medium stage’s berth is this sheet’s honest reading of “put that objection on the ladder” — one word retires it. The landing line is distilled from the installed script; your word pass owns it. (Stands from r1.)'
 }, (st) => {
   ladder(st, LADDER_STATES.resolved, {
@@ -946,7 +952,7 @@ cell('s14-b2', {
 cell('s14-b3', {
   scene: 'S14', beat: 3, frame: 'S13-F1', klass: 'ADAPT', review: 'approved',
   source: '3-07-where-bitcoin-is, builds 2–3 (the entity berth at store of value) + r2 ruling 3',
-  caption: 'Beat 3 · the placement — the scene’s payoff, now protected by your ruling: bitcoin’s coin stands at the entity berth above STORE OF VALUE, stage two of the ladder, THE ONLY MONETARY OBJECT IN SIGHT — the neutral marks beneath it are a crystal, an hourglass, a handshake, a scale, so the coin’s landing has the frame to itself. The coffee recedes at its berth, answered. The line: “Held on purpose, across years — one job: store of value.”',
+  caption: 'Beat 3 · the placement — the scene’s payoff, now protected by your ruling: bitcoin’s coin stands at the entity berth above STORE OF VALUE, stage two of the ladder, THE ONLY MONETARY OBJECT IN SIGHT — the neutral marks beneath it are a crystal, an hourglass, a hand-off, a scale, so the coin’s landing has the frame to itself. The coffee recedes at its berth, answered. The line: “Held on purpose, across years — one job: store of value.”',
   flag: 'The berth carries the coin render at the visitor cap (132 against the band’s 188) so the climber reads as a climber, not a fifth station. The landing line is distilled from the installed script. (Stands from r1.)'
 }, (st) => {
   ladder(st, LADDER_STATES.resolved, {

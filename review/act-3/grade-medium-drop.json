@@ -1,0 +1,82 @@
+{
+  "phase": "R7.2",
+  "dir": "assets/dark-field/incoming",
+  "thresholds": {
+    "cornerMax": 6,
+    "borderMax": 6,
+    "darkFracMin": 0.5,
+    "warmthMin": 18,
+    "warmFracMin": 0.9
+  },
+  "images": 1,
+  "checks": 5,
+  "failures": 0,
+  "frameTarget": 0.88,
+  "framing": {
+    "medium": [
+      1.287,
+      -1.5,
+      12.4
+    ]
+  },
+  "rows": [
+    {
+      "file": "medium.png",
+      "zone": "integrated",
+      "bytes": 343933,
+      "width": 842,
+      "height": 474,
+      "corners": {
+        "tl": 1.01,
+        "tr": 1.16,
+        "bl": 0.45,
+        "br": 1.08
+      },
+      "cornerMax": 1.16,
+      "border": 1.46,
+      "darkFrac": 0.883,
+      "subjectW": 0.684,
+      "subjectH": 0.681,
+      "subjectDX": 0.015,
+      "subjectDY": -0.124,
+      "highlightFrac": 0.0142,
+      "warmth": 162.7,
+      "highlightRGB": [
+        235,
+        156,
+        72
+      ],
+      "warmFrac": 1,
+      "keyAzimuth": 105,
+      "keyOffset": 0.072,
+      "spread": 1
+    }
+  ],
+  "results": [
+    {
+      "name": "grade: medium.png — frame corners are black (≤ 6)",
+      "ok": true,
+      "detail": "max corner 1.16 (tl 1.01 tr 1.16 bl 0.45 br 1.08)"
+    },
+    {
+      "name": "grade: medium.png — no environment reaches the border (≤ 6)",
+      "ok": true,
+      "detail": "border ring 1.46"
+    },
+    {
+      "name": "grade: medium.png — the subject emerges from darkness (≥ 50% below L16)",
+      "ok": true,
+      "detail": "88.3% dark"
+    },
+    {
+      "name": "grade: medium.png — the key is warm (R−B ≥ 18)",
+      "ok": true,
+      "detail": "R−B 162.7 on 1.42% of the frame, mean highlight rgb(235, 156, 72)"
+    },
+    {
+      "name": "grade: medium.png — the highlight population is warm throughout (≥ 90%)",
+      "ok": true,
+      "detail": "100.0% of highlight pixels warm"
+    }
+  ]
+}

@@ -243,7 +243,7 @@ over the whole shipping set is
 |---|---|---|---|---|---|
 | `collectible` | `assets/dark-field/collectible.png` | the ladder's COLLECTIBLE stage mark (S13) — a raw uncut gem crystal | 0.08 / 0.06 | 84.1% | +116.3 |
 | `store` | `assets/dark-field/store.png` | the ladder's STORE OF VALUE stage mark (S13, S14) · the triad's store-of-value job mark (S11 onward) — an hourglass | 0.08 / 0.06 | 91.3% | +83.8 |
-| `medium` | `assets/dark-field/medium.png` | the ladder's MEDIUM OF EXCHANGE stage mark (S13, S14) · the triad's medium-of-exchange job mark — a handshake | 0.23 / 0.50 | 86.4% | +136.1 |
+| `medium` | `assets/dark-field/medium.png` | the ladder's MEDIUM OF EXCHANGE stage mark (S13, S14) · the triad's medium-of-exchange job mark — ~~a handshake~~ **a hand-off in mid-transfer (REPLACED 2 Sep 2026 — see the Batch C drop below)** | 1.16 / 1.46 | 88.3% | +162.7 |
 | `unit` | `assets/dark-field/unit.png` | the ladder's UNIT OF ACCOUNT stage mark (S13, S14) · the triad's unit-of-account job mark — a balance scale | 0.07 / 0.06 | 93.3% | +110.1 |
 
 All four arrive at **1672 × 941, the near-16:9 family** (`fiat` · `metals` ·
@@ -259,6 +259,30 @@ monetary object in sight, and the marks must not compete with that payoff. The
 same three job objects (`store`, `medium`, `unit`) replace Scene 11's grammar
 glyphs at the triad's spokes, so the jobs and the stages share one visual
 family and the film's last basic icons retire from those stations.
+
+**The Batch C drop — `medium` replaced, ingested 2 September 2026**
+(presenter-ruled at the r2 flipbook walk, the Batch C implementation brief
+§1.3, master §13: **the handshake read as agreement, not exchange** — the new
+presenter-generated study is **a hand-off in mid-transfer**, the object
+actually moving between two hands. Gated and ingested through the standard
+harness: the drop-zone run is `review/act-3/grade-medium-drop.json` — **1
+image, 5 checks, 0 failures, ingested, 0 held** — and the post-ingest run over
+the whole shipping set is `review/act-3/grade-shipping-set-impl1.json` — **29
+images, 145 checks, 0 failures**):
+
+| subject key | file | used at | corner / border | dark | R−B |
+|---|---|---|---|---|---|
+| `medium` | `assets/dark-field/medium.png` | the ladder's MEDIUM OF EXCHANGE stage mark (S13, S14) · the triad's medium-of-exchange job mark (S11 onward) — a hand-off in mid-transfer | 1.16 / 1.46 | 88.3% | +162.7 |
+
+The new study arrives at **842 × 474 — the same near-16:9 aspect at a smaller
+frame** — so every band box it occupies is unchanged; its measured framing row
+in `src/dark-field.js` is `medium: [1.287, -1.5, 12.4]`. **The retired
+handshake study is on file** at `review/act-3/dark-field/medium--retired.png`
+(1672 × 941), per the aesthetic law's file-keeping clause and the `gold`
+regeneration precedent — a replacement is a change of file behind one key, and
+**the handshake never ships**: the nine medium-bearing cells of the approved
+sheet were re-rendered through the states pipeline the same day, before any
+scene work, so implementation transcribes final geometry.
 
 **Its frame is a fourth aspect family.** `fiat.png` is 1672 × 941 — near 16:9,
 the widest in the register — where the five-candidate lineup's display box is

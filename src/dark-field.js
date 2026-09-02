@@ -111,8 +111,13 @@ export const darkField = Object.fromEntries(
 // coinage. The four Act III neutral stage marks — `collectible`, `store`,
 // `medium`, `unit`, presenter-generated and ingested 2 September 2026 for the
 // ladder's stages and the triad's job marks (the neutral-marks ruling, master
-// §13) — all arrive at the same 1672×941 and join this family as well.
-// A box with a materially different aspect would need
+// §13) — join this family as well. `medium` was REPLACED by the presenter the
+// same day (Batch C ruling 3: the handshake read as agreement, not exchange;
+// the new study is the mid-transfer hand-off) and re-ingested at 842×474 —
+// the same near-16:9 aspect at a smaller frame, so its band boxes are
+// unchanged; the retired handshake study is on file at
+// review/act-3/dark-field/medium--retired.png. The other three stand at
+// 1672×941. A box with a materially different aspect would need
 // the scale computed against `object-fit: contain`'s actual fit rather than
 // against the frame — which is exactly the defect that showed up when the four
 // portrait renders first landed in the old landscape box: the rule was applied
@@ -137,7 +142,7 @@ const FRAMING = {
   ledger: [1.222, -1.6, 1],
   ledger_glow: [1.122, 3.2, -5.7],
   meal: [0.935, -0.8, 2.4],
-  medium: [1.259, -2.4, -1.2],
+  medium: [1.287, -1.5, 12.4],
   metals: [1.457, -0.4, -0.4],
   palladium: [1.287, -1.8, 1.5],
   paper: [1.313, 0.8, 2],
