@@ -1,15 +1,19 @@
-// Scene 13 — The Order of Monetization (6 beats; the ladder restored, after
-// Vijay Boyapati — attributed on stage from beat 1 per the LADDER ruling).
+// Scene 13 — The Order of Monetization (7 beats — the r2 split; the ladder
+// restored, after Vijay Boyapati — attributed on stage from beat 1 per the
+// LADDER ruling).
 //
 // The authored cut from Scene 12 (the question changes: "is there an order?"
 // → the order): the split world clears and the empty rising line enters with
 // the attribution — genuinely empty, nothing on the ascent. Then the stages
-// climb in `3-03`'s own state table at the frozen 6-beat map: COLLECTIBLE,
-// STORE OF VALUE, the social-technology beat holding the ladder while the
-// reason the order cannot run backward lands in the clear sky, the two gates
-// opening in one advance (the map's merge of the legacy builds 4+5), and the
-// foundation — the store-of-value stop taking the act's accent, the ladder's
-// only orange, exactly as the approved cell has it.
+// climb in `3-03`'s own state table at the amended 7-beat map (r2 ruling 3):
+// COLLECTIBLE, STORE OF VALUE, the social-technology beat holding the ladder
+// while the reason the order cannot run backward lands in the clear sky, the
+// ACCEPTANCE GATE — MEDIUM OF EXCHANGE landing with its gate line alone, the
+// third threshold sitting dim, legacy build 4 restored — the CONTRACTS GATE
+// — UNIT OF ACCOUNT with the second gate line, every threshold lit, legacy
+// build 5 — and the foundation, renumbered to b7 with its look unchanged:
+// the store-of-value stop taking the act's accent, the ladder's only orange,
+// exactly as the approved cell has it.
 //
 // MOTION IS TRANSCRIBED. The ladder's motion is `StageLadder`'s own —
 // `applyState(state, { live: true })` at the states legacy `3-03` drives,
@@ -18,11 +22,13 @@
 // ruled change), so each render arrives with its station's own reveal — the
 // Act II band's proven arrival gesture. The copy overlay (kicker, gate
 // lines, foundation line) is `3-03`'s dataset choreography against its own
-// classes, the `data-step="6"` settle included. The arrival lines beneath
+// classes, the foundation-step settle included (`data-step="7"` under the
+// amended map — the stylesheet's step-6 rule extended). The arrival lines beneath
 // the stops land in the rail's own row register (the arrival-line rule),
 // rising as the rail's landings rise.
 //
-// Landed states — the approved cells s13-b1 … s13-b6, by construction.
+// Landed states — the approved cells s13-b1 … s13-b7 (the r2 record), by
+// construction.
 
 import { gsap } from 'gsap';
 import { makeSceneModule } from './_sceneModule.js';
@@ -66,7 +72,8 @@ function entry(mod, stage) {
 
 // An arrival line lands beneath its stop — the rail's landing gesture (rise
 // 10, 0.6s) in the rail's row register. `latest` carries full voice; a
-// landing at the dimmed-prior step (the b5 pair's rows) lands at 0.58.
+// landing at the dimmed-prior step (the gate beats' rows, whose voice the
+// gate lines carry) lands at 0.58.
 function landArrival(stage, tl, key, at, { latest = true } = {}) {
   tl.add(() => {
     stage.setArrival(key, { latest });
@@ -122,36 +129,49 @@ const transitions = {
     tl.add(() => stage.applyState(ID, 3), 1.2);
   },
 
-  // beat 5 — the two gates open in one advance (the frozen map's merge):
-  // MEDIUM OF EXCHANGE and UNIT OF ACCOUNT stand with their objects, every
-  // threshold lights, the two gate lines land as a pair, the social line
-  // recedes to the dimmed-prior step.
+  // beat 5 — the acceptance gate (the r2 split, legacy build 4 restored):
+  // MEDIUM OF EXCHANGE stands with its object, the third threshold sits
+  // dim, the first gate line lands alone, and the social line recedes to
+  // the dimmed-prior step.
   4: (mod, stage) => {
     const tl = stage.timeline();
-    tl.add(() => stage.lad.applyState(LADDER_STATES.all, { live: true }), 0.12);
+    tl.add(() => stage.lad.applyState(LADDER_STATES.moe, { live: true }), 0.12);
     tl.to(stage.social, { opacity: 0.55, duration: 0.6, ease: 'power1.inOut' }, 0.2);
     landArrival(stage, tl, 'moe', 0.75, { latest: false });
-    landArrival(stage, tl, 'uoa', 1.0, { latest: false });
     tl.add(() => {
       stage.orderLayer.dataset.step = '5';
       setVisible(stage.gatelines[0], true);
     }, 0.85);
-    tl.add(() => setVisible(stage.gatelines[1], true), 1.3);
-    tl.add(() => stage.applyState(ID, 4), 2.5);
+    tl.add(() => stage.applyState(ID, 4), 2.1);
   },
 
-  // beat 6 — the foundation: the store-of-value stop takes the act's accent
-  // (the component's own foundation state, the ladder's only orange), the
-  // gate lines settle to the legacy's own dimmed step, the foundation line
-  // lands at full voice.
+  // beat 6 — the contracts gate (legacy build 5 restored): UNIT OF ACCOUNT
+  // completes the neutral object sequence, every threshold lights, the
+  // second gate line lands beneath the first.
   5: (mod, stage) => {
+    const tl = stage.timeline();
+    tl.add(() => stage.lad.applyState(LADDER_STATES.all, { live: true }), 0.12);
+    landArrival(stage, tl, 'uoa', 0.55, { latest: false });
+    tl.add(() => {
+      stage.orderLayer.dataset.step = '6';
+      setVisible(stage.gatelines[1], true);
+    }, 0.7);
+    tl.add(() => stage.applyState(ID, 5), 1.9);
+  },
+
+  // beat 7 — the foundation (renumbered from b6 by the split, its look
+  // unchanged): the store-of-value stop takes the act's accent (the
+  // component's own foundation state, the ladder's only orange), the gate
+  // lines settle to the legacy's own dimmed step, the foundation line lands
+  // at full voice.
+  6: (mod, stage) => {
     const tl = stage.timeline();
     tl.add(() => {
       stage.lad.applyState(LADDER_STATES.foundation, { live: true });
-      stage.orderLayer.dataset.step = '6';
+      stage.orderLayer.dataset.step = '7';
     }, 0.12);
     tl.add(() => setVisible(stage.foundationLine, true), 0.55);
-    tl.add(() => stage.applyState(ID, 5), 1.8);
+    tl.add(() => stage.applyState(ID, 6), 1.8);
   }
 };
 
@@ -170,7 +190,9 @@ export default makeSceneModule({
 
 [→] Now — why can't the order run backward? Because money is not like other goods. A tool is useful even if you're the only person on earth who owns one. Money is the opposite: it is the one good you use *because everyone else uses it* — a social technology, whose whole power is the network of people who will take it. That's why the stages gate the way they do: holding needs only one person's decision. Spending needs two people to agree. Pricing needs everyone to converge.
 
-[→] So a good becomes a medium of exchange only after enough people already trust it to hold value — because nobody accepts as payment what they don't expect to hold value until they spend it. Store-of-value belief is the gate to acceptance. And only a widely accepted good becomes the unit of account — nobody writes contracts in a measuring stick nobody takes. Each stage gates the next.
+[→] So a good becomes a medium of exchange only after enough people already trust it to hold value — because nobody accepts as payment what they don't expect to hold value until they spend it. Store-of-value belief is the gate to acceptance.
+
+[→] And only a widely accepted good becomes the unit of account — nobody writes contracts in a measuring stick nobody takes. Each stage gates the next.
 
 [→] Which makes the second stage the foundation of the entire structure. Note the distinction: collectible is where a good *starts* — but it isn't yet a monetary job. Of the three jobs themselves, store of value is the one a good must win before the others can exist — the job the rest are built on. Not a law of nature; a pattern with a logic. Keep it in front of you, because it tells us exactly where to aim our judgment: at the foundation, before anything else.
 

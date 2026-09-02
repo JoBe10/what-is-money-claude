@@ -183,6 +183,9 @@ export const LADDER_STATES = {
   line: { line: true, stages: stageState(0), gates: {} },
   collectible: { line: true, stages: stageState(1), gates: { g1: 'dim' } },
   sov: { line: true, stages: stageState(2), gates: { g1: 'bright', g2: 'dim' } },
+  // The MOE beat (r2 ruling 3): legacy 3-03's own build-4 state — the third
+  // threshold sits dim until the contracts gate lights it.
+  moe: { line: true, stages: stageState(3), gates: { g1: 'bright', g2: 'bright', g3: 'dim' } },
   all: { line: true, stages: stageState(4), gates: { g1: 'bright', g2: 'bright', g3: 'bright' } },
   foundation: { line: true, stages: stageState(4, true), gates: { g1: 'bright', g2: 'bright', g3: 'bright' } },
   // `3-07`'s own resolved state — the ladder as it returns for the placement.
@@ -292,14 +295,17 @@ export const STATES = {
     { split: { cells: 'argentina', kicker: true } },
     { split: { cells: 'argentina', kicker: true, principle: true } }
   ],
-  // S13 — the approved cells s13-b1 … s13-b6.
+  // S13 — the approved cells s13-b1 … s13-b7 (the r2 split, ruling 3: the
+  // merged two-gate advance splits back to legacy 3-03's own builds 4 and 5;
+  // `gatelines` counts the landed gate lines — one per gate beat).
   'the-order-of-monetization': [
     { ladder: 'line', step: 1 },
     { ladder: 'collectible', lines: ['collectible'], latest: 'collectible', step: 2 },
     { ladder: 'sov', lines: ['collectible', 'sov'], latest: 'sov', step: 3 },
     { ladder: 'sov', lines: ['collectible', 'sov'], social: 1, step: 4 },
-    { ladder: 'all', lines: ['collectible', 'sov', 'moe', 'uoa'], social: 0.55, gatelines: true, step: 5 },
-    { ladder: 'foundation', lines: ['collectible', 'sov', 'moe', 'uoa'], social: 0.55, gatelines: true, foundation: true, step: 6 }
+    { ladder: 'moe', lines: ['collectible', 'sov', 'moe'], social: 0.55, gatelines: 1, step: 5 },
+    { ladder: 'all', lines: ['collectible', 'sov', 'moe', 'uoa'], social: 0.55, gatelines: 2, step: 6 },
+    { ladder: 'foundation', lines: ['collectible', 'sov', 'moe', 'uoa'], social: 0.55, gatelines: 2, foundation: true, step: 7 }
   ],
   // S14 — the approved cells s14-b1 … s14-b4 (the ladder cells with no order
   // overlay: 3-07's own staging carries no kicker).
@@ -851,7 +857,9 @@ class Act3Stage {
     if (orderOn) {
       this.orderLayer.dataset.step = String(conf.step);
       setVisible(this.orderKicker, true);
-      this.gatelines.forEach((g) => setVisible(g, Boolean(conf.gatelines)));
+      // `gatelines` is a count (r2 ruling 3): the MOE beat lands line one
+      // alone, the UOA beat completes the pair.
+      this.gatelines.forEach((g, i) => setVisible(g, i < (conf.gatelines || 0)));
       setVisible(this.foundationLine, Boolean(conf.foundation));
     }
     if (conf.social) {
