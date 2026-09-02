@@ -108,7 +108,11 @@ export const darkField = Object.fromEntries(
 // r2 session (1 September 2026) for the rail's COINAGE station — the last
 // station in the register with no study — arrives at that same 1672×941 and
 // joins the family too, so the near-16:9 group is now fiat · metals · gold ·
-// coinage. A box with a materially different aspect would need
+// coinage. The four Act III neutral stage marks — `collectible`, `store`,
+// `medium`, `unit`, presenter-generated and ingested 2 September 2026 for the
+// ladder's stages and the triad's job marks (the neutral-marks ruling, master
+// §13) — all arrive at the same 1672×941 and join this family as well.
+// A box with a materially different aspect would need
 // the scale computed against `object-fit: contain`'s actual fit rather than
 // against the frame — which is exactly the defect that showed up when the four
 // portrait renders first landed in the old landscape box: the rule was applied
@@ -124,6 +128,7 @@ const FRAMING = {
   cattle: [1.101, -2.1, 3.1],
   coffee_cup: [1.227, -3.1, 13.2],
   coinage: [1.44, 1.1, -1.3],
+  collectible: [1.371, 1.4, 1],
   cowrie_shells: [1.13, 1.7, -2.5],
   fiat: [1.127, 0.9, -1.9],
   gold: [1.469, -0.7, -3.5],
@@ -132,6 +137,7 @@ const FRAMING = {
   ledger: [1.222, -1.6, 1],
   ledger_glow: [1.122, 3.2, -5.7],
   meal: [0.935, -0.8, 2.4],
+  medium: [1.259, -2.4, -1.2],
   metals: [1.457, -0.4, -0.4],
   palladium: [1.287, -1.8, 1.5],
   paper: [1.313, 0.8, 2],
@@ -142,7 +148,9 @@ const FRAMING = {
   shells: [1.422, 0.3, -2.5],
   shoe: [1.222, 1, -4.7],
   single_cowrie: [1.93, 4.4, 3.6],
+  store: [1.035, 0.4, 1.6],
   surgeon: [1.005, 6.8, 5.8],
+  unit: [1.113, -0.3, -0.5],
   vault: [1.354, -2.4, 5.1],
   wine: [1.029, 0.2, -1.3]
 };

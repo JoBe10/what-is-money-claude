@@ -230,6 +230,36 @@ Measured framing row, pasted into `src/dark-field.js`:
 `coinage: [1.44, 1.1, -1.3]`. **No code change lit the station** — the eager
 glob and the pending stub are what the pipeline was built for.
 
+**The Act III neutral-marks drop — `collectible` · `store` · `medium` · `unit`,
+ingested 2 September 2026** (presenter-generated; the neutral stage system
+ruling, r2 ruling 3, master §13 — gated and ingested through the standard
+harness. The drop-zone run is `review/act-3/grade-neutral-marks-drop.json` —
+**4 images, 20 checks, 0 failures, none held back** — and the post-ingest run
+over the whole shipping set is
+`review/act-3/grade-shipping-set-r2-neutral.json` — **29 images, 145 checks,
+0 failures**):
+
+| subject key | file | used at | corner / border | dark | R−B |
+|---|---|---|---|---|---|
+| `collectible` | `assets/dark-field/collectible.png` | the ladder's COLLECTIBLE stage mark (S13) — a raw uncut gem crystal | 0.08 / 0.06 | 84.1% | +116.3 |
+| `store` | `assets/dark-field/store.png` | the ladder's STORE OF VALUE stage mark (S13, S14) · the triad's store-of-value job mark (S11 onward) — an hourglass | 0.08 / 0.06 | 91.3% | +83.8 |
+| `medium` | `assets/dark-field/medium.png` | the ladder's MEDIUM OF EXCHANGE stage mark (S13, S14) · the triad's medium-of-exchange job mark — a handshake | 0.23 / 0.50 | 86.4% | +136.1 |
+| `unit` | `assets/dark-field/unit.png` | the ladder's UNIT OF ACCOUNT stage mark (S13, S14) · the triad's unit-of-account job mark — a balance scale | 0.07 / 0.06 | 93.3% | +110.1 |
+
+All four arrive at **1672 × 941, the near-16:9 family** (`fiat` · `metals` ·
+`gold` · `coinage` and now these), so their band boxes take that aspect under
+the framing rule and the equal-visual-weight box (`AGENTS.md` §6). Measured
+framing rows, pasted into `src/dark-field.js`: `collectible: [1.371, 1.4, 1]` ·
+`store: [1.035, 0.4, 1.6]` · `medium: [1.259, -2.4, -1.2]` ·
+`unit: [1.113, -0.3, -0.5]`. **These four are deliberately not monetary
+assets** — a gem crystal, an hourglass, a handshake, a balance scale — because
+the ruling that ordered them also orders that monetary assets appear on the
+ladder *only as climbers*: Scene 14's coin lands at stage two as the only
+monetary object in sight, and the marks must not compete with that payoff. The
+same three job objects (`store`, `medium`, `unit`) replace Scene 11's grammar
+glyphs at the triad's spokes, so the jobs and the stages share one visual
+family and the film's last basic icons retire from those stations.
+
 **Its frame is a fourth aspect family.** `fiat.png` is 1672 × 941 — near 16:9,
 the widest in the register — where the five-candidate lineup's display box is
 180 × 150 (6:5). That is a 48% aspect departure, well past the framing rule's
@@ -515,7 +545,7 @@ lineup keeps its own:
 
 | status | subjects |
 |---|---|
-| **shipping** (25) | `shoe` · `wine` · `shells` · `gold` · `paper` · `ledger` · `bitcoin` · `cattle` · `salt` · `cowrie_shells` · `iron` · `surgeon` · `meal` · `property` · `shares` · `single_cowrie` · `gold_certificate` · `vault` · `ledger_glow` · `palladium` · `coffee_cup` · `patient` · `fiat` · `metals` · **`coinage`** |
+| **shipping** (29) | `shoe` · `wine` · `shells` · `gold` · `paper` · `ledger` · `bitcoin` · `cattle` · `salt` · `cowrie_shells` · `iron` · `surgeon` · `meal` · `property` · `shares` · `single_cowrie` · `gold_certificate` · `vault` · `ledger_glow` · `palladium` · `coffee_cup` · `patient` · `fiat` · `metals` · `coinage` · **`collectible`** · **`store`** · **`medium`** · **`unit`** |
 | **regenerate** (0) | — |
 | **optional** (1) | `gold-native`, only if the two-survivors arrival is ruled in and wants its own study |
 
