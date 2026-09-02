@@ -71,10 +71,6 @@ export const reducedMotion = () =>
 // order included: a duplicated property in a cssText string resolves to the
 // later declaration, so the order is part of the geometry).
 
-const KICKER = (a = 0.5) => 'font-size:20px; font-weight:500; letter-spacing:0.32em;' +
-  `text-indent:0.32em; text-transform:uppercase; color:rgba(255,255,255,${a});`;
-const CAPS = (a = 0.75, size = 26) => `font-size:${size}px; font-weight:560;` +
-  `letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,${a});`;
 const STATEMENT = (a = 1, size = 46) => `font-size:${size}px; font-weight:540;` +
   `letter-spacing:-0.012em; line-height:1.3; color:rgba(255,255,255,${a});`;
 
@@ -203,19 +199,19 @@ const FOUNDATION_LINE =
 const SOCIAL_LINE = 'The one good you use because everyone else uses it.';
 const ORDER_KICKER = 'after Vijay Boyapati.';
 
-// The coffee objection (S14-F1, ADAPT): the display-scale study box (P1-F2's
-// approved geometry), the display-rule statement over it, and the entity
-// berths — 3-07's placement staging with the icons-to-renders change at the
-// berth's visitor cap (132 against the band's 188). The coin is the ladder's
-// only monetary object (the climbers ruling).
-const STUDY_BOX = [744, 380, 432, 540];
-const STUDY_LINE = '“But I can’t buy my coffee with Bitcoin.”';
-const ROW_XS = [340, 960, 1580];
+// The coffee objection (S14-F1, ADAPT — folded into the ladder world, r2
+// ruling 4): the scene stages continuously on the S13 ladder, and the
+// entity berths — 3-07's placement staging with the icons-to-renders change
+// at the berth's visitor cap (132 against the band's 188) — carry the
+// objection and the coin. The display-scale study frame is retired to file
+// (s14-b1-study); the coin is the ladder's only monetary object (the
+// climbers ruling).
 const BERTHS = {
   bitcoin: { at: 'sov', subject: 'bitcoin', ar: 1448 / 1086, alt: 'The bitcoin coin, placed at store of value' },
   coffee: { at: 'moe', subject: 'coffee_cup', ar: 1122 / 1402, alt: 'The coffee objection, placed' }
 };
 const S14_LINES = {
+  objection: '“But I can’t buy my coffee with Bitcoin.”',
   placed: 'A monetary good reaches everyday payments last.',
   landed: 'Held on purpose, across years — one job: store of value.',
   question: 'What makes something a good store of value?'
@@ -307,10 +303,14 @@ export const STATES = {
     { ladder: 'all', lines: ['collectible', 'sov', 'moe', 'uoa'], social: 0.55, gatelines: 2, step: 6 },
     { ladder: 'foundation', lines: ['collectible', 'sov', 'moe', 'uoa'], social: 0.55, gatelines: 2, foundation: true, step: 7 }
   ],
-  // S14 — the approved cells s14-b1 … s14-b4 (the ladder cells with no order
-  // overlay: 3-07's own staging carries no kicker).
+  // S14 — the approved cells s14-b1 … s14-b4 (the fold, r2 ruling 4: all
+  // four beats staged continuously on the ladder; 3-07's own staging
+  // carries no kicker, and b1 lands the objection as the statement line).
   'the-coffee-objection': [
-    { study: true, row: 'moe' },
+    {
+      ladder: 'resolved', lines: ['collectible', 'sov', 'moe', 'uoa'],
+      berths: { coffee: 1 }, statement: S14_LINES.objection
+    },
     {
       ladder: 'resolved', lines: ['collectible', 'sov', 'moe', 'uoa'],
       berths: { coffee: 1 }, statement: S14_LINES.placed
@@ -667,41 +667,10 @@ class Act3Stage {
     towerLayer.appendChild(drop);
     this.drop = drop;
 
-    // ---- the coffee study, the condensed home row, the statement slot ----
+    // ---- the statement slot ----
     //
-    // Root-level elements, after the layers, exactly as the cell builders
-    // append them: the display-scale study photo first, then the texts.
-    const study = DarkFieldImage({
-      name: 'coffee_cup', width: STUDY_BOX[2], height: STUDY_BOX[3], alt: 'A cup of coffee'
-    });
-    study.el.dataset.visible = 'true';
-    study.el.style.position = 'absolute';
-    study.el.style.left = `${STUDY_BOX[0]}px`;
-    study.el.style.top = `${STUDY_BOX[1]}px`;
-    study.el.style.display = 'none';
-    root.appendChild(study.el);
-    this.study = study.el;
-
-    const studyStmt = document.createElement('p');
-    studyStmt.textContent = STUDY_LINE;
-    studyStmt.style.cssText = 'position:absolute; margin:0; ' +
-      'left:200px; right:200px; top:246px; text-align:center; text-indent:0;' + CAPS(0.92, 40);
-    studyStmt.style.opacity = '0';
-    root.appendChild(studyStmt);
-    this.studyStmt = studyStmt;
-
-    // The home base in its condensed register (the row beneath the study).
-    this.rowEls = JOBS.map((spec, i) => {
-      const p = document.createElement('p');
-      p.textContent = spec.name;
-      p.style.cssText = 'position:absolute; margin:0; ' +
-        `left:${ROW_XS[i] - 260}px; top:940px; width:520px; text-align:center; text-indent:0;` +
-        CAPS(0.42, 24);
-      p.style.opacity = '0';
-      root.appendChild(p);
-      return p;
-    });
-
+    // The display-scale study and the condensed home row retired with the
+    // fold (r2 ruling 4 — the frame is on file as s14-b1-study).
     // The deck's statement slot (S14's landings, and the b4 question in the
     // home frame's own register) — rebuilt per state.
     const stmt = document.createElement('p');
@@ -884,20 +853,6 @@ class Act3Stage {
   }
 
   _applyExtras(st) {
-    const studyOn = Boolean(st.study);
-    this.study.style.display = studyOn ? '' : 'none';
-    this.studyStmt.style.opacity = studyOn ? '' : '0';
-    this.rowEls.forEach((p, i) => {
-      if (st.row) {
-        const lit = JOBS[i].key === st.row;
-        p.style.cssText = 'position:absolute; margin:0; ' +
-          `left:${ROW_XS[i] - 260}px; top:940px; width:520px; text-align:center; text-indent:0;` +
-          CAPS(lit ? 0.95 : 0.42, 24);
-        p.style.opacity = '';
-      } else {
-        p.style.opacity = '0';
-      }
-    });
     if (st.question) {
       this.setStatement(st.question, { question: true });
       this.stmt.style.opacity = '';
@@ -961,9 +916,8 @@ class Act3Stage {
     // would shadow the dataset reveal on the backward walk).
     const animated = [
       this.triadLayer, this.splitLayer, this.ladderLayer, this.orderLayer,
-      this.towerLayer, this.social, this.token, this.continuity,
-      this.study, this.studyStmt, this.stmt,
-      ...this.rowEls, ...this.heads, ...this.cells,
+      this.towerLayer, this.social, this.token, this.continuity, this.stmt,
+      ...this.heads, ...this.cells,
       ...Object.values(this.arrivalEls), ...this.gatelines,
       ...Object.values(this.berths).flatMap((b) => [b.df, b.dot]),
       ...Object.values(this.slabs).flatMap((s) => [s.el, s.label]),
@@ -1056,9 +1010,6 @@ class Act3Stage {
         foundation: [this.foundationLine.dataset.visible, getComputedStyle(this.foundationLine).opacity]
       },
       social: text(this.social),
-      study: [this.study.style.display, getComputedStyle(this.study).opacity],
-      studyStmt: text(this.studyStmt),
-      row: this.rowEls.map(text),
       stmt: text(this.stmt),
       berths: Object.entries(this.berths).map(([name, b]) => [
         name, b.df.style.display, b.df.style.opacity,

@@ -1,24 +1,30 @@
-// Scene 14 — The Coffee Objection (4 beats).
+// Scene 14 — The Coffee Objection (4 beats — folded into the ladder world,
+// Batch C r2 ruling 4).
 //
-// The objection made sensory, then killed on the ladder. The coffee cup at
-// display scale over the condensed home row (the approved study geometry);
-// the ladder returns in `3-07`'s own resolved state with the coffee placed
-// at the MEDIUM OF EXCHANGE berth; then THE SCENE'S PAYOFF, protected by the
+// The objection lives and dies on the ladder. The standalone display-scale
+// study frame is retired to file (s14-b1-study); the scene stages
+// continuously on the S13 ladder: the coffee cup arrives at the MEDIUM OF
+// EXCHANGE berth as the objection lands as the statement line; the
+// placement line takes the slot; then THE SCENE'S PAYOFF, protected by the
 // climbers ruling and by this file's timing: the coffee recedes first, and
 // only then does the coin arrive at its berth above STORE OF VALUE — alone,
 // the only monetary object on the ladder, nothing else moving while it
 // lands. The pivot returns the whole triad with STORE at full voice and the
 // act's hinge question beneath.
 //
-// MOTION IS TRANSCRIBED. The ladder's return is `StageLadder`'s own
-// resolved-state reveal, exactly as `3-07` build 1 mounts it live; the
-// berth arrivals ride the register's own 520ms reveal with the dot beneath
-// (3-07's entity gesture through the icons-to-renders change); the study
-// reveals as every display-scale photograph in the film reveals; the
-// landings rise as the rail's landings rise.
+// THE S13 → S14 BOUNDARY IS A PURE MORPH — ONE WORLD (r2 ruling 4): the
+// ladder never leaves the stage. The order overlay and the social line
+// clear, the foundation accent releases to `3-07`'s resolved state through
+// the component's own transition, the arrival lines persist in place, and
+// the objection arrives.
 //
-// Landed states — the approved cells s14-b1 … s14-b4 (s14-b1 carried
-// byte-identical from r1 through every session), by construction.
+// MOTION IS TRANSCRIBED. The ladder's states are `StageLadder`'s own,
+// exactly as `3-07` drives them; the berth arrivals ride the register's own
+// 520ms reveal with the dot beneath (3-07's entity gesture through the
+// icons-to-renders change); the landings rise as the rail's landings rise.
+//
+// Landed states — the approved cells s14-b1 … s14-b4 (s14-b1 the r2 fold
+// cell; b2–b4 untouched), by construction.
 
 import { gsap } from 'gsap';
 import { makeSceneModule } from './_sceneModule.js';
@@ -40,42 +46,41 @@ function revealBerth(stage, name, o) {
   gsap.fromTo(b.dot, { opacity: 0 }, { opacity: 1, duration: 0.5, ease: 'power1.out' });
 }
 
-// The study's own reveal with its words and the condensed home row.
-function studyEntry(stage, tl, at) {
-  tl.add(() => {
-    stage.study.style.display = '';
-    hideInstantly(stage.study, () => { stage.study.dataset.visible = 'false'; });
-    requestAnimationFrame(() => { stage.study.dataset.visible = 'true'; });
-    gsap.fromTo([stage.studyStmt, ...stage.rowEls],
-      { opacity: 0, y: 10 },
-      { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out', stagger: 0.06, delay: 0.25 });
-  }, at);
-}
-
-// The seam from Scene 13: the ladder world holds its foundation as it gives
-// the frame to the objection — the overlay clears, the study reveals.
+// The seam from Scene 13 — A PURE MORPH, one world (r2 ruling 4): the
+// ladder never leaves. The order overlay and the social line clear, the
+// foundation accent releases to 3-07's resolved state through the
+// component's own transition, the arrival lines persist in place, and the
+// objection arrives — the coffee at its berth as the statement line lands.
 function morphIn(mod, stage) {
-  stage.applyState('the-order-of-monetization', 5);
+  stage.applyState('the-order-of-monetization', 6);
   const tl = stage.timeline();
-  tl.to([stage.ladderLayer, stage.orderLayer, stage.social],
+  tl.to([stage.orderLayer, stage.social],
     { opacity: 0, duration: 0.6, ease: 'power1.inOut' }, 0.1);
-  tl.add(() => {
-    stage.ladderLayer.style.display = 'none';
-    stage.orderLayer.style.display = 'none';
-  }, 0.72);
-  studyEntry(stage, tl, 0.8);
-  tl.add(() => stage.applyState(ID, 0), 2.2);
+  tl.add(() => { stage.orderLayer.style.display = 'none'; }, 0.75);
+  tl.add(() => stage.lad.applyState(LADDER_STATES.resolved, { live: true }), 0.8);
+  tl.add(() => revealBerth(stage, 'coffee', 1), 1.3);
+  landStatement(stage, tl, stage.states[ID][0].statement, 1.7);
+  tl.add(() => stage.applyState(ID, 0), 2.7);
 }
 
-// Cold entry at beat 1: the study reveals over black.
+// Cold entry at beat 1: the ladder world mounts and reveals — 3-07's own
+// resolved-state reveal — the record's lines landing beneath, the coffee
+// arriving at its berth, the objection landing as the statement line.
 function entry(mod, stage) {
   stage.applyState(ID, 0);
   const tl = stage.timeline();
   tl.add(() => {
-    gsap.set([stage.studyStmt, ...stage.rowEls], { opacity: 0 });
+    stage.lad.applyState({ line: false, stages: {}, gates: {} }, { live: false });
+    gsap.set(Object.values(stage.arrivalEls), { opacity: 0 });
+    stage.berths.coffee.df.style.display = 'none';
+    stage.berths.coffee.dot.style.display = 'none';
+    gsap.set(stage.stmt, { opacity: 0 });
   }, 0.05);
-  studyEntry(stage, tl, 0.1);
-  tl.add(() => stage.applyState(ID, 0), 1.8);
+  tl.add(() => stage.lad.applyState(LADDER_STATES.resolved, { live: true }), 0.28);
+  L4.forEach((key, i) => landArrival(stage, tl, key, 0.58 + i * 0.12));
+  tl.add(() => revealBerth(stage, 'coffee', 1), 1.18);
+  landStatement(stage, tl, stage.states[ID][0].statement, 1.55);
+  tl.add(() => stage.applyState(ID, 0), 2.55);
 }
 
 // An arrival line lands at the dimmed row voice (the resolved ladder's
@@ -100,23 +105,13 @@ function landStatement(stage, tl, copy, at, { question = false } = {}) {
 }
 
 const transitions = {
-  // beat 2 — the objection goes on the ladder: the study clears, the ladder
-  // returns in 3-07's own resolved state, the record's lines land beneath,
-  // and the coffee takes the MEDIUM OF EXCHANGE berth.
+  // beat 2 — the placement line: the objection's line gives the slot to the
+  // placement, the ladder world unmoved around it.
   1: (mod, stage) => {
     const tl = stage.timeline();
-    tl.to([stage.study, stage.studyStmt, ...stage.rowEls],
-      { opacity: 0, duration: 0.5, ease: 'power1.inOut' }, 0.1);
-    tl.add(() => {
-      stage.ladderLayer.style.display = '';
-      stage.ladderLayer.style.opacity = '1';
-      stage.lad.applyState({ line: false, stages: {}, gates: {} }, { live: false });
-    }, 0.62);
-    tl.add(() => stage.lad.applyState(LADDER_STATES.resolved, { live: true }), 0.85);
-    L4.forEach((key, i) => landArrival(stage, tl, key, 1.15 + i * 0.12));
-    tl.add(() => revealBerth(stage, 'coffee', 1), 1.75);
-    landStatement(stage, tl, stage.states[ID][1].statement, 2.1);
-    tl.add(() => stage.applyState(ID, 1), 3.1);
+    tl.to(stage.stmt, { opacity: 0, duration: 0.35, ease: 'power1.inOut' }, 0.1);
+    landStatement(stage, tl, stage.states[ID][1].statement, 0.55);
+    tl.add(() => stage.applyState(ID, 1), 1.55);
   },
 
   // beat 3 — THE PAYOFF, its timing protected: the coffee recedes first,
