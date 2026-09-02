@@ -1,6 +1,6 @@
 {
-  "date": "2026-09-02T05:28:58.779Z",
-  "session": "act-3-states-r2",
+  "date": "2026-09-02T08:01:08.398Z",
+  "session": "batch-c-impl-1",
   "limits": {
     "cornerMean": 6,
     "borderMean": 6
@@ -78,8 +78,8 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 245.3,
-      "pxAbove32": 28865,
-      "warmPixelsReported": 8706
+      "pxAbove32": 28479,
+      "warmPixelsReported": 8676
     },
     {
       "id": "s11-b4",
@@ -93,8 +93,8 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 245.3,
-      "pxAbove32": 33612,
-      "warmPixelsReported": 10474
+      "pxAbove32": 33226,
+      "warmPixelsReported": 10444
     },
     {
       "id": "s11-b5",
@@ -108,8 +108,8 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 44234,
-      "warmPixelsReported": 12762
+      "pxAbove32": 43848,
+      "warmPixelsReported": 12732
     },
     {
       "id": "s12-b1",
@@ -122,9 +122,9 @@
       },
       "cornerMean": 0,
       "borderMean": 0,
-      "maxLum": 205.1,
-      "pxAbove32": 26330,
-      "warmPixelsReported": 2022
+      "maxLum": 206,
+      "pxAbove32": 26077,
+      "warmPixelsReported": 1957
     },
     {
       "id": "s12-b2",
@@ -243,8 +243,8 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 250.1,
-      "pxAbove32": 50181,
-      "warmPixelsReported": 15514
+      "pxAbove32": 49795,
+      "warmPixelsReported": 15484
     },
     {
       "id": "s13-b6",
@@ -258,8 +258,8 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 57592,
-      "warmPixelsReported": 16571
+      "pxAbove32": 57206,
+      "warmPixelsReported": 16541
     },
     {
       "id": "s14-b1",
@@ -288,8 +288,8 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 43214,
-      "warmPixelsReported": 16553
+      "pxAbove32": 42828,
+      "warmPixelsReported": 16523
     },
     {
       "id": "s14-b3",
@@ -303,8 +303,8 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 46987,
-      "warmPixelsReported": 20010
+      "pxAbove32": 46601,
+      "warmPixelsReported": 19980
     },
     {
       "id": "s14-b4",
@@ -318,8 +318,8 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 46762,
-      "warmPixelsReported": 9421
+      "pxAbove32": 46441,
+      "warmPixelsReported": 9174
     },
     {
       "id": "s15-b1-a",
@@ -502,7 +502,7 @@
       "warmPixelsReported": 513
     }
   ],
-  "checks": 22,
+  "checks": 23,
   "failures": 0,
   "results": [
     {
@@ -531,6 +531,11 @@
       "detail": "recorded"
     },
     {
+      "name": "MAP: the candidate-A selection is recorded on the S15 row (Batch C ruling 1)",
+      "ok": true,
+      "detail": "recorded"
+    },
+    {
       "name": "MAP: every cell’s class is the class the map rules for its frame",
       "ok": true,
       "detail": "every framed cell agrees with the map"
@@ -546,24 +551,24 @@
       "detail": "all named"
     },
     {
-      "name": "BEATS: every beat of the frozen map is covered — S15 once per candidate, all others once, Act III is 25",
+      "name": "BEATS: the approved set covers every beat of the frozen map exactly once — Act III is 25",
       "ok": true,
-      "detail": "S11 5×1 · S12 4×1 · S13 6×1 · S14 4×1 · S15 6×2 = 25 beats, 31 cells"
+      "detail": "S11 5 · S12 4 · S13 6 · S14 4 · S15 6 = 25 approved beats"
     },
     {
-      "name": "CANDIDATES: no cell outside the reopened Scene 15 carries a system or a selection class",
+      "name": "SELECTION: the six candidate-A cells are the approved S15 states, and the six B cells are on file",
+      "ok": true,
+      "detail": "A approved 6/6 · B on-file 6/6"
+    },
+    {
+      "name": "SELECTION: no cell outside Scene 15 carries a candidate system",
       "ok": true,
       "detail": "19 non-S15 cells clean"
     },
     {
-      "name": "CANDIDATES: every S15 cell is one of the two ruled systems and stands pending the presenter’s selection",
+      "name": "SELECTION: the only review classes on the record are approved and on-file (the go-ahead is given)",
       "ok": true,
-      "detail": "12/12 candidate cells, A and B"
-    },
-    {
-      "name": "CANDIDATES: the only review classes on the sheet are pending-review, determined and pending-selection",
-      "ok": true,
-      "detail": "pending-review · determined · pending-selection"
+      "detail": "approved · on-file"
     },
     {
       "name": "THREAD: the disc (the legacy token) is built exactly once, inside the triad hub — and ClaimObject appears nowhere",
