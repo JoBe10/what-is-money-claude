@@ -1,37 +1,43 @@
-// Act III states — the FAST-scope per-cell checks (the Act III states brief §4).
+// Act III states r2 — the FAST-scope per-cell checks (the r2 brief §4).
 //
 // The measured cell discipline every sheet in this project carries, plus the
-// checks that make this brief's own rules checkable rather than asserted. The
-// measured four are the dark-field gate's own terms (docs/dark-field-manifest.md):
+// checks that make the r2 brief's own rules checkable rather than asserted.
+// The measured four are the dark-field gate's own terms:
 //   1. corner patches (6% of the short side) mean luminance ≤ 6/255;
 //   2. outer 2% border ring mean luminance ≤ 6/255 — nothing reaches the edge;
 //   3. content present — some pixels above luminance 32;
 //   4. the cell is 1920 × 1080.
 //
-// And the sheet-level rules, gated:
+// And the sheet-level rules, gated against the FIVE R2 RULINGS:
 //
-//   MAP AGREEMENT — every cell's class is the class docs/act-3-provenance.md
-//   rules for its frame, no cell is unclassified, every PORT/ADAPT names its
-//   legacy source.
+//   MAP AGREEMENT — every cell's class is the class the amended
+//   docs/act-3-provenance.md rules for its frame (S11 ADAPT · S12 PORT ·
+//   S13 ADAPT · S14 ADAPT · S15 NEW, presenter-reopened).
 //
-//   BEAT COVERAGE — all 25 beats of the frozen map, once each, at the frozen
-//   per-scene counts.
+//   BEAT COVERAGE — all 25 beats of the frozen map; S15's six beats exactly
+//   twice, once per candidate system; every other beat exactly once. 31 cells.
 //
-//   NO CANDIDATES ANYWHERE — the ruled map has no live NEW frame, and the
-//   brief says "no candidates, no design": every cell is a beat cell, no cell
-//   is a candidate or on file, and no beat carries more than one cell.
+//   CANDIDATES ONLY WHERE REOPENED — S15's cells are the two ruled systems
+//   (one A and one B per beat, pending-selection); no other cell carries a
+//   system or a selection class.
 //
-//   THE THREAD — the ClaimObject appears in exactly one builder, s15-b6's
-//   (the held question), and in no other cell.
+//   THE THREAD (ruling 1) — the disc is the triad's center: the legacy token
+//   (luminous-disc s1q-token s1q-token--small s3f-functions__token) is built
+//   in exactly one place, inside the triad builder's hub branch; ClaimObject
+//   appears nowhere; no token and no render enters either tower candidate.
 //
-//   THE REGISTER BOUNDARY, AT THE SOURCE — the ladder builder removes the
-//   grammar glyphs and stands renders in stops (the one ruled change); the
-//   tower cells (a structural diagram) put no dark-field render inside the
-//   diagram — the only DOM the tower builder adds beyond the mounted legacy
-//   component and its own copy rows is the ruled disc return.
+//   THE NEUTRAL MARKS (ruling 3) — the stage marks are collectible / store /
+//   medium / unit; the triad's job objects are store / medium / unit; NO
+//   MONETARY ASSET IS A STAGE MARK — monetary renders reach the ladder only
+//   through the berths (the climbers).
+//
+//   CARRIED BYTES (the brief §4) — s14-b1.png is byte-identical to r1,
+//   proven against the recorded sha256, and the retired r1 stagings are on
+//   file under their retired names.
 //
 // Usage: node check-cells.cjs [--port 5273]
 const { chromium } = require('playwright');
+const crypto = require('crypto');
 const path = require('path');
 const fs = require('fs');
 
@@ -43,18 +49,32 @@ const OUT = path.join(__dirname, '..', 'states');
 
 const FROZEN = { S11: 5, S12: 4, S13: 6, S14: 4, S15: 6 };
 const TOTAL_BEATS = 25;
+const TOTAL_CELLS = 31;
 
-// The ruled map, transcribed. The MAP AGREEMENT check compares this against
-// docs/act-3-provenance.md itself as well as against the cells, so a
-// transcription drift here fails rather than passes quietly.
+// The ruled map as amended 2 September 2026 (the r2 rulings), transcribed.
+// The MAP AGREEMENT check compares this against docs/act-3-provenance.md
+// itself as well as against the cells, so a transcription drift here fails
+// rather than passes quietly.
 const RULED = {
-  'S11-F1': 'PORT',
-  'S12-F1': 'ADAPT',
+  'S11-F1': 'ADAPT',
+  'S12-F1': 'PORT',
   'S13-F1': 'ADAPT',
   'S14-F1': 'ADAPT',
-  'S15-F1': 'PORT',
-  'S15-F2': 'PORT'
+  'S15-F1': 'NEW',
+  'S15-F2': 'NEW'
 };
+
+// The carried cell's r1 bytes (the brief §4's byte-identity proof).
+const CARRIED_SHA = {
+  's14-b1.png': 'e7cc6fff9a1142573f5a30878505e8625f1c57ca1cac1b95f881167458821081'
+};
+
+// The retired r1 stagings, on file under the aesthetic law.
+const RETIRED_FILES = [
+  's12-b3-block.png',
+  's15-b1-boxes.png', 's15-b2-boxes.png', 's15-b3-boxes.png',
+  's15-b4-boxes.png', 's15-b5-boxes.png', 's15-b6-boxes.png'
+];
 
 const results = [];
 function check(name, ok, detail) {
@@ -134,6 +154,8 @@ function check(name, ok, detail) {
   await browser.close();
   check(`CELLS: ${cells.length} measured — corner ≤ 6, border ≤ 6, content present, 1920×1080`,
     cellFailures === 0, cellFailures ? `${cellFailures} failing` : `${cells.length}/${cells.length}`);
+  check(`CELLS: the sheet carries exactly ${TOTAL_CELLS} cells (25 beats; S15 twice, once per candidate)`,
+    cells.length === TOTAL_CELLS, `${cells.length}`);
 
   // ---- MAP AGREEMENT --------------------------------------------------------
   {
@@ -143,12 +165,16 @@ function check(name, ok, detail) {
       const row = new RegExp(`\\*\\*${frame}[^|]*\\|\\s*\\*\\*${klass}\\*\\*`);
       return !row.test(map);
     }).map(([f]) => f);
-    check('MAP: the ruled classes transcribed here are the classes docs/act-3-provenance.md states',
+    check('MAP: the ruled classes transcribed here are the classes the amended docs/act-3-provenance.md states',
       drift.length === 0, drift.join(', ') || `${Object.keys(RULED).length}/${Object.keys(RULED).length} rows agree`);
 
     const notBuilt = /coordination scales[^|]*\|\s*\*\*NEW — not built\*\*/.test(map);
     check('MAP: the coordination-scales NEW row is recorded as not built',
       notBuilt, notBuilt ? 'recorded' : 'MISSING');
+
+    const reopened = /S15[^|]*presenter-reopened|Presenter-reopened by name/i.test(map);
+    check('MAP: Scene 15 is recorded as presenter-reopened by name (ruling 4)',
+      reopened, reopened ? 'recorded' : 'MISSING');
 
     const bad = cells
       .filter((c) => c.frame && RULED[c.frame])
@@ -161,10 +187,8 @@ function check(name, ok, detail) {
     check('MAP: no cell is unclassified', unclassed.length === 0,
       unclassed.join(', ') || `${cells.length}/${cells.length} carry a frame and a class`);
 
-    const sourceless = cells
-      .filter((c) => (c.klass === 'PORT' || c.klass === 'ADAPT') && !c.source)
-      .map((c) => c.id);
-    check('MAP: every PORT and ADAPT cell names its legacy source',
+    const sourceless = cells.filter((c) => !c.source).map((c) => c.id);
+    check('MAP: every cell names its source (legacy slide, or the ruling that opened it)',
       sourceless.length === 0, sourceless.join(', ') || 'all named');
   }
 
@@ -175,86 +199,139 @@ function check(name, ok, detail) {
     const detail = [];
     Object.entries(FROZEN).forEach(([scene, n]) => {
       const live = cells.filter((c) => c.scene === scene && c.beat);
+      const per = scene === 'S15' ? 2 : 1;
       const beats = new Set(live.map((c) => c.beat));
-      if (live.length !== beats.size) bad.push(`${scene}: ${live.length} cells over ${beats.size} beats — a beat is covered twice`);
       total += beats.size;
-      detail.push(`${scene} ${beats.size}`);
+      detail.push(`${scene} ${beats.size}×${per}`);
       if (beats.size !== n) bad.push(`${scene}: ${beats.size} beats vs the frozen ${n}`);
-      for (let b = 1; b <= n; b += 1) if (!beats.has(b)) bad.push(`${scene} b${b} missing`);
+      if (live.length !== n * per) bad.push(`${scene}: ${live.length} cells vs ${n * per}`);
+      for (let b = 1; b <= n; b += 1) {
+        const at = live.filter((c) => c.beat === b);
+        if (at.length !== per) bad.push(`${scene} b${b}: ${at.length} cells vs ${per}`);
+        if (scene === 'S15') {
+          const systems = at.map((c) => c.system).sort().join('');
+          if (systems !== 'AB') bad.push(`S15 b${b}: systems [${systems}] vs one A and one B`);
+        }
+      }
     });
     if (total !== TOTAL_BEATS) bad.push(`total ${total} vs ${TOTAL_BEATS}`);
-    check(`BEATS: every beat of the frozen map is on the sheet exactly once, and Act III is ${TOTAL_BEATS}`,
-      bad.length === 0, bad.join(' · ') || `${detail.join(' · ')} = ${total}`);
+    check(`BEATS: every beat of the frozen map is covered — S15 once per candidate, all others once, Act III is ${TOTAL_BEATS}`,
+      bad.length === 0, bad.join(' · ') || `${detail.join(' · ')} = ${total} beats, ${cells.length} cells`);
   }
 
-  // ---- NO CANDIDATES ANYWHERE ----------------------------------------------
+  // ---- CANDIDATES ONLY WHERE REOPENED ---------------------------------------
   {
-    const nonBeat = cells.filter((c) => !c.beat || c.review === 'on-file' ||
-      c.review === 'pending-selection' || c.system).map((c) => c.id);
-    check('NO CANDIDATES: every cell is a beat cell — nothing on file, nothing pending selection, no candidate systems',
-      nonBeat.length === 0, nonBeat.join(', ') || `${cells.length}/${cells.length} beat cells, 0 candidates`);
+    const strayCandidate = cells
+      .filter((c) => c.scene !== 'S15')
+      .filter((c) => c.system || c.review === 'pending-selection')
+      .map((c) => c.id);
+    check('CANDIDATES: no cell outside the reopened Scene 15 carries a system or a selection class',
+      strayCandidate.length === 0, strayCandidate.join(', ') || `${cells.filter((c) => c.scene !== 'S15').length} non-S15 cells clean`);
+
+    const s15Bad = cells
+      .filter((c) => c.scene === 'S15')
+      .filter((c) => !['A', 'B'].includes(c.system) || c.review !== 'pending-selection')
+      .map((c) => c.id);
+    check('CANDIDATES: every S15 cell is one of the two ruled systems and stands pending the presenter’s selection',
+      s15Bad.length === 0, s15Bad.join(', ') || '12/12 candidate cells, A and B');
 
     const reviews = new Set(cells.map((c) => c.review));
-    const allowed = ['pending-review', 'determined', 'approved-port'];
+    const allowed = ['pending-review', 'determined', 'pending-selection'];
     const stray = [...reviews].filter((r) => !allowed.includes(r));
-    check('NO CANDIDATES: the only review classes on the sheet are pending-review, determined and approved-port',
+    check('CANDIDATES: the only review classes on the sheet are pending-review, determined and pending-selection',
       stray.length === 0, stray.join(', ') || allowed.join(' · '));
-
-    const flagless = cells.filter((c) => c.review === 'pending-review' && !c.flag && c.klass === 'PORT')
-      .map((c) => c.id);
-    check('FLAGS: every pending-review PORT carries its plain-English flag',
-      flagless.length === 0, flagless.join(', ') || 'every flagged port says why');
   }
 
   // ---- SOURCE CHECKS --------------------------------------------------------
   {
     const src = fs.readFileSync(path.join(__dirname, 'states.mjs'), 'utf8');
 
-    // The thread: the ClaimObject is imported once and constructed exactly
-    // once, inside the tower builder's disc branch — s15-b6's return.
-    const constructions = (src.match(/ClaimObject\(\)/g) || []).length;
-    const discGated = /if \(disc\) \{[\s\S]{0,400}ClaimObject\(\)/.test(src);
-    const b6Disc = /cell\('s15-b6'[\s\S]{0,2400}\{ disc: true \}/.test(src);
-    const noOtherDisc = !/disc: true/.test(src.replace(/cell\('s15-b6'[\s\S]{0,2400}\{ disc: true \}/, ''));
-    check('THREAD: the ClaimObject is built exactly once, gated behind the disc return, and only s15-b6 asks for it',
-      constructions === 1 && discGated && b6Disc && noOtherDisc,
-      `${constructions} construction(s) · gated ${discGated} · s15-b6 ${b6Disc} · nowhere else ${noOtherDisc}`);
+    // THE THREAD (ruling 1): the disc is the legacy token, built exactly once,
+    // inside the triad builder's hub branch; ClaimObject appears nowhere.
+    // Constructions are className assignments — the header comment naming the
+    // classes is documentation, not a build site.
+    const tokenAssign = "className = 'luminous-disc s1q-token s1q-token--small s3f-functions__token'";
+    const tokenCount = src.split(tokenAssign).length - 1;
+    const hubGated = new RegExp(`if \\(hub\\) \\{[\\s\\S]{0,600}${tokenAssign.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`).test(src);
+    const noClaimObject = !/ClaimObject/.test(src);
+    check('THREAD: the disc (the legacy token) is built exactly once, inside the triad hub — and ClaimObject appears nowhere',
+      tokenCount === 1 && hubGated && noClaimObject,
+      `token constructions ${tokenCount} · hub-gated ${hubGated} · ClaimObject absent ${noClaimObject}`);
+
+    // The disc is NOT on the tower: neither candidate builder touches the
+    // token, a photo, or a DarkFieldImage — line grammar only (ruling 4).
+    const aBody = src.slice(src.indexOf('function candidateA('), src.indexOf('// ---- CANDIDATE B'));
+    const bBody = src.slice(src.indexOf('function candidateB('), src.indexOf('// ====', src.indexOf('function candidateB(')));
+    const clean = (body) => !/DarkFieldImage\(|photo\(|luminous-disc|s1q-token/.test(body);
+    check('REGISTER: no render and no disc enters either tower candidate — line grammar throughout',
+      clean(aBody) && clean(bBody), `candidate A clean ${clean(aBody)} · candidate B clean ${clean(bBody)}`);
 
     // The one ruled change, at the source: the ladder builder removes the
     // grammar glyph from every stop and stands a DarkFieldImage in it.
     const ladderStart = src.indexOf('function ladder(');
-    const ladderBody = src.slice(ladderStart, src.indexOf('function orderOverlay(', ladderStart));
-    check('LADDER: the builder removes the stop glyphs and stands renders in the stops (the one ruled change)',
+    const ladderBody = src.slice(ladderStart, src.indexOf('// `3-03`', ladderStart));
+    check('LADDER: the builder removes the stop glyphs and stands renders in the stops (the standing ruled change)',
       /__glyph'\)/.test(ladderBody) && /g\.remove\(\)/.test(ladderBody) && /DarkFieldImage\(/.test(ladderBody),
       'glyphs removed · DarkFieldImage in the stop · the component’s state machine drives presence');
 
     // The band box: both axes capped at 188 — the rails-law box as amended.
-    check('BAND: the stage marks use the 188×188 contain box (the rails law, r2.5)',
+    check('BAND: the stage and job marks use the 188×188 contain box (the rails law, r2.5)',
       /const BAND = 188/.test(src) && /Math\.min\(BAND, BAND \/ ar\)/.test(src),
       '188 cap on both axes, each render in a box of its own aspect');
 
-    // The tower is a structural diagram: its builder mounts the legacy
-    // component and adds only the copy rows and the ruled disc — no photo()
-    // and no DarkFieldImage inside the tower world.
-    const towerBody = src.slice(src.indexOf('function tower('), src.indexOf('// ====', src.indexOf('function tower(')));
-    check('REGISTER: no dark-field render enters the tower diagram — the disc return is the only addition',
-      !/photo\(/.test(towerBody) && !/DarkFieldImage\(/.test(towerBody) && /ClaimObject\(\)/.test(towerBody),
-      'tower builder carries the mounted diagram, the copy rows, and the disc only');
-
-    // The stage-mark assignments are the recorded ones.
-    const assigns = ['single_cowrie', "sov: { subject: 'gold'", "moe: { subject: 'coinage'", "uoa: { subject: 'ledger'"];
+    // THE NEUTRAL MARKS (ruling 3): the four stage marks and the three job
+    // objects are the presenter's neutral set, and no monetary asset stands
+    // as a stage mark — monetary renders reach the ladder only as climbers.
+    const assigns = ["collectible: { subject: 'collectible'", "sov: { subject: 'store'",
+      "moe: { subject: 'medium'", "uoa: { subject: 'unit'"];
     const missing = assigns.filter((a) => !src.includes(a));
-    check('ASSIGNMENTS: collectible = single_cowrie (ruled) · gold / coinage / ledger (honest, flagged)',
-      missing.length === 0, missing.join(', ') || 'as recorded in docs/act-3-provenance.md §2');
+    const stageBlock = src.slice(src.indexOf('const STAGE_RENDERS'), src.indexOf('const BAND_CLEAR'));
+    const monetary = ['gold', 'coinage', 'ledger', 'single_cowrie', 'bitcoin', 'gold_certificate', 'fiat', 'metals']
+      .filter((s) => new RegExp(`'${s}'`).test(stageBlock));
+    check('ASSIGNMENTS: the stage marks are the presenter’s neutral set — collectible · store · medium · unit — and no monetary asset is a stage mark',
+      missing.length === 0 && monetary.length === 0,
+      (missing.length ? `missing ${missing.join(', ')}` : 'all four recorded') + (monetary.length ? ` · MONETARY IN STAGES: ${monetary.join(', ')}` : ' · stages carry no monetary asset'));
+
+    const jobAssigns = ["subject: 'store'", "subject: 'medium'", "subject: 'unit'"];
+    const jobsBlock = src.slice(src.indexOf('const JOBS'), src.indexOf('const CONTINUITY'));
+    const jobsOk = jobAssigns.every((a) => jobsBlock.includes(a));
+    check('ASSIGNMENTS: the triad’s job objects are the same three marks (store · medium · unit) — one family for jobs and stages',
+      jobsOk, jobsOk ? 'the three job objects match the stage marks' : 'JOB OBJECTS DRIFTED');
+
+    // The climbers: bitcoin appears only as a berth subject (s14-b3's coin).
+    const berthOnly = !/STAGE_RENDERS[^}]*bitcoin/.test(src) && /subject: 'bitcoin'/.test(src);
+    check('CLIMBERS: the coin reaches the ladder only through a berth — S14 b3 is the only monetary object in sight',
+      berthOnly, 'bitcoin at the sov berth only, never a stage mark');
+  }
+
+  // ---- CARRIED BYTES + RETIRED FILES ---------------------------------------
+  {
+    const bad = [];
+    Object.entries(CARRIED_SHA).forEach(([file, sha]) => {
+      const now = crypto.createHash('sha256').update(fs.readFileSync(path.join(OUT, file))).digest('hex');
+      if (now !== sha) bad.push(`${file}: ${now.slice(0, 16)}… vs r1 ${sha.slice(0, 16)}…`);
+    });
+    check('CARRIED: s14-b1.png is byte-identical to its r1 bytes (sha256 proven)',
+      bad.length === 0, bad.join(' · ') || 'e7cc6fff… matches');
+
+    const carriedRecorded = (record.carried || []).some((c) => c.id === 's14-b1');
+    check('CARRIED: states.json records the carried cell and its hash',
+      carriedRecorded, carriedRecorded ? 'recorded' : 'MISSING');
+
+    const missingRetired = RETIRED_FILES.filter((f) => !fs.existsSync(path.join(OUT, f)));
+    check('RETIRED: the superseded r1 stagings are on file under their retired names (s12-b3-block, s15-b*-boxes)',
+      missingRetired.length === 0, missingRetired.join(', ') || `${RETIRED_FILES.length}/${RETIRED_FILES.length} on file`);
   }
 
   fs.writeFileSync(path.join(__dirname, 'check-cells.json'), JSON.stringify({
     date: new Date().toISOString(),
-    session: 'act-3-states',
+    session: 'act-3-states-r2',
     limits: { cornerMean: 6, borderMean: 6 },
-    frozenBeatMap: { ...FROZEN, total: TOTAL_BEATS },
+    frozenBeatMap: { ...FROZEN, total: TOTAL_BEATS, cells: TOTAL_CELLS },
     ruledClasses: RULED,
-    reportedNotGated: 'warmPixelsReported — the act carries the accent by design at the ladder’s foundation state, the tower’s base and the disc’s return, so warmth is evidence here rather than a gate.',
+    carriedSha: CARRIED_SHA,
+    retiredFiles: RETIRED_FILES,
+    reportedNotGated: 'warmPixelsReported — the act carries the accent by design at the ladder’s foundation state, both candidates’ foundation scopes and the disc at the triad’s center, so warmth is evidence here rather than a gate.',
     cells: measured,
     checks: results.length,
     failures: results.filter((r) => !r.ok).length,

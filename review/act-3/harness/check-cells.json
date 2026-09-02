@@ -1,6 +1,6 @@
 {
-  "date": "2026-09-01T05:10:29.062Z",
-  "session": "act-3-states",
+  "date": "2026-09-02T05:28:58.779Z",
+  "session": "act-3-states-r2",
   "limits": {
     "cornerMean": 6,
     "borderMean": 6
@@ -11,17 +11,30 @@
     "S13": 6,
     "S14": 4,
     "S15": 6,
-    "total": 25
+    "total": 25,
+    "cells": 31
   },
   "ruledClasses": {
-    "S11-F1": "PORT",
-    "S12-F1": "ADAPT",
+    "S11-F1": "ADAPT",
+    "S12-F1": "PORT",
     "S13-F1": "ADAPT",
     "S14-F1": "ADAPT",
-    "S15-F1": "PORT",
-    "S15-F2": "PORT"
+    "S15-F1": "NEW",
+    "S15-F2": "NEW"
   },
-  "reportedNotGated": "warmPixelsReported — the act carries the accent by design at the ladder’s foundation state, the tower’s base and the disc’s return, so warmth is evidence here rather than a gate.",
+  "carriedSha": {
+    "s14-b1.png": "e7cc6fff9a1142573f5a30878505e8625f1c57ca1cac1b95f881167458821081"
+  },
+  "retiredFiles": [
+    "s12-b3-block.png",
+    "s15-b1-boxes.png",
+    "s15-b2-boxes.png",
+    "s15-b3-boxes.png",
+    "s15-b4-boxes.png",
+    "s15-b5-boxes.png",
+    "s15-b6-boxes.png"
+  ],
+  "reportedNotGated": "warmPixelsReported — the act carries the accent by design at the ladder’s foundation state, both candidates’ foundation scopes and the disc at the triad’s center, so warmth is evidence here rather than a gate.",
   "cells": [
     {
       "id": "s11-b1",
@@ -34,9 +47,9 @@
       },
       "cornerMean": 0,
       "borderMean": 0,
-      "maxLum": 179,
-      "pxAbove32": 493,
-      "warmPixelsReported": 0
+      "maxLum": 245.3,
+      "pxAbove32": 15409,
+      "warmPixelsReported": 3581
     },
     {
       "id": "s11-b2",
@@ -49,9 +62,9 @@
       },
       "cornerMean": 0,
       "borderMean": 0,
-      "maxLum": 250,
-      "pxAbove32": 5342,
-      "warmPixelsReported": 667
+      "maxLum": 245.3,
+      "pxAbove32": 21087,
+      "warmPixelsReported": 5428
     },
     {
       "id": "s11-b3",
@@ -64,9 +77,9 @@
       },
       "cornerMean": 0,
       "borderMean": 0,
-      "maxLum": 250,
-      "pxAbove32": 11398,
-      "warmPixelsReported": 1549
+      "maxLum": 245.3,
+      "pxAbove32": 28865,
+      "warmPixelsReported": 8706
     },
     {
       "id": "s11-b4",
@@ -79,9 +92,9 @@
       },
       "cornerMean": 0,
       "borderMean": 0,
-      "maxLum": 250,
-      "pxAbove32": 15214,
-      "warmPixelsReported": 2115
+      "maxLum": 245.3,
+      "pxAbove32": 33612,
+      "warmPixelsReported": 10474
     },
     {
       "id": "s11-b5",
@@ -95,8 +108,8 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 25836,
-      "warmPixelsReported": 4403
+      "pxAbove32": 44234,
+      "warmPixelsReported": 12762
     },
     {
       "id": "s12-b1",
@@ -109,9 +122,9 @@
       },
       "cornerMean": 0,
       "borderMean": 0,
-      "maxLum": 191,
-      "pxAbove32": 15020,
-      "warmPixelsReported": 610
+      "maxLum": 205.1,
+      "pxAbove32": 26330,
+      "warmPixelsReported": 2022
     },
     {
       "id": "s12-b2",
@@ -139,9 +152,9 @@
       },
       "cornerMean": 0,
       "borderMean": 0,
-      "maxLum": 255,
-      "pxAbove32": 49334,
-      "warmPixelsReported": 2866
+      "maxLum": 250,
+      "pxAbove32": 10885,
+      "warmPixelsReported": 1886
     },
     {
       "id": "s12-b4",
@@ -185,8 +198,8 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 17334,
-      "warmPixelsReported": 10825
+      "pxAbove32": 12609,
+      "warmPixelsReported": 6372
     },
     {
       "id": "s13-b3",
@@ -200,8 +213,8 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 28147,
-      "warmPixelsReported": 19122
+      "pxAbove32": 18066,
+      "warmPixelsReported": 8268
     },
     {
       "id": "s13-b4",
@@ -215,8 +228,8 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 40533,
-      "warmPixelsReported": 20534
+      "pxAbove32": 30452,
+      "warmPixelsReported": 9680
     },
     {
       "id": "s13-b5",
@@ -229,9 +242,9 @@
       },
       "cornerMean": 0,
       "borderMean": 0,
-      "maxLum": 253.2,
-      "pxAbove32": 70704,
-      "warmPixelsReported": 38991
+      "maxLum": 250.1,
+      "pxAbove32": 50181,
+      "warmPixelsReported": 15514
     },
     {
       "id": "s13-b6",
@@ -245,8 +258,8 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 78115,
-      "warmPixelsReported": 40048
+      "pxAbove32": 57592,
+      "warmPixelsReported": 16571
     },
     {
       "id": "s14-b1",
@@ -275,8 +288,8 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 63737,
-      "warmPixelsReported": 40030
+      "pxAbove32": 43214,
+      "warmPixelsReported": 16553
     },
     {
       "id": "s14-b3",
@@ -290,8 +303,8 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 67510,
-      "warmPixelsReported": 43487
+      "pxAbove32": 46987,
+      "warmPixelsReported": 20010
     },
     {
       "id": "s14-b4",
@@ -305,11 +318,11 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 30015,
-      "warmPixelsReported": 2513
+      "pxAbove32": 46762,
+      "warmPixelsReported": 9421
     },
     {
-      "id": "s15-b1",
+      "id": "s15-b1-a",
       "pass": true,
       "checks": {
         "corner": true,
@@ -319,12 +332,12 @@
       },
       "cornerMean": 0,
       "borderMean": 0,
-      "maxLum": 193,
-      "pxAbove32": 3558,
-      "warmPixelsReported": 350
+      "maxLum": 96,
+      "pxAbove32": 4348,
+      "warmPixelsReported": 187
     },
     {
-      "id": "s15-b2",
+      "id": "s15-b2-a",
       "pass": true,
       "checks": {
         "corner": true,
@@ -334,12 +347,12 @@
       },
       "cornerMean": 0,
       "borderMean": 0,
-      "maxLum": 193,
-      "pxAbove32": 8392,
-      "warmPixelsReported": 1151
+      "maxLum": 191,
+      "pxAbove32": 9783,
+      "warmPixelsReported": 862
     },
     {
-      "id": "s15-b3",
+      "id": "s15-b3-a",
       "pass": true,
       "checks": {
         "corner": true,
@@ -349,12 +362,12 @@
       },
       "cornerMean": 0,
       "borderMean": 0,
-      "maxLum": 193,
-      "pxAbove32": 16604,
-      "warmPixelsReported": 2506
+      "maxLum": 221.7,
+      "pxAbove32": 33359,
+      "warmPixelsReported": 2347
     },
     {
-      "id": "s15-b4",
+      "id": "s15-b4-a",
       "pass": true,
       "checks": {
         "corner": true,
@@ -364,27 +377,12 @@
       },
       "cornerMean": 0,
       "borderMean": 0,
-      "maxLum": 193,
-      "pxAbove32": 25225,
-      "warmPixelsReported": 4392
+      "maxLum": 221.7,
+      "pxAbove32": 41980,
+      "warmPixelsReported": 4233
     },
     {
-      "id": "s15-b5",
-      "pass": true,
-      "checks": {
-        "corner": true,
-        "border": true,
-        "content": true,
-        "size": true
-      },
-      "cornerMean": 0,
-      "borderMean": 0,
-      "maxLum": 255,
-      "pxAbove32": 32508,
-      "warmPixelsReported": 4653
-    },
-    {
-      "id": "s15-b6",
+      "id": "s15-b5-a",
       "pass": true,
       "checks": {
         "corner": true,
@@ -395,25 +393,140 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 25426,
-      "warmPixelsReported": 5152
+      "pxAbove32": 48104,
+      "warmPixelsReported": 9936
+    },
+    {
+      "id": "s15-b6-a",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 221.7,
+      "pxAbove32": 27424,
+      "warmPixelsReported": 7114
+    },
+    {
+      "id": "s15-b1-b",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 151,
+      "pxAbove32": 2700,
+      "warmPixelsReported": 264
+    },
+    {
+      "id": "s15-b2-b",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 191,
+      "pxAbove32": 6756,
+      "warmPixelsReported": 938
+    },
+    {
+      "id": "s15-b3-b",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 223.6,
+      "pxAbove32": 15365,
+      "warmPixelsReported": 2217
+    },
+    {
+      "id": "s15-b4-b",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 223.6,
+      "pxAbove32": 23986,
+      "warmPixelsReported": 4103
+    },
+    {
+      "id": "s15-b5-b",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 28630,
+      "warmPixelsReported": 3324
+    },
+    {
+      "id": "s15-b6-b",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 7958,
+      "warmPixelsReported": 513
     }
   ],
-  "checks": 15,
+  "checks": 22,
   "failures": 0,
   "results": [
     {
-      "name": "CELLS: 25 measured — corner ≤ 6, border ≤ 6, content present, 1920×1080",
+      "name": "CELLS: 31 measured — corner ≤ 6, border ≤ 6, content present, 1920×1080",
       "ok": true,
-      "detail": "25/25"
+      "detail": "31/31"
     },
     {
-      "name": "MAP: the ruled classes transcribed here are the classes docs/act-3-provenance.md states",
+      "name": "CELLS: the sheet carries exactly 31 cells (25 beats; S15 twice, once per candidate)",
+      "ok": true,
+      "detail": "31"
+    },
+    {
+      "name": "MAP: the ruled classes transcribed here are the classes the amended docs/act-3-provenance.md states",
       "ok": true,
       "detail": "6/6 rows agree"
     },
     {
       "name": "MAP: the coordination-scales NEW row is recorded as not built",
+      "ok": true,
+      "detail": "recorded"
+    },
+    {
+      "name": "MAP: Scene 15 is recorded as presenter-reopened by name (ruling 4)",
       "ok": true,
       "detail": "recorded"
     },
@@ -425,57 +538,82 @@
     {
       "name": "MAP: no cell is unclassified",
       "ok": true,
-      "detail": "25/25 carry a frame and a class"
+      "detail": "31/31 carry a frame and a class"
     },
     {
-      "name": "MAP: every PORT and ADAPT cell names its legacy source",
+      "name": "MAP: every cell names its source (legacy slide, or the ruling that opened it)",
       "ok": true,
       "detail": "all named"
     },
     {
-      "name": "BEATS: every beat of the frozen map is on the sheet exactly once, and Act III is 25",
+      "name": "BEATS: every beat of the frozen map is covered — S15 once per candidate, all others once, Act III is 25",
       "ok": true,
-      "detail": "S11 5 · S12 4 · S13 6 · S14 4 · S15 6 = 25"
+      "detail": "S11 5×1 · S12 4×1 · S13 6×1 · S14 4×1 · S15 6×2 = 25 beats, 31 cells"
     },
     {
-      "name": "NO CANDIDATES: every cell is a beat cell — nothing on file, nothing pending selection, no candidate systems",
+      "name": "CANDIDATES: no cell outside the reopened Scene 15 carries a system or a selection class",
       "ok": true,
-      "detail": "25/25 beat cells, 0 candidates"
+      "detail": "19 non-S15 cells clean"
     },
     {
-      "name": "NO CANDIDATES: the only review classes on the sheet are pending-review, determined and approved-port",
+      "name": "CANDIDATES: every S15 cell is one of the two ruled systems and stands pending the presenter’s selection",
       "ok": true,
-      "detail": "pending-review · determined · approved-port"
+      "detail": "12/12 candidate cells, A and B"
     },
     {
-      "name": "FLAGS: every pending-review PORT carries its plain-English flag",
+      "name": "CANDIDATES: the only review classes on the sheet are pending-review, determined and pending-selection",
       "ok": true,
-      "detail": "every flagged port says why"
+      "detail": "pending-review · determined · pending-selection"
     },
     {
-      "name": "THREAD: the ClaimObject is built exactly once, gated behind the disc return, and only s15-b6 asks for it",
+      "name": "THREAD: the disc (the legacy token) is built exactly once, inside the triad hub — and ClaimObject appears nowhere",
       "ok": true,
-      "detail": "1 construction(s) · gated true · s15-b6 true · nowhere else true"
+      "detail": "token constructions 1 · hub-gated true · ClaimObject absent true"
     },
     {
-      "name": "LADDER: the builder removes the stop glyphs and stands renders in the stops (the one ruled change)",
+      "name": "REGISTER: no render and no disc enters either tower candidate — line grammar throughout",
+      "ok": true,
+      "detail": "candidate A clean true · candidate B clean true"
+    },
+    {
+      "name": "LADDER: the builder removes the stop glyphs and stands renders in the stops (the standing ruled change)",
       "ok": true,
       "detail": "glyphs removed · DarkFieldImage in the stop · the component’s state machine drives presence"
     },
     {
-      "name": "BAND: the stage marks use the 188×188 contain box (the rails law, r2.5)",
+      "name": "BAND: the stage and job marks use the 188×188 contain box (the rails law, r2.5)",
       "ok": true,
       "detail": "188 cap on both axes, each render in a box of its own aspect"
     },
     {
-      "name": "REGISTER: no dark-field render enters the tower diagram — the disc return is the only addition",
+      "name": "ASSIGNMENTS: the stage marks are the presenter’s neutral set — collectible · store · medium · unit — and no monetary asset is a stage mark",
       "ok": true,
-      "detail": "tower builder carries the mounted diagram, the copy rows, and the disc only"
+      "detail": "all four recorded · stages carry no monetary asset"
     },
     {
-      "name": "ASSIGNMENTS: collectible = single_cowrie (ruled) · gold / coinage / ledger (honest, flagged)",
+      "name": "ASSIGNMENTS: the triad’s job objects are the same three marks (store · medium · unit) — one family for jobs and stages",
       "ok": true,
-      "detail": "as recorded in docs/act-3-provenance.md §2"
+      "detail": "the three job objects match the stage marks"
+    },
+    {
+      "name": "CLIMBERS: the coin reaches the ladder only through a berth — S14 b3 is the only monetary object in sight",
+      "ok": true,
+      "detail": "bitcoin at the sov berth only, never a stage mark"
+    },
+    {
+      "name": "CARRIED: s14-b1.png is byte-identical to its r1 bytes (sha256 proven)",
+      "ok": true,
+      "detail": "e7cc6fff… matches"
+    },
+    {
+      "name": "CARRIED: states.json records the carried cell and its hash",
+      "ok": true,
+      "detail": "recorded"
+    },
+    {
+      "name": "RETIRED: the superseded r1 stagings are on file under their retired names (s12-b3-block, s15-b*-boxes)",
+      "ok": true,
+      "detail": "7/7 on file"
     }
   ]
 }
