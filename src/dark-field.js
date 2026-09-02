@@ -117,7 +117,14 @@ export const darkField = Object.fromEntries(
 // the same near-16:9 aspect at a smaller frame, so its band boxes are
 // unchanged; the retired handshake study is on file at
 // review/act-3/dark-field/medium--retired.png. The other three stand at
-// 1672×941. A box with a materially different aspect would need
+// 1672×941. `usd` and `ars`, presenter-generated and ingested 2 September
+// 2026 for S12's column objects (Batch C r2 ruling 2, master §13), arrive at
+// that same 1672×941 and join the near-16:9 family — and they are the
+// register's two RULED-RECOGNIZABLE notes: the fiat study's
+// no-specific-currency rule does not govern them, because Argentina's
+// evidence is the dollar and the peso as themselves (the recognizability
+// exception, recorded in the master §13 row and the dark-field manifest).
+// A box with a materially different aspect would need
 // the scale computed against `object-fit: contain`'s actual fit rather than
 // against the frame — which is exactly the defect that showed up when the four
 // portrait renders first landed in the old landscape box: the rule was applied
@@ -129,6 +136,7 @@ export const darkField = Object.fromEntries(
 // IV/V scenes (Batches D and E) and are out of Batch A's scope; the row above is
 // the gate's measured value and stands. The box question goes with the scenes.
 const FRAMING = {
+  ars: [1.356, 0.5, -0.4],
   bitcoin: [1.226, 0.3, 1.5],
   cattle: [1.101, -2.1, 3.1],
   coffee_cup: [1.227, -3.1, 13.2],
@@ -156,6 +164,7 @@ const FRAMING = {
   store: [1.035, 0.4, 1.6],
   surgeon: [1.005, 6.8, 5.8],
   unit: [1.113, -0.3, -0.5],
+  usd: [1.429, 0.6, 3.3],
   vault: [1.354, -2.4, 5.1],
   wine: [1.029, 0.2, -1.3]
 };

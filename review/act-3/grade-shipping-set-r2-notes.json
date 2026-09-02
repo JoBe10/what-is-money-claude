@@ -1,0 +1,1912 @@
+{
+  "phase": "R7.2",
+  "dir": "assets/dark-field",
+  "thresholds": {
+    "cornerMax": 6,
+    "borderMax": 6,
+    "darkFracMin": 0.5,
+    "warmthMin": 18,
+    "warmFracMin": 0.9
+  },
+  "images": 31,
+  "checks": 155,
+  "failures": 0,
+  "frameTarget": 0.88,
+  "framing": {
+    "ars": [
+      1.356,
+      0.5,
+      -0.4
+    ],
+    "bitcoin": [
+      1.226,
+      0.3,
+      1.5
+    ],
+    "cattle": [
+      1.101,
+      -2.1,
+      3.1
+    ],
+    "coffee_cup": [
+      1.227,
+      -3.1,
+      13.2
+    ],
+    "coinage": [
+      1.44,
+      1.1,
+      -1.3
+    ],
+    "collectible": [
+      1.371,
+      1.4,
+      1
+    ],
+    "cowrie_shells": [
+      1.13,
+      1.7,
+      -2.5
+    ],
+    "fiat": [
+      1.127,
+      0.9,
+      -1.9
+    ],
+    "gold": [
+      1.469,
+      -0.7,
+      -3.5
+    ],
+    "gold_certificate": [
+      1.124,
+      -2.9,
+      -0.9
+    ],
+    "iron": [
+      1.095,
+      -4.5,
+      -7.6
+    ],
+    "ledger": [
+      1.222,
+      -1.6,
+      1
+    ],
+    "ledger_glow": [
+      1.122,
+      3.2,
+      -5.7
+    ],
+    "meal": [
+      0.935,
+      -0.8,
+      2.4
+    ],
+    "medium": [
+      1.287,
+      -1.5,
+      12.4
+    ],
+    "metals": [
+      1.457,
+      -0.4,
+      -0.4
+    ],
+    "palladium": [
+      1.287,
+      -1.8,
+      1.5
+    ],
+    "paper": [
+      1.313,
+      0.8,
+      2
+    ],
+    "patient": [
+      1.217,
+      3.4,
+      -5
+    ],
+    "property": [
+      1.226,
+      -1.6,
+      -3.1
+    ],
+    "salt": [
+      1.433,
+      1.8,
+      3.1
+    ],
+    "shares": [
+      1.104,
+      -0.1,
+      0.8
+    ],
+    "shells": [
+      1.422,
+      0.3,
+      -2.5
+    ],
+    "shoe": [
+      1.222,
+      1,
+      -4.7
+    ],
+    "single_cowrie": [
+      1.93,
+      4.4,
+      3.6
+    ],
+    "store": [
+      1.035,
+      0.4,
+      1.6
+    ],
+    "surgeon": [
+      1.005,
+      6.8,
+      5.8
+    ],
+    "unit": [
+      1.113,
+      -0.3,
+      -0.5
+    ],
+    "usd": [
+      1.429,
+      0.6,
+      3.3
+    ],
+    "vault": [
+      1.354,
+      -2.4,
+      5.1
+    ],
+    "wine": [
+      1.029,
+      0.2,
+      -1.3
+    ]
+  },
+  "rows": [
+    {
+      "file": "ars.png",
+      "zone": "integrated",
+      "bytes": 1027958,
+      "width": 1672,
+      "height": 941,
+      "corners": {
+        "tl": 0.07,
+        "tr": 0.12,
+        "bl": 0.09,
+        "br": 0.08
+      },
+      "cornerMax": 0.12,
+      "border": 0.08,
+      "darkFrac": 0.805,
+      "subjectW": 0.337,
+      "subjectH": 0.649,
+      "subjectDX": -0.005,
+      "subjectDY": 0.004,
+      "highlightFrac": 0.0338,
+      "warmth": 147.2,
+      "highlightRGB": [
+        217,
+        151,
+        70
+      ],
+      "warmFrac": 1,
+      "keyAzimuth": 157,
+      "keyOffset": 0.162,
+      "spread": 1
+    },
+    {
+      "file": "bitcoin.png",
+      "zone": "integrated",
+      "bytes": 1381199,
+      "width": 1448,
+      "height": 1086,
+      "corners": {
+        "tl": 0.09,
+        "tr": 0.11,
+        "bl": 0.1,
+        "br": 0.09
+      },
+      "cornerMax": 0.11,
+      "border": 0.1,
+      "darkFrac": 0.772,
+      "subjectW": 0.536,
+      "subjectH": 0.718,
+      "subjectDX": -0.003,
+      "subjectDY": -0.015,
+      "highlightFrac": 0.0383,
+      "warmth": 153.5,
+      "highlightRGB": [
+        227,
+        176,
+        73
+      ],
+      "warmFrac": 0.99,
+      "keyAzimuth": 68,
+      "keyOffset": 0.116,
+      "spread": 0.955
+    },
+    {
+      "file": "cattle.png",
+      "zone": "integrated",
+      "bytes": 1099438,
+      "width": 1122,
+      "height": 1402,
+      "corners": {
+        "tl": 0.08,
+        "tr": 0.09,
+        "bl": 0.08,
+        "br": 0.08
+      },
+      "cornerMax": 0.09,
+      "border": 0.09,
+      "darkFrac": 0.83,
+      "subjectW": 0.799,
+      "subjectH": 0.627,
+      "subjectDX": 0.021,
+      "subjectDY": -0.031,
+      "highlightFrac": 0.0106,
+      "warmth": 106.3,
+      "highlightRGB": [
+        204,
+        152,
+        98
+      ],
+      "warmFrac": 1,
+      "keyAzimuth": 78,
+      "keyOffset": 0.126,
+      "spread": 0.917
+    },
+    {
+      "file": "coffee_cup.png",
+      "zone": "integrated",
+      "bytes": 886025,
+      "width": 1122,
+      "height": 1402,
+      "corners": {
+        "tl": 0.19,
+        "tr": 0.1,
+        "bl": 0.08,
+        "br": 0.09
+      },
+      "cornerMax": 0.19,
+      "border": 0.94,
+      "darkFrac": 0.863,
+      "subjectW": 0.529,
+      "subjectH": 0.717,
+      "subjectDX": 0.031,
+      "subjectDY": -0.132,
+      "highlightFrac": 0.0059,
+      "warmth": 85.9,
+      "highlightRGB": [
+        199,
+        159,
+        113
+      ],
+      "warmFrac": 0.997,
+      "keyAzimuth": -70,
+      "keyOffset": 0.027,
+      "spread": 0.996
+    },
+    {
+      "file": "coinage.png",
+      "zone": "integrated",
+      "bytes": 1067473,
+      "width": 1672,
+      "height": 941,
+      "corners": {
+        "tl": 0.06,
+        "tr": 0.09,
+        "bl": 0.08,
+        "br": 0.07
+      },
+      "cornerMax": 0.09,
+      "border": 0.07,
+      "darkFrac": 0.788,
+      "subjectW": 0.611,
+      "subjectH": 0.54,
+      "subjectDX": -0.011,
+      "subjectDY": 0.013,
+      "highlightFrac": 0.0446,
+      "warmth": 102.3,
+      "highlightRGB": [
+        216,
+        175,
+        114
+      ],
+      "warmFrac": 0.992,
+      "keyAzimuth": -172,
+      "keyOffset": 0.113,
+      "spread": 0.99
+    },
+    {
+      "file": "collectible.png",
+      "zone": "integrated",
+      "bytes": 802672,
+      "width": 1672,
+      "height": 941,
+      "corners": {
+        "tl": 0.07,
+        "tr": 0.07,
+        "bl": 0.08,
+        "br": 0.07
+      },
+      "cornerMax": 0.08,
+      "border": 0.06,
+      "darkFrac": 0.841,
+      "subjectW": 0.345,
+      "subjectH": 0.642,
+      "subjectDX": -0.014,
+      "subjectDY": -0.01,
+      "highlightFrac": 0.0221,
+      "warmth": 116.3,
+      "highlightRGB": [
+        221,
+        169,
+        105
+      ],
+      "warmFrac": 0.998,
+      "keyAzimuth": 114,
+      "keyOffset": 0.158,
+      "spread": 1
+    },
+    {
+      "file": "cowrie_shells.png",
+      "zone": "integrated",
+      "bytes": 887772,
+      "width": 1122,
+      "height": 1402,
+      "corners": {
+        "tl": 0.1,
+        "tr": 0.12,
+        "bl": 0.09,
+        "br": 0.09
+      },
+      "cornerMax": 0.12,
+      "border": 0.1,
+      "darkFrac": 0.786,
+      "subjectW": 0.779,
+      "subjectH": 0.435,
+      "subjectDX": -0.017,
+      "subjectDY": 0.025,
+      "highlightFrac": 0.0437,
+      "warmth": 116.5,
+      "highlightRGB": [
+        223,
+        168,
+        107
+      ],
+      "warmFrac": 0.997,
+      "keyAzimuth": 139,
+      "keyOffset": 0.073,
+      "spread": 1
+    },
+    {
+      "file": "fiat.png",
+      "zone": "integrated",
+      "bytes": 1343997,
+      "width": 1672,
+      "height": 941,
+      "corners": {
+        "tl": 0.29,
+        "tr": 0.29,
+        "bl": 0.32,
+        "br": 0.27
+      },
+      "cornerMax": 0.32,
+      "border": 0.3,
+      "darkFrac": 0.797,
+      "subjectW": 0.345,
+      "subjectH": 0.781,
+      "subjectDX": -0.009,
+      "subjectDY": 0.019,
+      "highlightFrac": 0.0362,
+      "warmth": 130.3,
+      "highlightRGB": [
+        223,
+        167,
+        92
+      ],
+      "warmFrac": 1,
+      "keyAzimuth": 111,
+      "keyOffset": 0.223,
+      "spread": 1
+    },
+    {
+      "file": "gold.png",
+      "zone": "integrated",
+      "bytes": 993802,
+      "width": 1672,
+      "height": 941,
+      "corners": {
+        "tl": 0.08,
+        "tr": 0.1,
+        "bl": 0.1,
+        "br": 0.09
+      },
+      "cornerMax": 0.1,
+      "border": 0.09,
+      "darkFrac": 0.786,
+      "subjectW": 0.569,
+      "subjectH": 0.599,
+      "subjectDX": 0.007,
+      "subjectDY": 0.035,
+      "highlightFrac": 0.0261,
+      "warmth": 147.8,
+      "highlightRGB": [
+        223,
+        172,
+        75
+      ],
+      "warmFrac": 0.992,
+      "keyAzimuth": 169,
+      "keyOffset": 0.189,
+      "spread": 0.993
+    },
+    {
+      "file": "gold_certificate.png",
+      "zone": "integrated",
+      "bytes": 1764576,
+      "width": 1122,
+      "height": 1402,
+      "corners": {
+        "tl": 0.09,
+        "tr": 0.11,
+        "bl": 0.09,
+        "br": 0.09
+      },
+      "cornerMax": 0.11,
+      "border": 0.1,
+      "darkFrac": 0.588,
+      "subjectW": 0.783,
+      "subjectH": 0.633,
+      "subjectDX": 0.029,
+      "subjectDY": 0.009,
+      "highlightFrac": 0.1652,
+      "warmth": 132.1,
+      "highlightRGB": [
+        214,
+        162,
+        82
+      ],
+      "warmFrac": 1,
+      "keyAzimuth": 109,
+      "keyOffset": 0.041,
+      "spread": 0.816
+    },
+    {
+      "file": "iron.png",
+      "zone": "integrated",
+      "bytes": 1018966,
+      "width": 1122,
+      "height": 1402,
+      "corners": {
+        "tl": 0.06,
+        "tr": 0.07,
+        "bl": 0.06,
+        "br": 0.06
+      },
+      "cornerMax": 0.07,
+      "border": 0.48,
+      "darkFrac": 0.865,
+      "subjectW": 0.502,
+      "subjectH": 0.804,
+      "subjectDX": 0.045,
+      "subjectDY": 0.076,
+      "highlightFrac": 0.0117,
+      "warmth": 75.5,
+      "highlightRGB": [
+        213,
+        174,
+        137
+      ],
+      "warmFrac": 0.977,
+      "keyAzimuth": 112,
+      "keyOffset": 0.349,
+      "spread": 0.995
+    },
+    {
+      "file": "ledger.png",
+      "zone": "integrated",
+      "bytes": 1291810,
+      "width": 1448,
+      "height": 1086,
+      "corners": {
+        "tl": 0.08,
+        "tr": 0.1,
+        "bl": 0.09,
+        "br": 0.07
+      },
+      "cornerMax": 0.1,
+      "border": 0.08,
+      "darkFrac": 0.69,
+      "subjectW": 0.71,
+      "subjectH": 0.72,
+      "subjectDX": 0.016,
+      "subjectDY": -0.01,
+      "highlightFrac": 0.0154,
+      "warmth": 138,
+      "highlightRGB": [
+        212,
+        146,
+        74
+      ],
+      "warmFrac": 0.998,
+      "keyAzimuth": -39,
+      "keyOffset": 0.229,
+      "spread": 0.836
+    },
+    {
+      "file": "ledger_glow.png",
+      "zone": "integrated",
+      "bytes": 1337927,
+      "width": 1536,
+      "height": 1024,
+      "corners": {
+        "tl": 0.09,
+        "tr": 0.12,
+        "bl": 0.09,
+        "br": 0.08
+      },
+      "cornerMax": 0.12,
+      "border": 0.1,
+      "darkFrac": 0.649,
+      "subjectW": 0.784,
+      "subjectH": 0.583,
+      "subjectDX": -0.032,
+      "subjectDY": 0.057,
+      "highlightFrac": 0.0685,
+      "warmth": 165,
+      "highlightRGB": [
+        225,
+        163,
+        60
+      ],
+      "warmFrac": 1,
+      "keyAzimuth": 173,
+      "keyOffset": 0.245,
+      "spread": 0.981
+    },
+    {
+      "file": "meal.png",
+      "zone": "integrated",
+      "bytes": 1354868,
+      "width": 1187,
+      "height": 912,
+      "corners": {
+        "tl": 0,
+        "tr": 0,
+        "bl": 0,
+        "br": 0
+      },
+      "cornerMax": 0,
+      "border": 1.28,
+      "darkFrac": 0.692,
+      "subjectW": 0.941,
+      "subjectH": 0.714,
+      "subjectDX": 0.008,
+      "subjectDY": -0.024,
+      "highlightFrac": 0.0386,
+      "warmth": 59.5,
+      "highlightRGB": [
+        203,
+        165,
+        143
+      ],
+      "warmFrac": 0.998,
+      "keyAzimuth": 117,
+      "keyOffset": 0.132,
+      "spread": 0.896
+    },
+    {
+      "file": "medium.png",
+      "zone": "integrated",
+      "bytes": 343933,
+      "width": 842,
+      "height": 474,
+      "corners": {
+        "tl": 1.01,
+        "tr": 1.16,
+        "bl": 0.45,
+        "br": 1.08
+      },
+      "cornerMax": 1.16,
+      "border": 1.46,
+      "darkFrac": 0.883,
+      "subjectW": 0.684,
+      "subjectH": 0.681,
+      "subjectDX": 0.015,
+      "subjectDY": -0.124,
+      "highlightFrac": 0.0142,
+      "warmth": 162.7,
+      "highlightRGB": [
+        235,
+        156,
+        72
+      ],
+      "warmFrac": 1,
+      "keyAzimuth": 105,
+      "keyOffset": 0.072,
+      "spread": 1
+    },
+    {
+      "file": "metals.png",
+      "zone": "integrated",
+      "bytes": 1134388,
+      "width": 1672,
+      "height": 941,
+      "corners": {
+        "tl": 0.07,
+        "tr": 0.09,
+        "bl": 0.09,
+        "br": 0.09
+      },
+      "cornerMax": 0.09,
+      "border": 0.08,
+      "darkFrac": 0.821,
+      "subjectW": 0.528,
+      "subjectH": 0.604,
+      "subjectDX": 0.004,
+      "subjectDY": 0.004,
+      "highlightFrac": 0.0292,
+      "warmth": 83.8,
+      "highlightRGB": [
+        210,
+        170,
+        126
+      ],
+      "warmFrac": 0.995,
+      "keyAzimuth": 32,
+      "keyOffset": 0.016,
+      "spread": 1
+    },
+    {
+      "file": "palladium.png",
+      "zone": "integrated",
+      "bytes": 1156281,
+      "width": 1122,
+      "height": 1402,
+      "corners": {
+        "tl": 0.08,
+        "tr": 0.1,
+        "bl": 0.09,
+        "br": 0.08
+      },
+      "cornerMax": 0.1,
+      "border": 0.09,
+      "darkFrac": 0.753,
+      "subjectW": 0.684,
+      "subjectH": 0.553,
+      "subjectDX": 0.018,
+      "subjectDY": -0.015,
+      "highlightFrac": 0.0743,
+      "warmth": 48.8,
+      "highlightRGB": [
+        201,
+        179,
+        152
+      ],
+      "warmFrac": 0.973,
+      "keyAzimuth": 38,
+      "keyOffset": 0.04,
+      "spread": 0.958
+    },
+    {
+      "file": "paper.png",
+      "zone": "integrated",
+      "bytes": 993688,
+      "width": 1448,
+      "height": 1086,
+      "corners": {
+        "tl": 0.07,
+        "tr": 0.09,
+        "bl": 0.09,
+        "br": 0.08
+      },
+      "cornerMax": 0.09,
+      "border": 0.08,
+      "darkFrac": 0.805,
+      "subjectW": 0.606,
+      "subjectH": 0.67,
+      "subjectDX": -0.008,
+      "subjectDY": -0.02,
+      "highlightFrac": 0.0721,
+      "warmth": 80,
+      "highlightRGB": [
+        210,
+        176,
+        130
+      ],
+      "warmFrac": 0.999,
+      "keyAzimuth": 20,
+      "keyOffset": 0.16,
+      "spread": 1
+    },
+    {
+      "file": "patient.png",
+      "zone": "integrated",
+      "bytes": 1612845,
+      "width": 1122,
+      "height": 1402,
+      "corners": {
+        "tl": 0,
+        "tr": 0.08,
+        "bl": 0.05,
+        "br": 0.07
+      },
+      "cornerMax": 0.08,
+      "border": 0.06,
+      "darkFrac": 0.914,
+      "subjectW": 0.52,
+      "subjectH": 0.723,
+      "subjectDX": -0.034,
+      "subjectDY": 0.05,
+      "highlightFrac": 0.015,
+      "warmth": 122.6,
+      "highlightRGB": [
+        224,
+        171,
+        102
+      ],
+      "warmFrac": 1,
+      "keyAzimuth": -172,
+      "keyOffset": 0.079,
+      "spread": 0.897
+    },
+    {
+      "file": "property.png",
+      "zone": "integrated",
+      "bytes": 985680,
+      "width": 1254,
+      "height": 1254,
+      "corners": {
+        "tl": 0.07,
+        "tr": 0.09,
+        "bl": 0.08,
+        "br": 0.09
+      },
+      "cornerMax": 0.09,
+      "border": 0.08,
+      "darkFrac": 0.791,
+      "subjectW": 0.718,
+      "subjectH": 0.404,
+      "subjectDX": 0.016,
+      "subjectDY": 0.031,
+      "highlightFrac": 0.0204,
+      "warmth": 124.2,
+      "highlightRGB": [
+        218,
+        154,
+        94
+      ],
+      "warmFrac": 0.998,
+      "keyAzimuth": -60,
+      "keyOffset": 0.069,
+      "spread": 0.935
+    },
+    {
+      "file": "salt.png",
+      "zone": "integrated",
+      "bytes": 980446,
+      "width": 1122,
+      "height": 1402,
+      "corners": {
+        "tl": 0.09,
+        "tr": 0.11,
+        "bl": 0.09,
+        "br": 0.09
+      },
+      "cornerMax": 0.11,
+      "border": 0.1,
+      "darkFrac": 0.791,
+      "subjectW": 0.441,
+      "subjectH": 0.614,
+      "subjectDX": -0.018,
+      "subjectDY": -0.031,
+      "highlightFrac": 0.0468,
+      "warmth": 112.8,
+      "highlightRGB": [
+        214,
+        152,
+        102
+      ],
+      "warmFrac": 1,
+      "keyAzimuth": 124,
+      "keyOffset": 0.25,
+      "spread": 0.99
+    },
+    {
+      "file": "shares.png",
+      "zone": "integrated",
+      "bytes": 2163266,
+      "width": 1254,
+      "height": 1254,
+      "corners": {
+        "tl": 0.12,
+        "tr": 0.17,
+        "bl": 0.13,
+        "br": 0.13
+      },
+      "cornerMax": 0.17,
+      "border": 0.15,
+      "darkFrac": 0.519,
+      "subjectW": 0.797,
+      "subjectH": 0.659,
+      "subjectDX": 0.001,
+      "subjectDY": -0.008,
+      "highlightFrac": 0.3294,
+      "warmth": 52.3,
+      "highlightRGB": [
+        202,
+        178,
+        150
+      ],
+      "warmFrac": 0.999,
+      "keyAzimuth": 152,
+      "keyOffset": 0.008,
+      "spread": 0.696
+    },
+    {
+      "file": "shells.png",
+      "zone": "integrated",
+      "bytes": 770083,
+      "width": 1448,
+      "height": 1086,
+      "corners": {
+        "tl": 0.09,
+        "tr": 0.1,
+        "bl": 0.08,
+        "br": 0.08
+      },
+      "cornerMax": 0.1,
+      "border": 0.08,
+      "darkFrac": 0.802,
+      "subjectW": 0.619,
+      "subjectH": 0.482,
+      "subjectDX": -0.003,
+      "subjectDY": 0.025,
+      "highlightFrac": 0.1136,
+      "warmth": 72.3,
+      "highlightRGB": [
+        202,
+        166,
+        130
+      ],
+      "warmFrac": 1,
+      "keyAzimuth": -167,
+      "keyOffset": 0.074,
+      "spread": 0.996
+    },
+    {
+      "file": "shoe.png",
+      "zone": "integrated",
+      "bytes": 1427637,
+      "width": 1448,
+      "height": 1086,
+      "corners": {
+        "tl": 0.65,
+        "tr": 0.56,
+        "bl": 0.74,
+        "br": 0.5
+      },
+      "cornerMax": 0.74,
+      "border": 0.63,
+      "darkFrac": 0.824,
+      "subjectW": 0.72,
+      "subjectH": 0.572,
+      "subjectDX": -0.01,
+      "subjectDY": 0.047,
+      "highlightFrac": 0.0075,
+      "warmth": 56.2,
+      "highlightRGB": [
+        178,
+        149,
+        122
+      ],
+      "warmFrac": 0.987,
+      "keyAzimuth": -135,
+      "keyOffset": 0.149,
+      "spread": 0.898
+    },
+    {
+      "file": "single_cowrie.png",
+      "zone": "integrated",
+      "bytes": 1148015,
+      "width": 1122,
+      "height": 1402,
+      "corners": {
+        "tl": 0.58,
+        "tr": 0.49,
+        "bl": 0.43,
+        "br": 0.39
+      },
+      "cornerMax": 0.58,
+      "border": 0.49,
+      "darkFrac": 0.89,
+      "subjectW": 0.34,
+      "subjectH": 0.456,
+      "subjectDX": -0.044,
+      "subjectDY": -0.036,
+      "highlightFrac": 0.023,
+      "warmth": 105.4,
+      "highlightRGB": [
+        204,
+        154,
+        98
+      ],
+      "warmFrac": 0.999,
+      "keyAzimuth": 100,
+      "keyOffset": 0.203,
+      "spread": 1
+    },
+    {
+      "file": "store.png",
+      "zone": "integrated",
+      "bytes": 726180,
+      "width": 1672,
+      "height": 941,
+      "corners": {
+        "tl": 0.05,
+        "tr": 0.08,
+        "bl": 0.06,
+        "br": 0.07
+      },
+      "cornerMax": 0.08,
+      "border": 0.06,
+      "darkFrac": 0.913,
+      "subjectW": 0.263,
+      "subjectH": 0.85,
+      "subjectDX": -0.004,
+      "subjectDY": -0.016,
+      "highlightFrac": 0.0084,
+      "warmth": 83.8,
+      "highlightRGB": [
+        206,
+        161,
+        122
+      ],
+      "warmFrac": 0.997,
+      "keyAzimuth": 161,
+      "keyOffset": 0.045,
+      "spread": 1
+    },
+    {
+      "file": "surgeon.png",
+      "zone": "integrated",
+      "bytes": 292585,
+      "width": 847,
+      "height": 1014,
+      "corners": {
+        "tl": 0,
+        "tr": 0,
+        "bl": 0,
+        "br": 0
+      },
+      "cornerMax": 0,
+      "border": 0.82,
+      "darkFrac": 0.921,
+      "subjectW": 0.738,
+      "subjectH": 0.876,
+      "subjectDX": -0.068,
+      "subjectDY": -0.058,
+      "highlightFrac": 0.0124,
+      "warmth": 132.7,
+      "highlightRGB": [
+        224,
+        155,
+        91
+      ],
+      "warmFrac": 0.997,
+      "keyAzimuth": -111,
+      "keyOffset": 0.136,
+      "spread": 0.798
+    },
+    {
+      "file": "unit.png",
+      "zone": "integrated",
+      "bytes": 614601,
+      "width": 1672,
+      "height": 941,
+      "corners": {
+        "tl": 0.05,
+        "tr": 0.06,
+        "bl": 0.07,
+        "br": 0.07
+      },
+      "cornerMax": 0.07,
+      "border": 0.06,
+      "darkFrac": 0.933,
+      "subjectW": 0.518,
+      "subjectH": 0.791,
+      "subjectDX": 0.003,
+      "subjectDY": 0.005,
+      "highlightFrac": 0.0056,
+      "warmth": 110.1,
+      "highlightRGB": [
+        212,
+        165,
+        102
+      ],
+      "warmFrac": 0.996,
+      "keyAzimuth": -61,
+      "keyOffset": 0.092,
+      "spread": 0.999
+    },
+    {
+      "file": "usd.png",
+      "zone": "integrated",
+      "bytes": 773873,
+      "width": 1672,
+      "height": 941,
+      "corners": {
+        "tl": 0.06,
+        "tr": 0.08,
+        "bl": 0.07,
+        "br": 0.07
+      },
+      "cornerMax": 0.08,
+      "border": 0.06,
+      "darkFrac": 0.889,
+      "subjectW": 0.29,
+      "subjectH": 0.616,
+      "subjectDX": -0.006,
+      "subjectDY": -0.033,
+      "highlightFrac": 0.0226,
+      "warmth": 135.7,
+      "highlightRGB": [
+        213,
+        160,
+        77
+      ],
+      "warmFrac": 1,
+      "keyAzimuth": 155,
+      "keyOffset": 0.162,
+      "spread": 1
+    },
+    {
+      "file": "vault.png",
+      "zone": "integrated",
+      "bytes": 1061835,
+      "width": 1122,
+      "height": 1402,
+      "corners": {
+        "tl": 0.07,
+        "tr": 0.07,
+        "bl": 0.06,
+        "br": 0.05
+      },
+      "cornerMax": 0.07,
+      "border": 0.07,
+      "darkFrac": 0.842,
+      "subjectW": 0.564,
+      "subjectH": 0.65,
+      "subjectDX": 0.024,
+      "subjectDY": -0.051,
+      "highlightFrac": 0.0111,
+      "warmth": 83.7,
+      "highlightRGB": [
+        210,
+        174,
+        127
+      ],
+      "warmFrac": 0.994,
+      "keyAzimuth": 88,
+      "keyOffset": 0.309,
+      "spread": 0.928
+    },
+    {
+      "file": "wine.png",
+      "zone": "integrated",
+      "bytes": 948662,
+      "width": 1448,
+      "height": 1086,
+      "corners": {
+        "tl": 2.28,
+        "tr": 0.66,
+        "bl": 0.7,
+        "br": 0.54
+      },
+      "cornerMax": 2.28,
+      "border": 1.12,
+      "darkFrac": 0.955,
+      "subjectW": 0.254,
+      "subjectH": 0.855,
+      "subjectDX": -0.002,
+      "subjectDY": 0.013,
+      "highlightFrac": 0.0079,
+      "warmth": 114.8,
+      "highlightRGB": [
+        229,
+        185,
+        114
+      ],
+      "warmFrac": 0.988,
+      "keyAzimuth": 89,
+      "keyOffset": 0.106,
+      "spread": 0.856
+    }
+  ],
+  "results": [
+    {
+      "name": "grade: ars.png — frame corners are black (≤ 6)",
+      "ok": true,
+      "detail": "max corner 0.12 (tl 0.07 tr 0.12 bl 0.09 br 0.08)"
+    },
+    {
+      "name": "grade: ars.png — no environment reaches the border (≤ 6)",
+      "ok": true,
+      "detail": "border ring 0.08"
+    },
+    {
+      "name": "grade: ars.png — the subject emerges from darkness (≥ 50% below L16)",
+      "ok": true,
+      "detail": "80.5% dark"
+    },
+    {
+      "name": "grade: ars.png — the key is warm (R−B ≥ 18)",
+      "ok": true,
+      "detail": "R−B 147.2 on 3.38% of the frame, mean highlight rgb(217, 151, 70)"
+    },
+    {
+      "name": "grade: ars.png — the highlight population is warm throughout (≥ 90%)",
+      "ok": true,
+      "detail": "100.0% of highlight pixels warm"
+    },
+    {
+      "name": "grade: bitcoin.png — frame corners are black (≤ 6)",
+      "ok": true,
+      "detail": "max corner 0.11 (tl 0.09 tr 0.11 bl 0.1 br 0.09)"
+    },
+    {
+      "name": "grade: bitcoin.png — no environment reaches the border (≤ 6)",
+      "ok": true,
+      "detail": "border ring 0.1"
+    },
+    {
+      "name": "grade: bitcoin.png — the subject emerges from darkness (≥ 50% below L16)",
+      "ok": true,
+      "detail": "77.2% dark"
+    },
+    {
+      "name": "grade: bitcoin.png — the key is warm (R−B ≥ 18)",
+      "ok": true,
+      "detail": "R−B 153.5 on 3.83% of the frame, mean highlight rgb(227, 176, 73)"
+    },
+    {
+      "name": "grade: bitcoin.png — the highlight population is warm throughout (≥ 90%)",
+      "ok": true,
+      "detail": "99.0% of highlight pixels warm"
+    },
+    {
+      "name": "grade: cattle.png — frame corners are black (≤ 6)",
+      "ok": true,
+      "detail": "max corner 0.09 (tl 0.08 tr 0.09 bl 0.08 br 0.08)"
+    },
+    {
+      "name": "grade: cattle.png — no environment reaches the border (≤ 6)",
+      "ok": true,
+      "detail": "border ring 0.09"
+    },
+    {
+      "name": "grade: cattle.png — the subject emerges from darkness (≥ 50% below L16)",
+      "ok": true,
+      "detail": "83.0% dark"
+    },
+    {
+      "name": "grade: cattle.png — the key is warm (R−B ≥ 18)",
+      "ok": true,
+      "detail": "R−B 106.3 on 1.06% of the frame, mean highlight rgb(204, 152, 98)"
+    },
+    {
+      "name": "grade: cattle.png — the highlight population is warm throughout (≥ 90%)",
+      "ok": true,
+      "detail": "100.0% of highlight pixels warm"
+    },
+    {
+      "name": "grade: coffee_cup.png — frame corners are black (≤ 6)",
+      "ok": true,
+      "detail": "max corner 0.19 (tl 0.19 tr 0.1 bl 0.08 br 0.09)"
+    },
+    {
+      "name": "grade: coffee_cup.png — no environment reaches the border (≤ 6)",
+      "ok": true,
+      "detail": "border ring 0.94"
+    },
+    {
+      "name": "grade: coffee_cup.png — the subject emerges from darkness (≥ 50% below L16)",
+      "ok": true,
+      "detail": "86.3% dark"
+    },
+    {
+      "name": "grade: coffee_cup.png — the key is warm (R−B ≥ 18)",
+      "ok": true,
+      "detail": "R−B 85.9 on 0.59% of the frame, mean highlight rgb(199, 159, 113)"
+    },
+    {
+      "name": "grade: coffee_cup.png — the highlight population is warm throughout (≥ 90%)",
+      "ok": true,
+      "detail": "99.7% of highlight pixels warm"
+    },
+    {
+      "name": "grade: coinage.png — frame corners are black (≤ 6)",
+      "ok": true,
+      "detail": "max corner 0.09 (tl 0.06 tr 0.09 bl 0.08 br 0.07)"
+    },
+    {
+      "name": "grade: coinage.png — no environment reaches the border (≤ 6)",
+      "ok": true,
+      "detail": "border ring 0.07"
+    },
+    {
+      "name": "grade: coinage.png — the subject emerges from darkness (≥ 50% below L16)",
+      "ok": true,
+      "detail": "78.8% dark"
+    },
+    {
+      "name": "grade: coinage.png — the key is warm (R−B ≥ 18)",
+      "ok": true,
+      "detail": "R−B 102.3 on 4.46% of the frame, mean highlight rgb(216, 175, 114)"
+    },
+    {
+      "name": "grade: coinage.png — the highlight population is warm throughout (≥ 90%)",
+      "ok": true,
+      "detail": "99.2% of highlight pixels warm"
+    },
+    {
+      "name": "grade: collectible.png — frame corners are black (≤ 6)",
+      "ok": true,
+      "detail": "max corner 0.08 (tl 0.07 tr 0.07 bl 0.08 br 0.07)"
+    },
+    {
+      "name": "grade: collectible.png — no environment reaches the border (≤ 6)",
+      "ok": true,
+      "detail": "border ring 0.06"
+    },
+    {
+      "name": "grade: collectible.png — the subject emerges from darkness (≥ 50% below L16)",
+      "ok": true,
+      "detail": "84.1% dark"
+    },
+    {
+      "name": "grade: collectible.png — the key is warm (R−B ≥ 18)",
+      "ok": true,
+      "detail": "R−B 116.3 on 2.21% of the frame, mean highlight rgb(221, 169, 105)"
+    },
+    {
+      "name": "grade: collectible.png — the highlight population is warm throughout (≥ 90%)",
+      "ok": true,
+      "detail": "99.8% of highlight pixels warm"
+    },
+    {
+      "name": "grade: cowrie_shells.png — frame corners are black (≤ 6)",
+      "ok": true,
+      "detail": "max corner 0.12 (tl 0.1 tr 0.12 bl 0.09 br 0.09)"
+    },
+    {
+      "name": "grade: cowrie_shells.png — no environment reaches the border (≤ 6)",
+      "ok": true,
+      "detail": "border ring 0.1"
+    },
+    {
+      "name": "grade: cowrie_shells.png — the subject emerges from darkness (≥ 50% below L16)",
+      "ok": true,
+      "detail": "78.6% dark"
+    },
+    {
+      "name": "grade: cowrie_shells.png — the key is warm (R−B ≥ 18)",
+      "ok": true,
+      "detail": "R−B 116.5 on 4.37% of the frame, mean highlight rgb(223, 168, 107)"
+    },
+    {
+      "name": "grade: cowrie_shells.png — the highlight population is warm throughout (≥ 90%)",
+      "ok": true,
+      "detail": "99.7% of highlight pixels warm"
+    },
+    {
+      "name": "grade: fiat.png — frame corners are black (≤ 6)",
+      "ok": true,
+      "detail": "max corner 0.32 (tl 0.29 tr 0.29 bl 0.32 br 0.27)"
+    },
+    {
+      "name": "grade: fiat.png — no environment reaches the border (≤ 6)",
+      "ok": true,
+      "detail": "border ring 0.3"
+    },
+    {
+      "name": "grade: fiat.png — the subject emerges from darkness (≥ 50% below L16)",
+      "ok": true,
+      "detail": "79.7% dark"
+    },
+    {
+      "name": "grade: fiat.png — the key is warm (R−B ≥ 18)",
+      "ok": true,
+      "detail": "R−B 130.3 on 3.62% of the frame, mean highlight rgb(223, 167, 92)"
+    },
+    {
+      "name": "grade: fiat.png — the highlight population is warm throughout (≥ 90%)",
+      "ok": true,
+      "detail": "100.0% of highlight pixels warm"
+    },
+    {
+      "name": "grade: gold.png — frame corners are black (≤ 6)",
+      "ok": true,
+      "detail": "max corner 0.1 (tl 0.08 tr 0.1 bl 0.1 br 0.09)"
+    },
+    {
+      "name": "grade: gold.png — no environment reaches the border (≤ 6)",
+      "ok": true,
+      "detail": "border ring 0.09"
+    },
+    {
+      "name": "grade: gold.png — the subject emerges from darkness (≥ 50% below L16)",
+      "ok": true,
+      "detail": "78.6% dark"
+    },
+    {
+      "name": "grade: gold.png — the key is warm (R−B ≥ 18)",
+      "ok": true,
+      "detail": "R−B 147.8 on 2.61% of the frame, mean highlight rgb(223, 172, 75)"
+    },
+    {
+      "name": "grade: gold.png — the highlight population is warm throughout (≥ 90%)",
+      "ok": true,
+      "detail": "99.2% of highlight pixels warm"
+    },
+    {
+      "name": "grade: gold_certificate.png — frame corners are black (≤ 6)",
+      "ok": true,
+      "detail": "max corner 0.11 (tl 0.09 tr 0.11 bl 0.09 br 0.09)"
+    },
+    {
+      "name": "grade: gold_certificate.png — no environment reaches the border (≤ 6)",
+      "ok": true,
+      "detail": "border ring 0.1"
+    },
+    {
+      "name": "grade: gold_certificate.png — the subject emerges from darkness (≥ 50% below L16)",
+      "ok": true,
+      "detail": "58.8% dark"
+    },
+    {
+      "name": "grade: gold_certificate.png — the key is warm (R−B ≥ 18)",
+      "ok": true,
+      "detail": "R−B 132.1 on 16.52% of the frame, mean highlight rgb(214, 162, 82)"
+    },
+    {
+      "name": "grade: gold_certificate.png — the highlight population is warm throughout (≥ 90%)",
+      "ok": true,
+      "detail": "100.0% of highlight pixels warm"
+    },
+    {
+      "name": "grade: iron.png — frame corners are black (≤ 6)",
+      "ok": true,
+      "detail": "max corner 0.07 (tl 0.06 tr 0.07 bl 0.06 br 0.06)"
+    },
+    {
+      "name": "grade: iron.png — no environment reaches the border (≤ 6)",
+      "ok": true,
+      "detail": "border ring 0.48"
+    },
+    {
+      "name": "grade: iron.png — the subject emerges from darkness (≥ 50% below L16)",
+      "ok": true,
+      "detail": "86.5% dark"
+    },
+    {
+      "name": "grade: iron.png — the key is warm (R−B ≥ 18)",
+      "ok": true,
+      "detail": "R−B 75.5 on 1.17% of the frame, mean highlight rgb(213, 174, 137)"
+    },
+    {
+      "name": "grade: iron.png — the highlight population is warm throughout (≥ 90%)",
+      "ok": true,
+      "detail": "97.7% of highlight pixels warm"
+    },
+    {
+      "name": "grade: ledger.png — frame corners are black (≤ 6)",
+      "ok": true,
+      "detail": "max corner 0.1 (tl 0.08 tr 0.1 bl 0.09 br 0.07)"
+    },
+    {
+      "name": "grade: ledger.png — no environment reaches the border (≤ 6)",
+      "ok": true,
+      "detail": "border ring 0.08"
+    },
+    {
+      "name": "grade: ledger.png — the subject emerges from darkness (≥ 50% below L16)",
+      "ok": true,
+      "detail": "69.0% dark"
+    },
+    {
+      "name": "grade: ledger.png — the key is warm (R−B ≥ 18)",
+      "ok": true,
+      "detail": "R−B 138 on 1.54% of the frame, mean highlight rgb(212, 146, 74)"
+    },
+    {
+      "name": "grade: ledger.png — the highlight population is warm throughout (≥ 90%)",
+      "ok": true,
+      "detail": "99.8% of highlight pixels warm"
+    },
+    {
+      "name": "grade: ledger_glow.png — frame corners are black (≤ 6)",
+      "ok": true,
+      "detail": "max corner 0.12 (tl 0.09 tr 0.12 bl 0.09 br 0.08)"
+    },
+    {
+      "name": "grade: ledger_glow.png — no environment reaches the border (≤ 6)",
+      "ok": true,
+      "detail": "border ring 0.1"
+    },
+    {
+      "name": "grade: ledger_glow.png — the subject emerges from darkness (≥ 50% below L16)",
+      "ok": true,
+      "detail": "64.9% dark"
+    },
+    {
+      "name": "grade: ledger_glow.png — the key is warm (R−B ≥ 18)",
+      "ok": true,
+      "detail": "R−B 165 on 6.85% of the frame, mean highlight rgb(225, 163, 60)"
+    },
+    {
+      "name": "grade: ledger_glow.png — the highlight population is warm throughout (≥ 90%)",
+      "ok": true,
+      "detail": "100.0% of highlight pixels warm"
+    },
+    {
+      "name": "grade: meal.png — frame corners are black (≤ 6)",
+      "ok": true,
+      "detail": "max corner 0 (tl 0 tr 0 bl 0 br 0)"
+    },
+    {
+      "name": "grade: meal.png — no environment reaches the border (≤ 6)",
+      "ok": true,
+      "detail": "border ring 1.28"
+    },
+    {
+      "name": "grade: meal.png — the subject emerges from darkness (≥ 50% below L16)",
+      "ok": true,
+      "detail": "69.2% dark"
+    },
+    {
+      "name": "grade: meal.png — the key is warm (R−B ≥ 18)",
+      "ok": true,
+      "detail": "R−B 59.5 on 3.86% of the frame, mean highlight rgb(203, 165, 143)"
+    },
+    {
+      "name": "grade: meal.png — the highlight population is warm throughout (≥ 90%)",
+      "ok": true,
+      "detail": "99.8% of highlight pixels warm"
+    },
+    {
+      "name": "grade: medium.png — frame corners are black (≤ 6)",
+      "ok": true,
+      "detail": "max corner 1.16 (tl 1.01 tr 1.16 bl 0.45 br 1.08)"
+    },
+    {
+      "name": "grade: medium.png — no environment reaches the border (≤ 6)",
+      "ok": true,
+      "detail": "border ring 1.46"
+    },
+    {
+      "name": "grade: medium.png — the subject emerges from darkness (≥ 50% below L16)",
+      "ok": true,
+      "detail": "88.3% dark"
+    },
+    {
+      "name": "grade: medium.png — the key is warm (R−B ≥ 18)",
+      "ok": true,
+      "detail": "R−B 162.7 on 1.42% of the frame, mean highlight rgb(235, 156, 72)"
+    },
+    {
+      "name": "grade: medium.png — the highlight population is warm throughout (≥ 90%)",
+      "ok": true,
+      "detail": "100.0% of highlight pixels warm"
+    },
+    {
+      "name": "grade: metals.png — frame corners are black (≤ 6)",
+      "ok": true,
+      "detail": "max corner 0.09 (tl 0.07 tr 0.09 bl 0.09 br 0.09)"
+    },
+    {
+      "name": "grade: metals.png — no environment reaches the border (≤ 6)",
+      "ok": true,
+      "detail": "border ring 0.08"
+    },
+    {
+      "name": "grade: metals.png — the subject emerges from darkness (≥ 50% below L16)",
+      "ok": true,
+      "detail": "82.1% dark"
+    },
+    {
+      "name": "grade: metals.png — the key is warm (R−B ≥ 18)",
+      "ok": true,
+      "detail": "R−B 83.8 on 2.92% of the frame, mean highlight rgb(210, 170, 126)"
+    },
+    {
+      "name": "grade: metals.png — the highlight population is warm throughout (≥ 90%)",
+      "ok": true,
+      "detail": "99.5% of highlight pixels warm"
+    },
+    {
+      "name": "grade: palladium.png — frame corners are black (≤ 6)",
+      "ok": true,
+      "detail": "max corner 0.1 (tl 0.08 tr 0.1 bl 0.09 br 0.08)"
+    },
+    {
+      "name": "grade: palladium.png — no environment reaches the border (≤ 6)",
+      "ok": true,
+      "detail": "border ring 0.09"
+    },
+    {
+      "name": "grade: palladium.png — the subject emerges from darkness (≥ 50% below L16)",
+      "ok": true,
+      "detail": "75.3% dark"
+    },
+    {
+      "name": "grade: palladium.png — the key is warm (R−B ≥ 18)",
+      "ok": true,
+      "detail": "R−B 48.8 on 7.43% of the frame, mean highlight rgb(201, 179, 152)"
+    },
+    {
+      "name": "grade: palladium.png — the highlight population is warm throughout (≥ 90%)",
+      "ok": true,
+      "detail": "97.3% of highlight pixels warm"
+    },
+    {
+      "name": "grade: paper.png — frame corners are black (≤ 6)",
+      "ok": true,
+      "detail": "max corner 0.09 (tl 0.07 tr 0.09 bl 0.09 br 0.08)"
+    },
+    {
+      "name": "grade: paper.png — no environment reaches the border (≤ 6)",
+      "ok": true,
+      "detail": "border ring 0.08"
+    },
+    {
+      "name": "grade: paper.png — the subject emerges from darkness (≥ 50% below L16)",
+      "ok": true,
+      "detail": "80.5% dark"
+    },
+    {
+      "name": "grade: paper.png — the key is warm (R−B ≥ 18)",
+      "ok": true,
+      "detail": "R−B 80 on 7.21% of the frame, mean highlight rgb(210, 176, 130)"
+    },
+    {
+      "name": "grade: paper.png — the highlight population is warm throughout (≥ 90%)",
+      "ok": true,
+      "detail": "99.9% of highlight pixels warm"
+    },
+    {
+      "name": "grade: patient.png — frame corners are black (≤ 6)",
+      "ok": true,
+      "detail": "max corner 0.08 (tl 0 tr 0.08 bl 0.05 br 0.07)"
+    },
+    {
+      "name": "grade: patient.png — no environment reaches the border (≤ 6)",
+      "ok": true,
+      "detail": "border ring 0.06"
+    },
+    {
+      "name": "grade: patient.png — the subject emerges from darkness (≥ 50% below L16)",
+      "ok": true,
+      "detail": "91.4% dark"
+    },
+    {
+      "name": "grade: patient.png — the key is warm (R−B ≥ 18)",
+      "ok": true,
+      "detail": "R−B 122.6 on 1.50% of the frame, mean highlight rgb(224, 171, 102)"
+    },
+    {
+      "name": "grade: patient.png — the highlight population is warm throughout (≥ 90%)",
+      "ok": true,
+      "detail": "100.0% of highlight pixels warm"
+    },
+    {
+      "name": "grade: property.png — frame corners are black (≤ 6)",
+      "ok": true,
+      "detail": "max corner 0.09 (tl 0.07 tr 0.09 bl 0.08 br 0.09)"
+    },
+    {
+      "name": "grade: property.png — no environment reaches the border (≤ 6)",
+      "ok": true,
+      "detail": "border ring 0.08"
+    },
+    {
+      "name": "grade: property.png — the subject emerges from darkness (≥ 50% below L16)",
+      "ok": true,
+      "detail": "79.1% dark"
+    },
+    {
+      "name": "grade: property.png — the key is warm (R−B ≥ 18)",
+      "ok": true,
+      "detail": "R−B 124.2 on 2.04% of the frame, mean highlight rgb(218, 154, 94)"
+    },
+    {
+      "name": "grade: property.png — the highlight population is warm throughout (≥ 90%)",
+      "ok": true,
+      "detail": "99.8% of highlight pixels warm"
+    },
+    {
+      "name": "grade: salt.png — frame corners are black (≤ 6)",
+      "ok": true,
+      "detail": "max corner 0.11 (tl 0.09 tr 0.11 bl 0.09 br 0.09)"
+    },
+    {
+      "name": "grade: salt.png — no environment reaches the border (≤ 6)",
+      "ok": true,
+      "detail": "border ring 0.1"
+    },
+    {
+      "name": "grade: salt.png — the subject emerges from darkness (≥ 50% below L16)",
+      "ok": true,
+      "detail": "79.1% dark"
+    },
+    {
+      "name": "grade: salt.png — the key is warm (R−B ≥ 18)",
+      "ok": true,
+      "detail": "R−B 112.8 on 4.68% of the frame, mean highlight rgb(214, 152, 102)"
+    },
+    {
+      "name": "grade: salt.png — the highlight population is warm throughout (≥ 90%)",
+      "ok": true,
+      "detail": "100.0% of highlight pixels warm"
+    },
+    {
+      "name": "grade: shares.png — frame corners are black (≤ 6)",
+      "ok": true,
+      "detail": "max corner 0.17 (tl 0.12 tr 0.17 bl 0.13 br 0.13)"
+    },
+    {
+      "name": "grade: shares.png — no environment reaches the border (≤ 6)",
+      "ok": true,
+      "detail": "border ring 0.15"
+    },
+    {
+      "name": "grade: shares.png — the subject emerges from darkness (≥ 50% below L16)",
+      "ok": true,
+      "detail": "51.9% dark"
+    },
+    {
+      "name": "grade: shares.png — the key is warm (R−B ≥ 18)",
+      "ok": true,
+      "detail": "R−B 52.3 on 32.94% of the frame, mean highlight rgb(202, 178, 150)"
+    },
+    {
+      "name": "grade: shares.png — the highlight population is warm throughout (≥ 90%)",
+      "ok": true,
+      "detail": "99.9% of highlight pixels warm"
+    },
+    {
+      "name": "grade: shells.png — frame corners are black (≤ 6)",
+      "ok": true,
+      "detail": "max corner 0.1 (tl 0.09 tr 0.1 bl 0.08 br 0.08)"
+    },
+    {
+      "name": "grade: shells.png — no environment reaches the border (≤ 6)",
+      "ok": true,
+      "detail": "border ring 0.08"
+    },
+    {
+      "name": "grade: shells.png — the subject emerges from darkness (≥ 50% below L16)",
+      "ok": true,
+      "detail": "80.2% dark"
+    },
+    {
+      "name": "grade: shells.png — the key is warm (R−B ≥ 18)",
+      "ok": true,
+      "detail": "R−B 72.3 on 11.36% of the frame, mean highlight rgb(202, 166, 130)"
+    },
+    {
+      "name": "grade: shells.png — the highlight population is warm throughout (≥ 90%)",
+      "ok": true,
+      "detail": "100.0% of highlight pixels warm"
+    },
+    {
+      "name": "grade: shoe.png — frame corners are black (≤ 6)",
+      "ok": true,
+      "detail": "max corner 0.74 (tl 0.65 tr 0.56 bl 0.74 br 0.5)"
+    },
+    {
+      "name": "grade: shoe.png — no environment reaches the border (≤ 6)",
+      "ok": true,
+      "detail": "border ring 0.63"
+    },
+    {
+      "name": "grade: shoe.png — the subject emerges from darkness (≥ 50% below L16)",
+      "ok": true,
+      "detail": "82.4% dark"
+    },
+    {
+      "name": "grade: shoe.png — the key is warm (R−B ≥ 18)",
+      "ok": true,
+      "detail": "R−B 56.2 on 0.75% of the frame, mean highlight rgb(178, 149, 122)"
+    },
+    {
+      "name": "grade: shoe.png — the highlight population is warm throughout (≥ 90%)",
+      "ok": true,
+      "detail": "98.7% of highlight pixels warm"
+    },
+    {
+      "name": "grade: single_cowrie.png — frame corners are black (≤ 6)",
+      "ok": true,
+      "detail": "max corner 0.58 (tl 0.58 tr 0.49 bl 0.43 br 0.39)"
+    },
+    {
+      "name": "grade: single_cowrie.png — no environment reaches the border (≤ 6)",
+      "ok": true,
+      "detail": "border ring 0.49"
+    },
+    {
+      "name": "grade: single_cowrie.png — the subject emerges from darkness (≥ 50% below L16)",
+      "ok": true,
+      "detail": "89.0% dark"
+    },
+    {
+      "name": "grade: single_cowrie.png — the key is warm (R−B ≥ 18)",
+      "ok": true,
+      "detail": "R−B 105.4 on 2.30% of the frame, mean highlight rgb(204, 154, 98)"
+    },
+    {
+      "name": "grade: single_cowrie.png — the highlight population is warm throughout (≥ 90%)",
+      "ok": true,
+      "detail": "99.9% of highlight pixels warm"
+    },
+    {
+      "name": "grade: store.png — frame corners are black (≤ 6)",
+      "ok": true,
+      "detail": "max corner 0.08 (tl 0.05 tr 0.08 bl 0.06 br 0.07)"
+    },
+    {
+      "name": "grade: store.png — no environment reaches the border (≤ 6)",
+      "ok": true,
+      "detail": "border ring 0.06"
+    },
+    {
+      "name": "grade: store.png — the subject emerges from darkness (≥ 50% below L16)",
+      "ok": true,
+      "detail": "91.3% dark"
+    },
+    {
+      "name": "grade: store.png — the key is warm (R−B ≥ 18)",
+      "ok": true,
+      "detail": "R−B 83.8 on 0.84% of the frame, mean highlight rgb(206, 161, 122)"
+    },
+    {
+      "name": "grade: store.png — the highlight population is warm throughout (≥ 90%)",
+      "ok": true,
+      "detail": "99.7% of highlight pixels warm"
+    },
+    {
+      "name": "grade: surgeon.png — frame corners are black (≤ 6)",
+      "ok": true,
+      "detail": "max corner 0 (tl 0 tr 0 bl 0 br 0)"
+    },
+    {
+      "name": "grade: surgeon.png — no environment reaches the border (≤ 6)",
+      "ok": true,
+      "detail": "border ring 0.82"
+    },
+    {
+      "name": "grade: surgeon.png — the subject emerges from darkness (≥ 50% below L16)",
+      "ok": true,
+      "detail": "92.1% dark"
+    },
+    {
+      "name": "grade: surgeon.png — the key is warm (R−B ≥ 18)",
+      "ok": true,
+      "detail": "R−B 132.7 on 1.24% of the frame, mean highlight rgb(224, 155, 91)"
+    },
+    {
+      "name": "grade: surgeon.png — the highlight population is warm throughout (≥ 90%)",
+      "ok": true,
+      "detail": "99.7% of highlight pixels warm"
+    },
+    {
+      "name": "grade: unit.png — frame corners are black (≤ 6)",
+      "ok": true,
+      "detail": "max corner 0.07 (tl 0.05 tr 0.06 bl 0.07 br 0.07)"
+    },
+    {
+      "name": "grade: unit.png — no environment reaches the border (≤ 6)",
+      "ok": true,
+      "detail": "border ring 0.06"
+    },
+    {
+      "name": "grade: unit.png — the subject emerges from darkness (≥ 50% below L16)",
+      "ok": true,
+      "detail": "93.3% dark"
+    },
+    {
+      "name": "grade: unit.png — the key is warm (R−B ≥ 18)",
+      "ok": true,
+      "detail": "R−B 110.1 on 0.56% of the frame, mean highlight rgb(212, 165, 102)"
+    },
+    {
+      "name": "grade: unit.png — the highlight population is warm throughout (≥ 90%)",
+      "ok": true,
+      "detail": "99.6% of highlight pixels warm"
+    },
+    {
+      "name": "grade: usd.png — frame corners are black (≤ 6)",
+      "ok": true,
+      "detail": "max corner 0.08 (tl 0.06 tr 0.08 bl 0.07 br 0.07)"
+    },
+    {
+      "name": "grade: usd.png — no environment reaches the border (≤ 6)",
+      "ok": true,
+      "detail": "border ring 0.06"
+    },
+    {
+      "name": "grade: usd.png — the subject emerges from darkness (≥ 50% below L16)",
+      "ok": true,
+      "detail": "88.9% dark"
+    },
+    {
+      "name": "grade: usd.png — the key is warm (R−B ≥ 18)",
+      "ok": true,
+      "detail": "R−B 135.7 on 2.26% of the frame, mean highlight rgb(213, 160, 77)"
+    },
+    {
+      "name": "grade: usd.png — the highlight population is warm throughout (≥ 90%)",
+      "ok": true,
+      "detail": "100.0% of highlight pixels warm"
+    },
+    {
+      "name": "grade: vault.png — frame corners are black (≤ 6)",
+      "ok": true,
+      "detail": "max corner 0.07 (tl 0.07 tr 0.07 bl 0.06 br 0.05)"
+    },
+    {
+      "name": "grade: vault.png — no environment reaches the border (≤ 6)",
+      "ok": true,
+      "detail": "border ring 0.07"
+    },
+    {
+      "name": "grade: vault.png — the subject emerges from darkness (≥ 50% below L16)",
+      "ok": true,
+      "detail": "84.2% dark"
+    },
+    {
+      "name": "grade: vault.png — the key is warm (R−B ≥ 18)",
+      "ok": true,
+      "detail": "R−B 83.7 on 1.11% of the frame, mean highlight rgb(210, 174, 127)"
+    },
+    {
+      "name": "grade: vault.png — the highlight population is warm throughout (≥ 90%)",
+      "ok": true,
+      "detail": "99.4% of highlight pixels warm"
+    },
+    {
+      "name": "grade: wine.png — frame corners are black (≤ 6)",
+      "ok": true,
+      "detail": "max corner 2.28 (tl 2.28 tr 0.66 bl 0.7 br 0.54)"
+    },
+    {
+      "name": "grade: wine.png — no environment reaches the border (≤ 6)",
+      "ok": true,
+      "detail": "border ring 1.12"
+    },
+    {
+      "name": "grade: wine.png — the subject emerges from darkness (≥ 50% below L16)",
+      "ok": true,
+      "detail": "95.5% dark"
+    },
+    {
+      "name": "grade: wine.png — the key is warm (R−B ≥ 18)",
+      "ok": true,
+      "detail": "R−B 114.8 on 0.79% of the frame, mean highlight rgb(229, 185, 114)"
+    },
+    {
+      "name": "grade: wine.png — the highlight population is warm throughout (≥ 90%)",
+      "ok": true,
+      "detail": "98.8% of highlight pixels warm"
+    }
+  ]
+}

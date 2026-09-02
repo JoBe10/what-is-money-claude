@@ -284,6 +284,31 @@ regeneration precedent — a replacement is a change of file behind one key, and
 sheet were re-rendered through the states pipeline the same day, before any
 scene work, so implementation transcribes final geometry.
 
+**The Batch C r2 drop — `usd` and `ars`, the two ruled-recognizable notes,
+ingested 2 September 2026** (presenter-generated for S12's column objects —
+Batch C r2 ruling 2, master §13. Gated and ingested through the standard
+harness: the drop-zone run is `review/act-3/grade-notes-drop.json` — **2
+images, 10 checks, 0 failures, both ingested, 0 held** — and the post-ingest
+run over the whole shipping set is
+`review/act-3/grade-shipping-set-r2-notes.json` — **31 images, 155 checks,
+0 failures**):
+
+| subject key | file | used at | corner / border | dark | R−B |
+|---|---|---|---|---|---|
+| `usd` | `assets/dark-field/usd.png` | S12's priced-in and saved-in column objects — a folded dollar note | 0.08 / 0.06 | 88.9% | +135.7 |
+| `ars` | `assets/dark-field/ars.png` | S12's paid-in column object — a folded thousand-peso note | 0.12 / 0.08 | 80.5% | +147.2 |
+
+Both arrive at **1672 × 941** and join the near-16:9 family; the measured
+framing rows in `src/dark-field.js` are `usd: [1.429, 0.6, 3.3]` and
+`ars: [1.356, 0.5, -0.4]`. **The recognizability exception, recorded where the
+register's own rule lives:** the `fiat` study's rule — *no denomination reads
+as a specific currency; the score is about a class of money, not a country* —
+**does not govern these two subjects, by presenter ruling** (Batch C r2 ruling
+2, master §13). Recognizability is their content: Argentina's evidence is the
+dollar and the peso as themselves, and an anonymous note would un-say the
+argument. `fiat`'s rule stands unamended for every class-of-money appearance,
+and these two keys are never substitutes for `fiat`.
+
 **Its frame is a fourth aspect family.** `fiat.png` is 1672 × 941 — near 16:9,
 the widest in the register — where the five-candidate lineup's display box is
 180 × 150 (6:5). That is a 48% aspect departure, well past the framing rule's
@@ -569,7 +594,7 @@ lineup keeps its own:
 
 | status | subjects |
 |---|---|
-| **shipping** (29) | `shoe` · `wine` · `shells` · `gold` · `paper` · `ledger` · `bitcoin` · `cattle` · `salt` · `cowrie_shells` · `iron` · `surgeon` · `meal` · `property` · `shares` · `single_cowrie` · `gold_certificate` · `vault` · `ledger_glow` · `palladium` · `coffee_cup` · `patient` · `fiat` · `metals` · `coinage` · **`collectible`** · **`store`** · **`medium`** · **`unit`** |
+| **shipping** (31) | `shoe` · `wine` · `shells` · `gold` · `paper` · `ledger` · `bitcoin` · `cattle` · `salt` · `cowrie_shells` · `iron` · `surgeon` · `meal` · `property` · `shares` · `single_cowrie` · `gold_certificate` · `vault` · `ledger_glow` · `palladium` · `coffee_cup` · `patient` · `fiat` · `metals` · `coinage` · `collectible` · `store` · `medium` · `unit` · **`usd`** · **`ars`** |
 | **regenerate** (0) | — |
 | **optional** (1) | `gold-native`, only if the two-survivors arrival is ruled in and wants its own study |
 
