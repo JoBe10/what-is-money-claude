@@ -61,6 +61,40 @@
 // **The deck is 39 slides** (was 39): six legacy slides out, six scenes in.
 // Seams at the new/legacy boundary are reported, not smoothed
 // (`docs/batch-b-implementation-report.md`).
+//
+// ===== BATCH C, 2 September 2026 — Act III enters the deck =====
+//
+// Scenes 11–15 are spliced in after Act II as one contiguous world, in place
+// of the legacy slides the ruled provenance map (`docs/act-3-provenance.md`)
+// names as their sources. **The legacy files stay on disk and in history**;
+// only their manifest entries are gone.
+//
+//   scene                                   supersedes
+//   11 Three Familiar Jobs                  3-01-the-three-functions
+//   12 We Already Split Those Jobs          3-02-the-functions-separate
+//   13 The Order of Monetization           3-03-the-order-of-monetization
+//   14 The Coffee Objection                 3-07-where-bitcoin-is
+//   15 The Tower                            3-06-what-your-money-is
+//
+// Each row is a ruled PORT or ADAPT source: 3-01 is the triad Scene 11
+// rebuilds around the disc, 3-02 the columns Scene 12 reverts to whole,
+// 3-03 the ladder Scene 13 mounts (the LADDER amendment), 3-07 the resolved
+// return and the berths Scene 14 stages the placement with, and 3-06 the
+// tower argument Scene 15 carries as candidate A (the presenter's selection,
+// 2 Sep 2026) with 3-06's own copy in its slots.
+//
+// **THREE LEGACY SLIDES SURVIVE WITH AMBIGUOUS FATES — FLAGGED, NOT
+// DECIDED** (`docs/batch-c-implementation-brief.md` §3): the two waypoint
+// interstitials (3-00-waypoint-function, 3-08-waypoint-judge — the waypoint
+// device is on the architecture's what-dies list, but no batch has been
+// ordered to retire these two) and 3-04-stage-signatures (the early-stage
+// signature bracket — its ladder content is spoken inside Scene 13's script,
+// but no ruling has named its fate). They remain in the deck AFTER the act,
+// in their legacy relative order, so nothing is deleted and nothing is
+// decided; the seam S15 → 3-00 is reported, not smoothed. Retiring or
+// re-homing them is the presenter's ruling to make.
+//
+// **The deck is 39 slides** (was 39): five legacy slides out, five scenes in.
 
 import p1 from '../scenes/prologue/p1-eighty-thousand-hours.js';
 import p2 from '../scenes/prologue/p2-the-stakes.js';
@@ -76,13 +110,14 @@ import scene8 from '../scenes/act-2-the-architecture-of-money/08-money-becomes-i
 import scene9 from '../scenes/act-2-the-architecture-of-money/09-scarcity-becomes-digital.js';
 import scene10 from '../scenes/act-2-the-architecture-of-money/10-the-trade-off-keeps-moving.js';
 
+import scene11 from '../scenes/act-3-the-jobs-of-money/11-three-familiar-jobs.js';
+import scene12 from '../scenes/act-3-the-jobs-of-money/12-we-already-split-those-jobs.js';
+import scene13 from '../scenes/act-3-the-jobs-of-money/13-the-order-of-monetization.js';
+import scene14 from '../scenes/act-3-the-jobs-of-money/14-the-coffee-objection.js';
+import scene15 from '../scenes/act-3-the-jobs-of-money/15-the-tower.js';
+
 import s3_00 from './section-3-function/00-waypoint-function.js';
-import s3_01 from './section-3-function/01-the-three-functions.js';
-import s3_02 from './section-3-function/02-the-functions-separate.js';
-import s3_03 from './section-3-function/03-the-order-of-monetization.js';
 import s3_04 from './section-3-function/04-stage-signatures.js';
-import s3_06 from './section-3-function/06-what-your-money-is.js';
-import s3_07 from './section-3-function/07-where-bitcoin-is.js';
 import s3_08 from './section-3-function/08-waypoint-judge.js';
 
 import s4_01 from './section-4-ideal-store/01-define-the-job.js';
@@ -119,14 +154,18 @@ const act1 = [scene2, scene3, scene4];
 // travel out of the vault, the walk along the strip — is only continuous
 // because the engine never tears the stage down at these five boundaries.
 const act2 = [scene5, scene6, scene7, scene8, scene9, scene10];
+// Scenes 11–15 are likewise one world (`sceneGroup: 'act3-jobs'`): the disc
+// holds the triad's center as the home base recedes, splits, returns and
+// finally gives the frame to the tower — continuity the engine preserves by
+// never tearing the stage down at these four boundaries.
+const act3 = [scene11, scene12, scene13, scene14, scene15];
 
-// The legacy deck, as it stands after Batch B. Section 1 is gone entire and
-// the origin section with it; the function section keeps its eight, having
-// lost the palladium test to Scene 10; the ideal-store section runs from its
-// own entry straight to claim-and-carrier.
+// The legacy deck, as it stands after Batch C. The function section keeps
+// only the three ambiguous-fate survivors (see the Batch C block above):
+// the two waypoints and the stage-signatures bracket, in their legacy
+// relative order, after the act that superseded their siblings.
 const section3 = [
-  s3_00, s3_01, s3_02, s3_03, s3_04,
-  s3_06, s3_07, s3_08
+  s3_00, s3_04, s3_08
 ];
 // Section 4 keeps its shipped slide numbers — the whole project, the freeze
 // register and every governing document refer to beats as 4.15, 4.23 — so
@@ -150,6 +189,7 @@ export const sections = [
   { id: 'prologue',    label: 'Prologue',                          slides: prologue },
   { id: 'act-1',       label: 'Act I — The Unfinished Exchange',   slides: act1 },
   { id: 'act-2',       label: 'Act II — The Architecture of Money', slides: act2 },
+  { id: 'act-3',       label: 'Act III — The Jobs of Money',       slides: act3 },
   { id: 'function',    label: 'Function',                          slides: section3 },
   { id: 'ideal-store', label: 'Ideal Store',                       slides: section4 },
   { id: 'close',       label: 'Close',                             slides: section5 }

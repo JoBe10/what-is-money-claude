@@ -15,7 +15,7 @@ from a scene number to the file that will hold it.
 | `prologue/` | P1 Eighty Thousand Hours / What Is Money? · P2 The Stakes |
 | `act-1-the-unfinished-exchange/` | 2 The Direct Exchange · 3 The Breakthrough · 4 Spend or Save |
 | `act-2-the-architecture-of-money/` | 5 The Function Stayed. The Carrier Changed. · 6 Gold: Scarcity in Matter · 7 Claims on Gold · 8 Fiat: Money Becomes Information · 9 Bitcoin: Can Scarcity Become Digital? · 10 The Trade-Off Keeps Moving |
-| `act-3-the-jobs-of-money/` | 11 Three Familiar Jobs · 12 We Already Split Those Jobs · 13 Different Jobs, Different Coordination · 14 The Coffee Objection · 15 The Tower |
+| `act-3-the-jobs-of-money/` | 11 Three Familiar Jobs · 12 We Already Split Those Jobs · 13 The Order of Monetization *(the LADDER amendment, 2 Sep 2026 — master §13)* · 14 The Coffee Objection · 15 The Tower |
 | `act-4-the-store-of-value-test/` | 16 Return to the Open Exchange · 17–22 the derivation run · 23 The Comparison |
 | `act-5-the-case/` | 24–29 the case run · 30 Close |
 
