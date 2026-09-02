@@ -112,7 +112,10 @@ const CONTINUITY =
 const SPOKE_Y = 399.5;
 const MARK_CLEAR = 32;
 
-// The split (S12-F1, PORT): 3-02's own words and rows.
+// The split (S12-F1, PORT): 3-02's own words and rows. The brick glyph
+// retired to file 2 Sep 2026 (r2 ruling 2 — superseded by the located
+// real-estate render): the saved column's marks row carries the USD code
+// alone, and the renders above carry the objects.
 const COLS = ['PRICED IN', 'PAID IN', 'SAVED IN'];
 const SPLIT_CELLS = {
   household: [
@@ -123,9 +126,27 @@ const SPLIT_CELLS = {
   argentina: [
     { marks: [{ text: 'USD' }], word: 'dollars' },
     { marks: [{ text: 'ARS' }], word: 'pesos' },
-    { marks: [{ text: 'USD' }, { glyph: 'brick' }], word: 'dollars · real estate' }
+    { marks: [{ text: 'USD' }], word: 'dollars · real estate' }
   ]
 };
+// The column objects (r2 ruling 2), the cell builders' geometry verbatim:
+// the note renders — and the register's real-estate render — in the
+// rails-law band box, riding INSIDE the cells so the legacy column arrival
+// carries them. Bottoms on one shared baseline over the columns' sky
+// (y 232 — the heads' 296 top less the act's 64 band clearance), the saved
+// pair at the marks row's own 26px gap; coordinates are cell-relative
+// (.s3f-separate__cell sits at top 496, its content centred on 200).
+const NOTE_AR = 1672 / 941;
+const SPLIT_RENDERS = {
+  argentina: [
+    [{ subject: 'usd', ar: NOTE_AR, alt: 'A folded dollar note' }],
+    [{ subject: 'ars', ar: NOTE_AR, alt: 'A folded thousand-peso note' }],
+    [{ subject: 'usd', ar: NOTE_AR, alt: 'A folded dollar note' },
+      { subject: 'property', ar: 1254 / 1254, alt: 'A house — the real-estate render' }]
+  ]
+};
+const SPLIT_BAND_BOTTOM = 232 - 496;
+const SPLIT_GAP = 26;
 const LEGACY_KICKER = 'Argentina, five decades.';
 const PRINCIPLE_SPLIT =
   'The jobs are separable — across goods, and across time. A good can be money in one job before it’s money in the others.';
@@ -262,9 +283,11 @@ export const STATES = {
     { triad: { jobs: 3 } },
     { triad: { jobs: 3, continuity: true } }
   ],
-  // S12 — the approved cells s12-b1 … s12-b4 (the reverted PORT staging).
+  // S12 — the approved cells s12-b1 … s12-b4 (the reverted PORT staging,
+  // amended by r2 rulings 1 and 2: b1 is the heads on clean black — no
+  // triad in the paint tree — and the Argentina cells carry their objects).
   'we-already-split-those-jobs': [
-    { triad: { jobs: 3, voice: RECEDE.statement }, split: {} },
+    { split: {} },
     { split: { cells: 'household' } },
     { split: { cells: 'argentina', kicker: true } },
     { split: { cells: 'argentina', kicker: true, principle: true } }
@@ -734,6 +757,24 @@ class Act3Stage {
       w.className = 's3f-separate__word';
       w.textContent = spec[i].word;
       c.appendChild(w);
+      // The column objects (r2 ruling 2), inside the cell so the legacy
+      // arrival's own opacity-and-rise carries them with the codes.
+      const row = (SPLIT_RENDERS[kind] || [])[i];
+      if (row) {
+        const boxes = row.map((r) => [r, bandBox(r.ar)]);
+        const total = boxes.reduce((sum, [, [bw]]) => sum + bw, 0) + SPLIT_GAP * (boxes.length - 1);
+        let x = 200 - total / 2;
+        boxes.forEach(([r, [bw, bh]]) => {
+          const df = DarkFieldImage({ name: r.subject, width: bw, height: bh, alt: r.alt });
+          df.el.dataset.visible = 'true';
+          df.el.style.transition = 'none';
+          df.el.style.position = 'absolute';
+          df.el.style.left = `${x}px`;
+          df.el.style.top = `${SPLIT_BAND_BOTTOM - bh}px`;
+          c.appendChild(df.el);
+          x += bw + SPLIT_GAP;
+        });
+      }
     });
   }
 
@@ -982,7 +1023,9 @@ class Act3Stage {
         heads: this.heads.map((h) => [h.dataset.visible, getComputedStyle(h).opacity]),
         kind: this.cellsKind,
         cells: this.cells.map((c) => [c.dataset.visible, c.textContent,
-          getComputedStyle(c).opacity]),
+          getComputedStyle(c).opacity,
+          [...c.querySelectorAll('.df')].map((el) => [el.dataset.subject,
+            el.style.left, el.style.top, el.style.getPropertyValue('--df-w')])]),
         kicker: [this.splitKicker.dataset.visible, getComputedStyle(this.splitKicker).opacity],
         principle: [this.principle.dataset.visible, getComputedStyle(this.principle).opacity]
       },
