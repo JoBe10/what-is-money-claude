@@ -64,6 +64,12 @@ import s407 from '../../slides/section-4-ideal-store/07-store-of-value-function.
 import s408 from '../../slides/section-4-ideal-store/08-100-year-test.js';
 import s409 from '../../slides/section-4-ideal-store/09-future-is-unknowable.js';
 import s410 from '../../slides/section-4-ideal-store/10-invert-the-question.js';
+import s411 from '../../slides/section-4-ideal-store/11-carrier-failures-i.js';
+import s412 from '../../slides/section-4-ideal-store/12-carrier-failures-ii.js';
+import s413 from '../../slides/section-4-ideal-store/13-failure-to-requirement.js';
+import s414 from '../../slides/section-4-ideal-store/14-ten-properties.js';
+import s415 from '../../slides/section-4-ideal-store/15-framework-to-comparison.js';
+import s416 from '../../slides/section-4-ideal-store/16-the-comparison.js';
 
 gsap.registerPlugin(CustomEase);
 
@@ -72,9 +78,11 @@ export const reducedMotion = () =>
 
 export { ACT1_GEOM };
 
-// The legacy Section 4 modules this stage re-homes, by layer key. Session 2
-// adds 4-11 … 4-16 for Scenes 20–23.
-const LEGACY = { s404, s406, s407, s408, s409, s410 };
+// The legacy Section 4 modules this stage re-homes, by layer key — 4-04 and
+// 4-06 … 4-10 for Scenes 16–19 (Session 1), 4-11 … 4-16 for Scenes 20–23
+// (Session 2). Each leaves the manifest at the Batch D splice; the file stays
+// on disk and this stage is where it lives on.
+const LEGACY = { s404, s406, s407, s408, s409, s410, s411, s412, s413, s414, s415, s416 };
 
 // The deck's own boundary curve — CSS `ease-out`, exactly as SlideEngine's
 // crossfade runs it — so the in-act boundaries move as the legacy deck's did.
@@ -108,7 +116,21 @@ export const STATES = {
   ],
   // S19 — s19-b1 · s19-b2: 4-10 at builds 1–2 (the carrier keyed to build 2
   // at the source — the Batch D ruling 1).
-  'invert-the-question': [at('s410', 1), at('s410', 2)]
+  'invert-the-question': [at('s410', 1), at('s410', 2)],
+  // S20 — s20-b1 … s20-b5: 4-11 at builds 1–5, one typographic row per beat.
+  'how-the-carrier-can-fail-i': [1, 2, 3, 4, 5].map((b) => at('s411', b)),
+  // S21 — s21-b1 … s21-b5: 4-12 at builds 1–5.
+  'how-the-carrier-can-fail-ii': [1, 2, 3, 4, 5].map((b) => at('s412', b)),
+  // S22 — s22-b1 … s22-b3: 4-13 at builds 1–2 (the two sweeps), then 4-14 at
+  // its last build — the complete list, the ten landing in one advance (the
+  // Batch D ruling 2; S22-F2's one change, made at Scene 22's gesture).
+  'from-failure-to-requirement': [at('s413', 1), at('s413', 2), at('s414', 2)],
+  // S23 — s23-b1 … s23-b6: 4-15 at builds 1–4 (the lineup whole, Row 1 = A),
+  // then 4-16 at builds 1–2 — the fifty scores in one advance, the line.
+  'the-comparison': [
+    at('s415', 1), at('s415', 2), at('s415', 3), at('s415', 4),
+    at('s416', 1), at('s416', 2)
+  ]
 };
 
 export const TOTAL_BUILDS = Object.fromEntries(

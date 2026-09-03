@@ -9,9 +9,12 @@
 // reason a verbatim gate can be a character-for-character comparison.
 //
 // What is taken: the `[→]` paragraphs of the scene's `## S<N> — …` block, in
-// order. Session 1 installs Scenes 16–19; Session 2 extends the list to
-// Scenes 20–23 (where S23 additionally takes its two notes-only armor
-// blocks, by their own label — the Batch C S13 precedent).
+// order — and for S23, additionally the two notes-only armor blocks that
+// follow them (each a bold bracketed marker paragraph and the armor
+// paragraphs beneath it), because the armor is notes material by its own
+// label (installed notes-only, never spoken, zero advances inside it — the
+// Batch C S13 precedent). Session 1 installed Scenes 16–19; Session 2
+// extends the list to Scenes 20–23.
 //
 // Usage: node install-scripts.cjs [--check]
 //   --check  verify only; exit 1 if any installed script differs.
@@ -26,7 +29,11 @@ const SCENES = [
   ['S16', '16-return-to-the-open-exchange.js'],
   ['S17', '17-what-the-carrier-must-preserve.js'],
   ['S18', '18-the-100-year-test.js'],
-  ['S19', '19-invert-the-question.js']
+  ['S19', '19-invert-the-question.js'],
+  ['S20', '20-how-the-carrier-can-fail-i.js'],
+  ['S21', '21-how-the-carrier-can-fail-ii.js'],
+  ['S22', '22-from-failure-to-requirement.js'],
+  ['S23', '23-the-comparison.js']
 ];
 const ALL_KEYS = ['S16', 'S17', 'S18', 'S19', 'S20', 'S21', 'S22', 'S23'];
 
@@ -43,9 +50,14 @@ function packageScripts() {
     const nextKey = ALL_KEYS[i + 1] ? `\n## ${ALL_KEYS[i + 1]} — ` : null;
     const end = nextKey ? section.indexOf(nextKey, start) : -1;
     const block = section.slice(start, end < 0 ? section.length : end);
-    const paras = block.split('\n\n').map((p) => p.trim()).filter((p) => p.startsWith('[→]'));
-    if (!paras.length) throw new Error(`package §2 block for ${key} has no [→] paragraphs`);
-    out[key] = paras.join('\n\n');
+    // The heading line is the block's first paragraph; everything after it
+    // is script. S23's armor markers and paragraphs are taken with the
+    // arrows; every other scene carries arrows only.
+    const paras = block.split('\n\n').map((p) => p.trim()).filter(Boolean).slice(1);
+    const armorAt = paras.findIndex((p) => p.startsWith('**[Notes-only'));
+    const taken = paras.filter((p, i) => p.startsWith('[→]') || (key === 'S23' && armorAt > -1 && i >= armorAt));
+    if (!taken.length || !taken[0].startsWith('[→]')) throw new Error(`package §2 block for ${key} has no [→] paragraphs`);
+    out[key] = taken.join('\n\n');
   });
   return out;
 }
