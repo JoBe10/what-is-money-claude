@@ -108,10 +108,12 @@ const CONTINUITY =
 const SPOKE_Y = 399.5;
 const MARK_CLEAR = 32;
 
-// The split (S12-F1, PORT): 3-02's own words and rows. The brick glyph
-// retired to file 2 Sep 2026 (r2 ruling 2 — superseded by the located
-// real-estate render): the saved column's marks row carries the USD code
-// alone, and the renders above carry the objects.
+// The split (S12-F1, ADAPT since the Act III final ruling 1, 3 Sep 2026,
+// master §13): 3-02's own words and rows for the household beat; in the
+// Argentina columns THE RENDERS REPLACE THE WORDS — each column carries the
+// header, then the render(s), nothing else. The USD / ARS codes and the
+// dollars / pesos words retire (the brick glyph had already retired to file
+// at r2 ruling 2). A cell with no word builds only its renders.
 const COLS = ['PRICED IN', 'PAID IN', 'SAVED IN'];
 const SPLIT_CELLS = {
   household: [
@@ -120,18 +122,19 @@ const SPLIT_CELLS = {
     { marks: [], word: 'property · shares · gold' }
   ],
   argentina: [
-    { marks: [{ text: 'USD' }], word: 'dollars' },
-    { marks: [{ text: 'ARS' }], word: 'pesos' },
-    { marks: [{ text: 'USD' }], word: 'dollars · real estate' }
+    { marks: [], word: null },
+    { marks: [], word: null },
+    { marks: [], word: null }
   ]
 };
-// The column objects (r2 ruling 2), the cell builders' geometry verbatim:
-// the note renders — and the register's real-estate render — in the
-// rails-law band box, riding INSIDE the cells so the legacy column arrival
-// carries them. Bottoms on one shared baseline over the columns' sky
-// (y 232 — the heads' 296 top less the act's 64 band clearance), the saved
-// pair at the marks row's own 26px gap; coordinates are cell-relative
-// (.s3f-separate__cell sits at top 496, its content centred on 200).
+// The column objects (r2 ruling 2; re-placed by the Act III final ruling
+// 1), the cell builders' geometry verbatim: the note renders — and the
+// register's real-estate render — in the rails-law band box, riding INSIDE
+// the cells so the legacy column arrival carries them, standing in the slot
+// the text rows vacated: bottoms on one shared band baseline at the slot's
+// bottom — cell-relative 188 (absolute 684; .s3f-separate__cell sits at top
+// 496, its content centred on 200) — the saved pair at the marks row's own
+// 26px gap, the principle (764) eighty pixels beneath.
 const NOTE_AR = 1672 / 941;
 const SPLIT_RENDERS = {
   argentina: [
@@ -141,7 +144,7 @@ const SPLIT_RENDERS = {
       { subject: 'property', ar: 1254 / 1254, alt: 'A house — the real-estate render' }]
   ]
 };
-const SPLIT_BAND_BOTTOM = 232 - 496;
+const SPLIT_BAND_BOTTOM = 188;
 const SPLIT_GAP = 26;
 const LEGACY_KICKER = 'Argentina, five decades.';
 const PRINCIPLE_SPLIT =
@@ -714,26 +717,31 @@ class Act3Stage {
     const spec = SPLIT_CELLS[kind] || SPLIT_CELLS.household;
     this.cells.forEach((c, i) => {
       c.innerHTML = '';
-      const glyphs = document.createElement('div');
-      glyphs.className = 's3f-separate__glyphs';
-      spec[i].marks.forEach((mark) => {
-        const m = document.createElement('div');
-        if (mark.text) {
-          m.className = 's3f-separate__mark';
-          m.textContent = mark.text;
-        } else {
-          m.className = 's3f-separate__glyph';
-          m.innerHTML = glyph(mark.glyph, 56);
-        }
-        glyphs.appendChild(m);
-      });
-      c.appendChild(glyphs);
-      const w = document.createElement('p');
-      w.className = 's3f-separate__word';
-      w.textContent = spec[i].word;
-      c.appendChild(w);
-      // The column objects (r2 ruling 2), inside the cell so the legacy
-      // arrival's own opacity-and-rise carries them with the codes.
+      // A text row builds as the legacy builds it — the marks row, then the
+      // word; a render-only cell (the Act III final ruling 1) builds neither.
+      if (spec[i].word != null) {
+        const glyphs = document.createElement('div');
+        glyphs.className = 's3f-separate__glyphs';
+        spec[i].marks.forEach((mark) => {
+          const m = document.createElement('div');
+          if (mark.text) {
+            m.className = 's3f-separate__mark';
+            m.textContent = mark.text;
+          } else {
+            m.className = 's3f-separate__glyph';
+            m.innerHTML = glyph(mark.glyph, 56);
+          }
+          glyphs.appendChild(m);
+        });
+        c.appendChild(glyphs);
+        const w = document.createElement('p');
+        w.className = 's3f-separate__word';
+        w.textContent = spec[i].word;
+        c.appendChild(w);
+      }
+      // The column objects (r2 ruling 2, re-placed by the Act III final
+      // ruling 1), inside the cell so the legacy arrival's own
+      // opacity-and-rise carries them in place of the words.
       const row = (SPLIT_RENDERS[kind] || [])[i];
       if (row) {
         const boxes = row.map((r) => [r, bandBox(r.ar)]);
