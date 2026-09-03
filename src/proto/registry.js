@@ -34,14 +34,16 @@ import spendOrSave from './gate-2/s4-spend-or-save.js';
 import returnToTheOpenExchange from '../scenes/act-4-the-store-of-value-test/16-return-to-the-open-exchange.js';
 import whatTheCarrierMustPreserve from '../scenes/act-4-the-store-of-value-test/17-what-the-carrier-must-preserve.js';
 import the100YearTest from '../scenes/act-4-the-store-of-value-test/18-the-100-year-test.js';
+import invertTheQuestion from '../scenes/act-4-the-store-of-value-test/19-invert-the-question.js';
 
 returnToTheOpenExchange.protoKey = 'act4';
 whatTheCarrierMustPreserve.protoKey = 'act4';
 the100YearTest.protoKey = 'act4';
+invertTheQuestion.protoKey = 'act4';
 
 export const prototypes = [
   theDirectExchange, theBreakthrough, spendOrSave,
-  returnToTheOpenExchange, whatTheCarrierMustPreserve, the100YearTest
+  returnToTheOpenExchange, whatTheCarrierMustPreserve, the100YearTest, invertTheQuestion
 ];
 
 export default prototypes;
