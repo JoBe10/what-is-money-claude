@@ -96,6 +96,8 @@ Ruling 5 keeps the rules line — *"Bitcoin does not fix its price. It fixes the
 
 **The default is A.** Either way the line is verbatim from legacy `4-20` and stands once in Scene 29; the presenter's word pass owns the sentence order.
 
+**RULED A, 4 September 2026 (master §13).** The rules line sits before *"The case is not that the price will behave."*, as installed.
+
 ## Row 4 — Is Scene 28's field a port, or is it re-derived from P1's canvas?
 
 The brief asks for the UnitField as the hours-field's rhyme, *its geometry, density, and timing derived from P1's implemented field, recorded as the rhyme's source*. §0 records the derivation as it stands in the code: both fields read one grammar.
