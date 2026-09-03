@@ -1,0 +1,260 @@
+{
+  "date": "2026-09-03T13:30:52.780Z",
+  "session": "acts-3-4-final",
+  "expectedSlides": 32,
+  "wasSlides": 34,
+  "deck": {
+    "slides": 32,
+    "firstId": "eighty-thousand-hours",
+    "ids": [
+      "eighty-thousand-hours",
+      "the-stakes",
+      "the-direct-exchange",
+      "the-breakthrough",
+      "spend-or-save",
+      "the-function-stayed",
+      "scarcity-in-matter",
+      "claims-on-gold",
+      "money-becomes-information",
+      "scarcity-becomes-digital",
+      "the-trade-off-keeps-moving",
+      "three-familiar-jobs",
+      "we-already-split-those-jobs",
+      "the-order-of-monetization",
+      "the-coffee-objection",
+      "the-tower",
+      "return-to-the-open-exchange",
+      "what-the-carrier-must-preserve",
+      "the-100-year-test",
+      "invert-the-question",
+      "how-the-carrier-can-fail-i",
+      "how-the-carrier-can-fail-ii",
+      "from-failure-to-requirement",
+      "the-comparison",
+      "4-17-store-of-value-function-migrates",
+      "4-18-monetary-premium",
+      "4-19-other-assets-do-moneys-job",
+      "4-20-bitcoin-does-not-replace-everything",
+      "4-21-marginal-store-of-value-decision",
+      "4-22-fixed-supply-reprices-at-margin",
+      "4-23-investment-case-from-first-principles",
+      "5-01-thank-you"
+    ],
+    "sections": [
+      "prologue:2",
+      "act-1:3",
+      "act-2:6",
+      "act-3:5",
+      "act-4:8",
+      "ideal-store:7",
+      "close:1"
+    ],
+    "s12Builds": 2,
+    "s15Builds": 6,
+    "act3At": 11,
+    "act4At": 16,
+    "afterAct4": "4-17-store-of-value-function-migrates"
+  },
+  "act3Span": {
+    "states": 25,
+    "forward": true,
+    "backwardReachesTop": true,
+    "backwardMonotonic": true,
+    "backwardSteps": 24
+  },
+  "act4Span": {
+    "states": 42,
+    "forward": true,
+    "backwardReachesTop": true,
+    "backwardMonotonic": true,
+    "backwardSteps": 41
+  },
+  "exit": {
+    "last": {
+      "idx": 15,
+      "step": 6,
+      "id": "the-tower"
+    },
+    "statement": "What makes something a good store of value?",
+    "onSlab": true
+  },
+  "boundaries": [
+    {
+      "name": "S15 end (the slab + the question) → S16 (the splice seam, forward)",
+      "from": {
+        "idx": 15,
+        "step": 6,
+        "id": "the-tower"
+      },
+      "to": {
+        "idx": 16,
+        "step": 0,
+        "id": "return-to-the-open-exchange"
+      }
+    },
+    {
+      "name": "S16 b0 → S15 (the seam backward — the engine’s ← outside a group)",
+      "from": {
+        "idx": 16,
+        "step": 0,
+        "id": "return-to-the-open-exchange"
+      },
+      "to": {
+        "idx": 15,
+        "step": 0,
+        "id": "the-tower"
+      }
+    },
+    {
+      "name": "S16 b0 → S15 end (the seam backward — ↑, the jump-to-end key)",
+      "from": {
+        "idx": 16,
+        "step": 0,
+        "id": "return-to-the-open-exchange"
+      },
+      "to": {
+        "idx": 15,
+        "step": 6,
+        "id": "the-tower"
+      }
+    },
+    {
+      "name": "S23 end → the surviving legacy Section 4 (Act IV’s exit, forward)",
+      "from": {
+        "idx": 23,
+        "step": 5,
+        "id": "the-comparison"
+      },
+      "to": {
+        "idx": 24,
+        "step": 0,
+        "id": "4-17-store-of-value-function-migrates"
+      }
+    },
+    {
+      "name": "4-17-store-of-value-function-migrates b0 → S23 (backward — ←)",
+      "from": {
+        "idx": 24,
+        "step": 0,
+        "id": "4-17-store-of-value-function-migrates"
+      },
+      "to": {
+        "idx": 23,
+        "step": 0,
+        "id": "the-comparison"
+      }
+    },
+    {
+      "name": "4-17-store-of-value-function-migrates b0 → S23 end (backward — ↑)",
+      "from": {
+        "idx": 24,
+        "step": 0,
+        "id": "4-17-store-of-value-function-migrates"
+      },
+      "to": {
+        "idx": 23,
+        "step": 5,
+        "id": "the-comparison"
+      }
+    }
+  ],
+  "parity": [
+    {
+      "state": "we-already-split-those-jobs:0",
+      "identical": true
+    },
+    {
+      "state": "we-already-split-those-jobs:1",
+      "identical": true
+    },
+    {
+      "state": "we-already-split-those-jobs:2",
+      "identical": true
+    },
+    {
+      "state": "the-tower:0",
+      "identical": true
+    },
+    {
+      "state": "the-tower:1",
+      "identical": true
+    },
+    {
+      "state": "the-tower:2",
+      "identical": true
+    },
+    {
+      "state": "the-tower:3",
+      "identical": true
+    },
+    {
+      "state": "the-tower:4",
+      "identical": true
+    },
+    {
+      "state": "the-tower:5",
+      "identical": true
+    },
+    {
+      "state": "the-tower:6",
+      "identical": true
+    },
+    {
+      "state": "return-to-the-open-exchange:0",
+      "identical": true
+    },
+    {
+      "state": "return-to-the-open-exchange:1",
+      "identical": true
+    },
+    {
+      "state": "return-to-the-open-exchange:2",
+      "identical": true
+    },
+    {
+      "state": "return-to-the-open-exchange:3",
+      "identical": true
+    },
+    {
+      "state": "return-to-the-open-exchange:4",
+      "identical": true
+    },
+    {
+      "state": "return-to-the-open-exchange:5",
+      "identical": true
+    },
+    {
+      "state": "return-to-the-open-exchange:6",
+      "identical": true
+    },
+    {
+      "state": "return-to-the-open-exchange:7",
+      "identical": true
+    },
+    {
+      "state": "the-comparison:0",
+      "identical": true
+    },
+    {
+      "state": "the-comparison:1",
+      "identical": true
+    },
+    {
+      "state": "the-comparison:2",
+      "identical": true
+    },
+    {
+      "state": "the-comparison:3",
+      "identical": true
+    },
+    {
+      "state": "the-comparison:4",
+      "identical": true
+    },
+    {
+      "state": "the-comparison:5",
+      "identical": true
+    }
+  ],
+  "consoleErrors": []
+}

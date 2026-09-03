@@ -1,0 +1,154 @@
+{
+  "date": "2026-09-03T13:30:47.286Z",
+  "session": "acts-3-4-final",
+  "supersededNotWidened": "review/batch-c/harness/static-gates.cjs (S12 = 4) and review/batch-d/harness/static-gates.cjs (the survivors stay) are their batches’ evidence at their tags; neither is re-run or edited here",
+  "checks": 29,
+  "failures": 0,
+  "results": [
+    {
+      "name": "BEATS: every Act III scene’s notes carry the amended map’s arrows — S12 = 3, Act III is 25",
+      "ok": true,
+      "detail": "5 · 3 · 7 · 3 · 7 = 25"
+    },
+    {
+      "name": "BEATS: Act IV is unchanged at 42",
+      "ok": true,
+      "detail": "42"
+    },
+    {
+      "name": "VERBATIM: the installed Act III scripts are docs/batch-c-package.md §2, character for character (the batch-c installer, --check)",
+      "ok": true,
+      "detail": "5/5 scripts identical to the package"
+    },
+    {
+      "name": "VERBATIM: the installed Act IV scripts are docs/batch-d-package.md §2, character for character (the batch-d installer, --check)",
+      "ok": true,
+      "detail": "8/8 scripts identical to the package"
+    },
+    {
+      "name": "PROTECTED: the hinge question stands on stage at the exit, word for word — the stage’s question string and the S15 b7 state",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "PROTECTED: the pivot coda is the last paragraph of S15’s installed notes, verbatim",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "PROTECTED: the hinge question appears in S15’s notes exactly once, inside the coda",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "PROTECTED: the package carries the coda verbatim and the master records the wording as protected",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "PROTECTED: the bisection crescendo stands in S16’s notes, character for character",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "PROTECTED: the scores are dated in S23’s notes — \"my judgments, as of 2026\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "PROTECTED: the Scene 16 join keeps the legacy \"And\" (the leftovers ruling, closed)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "PROTECTED: \"Don’t trust. Verify.\" is on stage exactly once across every module the manifest reaches — legacy 4-16, re-homed at S23 b6",
+      "ok": true,
+      "detail": "84 modules reached · on stage in: src/slides/section-4-ideal-store/16-the-comparison.js"
+    },
+    {
+      "name": "FROZEN: the two data files’ committed blob ids are the ids the ruled map records, and the working tree carries no change to them",
+      "ok": true,
+      "detail": "3a6440aa… and c1eb13d4… — untouched"
+    },
+    {
+      "name": "LANGUAGE: no visible line or script in src/scenes/ names the medium or the live delivery",
+      "ok": true,
+      "detail": "36 scene files swept"
+    },
+    {
+      "name": "SPLICE: 3-00 and 3-04 stay on disk and are out of the manifest",
+      "ok": true,
+      "detail": "2/2 on disk, 0/2 imported"
+    },
+    {
+      "name": "SPLICE: the function section has left the sections list",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "SPLICE: the counts are stated in the manifest’s own record (34 → 32)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "SPLICE: the seven Act V sources (4-17 … 4-23) and the close stay in the manifest for Batch E",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "SPLICE: the thirteen Act III–IV scenes are in the manifest",
+      "ok": true,
+      "detail": "13/13"
+    },
+    {
+      "name": "SOURCE (ruling 2): legacy 4-16 builds the header band — five subjects in the rails-law box, the register mixed, the pitch attribute on the root",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "SOURCE (ruling 2): the table’s asset headings carry the label alone, and the R7.4 toggle is gone from src/",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "SOURCE (ruling 2): the stylesheet carries the band and the tightened pitch under the attribute, the legacy pitch kept",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "SOURCE (ruling 1): the jobs stage carries no household cells, and Scene 12 stands at three states",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "SOURCE (ruling 3): the jobs stage’s exit state stands only the base slab",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "SOURCE (ruling 3): Scene 15’s last transition dissolves the upper layers, the links and the drop and lands the question — no triad, no token",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "SOURCE (ruling 3): Scene 16’s entry begins its disc at the base slab’s center",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "CELLS: both sheets’ check records are green on file at this session",
+      "ok": true,
+      "detail": "act-3 30/30 · act-4 27/27"
+    },
+    {
+      "name": "CELLS: the Act III record stands at 25 beats and 31 cells; the Act IV record at 42",
+      "ok": true,
+      "detail": "25/31 · 42/42"
+    },
+    {
+      "name": "CELLS: the retired cells are on disk at the carried shas — the household row (the approved s12-b2) and the triad coda (the approved s14-b4)",
+      "ok": true,
+      "detail": ""
+    }
+  ]
+}
