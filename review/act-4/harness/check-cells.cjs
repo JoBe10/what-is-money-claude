@@ -23,10 +23,12 @@
 //   BEAT COVERAGE — all 43 beats of the frozen map, each exactly once; 43
 //   cells; no candidate system anywhere (the map names no NEW frame).
 //
-//   THE PENDING SET — every pending-review cell carries a flag, every flag is
-//   on a pending-review cell, every approved-ruled cell carries its ruling,
-//   and the only review classes are approved-port, approved-ruled and
-//   pending-review.
+//   THE APPROVED SET — the sheet is presenter-approved in full (3 Sep 2026,
+//   the Batch D implementation brief §1.3): no cell is pending; the only
+//   review classes are approved-port, approved-ruled and approved-as-
+//   rendered; every approved-as-rendered cell carries its closed flag, every
+//   approved-ruled cell its ruling; states.json records the approval and the
+//   approved set is every cell.
 //
 //   THE PROBES — every cell has at least one probe and every probe passed at
 //   capture: the still shows the state it claims (the fifty revealed scores,
@@ -254,18 +256,24 @@ function check(name, ok, detail) {
   // ---- THE PENDING SET ------------------------------------------------------
   {
     const reviews = new Set(cells.map((c) => c.review));
-    const allowed = ['approved-port', 'approved-ruled', 'pending-review'];
+    const allowed = ['approved-port', 'approved-ruled', 'approved-as-rendered'];
     const stray = [...reviews].filter((r) => !allowed.includes(r));
-    check('REVIEW: the only review classes are approved-port, approved-ruled and pending-review', stray.length === 0, stray.join(', ') || allowed.join(' · '));
-    const pendingNoFlag = cells.filter((c) => c.review === 'pending-review' && !c.flag).map((c) => c.id);
-    const flagNotPending = cells.filter((c) => c.flag && c.review !== 'pending-review').map((c) => c.id);
+    check('REVIEW: the only review classes are approved-port, approved-ruled and approved-as-rendered — no cell is pending (the sheet approved in full, 3 Sep 2026)', stray.length === 0, stray.join(', ') || allowed.join(' · '));
+    const renderedNoFlag = cells.filter((c) => c.review === 'approved-as-rendered' && !c.flag).map((c) => c.id);
+    const flagNotRendered = cells.filter((c) => c.flag && c.review !== 'approved-as-rendered').map((c) => c.id);
     const ruledNoRuling = cells.filter((c) => c.review === 'approved-ruled' && !c.ruling).map((c) => c.id);
     const rulingNotRuled = cells.filter((c) => c.ruling && c.review !== 'approved-ruled').map((c) => c.id);
-    check('REVIEW: every pending-review cell carries a plain-English flag, every flag is on a pending-review cell, and every approved-ruled cell carries its ruling',
-      pendingNoFlag.length === 0 && flagNotPending.length === 0 && ruledNoRuling.length === 0 && rulingNotRuled.length === 0,
-      [...pendingNoFlag.map((id) => `${id} pending without flag`), ...flagNotPending.map((id) => `${id} flagged but not pending`),
+    check('REVIEW: every approved-as-rendered cell carries its closed flag, every flag is on such a cell, and every approved-ruled cell carries its ruling',
+      renderedNoFlag.length === 0 && flagNotRendered.length === 0 && ruledNoRuling.length === 0 && rulingNotRuled.length === 0,
+      [...renderedNoFlag.map((id) => `${id} approved as rendered without its flag`), ...flagNotRendered.map((id) => `${id} flagged but not approved-as-rendered`),
         ...ruledNoRuling.map((id) => `${id} ruled without ruling`), ...rulingNotRuled.map((id) => `${id} carries a ruling but is not approved-ruled`)].join(' · ')
-        || `${cells.filter((c) => c.review === 'pending-review').length} pending, each flagged · ${cells.filter((c) => c.review === 'approved-ruled').length} ruled, each with its ruling`);
+        || `${cells.filter((c) => c.review === 'approved-as-rendered').length} approved as rendered, each with its closed flag · ${cells.filter((c) => c.review === 'approved-ruled').length} ruled, each with its ruling`);
+    const approvedOk = typeof record.approval === 'string' && /approved in full/.test(record.approval) &&
+      Array.isArray(record.approvedSet) && record.approvedSet.length === cells.length &&
+      cells.every((c) => record.approvedSet.includes(c.id)) &&
+      record.flags.every((f) => /^closed/.test(f.status));
+    check('APPROVAL: states.json records the presenter’s approval, the approved set is every cell, and every flag is closed',
+      approvedOk, approvedOk ? `${record.approvedSet.length} cells approved` : 'NOT RECORDED');
   }
 
   // ---- THE PROBES -----------------------------------------------------------

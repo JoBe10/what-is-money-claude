@@ -37,11 +37,15 @@
 // entry seam and the disc's travel and scale between S16's frames.
 //
 // Review classes: `approved-port` — a PORT cell, approved by provenance;
-// `pending-review` — a PORT cell carrying a wiring flag the presenter should
-// see at the flipbook walk; `approved-ruled` — a cell whose flag the presenter
-// answered with a ruling at the flipbook walk (the Batch D implementation
-// brief §1, 3 Sep 2026, master §13), the ruling recorded on the cell in the
-// flag's place. No cell carries a candidate system.
+// `approved-ruled` — a cell whose flag the presenter answered with a ruling
+// at the flipbook walk (the Batch D implementation brief §1, 3 Sep 2026,
+// master §13), the ruling recorded on the cell in the flag's place;
+// `approved-as-rendered` — a cell that carried a wiring flag to the walk and
+// was approved as rendered there (ruling 3 of the same brief), its flag kept
+// as a closed record. THE SHEET IS APPROVED IN FULL (3 Sep 2026): no cell is
+// pending, and the 42 cells are the approved set — the visual authority for
+// every landed-state proof of the Batch D implementation. No cell carries a
+// candidate system.
 //
 // THE BATCH D RULINGS (3 Sep 2026, ruled against this sheet): (1) Scene 19
 // restages — the carrier arrives at beat 2, keyed to build 2 at the source
@@ -51,7 +55,9 @@
 // (2) Scene 22 merges its list beats — all ten properties land in one
 // advance; S22 = 3, the act = 42; S22-F2 is ADAPT (the landing as one
 // gesture, Scene 22's build at Session 2); the merged cell is legacy 4-14's
-// own last state, mounted as the legacy performs it.
+// own last state, mounted as the legacy performs it. (3) The sheet is
+// approved in full — the eight remaining flagged cells as rendered, the
+// table-kicker spacing (s23-b5 · s23-b6) an accepted legacy fact.
 
 import { ensureStage, destroyStage } from '/src/scenes/act-1-the-unfinished-exchange/_exchangeStage.js';
 import s404 from '/src/slides/section-4-ideal-store/04-unfinished-exchange.js';
@@ -151,7 +157,7 @@ export function probe(id) {
 // the scene on 4-06's four beats, the crescendo included.
 
 cell('s16-b1', {
-  scene: 'S16', beat: 1, frame: 'S16-F1', klass: 'PORT', review: 'pending-review', act1: true,
+  scene: 'S16', beat: 1, frame: 'S16-F1', klass: 'PORT', review: 'approved-as-rendered', act1: true,
   source: 'the film’s own Scene 4 — the approved s4-b4-b (review/gate-2/states/states.json approvedSetCurrent), rebuilt by the Act I stage’s own state law: _exchangeStage.js applyState(\'spend-or-save\', 3)',
   caption: 'Beat 1 · the homecoming: the Scene 4 frame reconstructs exactly as the viewer left it at the save — the claim resting on the save road at (1530, 630), the terminal dissolved, the road drawing on into black, the spend road subdued on the left. The return line and your join are spoken over it: “We left this exchange open. What has to survive until we close it? The surgeon is still holding the claim he accepted that day…” Built by the Act I stage’s own applyState, so the still is the approved s4-b4-b by construction — nothing here is drawn by this sheet.',
   flag: 'The entry seam, rendered once as the map asks (§4 seam 1). Three wiring readings stand here, each one word to change. First, the whole fork returns at rest — the approved s4-b4-b entire, both roads — rather than the save road with the held claim alone. Second, the pair beneath it (s4-b5-b’s “Spending closes the exchange. / Saving keeps it open.”) does not return, and no words are put on the frame: the return line is spoken, and no legacy treatment carries it on screen. Third, “everything recedes but the claim” is the gesture into beat 2, not a settled state — the roads dissolve and the disc travels to the fork’s apex as the definition lands. The register needs no shift: this frame is already black, white and the accent.',
@@ -159,7 +165,7 @@ cell('s16-b1', {
 }, (st) => homecoming(st, 3));
 
 cell('s16-b2', {
-  scene: 'S16', beat: 2, frame: 'S16-F3', klass: 'PORT', review: 'pending-review',
+  scene: 'S16', beat: 2, frame: 'S16-F3', klass: 'PORT', review: 'approved-as-rendered',
   source: '4-04-unfinished-exchange, build 3 — the scene gone, the headline risen to the middle lane, the claim released to center at 116',
   caption: 'Beat 2 · the definition lands at display scale over the released claim: AN EARNED, TRANSFERABLE / CLAIM ON VALUE — two stacked lines at 68px with the claim in the accent, master §5 rule 11’s own reference frame — and beneath the words the disc at (960, 470), which is the apex of Scene 4’s fork, the very point the claim rose to before it took the save road. The exchange scene is gone; only the claim and its name remain. Spoken: “Money is an earned, transferable claim on value…”',
   flag: 'The legacy lands this sentence twice — first low, under the still-present exchange (its build 2), then risen into the middle as the scene leaves (build 3). In the film the scene that leaves is Scene 4’s fork, and it recedes during beat 1, so this beat stands at the legacy’s build-3 composition. If you want the definition to land low first, under the receded fork, that is one word. The disc’s travel from its rest on the save road (1530, 630) to the apex (960, 470), and its size here (the legacy’s 116; 176 at beat 4), are wiring.',
@@ -168,7 +174,7 @@ cell('s16-b2', {
 }, (st) => mount(st, s404, 3));
 
 cell('s16-b3', {
-  scene: 'S16', beat: 3, frame: 'S16-F3', klass: 'PORT', review: 'pending-review',
+  scene: 'S16', beat: 3, frame: 'S16-F3', klass: 'PORT', review: 'approved-as-rendered',
   source: '4-04-unfinished-exchange, build 3 — held; the legacy speaks its third beat over this composition',
   caption: 'Beat 3 · the social claim: the frame holds — the definition at full voice over the released claim — while the spoken word does the enlarging: not a legal claim on anyone in particular, a social claim on everyone in general, enforced by acceptance; and 1971 seen properly. The legacy speaks this beat over the same composition it landed the definition on.',
   flag: 'This still is beat 2’s frame, held. The legacy 4-04 has one state fewer here than the film has beats, because its build 2 — the definition low under the exchange scene — retired with that scene. Rung 4 of the enlargement therefore lands in the spoken word alone. A landed line for the social claim would be a NEW element, and the ruled map names none; if you want one, that is a ruling, not a wiring change.',
@@ -185,7 +191,7 @@ cell('s16-b4', {
 }, (st) => mount(st, s404, 4));
 
 cell('s16-b5', {
-  scene: 'S16', beat: 5, frame: 'S16-F4', klass: 'PORT', review: 'pending-review',
+  scene: 'S16', beat: 5, frame: 'S16-F4', klass: 'PORT', review: 'approved-as-rendered',
   source: '4-06-claim-and-carrier, build 1 — it needs a body',
   caption: 'Beat 5 · the claim needs a body: 4-06’s opening statement lands — The claim on value is the essence of money. — with the body line beneath it: But an abstract claim still needs a body — something capable of carrying it across people, places and time. The claim stands alone at the carrier stage’s center; no shell yet.',
   flag: 'From beat 4’s released disc (176, at the fork’s apex) to 4-06’s claim inside the carrier stage (the ClaimObject’s own 116 at the scene’s center) is a re-centering and a scale change the map records as wiring (§0: the disc’s scale at the homecoming against its Section 4 scale inside the shell). One number places it; nothing about the object changes — it is the same drawn disc.',
@@ -194,7 +200,7 @@ cell('s16-b5', {
 }, (st) => mount(st, s406, 1));
 
 cell('s16-b6', {
-  scene: 'S16', beat: 6, frame: 'S16-F4', klass: 'PORT', review: 'pending-review',
+  scene: 'S16', beat: 6, frame: 'S16-F4', klass: 'PORT', review: 'approved-as-rendered',
   source: '4-06-claim-and-carrier, build 2 — the split, and the whole record reorganized into carriers',
   caption: 'Beat 6 · the split: THE MONETARY MEDIUM / THE CARRIER lands, the banded-wall shell closes around the claim (construction C, R7.2), the five-carrier lineage stands beneath in the dark-field register — SHELLS · GOLD · PAPER · BANK LEDGERS · BITCOIN at 150 × 112, all five renders in the shipping set — and the final statement: The claim is the essence. The monetary asset is the carrier.',
   flag: 'The BITCOIN position in the lineage carries a photograph of a physical coin — the legacy source’s own V-1 flag (a photograph of an object the script denies), restored by your R7.2 ruling and carried here as ruled (map §4 seam 6). One word in the source’s carrier table returns it to the grammar mark; the other four positions are unaffected.',
@@ -373,7 +379,7 @@ FAILURES_II.forEach(([name, explanation], i) => {
 // ============================================================ SCENE 22 (3 beats — ruled 3 Sep 2026)
 
 cell('s22-b1', {
-  scene: 'S22', beat: 1, frame: 'S22-F1', klass: 'PORT', review: 'pending-review',
+  scene: 'S22', beat: 1, frame: 'S22-F1', klass: 'PORT', review: 'approved-as-rendered',
   source: '4-13-failure-to-requirement, build 1 — the first sweep',
   caption: 'Beat 1 · the first sweep: the ten failures stand in the mapping grid under the line Invert each failure. The properties emerge., and the first five turn around — DILUTED → NO SUPPLY INFLATION, INDIVISIBLE → DIVISIBILITY, ILLIQUID → LIQUIDITY, TRAPPED → PORTABILITY, COSTLY TO HOLD → NO CARRYING COSTS — while the second five still stand unmapped.',
   flag: '4-13’s build 0 — all ten failures standing in the grid, none yet mapped — is the composition this beat’s sweep starts from, and it has no advance of its own in the merged act: Scene 21’s completed index gives way to the grid as this beat’s first movement, and the sweep follows. Wiring, flagged. (The count is as you ruled it: three compositions across four advances.)',
@@ -426,7 +432,7 @@ cell('s23-b4', {
 }, (st) => mount(st, s415, 4));
 
 cell('s23-b5', {
-  scene: 'S23', beat: 5, frame: 'S23-F2', klass: 'PORT', review: 'pending-review',
+  scene: 'S23', beat: 5, frame: 'S23-F2', klass: 'PORT', review: 'approved-as-rendered',
   source: '4-16-the-comparison, build 1 — all fifty scores on one advance (R7.4 §D.3) + AssetComparisonTable + DotRating + COMPARISON_ROWS (frozen)',
   caption: 'Beat 5 · the table — THE COMPARISON in the quiet kicker register; PROPERTY; the five compact headers as grammar glyphs; ten rows; and ALL FIFTY SCORES LANDING AT ONCE — the frozen data, blob-proven, walked in the spoken word. No total, no winner badge, no highlight. The closing line is not yet on the frame.',
   flag: 'The empty table — 4-16’s build 0, the table drawn with no score in it — has no spoken advance of its own once 4-15 and 4-16 are one scene (map §4 seam 7). It enters either with beat 4’s recede (the candidates giving way to the empty table as the question fades) or as the first movement of this beat’s gesture (the table draws, then the fifty scores land). This sheet stands the settled state — the scores landed — and flags the movement. One more thing the still shows faithfully: in the legacy frame the kicker THE COMPARISON (top 104) and the MONETARY ASSETS group label (the table’s first row, top 116) stack with no air between them, and the deck renders the same tight stack at 4-16 build 1. One number on the kicker’s top opens the gap — a ruled change on a proven treatment, yours to name.',
@@ -434,7 +440,7 @@ cell('s23-b5', {
 }, (st) => mount(st, s416, 1));
 
 cell('s23-b6', {
-  scene: 'S23', beat: 6, frame: 'S23-F3', klass: 'PORT', review: 'pending-review',
+  scene: 'S23', beat: 6, frame: 'S23-F3', klass: 'PORT', review: 'approved-as-rendered',
   source: '4-16-the-comparison, build 2 — the line',
   caption: 'Beat 6 · the closing line: Don’t trust. Verify. — two spans, on stage exactly once in the film, beneath the fifty scores. The scores are dated in the spoken word: my judgments, as of 2026; every one of them an invitation. The act ends on the turn to where monetary demand goes.',
   flag: 'The kicker THE COMPARISON and the MONETARY ASSETS group label stack with no air between them, exactly as the legacy deck renders this frame (the kicker at top 104, the table at top 116). One number opens the gap — a ruled change on a proven treatment, yours to name; this sheet ports the frame as it is.',

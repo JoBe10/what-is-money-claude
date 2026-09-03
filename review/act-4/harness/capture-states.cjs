@@ -5,10 +5,14 @@
 // cuts the record: `sheet.html` — the flipbook, in beat order, the review
 // request the presenter walks — and `states.json`.
 //
-// THE SHEET IS A REVIEW REQUEST. The map is ruled (3 Sep 2026, master §13:
-// A · A · A; 21 PORT · 0 ADAPT · 0 NEW · 2 retired) and the beat maps are
-// frozen at 43, so every cell is a PORT: the legacy slide module mounted at
-// its build, or the film's own Act I stage at Scene 4's approved save state.
+// THE SHEET WAS A REVIEW REQUEST AND IS NOW THE APPROVED SET (presenter-
+// approved in full at the flipbook walk, 3 Sep 2026 — the Batch D
+// implementation brief §1.3, master §13). The map is ruled (3 Sep 2026,
+// master §13: A · A · A; 21 PORT · 0 ADAPT · 0 NEW · 2 retired, then two
+// ADAPT rows by the same day's rulings 1 and 2) and the beat maps are frozen
+// at 42, so every cell is a PORT or a ruled ADAPT: the legacy slide module
+// mounted at its build, or the film's own Act I stage at Scene 4's approved
+// save state.
 // The pending set is the cells that carry a wiring flag — the entry seam, the
 // disc's travel and scale between Scene 16's frames, the legacy build-0
 // compositions that have no advance in the merged act, the coin photograph —
@@ -85,10 +89,14 @@ const RULINGS = [
 // brief §1, 3 Sep 2026, master §13), recorded as their own commits.
 const BATCH_D_RULINGS = [
   'Scene 19 restages — beat 1 is the inverted framing alone, no carrier on stage; the carrier (the claim in its shell, on the stress stage) arrives at beat 2, timed to “let’s put a carrier on the bench and try to break it.” The change is made at the source (legacy 4-10 keys the carrier to build 2); S19-F1 is ADAPT; the two cells re-rendered',
-  'Scene 22 merges its list beats — all ten properties land in one advance; the two paragraphs merge at zero word changes, one [→] removed; S22 = 3 beats, the act = 42; S22-F2 is ADAPT; the merged cell is the complete two-column list, the five-row cell leaves the record'
+  'Scene 22 merges its list beats — all ten properties land in one advance; the two paragraphs merge at zero word changes, one [→] removed; S22 = 3 beats, the act = 42; S22-F2 is ADAPT; the merged cell is the complete two-column list, the five-row cell leaves the record',
+  'The sheet is presenter-approved in full — the remaining flagged cells approved as rendered (the entry seam with the whole fork at rest and no words on the frame; the definition at the legacy build-3 composition; beat 2’s frame held for the social claim; the disc’s re-centering as wiring; the coin photograph as ruled; the unmapped grid as the first sweep’s first movement; the empty table entering with the scores’ gesture); the table-kicker spacing recorded as an accepted legacy fact; the go-ahead given — the 42 cells are the approved set, the visual authority for every landed-state proof of the Batch D implementation'
 ];
+const APPROVAL = 'presenter-approved in full at the flipbook walk, 3 September 2026 (the Batch D implementation brief §1.3, master §13) — the 42 cells are the approved set; a settled state that is not its approved cell at zero pixels is a defect';
 
 const CLASS_NOTE = {
+  'approved-as-rendered': ['APPROVED AS RENDERED — the cells that carried a flag to the walk',
+    'A cell that carried a wiring flag to the flipbook walk and was approved as rendered there (the Batch D implementation brief §1.3, 3 September 2026, master §13). The flag stays on the cell as a closed record of what was asked and answered; nothing here is pending. The two table cells also record the kicker-to-table spacing as an accepted legacy fact.'],
   'approved-ruled': ['RULED AT THE FLIPBOOK WALK — the cells the presenter answered with a ruling',
     'A cell whose flag the presenter answered with a ruling (the Batch D implementation brief §1, 3 September 2026, master §13). The ruling is recorded on the cell in the flag’s place, the record is amended where it lands (the map, the package, the source), and the cell is re-rendered on the ruling’s authority. Nothing here is pending.'],
   'approved-port': ['APPROVED BY PROVENANCE — the PORT cells',
@@ -169,7 +177,7 @@ const CLASS_NOTE = {
         <b>${id}</b> · ${esc(m.scene)} b${m.beat} · <span class="frame">${esc(m.frame)}</span>
         <span class="pill pill--${m.review}">${esc(m.klass)} · ${esc(m.review)}</span>
         <br>${esc(m.caption)}
-        ${m.flag ? `<br><span class="flagline"><b>FLAG — for your word:</b> ${esc(m.flag)}</span>` : ''}
+        ${m.flag ? `<br><span class="flagline"><b>${m.review === 'pending-review' ? 'FLAG — for your word:' : 'FLAG — closed, approved as rendered 3 Sep 2026:'}</b> ${esc(m.flag)}</span>` : ''}
         ${m.ruling ? `<br><span class="ruleline"><b>${esc(m.ruling)}</b></span>` : ''}
         ${m.source ? `<br><span class="src">source: ${esc(m.source)}</span>` : ''}
         <br><span class="src">probes ${p.results.filter((r) => r.ok).length}/${p.results.length}${p.ok ? '' : ' — FAILED'}</span> · <a href="./${id}.png" target="_blank">full size</a>
@@ -180,7 +188,7 @@ const CLASS_NOTE = {
   const byReview = (r) => ids.filter((id) => meta[id].review === r);
   const flagged = ids.filter((id) => meta[id].flag);
   const ruled = ids.filter((id) => meta[id].ruling);
-  const REVIEW_CLASSES = ['approved-ruled', 'approved-port', 'pending-review'];
+  const REVIEW_CLASSES = ['approved-ruled', 'approved-as-rendered', 'approved-port', 'pending-review'];
 
   const sceneSections = SCENES.map(([key, title]) => {
     const list = ids.filter((id) => meta[id].scene === key)
@@ -200,7 +208,7 @@ const CLASS_NOTE = {
     `<li><a href="#${id}"><b>${id}</b></a> — ${esc(meta[id].ruling)}</li>`).join('\n');
 
   fs.writeFileSync(path.join(OUT, 'sheet.html'), `<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><title>Act IV — the beat-state sheet · the flipbook</title>
+<html lang="en"><head><meta charset="utf-8"><title>Act IV — the beat-state sheet · the approved set</title>
 <link rel="stylesheet" href="/src/styles/fonts.css">
 <style>
   body { background:#000; color:#fff; font-family:Inter,sans-serif; margin:0; padding:44px 48px 72px; }
@@ -212,6 +220,9 @@ const CLASS_NOTE = {
   h3.h--approved-port { color:#F7931A; }
   h3.h--pending-review { color:rgba(255,217,166,.85); }
   h3.h--approved-ruled { color:rgba(255,255,255,.85); }
+  h3.h--approved-as-rendered { color:rgba(255,217,166,.85); }
+  figure[data-review="approved-as-rendered"] img { outline:1px solid rgba(255,217,166,.45); }
+  .pill--approved-as-rendered { color:rgba(255,217,166,.85); border-color:rgba(255,217,166,.5); }
   .ruleline { color:rgba(255,255,255,.62); }
   .ruleline b { color:rgba(255,255,255,.78); font-weight:500; }
   figure[data-review="approved-ruled"] img { outline:1px solid rgba(255,255,255,.35); }
@@ -237,7 +248,8 @@ const CLASS_NOTE = {
   a { color:#F7931A; text-decoration:none; }
   hr { border:0; border-top:1px solid rgba(255,255,255,.1); margin:56px 0 0; }
 </style></head><body>
-<h1>Act IV — the beat-state sheet · the flipbook · a review request</h1>
+<h1>Act IV — the beat-state sheet · the approved set (presenter-approved in full, 3 September 2026)</h1>
+<p class="note"><b>Status.</b> ${esc(APPROVAL)}. The review-request text beneath is kept as the record of what was asked; the three rulings that answered it are listed after it.</p>
 <p class="note"><b>What this is.</b> The frozen Section 4 argument coming home as stills — every settled state of Scenes 16–23,
 one cell per beat, <b>42 cells at the frozen map</b> (S16 8 · S17 5 · S18 8 · S19 2 · S20 5 · S21 5 · S22 3 · S23 6 — 43 until the Batch D ruling 2 merged Scene 22's list beats).
 The ruled map (<i>docs/act-4-provenance.md</i>, 3 September 2026) is 21 PORT · 0 ADAPT · 0 NEW · 2 retired, so
@@ -264,7 +276,7 @@ ${BATCH_D_RULINGS.map((r) => `<li>${esc(r)}</li>`).join('\n')}
 <ul class="flags">
 ${ruledList}
 </ul>
-<p class="note"><b>The flags, gathered</b> — each in plain English, each on its cell:</p>
+<p class="note"><b>The flags, gathered — closed, approved as rendered 3 September 2026</b> — each in plain English, each on its cell:</p>
 <ul class="flags">
 ${flagList}
 </ul>
@@ -282,7 +294,9 @@ ${sceneSections}
   fs.writeFileSync(path.join(OUT, 'states.json'), JSON.stringify({
     date: new Date().toISOString(),
     session: 'act-4-states',
-    status: 'review request — the flipbook walk',
+    status: 'the approved set — presenter-approved in full at the flipbook walk, 3 September 2026',
+    approval: APPROVAL,
+    approvedSet: ids,
     beatMap: { ...BEAT_MAP, total: TOTAL_BEATS },
     cellCount: ids.length,
     beatMapAuthority: 'docs/batch-d-package.md §1 — derived from the legacy advance structure 3 September 2026 and frozen the same day on the presenter’s rulings (master §13: the three ARGUABLE rows at A · A · A; Scene 22 at the default)',
@@ -301,7 +315,7 @@ ${sceneSections}
     approvedPortSet: byReview('approved-port'),
     approvedRuledSet: byReview('approved-ruled'),
     ruled: ruled.map((id) => ({ id, ruling: meta[id].ruling })),
-    flags: flagged.map((id) => ({ id, flag: meta[id].flag, status: 'open — for the presenter’s word at the flipbook walk' })),
+    flags: flagged.map((id) => ({ id, flag: meta[id].flag, status: meta[id].review === 'pending-review' ? 'open — for the presenter’s word at the flipbook walk' : 'closed — approved as rendered, 3 September 2026 (the Batch D implementation brief §1.3, master §13)' })),
     probeFailures: ids.filter((id) => !probes[id].ok),
     cells,
     consoleErrors: errors

@@ -1,5 +1,5 @@
 {
-  "date": "2026-09-03T08:09:14.385Z",
+  "date": "2026-09-03T08:10:47.554Z",
   "session": "act-4-states",
   "limits": {
     "cornerMean": 6,
@@ -686,7 +686,7 @@
       "warmPixelsReported": 19645
     }
   ],
-  "checks": 25,
+  "checks": 26,
   "failures": 0,
   "results": [
     {
@@ -755,14 +755,19 @@
       "detail": "none"
     },
     {
-      "name": "REVIEW: the only review classes are approved-port, approved-ruled and pending-review",
+      "name": "REVIEW: the only review classes are approved-port, approved-ruled and approved-as-rendered — no cell is pending (the sheet approved in full, 3 Sep 2026)",
       "ok": true,
-      "detail": "approved-port · approved-ruled · pending-review"
+      "detail": "approved-port · approved-ruled · approved-as-rendered"
     },
     {
-      "name": "REVIEW: every pending-review cell carries a plain-English flag, every flag is on a pending-review cell, and every approved-ruled cell carries its ruling",
+      "name": "REVIEW: every approved-as-rendered cell carries its closed flag, every flag is on such a cell, and every approved-ruled cell carries its ruling",
       "ok": true,
-      "detail": "8 pending, each flagged · 3 ruled, each with its ruling"
+      "detail": "8 approved as rendered, each with its closed flag · 3 ruled, each with its ruling"
+    },
+    {
+      "name": "APPROVAL: states.json records the presenter’s approval, the approved set is every cell, and every flag is closed",
+      "ok": true,
+      "detail": "42 cells approved"
     },
     {
       "name": "PROBES: every cell carries at least one probe, and every probe passed at capture — the still shows the state it claims",
