@@ -1,6 +1,6 @@
 {
-  "date": "2026-09-03T08:10:47.554Z",
-  "session": "act-4-states",
+  "date": "2026-09-03T13:13:27.082Z",
+  "session": "acts-3-4-final",
   "limits": {
     "cornerMean": 6,
     "borderMean": 6
@@ -36,12 +36,12 @@
     "S21-F1",
     "S22-F1",
     "S23-F1",
-    "S23-F2",
     "S23-F3"
   ],
   "adaptFrames": [
     "S19-F1",
-    "S22-F2"
+    "S22-F2",
+    "S23-F2"
   ],
   "frozenBlobs": {
     "src/slides/section-4-ideal-store/_comparison-data.js": "3a6440aa274260924ae6b83d896d60f37a5f1154",
@@ -667,8 +667,8 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 42086,
-      "warmPixelsReported": 18354
+      "pxAbove32": 88139,
+      "warmPixelsReported": 57319
     },
     {
       "id": "s23-b6",
@@ -682,11 +682,11 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 44696,
-      "warmPixelsReported": 19645
+      "pxAbove32": 90749,
+      "warmPixelsReported": 58610
     }
   ],
-  "checks": 26,
+  "checks": 27,
   "failures": 0,
   "results": [
     {
@@ -717,12 +717,12 @@
     {
       "name": "MAP: every PORT frame transcribed here is a PORT row of the ruled map",
       "ok": true,
-      "detail": "20/20 rows agree"
+      "detail": "19/19 rows agree"
     },
     {
       "name": "MAP: every ADAPT frame transcribed here is an ADAPT row of the ruled map (the Batch D rulings, 3 Sep 2026)",
       "ok": true,
-      "detail": "2/2 rows agree"
+      "detail": "3/3 rows agree"
     },
     {
       "name": "MAP: no ARGUABLE class survives in the map’s table (the three rows ruled A · A · A)",
@@ -762,7 +762,7 @@
     {
       "name": "REVIEW: every approved-as-rendered cell carries its closed flag, every flag is on such a cell, and every approved-ruled cell carries its ruling",
       "ok": true,
-      "detail": "8 approved as rendered, each with its closed flag · 3 ruled, each with its ruling"
+      "detail": "6 approved as rendered, each with its closed flag · 5 ruled, each with its ruling"
     },
     {
       "name": "APPROVAL: states.json records the presenter’s approval, the approved set is every cell, and every flag is closed",
@@ -772,10 +772,15 @@
     {
       "name": "PROBES: every cell carries at least one probe, and every probe passed at capture — the still shows the state it claims",
       "ok": true,
-      "detail": "104 probes over 42 cells"
+      "detail": "109 probes over 42 cells"
     },
     {
       "name": "PROBES: the fifty scores are revealed at once at S23 b5 and stand at b6",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "PROBES: the table’s header band carries the five renders and no asset heading carries a glyph mark (the Acts III–IV final ruling 2)",
       "ok": true,
       "detail": ""
     },

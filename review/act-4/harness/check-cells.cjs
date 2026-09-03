@@ -51,6 +51,11 @@
 //
 //   THE SPLICE — the deck smoke on file is green at 38 slides.
 //
+// AMENDED AT ACTS III–IV FINAL (master §13, 3 Sep 2026 — the Act V kickoff
+// brief, Part A §2): S23-F2 is ADAPT — the table's headers become a band of
+// renders above the table; s23-b5 and s23-b6 re-render on the ruling's
+// authority (approved-ruled, the ruling on the cell); 18 PORT · 3 ADAPT.
+//
 // Usage: node check-cells.cjs [--port 5273]
 const { chromium } = require('playwright');
 const { execSync } = require('child_process');
@@ -78,11 +83,12 @@ const PORT_FRAMES = [
   'S19-F2',
   'S20-F1', 'S21-F1',
   'S22-F1',
-  'S23-F1', 'S23-F2', 'S23-F3'
+  'S23-F1', 'S23-F3'
 ];
 // The ADAPT rows — each a presenter ruling on a proven treatment, the one
-// change named in the map (the Batch D implementation brief §1, 3 Sep 2026).
-const ADAPT_FRAMES = ['S19-F1', 'S22-F2'];
+// change named in the map (the Batch D implementation brief §1, 3 Sep 2026;
+// S23-F2 by the Acts III–IV final ruling 2 of the same day).
+const ADAPT_FRAMES = ['S19-F1', 'S22-F2', 'S23-F2'];
 const CLASS_OF = Object.fromEntries([
   ...PORT_FRAMES.map((f) => [f, 'PORT']), ...ADAPT_FRAMES.map((f) => [f, 'ADAPT'])]);
 
@@ -288,6 +294,12 @@ function check(name, ok, detail) {
     const fifty = cells.filter((c) => c.scene === 'S23' && c.beat >= 5)
       .every((c) => c.probes.results.some((r) => r.sel === '.s4-dot-rating[data-revealed="true"]' && r.got === 50 && r.ok));
     check('PROBES: the fifty scores are revealed at once at S23 b5 and stand at b6', fifty);
+    // The header band (the Acts III–IV final ruling 2): five renders in the
+    // band, no glyph mark in any asset heading, at both table beats.
+    const band = cells.filter((c) => c.scene === 'S23' && c.beat >= 5)
+      .every((c) => c.probes.results.some((r) => r.sel === '.s4-comparison__band .df[data-pending="false"]' && r.got === 5 && r.ok) &&
+        c.probes.results.some((r) => r.sel === '.s4-comparison-table__asset-heading .s4-comparison-asset__mark' && r.got === 0 && r.ok));
+    check('PROBES: the table’s header band carries the five renders and no asset heading carries a glyph mark (the Acts III–IV final ruling 2)', band);
   }
 
   // ---- NOTHING DESIGNED — at the source --------------------------------------
@@ -371,7 +383,7 @@ function check(name, ok, detail) {
 
   fs.writeFileSync(path.join(__dirname, 'check-cells.json'), JSON.stringify({
     date: new Date().toISOString(),
-    session: 'act-4-states',
+    session: 'acts-3-4-final',
     limits: { cornerMean: 6, borderMean: 6 },
     frozenBeatMap: { ...FROZEN, total: TOTAL_BEATS, cells: TOTAL_CELLS },
     portFrames: PORT_FRAMES,

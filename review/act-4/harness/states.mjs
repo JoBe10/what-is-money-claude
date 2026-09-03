@@ -58,6 +58,15 @@
 // own last state, mounted as the legacy performs it. (3) The sheet is
 // approved in full — the eight remaining flagged cells as rendered, the
 // table-kicker spacing (s23-b5 · s23-b6) an accepted legacy fact.
+//
+// AMENDED AT ACTS III–IV FINAL (the Act V kickoff brief, Part A §2; master
+// §13, 3 Sep 2026 — the ruling recorded before this file was touched): THE
+// TABLE'S HEADERS BECOME RENDERS. The five candidate glyphs retire from the
+// asset headings and the renders ride as a header band above the table at
+// the rails-law band scale, the grammar beneath untouched. The change is
+// made at the source (legacy 4-16 and the table component), so the mount
+// carries it: s23-b5 and s23-b6 re-render as the updated approved states on
+// the ruling's authority; S23-F2 is ADAPT (18 PORT · 3 ADAPT).
 
 import { ensureStage, destroyStage } from '/src/scenes/act-1-the-unfinished-exchange/_exchangeStage.js';
 import s404 from '/src/slides/section-4-ideal-store/04-unfinished-exchange.js';
@@ -432,19 +441,21 @@ cell('s23-b4', {
 }, (st) => mount(st, s415, 4));
 
 cell('s23-b5', {
-  scene: 'S23', beat: 5, frame: 'S23-F2', klass: 'PORT', review: 'approved-as-rendered',
-  source: '4-16-the-comparison, build 1 — all fifty scores on one advance (R7.4 §D.3) + AssetComparisonTable + DotRating + COMPARISON_ROWS (frozen)',
-  caption: 'Beat 5 · the table — THE COMPARISON in the quiet kicker register; PROPERTY; the five compact headers as grammar glyphs; ten rows; and ALL FIFTY SCORES LANDING AT ONCE — the frozen data, blob-proven, walked in the spoken word. No total, no winner badge, no highlight. The closing line is not yet on the frame.',
-  flag: 'The empty table — 4-16’s build 0, the table drawn with no score in it — has no spoken advance of its own once 4-15 and 4-16 are one scene (map §4 seam 7). It enters either with beat 4’s recede (the candidates giving way to the empty table as the question fades) or as the first movement of this beat’s gesture (the table draws, then the fifty scores land). This sheet stands the settled state — the scores landed — and flags the movement. One more thing the still shows faithfully: in the legacy frame the kicker THE COMPARISON (top 104) and the MONETARY ASSETS group label (the table’s first row, top 116) stack with no air between them, and the deck renders the same tight stack at 4-16 build 1. One number on the kicker’s top opens the gap — a ruled change on a proven treatment, yours to name.',
-  expect: [['.s4-dot-rating[data-revealed="true"]', 50], ['.s4-comparison__final[data-visible="true"]', 0], ['.s4-comparison-table__property', 10]]
+  scene: 'S23', beat: 5, frame: 'S23-F2', klass: 'ADAPT', review: 'approved-ruled',
+  source: '4-16-the-comparison, build 1 — all fifty scores on one advance (R7.4 §D.3) + AssetComparisonTable + DotRating + COMPARISON_ROWS (frozen); the header band at the source since the Acts III–IV final ruling 2 (3 Sep 2026)',
+  caption: 'Beat 5 · the table — THE COMPARISON in the quiet kicker register; the five candidates as renders in a band above the table at the rails-law band scale (gold, the fiat note, the coin, the house, and shares, bottom-aligned on one baseline, each over its own column); beneath it the grammar untouched — MONETARY ASSETS · PRODUCTIVE ASSETS, PROPERTY, the five labels, ten rows — and ALL FIFTY SCORES LANDING AT ONCE — the frozen data, blob-proven, walked in the spoken word. No total, no winner badge, no highlight. The closing line is not yet on the frame.',
+  ruling: 'RULED 3 September 2026 (the Act V kickoff brief, Part A §2, master §13): the table’s headers become renders — the five candidate glyphs retire, the renders ride as a header band above the table at lineup scale per the rails law, the drawn grammar beneath untouched; the group labels and the kicker stay as approved; the fifty-score landing is unchanged. S23-F2 is ADAPT. The change is at the source (legacy 4-16, the table component); this cell mounts the module and carries it. One thing this render adds, flagged in the report: at the rails-law box the band does not fit above the table with the closing line at its held position unless the table gives ground — the heading row shrinks to its label and the ten score rows tighten from 60 to 48, under one attribute on the slide root; the legacy pitch stays on file. The kicker-to-table stack is no longer tight — the band sits between them.',
+  expect: [['.s4-dot-rating[data-revealed="true"]', 50], ['.s4-comparison__final[data-visible="true"]', 0], ['.s4-comparison-table__property', 10],
+    ['.s4-comparison__band .df[data-pending="false"]', 5], ['.s4-comparison-table__asset-heading .s4-comparison-asset__mark', 0], ['.s4-comparison-table__asset-heading .s4-comparison-asset__label', 5]]
 }, (st) => mount(st, s416, 1));
 
 cell('s23-b6', {
-  scene: 'S23', beat: 6, frame: 'S23-F3', klass: 'PORT', review: 'approved-as-rendered',
-  source: '4-16-the-comparison, build 2 — the line',
-  caption: 'Beat 6 · the closing line: Don’t trust. Verify. — two spans, on stage exactly once in the film, beneath the fifty scores. The scores are dated in the spoken word: my judgments, as of 2026; every one of them an invitation. The act ends on the turn to where monetary demand goes.',
-  flag: 'The kicker THE COMPARISON and the MONETARY ASSETS group label stack with no air between them, exactly as the legacy deck renders this frame (the kicker at top 104, the table at top 116). One number opens the gap — a ruled change on a proven treatment, yours to name; this sheet ports the frame as it is.',
-  expect: [['.s4-comparison__final[data-visible="true"]', 1], ['.s4-dot-rating[data-revealed="true"]', 50]]
+  scene: 'S23', beat: 6, frame: 'S23-F3', klass: 'PORT', review: 'approved-ruled',
+  source: '4-16-the-comparison, build 2 — the line; the header band at the source since the Acts III–IV final ruling 2 (3 Sep 2026)',
+  caption: 'Beat 6 · the closing line: Don’t trust. Verify. — two spans, on stage exactly once in the film, beneath the fifty scores, the render band standing above the table. The scores are dated in the spoken word: my judgments, as of 2026; every one of them an invitation. The act ends on the turn to where monetary demand goes.',
+  ruling: 'RULED 3 September 2026 (the Act V kickoff brief, Part A §2, master §13): the table’s headers become renders — this cell re-renders on the ruling’s authority, the closing line at its held position (930) beneath the tightened table; the line itself is untouched (S23-F3 stays PORT). The flag this cell carried — the tight kicker-to-table stack, an accepted legacy fact — is overtaken by the band, which now sits between the kicker and the group labels.',
+  expect: [['.s4-comparison__final[data-visible="true"]', 1], ['.s4-dot-rating[data-revealed="true"]', 50],
+    ['.s4-comparison__band .df[data-pending="false"]', 5], ['.s4-comparison-table__asset-heading .s4-comparison-asset__mark', 0]]
 }, (st) => mount(st, s416, 2));
 
 // ---- runtime ---------------------------------------------------------------

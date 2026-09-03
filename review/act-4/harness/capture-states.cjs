@@ -26,6 +26,11 @@
 // list beats — S22 = 3, the act = 42, 42 cells; S22-F2 is ADAPT
 // (19 PORT · 2 ADAPT).
 //
+// AMENDED AT ACTS III–IV FINAL (master §13, 3 Sep 2026 — the Act V kickoff
+// brief, Part A §2): the table's headers become a band of renders above the
+// table; s23-b5 and s23-b6 re-render on the ruling's authority (18 PORT ·
+// 3 ADAPT — S23-F2 ADAPT); the ruling is on the two cells.
+//
 // Modes:
 //   (default)        capture every cell, then cut the record.
 //   --record-only    re-cut sheet.html + states.json from the meta, the
@@ -69,7 +74,7 @@ const SCENES = [
   ['S20', 'Scene 20 — How the Carrier Can Fail: I (5 beats)'],
   ['S21', 'Scene 21 — How the Carrier Can Fail: II (5 beats)'],
   ['S22', 'Scene 22 — From Failure to Requirement — the Ten Properties (3 beats · the ten properties in one advance, as ruled 3 Sep 2026)'],
-  ['S23', 'Scene 23 — The Comparison (6 beats · the lineup whole, as ruled · the fifty scores at once · the closing line)']
+  ['S23', 'Scene 23 — The Comparison (6 beats · the lineup whole, as ruled · the header band of renders above the table, as ruled 3 Sep 2026 · the fifty scores at once · the closing line)']
 ];
 
 // The presenter's rulings of 3 September 2026 (master §13), recorded as their
@@ -90,7 +95,8 @@ const RULINGS = [
 const BATCH_D_RULINGS = [
   'Scene 19 restages — beat 1 is the inverted framing alone, no carrier on stage; the carrier (the claim in its shell, on the stress stage) arrives at beat 2, timed to “let’s put a carrier on the bench and try to break it.” The change is made at the source (legacy 4-10 keys the carrier to build 2); S19-F1 is ADAPT; the two cells re-rendered',
   'Scene 22 merges its list beats — all ten properties land in one advance; the two paragraphs merge at zero word changes, one [→] removed; S22 = 3 beats, the act = 42; S22-F2 is ADAPT; the merged cell is the complete two-column list, the five-row cell leaves the record',
-  'The sheet is presenter-approved in full — the remaining flagged cells approved as rendered (the entry seam with the whole fork at rest and no words on the frame; the definition at the legacy build-3 composition; beat 2’s frame held for the social claim; the disc’s re-centering as wiring; the coin photograph as ruled; the unmapped grid as the first sweep’s first movement; the empty table entering with the scores’ gesture); the table-kicker spacing recorded as an accepted legacy fact; the go-ahead given — the 42 cells are the approved set, the visual authority for every landed-state proof of the Batch D implementation'
+  'The sheet is presenter-approved in full — the remaining flagged cells approved as rendered (the entry seam with the whole fork at rest and no words on the frame; the definition at the legacy build-3 composition; beat 2’s frame held for the social claim; the disc’s re-centering as wiring; the coin photograph as ruled; the unmapped grid as the first sweep’s first movement; the empty table entering with the scores’ gesture); the table-kicker spacing recorded as an accepted legacy fact; the go-ahead given — the 42 cells are the approved set, the visual authority for every landed-state proof of the Batch D implementation',
+  'Acts III–IV final (the Act V kickoff brief, Part A §2, 3 Sep 2026, master §13): the table’s headers become renders — the five candidate glyphs retire and the renders ride as a header band above the table at lineup scale per the rails law, the drawn grammar beneath untouched; S23-F2 is ADAPT; s23-b5 and s23-b6 re-rendered on the ruling’s authority as the updated approved states; the band’s fit flagged in the report'
 ];
 const APPROVAL = 'presenter-approved in full at the flipbook walk, 3 September 2026 (the Batch D implementation brief §1.3, master §13) — the 42 cells are the approved set; a settled state that is not its approved cell at zero pixels is a defect';
 
@@ -293,14 +299,14 @@ ${sceneSections}
 
   fs.writeFileSync(path.join(OUT, 'states.json'), JSON.stringify({
     date: new Date().toISOString(),
-    session: 'act-4-states',
-    status: 'the approved set — presenter-approved in full at the flipbook walk, 3 September 2026',
+    session: 'acts-3-4-final',
+    status: 'the approved set — presenter-approved in full at the flipbook walk, 3 September 2026; s23-b5 and s23-b6 the updated approved states under the Acts III–IV final ruling 2 of the same day',
     approval: APPROVAL,
     approvedSet: ids,
     beatMap: { ...BEAT_MAP, total: TOTAL_BEATS },
     cellCount: ids.length,
     beatMapAuthority: 'docs/batch-d-package.md §1 — derived from the legacy advance structure 3 September 2026 and frozen the same day on the presenter’s rulings (master §13: the three ARGUABLE rows at A · A · A; Scene 22 at the default)',
-    provenanceAuthority: 'docs/act-4-provenance.md — RULED 3 September 2026: 21 PORT · 0 ADAPT · 0 NEW · 2 retired; every cell a PORT of the named legacy treatment',
+    provenanceAuthority: 'docs/act-4-provenance.md — RULED 3 September 2026: 21 PORT · 0 ADAPT · 0 NEW · 2 retired, then 19 PORT · 2 ADAPT by the Batch D rulings, then 18 PORT · 3 ADAPT by the Acts III–IV final ruling 2 (S23-F2 — the table’s headers become a band of renders)',
     rulings: RULINGS,
     batchDRulings: BATCH_D_RULINGS,
     splice: { was: 39, now: 38, retired: '3-08-waypoint-judge', fileOnDisk: true, proof: 'review/act-4/smoke-deck.json' },
