@@ -1,0 +1,171 @@
+{
+  "date": "2026-09-03T23:00:39.955Z",
+  "session": "act-5-states",
+  "ruling": "the presenter’s fit ruling, 4 September 2026 (master §13): at Scene 23 the ten score rows return to the legacy 60 px pitch and the header band shrinks to a 100 × 100 contain box; s23-b5 and s23-b6 re-rendered and re-proven",
+  "rule": "each of the six settled states of Scene 23 — b1–b4 not re-rendered, b5–b6 re-rendered under the ruling — mounted cold through the real engine at its deck position in the spliced 32-slide deck, is its approved cell at zero differing pixels (channel delta > 2/255 counts). Comparisons: scene↔archived cell, fresh cell↔archived cell, scene↔fresh cell. The ruling’s numbers are measured in the deck at the table’s last state.",
+  "states": 6,
+  "passed": 6,
+  "results": [
+    {
+      "state": "the-comparison:0",
+      "cell": "s23-b1",
+      "reRendered": false,
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "the-comparison:1",
+      "cell": "s23-b2",
+      "reRendered": false,
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "the-comparison:2",
+      "cell": "s23-b3",
+      "reRendered": false,
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "the-comparison:3",
+      "cell": "s23-b4",
+      "reRendered": false,
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "the-comparison:4",
+      "cell": "s23-b5",
+      "reRendered": true,
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "the-comparison:5",
+      "cell": "s23-b6",
+      "reRendered": true,
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    }
+  ],
+  "geometry": {
+    "band": {
+      "top": 132,
+      "bottom": 232,
+      "height": 100
+    },
+    "bandRenders": [
+      {
+        "subject": "gold",
+        "width": 100,
+        "height": 56,
+        "bottom": 232
+      },
+      {
+        "subject": "fiat",
+        "width": 100,
+        "height": 56,
+        "bottom": 232
+      },
+      {
+        "subject": "bitcoin",
+        "width": 100,
+        "height": 75,
+        "bottom": 232
+      },
+      {
+        "subject": "property",
+        "width": 100,
+        "height": 100,
+        "bottom": 232
+      },
+      {
+        "subject": "shares",
+        "width": 100,
+        "height": 100,
+        "bottom": 232
+      }
+    ],
+    "table": {
+      "top": 244,
+      "bottom": 911,
+      "height": 667
+    },
+    "rowPitch": 60,
+    "rows": 10,
+    "finalLine": {
+      "top": 930,
+      "bottom": 965,
+      "height": 35
+    },
+    "ok": true
+  },
+  "consoleErrors": []
+}
