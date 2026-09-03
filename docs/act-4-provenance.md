@@ -1,11 +1,11 @@
 # Act IV — The Provenance Map
 ## Every frame of Scenes 16–23, classified against the legacy Section 4 slides
 
-**Status: PROPOSED, 3 September 2026 — a map is a proposal until the presenter rules it** (`AGENTS.md` §4.9). This document classifies every frame of Act IV against the legacy deck the way `docs/act-2-provenance.md` and `docs/act-3-provenance.md` did, names a legacy source for every PORT and ADAPT row, states the staging question's answer first (§0), and puts the three ARGUABLE rows in plain English (§2) — one paragraph per side, with the default the states sheet renders if a row is unanswered at Session 2's launch. **Once ruled it governs all Act IV work**, and every Act IV session verifies a frame's class here before touching it.
+**Status: RULED, 3 September 2026** — the presenter answered the three ARGUABLE rows of `docs/act-4-foundation-report.md` §1 at their defaults, **A · A · A** (master §13), and this map now governs all Act IV work (`AGENTS.md` §4.9). This document classifies every frame of Act IV against the legacy deck the way `docs/act-2-provenance.md` and `docs/act-3-provenance.md` did, names a legacy source for every PORT and ADAPT row, states the staging question's answer first (§0), and puts the three ARGUABLE rows in plain English (§2) — one paragraph per side, with the default the states sheet renders if a row is unanswered at Session 2's launch. **Once ruled it governs all Act IV work**, and every Act IV session verifies a frame's class here before touching it.
 **Scope:** the frames of Scenes 16–23 as the frozen architecture merges them (`docs/synthesis-architecture.md`, Act IV; the master's index §1.3, rows 16–23): the return to the open exchange; what the carrier must preserve; the 100-Year Test with the unknowable future merged in; the inversion; the two failure indexes; failure → requirement merged with the ten properties; the comparison.
 **Classes:** **PORT** — a proven legacy treatment exists and is transplanted verbatim; redesign is forbidden and generating candidates is a process defect. **ADAPT** — a proven treatment with one ruled change, named here; only that change is made. **NEW** — no proven treatment exists; the full-coverage rule and the candidate process apply. **ARGUABLE** — the presenter's to rule; the two readings are written out in §2.
 **Authority for the treatments:** the legacy `src/slides/section-4-ideal-store/` modules and `src/components/section-4/` — the frozen, audited Section 4 argument (master §13, 28 July 2026) in its R7-through-R7.4 staging, which the architecture's "what survives" list keeps whole: *the comparison components and data (frozen) · every script whose scene survives (most of Acts IV–V verbatim)*.
-**Proposed:** 3 September 2026. **Ruled:** —
+**Proposed:** 3 September 2026. **Ruled:** 3 September 2026 — the three ARGUABLE rows at A · A · A; the seams of §4 closed by the same day's rulings where a ruling names them.
 
 ---
 
@@ -52,7 +52,7 @@ Act II taught the pipeline to answer this before building anything: *what stays 
 | **S23-F2** the table — kicker, PROPERTY column, five compact headers, ten rows; all fifty scores in one advance | **PORT** | `4-16-the-comparison` builds 0–1 + `AssetComparisonTable` + `DotRating` + `COMPARISON_ROWS` (frozen — §3's record), the headers as grammar glyphs (`TABLE_HEADERS_DARK_FIELD = false`, the R7.4 toggle as it stands). No total, no winner badge, no highlight (master §3.7). **Wiring, not a change:** the empty table (4-16's build 0) has no advance of its own in the merged scene — it enters with b4's recede or as the first movement of b5's gesture; Session 2 stands one honest reading and flags it. Serves S23 b5 |
 | **S23-F3** the closing line — *Don't trust. Verify.* | **PORT** | `4-16-the-comparison` build 2 — `.s4-comparison__final`, two spans, on stage exactly once (master §3.7; verified in `review/act-4/script-install.json`). Serves S23 b6 |
 
-**Proposed: 21 PORT · 0 ADAPT · 0 NEW · 0 ARGUABLE (both rows ruled at their defaults, 3 Sep 2026 — S23-F1 PORT, the 4-01 lens retired) · 2 retired (the 4-01 lens; the 4-04 goods band).** Act IV designs nothing and carries no candidates — S23-F1 is ruled PORT — the frozen argument comes home in its proven treatments. **The claim/carrier scene's home (S16 vs S17) is the third ARGUABLE question (§2, row 3); it moves four PORT rows between two scenes and changes no class.**
+**Proposed: 21 PORT · 0 ADAPT · 0 NEW · 0 ARGUABLE (both rows ruled at their defaults, 3 Sep 2026 — S23-F1 PORT, the 4-01 lens retired) · 2 retired (the 4-01 lens; the 4-04 goods band).** Act IV designs nothing and carries no candidates — S23-F1 is ruled PORT — the frozen argument comes home in its proven treatments. **The claim/carrier scene's home (S16 vs S17) was the third ARGUABLE question (§2, row 3) — ruled A, 3 September 2026: the four beats close Scene 16; S16 = 8, S17 = 5.**
 
 ---
 
@@ -86,6 +86,8 @@ Legacy 4-06 is four beats: the claim needs a body; the claim is the essence and 
 
 - **Reading A — all four beats close Scene 16 (the default).** The crescendo sits inside them, 4-06's last question is the one 4-07 opens by answering (*"So with the claim and the carrier finally apart…"*), and the master's index names Scene 16 *"the claim on value"* and Scene 17 *"what the carrier must preserve"*. Scene 16 is eight beats, Scene 17 five.
 - **Reading B — 4-06 opens Scene 17.** Scene 17 becomes the carrier scene whole (nine beats) and Scene 16 the return and the definition alone (four beats). This moves the crescendo out of Scene 16, against the architecture's own text, so it needs a ruling that also amends the architecture.
+
+**RULED A, 3 September 2026 (master §13).** All four beats close Scene 16, the crescendo included; Scene 17 opens on legacy `4-07`. S16 = 8, S17 = 5. The architecture is not amended.
 
 ---
 
@@ -143,7 +145,7 @@ These are the places where the legacy material and the architecture's merges do 
 
 # 5. What the ruled map assigns to Session 2
 
-Every Act IV settled state renders into `review/act-4/states/` (flipbook + `states.json`) by its class: the PORT cells from their named legacy treatments verbatim (`approved-port`, review optional); no ADAPT cell unless Row 1 rules B; the two ARGUABLE rows at their stated defaults if unanswered, flagged; the Scene 16 homecoming cells showing the Scene 4 frame reconstructing with the claim held — the act's entry seam — as one honest render with a plain-English flag. **No candidates: the map names no NEW frame.** The flipbook protocol is the kickoff brief's: the return, the test, the inversion, the failures, the requirements, the fifty scores landing at once, the closing line.
+Every Act IV settled state renders into `review/act-4/states/` (flipbook + `states.json`) by its class: the PORT cells from their named legacy treatments verbatim (`approved-port`, review optional); no ADAPT cell (Row 1 ruled A); the two ARGUABLE rows ruled at their defaults (A · A, 3 September 2026) and rendered as ruled, no flag needed; the Scene 16 homecoming cells showing the Scene 4 frame reconstructing with the claim held — the act's entry seam — as one honest render with a plain-English flag. **No candidates: the map names no NEW frame.** The flipbook protocol is the kickoff brief's: the return, the test, the inversion, the failures, the requirements, the fifty scores landing at once, the closing line.
 
 ---
 

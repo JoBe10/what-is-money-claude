@@ -28,8 +28,8 @@
 
 | Scene | Legacy source(s) | Legacy `[→]`s | Beats | If a ruling changes the reading |
 |---|---|---|---|---|
-| S16 | the architecture's return line (canonical) + `4-04` b1–b4 + `4-06` b1–b4 | 1 + 4 + 4 (the return line shares b1 with 4-04's first beat) | **8** | Row 2 **ruled A, 3 Sep 2026** (the lens retired — no +2) · Row 3 B (4-06 to S17): −4 → 4 |
-| S17 | `4-07` b1–b5 | 5 | **5** | Row 3 B: +4 → 9 |
+| S16 | the architecture's return line (canonical) + `4-04` b1–b4 + `4-06` b1–b4 | 1 + 4 + 4 (the return line shares b1 with 4-04's first beat) | **8** | Row 2 **ruled A, 3 Sep 2026** (the lens retired — no +2) · Row 3 **ruled A, 3 Sep 2026** (4-06 closes Scene 16 — no −4); **8 stands** |
+| S17 | `4-07` b1–b5 | 5 | **5** | Row 3 **ruled A, 3 Sep 2026** — **5 stands** |
 | S18 | `4-08` b1–b3 + `4-09` b1–b5 | 3 + 5 | **8** | — |
 | S19 | `4-10` b1–b2 | 2 | **2** | — |
 | S20 | `4-11` b1–b5 | 5 | **5** | — |
@@ -212,7 +212,7 @@ The kickoff brief names three lines to verify and the enlargement sequence's vir
 
 # 4. Provenance
 
-`docs/act-4-provenance.md` — proposed, awaiting the presenter's ruling: 21 PORT · 0 ADAPT · 0 NEW · 2 ARGUABLE (S23-F1, the candidate lineup, default PORT; the 4-01 lens, default retired) · 1 retired; the third ARGUABLE question (4-06's home) moves rows between scenes and changes no class. **The map names no NEW frame: Act IV designs nothing and carries no candidates.** The staging answer is its §0.
+`docs/act-4-provenance.md` — **ruled 3 September 2026** (master §13): 21 PORT · 0 ADAPT · 0 NEW · 2 retired; the three ARGUABLE rows answered A · A · A at their defaults (the candidate lineup ports whole; the 4-01 lens retired; 4-06's four beats close Scene 16), so every derived count in §1 stands. **The map names no NEW frame: Act IV designs nothing and carries no candidates.** The staging answer is its §0.
 
 # 5. Verification (this session's, and Session 2's)
 
