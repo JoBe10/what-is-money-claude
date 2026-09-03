@@ -411,9 +411,11 @@ function protectedCheck(name, master, installed, { where = '', allow = null } = 
   const before = [
     ...['src/scenes/prologue', 'src/scenes/act-1-the-unfinished-exchange', 'src/scenes/act-2-the-architecture-of-money', 'src/scenes/act-3-the-jobs-of-money']
       .flatMap((d) => fs.readdirSync(path.join(REPO, d)).filter((f) => f.endsWith('.js')).map((f) => `${d}/${f}`)),
+    // The deck's two legacy survivors before Act IV. 3-08-waypoint-judge left
+    // the deck on 3 Sep 2026 (master §13 — the file stays on disk); it no
+    // longer stands before Act IV and is no longer enumerated here.
     'src/slides/section-3-function/00-waypoint-function.js',
-    'src/slides/section-3-function/04-stage-signatures.js',
-    'src/slides/section-3-function/08-waypoint-judge.js'
+    'src/slides/section-3-function/04-stage-signatures.js'
   ];
   const stripComments = (s) => s.split('\n').filter((l) => !/^\s*\/\//.test(l)).join('\n');
   const GENERALIZATION = [/claim on value/i, /social claim/i, /legal claim/i, /claim on everyone/i, /claim on anyone/i, /transferable claim/i, /earned, transferable/i];

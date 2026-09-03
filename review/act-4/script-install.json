@@ -1,5 +1,5 @@
 {
-  "date": "2026-09-03T04:46:13.622Z",
+  "date": "2026-09-03T04:46:27.978Z",
   "session": "act-4-foundation",
   "rule": "docs/batch-d-package.md §2 is the legacy Section 4 slides' own notes, assembled in the architecture's scene merges, with exactly the adaptation ledger applied — the four substitutions, and the presenter's rulings of 3 Sep 2026 (the Scene 16 b1 join; the two armor cuts) — proven word for word and character for character; every scene's [→] count is §1's frozen map; the protected lines are verified character for character against the master with every difference reported; nothing before Scene 16 anticipates the generalization.",
   "ledger": [
@@ -290,15 +290,14 @@
     ]
   },
   "virginity": {
-    "filesChecked": 29,
+    "filesChecked": 28,
     "generalizationHits": [],
     "testHits": [
       "src/scenes/act-2-the-architecture-of-money/09-scarcity-becomes-digital.js:80: [→] And the honest line, in the same breath: it is very young. Its price still swings far more than the monies",
       "src/scenes/act-2-the-architecture-of-money/_architectureStage.js:69: { key: 'bitcoin', name: 'BITCOIN', gain: 'NON-DISCRETIONARY SUPPLY', dep: 'not yet twenty years into a hundred",
       "src/scenes/act-2-the-architecture-of-money/_architectureStage.js:143: limitation: 'Very young. Its price still swings far more than the monies it would compete with. Not yet twenty",
       "src/scenes/act-2-the-architecture-of-money/_railStates.js:18: limitation: 'Very young. Its price still swings far more than the monies it would compete with. Not yet twenty",
-      "src/scenes/act-2-the-architecture-of-money/_railWorld.js:60: bitcoin: { gain: 'NON-DISCRETIONARY SUPPLY', dep: 'not yet twenty years into a hundred-year question' }",
-      "src/slides/section-3-function/08-waypoint-judge.js:65: [→] One question left — the one everything has been building toward. How would you judge anything that tries t"
+      "src/scenes/act-2-the-architecture-of-money/_railWorld.js:60: bitcoin: { gain: 'NON-DISCRETIONARY SUPPLY', dep: 'not yet twenty years into a hundred-year question' }"
     ]
   },
   "checks": 25,
@@ -422,12 +421,12 @@
     {
       "name": "VIRGINITY: no scene before Scene 16 speaks or shows the generalization — \"claim on value\", \"social claim\", \"legal claim\", \"transferable claim\"",
       "ok": true,
-      "detail": "29 files clean"
+      "detail": "28 files clean"
     },
     {
       "name": "VIRGINITY: the 100-Year Test and the inversion never appear before Act IV — every hit reported for the presenter's eye",
       "ok": true,
-      "detail": "src/scenes/act-2-the-architecture-of-money/09-scarcity-becomes-digital.js:80: [→] And the honest line, in the same breath: it is very young. Its price still swings far more than the monies · src/scenes/act-2-the-architecture-of-money/_architectureStage.js:69: { key: 'bitcoin', name: 'BITCOIN', gain: 'NON-DISCRETIONARY SUPPLY', dep: 'not yet twenty years into a hundred · src/scenes/act-2-the-architecture-of-money/_architectureStage.js:143: limitation: 'Very young. Its price still swings far more than the monies it would compete with. Not yet twenty · src/scenes/act-2-the-architecture-of-money/_railStates.js:18: limitation: 'Very young. Its price still swings far more than the monies it would compete with. Not yet twenty · src/scenes/act-2-the-architecture-of-money/_railWorld.js:60: bitcoin: { gain: 'NON-DISCRETIONARY SUPPLY', dep: 'not yet twenty years into a hundred-year question' } · src/slides/section-3-function/08-waypoint-judge.js:65: [→] One question left — the one everything has been building toward. How would you judge anything that tries t"
+      "detail": "src/scenes/act-2-the-architecture-of-money/09-scarcity-becomes-digital.js:80: [→] And the honest line, in the same breath: it is very young. Its price still swings far more than the monies · src/scenes/act-2-the-architecture-of-money/_architectureStage.js:69: { key: 'bitcoin', name: 'BITCOIN', gain: 'NON-DISCRETIONARY SUPPLY', dep: 'not yet twenty years into a hundred · src/scenes/act-2-the-architecture-of-money/_architectureStage.js:143: limitation: 'Very young. Its price still swings far more than the monies it would compete with. Not yet twenty · src/scenes/act-2-the-architecture-of-money/_railStates.js:18: limitation: 'Very young. Its price still swings far more than the monies it would compete with. Not yet twenty · src/scenes/act-2-the-architecture-of-money/_railWorld.js:60: bitcoin: { gain: 'NON-DISCRETIONARY SUPPLY', dep: 'not yet twenty years into a hundred-year question' }"
     }
   ]
 }

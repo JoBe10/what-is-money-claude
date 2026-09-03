@@ -93,8 +93,24 @@
 // in their legacy relative order, so nothing is deleted and nothing is
 // decided; the seam S15 → 3-00 is reported, not smoothed. Retiring or
 // re-homing them is the presenter's ruling to make.
+// (3-08 is retired by presenter ruling, 3 September 2026 — the Act IV
+// foundation block below.)
 //
 // **The deck is 39 slides** (was 39): five legacy slides out, five scenes in.
+//
+// ===== ACT IV FOUNDATION, 3 September 2026 — one ambiguous fate ruled =====
+//
+// The presenter retires the third waypoint interstitial, 3-08-waypoint-judge
+// (master §13, 3 Sep 2026 — the Batch C splice ruling it was waiting on).
+// The waypoint device is on the architecture's what-dies list, and this
+// slide spoke "a thought experiment about the next hundred years" one slide
+// before Act IV — the 100-Year Test anticipated, against master §3.3. **The
+// legacy file stays on disk and in history**; only its manifest entry is
+// gone. 3-00 and 3-04 remain, still flagged, still the presenter's to rule;
+// the act's exit onto 3-00 is unchanged, and the new seam 3-04 → 4-01 is
+// reported, not smoothed (review/act-4/smoke-deck.json proves it both ways).
+//
+// **The deck is 38 slides** (was 39): one legacy slide out, nothing in.
 
 import p1 from '../scenes/prologue/p1-eighty-thousand-hours.js';
 import p2 from '../scenes/prologue/p2-the-stakes.js';
@@ -118,7 +134,6 @@ import scene15 from '../scenes/act-3-the-jobs-of-money/15-the-tower.js';
 
 import s3_00 from './section-3-function/00-waypoint-function.js';
 import s3_04 from './section-3-function/04-stage-signatures.js';
-import s3_08 from './section-3-function/08-waypoint-judge.js';
 
 import s4_01 from './section-4-ideal-store/01-define-the-job.js';
 import s4_06 from './section-4-ideal-store/06-claim-and-carrier.js';
@@ -160,12 +175,13 @@ const act2 = [scene5, scene6, scene7, scene8, scene9, scene10];
 // never tearing the stage down at these four boundaries.
 const act3 = [scene11, scene12, scene13, scene14, scene15];
 
-// The legacy deck, as it stands after Batch C. The function section keeps
-// only the three ambiguous-fate survivors (see the Batch C block above):
-// the two waypoints and the stage-signatures bracket, in their legacy
-// relative order, after the act that superseded their siblings.
+// The legacy deck, as it stands after Batch C and the 3 September 2026
+// ruling (the Act IV foundation block above). The function section keeps
+// two ambiguous-fate survivors — the second waypoint and the stage-signatures
+// bracket, in their legacy relative order, after the act that superseded
+// their siblings; the third waypoint (3-08) is retired, its file on disk.
 const section3 = [
-  s3_00, s3_04, s3_08
+  s3_00, s3_04
 ];
 // Section 4 keeps its shipped slide numbers — the whole project, the freeze
 // register and every governing document refer to beats as 4.15, 4.23 — so
