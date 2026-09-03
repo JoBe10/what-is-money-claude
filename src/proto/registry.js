@@ -38,15 +38,16 @@ import invertTheQuestion from '../scenes/act-4-the-store-of-value-test/19-invert
 import howTheCarrierCanFailI from '../scenes/act-4-the-store-of-value-test/20-how-the-carrier-can-fail-i.js';
 import howTheCarrierCanFailII from '../scenes/act-4-the-store-of-value-test/21-how-the-carrier-can-fail-ii.js';
 import fromFailureToRequirement from '../scenes/act-4-the-store-of-value-test/22-from-failure-to-requirement.js';
+import theComparison from '../scenes/act-4-the-store-of-value-test/23-the-comparison.js';
 
 [returnToTheOpenExchange, whatTheCarrierMustPreserve, the100YearTest, invertTheQuestion,
-  howTheCarrierCanFailI, howTheCarrierCanFailII, fromFailureToRequirement]
+  howTheCarrierCanFailI, howTheCarrierCanFailII, fromFailureToRequirement, theComparison]
   .forEach((scene) => { scene.protoKey = 'act4'; });
 
 export const prototypes = [
   theDirectExchange, theBreakthrough, spendOrSave,
   returnToTheOpenExchange, whatTheCarrierMustPreserve, the100YearTest, invertTheQuestion,
-  howTheCarrierCanFailI, howTheCarrierCanFailII, fromFailureToRequirement
+  howTheCarrierCanFailI, howTheCarrierCanFailII, fromFailureToRequirement, theComparison
 ];
 
 export default prototypes;
