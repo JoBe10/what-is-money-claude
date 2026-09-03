@@ -215,7 +215,9 @@ const BERTHS = {
 };
 const S14_LINES = {
   objection: '“But I can’t buy my coffee with Bitcoin.”',
-  placed: 'A monetary good reaches everyday payments last.',
+  // The ruled wording (the Act III final ruling 2, 3 Sep 2026, master §13 —
+  // the contradiction fixed), verbatim.
+  placed: 'A monetary good is trusted to hold value before it is used to pay.',
   landed: 'Held on purpose, across years — one job: store of value.',
   question: 'What makes something a good store of value?'
 };

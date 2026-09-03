@@ -159,7 +159,7 @@ export default makeSceneModule({
   transitions,
   notes: `[→] Which brings us to the objection you've probably heard — maybe made: "But I can't buy my coffee with Bitcoin." It's true. And notice what it's actually about: one job. The middle one. Medium of exchange, at the coffee counter, today.
 
-[→] Now put that objection on the ladder you're looking at. A monetary good reaches everyday payments *last* — after collectibility, after store-of-value belief, on the far side of the gate. Complaining that a rising monetary good isn't yet buying coffee is like complaining that a twenty-year-old isn't yet retired. It describes the stage. It doesn't describe the destination.
+[→] Now put that objection on the ladder you're looking at. A monetary good is trusted to hold value before it is ever used to pay — payments live on the far side of the gate. Complaining that a rising monetary good isn't yet buying coffee is like complaining that a twenty-year-old isn't yet retired. It describes the stage. It doesn't describe the destination.
 
 [→] So the honest question was never "does it buy coffee?" The question is: which stage is it actually competing at, right now? And everything you've seen — held by individuals, funds, institutions, held *on purpose*, across years — points at one job: store of value.
 
