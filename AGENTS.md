@@ -565,7 +565,7 @@ Continuities the architecture already asks for:
 - the failing return path contracting into the Claim Mark (Scene 2 → Scene 3);
 - the held claim taking either road (Scene 3 → Scene 4);
 - the saved claim becoming the through-line as carriers transform around it (Scene 4 → Scene 5);
-- the tower's unanswered question opening the return to the exchange (Scene 15 → Scene 16);
+- the tower's unanswered question opening the return to the exchange (Scene 15 → Scene 16) *(amended 3 Sep 2026, master §13: the act's final beat is now the relocated pivot — the triad returned, the disc at its center, the store-of-value question — one beat after the held question; the return to the exchange opens from the pivot, and the held question is still the one Scene 16 answers)*;
 - the hours field's rhyme in the fixed-supply field (P1 → Scene 28).
 
 Do not use continuation merely because it is technically impressive.
