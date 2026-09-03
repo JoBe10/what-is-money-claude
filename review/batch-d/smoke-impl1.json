@@ -1,0 +1,231 @@
+{
+  "date": "2026-09-03T08:32:19.765Z",
+  "session": "batch-d-impl-1",
+  "deck": {
+    "slides": 38,
+    "firstId": "eighty-thousand-hours"
+  },
+  "route": {
+    "slides": 4,
+    "order": [
+      "return-to-the-open-exchange",
+      "what-the-carrier-must-preserve",
+      "the-100-year-test",
+      "invert-the-question"
+    ],
+    "builds": [
+      7,
+      4,
+      7,
+      1
+    ]
+  },
+  "traversal": {
+    "states": 23,
+    "forward": true,
+    "forwardFirstMismatchAt": null,
+    "backwardReachesTop": true,
+    "backwardMonotonic": true,
+    "backwardSteps": 22
+  },
+  "boundaries": [
+    {
+      "name": "S16 end → S17 (forward, the legacy crossfade)",
+      "from": {
+        "idx": 0,
+        "step": 7,
+        "id": "return-to-the-open-exchange"
+      },
+      "to": {
+        "idx": 1,
+        "step": 0,
+        "id": "what-the-carrier-must-preserve"
+      }
+    },
+    {
+      "name": "S17 b0 → S16 end (backward, the handoff)",
+      "from": {
+        "idx": 1,
+        "step": 0,
+        "id": "what-the-carrier-must-preserve"
+      },
+      "to": {
+        "idx": 0,
+        "step": 7,
+        "id": "return-to-the-open-exchange"
+      }
+    },
+    {
+      "name": "S17 end → S18 (forward, the legacy crossfade)",
+      "from": {
+        "idx": 1,
+        "step": 4,
+        "id": "what-the-carrier-must-preserve"
+      },
+      "to": {
+        "idx": 2,
+        "step": 0,
+        "id": "the-100-year-test"
+      }
+    },
+    {
+      "name": "S18 b0 → S17 end (backward, the handoff)",
+      "from": {
+        "idx": 2,
+        "step": 0,
+        "id": "the-100-year-test"
+      },
+      "to": {
+        "idx": 1,
+        "step": 4,
+        "id": "what-the-carrier-must-preserve"
+      }
+    },
+    {
+      "name": "S18 end → S19 (forward, the legacy crossfade)",
+      "from": {
+        "idx": 2,
+        "step": 7,
+        "id": "the-100-year-test"
+      },
+      "to": {
+        "idx": 3,
+        "step": 0,
+        "id": "invert-the-question"
+      }
+    },
+    {
+      "name": "S19 b0 → S18 end (backward, the handoff)",
+      "from": {
+        "idx": 3,
+        "step": 0,
+        "id": "invert-the-question"
+      },
+      "to": {
+        "idx": 2,
+        "step": 7,
+        "id": "the-100-year-test"
+      }
+    }
+  ],
+  "directEntry": [
+    "return-to-the-open-exchange:0",
+    "return-to-the-open-exchange:1",
+    "return-to-the-open-exchange:2",
+    "return-to-the-open-exchange:3",
+    "return-to-the-open-exchange:4",
+    "return-to-the-open-exchange:5",
+    "return-to-the-open-exchange:6",
+    "return-to-the-open-exchange:7",
+    "what-the-carrier-must-preserve:0",
+    "what-the-carrier-must-preserve:1",
+    "what-the-carrier-must-preserve:2",
+    "what-the-carrier-must-preserve:3",
+    "what-the-carrier-must-preserve:4",
+    "the-100-year-test:0",
+    "the-100-year-test:1",
+    "the-100-year-test:2",
+    "the-100-year-test:3",
+    "the-100-year-test:4",
+    "the-100-year-test:5",
+    "the-100-year-test:6",
+    "the-100-year-test:7",
+    "invert-the-question:0",
+    "invert-the-question:1"
+  ],
+  "parity": [
+    {
+      "state": "return-to-the-open-exchange:0",
+      "identical": true
+    },
+    {
+      "state": "return-to-the-open-exchange:1",
+      "identical": true
+    },
+    {
+      "state": "return-to-the-open-exchange:2",
+      "identical": true
+    },
+    {
+      "state": "return-to-the-open-exchange:3",
+      "identical": true
+    },
+    {
+      "state": "return-to-the-open-exchange:4",
+      "identical": true
+    },
+    {
+      "state": "return-to-the-open-exchange:5",
+      "identical": true
+    },
+    {
+      "state": "return-to-the-open-exchange:6",
+      "identical": true
+    },
+    {
+      "state": "return-to-the-open-exchange:7",
+      "identical": true
+    },
+    {
+      "state": "what-the-carrier-must-preserve:0",
+      "identical": true
+    },
+    {
+      "state": "what-the-carrier-must-preserve:1",
+      "identical": true
+    },
+    {
+      "state": "what-the-carrier-must-preserve:2",
+      "identical": true
+    },
+    {
+      "state": "what-the-carrier-must-preserve:3",
+      "identical": true
+    },
+    {
+      "state": "what-the-carrier-must-preserve:4",
+      "identical": true
+    },
+    {
+      "state": "the-100-year-test:0",
+      "identical": true
+    },
+    {
+      "state": "the-100-year-test:1",
+      "identical": true
+    },
+    {
+      "state": "the-100-year-test:2",
+      "identical": true
+    },
+    {
+      "state": "the-100-year-test:3",
+      "identical": true
+    },
+    {
+      "state": "the-100-year-test:4",
+      "identical": true
+    },
+    {
+      "state": "the-100-year-test:5",
+      "identical": true
+    },
+    {
+      "state": "the-100-year-test:6",
+      "identical": true
+    },
+    {
+      "state": "the-100-year-test:7",
+      "identical": true
+    },
+    {
+      "state": "invert-the-question:0",
+      "identical": true
+    },
+    {
+      "state": "invert-the-question:1",
+      "identical": true
+    }
+  ],
+  "consoleErrors": []
+}
