@@ -43,6 +43,12 @@ const advances = (notes) => paragraphs(notes).filter((p) => p.startsWith('[→]'
 
 // The architecture's own Scene 16 line (canonical — docs/synthesis-architecture.md, Scene 16).
 const RETURN_LINE = 'We left this exchange open. What has to survive until we close it?';
+// The presenter's bridge sentence (ruled 3 Sep 2026, master §13) and the span
+// of legacy 4-04's first paragraph it replaces — the four sentences spoken at
+// Scenes 3 and 4. The passage resumes, uncut, at "And this is the moment to
+// pay a debt"; the legacy "And" is kept so no legacy character is altered.
+const BRIDGE = 'The surgeon is still holding the claim he accepted that day.';
+const CUT_404 = 'He has not received the final goods or services he actually wants. No shoes, no steak, no wine, no housing — if he’d received those directly, that would have been barter. Instead, he receives money. ';
 
 // ---- the adaptation ledger (the only edits) ------------------------------
 // [scene, source file, from, to, why]. Each `from` must occur exactly once
@@ -75,7 +81,14 @@ const LEDGER = [
   ['S23-armor', '20-bitcoin-does-not-replace-everything.js',
     ' That is this one.',
     '',
-    'presenter-ruled cut, 3 Sep 2026 (master §13): the second dead pointer']
+    'presenter-ruled cut, 3 Sep 2026 (master §13): the second dead pointer'],
+  // The Scene 4 return's join (presenter-ruled, 3 Sep 2026 — master §13): the
+  // four pre-spoken sentences give way to the bridge sentence; the legacy
+  // passage resumes uncut from "this is the moment to pay a debt" onward.
+  ['S16', '04-unfinished-exchange.js',
+    CUT_404,
+    `${BRIDGE} `,
+    'the Scene 16 b1 join, presenter-ruled 3 Sep 2026 (master §13): the four sentences spoken at Scenes 3 and 4 are cut and the bridge sentence stands in their place; the legacy passage resumes uncut at "And this is the moment to pay a debt"']
 ];
 const apply = (text, scene) => {
   let out = text;
@@ -87,8 +100,9 @@ const apply = (text, scene) => {
   return out;
 };
 
-// ---- the seam flag and the armor markers (not spoken, never [→]) --------
-const SEAM_FLAG = '**[Seam flagged for the presenter — not spoken. The first four sentences of this beat (from "He has not received" to "Instead, he receives money.") were spoken at Scenes 3 and 4, where the surgeon\'s claim was born and took the spend road; the join from the return line to "this is the moment to pay a debt" is yours to write or cut. The paragraph is installed verbatim and uncut, per the zero-drafting rule.]**';
+// ---- the armor markers (not spoken, never [→]) ---------------------------
+// (The seam flag that stood at S16 b1 until 3 Sep 2026 is gone: the join is
+// the presenter's, installed through the ledger above.)
 const ARMOR_STEELMAN_HEAD = '**[Notes-only — Q&A armor, never spoken: the stability steelman, relocated here by architecture Ruling 5 (the stability scene is cut; the two-question distinction and the stage-signature inoculation speak in Scene 9; the rules line stays spoken in Scene 29). Verbatim from legacy 4-20\'s three closing spoken beats, less two sentences: its two pointer sentences — "That is this line: restless, and it is supposed to be." and "That is this one." — named 4-20\'s drawn contrast, which has no frame here, and are cut by presenter ruling (3 September 2026, master §13); nothing is written in their place.]**';
 const ARMOR_ARSENAL_HEAD = '**[Notes-only — Q&A armor, never spoken: the two-prong displacement writeup and the trapped-exit answer, at the comparison scene\'s notes per master §9.6. Verbatim from legacy 4-20\'s Q&A arsenal.]**';
 
@@ -116,7 +130,7 @@ function assemble() {
 
   const s16b1 = `[→] ${RETURN_LINE} ${n404[0].replace(/^\[→\]\s*/, '')}`;
   return {
-    S16: [s16b1, SEAM_FLAG, n404[1], n404[2], n404[3], ...n406].join('\n\n'),
+    S16: apply([s16b1, n404[1], n404[2], n404[3], ...n406].join('\n\n'), 'S16'),
     S17: apply(n407.join('\n\n'), 'S17'),
     S18: [...n408, ...n409].join('\n\n'),
     S19: n410.join('\n\n'),
@@ -264,6 +278,24 @@ if (rows.some((r) => r.installed == null)) process.exit(1);
     gone && inSource, `cut from S23 ${gone} · once each in 4-20 ${inSource}`);
 }
 
+// 4c. THE JOIN (presenter-ruled, 3 Sep 2026 — master §13): S16 b1 is the
+// architecture's return line, the presenter's bridge sentence, then legacy
+// 4-04's first paragraph from "this is the moment to pay a debt" onward; the
+// four pre-spoken sentences are cut and stand, once, in the legacy source.
+{
+  const s16 = rows.find((x) => x.scene === 'S16').installed;
+  const first = s16.split('\n\n')[0];
+  const src404 = notesOf('04-unfinished-exchange.js');
+  const head = `[→] ${RETURN_LINE} ${BRIDGE} And this is the moment to pay a debt — because`;
+  const joined = first.startsWith(head);
+  const cutGone = !s16.includes(CUT_404.trim());
+  const cutInSource = src404.split(CUT_404).length - 1 === 1;
+  const bridgeOnce = s16.split(BRIDGE).length - 1 === 1 && !src404.includes(BRIDGE);
+  check('JOIN: S16 b1 is the return line, the bridge sentence, then the legacy passage from "this is the moment to pay a debt" onward — the four pre-spoken sentences cut (presenter ruling, 3 Sep 2026)',
+    joined && cutGone && cutInSource && bridgeOnce,
+    `joined ${joined} · the cut span absent ${cutGone} · once in 4-04 ${cutInSource} · the bridge once and nowhere in the legacy ${bridgeOnce}`);
+}
+
 // 5. THE PROTECTED LINES — character for character, every difference reported.
 const protectedRows = [];
 function protectedCheck(name, master, installed, { where = '', allow = null } = {}) {
@@ -405,7 +437,7 @@ function protectedCheck(name, master, installed, { where = '', allow = null } = 
 const out = {
   date: new Date().toISOString(),
   session: 'act-4-foundation',
-  rule: 'docs/batch-d-package.md §2 is the legacy Section 4 slides\' own notes, assembled in the architecture\'s scene merges, with exactly the adaptation ledger applied — proven word for word and character for character; every scene\'s [→] count is §1\'s; the protected lines are verified character for character against the master with every difference reported; nothing before Scene 16 anticipates the generalization.',
+  rule: 'docs/batch-d-package.md §2 is the legacy Section 4 slides\' own notes, assembled in the architecture\'s scene merges, with exactly the adaptation ledger applied — the four substitutions, and the presenter\'s rulings of 3 Sep 2026 (the Scene 16 b1 join; the two armor cuts) — proven word for word and character for character; every scene\'s [→] count is §1\'s frozen map; the protected lines are verified character for character against the master with every difference reported; nothing before Scene 16 anticipates the generalization.',
   ledger: LEDGER.map(([scene, file, from, to, why]) => ({ scene, file, from, to, why })),
   scenes: rows.map((r) => ({ scene: r.scene, words: words(r.installed).length, beats: (r.installed.match(/\[→\]/g) || []).length, expected: r.beats })),
   totalBeats: TOTAL_BEATS,
