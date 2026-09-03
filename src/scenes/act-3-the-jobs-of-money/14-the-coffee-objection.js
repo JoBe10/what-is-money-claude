@@ -1,16 +1,19 @@
-// Scene 14 — The Coffee Objection (4 beats — folded into the ladder world,
-// Batch C r2 ruling 4).
+// Scene 14 — The Coffee Objection (3 beats — folded into the ladder world,
+// Batch C r2 ruling 4; the pivot relocated to the act's exit, the Act III
+// final ruling 3, 3 Sep 2026, master §13).
 //
 // The objection lives and dies on the ladder. The standalone display-scale
 // study frame is retired to file (s14-b1-study); the scene stages
 // continuously on the S13 ladder: the coffee cup arrives at the MEDIUM OF
 // EXCHANGE berth as the objection lands as the statement line; the
-// placement line takes the slot; then THE SCENE'S PAYOFF, protected by the
-// climbers ruling and by this file's timing: the coffee recedes first, and
-// only then does the coin arrive at its berth above STORE OF VALUE — alone,
-// the only monetary object on the ladder, nothing else moving while it
-// lands. The pivot returns the whole triad with STORE at full voice and the
-// act's hinge question beneath.
+// placement line takes the slot — the ruled wording (the Act III final
+// ruling 2); then THE SCENE'S PAYOFF, protected by the climbers ruling and
+// by this file's timing: the coffee recedes first, and only then does the
+// coin arrive at its berth above STORE OF VALUE — alone, the only monetary
+// object on the ladder, nothing else moving while it lands. "Then let's
+// judge it there." — and the scene ends on the ladder: the pivot (the
+// triad returning with the question) is Scene 15's final beat now, so the
+// tower is entered from the ladder world and left through the home base.
 //
 // THE S13 → S14 BOUNDARY IS A PURE MORPH — ONE WORLD (r2 ruling 4): the
 // ladder never leaves the stage. The order overlay and the social line
@@ -23,12 +26,13 @@
 // 520ms reveal with the dot beneath (3-07's entity gesture through the
 // icons-to-renders change); the landings rise as the rail's landings rise.
 //
-// Landed states — the approved cells s14-b1 … s14-b4 (s14-b1 the r2 fold
-// cell; b2–b4 untouched), by construction.
+// Landed states — the approved cells s14-b1 … s14-b3 (s14-b1 the r2 fold
+// cell; s14-b2 the Act III final re-render; s14-b3 untouched), by
+// construction.
 
 import { gsap } from 'gsap';
 import { makeSceneModule } from './_sceneModule.js';
-import { setVisible, hideInstantly, LADDER_STATES } from './_jobsStage.js';
+import { hideInstantly, LADDER_STATES } from './_jobsStage.js';
 
 const ID = 'the-coffee-objection';
 const L4 = ['collectible', 'sov', 'moe', 'uoa'];
@@ -125,29 +129,9 @@ const transitions = {
     tl.add(() => revealBerth(stage, 'bitcoin', 1), 0.95);
     landStatement(stage, tl, stage.states[ID][2].statement, 1.6);
     tl.add(() => stage.applyState(ID, 2), 2.6);
-  },
-
-  // beat 4 — the pivot: the ladder gives the frame back to the home base,
-  // whole, STORE OF VALUE at full voice, the hinge question beneath.
-  3: (mod, stage) => {
-    const tl = stage.timeline();
-    tl.to([stage.ladderLayer, stage.stmt], { opacity: 0, duration: 0.6, ease: 'power1.inOut' }, 0.1);
-    tl.add(() => {
-      stage.ladderLayer.style.display = 'none';
-      stage.triadLayer.style.display = '';
-      stage.triadLayer.style.opacity = '0';
-      setVisible(stage.token, true);
-      ['sov', 'moe', 'uoa'].forEach((k) => {
-        setVisible(stage.spokes[k], true);
-        setVisible(stage.fns[k], true);
-        stage.fns[k].style.opacity = k === 'sov' ? '1' : '0.55';
-      });
-      setVisible(stage.continuity, false);
-      gsap.to(stage.triadLayer, { opacity: 1, duration: 0.9, ease: 'power1.inOut' });
-    }, 0.75);
-    landStatement(stage, tl, stage.states[ID][3].question, 1.5, { question: true });
-    tl.add(() => stage.applyState(ID, 3), 2.6);
   }
+  // The pivot — formerly beat 4 — is Scene 15's seventh beat (the Act III
+  // final ruling 3); its gesture lives in 15-the-tower.js.
 };
 
 export default makeSceneModule({
@@ -161,7 +145,5 @@ export default makeSceneModule({
 
 [→] Now put that objection on the ladder you're looking at. A monetary good is trusted to hold value before it is ever used to pay — payments live on the far side of the gate. Complaining that a rising monetary good isn't yet buying coffee is like complaining that a twenty-year-old isn't yet retired. It describes the stage. It doesn't describe the destination.
 
-[→] So the honest question was never "does it buy coffee?" The question is: which stage is it actually competing at, right now? And everything you've seen — held by individuals, funds, institutions, held *on purpose*, across years — points at one job: store of value.
-
-[→] Then let's judge it there. What makes something a *good* store of value? That question — asked properly, from first principles — is the rest of this story.`
+[→] So the honest question was never "does it buy coffee?" The question is: which stage is it actually competing at, right now? And everything you've seen — held by individuals, funds, institutions, held *on purpose*, across years — points at one job: store of value. Then let's judge it there.`
 });

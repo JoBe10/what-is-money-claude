@@ -1,5 +1,13 @@
-// Scene 15 — The Tower (6 beats; CANDIDATE A, the presenter's selection —
-// the proportional inverted tower).
+// Scene 15 — The Tower (7 beats; CANDIDATE A, the presenter's selection —
+// the proportional inverted tower — plus the pivot coda as the act's final
+// beat, the Act III final ruling 3, 3 Sep 2026, master §13).
+//
+// The scene is entered from the ladder world (Scene 14 ends on the coin's
+// landing — "Then let's judge it there.") and opens on the ruled line, "But
+// before we judge it there, let me pull the rug slightly." After the held
+// question the tower gives the frame back to the home base, whole — the
+// disc at its center, STORE OF VALUE at full voice — and the question lands:
+// "What makes something a good store of value?" The act leaves on it.
 //
 // The descending reveal: PAYMENT APPS lands at the frame's top, widest and
 // faintest; BANK DEPOSITS beneath it, outlined; BASE MONEY at the bottom —
@@ -13,12 +21,13 @@
 // stage, NO DISC (the r2 thread ruling: the disc lives at the triad's
 // center, never on the tower).
 //
-// Landed states — the approved candidate-A cells s15-b1-a … s15-b6-a, by
-// construction.
+// Landed states — the approved candidate-A cells s15-b1-a … s15-b6-a, and
+// the pivot coda s15-b7 (the approved s14-b4 composition, its bytes
+// carried), by construction.
 
 import { gsap } from 'gsap';
 import { makeSceneModule } from './_sceneModule.js';
-import { A_SLABS, slabLook } from './_jobsStage.js';
+import { A_SLABS, slabLook, setVisible } from './_jobsStage.js';
 
 const ID = 'the-tower';
 
@@ -55,21 +64,32 @@ function litLink(stage, tl, key, at) {
   }, at);
 }
 
-// The seam from Scene 14: the tower is entered through the triad's STORE
-// corner — the home frame and its question clear, and the top layer lands
-// where the viewer lives.
+// The seam from Scene 14 (the Act III final ruling 3): the tower is entered
+// from the ladder world — the ladder, its climbers and the coin's landing
+// line clear, and the top layer lands where the viewer lives.
 function morphIn(mod, stage) {
-  stage.applyState('the-coffee-objection', 3);
+  stage.applyState('the-coffee-objection', 2);
   const tl = stage.timeline();
-  tl.to([stage.triadLayer, stage.stmt], { opacity: 0, duration: 0.6, ease: 'power1.inOut' }, 0.1);
+  tl.to([stage.ladderLayer, stage.stmt], { opacity: 0, duration: 0.6, ease: 'power1.inOut' }, 0.1);
   tl.add(() => {
-    stage.triadLayer.style.display = 'none';
+    stage.ladderLayer.style.display = 'none';
     stage.towerLayer.style.display = '';
     stage.towerLayer.dataset.step = '1';
     stage.towerLayer.dataset.live = 'false';
   }, 0.7);
   landSlab(stage, tl, 'apps', 0.8);
   tl.add(() => stage.applyState(ID, 0), 2.0);
+}
+
+// A statement lands in the deck's slot (the home frame's own question
+// register for the coda).
+function landStatement(stage, tl, copy, at, { question = false } = {}) {
+  tl.add(() => {
+    stage.setStatement(copy, { question });
+    gsap.fromTo(stage.stmt,
+      { opacity: 0, y: 10 },
+      { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' });
+  }, at);
 }
 
 // Cold entry at beat 1: PAYMENT APPS lands over black.
@@ -193,6 +213,31 @@ const transitions = {
     }, 0.12);
     tl.add(() => { stage.drop.dataset.visible = 'true'; }, 0.75);
     tl.add(() => stage.applyState(ID, 5), 2.3);
+  },
+
+  // beat 7 — the pivot coda (the Act III final ruling 3): the tower gives
+  // the frame back to the home base, whole — the disc at its center, STORE
+  // OF VALUE at full voice — and the question lands in the home frame's own
+  // statement slot. The gesture is the relocated S14 pivot, the tower
+  // standing where the ladder stood. The act leaves on the question.
+  6: (mod, stage) => {
+    const tl = stage.timeline();
+    tl.to(stage.towerLayer, { opacity: 0, duration: 0.6, ease: 'power1.inOut' }, 0.1);
+    tl.add(() => {
+      stage.towerLayer.style.display = 'none';
+      stage.triadLayer.style.display = '';
+      stage.triadLayer.style.opacity = '0';
+      setVisible(stage.token, true);
+      ['sov', 'moe', 'uoa'].forEach((k) => {
+        setVisible(stage.spokes[k], true);
+        setVisible(stage.fns[k], true);
+        stage.fns[k].style.opacity = k === 'sov' ? '1' : '0.55';
+      });
+      setVisible(stage.continuity, false);
+      gsap.to(stage.triadLayer, { opacity: 1, duration: 0.9, ease: 'power1.inOut' });
+    }, 0.75);
+    landStatement(stage, tl, stage.states[ID][6].question, 1.5, { question: true });
+    tl.add(() => stage.applyState(ID, 6), 2.6);
   }
 };
 
@@ -203,7 +248,7 @@ export default makeSceneModule({
   entry,
   morphIn,
   transitions,
-  notes: `[→] Before we can ask it properly, let me pull the rug slightly. This whole time I've said "money" — but is the thing in your bank account actually the base good we've been talking about? Start from the top, where you live: the payment app.
+  notes: `[→] But before we judge it there, let me pull the rug slightly. Is the thing in your bank account actually the base good we'd be judging? Start from the top, where you live: the payment app.
 
 [→] The app balance is not money. It's a claim on your bank deposit — a number that points at another number.
 
@@ -213,5 +258,7 @@ export default makeSceneModule({
 
 [→] Which finally makes the real question precise. It was never about payment apps, and it was never about banking layers — those are engineering on top, and engineering can be excellent. The question is about the foundation asset underneath them all.
 
-[→] And before we go find it — sit with this for a moment. Every layer is a claim on the layer below. So what is the bottom layer a claim on? … Hold that question. We're coming back to it.`
+[→] And before we go find it — sit with this for a moment. Every layer is a claim on the layer below. So what is the bottom layer a claim on? … Hold that question. We're coming back to it.
+
+[→] So now we can ask it properly. What makes something a good store of value? That question — asked from first principles — is the rest of this story.`
 });

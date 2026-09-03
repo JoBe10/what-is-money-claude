@@ -308,9 +308,11 @@ export const STATES = {
     { ladder: 'all', lines: ['collectible', 'sov', 'moe', 'uoa'], social: 0.55, gatelines: 2, step: 6 },
     { ladder: 'foundation', lines: ['collectible', 'sov', 'moe', 'uoa'], social: 0.55, gatelines: 2, foundation: true, step: 7 }
   ],
-  // S14 — the approved cells s14-b1 … s14-b4 (the fold, r2 ruling 4: all
-  // four beats staged continuously on the ladder; 3-07's own staging
-  // carries no kicker, and b1 lands the objection as the statement line).
+  // S14 — the approved cells s14-b1 … s14-b3 (the fold, r2 ruling 4: the
+  // beats staged continuously on the ladder; 3-07's own staging carries no
+  // kicker, and b1 lands the objection as the statement line). S14 = 3
+  // since the Act III final ruling 3 (3 Sep 2026, master §13): the pivot —
+  // the home base returning with the question — is the act's final beat.
   'the-coffee-objection': [
     {
       ladder: 'resolved', lines: ['collectible', 'sov', 'moe', 'uoa'],
@@ -323,12 +325,16 @@ export const STATES = {
     {
       ladder: 'resolved', lines: ['collectible', 'sov', 'moe', 'uoa'],
       berths: { bitcoin: 1, coffee: 0.5 }, statement: S14_LINES.landed
-    },
-    { triad: { jobs: 3, lit: 'sov' }, question: S14_LINES.question }
+    }
   ],
-  // S15 — the approved candidate-A cells s15-b1-a … s15-b6-a.
+  // S15 — the approved candidate-A cells s15-b1-a … s15-b6-a, and the pivot
+  // coda s15-b7 (the Act III final ruling 3): the home base returning
+  // whole, the disc at its center, STORE OF VALUE at full voice, the
+  // question in the statement slot — the approved s14-b4 composition, its
+  // bytes carried. The act leaves on the question.
   'the-tower': [
-    { tower: 1 }, { tower: 2 }, { tower: 3 }, { tower: 4 }, { tower: 5 }, { tower: 6 }
+    { tower: 1 }, { tower: 2 }, { tower: 3 }, { tower: 4 }, { tower: 5 }, { tower: 6 },
+    { triad: { jobs: 3, lit: 'sov' }, question: S14_LINES.question }
   ]
 };
 
