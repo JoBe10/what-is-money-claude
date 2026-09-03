@@ -1,0 +1,148 @@
+{
+  "date": "2026-09-03T09:46:01.821Z",
+  "session": "batch-d",
+  "checks": 28,
+  "failures": 0,
+  "results": [
+    {
+      "name": "BEATS: every scene’s notes carry the frozen map’s arrows — Act IV is 42",
+      "ok": true,
+      "detail": "8 · 5 · 8 · 2 · 5 · 5 · 3 · 6 = 42"
+    },
+    {
+      "name": "BEATS: the notes-only armor carries no advance",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "VERBATIM: the installed scripts are the package’s §2 scripts, character for character (S23’s two notes-only armor blocks included)",
+      "ok": true,
+      "detail": "8/8 identical"
+    },
+    {
+      "name": "VERBATIM: the package’s own installation harness is green on file — the scripts are the legacy notes with exactly the ledger applied, at 42",
+      "ok": true,
+      "detail": "25/25 · 42 beats"
+    },
+    {
+      "name": "LANGUAGE: no visible line or script in src/scenes/ names the medium or the live delivery (the ledger’s three self-references included)",
+      "ok": true,
+      "detail": "36 scene files swept"
+    },
+    {
+      "name": "SWEEP: no retired wording or structural self-reference in the Act IV scenes",
+      "ok": true,
+      "detail": "9 terms, 10 files"
+    },
+    {
+      "name": "SWEEP: no Act IV script names an absolute slide number (the notes-only marker labels, which cite Scene 9 and Scene 29 by the film’s structure, set aside)",
+      "ok": true,
+      "detail": "8/8 clean"
+    },
+    {
+      "name": "SWEEP: the stability armor’s vocabulary stays inside S23’s notes-only armor — never spoken",
+      "ok": true,
+      "detail": "3 phrases, armor only"
+    },
+    {
+      "name": "GUARDRAILS: no Act IV script makes a master §10 prohibited overclaim",
+      "ok": true,
+      "detail": "10 patterns, 8 scripts"
+    },
+    {
+      "name": "PROTECTED: the bisection crescendo stands in S16’s installed notes, character for character (its first letter lowercase after \"Which means:\", as the legacy speaks it)",
+      "ok": true,
+      "detail": "S16 b7"
+    },
+    {
+      "name": "PROTECTED: the hundred-year sentence stands in S18’s installed notes, character for character",
+      "ok": true,
+      "detail": "S18 b2"
+    },
+    {
+      "name": "PROTECTED: the scores are dated in S23’s installed notes — \"my judgments, as of 2026\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "PROTECTED: the enlargement rung 4 phrasing stands in S16’s installed notes as the legacy speaks it",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "PROTECTED: the spoken definition \"Money is an earned, transferable claim on value.\" stands in S16’s installed notes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "PROTECTED: the architecture’s return line opens S16, verbatim",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "PROTECTED: \"Don’t trust. Verify.\" is on stage exactly once across every module the manifest reaches — legacy 4-16, re-homed by the act’s stage at S23 b6 (master §3.7)",
+      "ok": true,
+      "detail": "87 modules reached · on stage in: src/slides/section-4-ideal-store/16-the-comparison.js"
+    },
+    {
+      "name": "PROTECTED: the on-stage line is two spans, \"Don’t trust.\" then \"Verify.\", in the legacy 4-16 source the act mounts",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "PROTECTED: the on-screen definition — AN EARNED, TRANSFERABLE / CLAIM ON VALUE — stands in the legacy 4-04 source the act mounts",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "PROTECTED: PROPERTY is the row header and the real-estate asset is labeled REAL ESTATE; no total, no winner badge, no highlight in the table component",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "FROZEN: the two data files’ committed blob ids are the ids the ruled map records (§3.1), and the working tree carries no change to them",
+      "ok": true,
+      "detail": "3a6440aa… and c1eb13d4… — untouched"
+    },
+    {
+      "name": "FROZEN: fifty scores in ten rows",
+      "ok": true,
+      "detail": "10 rows"
+    },
+    {
+      "name": "SPLICE: every superseded and surviving legacy file stays on disk",
+      "ok": true,
+      "detail": "15/15 on disk"
+    },
+    {
+      "name": "SPLICE: no superseded legacy slide is imported by the manifest — 4-01 (retired by the Row 2 ruling) and 4-06 through 4-16",
+      "ok": true,
+      "detail": "12/12 out of the running order"
+    },
+    {
+      "name": "SPLICE: the two ambiguous-fate survivors stay in the manifest (flagged, never decided)",
+      "ok": true,
+      "detail": "3-00 · 3-04 kept"
+    },
+    {
+      "name": "SPLICE: the seven Act V sources (4-17 … 4-23) stay in the manifest for Batch E",
+      "ok": true,
+      "detail": "7/7 kept"
+    },
+    {
+      "name": "SPLICE: all eight Act IV scenes are in the manifest",
+      "ok": true,
+      "detail": "8/8 spliced"
+    },
+    {
+      "name": "SPLICE: the survivors’ ambiguous fates are flagged in the manifest’s own record, and the counts are stated (38 → 34)",
+      "ok": true,
+      "detail": "the Batch D block says so in plain English"
+    },
+    {
+      "name": "SPLICE: the act’s scenes have left the scratch route’s registry (the entry leaves when the batch lands)",
+      "ok": true,
+      "detail": "registry clear of the act"
+    }
+  ]
+}
