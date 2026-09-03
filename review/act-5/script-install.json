@@ -1,0 +1,351 @@
+{
+  "date": "2026-09-03T13:49:56.797Z",
+  "session": "act-5-foundation",
+  "rule": "docs/batch-e-package.md §2 is the legacy Act V slides' own notes (4-17 … 4-23, 5-01), assembled in the architecture's scene merges, with exactly the adaptation ledger applied — two self-reference substitutions, the rules line installed in Scene 29 (Ruling 5's named distribution), the waypoint sentence cut from the close — and the three entry lines made the first beats of their scenes; proven word for word and character for character; every scene's [→] count is §1's map at its defaults (27); the protected lines verified character for character with every difference reported; the self-reference ban checked hardest at the close.",
+  "ledger": [
+    {
+      "scene": "S25",
+      "file": "src/slides/section-4-ideal-store/18-monetary-premium.js",
+      "from": "which is precisely the diagnosis this whole section began from",
+      "to": "which is precisely the diagnosis this whole inquiry began from",
+      "why": "a structural self-reference (\"this whole section\"); master §3.5's permitted form \"the inquiry\" (the batch-d ledger's form for \"the rest of the evening\")"
+    },
+    {
+      "scene": "S26-passage",
+      "file": "src/slides/section-4-ideal-store/20-bitcoin-does-not-replace-everything.js",
+      "from": "I’ve spent this whole section answering objections.",
+      "to": "I’ve spent the last few minutes answering objections.",
+      "why": "a structural self-reference (\"this whole section\") in the falsifiability passage; replaced with the time it names (the batch-d ledger's form for \"one slide ago\" → \"a moment ago\")"
+    },
+    {
+      "scene": "S29",
+      "file": "src/slides/section-4-ideal-store/23-investment-case-from-first-principles.js",
+      "from": "The case is not that the price will behave.",
+      "to": "Bitcoin does not fix its price. It fixes the rules through which the market discovers its price. The case is not that the price will behave.",
+      "why": "the architecture's named distribution (Ruling 5 — \"the rules line remains in Scene 29\"): the rules line, verbatim from legacy 4-20, installed before the sentence it governs (ARGUABLE row 3 of docs/act-5-provenance.md, at its default)"
+    },
+    {
+      "scene": "S30",
+      "file": "src/slides/section-5-close/01-thank-you.js",
+      "from": "There’s the whole road — all three questions, kept. ",
+      "to": "",
+      "why": "a structural self-reference to the retired waypoint device (\"the whole road — all three questions\"; architecture Ruling 1, the what-dies list); cut, nothing written in its place — the callback opens the beat"
+    }
+  ],
+  "scenes": [
+    {
+      "scene": "S24",
+      "words": 243,
+      "beats": 4,
+      "expected": 4
+    },
+    {
+      "scene": "S25",
+      "words": 301,
+      "beats": 4,
+      "expected": 4
+    },
+    {
+      "scene": "S26",
+      "words": 753,
+      "beats": 9,
+      "expected": 9
+    },
+    {
+      "scene": "S27",
+      "words": 159,
+      "beats": 3,
+      "expected": 3
+    },
+    {
+      "scene": "S28",
+      "words": 256,
+      "beats": 3,
+      "expected": 3
+    },
+    {
+      "scene": "S29",
+      "words": 191,
+      "beats": 2,
+      "expected": 2
+    },
+    {
+      "scene": "S30",
+      "words": 157,
+      "beats": 2,
+      "expected": 2
+    }
+  ],
+  "totalBeats": 27,
+  "protectedLines": [
+    {
+      "name": "the rules line (master §9.6; the architecture: \"the rules line in script\", Scene 29) — installed in S29 b2",
+      "where": "S29 b2 (from legacy 4-20 b7)",
+      "master": "Bitcoin does not fix its price. It fixes the rules through which the market discovers its price.",
+      "installed": "Bitcoin does not fix its price. It fixes the rules through which the market discovers its price.",
+      "identical": true,
+      "wordsIdentical": true,
+      "firstDifference": null,
+      "ok": true
+    },
+    {
+      "name": "\"Bitcoin does not need to replace everything. It only needs to become the preferred place to store the next unit of value.\" — on screen at Scene 29's frozen final frame (legacy 4-23's conclusion, three lines, two bold spans)",
+      "where": "4-23 conclusion (frozen frame)",
+      "master": "Bitcoin does not need to replace everything. It only needs to become the preferred place to store the next unit of value.",
+      "installed": "Bitcoin does not need to replace everything. It only needs to become the preferred place to store the next unit of value.",
+      "identical": true,
+      "wordsIdentical": true,
+      "firstDifference": null,
+      "ok": true
+    },
+    {
+      "name": "the closing callback — installed at S30 b1, opening the beat (the road sentence cut)",
+      "where": "S30 b1 (legacy 5-01 b1)",
+      "master": "An hour ago I told you something strange: that you’d spend eighty thousand hours of your life earning something you couldn’t define. Now you can define it.",
+      "installed": "An hour ago I told you something strange: that you’d spend eighty thousand hours of your life earning something you couldn’t define. Now you can define it.",
+      "identical": true,
+      "wordsIdentical": true,
+      "firstDifference": null,
+      "ok": true
+    },
+    {
+      "name": "the covenant and the disclaimer — installed at S30 b2",
+      "where": "S30 b2 (legacy 5-01 b2)",
+      "master": "That framework is yours now. Not my conclusions — the framework. Check every score. None of this is investment advice; it’s the education you were never given.",
+      "installed": "That framework is yours now. Not my conclusions — the framework. Check every score. None of this is investment advice; it’s the education you were never given.",
+      "identical": true,
+      "wordsIdentical": true,
+      "firstDifference": null,
+      "ok": true
+    },
+    {
+      "name": "\"you won’t be able to stop seeing it\" — the architecture's Scene 30 phrase, in the legacy's own words",
+      "where": "S30 b2",
+      "master": "Here’s the last thing I’ll tell you about seeing money this way: you won’t be able to stop.",
+      "installed": "Here’s the last thing I’ll tell you about seeing money this way: you won’t be able to stop.",
+      "identical": true,
+      "wordsIdentical": true,
+      "firstDifference": null,
+      "ok": true
+    },
+    {
+      "name": "the architecture's Scene 30 paraphrase vs the legacy words",
+      "where": "docs/synthesis-architecture.md, Scene 30",
+      "master": "an hour ago, eighty thousand hours and a thing you couldn't define — now you can, and you won't be able to stop seeing it",
+      "installed": "An hour ago I told you something strange: that you’d spend eighty thousand hours of your life earning something you couldn’t define. Now you can define it. … Here’s the last thing I’ll tell you about seeing money this way: you won’t be able to stop.",
+      "identical": false,
+      "wordsIdentical": false,
+      "note": "the architecture paraphrases; the legacy 5-01 words are the verbatim authority and are installed",
+      "ok": true
+    },
+    {
+      "name": "\"Bitcoin competes for the monetary premium — not the asset’s entire value\" — on screen at Scene 25's last beat (legacy 4-18's final line, two spans)",
+      "where": "4-18 finalLine",
+      "master": "Bitcoin competes for the monetary premium — not the asset’s entire value.",
+      "installed": "Bitcoin competes for the monetary premium—not the asset’s entire value.",
+      "identical": false,
+      "wordsIdentical": true,
+      "firstDifference": {
+        "at": 41,
+        "master": " — not the asset’s entir",
+        "installed": "—not the asset’s entire "
+      },
+      "ok": true
+    }
+  ],
+  "rhyme": {
+    "unitField": "4af4ad9caf0aba2abbf33b5d4aa8f7aa2c9a8944",
+    "fixedSupplyField": "89623ecd3bc57110b1b9e2ed52d8ae1592cd8cf1",
+    "grammar": [
+      "102",
+      "62",
+      "0.8235",
+      "0.7419"
+    ],
+    "p1": {
+      "pitch": "4.58",
+      "cols": 400,
+      "rows": 200,
+      "fillMs": "8200",
+      "collapseMs": "4600"
+    },
+    "s28": {
+      "units": 35,
+      "cols": 7,
+      "rows": 5
+    }
+  },
+  "pointers": [
+    "S26: “that table”",
+    "S28: “this picture”"
+  ],
+  "checks": 33,
+  "failures": 0,
+  "results": [
+    {
+      "name": "PRESENT: every scene has an installed block",
+      "ok": true,
+      "detail": "7/7"
+    },
+    {
+      "name": "WORDS: the installed scripts are the legacy notes with exactly the ledger applied, word for word",
+      "ok": true,
+      "detail": "zero differences (S24 243 · S25 301 · S26 753 · S27 159 · S28 256 · S29 191 · S30 157)"
+    },
+    {
+      "name": "CHARACTERS: identical to the byte, punctuation and dashes included",
+      "ok": true,
+      "detail": "7/7 identical"
+    },
+    {
+      "name": "BEATS: every scene's [→] count is its §1 map, and Act V is 27 at the map's defaults",
+      "ok": true,
+      "detail": "S24 4 · S25 4 · S26 9 · S27 3 · S28 3 · S29 2 · S30 2 = 27"
+    },
+    {
+      "name": "MAP: §1's beat maps state the same counts as §2's scripts",
+      "ok": true,
+      "detail": "7/7 agree"
+    },
+    {
+      "name": "MARKERS: the passage marker carries no advance",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "ENTRY BEATS: 4-17, 4-18 and 4-21's entry lines open their scenes as the first beat — one [→] prefixed, zero word changes (ARGUABLE row 1, the default)",
+      "ok": true,
+      "detail": "3/3"
+    },
+    {
+      "name": "LEDGER: 4 entries — 3 substitutions and 1 cut — each once in its source, each applied, none of the originals surviving",
+      "ok": true,
+      "detail": "S25: “which is precisely the diagnosis this whole section began from” → “which is precisely the diagnosis this whole inquiry began fr” · S26-passage: “I’ve spent this whole section answering objections.” → “I’ve spent the last few minutes answering objections.” · S29: “The case is not that the price will behave.” → “Bitcoin does not fix its price. It fixes the rules through w” · S30: “There’s the whole road — all three questions, kept.” → (cut)"
+    },
+    {
+      "name": "DISTRIBUTIONS: 4-20's three stability beats are not installed in Scene 26 — they live in Scene 23's notes-only armor (Ruling 5)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "DISTRIBUTIONS: the rules line stands in Scene 29's script, verbatim from legacy 4-20 (Ruling 5 — \"the rules line remains in Scene 29\"), and once",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "DISTRIBUTIONS: the diversification concession is inside Scene 24's migration beat, as the legacy speaks it",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "DISTRIBUTIONS: the does-not-replace-everything concession is merged into Scene 26 — 4-19's five beats then 4-20's four coexistence beats",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "DISTRIBUTIONS: the falsifiability passage stands at Scene 26's close as a no-advance spoken passage (ARGUABLE row 2, the default)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "PROTECTED: the rules line (master §9.6; the architecture: \"the rules line in script\", Scene 29) — installed in S29 b2",
+      "ok": true,
+      "detail": "character-for-character identical"
+    },
+    {
+      "name": "PROTECTED: the rules line's on-screen form lives only in legacy 4-20's retired stability frame (build 7) — no Act V scene stages it (Ruling 5: script, not frame)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "PROTECTED: \"Bitcoin does not need to replace everything. It only needs to become the preferred place to store the next unit of value.\" — on screen at Scene 29's frozen final frame (legacy 4-23's conclusion, three lines, two bold spans)",
+      "ok": true,
+      "detail": "character-for-character identical"
+    },
+    {
+      "name": "PROTECTED: the spoken sibling of the line — \"Bitcoin does not need to absorb everything. It only needs to win more of the margin.\" — stands in S28 b3 as the legacy speaks it",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "PROTECTED: the closing callback — installed at S30 b1, opening the beat (the road sentence cut)",
+      "ok": true,
+      "detail": "character-for-character identical"
+    },
+    {
+      "name": "PROTECTED: the callback opens S30 b1 — nothing stands before it",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "PROTECTED: the covenant and the disclaimer — installed at S30 b2",
+      "ok": true,
+      "detail": "character-for-character identical"
+    },
+    {
+      "name": "PROTECTED: \"you won’t be able to stop seeing it\" — the architecture's Scene 30 phrase, in the legacy's own words",
+      "ok": true,
+      "detail": "character-for-character identical"
+    },
+    {
+      "name": "PROTECTED: S30 ends on \"Thank you.\" — the last words of the film's script",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "PROTECTED: the road sentence is cut from S30 and stands once in the legacy source",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "PROTECTED: \"The monetary competition is decided at the margin.\" is spoken at S27 b3 and appears in no on-screen string of legacy 4-21 (master §3.7: spoken-only)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "PROTECTED: the asked-calmly line stands at the marginal decision (R7 relocation) — S27 b2",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "PROTECTED: \"Bitcoin competes for the monetary premium — not the asset’s entire value\" — on screen at Scene 25's last beat (legacy 4-18's final line, two spans)",
+      "ok": true,
+      "detail": "words identical; first character difference at 41: master “ — not the asset’s entir” vs installed “—not the asset’s entire ”"
+    },
+    {
+      "name": "PROTECTED: \"Where does the next unredeemed claim go?\" is on screen at Scene 27 (legacy 4-21's question) and spoken at S27 b3 — mid-sentence, after \"Which means:\", so its first letter is lowercase in the spoken form",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "PROTECTED: \"Don’t trust. Verify.\" is on stage in none of the Act V sources — the passage's mention is spoken (the second on-stage use retired at R7.4)",
+      "ok": true,
+      "detail": "none"
+    },
+    {
+      "name": "RHYME: Scene 28's field reads its unit geometry from the same UnitField grammar P1's canvas field draws from (UNIT_GRAMMAR), and both components are untouched — recorded by blob id",
+      "ok": true,
+      "detail": "grammar 102 / 62 / 0.8235 / 0.7419 · P1 pitch 4.58 · UnitField 4af4ad9c · FixedSupplyField 89623ecd"
+    },
+    {
+      "name": "LANGUAGE: no Act V script names the medium, the live delivery or a section (the marker set aside)",
+      "ok": true,
+      "detail": "7 scripts clean"
+    },
+    {
+      "name": "LANGUAGE — THE CLOSE: Scene 30 names no medium, no sequel, no waypoint",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "LANGUAGE — THE CLOSE: the waypoint sentence the legacy spoke is the one the ledger cuts (it stands in the source, not the script)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "LANGUAGE: the frame pointers in the Act V scripts are reported for the presenter's eye (each points at a frame that stands in its scene, or at the table the passage names)",
+      "ok": true,
+      "detail": "S26: “that table” · S28: “this picture”"
+    }
+  ]
+}
