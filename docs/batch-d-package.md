@@ -35,7 +35,7 @@
 | S20 | `4-11` b1–b5 | 5 | **5** | — |
 | S21 | `4-12` b1–b5 | 5 | **5** | — |
 | S22 | `4-13` b1–b2 + `4-14` b1–b2 | 2 + 2 | **4** | seam 3 (three advances meant): the presenter's word pass merges two paragraphs → 3 |
-| S23 | `4-15` b1–b4 + `4-16` b1–b2 | 4 + 2 | **6** | Row 1 B changes the staging, not the count |
+| S23 | `4-15` b1–b4 + `4-16` b1–b2 | 4 + 2 | **6** | Row 1 **ruled A, 3 Sep 2026** (master §13) — the lineup ports whole; the count stands |
 
 ## 1.1 The adaptation ledger — the only edits, and every one of them
 
