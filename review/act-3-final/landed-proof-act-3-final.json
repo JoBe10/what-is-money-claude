@@ -1,0 +1,248 @@
+{
+  "date": "2026-09-03T02:43:45.553Z",
+  "session": "act-3-final",
+  "rule": "each of the 14 settled states the three Act III final rulings touch — S12 b1–b4, S14 b1–b3, S15 b1–b7 — mounted cold through the real engine at its deck position in the spliced 39-slide deck, is its approved cell at zero differing pixels (channel delta > 2/255 counts). Comparisons: scene↔archived cell, fresh cell↔archived cell, scene↔fresh cell. s15-b7 proves the relocation moved nothing but the beat; the un-re-rendered cells prove the rewiring moved nothing settled around the changes.",
+  "states": 14,
+  "passed": 14,
+  "results": [
+    {
+      "state": "we-already-split-those-jobs:0",
+      "cell": "s12-b1",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "we-already-split-those-jobs:1",
+      "cell": "s12-b2",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "we-already-split-those-jobs:2",
+      "cell": "s12-b3",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "we-already-split-those-jobs:3",
+      "cell": "s12-b4",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "the-coffee-objection:0",
+      "cell": "s14-b1",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "the-coffee-objection:1",
+      "cell": "s14-b2",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "the-coffee-objection:2",
+      "cell": "s14-b3",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "the-tower:0",
+      "cell": "s15-b1-a",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "the-tower:1",
+      "cell": "s15-b2-a",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "the-tower:2",
+      "cell": "s15-b3-a",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "the-tower:3",
+      "cell": "s15-b4-a",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "the-tower:4",
+      "cell": "s15-b5-a",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "the-tower:5",
+      "cell": "s15-b6-a",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "the-tower:6",
+      "cell": "s15-b7",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    }
+  ],
+  "consoleErrors": []
+}
