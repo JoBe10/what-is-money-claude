@@ -28,7 +28,7 @@
 
 | Scene | Legacy source(s) | Legacy `[→]`s | Beats | If a ruling changes the reading |
 |---|---|---|---|---|
-| S16 | the architecture's return line (canonical) + `4-04` b1–b4 + `4-06` b1–b4 | 1 + 4 + 4 (the return line shares b1 with 4-04's first beat) | **8** | Row 2 B (the 4-01 lens ported): +2 → 10 · Row 3 B (4-06 to S17): −4 → 4 |
+| S16 | the architecture's return line (canonical) + `4-04` b1–b4 + `4-06` b1–b4 | 1 + 4 + 4 (the return line shares b1 with 4-04's first beat) | **8** | Row 2 **ruled A, 3 Sep 2026** (the lens retired — no +2) · Row 3 B (4-06 to S17): −4 → 4 |
 | S17 | `4-07` b1–b5 | 5 | **5** | Row 3 B: +4 → 9 |
 | S18 | `4-08` b1–b3 + `4-09` b1–b5 | 3 + 5 | **8** | — |
 | S19 | `4-10` b1–b2 | 2 | **2** | — |
