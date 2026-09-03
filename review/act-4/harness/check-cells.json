@@ -1,6 +1,6 @@
 {
-  "date": "2026-09-03T13:13:27.082Z",
-  "session": "acts-3-4-final",
+  "date": "2026-09-03T22:56:29.311Z",
+  "session": "act-5-states",
   "limits": {
     "cornerMean": 6,
     "borderMean": 6
@@ -667,8 +667,8 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 88139,
-      "warmPixelsReported": 57319
+      "pxAbove32": 53687,
+      "warmPixelsReported": 29789
     },
     {
       "id": "s23-b6",
@@ -682,8 +682,8 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 90749,
-      "warmPixelsReported": 58610
+      "pxAbove32": 56297,
+      "warmPixelsReported": 31080
     }
   ],
   "checks": 27,

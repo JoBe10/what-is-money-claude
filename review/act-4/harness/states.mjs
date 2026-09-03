@@ -67,6 +67,15 @@
 // made at the source (legacy 4-16 and the table component), so the mount
 // carries it: s23-b5 and s23-b6 re-render as the updated approved states on
 // the ruling's authority; S23-F2 is ADAPT (18 PORT · 3 ADAPT).
+//
+// AMENDED AT ACT-5-STATES (the presenter's fit ruling, 4 Sep 2026, master
+// §13 — recorded before this file was touched): the band's fit, flagged at
+// the session above, is ruled — the ten score rows return to the legacy 60 px
+// pitch and the band shrinks to a 100 × 100 contain box (a ruled departure
+// from the rails law's 188 box for this surface). The change is at the source
+// again (legacy 4-16, the stylesheet); s23-b5 and s23-b6 re-render a second
+// time on that authority and are re-proven in the deck
+// (review/act-5/landed-proof-s23-band.json).
 
 import { ensureStage, destroyStage } from '/src/scenes/act-1-the-unfinished-exchange/_exchangeStage.js';
 import s404 from '/src/slides/section-4-ideal-store/04-unfinished-exchange.js';
@@ -442,18 +451,18 @@ cell('s23-b4', {
 
 cell('s23-b5', {
   scene: 'S23', beat: 5, frame: 'S23-F2', klass: 'ADAPT', review: 'approved-ruled',
-  source: '4-16-the-comparison, build 1 — all fifty scores on one advance (R7.4 §D.3) + AssetComparisonTable + DotRating + COMPARISON_ROWS (frozen); the header band at the source since the Acts III–IV final ruling 2 (3 Sep 2026)',
-  caption: 'Beat 5 · the table — THE COMPARISON in the quiet kicker register; the five candidates as renders in a band above the table at the rails-law band scale (gold, the fiat note, the coin, the house, and shares, bottom-aligned on one baseline, each over its own column); beneath it the grammar untouched — MONETARY ASSETS · PRODUCTIVE ASSETS, PROPERTY, the five labels, ten rows — and ALL FIFTY SCORES LANDING AT ONCE — the frozen data, blob-proven, walked in the spoken word. No total, no winner badge, no highlight. The closing line is not yet on the frame.',
-  ruling: 'RULED 3 September 2026 (the Act V kickoff brief, Part A §2, master §13): the table’s headers become renders — the five candidate glyphs retire, the renders ride as a header band above the table at lineup scale per the rails law, the drawn grammar beneath untouched; the group labels and the kicker stay as approved; the fifty-score landing is unchanged. S23-F2 is ADAPT. The change is at the source (legacy 4-16, the table component); this cell mounts the module and carries it. One thing this render adds, flagged in the report: at the rails-law box the band does not fit above the table with the closing line at its held position unless the table gives ground — the heading row shrinks to its label and the ten score rows tighten from 60 to 48, under one attribute on the slide root; the legacy pitch stays on file. The kicker-to-table stack is no longer tight — the band sits between them.',
+  source: '4-16-the-comparison, build 1 — all fifty scores on one advance (R7.4 §D.3) + AssetComparisonTable + DotRating + COMPARISON_ROWS (frozen); the header band at the source since the Acts III–IV final ruling 2 (3 Sep 2026), at its ruled 100 box and the legacy row pitch since the fit ruling (4 Sep 2026)',
+  caption: 'Beat 5 · the table — THE COMPARISON in the quiet kicker register; the five candidates as renders in a band above the table in the ruled 100 box (gold, the fiat note, the coin, the house, and shares, bottom-aligned on one baseline, each over its own column); beneath it the grammar untouched at its legacy pitch — MONETARY ASSETS · PRODUCTIVE ASSETS, PROPERTY, the five labels, ten rows — and ALL FIFTY SCORES LANDING AT ONCE — the frozen data, blob-proven, walked in the spoken word. No total, no winner badge, no highlight. The closing line is not yet on the frame.',
+  ruling: 'RULED 3 September 2026 (the Act V kickoff brief, Part A §2, master §13): the table’s headers become renders — the five candidate glyphs retire, the renders ride as a header band above the table at lineup scale per the rails law, the drawn grammar beneath untouched; the group labels and the kicker stay as approved; the fifty-score landing is unchanged. S23-F2 is ADAPT. The change is at the source (legacy 4-16, the table component); this cell mounts the module and carries it. The band’s fit, flagged at that session (at the rails-law box the band did not fit above the table with the closing line at its held position unless the ten score rows tightened to 48), was RULED 4 September 2026 (master §13): the score rows return to the legacy 60 px pitch — the scores keep their proven geometry — and the band shrinks to a 100 × 100 contain box, a ruled departure from the rails law’s 188 box for this one surface; the heading row stays at its label. This cell re-rendered again on that authority and is re-proven in the deck (review/act-5/landed-proof-s23-band.json). The kicker-to-table stack is no longer tight — the band sits between them. One thing to see at the viewing: at the 100 box the fiat note reads small, by the register’s own framing of that render.',
   expect: [['.s4-dot-rating[data-revealed="true"]', 50], ['.s4-comparison__final[data-visible="true"]', 0], ['.s4-comparison-table__property', 10],
     ['.s4-comparison__band .df[data-pending="false"]', 5], ['.s4-comparison-table__asset-heading .s4-comparison-asset__mark', 0], ['.s4-comparison-table__asset-heading .s4-comparison-asset__label', 5]]
 }, (st) => mount(st, s416, 1));
 
 cell('s23-b6', {
   scene: 'S23', beat: 6, frame: 'S23-F3', klass: 'PORT', review: 'approved-ruled',
-  source: '4-16-the-comparison, build 2 — the line; the header band at the source since the Acts III–IV final ruling 2 (3 Sep 2026)',
+  source: '4-16-the-comparison, build 2 — the line; the header band at the source since the Acts III–IV final ruling 2 (3 Sep 2026), at its ruled 100 box and the legacy row pitch since the fit ruling (4 Sep 2026)',
   caption: 'Beat 6 · the closing line: Don’t trust. Verify. — two spans, on stage exactly once in the film, beneath the fifty scores, the render band standing above the table. The scores are dated in the spoken word: my judgments, as of 2026; every one of them an invitation. The act ends on the turn to where monetary demand goes.',
-  ruling: 'RULED 3 September 2026 (the Act V kickoff brief, Part A §2, master §13): the table’s headers become renders — this cell re-renders on the ruling’s authority, the closing line at its held position (930) beneath the tightened table; the line itself is untouched (S23-F3 stays PORT). The flag this cell carried — the tight kicker-to-table stack, an accepted legacy fact — is overtaken by the band, which now sits between the kicker and the group labels.',
+  ruling: 'RULED 3 September 2026 (the Act V kickoff brief, Part A §2, master §13): the table’s headers become renders — this cell re-renders on the ruling’s authority, the closing line at its held position (930) beneath the table; the line itself is untouched (S23-F3 stays PORT). RULED AGAIN 4 September 2026 (the fit ruling, master §13): the table stands at its legacy 60 px pitch beneath the band’s 100 box, its last row ending at 911 under the line’s 930; this cell re-rendered a second time on that authority and is re-proven in the deck. The flag this cell carried — the tight kicker-to-table stack, an accepted legacy fact — is overtaken by the band, which now sits between the kicker and the group labels.',
   expect: [['.s4-comparison__final[data-visible="true"]', 1], ['.s4-dot-rating[data-revealed="true"]', 50],
     ['.s4-comparison__band .df[data-pending="false"]', 5], ['.s4-comparison-table__asset-heading .s4-comparison-asset__mark', 0]]
 }, (st) => mount(st, s416, 2));

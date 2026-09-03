@@ -55,6 +55,9 @@
 // brief, Part A §2): S23-F2 is ADAPT — the table's headers become a band of
 // renders above the table; s23-b5 and s23-b6 re-render on the ruling's
 // authority (approved-ruled, the ruling on the cell); 18 PORT · 3 ADAPT.
+// RE-CUT AT ACT-5-STATES (the fit ruling, 4 Sep 2026): the two table cells
+// re-rendered at the legacy 60 px pitch under the 100 band box; the checks
+// are unchanged.
 //
 // Usage: node check-cells.cjs [--port 5273]
 const { chromium } = require('playwright');
@@ -383,7 +386,7 @@ function check(name, ok, detail) {
 
   fs.writeFileSync(path.join(__dirname, 'check-cells.json'), JSON.stringify({
     date: new Date().toISOString(),
-    session: 'acts-3-4-final',
+    session: 'act-5-states',
     limits: { cornerMean: 6, borderMean: 6 },
     frozenBeatMap: { ...FROZEN, total: TOTAL_BEATS, cells: TOTAL_CELLS },
     portFrames: PORT_FRAMES,

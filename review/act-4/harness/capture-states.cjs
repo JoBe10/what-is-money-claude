@@ -31,6 +31,11 @@
 // table; s23-b5 and s23-b6 re-render on the ruling's authority (18 PORT ·
 // 3 ADAPT — S23-F2 ADAPT); the ruling is on the two cells.
 //
+// AMENDED AT ACT-5-STATES (the presenter's fit ruling, 4 Sep 2026, master
+// §13): the score rows return to the legacy 60 px pitch and the band shrinks
+// to a 100 box; the two table cells re-render a second time on that authority
+// (--only s23-b5,s23-b6) and are re-proven in the deck.
+//
 // Modes:
 //   (default)        capture every cell, then cut the record.
 //   --record-only    re-cut sheet.html + states.json from the meta, the
@@ -96,7 +101,8 @@ const BATCH_D_RULINGS = [
   'Scene 19 restages — beat 1 is the inverted framing alone, no carrier on stage; the carrier (the claim in its shell, on the stress stage) arrives at beat 2, timed to “let’s put a carrier on the bench and try to break it.” The change is made at the source (legacy 4-10 keys the carrier to build 2); S19-F1 is ADAPT; the two cells re-rendered',
   'Scene 22 merges its list beats — all ten properties land in one advance; the two paragraphs merge at zero word changes, one [→] removed; S22 = 3 beats, the act = 42; S22-F2 is ADAPT; the merged cell is the complete two-column list, the five-row cell leaves the record',
   'The sheet is presenter-approved in full — the remaining flagged cells approved as rendered (the entry seam with the whole fork at rest and no words on the frame; the definition at the legacy build-3 composition; beat 2’s frame held for the social claim; the disc’s re-centering as wiring; the coin photograph as ruled; the unmapped grid as the first sweep’s first movement; the empty table entering with the scores’ gesture); the table-kicker spacing recorded as an accepted legacy fact; the go-ahead given — the 42 cells are the approved set, the visual authority for every landed-state proof of the Batch D implementation',
-  'Acts III–IV final (the Act V kickoff brief, Part A §2, 3 Sep 2026, master §13): the table’s headers become renders — the five candidate glyphs retire and the renders ride as a header band above the table at lineup scale per the rails law, the drawn grammar beneath untouched; S23-F2 is ADAPT; s23-b5 and s23-b6 re-rendered on the ruling’s authority as the updated approved states; the band’s fit flagged in the report'
+  'Acts III–IV final (the Act V kickoff brief, Part A §2, 3 Sep 2026, master §13): the table’s headers become renders — the five candidate glyphs retire and the renders ride as a header band above the table at lineup scale per the rails law, the drawn grammar beneath untouched; S23-F2 is ADAPT; s23-b5 and s23-b6 re-rendered on the ruling’s authority as the updated approved states; the band’s fit flagged in the report',
+  'The fit at Scene 23 (the presenter’s ruling of 4 Sep 2026, master §13 — recorded by the act-5-states session before the source was touched): the ten score rows return to the legacy 60 px pitch and the header band shrinks to a 100 × 100 contain box, a ruled departure from the rails law’s 188 box for this surface; s23-b5 and s23-b6 re-rendered again as the updated approved states and re-proven in the deck (review/act-5/landed-proof-s23-band.json)'
 ];
 const APPROVAL = 'presenter-approved in full at the flipbook walk, 3 September 2026 (the Batch D implementation brief §1.3, master §13) — the 42 cells are the approved set; a settled state that is not its approved cell at zero pixels is a defect';
 
@@ -299,8 +305,8 @@ ${sceneSections}
 
   fs.writeFileSync(path.join(OUT, 'states.json'), JSON.stringify({
     date: new Date().toISOString(),
-    session: 'acts-3-4-final',
-    status: 'the approved set — presenter-approved in full at the flipbook walk, 3 September 2026; s23-b5 and s23-b6 the updated approved states under the Acts III–IV final ruling 2 of the same day',
+    session: 'act-5-states',
+    status: 'the approved set — presenter-approved in full at the flipbook walk, 3 September 2026; s23-b5 and s23-b6 the updated approved states under the Acts III–IV final ruling 2 of the same day, re-rendered again under the fit ruling of 4 September 2026 (the legacy 60 px pitch, the 100 band box)',
     approval: APPROVAL,
     approvedSet: ids,
     beatMap: { ...BEAT_MAP, total: TOTAL_BEATS },
