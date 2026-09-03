@@ -55,7 +55,9 @@ function lineEntry(stage, tl, at) {
 
 // The cut from Scene 12: the split world clears, and the empty line enters.
 function morphIn(mod, stage) {
-  stage.applyState('we-already-split-those-jobs', 3);
+  // S12's last state is its beat 3 since the Acts III–IV final ruling 1 (the
+  // household frame retired; the principle is build 2).
+  stage.applyState('we-already-split-those-jobs', 2);
   const tl = stage.timeline();
   tl.to(stage.splitLayer, { opacity: 0, duration: 0.55, ease: 'power1.inOut' }, 0.1);
   lineEntry(stage, tl, 0.7);
