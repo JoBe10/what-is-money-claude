@@ -1,11 +1,11 @@
 # Act V — The Provenance Map
 ## Every frame of Scenes 24–30, classified against the legacy Act V sources
 
-**Status: PROPOSED, 3 September 2026** — a proposal until the presenter rules it (`AGENTS.md` §4.9). This document classifies every frame of Act V against the legacy deck the way `docs/act-2-provenance.md`, `docs/act-3-provenance.md` and `docs/act-4-provenance.md` did: it names a legacy source for every PORT and ADAPT row, answers the staging question first (§0), and puts the ARGUABLE rows in plain English (§2) — the question stated simply, one full sentence per side, the default the states sheet renders if a row is unanswered at Session 2's launch. **Once ruled it governs all Act V work**, and every Act V session verifies a frame's class here before touching it.
+**Status: RULED, 4 September 2026** — proposed 3 September 2026; the six ARGUABLE rows answered A · A · A · A · A · A by the presenter and recorded in master §13 before the act-5-states session touched the sheet (`AGENTS.md` §4.9). This document classifies every frame of Act V against the legacy deck the way `docs/act-2-provenance.md`, `docs/act-3-provenance.md` and `docs/act-4-provenance.md` did: it names a legacy source for every PORT and ADAPT row, answers the staging question first (§0), and puts the ARGUABLE rows in plain English (§2) — the question stated simply, one full sentence per side, the default the states sheet renders if a row is unanswered at Session 2's launch. **Once ruled it governs all Act V work**, and every Act V session verifies a frame's class here before touching it.
 **Scope:** the frames of Scenes 24–30 as the frozen architecture merges them (`docs/synthesis-architecture.md`, Act V; the master's index §1.3, rows 24–30): migration; the monetary premium; when other assets do money's job, merged with does-not-replace-everything; the marginal decision; fixed supply reprices at the margin — the UnitField; the case from first principles; the close.
 **Classes:** **PORT** — a proven legacy treatment exists and is transplanted verbatim; redesign is forbidden and generating candidates is a process defect. **ADAPT** — a proven treatment with one ruled change, named here; only that change is made. **NEW** — no proven treatment exists; the full-coverage rule and the candidate process apply. **ARGUABLE** — the presenter's to rule; the two readings are written out in §2, and the table names the default.
 **Authority for the treatments:** the legacy `src/slides/section-4-ideal-store/17-…` through `23-…` and `src/slides/section-5-close/01-thank-you.js`, with `src/components/section-4/` and `src/components/UnitField.js` — the frozen, audited Section 4 case (master §13, 28 July 2026: *migration; the marginal decision; fixed-supply repricing; the case as the final frame*) in its R7-through-R7.4 staging, which the architecture's "what survives" list keeps whole: *UnitField · the comparison components and data (frozen) · every script whose scene survives (most of Acts IV–V verbatim)*.
-**Proposed:** 3 September 2026 (the Act V kickoff brief, Part B §1). **Ruled:** —.
+**Proposed:** 3 September 2026 (the Act V kickoff brief, Part B §1). **Ruled:** 4 September 2026 (master §13 — the six rows at A; the map governs all Act V work).
 
 ---
 
@@ -54,16 +54,16 @@ Act II taught the pipeline to answer this before building anything: *what stays 
 | **S28-F4** the repricing | **PORT** — *row 4 ruled A* | `4-22` build 3: PRICE DISCOVERED HERE; the repricing sweeps right to left across the whole stock (`--reprice-order`); *Marginal flows can reprice the entire stock.* Serves S28 b3 |
 | **S29-F1** the kicker and the four summary lines | **PORT** (frozen) | `4-23-investment-case-from-first-principles` build 1: THE CASE FOR BITCOIN — FROM FIRST PRINCIPLES in the retired header treatment (frozen by design, R7.1 A2); the four summary lines as one gesture. Serves S29 b1 |
 | **S29-F2** the conclusion — the frozen final frame | **PORT** (frozen) | `4-23` build 2: the summary clears; *Bitcoin does not need to replace everything. / It only needs to become the **preferred place** / to store the **next unit of value**.* — the case as the final frame (master §13, 28 Jul 2026). Serves S29 b2; the rules line enters the spoken beat through the ledger |
-| **S30-F1** silence — black | **ADAPT** — *ARGUABLE row 6 on the beat* | `5-01-thank-you` build 0: black. **The one ruled change (architecture Ruling 1, the what-dies list):** the wayline build — the method line returning with all three waypoints completed, the warmth pulse — is retired, so nothing stands between the case and the close but silence; the callback is spoken over it. Serves S30 b1 at the default |
+| **S30-F1** silence — black | **ADAPT** — *row 6 ruled A, 4 Sep 2026* | `5-01-thank-you` build 0: black. **The one ruled change (architecture Ruling 1, the what-dies list):** the wayline build — the method line returning with all three waypoints completed, the warmth pulse — is retired, so nothing stands between the case and the close but silence; the callback is spoken over it. Serves S30 b1 |
 | **S30-F2** Thank you. | **PORT** | `5-01` build 2: one line of typography on black, no second line, no watermark, no kicker, no chrome — the frame retained exactly. Serves S30 b2 |
 
-**Proposed: 22 PORT · 1 ADAPT · 0 NEW · 1 retired — with six ARGUABLE questions (§2), each stated with its default, none of them opening a NEW frame at the default.** Act V designs nothing and carries no candidates: the case comes home in its proven treatments, and the act's one visual continuity — the claim's last journey, from the five paths to the field — is wiring the states sheet renders and flags.
+**Proposed: 22 PORT · 1 ADAPT · 0 NEW · 1 retired — with six ARGUABLE questions (§2), each stated with its default, none of them opening a NEW frame at the default. RULED 4 September 2026 (master §13): the six questions answered A · A · A · A · A · A at their defaults — 22 PORT · 1 ADAPT · 0 NEW · 1 retired stands; the beat maps are frozen at 27.** Act V designs nothing and carries no candidates: the case comes home in its proven treatments, and the act's one visual continuity — the claim's last journey, from the five paths to the field — is wiring the states sheet renders and flags.
 
 ---
 
 # 2. The ARGUABLE rows — the two sides, in plain English
 
-Each row states the question, then the two readings in full sentences, then the default the states sheet renders if the row is unanswered at Session 2's launch (the kickoff brief's rule: *defaults flagged if absent*). One word per row closes it.
+Each row states the question, then the two readings in full sentences, then the default the states sheet renders if the row is unanswered at Session 2's launch (the kickoff brief's rule: *defaults flagged if absent*). One word per row closes it. **All six were closed at A by the presenter on 4 September 2026 (master §13), before the states sheet was built.**
 
 ## Row 1 — Do the three entry lines become beats?
 
@@ -128,6 +128,8 @@ The architecture's Scene 30: *"Silence, then the callback … Thank you. No wayp
 - **Reading B — the callback is spoken over the case's frozen frame.** Scene 30 is one beat: *Thank you.* alone. The case would stay on screen while the callback runs, and the black between the argument and the close would disappear.
 
 **The default is A.** Whether *Thank you.* is spoken, or only shown as the master's *silent* suggests, is one word in the presenter's pass; the package installs the legacy words as written.
+
+**RULED A, 4 September 2026 (master §13).** The silence is its own beat; S30 = 2; S30-F1 stays ADAPT (the wayline retired), S30-F2 PORT. With this row the map is RULED.
 
 ---
 
