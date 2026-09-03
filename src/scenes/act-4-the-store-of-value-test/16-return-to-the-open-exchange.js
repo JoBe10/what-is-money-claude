@@ -16,8 +16,9 @@
 //
 // WHAT THIS SESSION AUTHORS, AND FLAGS: the entry — the one authored morph
 // the brief names — is the Scene 4 frame reconstructing around the disc
-// Scene 15 leaves at the triad's center, composed from the Act I stage's own
-// vocabulary (Scene 3 → 4's rise to the apex, Scene 4's own road draw-on and
+// that appears where Scene 15 leaves its glowing base slab (the Acts III–IV
+// final ruling 3, 3 Sep 2026, master §13 — the act exits on the tower, no
+// return to the triad), composed from the Act I stage's own vocabulary (Scene 3 → 4's rise to the apex, Scene 4's own road draw-on and
 // its b4 travel to rest, the continuation drawing on); at the splice the
 // engine's crossfade from Scene 15 carries it, exactly as S10 → S11 did.
 // The two travels between the legacy frames (b1 → b2 to the apex; b4 → b5 to
@@ -32,11 +33,14 @@ import { ACT1_GEOM as G, hideInstantly, legacyAdvance } from './_testStage.js';
 
 const ID = 'return-to-the-open-exchange';
 
-// Where Scene 15 leaves the disc: the triad's center — the legacy token's own
-// place (`.s3f-functions__token` top 400, the 120px small token, centred at
-// x 960). The homecoming begins there and the engine's crossfade dissolves
-// the one disc into the other.
-const TRIAD_DISC = [960, 400, 120];
+// Where Scene 15 leaves the frame: the tower's glowing base slab — candidate
+// A's BASE MONEY slab at left 830, top 498, 260 × 60, centred at (960, 528)
+// — with the hinge question beneath it (the Acts III–IV final ruling 3). The
+// homecoming begins there: the disc appears at the slab's center at its Act
+// III size (the 120px small token) and rises to the fork's apex, while the
+// engine's crossfade dissolves the slab into the disc — the base becoming
+// the claim. The start point and size are wiring, flagged in the report.
+const SLAB_DISC = [960, 528, 120];
 
 // The save road's corners, apex → rest — Scene 4's own polyline, verbatim
 // (04-spend-or-save.js RIGHT_WAY); the claim rides a road's own geometry.
@@ -59,7 +63,7 @@ function travel(a, tl, atTime, way, durs, eases) {
 
 // Cold entry, and the language of the seam from Act III's exit question: the
 // Scene 4 frame reconstructs around the disc. The disc finds its light where
-// the triad left it, rises to the fork's apex and takes its Act I size, the
+// the base slab stood, rises to the fork's apex and takes its Act I size, the
 // two roads draw out of it at the saved frame's own voices — the spend road
 // already told and subdued, the save road at its voice — and the claim takes
 // the save road and comes to rest on it, the terminal dissolved, the road
@@ -67,11 +71,11 @@ function travel(a, tl, atTime, way, durs, eases) {
 function entry(mod, stage) {
   const a = stage.act1;
   // The launch point, set synchronously: the approved frame, then everything
-  // but the disc off stage and the disc where Scene 15 left it.
+  // but the disc off stage and the disc where Scene 15 left its base slab.
   stage.applyState(ID, 0);
   [a.roadL, a.roadR, a.roadDotL, a.roadDotR].forEach((el) => el.setAttribute('opacity', '0'));
   a.setFade(a.fade, null);
-  a.setMark(TRIAD_DISC[0], TRIAD_DISC[1], TRIAD_DISC[2], 0);
+  a.setMark(SLAB_DISC[0], SLAB_DISC[1], SLAB_DISC[2], 0);
 
   const tl = stage.timeline();
   tl.to(a.markWrap, { opacity: 1, duration: 0.7, ease: 'power1.out' }, 0.05);
@@ -79,7 +83,7 @@ function entry(mod, stage) {
     left: `${G.markForkB[0]}px`, top: `${G.markForkB[1]}px`,
     duration: 1.0, ease: 'power2.inOut'
   }, 0.55);
-  const size = { s: TRIAD_DISC[2] };
+  const size = { s: SLAB_DISC[2] };
   tl.to(size, {
     s: G.markForkB[2], duration: 1.0, ease: 'power2.inOut',
     onUpdate: () => a.markDisc.style.setProperty('--disc-size', `${size.s}px`)
