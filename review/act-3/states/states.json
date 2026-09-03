@@ -1,17 +1,35 @@
 {
-  "date": "2026-09-02T12:42:50.429Z",
-  "session": "batch-c-r2",
+  "date": "2026-09-03T02:37:14.762Z",
+  "session": "act-3-final",
   "beatMap": {
     "S11": 5,
     "S12": 4,
     "S13": 7,
-    "S14": 4,
-    "S15": 6,
+    "S14": 3,
+    "S15": 7,
     "total": 26
   },
   "cellCount": 32,
-  "beatMapAuthority": "docs/batch-c-package.md §1 — frozen 2 September 2026, amended the same day by Batch C r2 ruling 3 (S13 = 7, master §13)",
-  "provenanceAuthority": "docs/act-3-provenance.md as amended — 1 PORT (S12) · 3 ADAPT (S11, S13, S14) · S15 NEW closed by the candidate-A selection",
+  "beatMapAuthority": "docs/batch-c-package.md §1 — frozen 2 September 2026, amended the same day by Batch C r2 ruling 3 (S13 = 7, master §13) and on 3 September 2026 by the Act III final ruling 3 (S14 = 3, S15 = 7, master §13)",
+  "provenanceAuthority": "docs/act-3-provenance.md as amended 3 September 2026 — 0 PORT · 4 ADAPT (S11, S12, S13, S14) · S15 NEW closed by the candidate-A selection; the pivot coda at S15 b7 is S11-F1’s return",
+  "act3Final": {
+    "date": "3 September 2026",
+    "authority": "the Act IV kickoff brief, Part A (master §13, the three Act III final rulings — recorded before the pipeline was touched)",
+    "rulings": [
+      "the renders replace the words (1): the Argentina columns carry the header, then the render(s), nothing else — the USD / ARS codes and the dollars / pesos words retire; s12-b3 and s12-b4 re-rendered; S12-F1 PORT → ADAPT",
+      "the contradiction fixed (2): s14-b2’s landed line is the ruled wording — “A monetary good is trusted to hold value before it is used to pay.”; s14-b2 re-rendered",
+      "the pivot relocates (3): S14 = 3, S15 = 7 — the approved s14-b4 composition carries its bytes into s15-b7, the act’s final beat after the tower’s held question; the act leaves on the question"
+    ],
+    "relocated": [
+      {
+        "was": "s14-b4",
+        "now": "s15-b7",
+        "bytes": "carried",
+        "reason": "the pivot relocates to the act’s exit — the Act III final ruling 3, 3 Sep 2026, master §13"
+      }
+    ],
+    "gate": "the presenter’s re-walk of Scenes 11–15 in the deck"
+  },
   "approval": {
     "date": "2 September 2026",
     "authority": "the Batch C implementation brief §1 (master §13, the three rulings)",
@@ -52,13 +70,13 @@
     "s14-b1",
     "s14-b2",
     "s14-b3",
-    "s14-b4",
     "s15-b1-a",
     "s15-b2-a",
     "s15-b3-a",
     "s15-b4-a",
     "s15-b5-a",
-    "s15-b6-a"
+    "s15-b6-a",
+    "s15-b7"
   ],
   "discCells": [
     "s11-b1",
@@ -66,9 +84,19 @@
     "s11-b3",
     "s11-b4",
     "s11-b5",
-    "s14-b4"
+    "s15-b7"
   ],
-  "carried": [],
+  "carried": [
+    "s15-b7"
+  ],
+  "relocated": [
+    {
+      "was": "s14-b4",
+      "now": "s15-b7",
+      "bytes": "carried",
+      "reason": "the pivot relocates to the act’s exit — the Act III final ruling 3, 3 Sep 2026, master §13"
+    }
+  ],
   "retired": [
     {
       "file": "s12-b3-block.png",
@@ -143,7 +171,7 @@
     },
     {
       "id": "s12-b3",
-      "flag": "Your ruling names the objects and the band scale but not the band’s elevation or the pair’s gap. Directly above the codes the heads and the kicker stand in the way at 188, so the objects ride the columns’ clear sky on one shared baseline — box bottoms 64px above the heads’ top, the saved pair at the marks row’s own 26px gap. The real-estate render is square, so its box fills the band’s full height and its top edge runs 16px above the title-safe line; one number (the baseline, or a smaller cap) re-places everything.",
+      "flag": "Your ruling names the order — the header, then the render(s) — but not the band’s baseline. The renders stand in the slot the text rows vacated, bottom-aligned on one shared band baseline at the slot’s bottom (cell-relative 188, absolute 684): the square house fills the band’s full height from 496, the notes bottom-align beside it, the saved pair at the marks row’s own 26px gap, the principle eighty pixels beneath. One number (the baseline, or a smaller cap for the pair) re-places everything.",
       "status": "closed by the approval of 2 September 2026"
     },
     {
@@ -173,17 +201,12 @@
     },
     {
       "id": "s14-b2",
-      "flag": "Placing the coffee render at the medium stage’s berth is this sheet’s honest reading of “put that objection on the ladder” — one word retires it. The landing line is distilled from the installed script; your word pass owns it. (Stands from r1.)",
+      "flag": "Placing the coffee render at the medium stage’s berth is this sheet’s honest reading of “put that objection on the ladder” — one word retires it. (Stands from r1; the landing line is now your ruled wording, verbatim.)",
       "status": "closed by the approval of 2 September 2026"
     },
     {
       "id": "s14-b3",
       "flag": "The berth carries the coin render at the visitor cap (132 against the band’s 188) so the climber reads as a climber, not a fifth station. The landing line is distilled from the installed script. (Stands from r1.)",
-      "status": "closed by the approval of 2 September 2026"
-    },
-    {
-      "id": "s14-b4",
-      "flag": "The brief’s re-render list names S14 b2–b3 only, but ruling 1 says the disc lives at the triad’s center wherever the home base appears — and this beat is the home base returning whole. The sheet re-rendered it under rulings 1 and 3 rather than carry a footprint that contradicts the ruling; the r1 cell is in the history if you wanted it untouched.",
       "status": "closed by the approval of 2 September 2026"
     },
     {
@@ -262,9 +285,9 @@
       "scene": "S12",
       "beat": 1,
       "frame": "S12-F1",
-      "klass": "PORT",
+      "klass": "ADAPT",
       "review": "approved",
-      "source": "3-02-the-functions-separate, build 1 — the three heads land empty, ON CLEAN BLACK (r2 ruling 1)",
+      "source": "3-02-the-functions-separate, build 1 — the three heads land empty, ON CLEAN BLACK (r2 ruling 1); the frame is ADAPT since the Act III final ruling 1, the change landing at b3",
       "caption": "Beat 1 · the clean handoff, as you ruled it: the triad completes its recede before the heads land, and the three column heads stand empty on clean black — PRICED IN · PAID IN · SAVED IN, the jobs re-stated as columns, no element of the home frame beneath them. This is the legacy slide’s own build 1; the r2 staging that held the receded triad under the heads is superseded, and the cell leaves the disc-cell record."
     },
     {
@@ -273,9 +296,9 @@
       "scene": "S12",
       "beat": 2,
       "frame": "S12-F1",
-      "klass": "PORT",
+      "klass": "ADAPT",
       "review": "approved",
-      "source": "the installed household beat through 3-02’s column treatment",
+      "source": "the installed household beat through 3-02’s column treatment (untouched by the Act III final ruling 1 — the household row carries no render and is not named)",
       "caption": "Beat 2 · the household beat: you may already live the split. The columns fill in the legacy’s own word register — one money · the same money · property · shares · gold.",
       "flag": "The household row’s on-screen words are drafted from the installed script (paid in one money, your home priced in it, savings in property, shares, gold) — the legacy columns only ever carried Argentina. Your word pass owns the final copy; the treatment is the legacy’s."
     },
@@ -285,11 +308,11 @@
       "scene": "S12",
       "beat": 3,
       "frame": "S12-F1",
-      "klass": "PORT",
+      "klass": "ADAPT",
       "review": "approved",
-      "source": "3-02-the-functions-separate, build 2 + r2 ruling 2 — the columns carry their objects",
-      "caption": "Beat 3 · Argentina lands the legacy way, and the columns carry their objects as you ruled it: the row arrives in the columns — the folded dollar over the USD code, the folded peso note over ARS, and the dollar with the register’s real-estate render over the saved column — under the legacy kicker, “Argentina, five decades.”, at full voice. The brick glyph is retired to file, superseded by the render; the five-decade span and the every-stripe clause ride the spoken beat.",
-      "flag": "Your ruling names the objects and the band scale but not the band’s elevation or the pair’s gap. Directly above the codes the heads and the kicker stand in the way at 188, so the objects ride the columns’ clear sky on one shared baseline — box bottoms 64px above the heads’ top, the saved pair at the marks row’s own 26px gap. The real-estate render is square, so its box fills the band’s full height and its top edge runs 16px above the title-safe line; one number (the baseline, or a smaller cap) re-places everything."
+      "source": "3-02-the-functions-separate, build 2 + r2 ruling 2 + the Act III final ruling 1 — the renders replace the words",
+      "caption": "Beat 3 · Argentina lands the legacy way, and the columns carry their objects as you ruled it — the renders replacing the words: under PRICED IN the folded dollar; under PAID IN the folded peso note; under SAVED IN the dollar with the register’s real-estate render — each column the header, then the render(s), nothing else. The USD / ARS codes and the dollars / pesos words are retired; “Argentina, five decades.” stands under the heads at full voice; the five-decade span and the every-stripe clause ride the spoken beat.",
+      "flag": "Your ruling names the order — the header, then the render(s) — but not the band’s baseline. The renders stand in the slot the text rows vacated, bottom-aligned on one shared band baseline at the slot’s bottom (cell-relative 188, absolute 684): the square house fills the band’s full height from 496, the notes bottom-align beside it, the saved pair at the marks row’s own 26px gap, the principle eighty pixels beneath. One number (the baseline, or a smaller cap for the pair) re-places everything."
     },
     {
       "id": "s12-b4",
@@ -297,10 +320,10 @@
       "scene": "S12",
       "beat": 4,
       "frame": "S12-F1",
-      "klass": "PORT",
+      "klass": "ADAPT",
       "review": "approved",
-      "source": "3-02-the-functions-separate, build 3 — the principle, over the object-bearing columns",
-      "caption": "Beat 4 · the principle lands at full voice in the legacy’s own slot, over the standing Argentina row — its objects above the codes — and its kicker: the legacy slide’s own final state, carrying the ruled objects.",
+      "source": "3-02-the-functions-separate, build 3 + the Act III final ruling 1 — the principle, over the render-bearing columns",
+      "caption": "Beat 4 · the principle lands at full voice in the legacy’s own slot, over the standing Argentina columns — the renders under the heads, no text rows — and the kicker: the legacy slide’s own final state, carrying the ruled objects in place of the words.",
       "flag": "The principle reads “jobs” where the legacy read “functions,” following the installed script and the act’s titles — one word, twice, flagged for your word pass as in r1."
     },
     {
@@ -404,8 +427,8 @@
       "klass": "ADAPT",
       "review": "approved",
       "source": "3-07-where-bitcoin-is, build 1 (the ladder returns resolved) + r2 ruling 3",
-      "caption": "Beat 2 · the objection goes on the ladder you just built: the ladder returns in 3-07’s own resolved state — every stage standing under its neutral mark, every threshold lit — with the coffee cup placed at the MEDIUM OF EXCHANGE berth, above the hand-off, and the beat’s line beneath: “A monetary good reaches everyday payments last.”",
-      "flag": "Placing the coffee render at the medium stage’s berth is this sheet’s honest reading of “put that objection on the ladder” — one word retires it. The landing line is distilled from the installed script; your word pass owns it. (Stands from r1.)"
+      "caption": "Beat 2 · the objection goes on the ladder you just built: the ladder returns in 3-07’s own resolved state — every stage standing under its neutral mark, every threshold lit — with the coffee cup placed at the MEDIUM OF EXCHANGE berth, above the hand-off, and the beat’s line beneath in your ruled wording (the Act III final ruling 2, 3 Sep 2026 — the contradiction fixed): “A monetary good is trusted to hold value before it is used to pay.”",
+      "flag": "Placing the coffee render at the medium stage’s berth is this sheet’s honest reading of “put that objection on the ladder” — one word retires it. (Stands from r1; the landing line is now your ruled wording, verbatim.)"
     },
     {
       "id": "s14-b3",
@@ -418,18 +441,6 @@
       "source": "3-07-where-bitcoin-is, builds 2–3 (the entity berth at store of value) + r2 ruling 3",
       "caption": "Beat 3 · the placement — the scene’s payoff, now protected by your ruling: bitcoin’s coin stands at the entity berth above STORE OF VALUE, stage two of the ladder, THE ONLY MONETARY OBJECT IN SIGHT — the neutral marks beneath it are a crystal, an hourglass, a hand-off, a scale, so the coin’s landing has the frame to itself. The coffee recedes at its berth, answered. The line: “Held on purpose, across years — one job: store of value.”",
       "flag": "The berth carries the coin render at the visitor cap (132 against the band’s 188) so the climber reads as a climber, not a fifth station. The landing line is distilled from the installed script. (Stands from r1.)"
-    },
-    {
-      "id": "s14-b4",
-      "file": "s14-b4.png",
-      "scene": "S14",
-      "beat": 4,
-      "frame": "S11-F1",
-      "klass": "ADAPT",
-      "review": "approved",
-      "source": "3-01’s triad (the home base returning) + r2 rulings 1 and 3 + the architecture’s own Scene 14 closing question",
-      "caption": "Beat 4 · the pivot: the triad returns whole — the disc at its center, the job objects at its spokes — STORE OF VALUE at full voice while the other two jobs recede, and the act’s hinge question lands in the home frame’s own statement slot: “What makes something a good store of value?” This is also the door into the tower: Scene 15 enters through this corner.",
-      "flag": "The brief’s re-render list names S14 b2–b3 only, but ruling 1 says the disc lives at the triad’s center wherever the home base appears — and this beat is the home base returning whole. The sheet re-rendered it under rulings 1 and 3 rather than carry a footprint that contradicts the ruling; the r1 cell is in the history if you wanted it untouched."
     },
     {
       "id": "s15-b1-a",
@@ -502,7 +513,19 @@
       "review": "approved",
       "system": "A",
       "source": "r2 ruling 4, candidate A — the proportional inverted tower (your spec) + 3-06’s own held-question beat",
-      "caption": "A · Beat 6 · the held question, as 3-06 always played it: every line of copy off stage, and the bottom-most claim line — the legacy drop drawing itself — reaching from the solid base into empty black and dissolving, pointing at nothing. No disc, per ruling 1: the question is spoken and held, and Scene 16 opens through it."
+      "caption": "A · Beat 6 · the held question, as 3-06 always played it: every line of copy off stage, and the bottom-most claim line — the legacy drop drawing itself — reaching from the solid base into empty black and dissolving, pointing at nothing. No disc, per ruling 1: the question is spoken and held — and since the Act III final ruling 3 the pivot coda follows it as the act’s last beat."
+    },
+    {
+      "id": "s15-b7",
+      "file": "s15-b7.png",
+      "scene": "S15",
+      "beat": 7,
+      "frame": "S11-F1",
+      "klass": "ADAPT",
+      "review": "approved",
+      "carried": true,
+      "source": "3-01’s triad (the home base returning) + r2 rulings 1 and 3 + the Act III final ruling 3 — the pivot coda, relocated from S14 b4 with its bytes carried",
+      "caption": "Beat 7 · the pivot coda — the act’s final beat, relocated here from Scene 14’s close as you ruled it: after the held question the tower gives the frame back to the home base, whole — the disc at its center, the job objects at its spokes — STORE OF VALUE at full voice while the other two jobs recede, and the question lands in the home frame’s own statement slot: “What makes something a good store of value?” The act leaves on the question, and Scene 16 opens from here. The composition is the approved s14-b4 cell, its bytes carried."
     },
     {
       "id": "s15-b1-b",

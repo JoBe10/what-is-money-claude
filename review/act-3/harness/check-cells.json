@@ -1,6 +1,6 @@
 {
-  "date": "2026-09-02T12:43:59.386Z",
-  "session": "batch-c-r2",
+  "date": "2026-09-03T02:37:19.951Z",
+  "session": "act-3-final",
   "limits": {
     "cornerMean": 6,
     "borderMean": 6
@@ -9,21 +9,22 @@
     "S11": 5,
     "S12": 4,
     "S13": 7,
-    "S14": 4,
-    "S15": 6,
+    "S14": 3,
+    "S15": 7,
     "total": 26,
     "cells": 32
   },
   "ruledClasses": {
     "S11-F1": "ADAPT",
-    "S12-F1": "PORT",
+    "S12-F1": "ADAPT",
     "S13-F1": "ADAPT",
     "S14-F1": "ADAPT",
     "S15-F1": "NEW",
     "S15-F2": "NEW"
   },
   "carriedSha": {
-    "s14-b1-study.png": "e7cc6fff9a1142573f5a30878505e8625f1c57ca1cac1b95f881167458821081"
+    "s14-b1-study.png": "e7cc6fff9a1142573f5a30878505e8625f1c57ca1cac1b95f881167458821081",
+    "s15-b7.png": "8e69451b67206dda1f56e54543a5e088290a08e6c692e701baf12ee44ee6538d"
   },
   "retiredFiles": [
     "s12-b3-block.png",
@@ -155,8 +156,8 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 243.6,
-      "pxAbove32": 33029,
-      "warmPixelsReported": 20538
+      "pxAbove32": 27380,
+      "warmPixelsReported": 19473
     },
     {
       "id": "s12-b4",
@@ -170,8 +171,8 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 45672,
-      "warmPixelsReported": 23121
+      "pxAbove32": 40023,
+      "warmPixelsReported": 22056
     },
     {
       "id": "s13-b1",
@@ -305,8 +306,8 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 42828,
-      "warmPixelsReported": 16523
+      "pxAbove32": 45734,
+      "warmPixelsReported": 16919
     },
     {
       "id": "s14-b3",
@@ -322,21 +323,6 @@
       "maxLum": 255,
       "pxAbove32": 46601,
       "warmPixelsReported": 19980
-    },
-    {
-      "id": "s14-b4",
-      "pass": true,
-      "checks": {
-        "corner": true,
-        "border": true,
-        "content": true,
-        "size": true
-      },
-      "cornerMean": 0,
-      "borderMean": 0,
-      "maxLum": 255,
-      "pxAbove32": 46441,
-      "warmPixelsReported": 9174
     },
     {
       "id": "s15-b1-a",
@@ -429,6 +415,21 @@
       "warmPixelsReported": 7114
     },
     {
+      "id": "s15-b7",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 46441,
+      "warmPixelsReported": 9174
+    },
+    {
       "id": "s15-b1-b",
       "pass": true,
       "checks": {
@@ -519,7 +520,7 @@
       "warmPixelsReported": 513
     }
   ],
-  "checks": 23,
+  "checks": 26,
   "failures": 0,
   "results": [
     {
@@ -553,6 +554,16 @@
       "detail": "recorded"
     },
     {
+      "name": "MAP: the pivot coda is recorded at S15 b7 as S11-F1’s return (the Act III final ruling 3)",
+      "ok": true,
+      "detail": "recorded"
+    },
+    {
+      "name": "MAP: S12-F1’s reclassification is recorded with its one change (the Act III final ruling 1)",
+      "ok": true,
+      "detail": "recorded"
+    },
+    {
       "name": "MAP: every cell’s class is the class the map rules for its frame",
       "ok": true,
       "detail": "every framed cell agrees with the map"
@@ -570,7 +581,7 @@
     {
       "name": "BEATS: the approved set covers every beat of the frozen map exactly once — Act III is 26",
       "ok": true,
-      "detail": "S11 5 · S12 4 · S13 7 · S14 4 · S15 6 = 26 approved beats"
+      "detail": "S11 5 · S12 4 · S13 7 · S14 3 · S15 7 = 26 approved beats"
     },
     {
       "name": "SELECTION: the six candidate-A cells are the approved S15 states, and the six B cells are on file",
@@ -580,12 +591,17 @@
     {
       "name": "SELECTION: no cell outside Scene 15 carries a candidate system",
       "ok": true,
-      "detail": "20 non-S15 cells clean"
+      "detail": "19 non-S15 cells clean"
     },
     {
       "name": "SELECTION: the only review classes on the record are approved and on-file (the go-ahead is given)",
       "ok": true,
       "detail": "approved · on-file"
+    },
+    {
+      "name": "PIVOT: s15-b7 is the act’s final beat — S11-F1’s return, no candidate system, approved, its bytes carried — and s14-b4 has left the sheet",
+      "ok": true,
+      "detail": "coda true · s14-b4 gone true"
     },
     {
       "name": "THREAD: the disc (the legacy token) is built exactly once, inside the triad hub — and ClaimObject appears nowhere",
@@ -623,9 +639,9 @@
       "detail": "bitcoin at the sov berth only, never a stage mark"
     },
     {
-      "name": "CARRIED-INTO-RETIREMENT: s14-b1-study.png carries the r1 study’s exact bytes (sha256 proven — r2 ruling 4)",
+      "name": "CARRIED: s14-b1-study.png carries the r1 study’s exact bytes (r2 ruling 4) and s15-b7.png carries the approved s14-b4’s exact bytes (the Act III final ruling 3) — sha256 proven",
       "ok": true,
-      "detail": "e7cc6fff… matches"
+      "detail": "e7cc6fff… and 8e69451b… match"
     },
     {
       "name": "RETIRED: states.json records the r2 retirements (the study, the pair staging)",

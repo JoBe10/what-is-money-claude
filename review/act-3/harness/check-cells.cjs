@@ -36,6 +36,12 @@
 //   carries the r1 cell's exact bytes into retirement, proven against the
 //   recorded sha256, and every retired staging is on file under its name.
 //
+// AMENDED AT ACT III FINAL (master §13, 3 Sep 2026 — three rulings): the
+// map is S14 = 3 · S15 = 7 (ruling 3); S12-F1 is ADAPT (ruling 1); the
+// relocated pivot s15-b7 carries the approved s14-b4's exact bytes (proven
+// against the recorded sha256), carries no candidate system, is S11-F1's
+// return, and s14-b4 itself is gone from the sheet (relocated, not retired).
+//
 // Usage: node check-cells.cjs [--port 5273]
 const { chromium } = require('playwright');
 const crypto = require('crypto');
@@ -48,28 +54,32 @@ const PORT = flag('--port', '5273');
 const REPO = path.join(__dirname, '..', '..', '..');
 const OUT = path.join(__dirname, '..', 'states');
 
-// The map as amended by Batch C r2 ruling 3 (master §13, 2 Sep 2026): S13 = 7.
-const FROZEN = { S11: 5, S12: 4, S13: 7, S14: 4, S15: 6 };
+// The map as amended by Batch C r2 ruling 3 (master §13, 2 Sep 2026): S13 = 7;
+// and by the Act III final ruling 3 (master §13, 3 Sep 2026): S14 = 3, S15 = 7.
+const FROZEN = { S11: 5, S12: 4, S13: 7, S14: 3, S15: 7 };
 const TOTAL_BEATS = 26;
 const TOTAL_CELLS = 32;
 
-// The ruled map as amended 2 September 2026 (the r2 rulings), transcribed.
-// The MAP AGREEMENT check compares this against docs/act-3-provenance.md
-// itself as well as against the cells, so a transcription drift here fails
-// rather than passes quietly.
+// The ruled map as amended 3 September 2026 (the Act III final rulings),
+// transcribed. The MAP AGREEMENT check compares this against
+// docs/act-3-provenance.md itself as well as against the cells, so a
+// transcription drift here fails rather than passes quietly.
 const RULED = {
   'S11-F1': 'ADAPT',
-  'S12-F1': 'PORT',
+  'S12-F1': 'ADAPT',
   'S13-F1': 'ADAPT',
   'S14-F1': 'ADAPT',
   'S15-F1': 'NEW',
   'S15-F2': 'NEW'
 };
 
-// The retired study's r1 bytes (r2 ruling 4 — the fold): the cell that was
-// carried byte-identical from r1 carries those same bytes into retirement.
+// Carried bytes, proven by sha256: the retired study (r2 ruling 4 — the
+// fold) carries the r1 cell's exact bytes into retirement; the relocated
+// pivot (the Act III final ruling 3) carries the approved s14-b4's exact
+// bytes into s15-b7.
 const CARRIED_SHA = {
-  's14-b1-study.png': 'e7cc6fff9a1142573f5a30878505e8625f1c57ca1cac1b95f881167458821081'
+  's14-b1-study.png': 'e7cc6fff9a1142573f5a30878505e8625f1c57ca1cac1b95f881167458821081',
+  's15-b7.png': '8e69451b67206dda1f56e54543a5e088290a08e6c692e701baf12ee44ee6538d'
 };
 
 // The retired stagings, on file under the aesthetic law.
@@ -184,6 +194,14 @@ function check(name, ok, detail) {
     check('MAP: the candidate-A selection is recorded on the S15 row (Batch C ruling 1)',
       selected, selected ? 'recorded' : 'MISSING');
 
+    const relocated = /S15 b7[^|]*the pivot coda|pivot coda[^|]*S15 b7/.test(map);
+    check('MAP: the pivot coda is recorded at S15 b7 as S11-F1’s return (the Act III final ruling 3)',
+      relocated, relocated ? 'recorded' : 'MISSING');
+
+    const s12Adapt = /Reclassified PORT → ADAPT, 3 Sep 2026/.test(map);
+    check('MAP: S12-F1’s reclassification is recorded with its one change (the Act III final ruling 1)',
+      s12Adapt, s12Adapt ? 'recorded' : 'MISSING');
+
     const bad = cells
       .filter((c) => c.frame && RULED[c.frame])
       .filter((c) => c.klass !== RULED[c.frame])
@@ -240,6 +258,16 @@ function check(name, ok, detail) {
     const stray = [...reviews].filter((r) => !allowed.includes(r));
     check('SELECTION: the only review classes on the record are approved and on-file (the go-ahead is given)',
       stray.length === 0, stray.join(', ') || allowed.join(' · '));
+
+    // THE PIVOT CODA (the Act III final ruling 3): S15 b7 is S11-F1's
+    // return — no candidate system, the home-base frame, approved, carried;
+    // and s14-b4 has left the sheet (relocated, not retired).
+    const coda = cells.find((c) => c.id === 's15-b7');
+    const codaOk = Boolean(coda) && coda.scene === 'S15' && coda.beat === 7 && !coda.system &&
+      coda.frame === 'S11-F1' && coda.review === 'approved' && coda.carried === true;
+    const oldGone = !cells.some((c) => c.id === 's14-b4') && !fs.existsSync(path.join(OUT, 's14-b4.png'));
+    check('PIVOT: s15-b7 is the act’s final beat — S11-F1’s return, no candidate system, approved, its bytes carried — and s14-b4 has left the sheet',
+      codaOk && oldGone, `coda ${codaOk} · s14-b4 gone ${oldGone}`);
   }
 
   // ---- SOURCE CHECKS --------------------------------------------------------
@@ -311,8 +339,8 @@ function check(name, ok, detail) {
       const now = crypto.createHash('sha256').update(fs.readFileSync(path.join(OUT, file))).digest('hex');
       if (now !== sha) bad.push(`${file}: ${now.slice(0, 16)}… vs r1 ${sha.slice(0, 16)}…`);
     });
-    check('CARRIED-INTO-RETIREMENT: s14-b1-study.png carries the r1 study’s exact bytes (sha256 proven — r2 ruling 4)',
-      bad.length === 0, bad.join(' · ') || 'e7cc6fff… matches');
+    check('CARRIED: s14-b1-study.png carries the r1 study’s exact bytes (r2 ruling 4) and s15-b7.png carries the approved s14-b4’s exact bytes (the Act III final ruling 3) — sha256 proven',
+      bad.length === 0, bad.join(' · ') || 'e7cc6fff… and 8e69451b… match');
 
     const studyRetired = (record.retired || []).some((c) => c.file === 's14-b1-study.png');
     const pairRetired = (record.retired || []).some((c) => c.file === 's13-b5-pair.png');
@@ -326,7 +354,7 @@ function check(name, ok, detail) {
 
   fs.writeFileSync(path.join(__dirname, 'check-cells.json'), JSON.stringify({
     date: new Date().toISOString(),
-    session: 'batch-c-r2',
+    session: 'act-3-final',
     limits: { cornerMean: 6, borderMean: 6 },
     frozenBeatMap: { ...FROZEN, total: TOTAL_BEATS, cells: TOTAL_CELLS },
     ruledClasses: RULED,
