@@ -17,7 +17,7 @@
    - S14 now ends at: *"…points at one job: store of value. Then let's judge it there."*
    - The tower's opening line becomes: *"But before we judge it there, let me pull the rug slightly. Is the thing in your bank account actually the base good we'd be judging? Start from the top, where you live: the payment app."*
    - The relocated pivot, now the act's final beat, over the returned triad with STORE at full voice: *"So now we can ask it properly. What makes something a good store of value? That question — asked from first principles — is the rest of this story."*
-   Beat maps amended (S14 = 3, S15 = 8 including the pivot coda); cells re-sequenced; the S15→Act-boundary exit now leaves on the question. Tag `act-3-final` when Part A's proofs are green.
+   Beat maps amended (S14 = 3, ~~S15 = 8~~ **S15 = 7** including the pivot coda — *corrected by presenter ruling, 3 September 2026, master §13: the pivot is one `[→]`, and the beat count is the script's own `[→]` count*); cells re-sequenced; the S15→Act-boundary exit now leaves on the question. Tag `act-3-final` when Part A's proofs are green.
 
 # SESSION 1 — PART B: Act IV's foundation (tag `act-4-foundation`)
 
