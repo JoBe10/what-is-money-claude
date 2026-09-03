@@ -15,7 +15,8 @@
 // A check gates that at the source: `document.createElement(` appears once.
 //
 // THE FROZEN BEAT MAP (master §13, 3 Sep 2026): S16 8 · S17 5 · S18 8 ·
-// S19 2 · S20 5 · S21 5 · S22 4 · S23 6 — 43 beats, 43 cells, one per beat.
+// S19 2 · S20 5 · S21 5 · S22 3 · S23 6 — 42 beats, 42 cells, one per beat
+// (43 until the Batch D ruling 2 of the same day merged Scene 22's list beats).
 //
 // THE BEAT → LEGACY BUILD DERIVATION, from the ruled map's rows:
 //   S16  b1 the homecoming (F1: the film's own s4-b4-b) · b2–b3 4-04 build 3
@@ -25,7 +26,8 @@
 //   S18  4-08 builds 1–3 · 4-09 builds 1–5 (4-09's build 0 is 4-08's last state)
 //   S19  4-10 builds 1–2
 //   S20  4-11 builds 1–5 · S21 4-12 builds 1–5
-//   S22  4-13 builds 1–2 · 4-14 builds 1–2
+//   S22  4-13 builds 1–2 · 4-14 build 2 (the ten properties in one advance —
+//        ruled 3 Sep 2026; the legacy's two builds are the film's one)
 //   S23  4-15 builds 1–4 · 4-16 builds 1–2
 //
 // WHERE A LEGACY BUILD 0 HAS NO ADVANCE IN THE MERGED ACT (4-10's direct
@@ -46,6 +48,10 @@
 // (legacy 4-10 + CarrierStressStage's `visible`); S19-F1 is ADAPT, the one
 // ruled change named in the map. The cells still mount the legacy module
 // itself: the ruled change lives at the source, so the mount carries it.
+// (2) Scene 22 merges its list beats — all ten properties land in one
+// advance; S22 = 3, the act = 42; S22-F2 is ADAPT (the landing as one
+// gesture, Scene 22's build at Session 2); the merged cell is legacy 4-14's
+// own last state, mounted as the legacy performs it.
 
 import { ensureStage, destroyStage } from '/src/scenes/act-1-the-unfinished-exchange/_exchangeStage.js';
 import s404 from '/src/slides/section-4-ideal-store/04-unfinished-exchange.js';
@@ -364,7 +370,7 @@ FAILURES_II.forEach(([name, explanation], i) => {
   }, (st) => mount(st, s412, n));
 });
 
-// ============================================================ SCENE 22 (4 beats)
+// ============================================================ SCENE 22 (3 beats — ruled 3 Sep 2026)
 
 cell('s22-b1', {
   scene: 'S22', beat: 1, frame: 'S22-F1', klass: 'PORT', review: 'pending-review',
@@ -382,18 +388,11 @@ cell('s22-b2', {
 }, (st) => mount(st, s413, 2));
 
 cell('s22-b3', {
-  scene: 'S22', beat: 3, frame: 'S22-F2', klass: 'PORT', review: 'pending-review',
-  source: '4-14-ten-properties, build 1 — the first five, as the left column',
-  caption: 'Beat 3 · the first five properties as the numbered left column — 01 NO SUPPLY INFLATION · 02 DIVISIBILITY · 03 LIQUIDITY · 04 PORTABILITY · 05 NO CARRYING COSTS — each a question you can put to anything that claims to be money; the right column waits.',
-  flag: 'The grid of beat 2 gives way to the two-column list here: 4-14’s own build 0 is empty, so the advance from beat 2 to beat 3 is a composition change — the mapping grid leaving, the properties arriving — with no legacy morph between them (they were separate slides joined by the deck’s crossfade). Wiring, flagged; the two compositions themselves are the legacy’s, untouched.',
-  expect: [['.s4-properties__row[data-visible="true"]', 5], ['.s4-properties__column--right .s4-properties__row[data-visible="true"]', 0]]
-}, (st) => mount(st, s414, 1));
-
-cell('s22-b4', {
-  scene: 'S22', beat: 4, frame: 'S22-F2', klass: 'PORT', review: 'approved-port',
-  source: '4-14-ten-properties, build 2 — the second five complete the list',
-  caption: 'Beat 4 · the second five complete the list — 06 RESISTANCE TO CONTROL · 07 DURABILITY · 08 VERIFIABILITY · 09 FUNGIBILITY · 10 TRACK RECORD. Ten criteria — derived, not chosen. Now let’s point them at something.',
-  expect: [['.s4-properties__row[data-visible="true"]', 10]]
+  scene: 'S22', beat: 3, frame: 'S22-F2', klass: 'ADAPT', review: 'approved-ruled',
+  source: '4-14-ten-properties, build 2 — the complete two-column list, the legacy’s own last state; the film lands it in one advance (the one ruled change, 3 Sep 2026)',
+  caption: 'Beat 3 · the ten properties, all landing in one advance as the two numbered columns — 01 NO SUPPLY INFLATION · 02 DIVISIBILITY · 03 LIQUIDITY · 04 PORTABILITY · 05 NO CARRYING COSTS · 06 RESISTANCE TO CONTROL · 07 DURABILITY · 08 VERIFIABILITY · 09 FUNGIBILITY · 10 TRACK RECORD — each a question you can put to anything that claims to be money. Ten criteria — derived, not chosen. Now let’s point them at something.',
+  ruling: 'RULED 3 September 2026 (the Batch D implementation brief §1.2, master §13): Scene 22 merges its list beats — all ten properties land in one advance; the two paragraphs merge at zero word changes, one [→] removed; S22 = 3, the act = 42. This cell is the merged beat’s settled state — legacy 4-14’s complete list, its own last state — and S22-F2 is ADAPT in the ruled map, the one change named: the landing as one gesture, at Scene 22’s build (Session 2). The five-row cell this beat used to be leaves the record, and the flag it carried (the grid giving way to the list with no legacy morph between them) is answered the same way — the composition change is Scene 22’s wiring.',
+  expect: [['.s4-properties__row[data-visible="true"]', 10], ['.s4-properties__column--right .s4-properties__row[data-visible="true"]', 5]]
 }, (st) => mount(st, s414, 2));
 
 // ============================================================ SCENE 23 (6 beats)

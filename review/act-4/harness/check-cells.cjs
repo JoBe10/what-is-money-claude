@@ -15,8 +15,10 @@
 //   MAP AGREEMENT — the map is RULED; every cell's frame is a PORT or ADAPT
 //   row of docs/act-4-provenance.md and the cell carries its row's class
 //   (S19-F1 ADAPT since the Batch D ruling 1, 3 Sep 2026 — the carrier
-//   arrives at beat 2); no ARGUABLE class survives in the map's table; the
-//   two retired rows are recorded; every cell names its source.
+//   arrives at beat 2; S22-F2 ADAPT since ruling 2 — the ten properties in
+//   one advance, S22 = 3, the act = 42); no ARGUABLE class survives in the
+//   map's table; the two retired rows are recorded; every cell names its
+//   source.
 //
 //   BEAT COVERAGE — all 43 beats of the frozen map, each exactly once; 43
 //   cells; no candidate system anywhere (the map names no NEW frame).
@@ -59,9 +61,10 @@ const PORT = flag('--port', '5273');
 const REPO = path.join(__dirname, '..', '..', '..');
 const OUT = path.join(__dirname, '..', 'states');
 
-const FROZEN = { S16: 8, S17: 5, S18: 8, S19: 2, S20: 5, S21: 5, S22: 4, S23: 6 };
-const TOTAL_BEATS = 43;
-const TOTAL_CELLS = 43;
+// S22 4 → 3 and 43 → 42 by the Batch D ruling 2 (3 Sep 2026, master §13).
+const FROZEN = { S16: 8, S17: 5, S18: 8, S19: 2, S20: 5, S21: 5, S22: 3, S23: 6 };
+const TOTAL_BEATS = 42;
+const TOTAL_CELLS = 42;
 
 // The ruled map's PORT rows (docs/act-4-provenance.md §1), transcribed. The
 // MAP AGREEMENT check compares this against the map itself as well as
@@ -72,12 +75,12 @@ const PORT_FRAMES = [
   'S18-F1', 'S18-F2', 'S18-F3', 'S18-F4', 'S18-F5',
   'S19-F2',
   'S20-F1', 'S21-F1',
-  'S22-F1', 'S22-F2',
+  'S22-F1',
   'S23-F1', 'S23-F2', 'S23-F3'
 ];
 // The ADAPT rows — each a presenter ruling on a proven treatment, the one
 // change named in the map (the Batch D implementation brief §1, 3 Sep 2026).
-const ADAPT_FRAMES = ['S19-F1'];
+const ADAPT_FRAMES = ['S19-F1', 'S22-F2'];
 const CLASS_OF = Object.fromEntries([
   ...PORT_FRAMES.map((f) => [f, 'PORT']), ...ADAPT_FRAMES.map((f) => [f, 'ADAPT'])]);
 
@@ -304,8 +307,8 @@ function check(name, ok, detail) {
 
     const builders = (code.match(/\}, \(st\) => (mount\(st, s4\d\d, \d\)|homecoming\(st, 3\)|mount\(st, s41[12], n\))\);/g) || []).length;
     const cellCalls = (code.match(/^\s*cell\(/gm) || []).length;
-    check('SOURCE: every cell builder mounts a legacy module at a build, or the homecoming — 35 cell() calls, 35 such builders (the two failure loops cover ten cells)',
-      builders === 35 && cellCalls === 35, `builders ${builders} · cell() ${cellCalls}`);
+    check('SOURCE: every cell builder mounts a legacy module at a build, or the homecoming — 34 cell() calls, 34 such builders (the two failure loops cover ten cells; 35 until the S22 merge)',
+      builders === 34 && cellCalls === 34, `builders ${builders} · cell() ${cellCalls}`);
 
     const homecomingOnce = (code.match(/applyState\('spend-or-save', build\)/g) || []).length === 1 &&
       (code.match(/ensureStage\(st\)/g) || []).length === 1;

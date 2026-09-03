@@ -1,5 +1,5 @@
 {
-  "date": "2026-09-03T08:05:55.451Z",
+  "date": "2026-09-03T08:09:09.526Z",
   "session": "act-4-states",
   "status": "review request — the flipbook walk",
   "beatMap": {
@@ -9,11 +9,11 @@
     "S19": 2,
     "S20": 5,
     "S21": 5,
-    "S22": 4,
+    "S22": 3,
     "S23": 6,
-    "total": 43
+    "total": 42
   },
-  "cellCount": 43,
+  "cellCount": 42,
   "beatMapAuthority": "docs/batch-d-package.md §1 — derived from the legacy advance structure 3 September 2026 and frozen the same day on the presenter’s rulings (master §13: the three ARGUABLE rows at A · A · A; Scene 22 at the default)",
   "provenanceAuthority": "docs/act-4-provenance.md — RULED 3 September 2026: 21 PORT · 0 ADAPT · 0 NEW · 2 retired; every cell a PORT of the named legacy treatment",
   "rulings": [
@@ -27,7 +27,8 @@
     "Scene 16 beat 1’s join is written: the return line, then “The surgeon is still holding the claim he accepted that day.”, then the legacy passage uncut from “this is the moment to pay a debt” onward; the four pre-spoken sentences cut; the seam closed"
   ],
   "batchDRulings": [
-    "Scene 19 restages — beat 1 is the inverted framing alone, no carrier on stage; the carrier (the claim in its shell, on the stress stage) arrives at beat 2, timed to “let’s put a carrier on the bench and try to break it.” The change is made at the source (legacy 4-10 keys the carrier to build 2); S19-F1 is ADAPT; the two cells re-rendered"
+    "Scene 19 restages — beat 1 is the inverted framing alone, no carrier on stage; the carrier (the claim in its shell, on the stress stage) arrives at beat 2, timed to “let’s put a carrier on the bench and try to break it.” The change is made at the source (legacy 4-10 keys the carrier to build 2); S19-F1 is ADAPT; the two cells re-rendered",
+    "Scene 22 merges its list beats — all ten properties land in one advance; the two paragraphs merge at zero word changes, one [→] removed; S22 = 3 beats, the act = 42; S22-F2 is ADAPT; the merged cell is the complete two-column list, the five-row cell leaves the record"
   ],
   "splice": {
     "was": 39,
@@ -43,9 +44,9 @@
   },
   "protocol": "the presenter walks the act as stills — the return, the test, the inversion, the failures, the requirements, the fifty scores landing at once, the closing line — and returns his verdicts on the pending set plus the go-ahead that unlocks implementation",
   "counts": {
-    "approved-ruled": 2,
-    "approved-port": 32,
-    "pending-review": 9
+    "approved-ruled": 3,
+    "approved-port": 31,
+    "pending-review": 8
   },
   "pendingSet": [
     "s16-b1",
@@ -54,7 +55,6 @@
     "s16-b5",
     "s16-b6",
     "s22-b1",
-    "s22-b3",
     "s23-b5",
     "s23-b6"
   ],
@@ -86,7 +86,6 @@
     "s21-b4",
     "s21-b5",
     "s22-b2",
-    "s22-b4",
     "s23-b1",
     "s23-b2",
     "s23-b3",
@@ -94,7 +93,8 @@
   ],
   "approvedRuledSet": [
     "s19-b1",
-    "s19-b2"
+    "s19-b2",
+    "s22-b3"
   ],
   "ruled": [
     {
@@ -104,6 +104,10 @@
     {
       "id": "s19-b2",
       "ruling": "RULED 3 September 2026 (the Batch D implementation brief §1.1, master §13): the carrier arrives at beat 2, timed to “let’s put a carrier on the bench and try to break it.” The flag this cell carried — the two beats shared one still since R7.4 deleted the corner brackets — is closed by the ruling: the frame is unchanged, and its arrival (the claim’s and the shell’s own reveals) is now the beat’s gesture. The beats are no longer identical stills."
+    },
+    {
+      "id": "s22-b3",
+      "ruling": "RULED 3 September 2026 (the Batch D implementation brief §1.2, master §13): Scene 22 merges its list beats — all ten properties land in one advance; the two paragraphs merge at zero word changes, one [→] removed; S22 = 3, the act = 42. This cell is the merged beat’s settled state — legacy 4-14’s complete list, its own last state — and S22-F2 is ADAPT in the ruled map, the one change named: the landing as one gesture, at Scene 22’s build (Session 2). The five-row cell this beat used to be leaves the record, and the flag it carried (the grid giving way to the list with no legacy morph between them) is answered the same way — the composition change is Scene 22’s wiring."
     }
   ],
   "flags": [
@@ -135,11 +139,6 @@
     {
       "id": "s22-b1",
       "flag": "4-13’s build 0 — all ten failures standing in the grid, none yet mapped — is the composition this beat’s sweep starts from, and it has no advance of its own in the merged act: Scene 21’s completed index gives way to the grid as this beat’s first movement, and the sweep follows. Wiring, flagged. (The count is as you ruled it: three compositions across four advances.)",
-      "status": "open — for the presenter’s word at the flipbook walk"
-    },
-    {
-      "id": "s22-b3",
-      "flag": "The grid of beat 2 gives way to the two-column list here: 4-14’s own build 0 is empty, so the advance from beat 2 to beat 3 is a composition change — the mapping grid leaving, the properties arriving — with no legacy morph between them (they were separate slides joined by the deck’s crossfade). Wiring, flagged; the two compositions themselves are the legacy’s, untouched.",
       "status": "open — for the presenter’s word at the flipbook walk"
     },
     {
@@ -1862,53 +1861,19 @@
       "scene": "S22",
       "beat": 3,
       "frame": "S22-F2",
-      "klass": "PORT",
-      "review": "pending-review",
-      "source": "4-14-ten-properties, build 1 — the first five, as the left column",
-      "caption": "Beat 3 · the first five properties as the numbered left column — 01 NO SUPPLY INFLATION · 02 DIVISIBILITY · 03 LIQUIDITY · 04 PORTABILITY · 05 NO CARRYING COSTS — each a question you can put to anything that claims to be money; the right column waits.",
-      "flag": "The grid of beat 2 gives way to the two-column list here: 4-14’s own build 0 is empty, so the advance from beat 2 to beat 3 is a composition change — the mapping grid leaving, the properties arriving — with no legacy morph between them (they were separate slides joined by the deck’s crossfade). Wiring, flagged; the two compositions themselves are the legacy’s, untouched.",
-      "expect": [
-        [
-          ".s4-properties__row[data-visible=\"true\"]",
-          5
-        ],
-        [
-          ".s4-properties__column--right .s4-properties__row[data-visible=\"true\"]",
-          0
-        ]
-      ],
-      "probes": {
-        "results": [
-          {
-            "sel": ".s4-properties__row[data-visible=\"true\"]",
-            "expected": 5,
-            "got": 5,
-            "ok": true
-          },
-          {
-            "sel": ".s4-properties__column--right .s4-properties__row[data-visible=\"true\"]",
-            "expected": 0,
-            "got": 0,
-            "ok": true
-          }
-        ],
-        "ok": true
-      }
-    },
-    {
-      "id": "s22-b4",
-      "file": "s22-b4.png",
-      "scene": "S22",
-      "beat": 4,
-      "frame": "S22-F2",
-      "klass": "PORT",
-      "review": "approved-port",
-      "source": "4-14-ten-properties, build 2 — the second five complete the list",
-      "caption": "Beat 4 · the second five complete the list — 06 RESISTANCE TO CONTROL · 07 DURABILITY · 08 VERIFIABILITY · 09 FUNGIBILITY · 10 TRACK RECORD. Ten criteria — derived, not chosen. Now let’s point them at something.",
+      "klass": "ADAPT",
+      "review": "approved-ruled",
+      "source": "4-14-ten-properties, build 2 — the complete two-column list, the legacy’s own last state; the film lands it in one advance (the one ruled change, 3 Sep 2026)",
+      "caption": "Beat 3 · the ten properties, all landing in one advance as the two numbered columns — 01 NO SUPPLY INFLATION · 02 DIVISIBILITY · 03 LIQUIDITY · 04 PORTABILITY · 05 NO CARRYING COSTS · 06 RESISTANCE TO CONTROL · 07 DURABILITY · 08 VERIFIABILITY · 09 FUNGIBILITY · 10 TRACK RECORD — each a question you can put to anything that claims to be money. Ten criteria — derived, not chosen. Now let’s point them at something.",
+      "ruling": "RULED 3 September 2026 (the Batch D implementation brief §1.2, master §13): Scene 22 merges its list beats — all ten properties land in one advance; the two paragraphs merge at zero word changes, one [→] removed; S22 = 3, the act = 42. This cell is the merged beat’s settled state — legacy 4-14’s complete list, its own last state — and S22-F2 is ADAPT in the ruled map, the one change named: the landing as one gesture, at Scene 22’s build (Session 2). The five-row cell this beat used to be leaves the record, and the flag it carried (the grid giving way to the list with no legacy morph between them) is answered the same way — the composition change is Scene 22’s wiring.",
       "expect": [
         [
           ".s4-properties__row[data-visible=\"true\"]",
           10
+        ],
+        [
+          ".s4-properties__column--right .s4-properties__row[data-visible=\"true\"]",
+          5
         ]
       ],
       "probes": {
@@ -1917,6 +1882,12 @@
             "sel": ".s4-properties__row[data-visible=\"true\"]",
             "expected": 10,
             "got": 10,
+            "ok": true
+          },
+          {
+            "sel": ".s4-properties__column--right .s4-properties__row[data-visible=\"true\"]",
+            "expected": 5,
+            "got": 5,
             "ok": true
           }
         ],

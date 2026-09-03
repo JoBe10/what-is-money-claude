@@ -88,7 +88,15 @@ const LEDGER = [
   ['S16', '04-unfinished-exchange.js',
     CUT_404,
     `${BRIDGE} `,
-    'the Scene 16 b1 join, presenter-ruled 3 Sep 2026 (master §13): the four sentences spoken at Scenes 3 and 4 are cut and the bridge sentence stands in their place; the legacy passage resumes uncut at "And this is the moment to pay a debt"']
+    'the Scene 16 b1 join, presenter-ruled 3 Sep 2026 (master §13): the four sentences spoken at Scenes 3 and 4 are cut and the bridge sentence stands in their place; the legacy passage resumes uncut at "And this is the moment to pay a debt"'],
+  // The Scene 22 merge (presenter-ruled at the flipbook walk, 3 Sep 2026 —
+  // the Batch D implementation brief §1.2, master §13): the two list
+  // paragraphs of legacy 4-14 merge at zero word changes, one [→] removed —
+  // all ten properties land in one advance. S22 = 3, the act = 42.
+  ['S22', '14-ten-properties.js',
+    '\n\n[→] And the second five.',
+    ' And the second five.',
+    'the Scene 22 merge, presenter-ruled 3 Sep 2026 (the Batch D implementation brief §1.2, master §13): the two list paragraphs merge at zero word changes, one [→] removed — all ten properties land in one advance; S22 = 3']
 ];
 const apply = (text, scene) => {
   let out = text;
@@ -136,7 +144,7 @@ function assemble() {
     S19: n410.join('\n\n'),
     S20: n411.join('\n\n'),
     S21: n412.join('\n\n'),
-    S22: [...n413, ...n414].join('\n\n'),
+    S22: apply([...n413, ...n414].join('\n\n'), 'S22'),
     S23: [
       apply([...n415, ...n416].join('\n\n'), 'S23'),
       ARMOR_STEELMAN_HEAD,
@@ -154,10 +162,11 @@ const SCENES = [
   { key: 'S19', title: 'Invert the Question', beats: 2 },
   { key: 'S20', title: 'How the Carrier Can Fail: I', beats: 5 },
   { key: 'S21', title: 'How the Carrier Can Fail: II', beats: 5 },
-  { key: 'S22', title: 'From Failure to Requirement — the Ten Properties', beats: 4 },
+  { key: 'S22', title: 'From Failure to Requirement — the Ten Properties', beats: 3 },
   { key: 'S23', title: 'The Comparison', beats: 6 }
 ];
-const TOTAL_BEATS = 43;
+// 43 until the Batch D ruling 2 (3 Sep 2026) merged Scene 22's list beats.
+const TOTAL_BEATS = 42;
 
 if (process.argv.includes('--emit')) {
   const blocks = assemble();
@@ -237,7 +246,7 @@ if (rows.some((r) => r.installed == null)) process.exit(1);
     if (n !== r.beats) bad.push(`${r.scene}: ${n} advances vs the map's ${r.beats}`);
   });
   if (total !== TOTAL_BEATS) bad.push(`total ${total} vs ${TOTAL_BEATS}`);
-  check(`BEATS: every scene's [→] count is its §1 map, and Act IV is ${TOTAL_BEATS} at the default map`,
+  check(`BEATS: every scene's [→] count is its §1 map, and Act IV is ${TOTAL_BEATS} (S22 merged by presenter ruling, 3 Sep 2026)`,
     bad.length === 0, bad.join(' · ') || `${detail.join(' · ')} = ${total}`);
   const maps = block(pkg, '# 1. Beat maps', ['\n# 2. ']);
   const mapBad = SCENES.filter((s) => !new RegExp(`\\*\\*${s.key} — [^*]*\\*\\* \\((${s.beats})\\)`).test(maps || '')).map((s) => s.key);
@@ -439,7 +448,7 @@ function protectedCheck(name, master, installed, { where = '', allow = null } = 
 const out = {
   date: new Date().toISOString(),
   session: 'act-4-foundation',
-  rule: 'docs/batch-d-package.md §2 is the legacy Section 4 slides\' own notes, assembled in the architecture\'s scene merges, with exactly the adaptation ledger applied — the four substitutions, and the presenter\'s rulings of 3 Sep 2026 (the Scene 16 b1 join; the two armor cuts) — proven word for word and character for character; every scene\'s [→] count is §1\'s frozen map; the protected lines are verified character for character against the master with every difference reported; nothing before Scene 16 anticipates the generalization.',
+  rule: 'docs/batch-d-package.md §2 is the legacy Section 4 slides\' own notes, assembled in the architecture\'s scene merges, with exactly the adaptation ledger applied — the four substitutions, and the presenter\'s rulings of 3 Sep 2026 (the Scene 16 b1 join; the two armor cuts; the Scene 22 merge at the flipbook walk — one [→] removed at zero word changes) — proven word for word and character for character; every scene\'s [→] count is §1\'s frozen map (42 since the merge); the protected lines are verified character for character against the master with every difference reported; nothing before Scene 16 anticipates the generalization.',
   ledger: LEDGER.map(([scene, file, from, to, why]) => ({ scene, file, from, to, why })),
   scenes: rows.map((r) => ({ scene: r.scene, words: words(r.installed).length, beats: (r.installed.match(/\[→\]/g) || []).length, expected: r.beats })),
   totalBeats: TOTAL_BEATS,

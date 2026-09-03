@@ -18,7 +18,9 @@
 // walk — the Batch D implementation brief §1, master §13) are recorded in
 // BATCH_D_RULINGS below and on the cells they answer (`ruling` in place of
 // `flag`, review class `approved-ruled`). Ruling 1: Scene 19 restages — the
-// carrier arrives at beat 2; S19-F1 is ADAPT (20 PORT · 1 ADAPT).
+// carrier arrives at beat 2; S19-F1 is ADAPT. Ruling 2: Scene 22 merges its
+// list beats — S22 = 3, the act = 42, 42 cells; S22-F2 is ADAPT
+// (19 PORT · 2 ADAPT).
 //
 // Modes:
 //   (default)        capture every cell, then cut the record.
@@ -51,8 +53,9 @@ const SEED_SCRIPT = () => {
   };
 };
 
-const BEAT_MAP = { S16: 8, S17: 5, S18: 8, S19: 2, S20: 5, S21: 5, S22: 4, S23: 6 };
-const TOTAL_BEATS = 43;
+// S22 4 → 3 and 43 → 42 by the Batch D ruling 2 (3 Sep 2026, master §13).
+const BEAT_MAP = { S16: 8, S17: 5, S18: 8, S19: 2, S20: 5, S21: 5, S22: 3, S23: 6 };
+const TOTAL_BEATS = 42;
 
 const SCENES = [
   ['S16', 'Scene 16 — Return to the Open Exchange (8 beats · the homecoming · the definition · the claim and its carrier, the crescendo included)'],
@@ -61,7 +64,7 @@ const SCENES = [
   ['S19', 'Scene 19 — Invert the Question (2 beats)'],
   ['S20', 'Scene 20 — How the Carrier Can Fail: I (5 beats)'],
   ['S21', 'Scene 21 — How the Carrier Can Fail: II (5 beats)'],
-  ['S22', 'Scene 22 — From Failure to Requirement — the Ten Properties (4 beats · three compositions, as ruled)'],
+  ['S22', 'Scene 22 — From Failure to Requirement — the Ten Properties (3 beats · the ten properties in one advance, as ruled 3 Sep 2026)'],
   ['S23', 'Scene 23 — The Comparison (6 beats · the lineup whole, as ruled · the fifty scores at once · the closing line)']
 ];
 
@@ -81,7 +84,8 @@ const RULINGS = [
 // The presenter's rulings at the flipbook walk (the Batch D implementation
 // brief §1, 3 Sep 2026, master §13), recorded as their own commits.
 const BATCH_D_RULINGS = [
-  'Scene 19 restages — beat 1 is the inverted framing alone, no carrier on stage; the carrier (the claim in its shell, on the stress stage) arrives at beat 2, timed to “let’s put a carrier on the bench and try to break it.” The change is made at the source (legacy 4-10 keys the carrier to build 2); S19-F1 is ADAPT; the two cells re-rendered'
+  'Scene 19 restages — beat 1 is the inverted framing alone, no carrier on stage; the carrier (the claim in its shell, on the stress stage) arrives at beat 2, timed to “let’s put a carrier on the bench and try to break it.” The change is made at the source (legacy 4-10 keys the carrier to build 2); S19-F1 is ADAPT; the two cells re-rendered',
+  'Scene 22 merges its list beats — all ten properties land in one advance; the two paragraphs merge at zero word changes, one [→] removed; S22 = 3 beats, the act = 42; S22-F2 is ADAPT; the merged cell is the complete two-column list, the five-row cell leaves the record'
 ];
 
 const CLASS_NOTE = {
@@ -235,7 +239,7 @@ const CLASS_NOTE = {
 </style></head><body>
 <h1>Act IV — the beat-state sheet · the flipbook · a review request</h1>
 <p class="note"><b>What this is.</b> The frozen Section 4 argument coming home as stills — every settled state of Scenes 16–23,
-one cell per beat, <b>43 cells at the frozen map</b> (S16 8 · S17 5 · S18 8 · S19 2 · S20 5 · S21 5 · S22 4 · S23 6).
+one cell per beat, <b>42 cells at the frozen map</b> (S16 8 · S17 5 · S18 8 · S19 2 · S20 5 · S21 5 · S22 3 · S23 6 — 43 until the Batch D ruling 2 merged Scene 22's list beats).
 The ruled map (<i>docs/act-4-provenance.md</i>, 3 September 2026) is 21 PORT · 0 ADAPT · 0 NEW · 2 retired, so
 <b>every cell is a PORT and this sheet designed nothing</b>: each cell mounts the legacy slide module itself at the build
 the map names, and the legacy stylesheet places every element; the one cell that is not a Section 4 slide — the homecoming,

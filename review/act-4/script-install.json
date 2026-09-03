@@ -1,7 +1,7 @@
 {
-  "date": "2026-09-03T04:46:27.978Z",
+  "date": "2026-09-03T08:09:05.299Z",
   "session": "act-4-foundation",
-  "rule": "docs/batch-d-package.md §2 is the legacy Section 4 slides' own notes, assembled in the architecture's scene merges, with exactly the adaptation ledger applied — the four substitutions, and the presenter's rulings of 3 Sep 2026 (the Scene 16 b1 join; the two armor cuts) — proven word for word and character for character; every scene's [→] count is §1's frozen map; the protected lines are verified character for character against the master with every difference reported; nothing before Scene 16 anticipates the generalization.",
+  "rule": "docs/batch-d-package.md §2 is the legacy Section 4 slides' own notes, assembled in the architecture's scene merges, with exactly the adaptation ledger applied — the four substitutions, and the presenter's rulings of 3 Sep 2026 (the Scene 16 b1 join; the two armor cuts; the Scene 22 merge at the flipbook walk — one [→] removed at zero word changes) — proven word for word and character for character; every scene's [→] count is §1's frozen map (42 since the merge); the protected lines are verified character for character against the master with every difference reported; nothing before Scene 16 anticipates the generalization.",
   "ledger": [
     {
       "scene": "S17",
@@ -51,6 +51,13 @@
       "from": "He has not received the final goods or services he actually wants. No shoes, no steak, no wine, no housing — if he’d received those directly, that would have been barter. Instead, he receives money. ",
       "to": "The surgeon is still holding the claim he accepted that day. ",
       "why": "the Scene 16 b1 join, presenter-ruled 3 Sep 2026 (master §13): the four sentences spoken at Scenes 3 and 4 are cut and the bridge sentence stands in their place; the legacy passage resumes uncut at \"And this is the moment to pay a debt\""
+    },
+    {
+      "scene": "S22",
+      "file": "14-ten-properties.js",
+      "from": "\n\n[→] And the second five.",
+      "to": " And the second five.",
+      "why": "the Scene 22 merge, presenter-ruled 3 Sep 2026 (the Batch D implementation brief §1.2, master §13): the two list paragraphs merge at zero word changes, one [→] removed — all ten properties land in one advance; S22 = 3"
     }
   ],
   "scenes": [
@@ -92,9 +99,9 @@
     },
     {
       "scene": "S22",
-      "words": 303,
-      "beats": 4,
-      "expected": 4
+      "words": 302,
+      "beats": 3,
+      "expected": 3
     },
     {
       "scene": "S23",
@@ -103,7 +110,7 @@
       "expected": 6
     }
   ],
-  "totalBeats": 43,
+  "totalBeats": 42,
   "protectedLines": [
     {
       "name": "the bisection crescendo (master §9.3, architecture Scene 16) — installed in S16 b7",
@@ -311,7 +318,7 @@
     {
       "name": "WORDS: the installed scripts are the legacy notes with exactly the ledger applied, word for word",
       "ok": true,
-      "detail": "zero differences (S16 554 · S17 243 · S18 374 · S19 133 · S20 206 · S21 226 · S22 303 · S23 1722)"
+      "detail": "zero differences (S16 554 · S17 243 · S18 374 · S19 133 · S20 206 · S21 226 · S22 302 · S23 1722)"
     },
     {
       "name": "CHARACTERS: identical to the byte, punctuation and dashes included",
@@ -319,9 +326,9 @@
       "detail": "8/8 identical"
     },
     {
-      "name": "BEATS: every scene's [→] count is its §1 map, and Act IV is 43 at the default map",
+      "name": "BEATS: every scene's [→] count is its §1 map, and Act IV is 42 (S22 merged by presenter ruling, 3 Sep 2026)",
       "ok": true,
-      "detail": "S16 8 · S17 5 · S18 8 · S19 2 · S20 5 · S21 5 · S22 4 · S23 6 = 43"
+      "detail": "S16 8 · S17 5 · S18 8 · S19 2 · S20 5 · S21 5 · S22 3 · S23 6 = 42"
     },
     {
       "name": "MAP: §1's beat maps state the same counts as §2's scripts",
@@ -334,9 +341,9 @@
       "detail": ""
     },
     {
-      "name": "LEDGER: 7 entries — 5 substitutions and 2 presenter-ruled cuts — each once in its source, each applied, none of the originals surviving",
+      "name": "LEDGER: 8 entries — 6 substitutions and 2 presenter-ruled cuts — each once in its source, each applied, none of the originals surviving",
       "ok": true,
-      "detail": "S17: “So here is the definition we will use for the rest of the evening:” → “So here is the definition we will use from here:” · S23: “the holding we defined one slide ago” → “the holding we defined a moment ago” · S23: “and here’s what it means tonight, concretely:” → “and here’s what it means, concretely:” · S23-armor: “that is precisely the currency chart from Section 2,” → “that is precisely the currency chart you saw earlier,” · S23-armor: “That is this line: restless, and it is supposed to be.” → (cut) · S23-armor: “That is this one.” → (cut) · S16: “He has not received the final goods or services he actually wants. No shoes, no steak, no wine, no housing — if he’d received those directly, that would have been barter. Instead, he receives money.” → “The surgeon is still holding the claim he accepted that day.”"
+      "detail": "S17: “So here is the definition we will use for the rest of the evening:” → “So here is the definition we will use from here:” · S23: “the holding we defined one slide ago” → “the holding we defined a moment ago” · S23: “and here’s what it means tonight, concretely:” → “and here’s what it means, concretely:” · S23-armor: “that is precisely the currency chart from Section 2,” → “that is precisely the currency chart you saw earlier,” · S23-armor: “That is this line: restless, and it is supposed to be.” → (cut) · S23-armor: “That is this one.” → (cut) · S16: “He has not received the final goods or services he actually wants. No shoes, no steak, no wine, no housing — if he’d received those directly, that would have been barter. Instead, he receives money.” → “The surgeon is still holding the claim he accepted that day.” · S22: “[→] And the second five.” → “And the second five.”"
     },
     {
       "name": "ARMOR: the two dead pointer sentences are cut from the installed steelman (presenter ruling, 3 Sep 2026) and stand once each in the legacy 4-20 source",
