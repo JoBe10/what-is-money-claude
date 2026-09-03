@@ -1,5 +1,5 @@
 {
-  "date": "2026-09-03T02:55:06.505Z",
+  "date": "2026-09-03T04:43:32.443Z",
   "session": "act-4-foundation",
   "rule": "docs/batch-d-package.md §2 is the legacy Section 4 slides' own notes, assembled in the architecture's scene merges, with exactly the adaptation ledger applied — proven word for word and character for character; every scene's [→] count is §1's; the protected lines are verified character for character against the master with every difference reported; nothing before Scene 16 anticipates the generalization.",
   "ledger": [
@@ -30,6 +30,20 @@
       "from": "that is precisely the currency chart from Section 2,",
       "to": "that is precisely the currency chart you saw earlier,",
       "why": "a structural self-reference (\"Section 2\") in the relocated steelman; replaced with what the viewer watched (the batch-c ledger's form)"
+    },
+    {
+      "scene": "S23-armor",
+      "file": "20-bitcoin-does-not-replace-everything.js",
+      "from": " That is this line: restless, and it is supposed to be.",
+      "to": "",
+      "why": "presenter-ruled cut, 3 Sep 2026 (master §13): a dead pointer at 4-20's drawn contrast, which has no frame in Scene 23"
+    },
+    {
+      "scene": "S23-armor",
+      "file": "20-bitcoin-does-not-replace-everything.js",
+      "from": " That is this one.",
+      "to": "",
+      "why": "presenter-ruled cut, 3 Sep 2026 (master §13): the second dead pointer"
     }
   ],
   "scenes": [
@@ -77,7 +91,7 @@
     },
     {
       "scene": "S23",
-      "words": 1712,
+      "words": 1722,
       "beats": 6,
       "expected": 6
     }
@@ -280,7 +294,7 @@
       "src/slides/section-3-function/08-waypoint-judge.js:65: [→] One question left — the one everything has been building toward. How would you judge anything that tries t"
     ]
   },
-  "checks": 23,
+  "checks": 24,
   "failures": 0,
   "results": [
     {
@@ -291,7 +305,7 @@
     {
       "name": "WORDS: the installed scripts are the legacy notes with exactly the ledger applied, word for word",
       "ok": true,
-      "detail": "zero differences (S16 653 · S17 243 · S18 374 · S19 133 · S20 206 · S21 226 · S22 303 · S23 1712)"
+      "detail": "zero differences (S16 653 · S17 243 · S18 374 · S19 133 · S20 206 · S21 226 · S22 303 · S23 1722)"
     },
     {
       "name": "CHARACTERS: identical to the byte, punctuation and dashes included",
@@ -314,9 +328,14 @@
       "detail": ""
     },
     {
-      "name": "LEDGER: 4 substitutions, each once in its source, each applied, none of the originals surviving",
+      "name": "LEDGER: 6 entries — 4 substitutions and 2 presenter-ruled cuts — each once in its source, each applied, none of the originals surviving",
       "ok": true,
-      "detail": "S17: “So here is the definition we will use for the rest of the evening:” → “So here is the definition we will use from here:” · S23: “the holding we defined one slide ago” → “the holding we defined a moment ago” · S23: “and here’s what it means tonight, concretely:” → “and here’s what it means, concretely:” · S23-armor: “that is precisely the currency chart from Section 2,” → “that is precisely the currency chart you saw earlier,”"
+      "detail": "S17: “So here is the definition we will use for the rest of the evening:” → “So here is the definition we will use from here:” · S23: “the holding we defined one slide ago” → “the holding we defined a moment ago” · S23: “and here’s what it means tonight, concretely:” → “and here’s what it means, concretely:” · S23-armor: “that is precisely the currency chart from Section 2,” → “that is precisely the currency chart you saw earlier,” · S23-armor: “That is this line: restless, and it is supposed to be.” → (cut) · S23-armor: “That is this one.” → (cut)"
+    },
+    {
+      "name": "ARMOR: the two dead pointer sentences are cut from the installed steelman (presenter ruling, 3 Sep 2026) and stand once each in the legacy 4-20 source",
+      "ok": true,
+      "detail": "cut from S23 true · once each in 4-20 true"
     },
     {
       "name": "PROTECTED: the bisection crescendo (master §9.3, architecture Scene 16) — installed in S16 b7",

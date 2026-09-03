@@ -64,7 +64,18 @@ const LEDGER = [
   ['S23-armor', '20-bitcoin-does-not-replace-everything.js',
     'that is precisely the currency chart from Section 2,',
     'that is precisely the currency chart you saw earlier,',
-    'a structural self-reference ("Section 2") in the relocated steelman; replaced with what the viewer watched (the batch-c ledger\'s form)']
+    'a structural self-reference ("Section 2") in the relocated steelman; replaced with what the viewer watched (the batch-c ledger\'s form)'],
+  // A `to` of '' is a presenter-ruled CUT: the span is deleted and nothing is
+  // written in its place (master §13, 3 Sep 2026 — the two dead pointer
+  // sentences in the relocated steelman, which named 4-20's drawn contrast).
+  ['S23-armor', '20-bitcoin-does-not-replace-everything.js',
+    ' That is this line: restless, and it is supposed to be.',
+    '',
+    'presenter-ruled cut, 3 Sep 2026 (master §13): a dead pointer at 4-20\'s drawn contrast, which has no frame in Scene 23'],
+  ['S23-armor', '20-bitcoin-does-not-replace-everything.js',
+    ' That is this one.',
+    '',
+    'presenter-ruled cut, 3 Sep 2026 (master §13): the second dead pointer']
 ];
 const apply = (text, scene) => {
   let out = text;
@@ -78,7 +89,7 @@ const apply = (text, scene) => {
 
 // ---- the seam flag and the armor markers (not spoken, never [→]) --------
 const SEAM_FLAG = '**[Seam flagged for the presenter — not spoken. The first four sentences of this beat (from "He has not received" to "Instead, he receives money.") were spoken at Scenes 3 and 4, where the surgeon\'s claim was born and took the spend road; the join from the return line to "this is the moment to pay a debt" is yours to write or cut. The paragraph is installed verbatim and uncut, per the zero-drafting rule.]**';
-const ARMOR_STEELMAN_HEAD = '**[Notes-only — Q&A armor, never spoken: the stability steelman, relocated here by architecture Ruling 5 (the stability scene is cut; the two-question distinction and the stage-signature inoculation speak in Scene 9; the rules line stays spoken in Scene 29). Verbatim from legacy 4-20\'s three closing spoken beats. Its two pointers — "That is this line" and "That is this one" — name 4-20\'s drawn contrast, which has no frame here; flagged, not rewritten.]**';
+const ARMOR_STEELMAN_HEAD = '**[Notes-only — Q&A armor, never spoken: the stability steelman, relocated here by architecture Ruling 5 (the stability scene is cut; the two-question distinction and the stage-signature inoculation speak in Scene 9; the rules line stays spoken in Scene 29). Verbatim from legacy 4-20\'s three closing spoken beats, less two sentences: its two pointer sentences — "That is this line: restless, and it is supposed to be." and "That is this one." — named 4-20\'s drawn contrast, which has no frame here, and are cut by presenter ruling (3 September 2026, master §13); nothing is written in their place.]**';
 const ARMOR_ARSENAL_HEAD = '**[Notes-only — Q&A armor, never spoken: the two-prong displacement writeup and the trapped-exit answer, at the comparison scene\'s notes per master §9.6. Verbatim from legacy 4-20\'s Q&A arsenal.]**';
 
 // ---- the scenes (the architecture's merges; the [→] maps by construction)
@@ -229,12 +240,28 @@ if (rows.some((r) => r.installed == null)) process.exit(1);
     const src = notesOf(file);
     const n = src.split(from).length - 1;
     const r = rows.find((x) => x.scene === scene.replace('-armor', ''));
-    const hasTo = r.installed.includes(to);
+    const hasTo = to === '' || r.installed.includes(to);
     const hasFrom = r.installed.includes(from);
     if (n !== 1 || !hasTo || hasFrom) bad.push(`${scene}: "${from}" ×${n} in source · installed has replacement ${hasTo} · installed still has original ${hasFrom}`);
   });
-  check(`LEDGER: ${LEDGER.length} substitutions, each once in its source, each applied, none of the originals surviving`,
-    bad.length === 0, bad.join(' · ') || LEDGER.map((l) => `${l[0]}: “${l[2]}” → “${l[3]}”`).join(' · '));
+  const cuts = LEDGER.filter((l) => l[3] === '').length;
+  check(`LEDGER: ${LEDGER.length} entries — ${LEDGER.length - cuts} substitutions and ${cuts} presenter-ruled cuts — each once in its source, each applied, none of the originals surviving`,
+    bad.length === 0, bad.join(' · ') || LEDGER.map((l) => `${l[0]}: “${l[2].trim()}” → ${l[3] === '' ? '(cut)' : `“${l[3].trim()}”`}`).join(' · '));
+}
+
+// 4b. THE ARMOR CUTS (presenter-ruled, 3 Sep 2026 — master §13): the two dead
+// pointer sentences are gone from the installed steelman and stand, once
+// each, in the legacy source they were cut from.
+{
+  // The marker blocks quote the cut sentences by name; the check reads the
+  // armor's own paragraphs with the markers stripped.
+  const s23 = rows.find((x) => x.scene === 'S23').installed.replace(/\*\*\[[\s\S]*?\]\*\*/g, '');
+  const src420 = notesOf('20-bitcoin-does-not-replace-everything.js');
+  const POINTERS = ['That is this line: restless, and it is supposed to be.', 'That is this one.'];
+  const gone = POINTERS.every((p) => !s23.includes(p));
+  const inSource = POINTERS.every((p) => src420.split(p).length - 1 === 1);
+  check('ARMOR: the two dead pointer sentences are cut from the installed steelman (presenter ruling, 3 Sep 2026) and stand once each in the legacy 4-20 source',
+    gone && inSource, `cut from S23 ${gone} · once each in 4-20 ${inSource}`);
 }
 
 // 5. THE PROTECTED LINES — character for character, every difference reported.

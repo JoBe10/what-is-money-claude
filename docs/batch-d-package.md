@@ -39,9 +39,9 @@
 
 ## 1.1 The adaptation ledger — the only edits, and every one of them
 
-The kickoff brief limits the ledger to three classes; nothing else moved a word. The harness proves it: the installed text is the legacy notes with exactly these applied.
+The kickoff brief limits the ledger to three classes; nothing else moved a word — until the presenter's rulings of 3 September 2026 (master §13), which are recorded here in the same before → after form. The harness proves it: the installed text is the legacy notes with exactly these applied.
 
-**(a) Structural self-references replaced — four, each recorded before → after:**
+**(a) Structural self-references replaced — four — and two presenter-ruled cuts, each recorded before → after:**
 
 | Scene · source | Before | After | Why |
 |---|---|---|---|
@@ -49,6 +49,8 @@ The kickoff brief limits the ledger to three classes; nothing else moved a word.
 | S23 · `4-16` b1 | *the holding we defined one slide ago* | *the holding we defined a moment ago* | a structural self-reference (*one slide ago*); the holding is spoken earlier in the same scene |
 | S23 · `4-16` b2 | *and here's what it means tonight, concretely:* | *and here's what it means, concretely:* | a live-delivery self-reference (*tonight*) — the word deleted, nothing added |
 | S23 armor · `4-20` b6 | *that is precisely the currency chart from Section 2,* | *that is precisely the currency chart you saw earlier,* | a structural self-reference (*Section 2*) in the relocated steelman; replaced with what the viewer watched (the batch-c ledger's form) |
+| S23 armor · `4-20` b5 | *That is this line: restless, and it is supposed to be.* | *(cut)* | **presenter-ruled, 3 Sep 2026 (master §13):** a dead pointer at 4-20's drawn contrast, which has no frame in Scene 23; deleted, nothing written in its place |
+| S23 armor · `4-20` b6 | *That is this one.* | *(cut)* | **presenter-ruled, 3 Sep 2026 (master §13):** the second dead pointer; deleted, nothing written in its place |
 
 Checked and left as written: *"a few minutes ago I asked you to hold a question"* (4-04 b1 — the held question is now S15 b6, one beat before the pivot, and the phrase still holds); *"the rest of the inquiry"* (4-08 b1 — already a permitted form); *"in this record"* (4-09 b5 — the historical record, not the film); *"before you saw the table"* (4-12 b5); *"it does real work later"* (4-15 b1); *Charlie Munger* named in the spoken line at 4-10 b1 (the frozen script's own words; master §11 acknowledges him restrainedly and the visible narrative is uninterrupted); *"those eighty thousand hours"* (4-04 b4 — the Prologue's callback, the recognition landing the architecture names).
 
@@ -68,7 +70,7 @@ Plain English, one paragraph each; the full list with the map's frame references
 
 1. **Scene 16, beat 1's words.** The return line is installed first; legacy 4-04's first paragraph follows it uncut, and its first four sentences (*he has not received the goods … instead, he receives money*) were spoken at Scenes 3 and 4. The join from the return line to *"this is the moment to pay a debt"*, and the cut of the pre-spoken sentences, are yours. The paragraph carries a bold bracketed marker in §2 so the seam is visible where it sits.
 2. **Scene 22's count.** The architecture says three states; the scripts carry four advances. The package reads three compositions across four advances. If you meant three advances, two paragraphs merge in your word pass. **Closed — ruled 3 September 2026 (master §13): Scene 22 stands at the default.**
-3. **The steelman's two pointers** (*"That is this line"*, *"That is this one"*) name 4-20's drawn contrast, which has no frame in Scene 23. Keep or cut.
+3. **The steelman's two pointers** (*"That is this line"*, *"That is this one"*) name 4-20's drawn contrast, which has no frame in Scene 23. Keep or cut. **Closed — cut by presenter ruling, 3 September 2026 (master §13); §1.1 (a) records both.**
 4. **The falsifiability passage** is not installed in Act IV — its legacy position is 4-20's closing passages, Act V material. If you want it at Scene 23, where its last sentence points, say so and Batch E installs it here.
 5. **The entry seam** (Scene 15 → 16), **the empty table in the merged Scene 23**, and **the `bitcoin` coin photograph in the carrier lineage** are wiring flags for Session 2, recorded in the map.
 
@@ -180,11 +182,11 @@ Plain English, one paragraph each; the full list with the map's frame references
 
 [→] Bitcoiners will recognize the phrase — and here’s what it means, concretely: these fifty scores are my judgments, as of 2026. Every one of them is an invitation. Check each score against your own knowledge, and when we disagree, that disagreement is the framework doing its job. That is why there is a framework and not a conclusion. One caveat before anyone turns this into an investment thesis: this table compares architecture, not valuation. A strong carrier can be expensive; a weak one can be cheap. What the table tells you is which assets are structurally best positioned to compete for monetary demand. So — where does that monetary demand actually go right now?
 
-**[Notes-only — Q&A armor, never spoken: the stability steelman, relocated here by architecture Ruling 5 (the stability scene is cut; the two-question distinction and the stage-signature inoculation speak in Scene 9; the rules line stays spoken in Scene 29). Verbatim from legacy 4-20's three closing spoken beats. Its two pointers — "That is this line" and "That is this one" — name 4-20's drawn contrast, which has no frame here; flagged, not rewritten.]**
+**[Notes-only — Q&A armor, never spoken: the stability steelman, relocated here by architecture Ruling 5 (the stability scene is cut; the two-question distinction and the stage-signature inoculation speak in Scene 9; the rules line stays spoken in Scene 29). Verbatim from legacy 4-20's three closing spoken beats, less two sentences: its two pointer sentences — "That is this line: restless, and it is supposed to be." and "That is this one." — named 4-20's drawn contrast, which has no frame here, and are cut by presenter ruling (3 September 2026, master §13); nothing is written in their place.]**
 
-Which leaves one objection, and it is the one I hear most: “fine, but the thing you are proposing as a store of value moved thirty percent last quarter.” It is a fair thing to say, and the answer starts by noticing that two completely different questions are hiding inside the word stability. There is the market’s valuation of the claim — demand, liquidity, expectations. That is this line: restless, and it is supposed to be.
+Which leaves one objection, and it is the one I hear most: “fine, but the thing you are proposing as a store of value moved thirty percent last quarter.” It is a fair thing to say, and the answer starts by noticing that two completely different questions are hiding inside the word stability. There is the market’s valuation of the claim — demand, liquidity, expectations.
 
-And there is the architecture of the claim — supply rules, ownership rules, verification, control. That is this one. Architecture protects the integrity of the claim; the market decides what the claim can buy. And they are not substitutes for one another. A smooth price cannot compensate for an architecture that quietly dilutes you — that is precisely the currency chart you saw earlier, a beautifully stable price on a line that went down for fifty years. And sound architecture alone cannot guarantee demand. Both statements are true at once.
+And there is the architecture of the claim — supply rules, ownership rules, verification, control. Architecture protects the integrity of the claim; the market decides what the claim can buy. And they are not substitutes for one another. A smooth price cannot compensate for an architecture that quietly dilutes you — that is precisely the currency chart you saw earlier, a beautifully stable price on a line that went down for fifty years. And sound architecture alone cannot guarantee demand. Both statements are true at once.
 
 So here is the honest claim, and it is narrower than the one people argue against. Bitcoin does not fix its price. It fixes the rules through which the market discovers its price. Today’s volatility is the cost of monetizing a new fixed-supply asset — the stage, not the verdict, exactly as the ladder taught — and deeper markets may calm it. Expectation, not guarantee.
 
