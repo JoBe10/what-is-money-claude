@@ -29,6 +29,13 @@
 // pivot relocates to the act's exit (ruling 3 — S14 = 3, S15 = 7: the
 // approved s14-b4 carries its bytes into s15-b7, CARRIED, never re-shot).
 //
+// AMENDED AT ACTS III–IV FINAL (the Act V kickoff brief, Part A; master §13,
+// 3 Sep 2026): the household frame retires (ruling 1 — S12 = 3; s12-b2 on
+// file as s12-b2-household; the Argentina and principle cells carry their
+// bytes into s12-b2 and s12-b3, CARRIED); the exit lands on the tower
+// (ruling 3 — the triad-return coda on file as s15-b7-triad; the new s15-b7
+// is the base slab with the hinge question, captured fresh).
+//
 // Modes:
 //   (default)        capture every cell, then cut the record.
 //   --record-only    re-cut sheet.html + states.json from the meta and the
@@ -65,20 +72,24 @@ const SEED_SCRIPT = () => {
 
 const SCENES = [
   ['S11', 'Scene 11 — Three Familiar Jobs (5 beats)'],
-  ['S12', 'Scene 12 — We Already Split Those Jobs (4 beats · the clean handoff · the renders replace the words)'],
+  ['S12', 'Scene 12 — We Already Split Those Jobs (3 beats · the clean handoff · the household spoken, not staged · the renders replace the words)'],
   ['S13', 'Scene 13 — The Order of Monetization (7 beats — the r2 split)'],
   ['S14', 'Scene 14 — The Coffee Objection (3 beats · folded into the ladder world · the contradiction fixed)'],
-  ['S15', 'Scene 15 — The Tower (7 beats · CANDIDATE A SELECTED · the pivot coda as the act’s final beat)']
+  ['S15', 'Scene 15 — The Tower (7 beats · CANDIDATE A SELECTED · the exit on the base slab, the hinge question beneath it)']
 ];
 
 // The relocation (the Act III final ruling 3): not a retirement — the
 // approved composition moved beats with its bytes.
 const RELOCATED = [
-  { was: 's14-b4', now: 's15-b7', bytes: 'carried', reason: 'the pivot relocates to the act’s exit — the Act III final ruling 3, 3 Sep 2026, master §13' }
+  { was: 's14-b4', now: 's15-b7-triad', bytes: 'carried', reason: 'the pivot relocates to the act’s exit — the Act III final ruling 3, 3 Sep 2026, master §13; the composition then retired to file by the Acts III–IV final ruling 3 of the same day (the exit lands on the tower)' },
+  { was: 's12-b3', now: 's12-b2', bytes: 'carried', reason: 'the household frame retires — the Acts III–IV final ruling 1, 3 Sep 2026, master §13; Argentina’s objects are beat 2' },
+  { was: 's12-b4', now: 's12-b3', bytes: 'carried', reason: 'the household frame retires — the Acts III–IV final ruling 1, 3 Sep 2026, master §13; the principle is beat 3' }
 ];
 
 const RETIRED = [
   { file: 's12-b3-block.png', was: 's12-b3', staging: 'the r1 dated-fact block over the deep-dimmed columns — retired by r2 ruling 2' },
+  { file: 's12-b2-household.png', was: 's12-b2', staging: 'the text-only household row in the legacy word register — retired by the Acts III–IV final ruling 1 (3 Sep 2026): the household sentence is spoken over beat 1 as the empty columns land; its bytes carried into this name' },
+  { file: 's15-b7-triad.png', was: 's15-b7', staging: 'the pivot coda over the returned triad (the approved s14-b4’s bytes) — retired by the Acts III–IV final ruling 3 (3 Sep 2026): the exit lands on the tower’s base slab; its bytes carried into this name' },
   { file: 's13-b5-pair.png', was: 's13-b5', staging: 'the merged two-gate advance — superseded by Batch C r2 ruling 3 (the beat split)' },
   { file: 's14-b1-study.png', was: 's14-b1', staging: 'the display-scale coffee study over the condensed home row — retired by Batch C r2 ruling 4 (the fold); its r1 bytes carried into this name' },
   { file: 's15-b1-boxes.png', was: 's15-b1', staging: 'the three-box tower, build 1 — superseded by r2 ruling 4' },
@@ -91,7 +102,7 @@ const RETIRED = [
 
 const CLASS_NOTE = {
   approved: ['THE APPROVED SET',
-    'Every beat state of the act, approved in full at the flipbook walk of 2 September 2026 — the go-ahead is given, the fourteen flags are closed as accepted records, and these cells are the visual authority for the Batch C implementation: a settled scene state that is not its approved cell at zero pixels is a defect. The nine medium-bearing cells carry the replaced medium mark (ruling 3 of the implementation brief) as the updated approved states — and the Batch C r2 rulings (master §13, 2 Sep 2026) re-render the S12 cells (the clean handoff, the columns’ objects), split S13 to seven beats, and fold S14 into the ladder world, each amended cell the updated approved state on its ruling’s authority. The Act III final rulings (master §13, 3 Sep 2026) re-render s12-b3 / s12-b4 (the renders replace the words) and s14-b2 (the contradiction fixed), and relocate the pivot to the act’s exit — s14-b4’s bytes carried into s15-b7. The gate is the presenter’s re-walk of Scenes 11–15 in the deck.'],
+    'Every beat state of the act, approved in full at the flipbook walk of 2 September 2026 — the go-ahead is given, the fourteen flags are closed as accepted records, and these cells are the visual authority for the Batch C implementation: a settled scene state that is not its approved cell at zero pixels is a defect. The nine medium-bearing cells carry the replaced medium mark (ruling 3 of the implementation brief) as the updated approved states — and the Batch C r2 rulings (master §13, 2 Sep 2026) re-render the S12 cells (the clean handoff, the columns’ objects), split S13 to seven beats, and fold S14 into the ladder world, each amended cell the updated approved state on its ruling’s authority. The Act III final rulings (master §13, 3 Sep 2026) re-render s12-b3 / s12-b4 (the renders replace the words) and s14-b2 (the contradiction fixed), and relocate the pivot to the act’s exit — s14-b4’s bytes carried into s15-b7. The Acts III–IV final rulings (master §13, 3 Sep 2026) retire the household frame — S12 = 3, the Argentina and principle cells carrying their bytes into s12-b2 and s12-b3 — and land the exit on the tower: the new s15-b7 is the base slab with the hinge question beneath it, and the triad-return coda is on file as s15-b7-triad. The gate is the presenter’s re-walk of Scenes 11–15 in the deck.'],
   'on-file': ['ON FILE — the unselected candidate',
     'Candidate B, the convergence of claims. Scene 15 is candidate A by the presenter’s selection; B stays on file under the aesthetic law so the selection can be changed by changing one letter, never by redrawing.']
 };
@@ -187,7 +198,7 @@ const CLASS_NOTE = {
         return `<h3 class="run">${name}</h3><div class="row">${list.map(figure).join('')}</div>`;
       };
       return `<h2>${title}</h2>
-${run((m) => m.system === 'A' || !m.system, 'Candidate A — SELECTED (presenter, 2 Sep 2026): the approved S15 states, and the pivot coda (b7) as the act’s final beat')}
+${run((m) => m.system === 'A' || !m.system, 'Candidate A — SELECTED (presenter, 2 Sep 2026): the approved S15 states, and the exit (b7) — the base slab with the hinge question beneath it, the Acts III–IV final ruling 3')}
 ${run((m) => m.system === 'B', 'Candidate B — on file (the unselected system, kept under the aesthetic law)')}`;
     }
     const list = ids.filter((id) => meta[id].scene === key)
@@ -242,16 +253,21 @@ S12 brick glyph and the s14-b4 re-render seen and accepted by name, all fourteen
 By ruling 3 of the same brief the <b>medium</b> render is replaced (the handshake read as agreement, not exchange)
 and the nine medium-bearing cells — s11-b3 · s11-b4 · s11-b5 · s12-b1 · s13-b5 · s13-b6 · s14-b2 · s14-b3 · s14-b4 —
 are re-rendered here as <b>the updated approved states</b>.</p>
-<p class="note">The beat map stands at <b>26 beats</b> (S11 5 · S12 4 · <b>S13 7</b> · <b>S14 3</b> · <b>S15 7</b> — amended by
-Batch C r2 ruling 3 and by the Act III final ruling 3, master §13). The disc holds the triad's center wherever the home
-base appears (S11, and the pivot coda at S15 b7 — s12-b1 left the disc record at the clean-handoff ruling); monetary
-assets appear on the ladder only as climbers; the superseded stagings stay on file (s12-b3-block, s15-b*-boxes,
-s13-b5-pair, s14-b1-study — the last carrying its r1 bytes into retirement). Cell classes: <b>${counts}</b>.</p>
+<p class="note">The beat map stands at <b>25 beats</b> (S11 5 · <b>S12 3</b> · <b>S13 7</b> · <b>S14 3</b> · <b>S15 7</b> — amended by
+Batch C r2 ruling 3, by the Act III final ruling 3 and by the Acts III–IV final ruling 1, master §13). The disc holds the triad's center wherever the home
+base appears (S11 alone — s12-b1 left the disc record at the clean-handoff ruling, and the pivot coda no longer returns to the triad); monetary
+assets appear on the ladder only as climbers; the superseded stagings stay on file (s12-b3-block, s12-b2-household, s15-b*-boxes,
+s13-b5-pair, s14-b1-study, s15-b7-triad — the retired household row, the study and the triad coda carrying their bytes into retirement). Cell classes: <b>${counts}</b>.</p>
 <p class="note"><b>Amended at Act III final (3 September 2026, master §13 — three presenter rulings):</b> the Argentina
 columns' <b>renders replace the words</b> (s12-b3, s12-b4 re-rendered; S12-F1 is ADAPT); Scene 14's <b>contradiction is
 fixed</b> — s14-b2's landed line reads the ruled wording; and <b>the pivot relocates to the act's exit</b> — the approved
 s14-b4 composition carries its bytes into <b>s15-b7</b>, the act's final beat after the tower's held question, so the act
 leaves on the question. <b>The next gate is the presenter's re-walk of Scenes 11–15 in the deck.</b></p>
+<p class="note"><b>Amended at Acts III–IV final (3 September 2026, master §13 — the Act V kickoff brief, Part A):</b> <b>the household frame
+retires</b> — the household sentence is spoken over beat 1 as the empty columns land, the text-only row is on file as s12-b2-household, and
+S12 = 3 (Argentina's objects b2, the principle b3, each carrying its approved bytes); and <b>the act's exit lands on the tower</b> — the pivot coda keeps
+its words, but on the final advance the tower recedes to its glowing base slab and the hinge question lands beneath it; the triad-return coda is on file
+as s15-b7-triad, and the new <b>s15-b7</b> is captured fresh. <b>The wording of the question is protected as Act IV's hinge question.</b></p>
 ${legend}
 <hr>
 ${sceneSections}
@@ -259,11 +275,20 @@ ${sceneSections}
 
   fs.writeFileSync(path.join(OUT, 'states.json'), JSON.stringify({
     date: new Date().toISOString(),
-    session: 'act-3-final',
-    beatMap: { S11: 5, S12: 4, S13: 7, S14: 3, S15: 7, total: 26 },
+    session: 'acts-3-4-final',
+    beatMap: { S11: 5, S12: 3, S13: 7, S14: 3, S15: 7, total: 25 },
     cellCount: ids.length,
-    beatMapAuthority: 'docs/batch-c-package.md §1 — frozen 2 September 2026, amended the same day by Batch C r2 ruling 3 (S13 = 7, master §13) and on 3 September 2026 by the Act III final ruling 3 (S14 = 3, S15 = 7, master §13)',
-    provenanceAuthority: 'docs/act-3-provenance.md as amended 3 September 2026 — 0 PORT · 4 ADAPT (S11, S12, S13, S14) · S15 NEW closed by the candidate-A selection; the pivot coda at S15 b7 is S11-F1’s return',
+    beatMapAuthority: 'docs/batch-c-package.md §1 — frozen 2 September 2026, amended the same day by Batch C r2 ruling 3 (S13 = 7, master §13), on 3 September 2026 by the Act III final ruling 3 (S14 = 3, S15 = 7, master §13), and on 3 September 2026 by the Acts III–IV final ruling 1 (S12 = 3, Act III = 25, master §13)',
+    provenanceAuthority: 'docs/act-3-provenance.md as amended 3 September 2026 — 0 PORT · 5 ADAPT (S11, S12, S13, S14, S15-F3) · S15-F1/F2 NEW closed by the candidate-A selection; the exit at S15 b7 is S15-F3, the base slab and the hinge question',
+    actsFinal: {
+      date: '3 September 2026',
+      authority: 'the Act V kickoff brief, Part A (master §13, the Acts III–IV final rulings — recorded before the pipeline was touched)',
+      rulings: [
+        'the household frame retires (1): the household sentence is spoken over beat 1 as the empty columns land; the text-only row on file as s12-b2-household; S12 = 3, Act III = 25; s12-b3 → s12-b2 and s12-b4 → s12-b3, bytes carried',
+        'the exit lands on the tower (3): the pivot coda keeps its words; on the final advance the tower recedes to its glowing base slab and “What makes something a good store of value?” lands beneath it — no return to the triad; the triad-return coda on file as s15-b7-triad; the new s15-b7 captured fresh; the wording protected as Act IV’s hinge question'
+      ],
+      gate: 'the presenter’s re-walk of Scenes 11–16 and 23 in the deck'
+    },
     act3Final: {
       date: '3 September 2026',
       authority: 'the Act IV kickoff brief, Part A (master §13, the three Act III final rulings — recorded before the pipeline was touched)',
@@ -296,7 +321,7 @@ ${sceneSections}
       gate: 'the presenter’s re-walk of Scenes 9 and 11–15 in the deck'
     },
     approvedSet,
-    discCells: ids.filter((id) => ['s11-b1', 's11-b2', 's11-b3', 's11-b4', 's11-b5', 's15-b7'].includes(id)),
+    discCells: ids.filter((id) => ['s11-b1', 's11-b2', 's11-b3', 's11-b4', 's11-b5'].includes(id)),
     carried: ids.filter((id) => meta[id].carried),
     relocated: RELOCATED,
     retired: RETIRED,

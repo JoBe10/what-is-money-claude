@@ -1,18 +1,18 @@
 {
-  "date": "2026-09-03T02:37:19.951Z",
-  "session": "act-3-final",
+  "date": "2026-09-03T13:11:53.931Z",
+  "session": "acts-3-4-final",
   "limits": {
     "cornerMean": 6,
     "borderMean": 6
   },
   "frozenBeatMap": {
     "S11": 5,
-    "S12": 4,
+    "S12": 3,
     "S13": 7,
     "S14": 3,
     "S15": 7,
-    "total": 26,
-    "cells": 32
+    "total": 25,
+    "cells": 31
   },
   "ruledClasses": {
     "S11-F1": "ADAPT",
@@ -20,11 +20,15 @@
     "S13-F1": "ADAPT",
     "S14-F1": "ADAPT",
     "S15-F1": "NEW",
-    "S15-F2": "NEW"
+    "S15-F2": "NEW",
+    "S15-F3": "ADAPT"
   },
   "carriedSha": {
     "s14-b1-study.png": "e7cc6fff9a1142573f5a30878505e8625f1c57ca1cac1b95f881167458821081",
-    "s15-b7.png": "8e69451b67206dda1f56e54543a5e088290a08e6c692e701baf12ee44ee6538d"
+    "s15-b7-triad.png": "8e69451b67206dda1f56e54543a5e088290a08e6c692e701baf12ee44ee6538d",
+    "s12-b2-household.png": "9512f386e3e9ecda4086c5f8b53581595620d30bc16665cd3995708bc80f98b5",
+    "s12-b2.png": "2c83b833f83ee287dfabce4eeec7fbf1ba016528789ad891737f126de3ad0b55",
+    "s12-b3.png": "b6733b08b218a1e650165221546d40f934aa3356a0fecfdc76a5171170be4a0a"
   },
   "retiredFiles": [
     "s12-b3-block.png",
@@ -35,7 +39,9 @@
     "s15-b5-boxes.png",
     "s15-b6-boxes.png",
     "s13-b5-pair.png",
-    "s14-b1-study.png"
+    "s14-b1-study.png",
+    "s12-b2-household.png",
+    "s15-b7-triad.png"
   ],
   "reportedNotGated": "warmPixelsReported — the act carries the accent by design at the ladder’s foundation state, both candidates’ foundation scopes and the disc at the triad’s center, so warmth is evidence here rather than a gate.",
   "cells": [
@@ -140,27 +146,12 @@
       },
       "cornerMean": 0,
       "borderMean": 0,
-      "maxLum": 191,
-      "pxAbove32": 8052,
-      "warmPixelsReported": 1632
-    },
-    {
-      "id": "s12-b3",
-      "pass": true,
-      "checks": {
-        "corner": true,
-        "border": true,
-        "content": true,
-        "size": true
-      },
-      "cornerMean": 0,
-      "borderMean": 0,
       "maxLum": 243.6,
       "pxAbove32": 27380,
       "warmPixelsReported": 19473
     },
     {
-      "id": "s12-b4",
+      "id": "s12-b3",
       "pass": true,
       "checks": {
         "corner": true,
@@ -426,8 +417,8 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 46441,
-      "warmPixelsReported": 9174
+      "pxAbove32": 34646,
+      "warmPixelsReported": 8627
     },
     {
       "id": "s15-b1-b",
@@ -520,23 +511,23 @@
       "warmPixelsReported": 513
     }
   ],
-  "checks": 26,
+  "checks": 30,
   "failures": 0,
   "results": [
     {
-      "name": "CELLS: 32 measured — corner ≤ 6, border ≤ 6, content present, 1920×1080",
+      "name": "CELLS: 31 measured — corner ≤ 6, border ≤ 6, content present, 1920×1080",
       "ok": true,
-      "detail": "32/32"
+      "detail": "31/31"
     },
     {
-      "name": "CELLS: the sheet carries exactly 32 cells (26 beats; S15 twice, once per candidate)",
+      "name": "CELLS: the sheet carries exactly 31 cells (25 beats; S15 twice, once per candidate)",
       "ok": true,
-      "detail": "32"
+      "detail": "31"
     },
     {
       "name": "MAP: the ruled classes transcribed here are the classes the amended docs/act-3-provenance.md states",
       "ok": true,
-      "detail": "6/6 rows agree"
+      "detail": "7/7 rows agree"
     },
     {
       "name": "MAP: the coordination-scales NEW row is recorded as not built",
@@ -554,7 +545,17 @@
       "detail": "recorded"
     },
     {
-      "name": "MAP: the pivot coda is recorded at S15 b7 as S11-F1’s return (the Act III final ruling 3)",
+      "name": "MAP: the exit is recorded as S15-F3 (ADAPT) — the base slab and the hinge question — and the triad-return coda as on file (the Acts III–IV final ruling 3)",
+      "ok": true,
+      "detail": "recorded"
+    },
+    {
+      "name": "MAP: S11-F1 no longer serves S15 b7 — the disc’s Act III appearances are S11 b1–b5 alone",
+      "ok": true,
+      "detail": "recorded"
+    },
+    {
+      "name": "MAP: S12-F1 records the household frame’s retirement and serves three beats (the Acts III–IV final ruling 1)",
       "ok": true,
       "detail": "recorded"
     },
@@ -571,7 +572,7 @@
     {
       "name": "MAP: no cell is unclassified",
       "ok": true,
-      "detail": "32/32 carry a frame and a class"
+      "detail": "31/31 carry a frame and a class"
     },
     {
       "name": "MAP: every cell names its source (legacy slide, or the ruling that opened it)",
@@ -579,9 +580,9 @@
       "detail": "all named"
     },
     {
-      "name": "BEATS: the approved set covers every beat of the frozen map exactly once — Act III is 26",
+      "name": "BEATS: the approved set covers every beat of the frozen map exactly once — Act III is 25",
       "ok": true,
-      "detail": "S11 5 · S12 4 · S13 7 · S14 3 · S15 7 = 26 approved beats"
+      "detail": "S11 5 · S12 3 · S13 7 · S14 3 · S15 7 = 25 approved beats"
     },
     {
       "name": "SELECTION: the six candidate-A cells are the approved S15 states, and the six B cells are on file",
@@ -591,7 +592,7 @@
     {
       "name": "SELECTION: no cell outside Scene 15 carries a candidate system",
       "ok": true,
-      "detail": "19 non-S15 cells clean"
+      "detail": "18 non-S15 cells clean"
     },
     {
       "name": "SELECTION: the only review classes on the record are approved and on-file (the go-ahead is given)",
@@ -599,9 +600,14 @@
       "detail": "approved · on-file"
     },
     {
-      "name": "PIVOT: s15-b7 is the act’s final beat — S11-F1’s return, no candidate system, approved, its bytes carried — and s14-b4 has left the sheet",
+      "name": "EXIT: s15-b7 is the act’s final beat — S15-F3, the base slab and the hinge question, ADAPT, approved, captured fresh — the triad-return coda on file as s15-b7-triad, and s14-b4 gone from the sheet",
       "ok": true,
-      "detail": "coda true · s14-b4 gone true"
+      "detail": "exit true · triad coda on file true · s14-b4 gone true"
+    },
+    {
+      "name": "HOUSEHOLD: Scene 12 stands at b1–b3, b2 and b3 carrying the approved Argentina and principle bytes; the household row on file as s12-b2-household and s12-b4 gone",
+      "ok": true,
+      "detail": "beats 1,2,3 · carried true · household on file true"
     },
     {
       "name": "THREAD: the disc (the legacy token) is built exactly once, inside the triad hub — and ClaimObject appears nowhere",
@@ -639,9 +645,9 @@
       "detail": "bitcoin at the sov berth only, never a stage mark"
     },
     {
-      "name": "CARRIED: s14-b1-study.png carries the r1 study’s exact bytes (r2 ruling 4) and s15-b7.png carries the approved s14-b4’s exact bytes (the Act III final ruling 3) — sha256 proven",
+      "name": "CARRIED: s14-b1-study.png carries the r1 study’s bytes (r2 ruling 4); s15-b7-triad.png the approved s14-b4’s (the Act III final ruling 3, retired by the Acts III–IV final ruling 3); s12-b2-household.png the approved household row’s, and s12-b2.png / s12-b3.png the approved Argentina and principle cells’ (the Acts III–IV final ruling 1) — sha256 proven",
       "ok": true,
-      "detail": "e7cc6fff… and 8e69451b… match"
+      "detail": "5 files match"
     },
     {
       "name": "RETIRED: states.json records the r2 retirements (the study, the pair staging)",
@@ -649,9 +655,14 @@
       "detail": "study true · pair true"
     },
     {
-      "name": "RETIRED: the superseded stagings are on file under their retired names (s12-b3-block, s15-b*-boxes, s13-b5-pair, s14-b1-study)",
+      "name": "RETIRED: states.json records the Acts III–IV final retirements (the household row, the triad coda)",
       "ok": true,
-      "detail": "9/9 on file"
+      "detail": "household true · triad coda true"
+    },
+    {
+      "name": "RETIRED: the superseded stagings are on file under their retired names (s12-b3-block, s12-b2-household, s15-b*-boxes, s13-b5-pair, s14-b1-study, s15-b7-triad)",
+      "ok": true,
+      "detail": "11/11 on file"
     }
   ]
 }

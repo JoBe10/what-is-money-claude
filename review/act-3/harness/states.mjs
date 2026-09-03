@@ -101,6 +101,22 @@
 //     final beat, after the tower's held question — S14 = 3, S15 = 7. The
 //     approved s14-b4 composition carries its bytes into s15-b7 (the cell is
 //     CARRIED, never re-captured; the record proof checks its sha).
+//
+// AMENDED AT ACTS III–IV FINAL (the Act V kickoff brief, Part A; master §13,
+// 3 Sep 2026 — the rulings, recorded before this file was touched):
+//   · THE HOUSEHOLD FRAME RETIRES (ruling 1): the household sentence is
+//     spoken over beat 1 as the empty columns land; the text-only household
+//     row retires to file as s12-b2-household (its bytes carried into the
+//     retired name). S12 = 3 — Argentina's objects are b2 and the principle
+//     is b3, each carrying the approved cell's exact bytes under its new
+//     name (CARRIED, never re-shot; the record proof checks the shas).
+//   · THE EXIT LANDS ON THE TOWER (ruling 3): the pivot coda keeps its words
+//     but no longer returns to the triad — on the final advance the tower
+//     recedes to its glowing base slab and the hinge question lands beneath
+//     it. The triad-return cell retires to file as s15-b7-triad (the
+//     approved s14-b4's bytes, carried); the new s15-b7 is candidate A's own
+//     foundation slab with the question in the deck's question register
+//     (S15-F3, ADAPT). The disc's Act III appearances are S11 b1–b5 alone.
 
 import { DarkFieldImage } from '/src/components/DarkField.js';
 import { StageLadder } from '/src/components/section-3/StageLadder.js';
@@ -339,14 +355,10 @@ const ARGENTINA_RENDERS = [
   [{ subject: 'usd', ar: NOTE_AR, alt: 'A folded dollar note' },
     { subject: 'property', ar: 1254 / 1254, alt: 'A house — the real-estate render' }]
 ];
-// The household beat's row (the installed script's own beat: paid in one
-// money, the home priced in it, savings elsewhere). The word rows are
-// drafted from the installed script — flagged for the presenter's word pass.
-const HOUSEHOLD_CELLS = [
-  { marks: [], word: 'one money' },
-  { marks: [], word: 'the same money' },
-  { marks: [], word: 'property · shares · gold' }
-];
+// The household beat's text-only row (one money · the same money · property
+// · shares · gold) is RETIRED by the Acts III–IV final ruling 1 (3 Sep 2026,
+// master §13): the household sentence is spoken over beat 1 as the empty
+// columns land. The row is on file as s12-b2-household; it has no builder.
 const LEGACY_KICKER = 'Argentina, five decades.';
 // The legacy principle with the act's own word — "jobs" for "functions",
 // following the installed script; flagged for the word pass.
@@ -699,11 +711,17 @@ const A_LINKS = [
   { from: 'deposits', top: 418, height: 80, caption: LINK_TWO }
 ];
 
+// Beat 7 — the exit (the Acts III–IV final ruling 3, 3 Sep 2026, master §13):
+// the tower recedes to its glowing base slab — the upper layers, the claim
+// links and the held question's drop gone — and nothing else of A stands.
+// The slab keeps its A position and its foundation look; the hinge question
+// lands beneath it in the deck's question register (the cell builder below).
 function candidateA(st, beat) {
   const L = layer(st, { classes: 's3f-money' });
   L.dataset.step = String(beat);
   L.dataset.live = 'false';
-  const shown = { apps: beat >= 1, deposits: beat >= 2, base: beat >= 3 };
+  const exit = beat >= 7;
+  const shown = { apps: beat >= 1 && !exit, deposits: beat >= 2 && !exit, base: beat >= 3 };
   const foundation = beat >= 5;
 
   A_SLABS.forEach((s) => {
@@ -743,7 +761,7 @@ function candidateA(st, beat) {
   });
 
   A_LINKS.forEach((lk, i) => {
-    const on = (i === 0 && beat >= 2) || (i === 1 && beat >= 3);
+    const on = !exit && ((i === 0 && beat >= 2) || (i === 1 && beat >= 3));
     if (!on) return;
     towerLink(L, { x: 960, top: lk.top, height: lk.height, caption: lk.caption, dim: foundation });
   });
@@ -901,38 +919,35 @@ cell('s11-b5', {
   triad(st, { jobs: 3, continuity: true });
 });
 
-// ============================================================ SCENE 12 (4 beats)
+// ============================================================ SCENE 12 (3 beats)
+//
+// S12 = 3 since the Acts III–IV final ruling 1 (3 Sep 2026, master §13): the
+// household sentence rides beat 1 as the empty columns land; the text-only
+// household frame is on file as s12-b2-household. The Argentina and principle
+// cells carry the approved cells' exact bytes under their new beat numbers
+// (CARRIED — never re-shot; the record proof checks the shas).
 
 cell('s12-b1', {
   scene: 'S12', beat: 1, frame: 'S12-F1', klass: 'ADAPT', review: 'approved',
-  source: '3-02-the-functions-separate, build 1 — the three heads land empty, ON CLEAN BLACK (r2 ruling 1); the frame is ADAPT since the Act III final ruling 1, the change landing at b3',
-  caption: 'Beat 1 · the clean handoff, as you ruled it: the triad completes its recede before the heads land, and the three column heads stand empty on clean black — PRICED IN · PAID IN · SAVED IN, the jobs re-stated as columns, no element of the home frame beneath them. This is the legacy slide’s own build 1; the r2 staging that held the receded triad under the heads is superseded, and the cell leaves the disc-cell record.'
+  source: '3-02-the-functions-separate, build 1 — the three heads land empty, ON CLEAN BLACK (r2 ruling 1); the frame is ADAPT since the Act III final ruling 1, the change landing at b2',
+  caption: 'Beat 1 · the clean handoff, as you ruled it: the triad completes its recede before the heads land, and the three column heads stand empty on clean black — PRICED IN · PAID IN · SAVED IN, the jobs re-stated as columns, no element of the home frame beneath them. The household sentence is spoken over this frame (the Acts III–IV final ruling 1): you may already live the split — paid in one money, your home priced in it, savings somewhere else. This is the legacy slide’s own build 1; the r2 staging that held the receded triad under the heads is superseded, and the cell leaves the disc-cell record.'
 }, (st) => {
   split(st, {});
 });
 
 cell('s12-b2', {
-  scene: 'S12', beat: 2, frame: 'S12-F1', klass: 'ADAPT', review: 'approved',
-  source: 'the installed household beat through 3-02’s column treatment (untouched by the Act III final ruling 1 — the household row carries no render and is not named)',
-  caption: 'Beat 2 · the household beat: you may already live the split. The columns fill in the legacy’s own word register — one money · the same money · property · shares · gold.',
-  flag: 'The household row’s on-screen words are drafted from the installed script (paid in one money, your home priced in it, savings in property, shares, gold) — the legacy columns only ever carried Argentina. Your word pass owns the final copy; the treatment is the legacy’s.'
-}, (st) => {
-  split(st, { cells: HOUSEHOLD_CELLS });
-});
-
-cell('s12-b3', {
-  scene: 'S12', beat: 3, frame: 'S12-F1', klass: 'ADAPT', review: 'approved',
-  source: '3-02-the-functions-separate, build 2 + r2 ruling 2 + the Act III final ruling 1 — the renders replace the words',
-  caption: 'Beat 3 · Argentina lands the legacy way, and the columns carry their objects as you ruled it — the renders replacing the words: under PRICED IN the folded dollar; under PAID IN the folded peso note; under SAVED IN the dollar with the register’s real-estate render — each column the header, then the render(s), nothing else. The USD / ARS codes and the dollars / pesos words are retired; “Argentina, five decades.” stands under the heads at full voice; the five-decade span and the every-stripe clause ride the spoken beat.',
+  scene: 'S12', beat: 2, frame: 'S12-F1', klass: 'ADAPT', review: 'approved', carried: true, carriedFrom: 's12-b3',
+  source: '3-02-the-functions-separate, build 2 + r2 ruling 2 + the Act III final ruling 1 — the renders replace the words; beat 3 → beat 2 by the Acts III–IV final ruling 1, the approved cell’s bytes carried',
+  caption: 'Beat 2 · Argentina lands the legacy way, and the columns carry their objects as you ruled it — the renders replacing the words: under PRICED IN the folded dollar; under PAID IN the folded peso note; under SAVED IN the dollar with the register’s real-estate render — each column the header, then the render(s), nothing else. The USD / ARS codes and the dollars / pesos words are retired; “Argentina, five decades.” stands under the heads at full voice; the five-decade span and the every-stripe clause ride the spoken beat.',
   flag: 'Your ruling names the order — the header, then the render(s) — but not the band’s baseline. The renders stand in the slot the text rows vacated, bottom-aligned on one shared band baseline at the slot’s bottom (cell-relative 188, absolute 684): the square house fills the band’s full height from 496, the notes bottom-align beside it, the saved pair at the marks row’s own 26px gap, the principle eighty pixels beneath. One number (the baseline, or a smaller cap for the pair) re-places everything.'
 }, (st) => {
   split(st, { cells: ARGENTINA_CELLS, kicker: true, renders: ARGENTINA_RENDERS });
 });
 
-cell('s12-b4', {
-  scene: 'S12', beat: 4, frame: 'S12-F1', klass: 'ADAPT', review: 'approved',
-  source: '3-02-the-functions-separate, build 3 + the Act III final ruling 1 — the principle, over the render-bearing columns',
-  caption: 'Beat 4 · the principle lands at full voice in the legacy’s own slot, over the standing Argentina columns — the renders under the heads, no text rows — and the kicker: the legacy slide’s own final state, carrying the ruled objects in place of the words.',
+cell('s12-b3', {
+  scene: 'S12', beat: 3, frame: 'S12-F1', klass: 'ADAPT', review: 'approved', carried: true, carriedFrom: 's12-b4',
+  source: '3-02-the-functions-separate, build 3 + the Act III final ruling 1 — the principle, over the render-bearing columns; beat 4 → beat 3 by the Acts III–IV final ruling 1, the approved cell’s bytes carried',
+  caption: 'Beat 3 · the principle lands at full voice in the legacy’s own slot, over the standing Argentina columns — the renders under the heads, no text rows — and the kicker: the legacy slide’s own final state, carrying the ruled objects in place of the words.',
   flag: 'The principle reads “jobs” where the legacy read “functions,” following the installed script and the act’s titles — one word, twice, flagged for your word pass as in r1.'
 }, (st) => {
   split(st, { cells: ARGENTINA_CELLS, kicker: true, principle: true, renders: ARGENTINA_RENDERS });
@@ -1112,17 +1127,21 @@ cell('s15-b6-a', {
   candidateA(st, 6);
 });
 
-// The pivot coda — the act's final beat (the Act III final ruling 3, 3 Sep
-// 2026, master §13): S11-F1's return, relocated from S14 b4 with its bytes
-// carried. The builder is the approved s14-b4 builder, unchanged; the cell
-// is never re-captured (CARRIED), and the landed proof re-builds it fresh
-// to prove the carried bytes at zero pixels.
+// The exit — the act's final beat (the Acts III–IV final ruling 3, 3 Sep
+// 2026, master §13): the pivot coda keeps its words, and its visual is the
+// tower receding to its glowing base slab with the hinge question beneath it
+// — no return to the triad. The triad-return composition (the approved
+// s14-b4's bytes, relocated here on 3 Sep 2026) retires to file as
+// s15-b7-triad. S15-F3, ADAPT: candidate A's own foundation slab (the s15-b5-a
+// / s15-b6-a look, its A position) plus the question in the deck's question
+// register (the slot the retired coda used) — nothing redrawn.
 cell('s15-b7', {
-  scene: 'S15', beat: 7, frame: 'S11-F1', klass: 'ADAPT', review: 'approved', carried: true,
-  source: '3-01’s triad (the home base returning) + r2 rulings 1 and 3 + the Act III final ruling 3 — the pivot coda, relocated from S14 b4 with its bytes carried',
-  caption: 'Beat 7 · the pivot coda — the act’s final beat, relocated here from Scene 14’s close as you ruled it: after the held question the tower gives the frame back to the home base, whole — the disc at its center, the job objects at its spokes — STORE OF VALUE at full voice while the other two jobs recede, and the question lands in the home frame’s own statement slot: “What makes something a good store of value?” The act leaves on the question, and Scene 16 opens from here. The composition is the approved s14-b4 cell, its bytes carried.'
+  scene: 'S15', beat: 7, frame: 'S15-F3', klass: 'ADAPT', review: 'approved',
+  source: 'candidate A’s foundation state (s15-b5-a / s15-b6-a: the base slab in its foundation look, at its A position) + the deck’s question register — the Acts III–IV final ruling 3, 3 Sep 2026; the triad-return coda on file as s15-b7-triad',
+  caption: 'Beat 7 · the exit — the act’s final beat, as you ruled it: on the final advance the tower recedes to its glowing base slab — PAYMENT APPS, BANK DEPOSITS, both claim links and the held question’s drop dissolve — and the hinge question lands beneath the one solid object left in the frame: “What makes something a good store of value?” The spoken coda is untouched. The act leaves on the question over the base, and Scene 16’s homecoming morphs from this slab: the disc appears at its center and rises to the fork’s apex.',
+  flag: 'One honest render, two numbers of wiring. The base slab keeps its A position (top 498, 260 × 60) and its foundation look — the orange edge and glow — rather than rising toward the frame’s center; and the held question’s drop (the line reaching into black at beat 6) dissolves with the upper layers rather than staying to reach toward the question. One number lifts the slab; one word keeps the drop.'
 }, (st) => {
-  triad(st, { jobs: 3, lit: 'sov' });
+  candidateA(st, 7);
   text(st, 'What makes something a good store of value?',
     'left:180px; right:180px; top:872px; text-align:center; text-indent:0;' + STATEMENT(1, 46));
 });

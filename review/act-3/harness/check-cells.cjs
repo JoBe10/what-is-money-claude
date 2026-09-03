@@ -42,6 +42,14 @@
 // against the recorded sha256), carries no candidate system, is S11-F1's
 // return, and s14-b4 itself is gone from the sheet (relocated, not retired).
 //
+// AMENDED AT ACTS III–IV FINAL (master §13, 3 Sep 2026 — the Act V kickoff
+// brief, Part A): S12 = 3 and Act III = 25 (ruling 1 — the household frame
+// on file as s12-b2-household; s12-b2 and s12-b3 carry the approved
+// Argentina and principle cells' exact bytes, proven by sha256); the exit
+// lands on the tower (ruling 3 — s15-b7 is S15-F3, ADAPT, captured fresh;
+// the triad-return coda on file as s15-b7-triad carrying the approved
+// s14-b4's exact bytes). 31 cells.
+//
 // Usage: node check-cells.cjs [--port 5273]
 const { chromium } = require('playwright');
 const crypto = require('crypto');
@@ -56,9 +64,10 @@ const OUT = path.join(__dirname, '..', 'states');
 
 // The map as amended by Batch C r2 ruling 3 (master §13, 2 Sep 2026): S13 = 7;
 // and by the Act III final ruling 3 (master §13, 3 Sep 2026): S14 = 3, S15 = 7.
-const FROZEN = { S11: 5, S12: 4, S13: 7, S14: 3, S15: 7 };
-const TOTAL_BEATS = 26;
-const TOTAL_CELLS = 32;
+// And by the Acts III–IV final ruling 1 (master §13, 3 Sep 2026): S12 = 3.
+const FROZEN = { S11: 5, S12: 3, S13: 7, S14: 3, S15: 7 };
+const TOTAL_BEATS = 25;
+const TOTAL_CELLS = 31;
 
 // The ruled map as amended 3 September 2026 (the Act III final rulings),
 // transcribed. The MAP AGREEMENT check compares this against
@@ -70,7 +79,8 @@ const RULED = {
   'S13-F1': 'ADAPT',
   'S14-F1': 'ADAPT',
   'S15-F1': 'NEW',
-  'S15-F2': 'NEW'
+  'S15-F2': 'NEW',
+  'S15-F3': 'ADAPT'
 };
 
 // Carried bytes, proven by sha256: the retired study (r2 ruling 4 — the
@@ -79,7 +89,14 @@ const RULED = {
 // bytes into s15-b7.
 const CARRIED_SHA = {
   's14-b1-study.png': 'e7cc6fff9a1142573f5a30878505e8625f1c57ca1cac1b95f881167458821081',
-  's15-b7.png': '8e69451b67206dda1f56e54543a5e088290a08e6c692e701baf12ee44ee6538d'
+  // The Acts III–IV final rulings (3 Sep 2026): the triad-return coda carries
+  // the approved s14-b4's bytes into retirement; the household row carries
+  // the approved s12-b2's; Argentina's objects and the principle carry the
+  // approved s12-b3's and s12-b4's bytes into their new beat numbers.
+  's15-b7-triad.png': '8e69451b67206dda1f56e54543a5e088290a08e6c692e701baf12ee44ee6538d',
+  's12-b2-household.png': '9512f386e3e9ecda4086c5f8b53581595620d30bc16665cd3995708bc80f98b5',
+  's12-b2.png': '2c83b833f83ee287dfabce4eeec7fbf1ba016528789ad891737f126de3ad0b55',
+  's12-b3.png': 'b6733b08b218a1e650165221546d40f934aa3356a0fecfdc76a5171170be4a0a'
 };
 
 // The retired stagings, on file under the aesthetic law.
@@ -87,7 +104,8 @@ const RETIRED_FILES = [
   's12-b3-block.png',
   's15-b1-boxes.png', 's15-b2-boxes.png', 's15-b3-boxes.png',
   's15-b4-boxes.png', 's15-b5-boxes.png', 's15-b6-boxes.png',
-  's13-b5-pair.png', 's14-b1-study.png'
+  's13-b5-pair.png', 's14-b1-study.png',
+  's12-b2-household.png', 's15-b7-triad.png'
 ];
 
 const results = [];
@@ -194,9 +212,15 @@ function check(name, ok, detail) {
     check('MAP: the candidate-A selection is recorded on the S15 row (Batch C ruling 1)',
       selected, selected ? 'recorded' : 'MISSING');
 
-    const relocated = /S15 b7[^|]*the pivot coda|pivot coda[^|]*S15 b7/.test(map);
-    check('MAP: the pivot coda is recorded at S15 b7 as S11-F1’s return (the Act III final ruling 3)',
-      relocated, relocated ? 'recorded' : 'MISSING');
+    const exitRow = /\*\*S15-F3\*\*[^|]*\|\s*\*\*ADAPT\*\*/.test(map) && /s15-b7-triad/.test(map);
+    check('MAP: the exit is recorded as S15-F3 (ADAPT) — the base slab and the hinge question — and the triad-return coda as on file (the Acts III–IV final ruling 3)',
+      exitRow, exitRow ? 'recorded' : 'MISSING');
+    const noTriadReturn = /The pivot coda no longer returns to the triad/.test(map);
+    check('MAP: S11-F1 no longer serves S15 b7 — the disc’s Act III appearances are S11 b1–b5 alone',
+      noTriadReturn, noTriadReturn ? 'recorded' : 'MISSING');
+    const household = /The household frame retires/.test(map) && /Serves S12 b1–b3/.test(map);
+    check('MAP: S12-F1 records the household frame’s retirement and serves three beats (the Acts III–IV final ruling 1)',
+      household, household ? 'recorded' : 'MISSING');
 
     const s12Adapt = /Reclassified PORT → ADAPT, 3 Sep 2026/.test(map);
     check('MAP: S12-F1’s reclassification is recorded with its one change (the Act III final ruling 1)',
@@ -259,15 +283,26 @@ function check(name, ok, detail) {
     check('SELECTION: the only review classes on the record are approved and on-file (the go-ahead is given)',
       stray.length === 0, stray.join(', ') || allowed.join(' · '));
 
-    // THE PIVOT CODA (the Act III final ruling 3): S15 b7 is S11-F1's
-    // return — no candidate system, the home-base frame, approved, carried;
-    // and s14-b4 has left the sheet (relocated, not retired).
-    const coda = cells.find((c) => c.id === 's15-b7');
-    const codaOk = Boolean(coda) && coda.scene === 'S15' && coda.beat === 7 && !coda.system &&
-      coda.frame === 'S11-F1' && coda.review === 'approved' && coda.carried === true;
+    // THE EXIT (the Acts III–IV final ruling 3): S15 b7 is S15-F3 — the base
+    // slab and the hinge question — no candidate system, ADAPT, approved,
+    // captured fresh (not carried); the triad-return coda is on file as
+    // s15-b7-triad; s14-b4 has left the sheet (relocated, then retired).
+    const exitCell = cells.find((c) => c.id === 's15-b7');
+    const exitOk = Boolean(exitCell) && exitCell.scene === 'S15' && exitCell.beat === 7 && !exitCell.system &&
+      exitCell.frame === 'S15-F3' && exitCell.klass === 'ADAPT' && exitCell.review === 'approved' && !exitCell.carried;
+    const triadOnFile = fs.existsSync(path.join(OUT, 's15-b7-triad.png')) && !cells.some((c) => c.id === 's15-b7-triad');
     const oldGone = !cells.some((c) => c.id === 's14-b4') && !fs.existsSync(path.join(OUT, 's14-b4.png'));
-    check('PIVOT: s15-b7 is the act’s final beat — S11-F1’s return, no candidate system, approved, its bytes carried — and s14-b4 has left the sheet',
-      codaOk && oldGone, `coda ${codaOk} · s14-b4 gone ${oldGone}`);
+    check('EXIT: s15-b7 is the act’s final beat — S15-F3, the base slab and the hinge question, ADAPT, approved, captured fresh — the triad-return coda on file as s15-b7-triad, and s14-b4 gone from the sheet',
+      exitOk && triadOnFile && oldGone, `exit ${exitOk} · triad coda on file ${triadOnFile} · s14-b4 gone ${oldGone}`);
+
+    // THE HOUSEHOLD (the Acts III–IV final ruling 1): the S12 cells are b1–b3,
+    // b2 and b3 carried from the approved Argentina and principle cells; the
+    // household row is on file and off the sheet.
+    const s12 = cells.filter((c) => c.scene === 'S12').map((c) => c.beat).sort();
+    const s12Carried = ['s12-b2', 's12-b3'].every((id) => cells.find((c) => c.id === id)?.carried === true);
+    const householdOnFile = fs.existsSync(path.join(OUT, 's12-b2-household.png')) && !cells.some((c) => c.id === 's12-b2-household') && !fs.existsSync(path.join(OUT, 's12-b4.png'));
+    check('HOUSEHOLD: Scene 12 stands at b1–b3, b2 and b3 carrying the approved Argentina and principle bytes; the household row on file as s12-b2-household and s12-b4 gone',
+      s12.join(',') === '1,2,3' && s12Carried && householdOnFile, `beats ${s12.join(',')} · carried ${s12Carried} · household on file ${householdOnFile}`);
   }
 
   // ---- SOURCE CHECKS --------------------------------------------------------
@@ -287,7 +322,9 @@ function check(name, ok, detail) {
       `token constructions ${tokenCount} · hub-gated ${hubGated} · ClaimObject absent ${noClaimObject}`);
 
     // The disc is NOT on the tower: neither candidate builder touches the
-    // token, a photo, or a DarkFieldImage — line grammar only (ruling 4).
+    // token, a photo, or a DarkFieldImage — line grammar only (ruling 4). The
+    // exit beat (7) is candidate A's own builder, so the exit carries no disc
+    // and no render either — the r2 thread ruling stands.
     const aBody = src.slice(src.indexOf('function candidateA('), src.indexOf('// ---- CANDIDATE B'));
     const bBody = src.slice(src.indexOf('function candidateB('), src.indexOf('// ====', src.indexOf('function candidateB(')));
     const clean = (body) => !/DarkFieldImage\(|photo\(|luminous-disc|s1q-token/.test(body);
@@ -339,8 +376,8 @@ function check(name, ok, detail) {
       const now = crypto.createHash('sha256').update(fs.readFileSync(path.join(OUT, file))).digest('hex');
       if (now !== sha) bad.push(`${file}: ${now.slice(0, 16)}… vs r1 ${sha.slice(0, 16)}…`);
     });
-    check('CARRIED: s14-b1-study.png carries the r1 study’s exact bytes (r2 ruling 4) and s15-b7.png carries the approved s14-b4’s exact bytes (the Act III final ruling 3) — sha256 proven',
-      bad.length === 0, bad.join(' · ') || 'e7cc6fff… and 8e69451b… match');
+    check('CARRIED: s14-b1-study.png carries the r1 study’s bytes (r2 ruling 4); s15-b7-triad.png the approved s14-b4’s (the Act III final ruling 3, retired by the Acts III–IV final ruling 3); s12-b2-household.png the approved household row’s, and s12-b2.png / s12-b3.png the approved Argentina and principle cells’ (the Acts III–IV final ruling 1) — sha256 proven',
+      bad.length === 0, bad.join(' · ') || `${Object.keys(CARRIED_SHA).length} files match`);
 
     const studyRetired = (record.retired || []).some((c) => c.file === 's14-b1-study.png');
     const pairRetired = (record.retired || []).some((c) => c.file === 's13-b5-pair.png');
@@ -348,13 +385,17 @@ function check(name, ok, detail) {
       studyRetired && pairRetired, `study ${studyRetired} · pair ${pairRetired}`);
 
     const missingRetired = RETIRED_FILES.filter((f) => !fs.existsSync(path.join(OUT, f)));
-    check('RETIRED: the superseded stagings are on file under their retired names (s12-b3-block, s15-b*-boxes, s13-b5-pair, s14-b1-study)',
+    const householdRetired = (record.retired || []).some((c) => c.file === 's12-b2-household.png');
+    const triadRetired = (record.retired || []).some((c) => c.file === 's15-b7-triad.png');
+    check('RETIRED: states.json records the Acts III–IV final retirements (the household row, the triad coda)',
+      householdRetired && triadRetired, `household ${householdRetired} · triad coda ${triadRetired}`);
+    check('RETIRED: the superseded stagings are on file under their retired names (s12-b3-block, s12-b2-household, s15-b*-boxes, s13-b5-pair, s14-b1-study, s15-b7-triad)',
       missingRetired.length === 0, missingRetired.join(', ') || `${RETIRED_FILES.length}/${RETIRED_FILES.length} on file`);
   }
 
   fs.writeFileSync(path.join(__dirname, 'check-cells.json'), JSON.stringify({
     date: new Date().toISOString(),
-    session: 'act-3-final',
+    session: 'acts-3-4-final',
     limits: { cornerMean: 6, borderMean: 6 },
     frozenBeatMap: { ...FROZEN, total: TOTAL_BEATS, cells: TOTAL_CELLS },
     ruledClasses: RULED,
