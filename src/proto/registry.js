@@ -33,13 +33,15 @@ import spendOrSave from './gate-2/s4-spend-or-save.js';
 // (Scenes 16–19 at Session 1); the entries leave at Session 2's splice.
 import returnToTheOpenExchange from '../scenes/act-4-the-store-of-value-test/16-return-to-the-open-exchange.js';
 import whatTheCarrierMustPreserve from '../scenes/act-4-the-store-of-value-test/17-what-the-carrier-must-preserve.js';
+import the100YearTest from '../scenes/act-4-the-store-of-value-test/18-the-100-year-test.js';
 
 returnToTheOpenExchange.protoKey = 'act4';
 whatTheCarrierMustPreserve.protoKey = 'act4';
+the100YearTest.protoKey = 'act4';
 
 export const prototypes = [
   theDirectExchange, theBreakthrough, spendOrSave,
-  returnToTheOpenExchange, whatTheCarrierMustPreserve
+  returnToTheOpenExchange, whatTheCarrierMustPreserve, the100YearTest
 ];
 
 export default prototypes;
