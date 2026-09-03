@@ -32,12 +32,14 @@ import spendOrSave from './gate-2/s4-spend-or-save.js';
 // Act IV (Scenes 16–23) runs here as `?proto=act4` while Batch D builds it
 // (Scenes 16–19 at Session 1); the entries leave at Session 2's splice.
 import returnToTheOpenExchange from '../scenes/act-4-the-store-of-value-test/16-return-to-the-open-exchange.js';
+import whatTheCarrierMustPreserve from '../scenes/act-4-the-store-of-value-test/17-what-the-carrier-must-preserve.js';
 
 returnToTheOpenExchange.protoKey = 'act4';
+whatTheCarrierMustPreserve.protoKey = 'act4';
 
 export const prototypes = [
   theDirectExchange, theBreakthrough, spendOrSave,
-  returnToTheOpenExchange
+  returnToTheOpenExchange, whatTheCarrierMustPreserve
 ];
 
 export default prototypes;
