@@ -12,16 +12,22 @@ const MAX_STEP = 2;
 
 // THE HEADER BAND — the Acts III–IV final ruling 2 (3 September 2026, master
 // §13): the five candidate glyphs retire from the table's asset headings, and
-// the renders ride as a header band ABOVE the table at lineup scale per the
-// rails law (AGENTS.md §6) — one shared box, both axes capped at 188, each
-// render in a box of its own aspect scaled to fit inside it, bottom-aligned on
-// one band baseline, above the table and never on a drawn line — gold, the
-// fiat note, the coin, the house, and shares, with the drawn grammar beneath
-// untouched. The band mirrors the table's column template (460 + 5 × 244) so
+// the renders ride as a header band ABOVE the table per the rails law
+// (AGENTS.md §6) — one shared box, both axes capped, each render in a box of
+// its own aspect scaled to fit inside it, bottom-aligned on one band baseline,
+// above the table and never on a drawn line — gold, the fiat note, the coin,
+// the house, and shares, with the drawn grammar beneath untouched.
+//
+// THE BAND'S BOX IS 100, NOT THE RAILS LAW'S 188 — the presenter's fit ruling
+// (4 September 2026, master §13): at the 188 box the band did not fit above
+// the table with the closing line at its held position unless the score rows
+// tightened, and the ruling keeps the scores' proven geometry instead — the
+// rows at the legacy 60 px pitch, the band shrunk to roughly 100 px. A ruled
+// departure from the rails-law box for this one surface. The band mirrors the table's column template (460 + 5 × 244) so
 // each render stands over its own column. The aspects are the register's
 // measured frames (src/dark-field.js — the near-16:9 family at 1672 × 941,
 // the 4:3 coin at 1448 × 1086, the two square lineup studies at 1254 × 1254).
-const BAND = 188;
+const BAND = 100;
 const BAND_ASPECT = {
   gold: 1672 / 941,
   fiat: 1672 / 941,
@@ -77,11 +83,10 @@ export default {
     // law's own mixed surface (the ruling of 3 Sep 2026); the R7.4 toggle
     // that used to set this is retired with the question it asked.
     root.dataset.register = 'mixed';
-    // The room the band needs, as one attribute (the report flags the
-    // numbers): the heading row shrinks to its label and the score rows
-    // tighten so the band, the table and the closing line at its held
-    // position all fit the frame. The legacy pitch stays on file in the
-    // stylesheet; removing this attribute restores it.
+    // The room the band needs, as one attribute: the heading row shrinks to
+    // its label (the marks are retired) and the table drops beneath the band;
+    // the score rows keep the legacy 60 px pitch (the fit ruling, 4 Sep 2026).
+    // Removing this attribute restores the no-band layout.
     root.dataset.band = 'true';
 
     // A2 survivor: the table is a frame that must be named, so it keeps a

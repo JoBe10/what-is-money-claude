@@ -2550,18 +2550,20 @@
 }
 
 /* The header band (the Acts III–IV final ruling 2, 3 Sep 2026, master §13):
-   the five candidates as renders above the table at the rails-law band scale
-   (AGENTS.md §6 — the 188 × 188 contain box, each render in a box of its own
-   aspect, bottom-aligned on one band baseline), the five glyph marks retired
-   from the asset headings, the drawn grammar beneath untouched. The band
-   mirrors the table's column template, so each render stands over its own
-   column; the first column, PROPERTY's, is empty. */
+   the five candidates as renders above the table (AGENTS.md §6 — a shared
+   contain box, each render in a box of its own aspect, bottom-aligned on one
+   band baseline), the five glyph marks retired from the asset headings, the
+   drawn grammar beneath untouched. The band mirrors the table's column
+   template, so each render stands over its own column; the first column,
+   PROPERTY's, is empty. The box is 100, not the rails law's 188 — the fit
+   ruling of 4 Sep 2026 (master §13): the band shrinks so the score rows keep
+   their legacy pitch. */
 .s4-comparison__band {
   position: absolute;
   left: 120px;
-  top: 142px;
+  top: 132px;
   width: 1680px;
-  height: 188px;
+  height: 100px;
   display: grid;
   grid-template-columns: 460px repeat(5, 244px);
 }
@@ -2572,22 +2574,19 @@
   justify-content: center;
 }
 
-/* The room the band needs — flagged in the session report, one attribute on
-   the slide root. At the rails-law box the band does not fit above the table
-   with the closing line at its held position (930) unless the table gives
-   ground: with the marks retired the heading row shrinks to its label, and
-   the ten score rows tighten from 60 to 48. The legacy pitch above stays on
-   file; removing the attribute restores it. */
+/* The room the band needs — one attribute on the slide root. The table drops
+   beneath the band, and with the marks retired the heading row shrinks to its
+   label; the ten score rows keep the legacy 60 px pitch below (the fit ruling
+   of 4 Sep 2026, master §13 — the session before it tightened them to 48 to
+   fit the 188 box, and the ruling shrank the band instead). The table's
+   bottom lands at 911, under the closing line's held 930. Removing the
+   attribute restores the no-band layout. */
 .s4-comparison[data-band="true"] .s4-comparison__table-wrap {
-  top: 354px;
+  top: 244px;
 }
 
 .s4-comparison[data-band="true"] .s4-comparison-table__asset-row {
   height: 40px;
-}
-
-.s4-comparison[data-band="true"] .s4-comparison-table__row {
-  height: 48px;
 }
 
 .s4-comparison__table-wrap {
