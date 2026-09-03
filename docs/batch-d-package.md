@@ -31,7 +31,7 @@
 | S16 | the architecture's return line (canonical) + `4-04` b1–b4 + `4-06` b1–b4 | 1 + 4 + 4 (the return line shares b1 with 4-04's first beat) | **8** | Row 2 **ruled A, 3 Sep 2026** (the lens retired — no +2) · Row 3 **ruled A, 3 Sep 2026** (4-06 closes Scene 16 — no −4); **8 stands** |
 | S17 | `4-07` b1–b5 | 5 | **5** | Row 3 **ruled A, 3 Sep 2026** — **5 stands** |
 | S18 | `4-08` b1–b3 + `4-09` b1–b5 | 3 + 5 | **8** | — |
-| S19 | `4-10` b1–b2 | 2 | **2** | — |
+| S19 | `4-10` b1–b2 | 2 | **2** | **ruled 3 Sep 2026 (the Batch D implementation brief §1.1, master §13): the carrier arrives at beat 2** — 4-10's stress stage keyed to build 2 at the source; S19-F1 PORT → ADAPT; the count stands |
 | S20 | `4-11` b1–b5 | 5 | **5** | — |
 | S21 | `4-12` b1–b5 | 5 | **5** | — |
 | S22 | `4-13` b1–b2 + `4-14` b1–b2 | 2 + 2 | **4** | **ruled 3 Sep 2026: stands at 4** — three compositions across four advances; no paragraphs merge |

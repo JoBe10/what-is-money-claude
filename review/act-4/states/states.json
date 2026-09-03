@@ -1,5 +1,5 @@
 {
-  "date": "2026-09-03T05:01:10.965Z",
+  "date": "2026-09-03T08:05:55.451Z",
   "session": "act-4-states",
   "status": "review request — the flipbook walk",
   "beatMap": {
@@ -26,6 +26,9 @@
     "the two dead pointer sentences in Scene 23’s stability armor are cut — nothing written in their place",
     "Scene 16 beat 1’s join is written: the return line, then “The surgeon is still holding the claim he accepted that day.”, then the legacy passage uncut from “this is the moment to pay a debt” onward; the four pre-spoken sentences cut; the seam closed"
   ],
+  "batchDRulings": [
+    "Scene 19 restages — beat 1 is the inverted framing alone, no carrier on stage; the carrier (the claim in its shell, on the stress stage) arrives at beat 2, timed to “let’s put a carrier on the bench and try to break it.” The change is made at the source (legacy 4-10 keys the carrier to build 2); S19-F1 is ADAPT; the two cells re-rendered"
+  ],
   "splice": {
     "was": 39,
     "now": 38,
@@ -40,8 +43,9 @@
   },
   "protocol": "the presenter walks the act as stills — the return, the test, the inversion, the failures, the requirements, the fifty scores landing at once, the closing line — and returns his verdicts on the pending set plus the go-ahead that unlocks implementation",
   "counts": {
+    "approved-ruled": 2,
     "approved-port": 32,
-    "pending-review": 11
+    "pending-review": 9
   },
   "pendingSet": [
     "s16-b1",
@@ -49,8 +53,6 @@
     "s16-b3",
     "s16-b5",
     "s16-b6",
-    "s19-b1",
-    "s19-b2",
     "s22-b1",
     "s22-b3",
     "s23-b5",
@@ -90,6 +92,20 @@
     "s23-b3",
     "s23-b4"
   ],
+  "approvedRuledSet": [
+    "s19-b1",
+    "s19-b2"
+  ],
+  "ruled": [
+    {
+      "id": "s19-b1",
+      "ruling": "RULED 3 September 2026 (the Batch D implementation brief §1.1, master §13): beat 1 is the inverted framing alone — no carrier on stage. The change is made at the source — legacy 4-10 keys the stress stage’s carrier to build 2 — and S19-F1 is ADAPT in the ruled map, the one change named. The flag this cell carried (4-10’s build 0, the direct framing under the governing question, has no spoken advance of its own; the sheet stood the settled state) is answered by the same ruling: the movement is wiring, and the implementation plays the legacy’s own sequence — the direct framing under the question, then the inverted replacing it — as this beat’s gesture."
+    },
+    {
+      "id": "s19-b2",
+      "ruling": "RULED 3 September 2026 (the Batch D implementation brief §1.1, master §13): the carrier arrives at beat 2, timed to “let’s put a carrier on the bench and try to break it.” The flag this cell carried — the two beats shared one still since R7.4 deleted the corner brackets — is closed by the ruling: the frame is unchanged, and its arrival (the claim’s and the shell’s own reveals) is now the beat’s gesture. The beats are no longer identical stills."
+    }
+  ],
   "flags": [
     {
       "id": "s16-b1",
@@ -114,16 +130,6 @@
     {
       "id": "s16-b6",
       "flag": "The BITCOIN position in the lineage carries a photograph of a physical coin — the legacy source’s own V-1 flag (a photograph of an object the script denies), restored by your R7.2 ruling and carried here as ruled (map §4 seam 6). One word in the source’s carrier table returns it to the grammar mark; the other four positions are unaffected.",
-      "status": "open — for the presenter’s word at the flipbook walk"
-    },
-    {
-      "id": "s19-b1",
-      "flag": "4-10’s build 0 — the governing question carried over from the previous frame with DON’T BEGIN BY ASKING: / What makes a good carrier? beneath it — has no spoken advance of its own once the two slides are one act (the same shape as the empty table, map §4 seam 7). It is either the first movement of this beat’s gesture (the direct framing shown under the question, then replaced by the inverted as you say “invert, always invert”) or skipped. This sheet stands the settled state — the inverted framing — and flags the movement.",
-      "status": "open — for the presenter’s word at the flipbook walk"
-    },
-    {
-      "id": "s19-b2",
-      "flag": "Scene 19’s two beats share one still. Since R7.4 §D.1 deleted the corner brackets, 4-10’s build 2 draws nothing that build 1 does not: the stress stage shows the claim in its shell from the moment it mounts, and the second advance changes only a data attribute that no longer styles anything — so this cell and s19-b1 are the same frame, in the deck as here (checked against the live deck at 4-10 build 1). If you want the carrier to arrive on this beat — “so let’s put a carrier on the bench” — that is one word in the source’s state (the stage’s visibility keyed to build 2): a ruled change on a proven treatment, not this sheet’s call. Flagged, not fixed.",
       "status": "open — for the presenter’s word at the flipbook walk"
     },
     {
@@ -1369,11 +1375,11 @@
       "scene": "S19",
       "beat": 1,
       "frame": "S19-F1",
-      "klass": "PORT",
-      "review": "pending-review",
-      "source": "4-10-invert-the-question, build 1 — the inversion replaces the direct framing",
-      "caption": "Beat 1 · the inversion: ASK INSTEAD: / How could the carrier fail? — the inverted framing alone on the frame, having replaced the direct one. Munger’s line is spoken: invert, always invert.",
-      "flag": "4-10’s build 0 — the governing question carried over from the previous frame with DON’T BEGIN BY ASKING: / What makes a good carrier? beneath it — has no spoken advance of its own once the two slides are one act (the same shape as the empty table, map §4 seam 7). It is either the first movement of this beat’s gesture (the direct framing shown under the question, then replaced by the inverted as you say “invert, always invert”) or skipped. This sheet stands the settled state — the inverted framing — and flags the movement.",
+      "klass": "ADAPT",
+      "review": "approved-ruled",
+      "source": "4-10-invert-the-question, build 1 — the inversion replaces the direct framing; the stress stage’s carrier keyed to build 2 at the source (the one ruled change, 3 Sep 2026)",
+      "caption": "Beat 1 · the inversion: ASK INSTEAD: / How could the carrier fail? — the inverted framing alone on the frame, having replaced the direct one, and no carrier on stage. Munger’s line is spoken: invert, always invert.",
+      "ruling": "RULED 3 September 2026 (the Batch D implementation brief §1.1, master §13): beat 1 is the inverted framing alone — no carrier on stage. The change is made at the source — legacy 4-10 keys the stress stage’s carrier to build 2 — and S19-F1 is ADAPT in the ruled map, the one change named. The flag this cell carried (4-10’s build 0, the direct framing under the governing question, has no spoken advance of its own; the sheet stood the settled state) is answered by the same ruling: the movement is wiring, and the implementation plays the legacy’s own sequence — the direct framing under the question, then the inverted replacing it — as this beat’s gesture.",
       "expect": [
         [
           ".s4-inversion__framing--inverted[data-visible=\"true\"]",
@@ -1385,6 +1391,14 @@
         ],
         [
           ".s4-inversion__governing[data-visible=\"true\"]",
+          0
+        ],
+        [
+          ".s4-stress-stage .s4-carrier-shell[data-visible=\"true\"]",
+          0
+        ],
+        [
+          ".s4-stress-stage .s4-claim-object[data-visible=\"true\"]",
           0
         ]
       ],
@@ -1407,6 +1421,18 @@
             "expected": 0,
             "got": 0,
             "ok": true
+          },
+          {
+            "sel": ".s4-stress-stage .s4-carrier-shell[data-visible=\"true\"]",
+            "expected": 0,
+            "got": 0,
+            "ok": true
+          },
+          {
+            "sel": ".s4-stress-stage .s4-claim-object[data-visible=\"true\"]",
+            "expected": 0,
+            "got": 0,
+            "ok": true
           }
         ],
         "ok": true,
@@ -1420,10 +1446,10 @@
       "beat": 2,
       "frame": "S19-F2",
       "klass": "PORT",
-      "review": "pending-review",
-      "source": "4-10-invert-the-question, build 2 + CarrierStressStage (the corner frame deleted at R7.4 §D.1)",
-      "caption": "Beat 2 · the carrier on the bench: the claim in its shell stands on the stress stage with no corner frame — R7.4 §D.1 deleted the four brackets and the component renders nothing for them, so the architecture’s “no corner frame” is already true of the source. “Let’s put a carrier on the bench and try to break it.”",
-      "flag": "Scene 19’s two beats share one still. Since R7.4 §D.1 deleted the corner brackets, 4-10’s build 2 draws nothing that build 1 does not: the stress stage shows the claim in its shell from the moment it mounts, and the second advance changes only a data attribute that no longer styles anything — so this cell and s19-b1 are the same frame, in the deck as here (checked against the live deck at 4-10 build 1). If you want the carrier to arrive on this beat — “so let’s put a carrier on the bench” — that is one word in the source’s state (the stage’s visibility keyed to build 2): a ruled change on a proven treatment, not this sheet’s call. Flagged, not fixed.",
+      "review": "approved-ruled",
+      "source": "4-10-invert-the-question, build 2 + CarrierStressStage (the corner frame deleted at R7.4 §D.1); the carrier arriving on this beat since 3 Sep 2026",
+      "caption": "Beat 2 · the carrier on the bench: the claim in its shell arrives on the stress stage with no corner frame — R7.4 §D.1 deleted the four brackets and the component renders nothing for them, so the architecture’s “no corner frame” is already true of the source. It arrives on its word: “Let’s put a carrier on the bench and try to break it.”",
+      "ruling": "RULED 3 September 2026 (the Batch D implementation brief §1.1, master §13): the carrier arrives at beat 2, timed to “let’s put a carrier on the bench and try to break it.” The flag this cell carried — the two beats shared one still since R7.4 deleted the corner brackets — is closed by the ruling: the frame is unchanged, and its arrival (the claim’s and the shell’s own reveals) is now the beat’s gesture. The beats are no longer identical stills.",
       "expect": [
         [
           ".s4-stress-stage .s4-carrier-shell[data-visible=\"true\"]",

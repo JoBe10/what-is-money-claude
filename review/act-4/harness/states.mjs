@@ -36,7 +36,16 @@
 //
 // Review classes: `approved-port` — a PORT cell, approved by provenance;
 // `pending-review` — a PORT cell carrying a wiring flag the presenter should
-// see at the flipbook walk. No cell carries a candidate system.
+// see at the flipbook walk; `approved-ruled` — a cell whose flag the presenter
+// answered with a ruling at the flipbook walk (the Batch D implementation
+// brief §1, 3 Sep 2026, master §13), the ruling recorded on the cell in the
+// flag's place. No cell carries a candidate system.
+//
+// THE BATCH D RULINGS (3 Sep 2026, ruled against this sheet): (1) Scene 19
+// restages — the carrier arrives at beat 2, keyed to build 2 at the source
+// (legacy 4-10 + CarrierStressStage's `visible`); S19-F1 is ADAPT, the one
+// ruled change named in the map. The cells still mount the legacy module
+// itself: the ruled change lives at the source, so the mount carries it.
 
 import { ensureStage, destroyStage } from '/src/scenes/act-1-the-unfinished-exchange/_exchangeStage.js';
 import s404 from '/src/slides/section-4-ideal-store/04-unfinished-exchange.js';
@@ -302,18 +311,19 @@ cell('s18-b8', {
 // ============================================================ SCENE 19 (2 beats)
 
 cell('s19-b1', {
-  scene: 'S19', beat: 1, frame: 'S19-F1', klass: 'PORT', review: 'pending-review',
-  source: '4-10-invert-the-question, build 1 — the inversion replaces the direct framing',
-  caption: 'Beat 1 · the inversion: ASK INSTEAD: / How could the carrier fail? — the inverted framing alone on the frame, having replaced the direct one. Munger’s line is spoken: invert, always invert.',
-  flag: '4-10’s build 0 — the governing question carried over from the previous frame with DON’T BEGIN BY ASKING: / What makes a good carrier? beneath it — has no spoken advance of its own once the two slides are one act (the same shape as the empty table, map §4 seam 7). It is either the first movement of this beat’s gesture (the direct framing shown under the question, then replaced by the inverted as you say “invert, always invert”) or skipped. This sheet stands the settled state — the inverted framing — and flags the movement.',
-  expect: [['.s4-inversion__framing--inverted[data-visible="true"]', 1], ['.s4-inversion__framing--direct[data-visible="true"]', 0], ['.s4-inversion__governing[data-visible="true"]', 0]]
+  scene: 'S19', beat: 1, frame: 'S19-F1', klass: 'ADAPT', review: 'approved-ruled',
+  source: '4-10-invert-the-question, build 1 — the inversion replaces the direct framing; the stress stage’s carrier keyed to build 2 at the source (the one ruled change, 3 Sep 2026)',
+  caption: 'Beat 1 · the inversion: ASK INSTEAD: / How could the carrier fail? — the inverted framing alone on the frame, having replaced the direct one, and no carrier on stage. Munger’s line is spoken: invert, always invert.',
+  ruling: 'RULED 3 September 2026 (the Batch D implementation brief §1.1, master §13): beat 1 is the inverted framing alone — no carrier on stage. The change is made at the source — legacy 4-10 keys the stress stage’s carrier to build 2 — and S19-F1 is ADAPT in the ruled map, the one change named. The flag this cell carried (4-10’s build 0, the direct framing under the governing question, has no spoken advance of its own; the sheet stood the settled state) is answered by the same ruling: the movement is wiring, and the implementation plays the legacy’s own sequence — the direct framing under the question, then the inverted replacing it — as this beat’s gesture.',
+  expect: [['.s4-inversion__framing--inverted[data-visible="true"]', 1], ['.s4-inversion__framing--direct[data-visible="true"]', 0], ['.s4-inversion__governing[data-visible="true"]', 0],
+    ['.s4-stress-stage .s4-carrier-shell[data-visible="true"]', 0], ['.s4-stress-stage .s4-claim-object[data-visible="true"]', 0]]
 }, (st) => mount(st, s410, 1));
 
 cell('s19-b2', {
-  scene: 'S19', beat: 2, frame: 'S19-F2', klass: 'PORT', review: 'pending-review',
-  source: '4-10-invert-the-question, build 2 + CarrierStressStage (the corner frame deleted at R7.4 §D.1)',
-  caption: 'Beat 2 · the carrier on the bench: the claim in its shell stands on the stress stage with no corner frame — R7.4 §D.1 deleted the four brackets and the component renders nothing for them, so the architecture’s “no corner frame” is already true of the source. “Let’s put a carrier on the bench and try to break it.”',
-  flag: 'Scene 19’s two beats share one still. Since R7.4 §D.1 deleted the corner brackets, 4-10’s build 2 draws nothing that build 1 does not: the stress stage shows the claim in its shell from the moment it mounts, and the second advance changes only a data attribute that no longer styles anything — so this cell and s19-b1 are the same frame, in the deck as here (checked against the live deck at 4-10 build 1). If you want the carrier to arrive on this beat — “so let’s put a carrier on the bench” — that is one word in the source’s state (the stage’s visibility keyed to build 2): a ruled change on a proven treatment, not this sheet’s call. Flagged, not fixed.',
+  scene: 'S19', beat: 2, frame: 'S19-F2', klass: 'PORT', review: 'approved-ruled',
+  source: '4-10-invert-the-question, build 2 + CarrierStressStage (the corner frame deleted at R7.4 §D.1); the carrier arriving on this beat since 3 Sep 2026',
+  caption: 'Beat 2 · the carrier on the bench: the claim in its shell arrives on the stress stage with no corner frame — R7.4 §D.1 deleted the four brackets and the component renders nothing for them, so the architecture’s “no corner frame” is already true of the source. It arrives on its word: “Let’s put a carrier on the bench and try to break it.”',
+  ruling: 'RULED 3 September 2026 (the Batch D implementation brief §1.1, master §13): the carrier arrives at beat 2, timed to “let’s put a carrier on the bench and try to break it.” The flag this cell carried — the two beats shared one still since R7.4 deleted the corner brackets — is closed by the ruling: the frame is unchanged, and its arrival (the claim’s and the shell’s own reveals) is now the beat’s gesture. The beats are no longer identical stills.',
   expect: [['.s4-stress-stage .s4-carrier-shell[data-visible="true"]', 1], ['.s4-stress-stage .s4-claim-object[data-visible="true"]', 1], ['.s4-inversion__framing--inverted[data-visible="true"]', 1], ['.s4-stress-stage[data-frame-visible="true"]', 1]]
 }, (st) => mount(st, s410, 2));
 

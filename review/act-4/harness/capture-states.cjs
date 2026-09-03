@@ -14,6 +14,12 @@
 // compositions that have no advance in the merged act, the coin photograph —
 // each rendered once, honestly, and flagged in plain English.
 //
+// THE BATCH D RULINGS (3 Sep 2026, ruled against this sheet at the flipbook
+// walk — the Batch D implementation brief §1, master §13) are recorded in
+// BATCH_D_RULINGS below and on the cells they answer (`ruling` in place of
+// `flag`, review class `approved-ruled`). Ruling 1: Scene 19 restages — the
+// carrier arrives at beat 2; S19-F1 is ADAPT (20 PORT · 1 ADAPT).
+//
 // Modes:
 //   (default)        capture every cell, then cut the record.
 //   --record-only    re-cut sheet.html + states.json from the meta, the
@@ -72,7 +78,15 @@ const RULINGS = [
   'Scene 16 beat 1’s join is written: the return line, then “The surgeon is still holding the claim he accepted that day.”, then the legacy passage uncut from “this is the moment to pay a debt” onward; the four pre-spoken sentences cut; the seam closed'
 ];
 
+// The presenter's rulings at the flipbook walk (the Batch D implementation
+// brief §1, 3 Sep 2026, master §13), recorded as their own commits.
+const BATCH_D_RULINGS = [
+  'Scene 19 restages — beat 1 is the inverted framing alone, no carrier on stage; the carrier (the claim in its shell, on the stress stage) arrives at beat 2, timed to “let’s put a carrier on the bench and try to break it.” The change is made at the source (legacy 4-10 keys the carrier to build 2); S19-F1 is ADAPT; the two cells re-rendered'
+];
+
 const CLASS_NOTE = {
+  'approved-ruled': ['RULED AT THE FLIPBOOK WALK — the cells the presenter answered with a ruling',
+    'A cell whose flag the presenter answered with a ruling (the Batch D implementation brief §1, 3 September 2026, master §13). The ruling is recorded on the cell in the flag’s place, the record is amended where it lands (the map, the package, the source), and the cell is re-rendered on the ruling’s authority. Nothing here is pending.'],
   'approved-port': ['APPROVED BY PROVENANCE — the PORT cells',
     'A proven legacy treatment, transplanted verbatim: the legacy slide module itself mounted at the build the ruled map names, the legacy stylesheet placing every element. Review is optional under the provenance rule (AGENTS.md §4.9) — the presenter approved these treatments when the Section 4 deck shipped, and the map’s ruling carries them home. A cell here asks nothing; it is on the sheet so the act can be walked whole.'],
   'pending-review': ['PENDING REVIEW — the flagged cells',
@@ -152,6 +166,7 @@ const CLASS_NOTE = {
         <span class="pill pill--${m.review}">${esc(m.klass)} · ${esc(m.review)}</span>
         <br>${esc(m.caption)}
         ${m.flag ? `<br><span class="flagline"><b>FLAG — for your word:</b> ${esc(m.flag)}</span>` : ''}
+        ${m.ruling ? `<br><span class="ruleline"><b>${esc(m.ruling)}</b></span>` : ''}
         ${m.source ? `<br><span class="src">source: ${esc(m.source)}</span>` : ''}
         <br><span class="src">probes ${p.results.filter((r) => r.ok).length}/${p.results.length}${p.ok ? '' : ' — FAILED'}</span> · <a href="./${id}.png" target="_blank">full size</a>
       </figcaption>
@@ -160,6 +175,8 @@ const CLASS_NOTE = {
 
   const byReview = (r) => ids.filter((id) => meta[id].review === r);
   const flagged = ids.filter((id) => meta[id].flag);
+  const ruled = ids.filter((id) => meta[id].ruling);
+  const REVIEW_CLASSES = ['approved-ruled', 'approved-port', 'pending-review'];
 
   const sceneSections = SCENES.map(([key, title]) => {
     const list = ids.filter((id) => meta[id].scene === key)
@@ -173,8 +190,10 @@ const CLASS_NOTE = {
   const flagList = flagged.map((id) =>
     `<li><a href="#${id}"><b>${id}</b></a> — ${esc(meta[id].flag)}</li>`).join('\n');
 
-  const counts = ['approved-port', 'pending-review']
+  const counts = REVIEW_CLASSES
     .map((r) => `${byReview(r).length} ${r}`).join(' · ');
+  const ruledList = ruled.map((id) =>
+    `<li><a href="#${id}"><b>${id}</b></a> — ${esc(meta[id].ruling)}</li>`).join('\n');
 
   fs.writeFileSync(path.join(OUT, 'sheet.html'), `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><title>Act IV — the beat-state sheet · the flipbook</title>
@@ -188,6 +207,11 @@ const CLASS_NOTE = {
   h3 { font-size:12px; letter-spacing:.18em; text-transform:uppercase; margin:22px 0 4px; font-weight:500; }
   h3.h--approved-port { color:#F7931A; }
   h3.h--pending-review { color:rgba(255,217,166,.85); }
+  h3.h--approved-ruled { color:rgba(255,255,255,.85); }
+  .ruleline { color:rgba(255,255,255,.62); }
+  .ruleline b { color:rgba(255,255,255,.78); font-weight:500; }
+  figure[data-review="approved-ruled"] img { outline:1px solid rgba(255,255,255,.35); }
+  .pill--approved-ruled { color:rgba(255,255,255,.85); border-color:rgba(255,255,255,.45); }
   p.lang { font-size:12.5px; color:rgba(255,255,255,.55); margin:0 0 10px; max-width:1020px; line-height:1.7; }
   ol.rulings, ul.flags { font-size:12.5px; color:rgba(255,255,255,.55); max-width:1020px; line-height:1.7; padding-left:22px; }
   ul.flags b, ol.rulings b { color:rgba(255,255,255,.85); font-weight:600; }
@@ -229,6 +253,13 @@ question), <b>the inversion</b>, <b>the failures</b> (ten typographic rows), <b>
 Act III's sheet asked: <i>can I follow the argument by eye alone?</i> Then return two things: your verdicts on the
 <b>pending set</b> — the ${flagged.length} flagged cells listed below, each “as rendered” or one word that changes it — and
 <b>the go-ahead</b> that unlocks Batch D implementation under the sizing law. The approved-port cells ask nothing.</p>
+<p class="note"><b>Ruled at the flipbook walk — the Batch D implementation brief §1, 3 September 2026</b> (master §13), each ruling its own commit, each recorded on the cell it answers:</p>
+<ol class="rulings">
+${BATCH_D_RULINGS.map((r) => `<li>${esc(r)}</li>`).join('\n')}
+</ol>
+<ul class="flags">
+${ruledList}
+</ul>
 <p class="note"><b>The flags, gathered</b> — each in plain English, each on its cell:</p>
 <ul class="flags">
 ${flagList}
@@ -253,6 +284,7 @@ ${sceneSections}
     beatMapAuthority: 'docs/batch-d-package.md §1 — derived from the legacy advance structure 3 September 2026 and frozen the same day on the presenter’s rulings (master §13: the three ARGUABLE rows at A · A · A; Scene 22 at the default)',
     provenanceAuthority: 'docs/act-4-provenance.md — RULED 3 September 2026: 21 PORT · 0 ADAPT · 0 NEW · 2 retired; every cell a PORT of the named legacy treatment',
     rulings: RULINGS,
+    batchDRulings: BATCH_D_RULINGS,
     splice: { was: 39, now: 38, retired: '3-08-waypoint-judge', fileOnDisk: true, proof: 'review/act-4/smoke-deck.json' },
     homecoming: {
       cell: 's16-b1',
@@ -260,9 +292,11 @@ ${sceneSections}
       law: 'src/scenes/act-1-the-unfinished-exchange/_exchangeStage.js GEOM: markSaveB · roads.save · fadeSaveB'
     },
     protocol: 'the presenter walks the act as stills — the return, the test, the inversion, the failures, the requirements, the fifty scores landing at once, the closing line — and returns his verdicts on the pending set plus the go-ahead that unlocks implementation',
-    counts: Object.fromEntries(['approved-port', 'pending-review'].map((r) => [r, byReview(r).length])),
+    counts: Object.fromEntries(REVIEW_CLASSES.map((r) => [r, byReview(r).length])),
     pendingSet: byReview('pending-review'),
     approvedPortSet: byReview('approved-port'),
+    approvedRuledSet: byReview('approved-ruled'),
+    ruled: ruled.map((id) => ({ id, ruling: meta[id].ruling })),
     flags: flagged.map((id) => ({ id, flag: meta[id].flag, status: 'open — for the presenter’s word at the flipbook walk' })),
     probeFailures: ids.filter((id) => !probes[id].ok),
     cells,

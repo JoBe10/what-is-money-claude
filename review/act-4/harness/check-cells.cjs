@@ -12,16 +12,19 @@
 // And the sheet-level rules, gated against the RULED MAP and the FROZEN BEAT
 // MAP (master §13, 3 Sep 2026):
 //
-//   MAP AGREEMENT — the map is RULED; every cell's frame is a PORT row of
-//   docs/act-4-provenance.md; no ARGUABLE class survives in the map's table;
-//   the two retired rows are recorded; every cell is PORT with a named source.
+//   MAP AGREEMENT — the map is RULED; every cell's frame is a PORT or ADAPT
+//   row of docs/act-4-provenance.md and the cell carries its row's class
+//   (S19-F1 ADAPT since the Batch D ruling 1, 3 Sep 2026 — the carrier
+//   arrives at beat 2); no ARGUABLE class survives in the map's table; the
+//   two retired rows are recorded; every cell names its source.
 //
 //   BEAT COVERAGE — all 43 beats of the frozen map, each exactly once; 43
 //   cells; no candidate system anywhere (the map names no NEW frame).
 //
 //   THE PENDING SET — every pending-review cell carries a flag, every flag is
-//   on a pending-review cell, and the only review classes are approved-port
-//   and pending-review.
+//   on a pending-review cell, every approved-ruled cell carries its ruling,
+//   and the only review classes are approved-port, approved-ruled and
+//   pending-review.
 //
 //   THE PROBES — every cell has at least one probe and every probe passed at
 //   capture: the still shows the state it claims (the fifty revealed scores,
@@ -67,11 +70,16 @@ const PORT_FRAMES = [
   'S16-F1', 'S16-F2', 'S16-F3', 'S16-F4', 'S16-F5', 'S16-F6',
   'S17-F1', 'S17-F2',
   'S18-F1', 'S18-F2', 'S18-F3', 'S18-F4', 'S18-F5',
-  'S19-F1', 'S19-F2',
+  'S19-F2',
   'S20-F1', 'S21-F1',
   'S22-F1', 'S22-F2',
   'S23-F1', 'S23-F2', 'S23-F3'
 ];
+// The ADAPT rows — each a presenter ruling on a proven treatment, the one
+// change named in the map (the Batch D implementation brief §1, 3 Sep 2026).
+const ADAPT_FRAMES = ['S19-F1'];
+const CLASS_OF = Object.fromEntries([
+  ...PORT_FRAMES.map((f) => [f, 'PORT']), ...ADAPT_FRAMES.map((f) => [f, 'ADAPT'])]);
 
 // The frozen data, by committed blob id (docs/act-4-provenance.md §3.1).
 const FROZEN_BLOBS = {
@@ -198,6 +206,9 @@ function check(name, ok, detail) {
     const drift = PORT_FRAMES.filter((frame) => !new RegExp(`\\*\\*${frame}\\*\\*[^|]*\\|\\s*\\*\\*PORT\\*\\*`).test(map));
     check('MAP: every PORT frame transcribed here is a PORT row of the ruled map',
       drift.length === 0, drift.join(', ') || `${PORT_FRAMES.length}/${PORT_FRAMES.length} rows agree`);
+    const adaptDrift = ADAPT_FRAMES.filter((frame) => !new RegExp(`\\*\\*${frame}\\*\\*[^|]*\\|\\s*\\*\\*ADAPT\\*\\*`).test(map));
+    check('MAP: every ADAPT frame transcribed here is an ADAPT row of the ruled map (the Batch D rulings, 3 Sep 2026)',
+      adaptDrift.length === 0, adaptDrift.join(', ') || `${ADAPT_FRAMES.length}/${ADAPT_FRAMES.length} rows agree`);
 
     const table = map.slice(map.indexOf('# 1. The proposed map'), map.indexOf('# 2. The ARGUABLE rows'));
     const arguable = (table.match(/\|\s*\*\*ARGUABLE\*\*/g) || []).length;
@@ -206,8 +217,8 @@ function check(name, ok, detail) {
     const retiredRows = (table.match(/\|\s*\*\*retired\*\*/g) || []).length;
     check('MAP: the two retired rows are recorded (the 4-01 lens; the 4-04 goods band)', retiredRows === 2, `${retiredRows}`);
 
-    const bad = cells.filter((c) => !PORT_FRAMES.includes(c.frame) || c.klass !== 'PORT').map((c) => `${c.id}: ${c.frame} ${c.klass}`);
-    check('MAP: every cell is PORT and names a PORT frame of the ruled map', bad.length === 0, bad.join(' · ') || `${cells.length}/${cells.length}`);
+    const bad = cells.filter((c) => !CLASS_OF[c.frame] || c.klass !== CLASS_OF[c.frame]).map((c) => `${c.id}: ${c.frame} ${c.klass}`);
+    check('MAP: every cell names a frame of the ruled map and carries that frame’s class — PORT, or ADAPT where a ruling named one change', bad.length === 0, bad.join(' · ') || `${cells.length}/${cells.length}`);
 
     const sourceless = cells.filter((c) => !c.source || !c.frame).map((c) => c.id);
     check('MAP: every cell names its legacy source (slide and build)', sourceless.length === 0, sourceless.join(', ') || 'all named');
@@ -240,15 +251,18 @@ function check(name, ok, detail) {
   // ---- THE PENDING SET ------------------------------------------------------
   {
     const reviews = new Set(cells.map((c) => c.review));
-    const allowed = ['approved-port', 'pending-review'];
+    const allowed = ['approved-port', 'approved-ruled', 'pending-review'];
     const stray = [...reviews].filter((r) => !allowed.includes(r));
-    check('REVIEW: the only review classes are approved-port and pending-review', stray.length === 0, stray.join(', ') || allowed.join(' · '));
+    check('REVIEW: the only review classes are approved-port, approved-ruled and pending-review', stray.length === 0, stray.join(', ') || allowed.join(' · '));
     const pendingNoFlag = cells.filter((c) => c.review === 'pending-review' && !c.flag).map((c) => c.id);
     const flagNotPending = cells.filter((c) => c.flag && c.review !== 'pending-review').map((c) => c.id);
-    check('REVIEW: every pending-review cell carries a plain-English flag, and every flag is on a pending-review cell',
-      pendingNoFlag.length === 0 && flagNotPending.length === 0,
-      [...pendingNoFlag.map((id) => `${id} pending without flag`), ...flagNotPending.map((id) => `${id} flagged but not pending`)].join(' · ')
-        || `${cells.filter((c) => c.review === 'pending-review').length} pending, each flagged`);
+    const ruledNoRuling = cells.filter((c) => c.review === 'approved-ruled' && !c.ruling).map((c) => c.id);
+    const rulingNotRuled = cells.filter((c) => c.ruling && c.review !== 'approved-ruled').map((c) => c.id);
+    check('REVIEW: every pending-review cell carries a plain-English flag, every flag is on a pending-review cell, and every approved-ruled cell carries its ruling',
+      pendingNoFlag.length === 0 && flagNotPending.length === 0 && ruledNoRuling.length === 0 && rulingNotRuled.length === 0,
+      [...pendingNoFlag.map((id) => `${id} pending without flag`), ...flagNotPending.map((id) => `${id} flagged but not pending`),
+        ...ruledNoRuling.map((id) => `${id} ruled without ruling`), ...rulingNotRuled.map((id) => `${id} carries a ruling but is not approved-ruled`)].join(' · ')
+        || `${cells.filter((c) => c.review === 'pending-review').length} pending, each flagged · ${cells.filter((c) => c.review === 'approved-ruled').length} ruled, each with its ruling`);
   }
 
   // ---- THE PROBES -----------------------------------------------------------
@@ -350,6 +364,7 @@ function check(name, ok, detail) {
     limits: { cornerMean: 6, borderMean: 6 },
     frozenBeatMap: { ...FROZEN, total: TOTAL_BEATS, cells: TOTAL_CELLS },
     portFrames: PORT_FRAMES,
+    adaptFrames: ADAPT_FRAMES,
     frozenBlobs: FROZEN_BLOBS,
     homecomingPixels,
     reportedNotGated: 'warmPixelsReported — the act carries the accent by design (the claim, the carrier shell, the accent in the definition), so warmth is evidence here rather than a gate.',

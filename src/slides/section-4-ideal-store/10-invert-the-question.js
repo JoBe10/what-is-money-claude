@@ -97,8 +97,13 @@ export default {
     if (!refs) return;
 
     // 0 the governing question, carried over, with the direct framing beneath ·
-    // 1 the inversion replaces it · 2 the carrier goes on the stress stage.
-    // (R7: builds 1 and 2 used to render the identical frame.)
+    // 1 the inversion replaces it — the framing alone, no carrier on stage ·
+    // 2 the carrier goes on the stress stage, arriving on its word.
+    // (R7: builds 1 and 2 used to render the identical frame; R7.4 §D.1
+    // deleted the corner brackets and made them identical again. PRESENTER-
+    // RULED 3 September 2026 (the Batch D implementation brief §1.1, master
+    // §13): the carrier is keyed to build 2 — the one ruled change on this
+    // treatment, made here at the source.)
     const n = clampStep(step, MAX_STEP);
     beginBuild(refs, n);
 
@@ -107,7 +112,8 @@ export default {
     refs.direct.dataset.visible = String(n === 0);
     refs.inverted.dataset.visible = String(n >= 1);
     refs.stage.applyState({
-      frameVisible: n >= 2
+      frameVisible: n >= 2,
+      visible: n >= 2
     });
   },
 

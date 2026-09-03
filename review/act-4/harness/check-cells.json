@@ -1,5 +1,5 @@
 {
-  "date": "2026-09-03T05:01:19.794Z",
+  "date": "2026-09-03T08:06:00.466Z",
   "session": "act-4-states",
   "limits": {
     "cornerMean": 6,
@@ -31,7 +31,6 @@
     "S18-F3",
     "S18-F4",
     "S18-F5",
-    "S19-F1",
     "S19-F2",
     "S20-F1",
     "S21-F1",
@@ -40,6 +39,9 @@
     "S23-F1",
     "S23-F2",
     "S23-F3"
+  ],
+  "adaptFrames": [
+    "S19-F1"
   ],
   "frozenBlobs": {
     "src/slides/section-4-ideal-store/_comparison-data.js": "3a6440aa274260924ae6b83d896d60f37a5f1154",
@@ -380,8 +382,8 @@
       "cornerMean": 0,
       "borderMean": 0,
       "maxLum": 255,
-      "pxAbove32": 32680,
-      "warmPixelsReported": 5096
+      "pxAbove32": 15615,
+      "warmPixelsReported": 1299
     },
     {
       "id": "s19-b2",
@@ -699,7 +701,7 @@
       "warmPixelsReported": 19645
     }
   ],
-  "checks": 24,
+  "checks": 25,
   "failures": 0,
   "results": [
     {
@@ -730,7 +732,12 @@
     {
       "name": "MAP: every PORT frame transcribed here is a PORT row of the ruled map",
       "ok": true,
-      "detail": "22/22 rows agree"
+      "detail": "21/21 rows agree"
+    },
+    {
+      "name": "MAP: every ADAPT frame transcribed here is an ADAPT row of the ruled map (the Batch D rulings, 3 Sep 2026)",
+      "ok": true,
+      "detail": "1/1 rows agree"
     },
     {
       "name": "MAP: no ARGUABLE class survives in the map’s table (the three rows ruled A · A · A)",
@@ -743,7 +750,7 @@
       "detail": "2"
     },
     {
-      "name": "MAP: every cell is PORT and names a PORT frame of the ruled map",
+      "name": "MAP: every cell names a frame of the ruled map and carries that frame’s class — PORT, or ADAPT where a ruling named one change",
       "ok": true,
       "detail": "43/43"
     },
@@ -763,19 +770,19 @@
       "detail": "none"
     },
     {
-      "name": "REVIEW: the only review classes are approved-port and pending-review",
+      "name": "REVIEW: the only review classes are approved-port, approved-ruled and pending-review",
       "ok": true,
-      "detail": "approved-port · pending-review"
+      "detail": "approved-port · approved-ruled · pending-review"
     },
     {
-      "name": "REVIEW: every pending-review cell carries a plain-English flag, and every flag is on a pending-review cell",
+      "name": "REVIEW: every pending-review cell carries a plain-English flag, every flag is on a pending-review cell, and every approved-ruled cell carries its ruling",
       "ok": true,
-      "detail": "11 pending, each flagged"
+      "detail": "9 pending, each flagged · 2 ruled, each with its ruling"
     },
     {
       "name": "PROBES: every cell carries at least one probe, and every probe passed at capture — the still shows the state it claims",
       "ok": true,
-      "detail": "103 probes over 43 cells"
+      "detail": "105 probes over 43 cells"
     },
     {
       "name": "PROBES: the fifty scores are revealed at once at S23 b5 and stand at b6",

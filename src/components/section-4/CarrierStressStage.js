@@ -15,6 +15,12 @@ export function CarrierStressStage({ className = '' } = {}) {
   // motif that appeared on one slide, meant nothing, and asked to be decoded.
   // `frameVisible` survives as an accepted-and-ignored option so the call site
   // that passes it keeps its build map readable; nothing renders.
+  //
+  // `visible` (presenter-ruled 3 September 2026 — the Batch D implementation
+  // brief §1.1, master §13): the carrier arrives on the bench beat rather
+  // than standing from the moment the stage mounts. It defaults to true so
+  // the state API is otherwise unchanged; the arrival is the claim's and the
+  // shell's own reveals, nothing new.
 
   const scene = document.createElement('div');
   scene.className = 's4-stress-stage__scene';
@@ -30,15 +36,16 @@ export function CarrierStressStage({ className = '' } = {}) {
 
   el.append(scene);
 
-  function applyState({ frameVisible = false } = {}) {
+  function applyState({ frameVisible = false, visible = true } = {}) {
     el.dataset.frameVisible = String(frameVisible);
+    el.dataset.visible = String(visible);
 
     claim.applyState({
-      visible: true,
+      visible,
       emphasis: 'focus'
     });
     shell.applyState({
-      visible: true,
+      visible,
       focus: 'none'
     });
   }
