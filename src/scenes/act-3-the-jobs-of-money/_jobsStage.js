@@ -109,18 +109,16 @@ const SPOKE_Y = 399.5;
 const MARK_CLEAR = 32;
 
 // The split (S12-F1, ADAPT since the Act III final ruling 1, 3 Sep 2026,
-// master §13): 3-02's own words and rows for the household beat; in the
-// Argentina columns THE RENDERS REPLACE THE WORDS — each column carries the
-// header, then the render(s), nothing else. The USD / ARS codes and the
-// dollars / pesos words retire (the brick glyph had already retired to file
-// at r2 ruling 2). A cell with no word builds only its renders.
+// master §13): in the Argentina columns THE RENDERS REPLACE THE WORDS — each
+// column carries the header, then the render(s), nothing else. The USD / ARS
+// codes and the dollars / pesos words retire (the brick glyph had already
+// retired to file at r2 ruling 2). A cell with no word builds only its
+// renders. THE HOUSEHOLD ROW IS RETIRED (the Acts III–IV final ruling 1,
+// 3 Sep 2026, master §13): the household sentence is spoken over beat 1 as
+// the empty columns land, and the text-only row (one money · the same money
+// · property · shares · gold) is on file as s12-b2-household — S12 = 3.
 const COLS = ['PRICED IN', 'PAID IN', 'SAVED IN'];
 const SPLIT_CELLS = {
-  household: [
-    { marks: [], word: 'one money' },
-    { marks: [], word: 'the same money' },
-    { marks: [], word: 'property · shares · gold' }
-  ],
   argentina: [
     { marks: [], word: null },
     { marks: [], word: null },
@@ -287,12 +285,12 @@ export const STATES = {
     { triad: { jobs: 3 } },
     { triad: { jobs: 3, continuity: true } }
   ],
-  // S12 — the approved cells s12-b1 … s12-b4 (the reverted PORT staging,
+  // S12 — the approved cells s12-b1 … s12-b3 (the reverted PORT staging,
   // amended by r2 rulings 1 and 2: b1 is the heads on clean black — no
-  // triad in the paint tree — and the Argentina cells carry their objects).
+  // triad in the paint tree — and the Argentina cells carry their objects;
+  // the household row retired by the Acts III–IV final ruling 1 — S12 = 3).
   'we-already-split-those-jobs': [
     { split: {} },
-    { split: { cells: 'household' } },
     { split: { cells: 'argentina', kicker: true } },
     { split: { cells: 'argentina', kicker: true, principle: true } }
   ],
@@ -327,14 +325,14 @@ export const STATES = {
       berths: { bitcoin: 1, coffee: 0.5 }, statement: S14_LINES.landed
     }
   ],
-  // S15 — the approved candidate-A cells s15-b1-a … s15-b6-a, and the pivot
-  // coda s15-b7 (the Act III final ruling 3): the home base returning
-  // whole, the disc at its center, STORE OF VALUE at full voice, the
-  // question in the statement slot — the approved s14-b4 composition, its
-  // bytes carried. The act leaves on the question.
+  // S15 — the approved candidate-A cells s15-b1-a … s15-b6-a, and the exit
+  // s15-b7 (the Acts III–IV final ruling 3, 3 Sep 2026, master §13): the
+  // tower receded to its glowing base slab — the upper layers, the links and
+  // the drop gone — and the hinge question in the statement slot beneath it.
+  // No return to the triad; the act leaves on the question over the base.
   'the-tower': [
     { tower: 1 }, { tower: 2 }, { tower: 3 }, { tower: 4 }, { tower: 5 }, { tower: 6 },
-    { triad: { jobs: 3, lit: 'sov' }, question: S14_LINES.question }
+    { tower: 7, question: S14_LINES.question }
   ]
 };
 
@@ -722,7 +720,7 @@ class Act3Stage {
   setCellsContent(kind) {
     if (this.cellsKind === kind) return;
     this.cellsKind = kind;
-    const spec = SPLIT_CELLS[kind] || SPLIT_CELLS.household;
+    const spec = SPLIT_CELLS[kind] || SPLIT_CELLS.argentina;
     this.cells.forEach((c, i) => {
       c.innerHTML = '';
       // A text row builds as the legacy builds it — the marks row, then the
@@ -886,9 +884,12 @@ class Act3Stage {
     if (!on) return;
     const beat = conf.tower;
     const foundation = beat >= 5;
+    // The exit (beat 7): only the base slab stands — the upper layers, the
+    // links and the drop are gone, and the question lands beneath it.
+    const exit = beat >= 7;
     this.towerLayer.dataset.step = String(beat);
     this.towerLayer.dataset.live = 'false';
-    const shown = { apps: beat >= 1, deposits: beat >= 2, base: beat >= 3 };
+    const shown = { apps: beat >= 1 && !exit, deposits: beat >= 2 && !exit, base: beat >= 3 };
     A_SLABS.forEach((s) => {
       const slab = this.slabs[s.key];
       if (!shown[s.key]) {
@@ -901,7 +902,7 @@ class Act3Stage {
       slab.label.style.cssText = `font-size:25px; font-weight:500; letter-spacing:0.18em; color:${labelColor};`;
     });
     Object.values(this.links).forEach(({ line, caption, spec }) => {
-      const lit = (spec.key === 'l1' && beat >= 2) || (spec.key === 'l2' && beat >= 3);
+      const lit = !exit && ((spec.key === 'l1' && beat >= 2) || (spec.key === 'l2' && beat >= 3));
       if (!lit) {
         line.style.cssText = 'display:none;';
         caption.style.cssText = 'display:none;';

@@ -1,13 +1,17 @@
 // Scene 15 — The Tower (7 beats; CANDIDATE A, the presenter's selection —
 // the proportional inverted tower — plus the pivot coda as the act's final
-// beat, the Act III final ruling 3, 3 Sep 2026, master §13).
+// beat, the Act III final ruling 3, 3 Sep 2026, master §13, its visual
+// amended by the Acts III–IV final ruling 3 of the same day).
 //
 // The scene is entered from the ladder world (Scene 14 ends on the coin's
 // landing — "Then let's judge it there.") and opens on the ruled line, "But
 // before we judge it there, let me pull the rug slightly." After the held
-// question the tower gives the frame back to the home base, whole — the
-// disc at its center, STORE OF VALUE at full voice — and the question lands:
-// "What makes something a good store of value?" The act leaves on it.
+// question THE EXIT LANDS ON THE TOWER: on the final advance the tower
+// recedes to its glowing base slab — the upper layers, the claim links and
+// the drop dissolve — and the hinge question lands beneath it: "What makes
+// something a good store of value?" No return to the triad. The act leaves
+// on the question over the base, and Scene 16's homecoming morphs from the
+// slab.
 //
 // The descending reveal: PAYMENT APPS lands at the frame's top, widest and
 // faintest; BANK DEPOSITS beneath it, outlined; BASE MONEY at the bottom —
@@ -22,12 +26,13 @@
 // center, never on the tower).
 //
 // Landed states — the approved candidate-A cells s15-b1-a … s15-b6-a, and
-// the pivot coda s15-b7 (the approved s14-b4 composition, its bytes
-// carried), by construction.
+// the exit s15-b7 (the base slab and the hinge question — the Acts III–IV
+// final ruling 3; the triad-return coda on file as s15-b7-triad), by
+// construction.
 
 import { gsap } from 'gsap';
 import { makeSceneModule } from './_sceneModule.js';
-import { A_SLABS, slabLook, setVisible } from './_jobsStage.js';
+import { A_SLABS, slabLook } from './_jobsStage.js';
 
 const ID = 'the-tower';
 
@@ -215,29 +220,22 @@ const transitions = {
     tl.add(() => stage.applyState(ID, 5), 2.3);
   },
 
-  // beat 7 — the pivot coda (the Act III final ruling 3): the tower gives
-  // the frame back to the home base, whole — the disc at its center, STORE
-  // OF VALUE at full voice — and the question lands in the home frame's own
-  // statement slot. The gesture is the relocated S14 pivot, the tower
-  // standing where the ladder stood. The act leaves on the question.
+  // beat 7 — the exit (the Acts III–IV final ruling 3): the tower recedes to
+  // its glowing base slab — PAYMENT APPS, BANK DEPOSITS, both claim links
+  // and the held question's drop dissolve, the base holding its foundation
+  // look and its place — and the hinge question lands beneath it in the
+  // deck's question register. No return to the triad. The act leaves on the
+  // question over the base; Scene 16's homecoming morphs from the slab.
   6: (mod, stage) => {
     const tl = stage.timeline();
-    tl.to(stage.towerLayer, { opacity: 0, duration: 0.6, ease: 'power1.inOut' }, 0.1);
-    tl.add(() => {
-      stage.towerLayer.style.display = 'none';
-      stage.triadLayer.style.display = '';
-      stage.triadLayer.style.opacity = '0';
-      setVisible(stage.token, true);
-      ['sov', 'moe', 'uoa'].forEach((k) => {
-        setVisible(stage.spokes[k], true);
-        setVisible(stage.fns[k], true);
-        stage.fns[k].style.opacity = k === 'sov' ? '1' : '0.55';
-      });
-      setVisible(stage.continuity, false);
-      gsap.to(stage.triadLayer, { opacity: 1, duration: 0.9, ease: 'power1.inOut' });
-    }, 0.75);
-    landStatement(stage, tl, stage.states[ID][6].question, 1.5, { question: true });
-    tl.add(() => stage.applyState(ID, 6), 2.6);
+    const upper = [
+      stage.slabs.apps.el, stage.slabs.deposits.el,
+      ...['l1', 'l2'].flatMap((k) => [stage.links[k].line, stage.links[k].caption]),
+      stage.drop
+    ];
+    tl.to(upper, { opacity: 0, duration: 0.7, ease: 'power1.inOut', stagger: 0.04 }, 0.1);
+    landStatement(stage, tl, stage.states[ID][6].question, 0.95, { question: true });
+    tl.add(() => stage.applyState(ID, 6), 2.0);
   }
 };
 
