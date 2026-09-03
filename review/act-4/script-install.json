@@ -1,0 +1,402 @@
+{
+  "date": "2026-09-03T02:55:06.505Z",
+  "session": "act-4-foundation",
+  "rule": "docs/batch-d-package.md §2 is the legacy Section 4 slides' own notes, assembled in the architecture's scene merges, with exactly the adaptation ledger applied — proven word for word and character for character; every scene's [→] count is §1's; the protected lines are verified character for character against the master with every difference reported; nothing before Scene 16 anticipates the generalization.",
+  "ledger": [
+    {
+      "scene": "S17",
+      "file": "07-store-of-value-function.js",
+      "from": "So here is the definition we will use for the rest of the evening:",
+      "to": "So here is the definition we will use from here:",
+      "why": "a live-delivery self-reference (\"the evening\"); master §3.5's permitted form \"here\""
+    },
+    {
+      "scene": "S23",
+      "file": "16-the-comparison.js",
+      "from": "the holding we defined one slide ago",
+      "to": "the holding we defined a moment ago",
+      "why": "a structural self-reference (\"one slide ago\"); the holding is spoken earlier in the same scene"
+    },
+    {
+      "scene": "S23",
+      "file": "16-the-comparison.js",
+      "from": "and here’s what it means tonight, concretely:",
+      "to": "and here’s what it means, concretely:",
+      "why": "a live-delivery self-reference (\"tonight\") — the word deleted, nothing added"
+    },
+    {
+      "scene": "S23-armor",
+      "file": "20-bitcoin-does-not-replace-everything.js",
+      "from": "that is precisely the currency chart from Section 2,",
+      "to": "that is precisely the currency chart you saw earlier,",
+      "why": "a structural self-reference (\"Section 2\") in the relocated steelman; replaced with what the viewer watched (the batch-c ledger's form)"
+    }
+  ],
+  "scenes": [
+    {
+      "scene": "S16",
+      "words": 653,
+      "beats": 8,
+      "expected": 8
+    },
+    {
+      "scene": "S17",
+      "words": 243,
+      "beats": 5,
+      "expected": 5
+    },
+    {
+      "scene": "S18",
+      "words": 374,
+      "beats": 8,
+      "expected": 8
+    },
+    {
+      "scene": "S19",
+      "words": 133,
+      "beats": 2,
+      "expected": 2
+    },
+    {
+      "scene": "S20",
+      "words": 206,
+      "beats": 5,
+      "expected": 5
+    },
+    {
+      "scene": "S21",
+      "words": 226,
+      "beats": 5,
+      "expected": 5
+    },
+    {
+      "scene": "S22",
+      "words": 303,
+      "beats": 4,
+      "expected": 4
+    },
+    {
+      "scene": "S23",
+      "words": 1712,
+      "beats": 6,
+      "expected": 6
+    }
+  ],
+  "totalBeats": 43,
+  "protectedLines": [
+    {
+      "name": "the bisection crescendo (master §9.3, architecture Scene 16) — installed in S16 b7",
+      "where": "S16 b7 (legacy 4-06 b3)",
+      "master": "You cannot print money. You can only print the units it comes in — and every unit printed drains the ones already earned.",
+      "installed": "you cannot print money. You can only print the units it comes in — and every unit printed drains the ones already earned.",
+      "identical": false,
+      "wordsIdentical": true,
+      "firstDifference": {
+        "at": 0,
+        "master": "You cannot print money. ",
+        "installed": "you cannot print money. "
+      },
+      "ok": true
+    },
+    {
+      "name": "\"Don’t trust. Verify.\" — the table's closing line, on stage",
+      "where": "4-16 finalLine (two spans)",
+      "master": "Don’t trust. Verify.",
+      "installed": "Don’t trust. Verify.",
+      "identical": true,
+      "wordsIdentical": true,
+      "firstDifference": null,
+      "ok": true
+    },
+    {
+      "name": "the enlargement rung 4 phrasing vs master §3.3",
+      "where": "S16 b3 (legacy 4-04 b3)",
+      "master": "not a legal claim on anyone in particular; a social claim on everyone in general.",
+      "installed": "Not a *legal* claim on anyone in particular. A *social* claim on everyone in general.",
+      "identical": false,
+      "wordsIdentical": true,
+      "firstDifference": {
+        "at": 0,
+        "master": "not a legal claim on any",
+        "installed": "Not a *legal* claim on a"
+      },
+      "ok": true,
+      "note": "the master’s §3.3 form ends at \"in general.\"; the installed sentence continues \"— enforced not by courts, but by acceptance.\" (the §9.2 clause, in the legacy’s own order); compared with that clause set aside"
+    },
+    {
+      "name": "the rung 4 phrasing vs master §9.2 — the enforcement clause",
+      "where": "S16 b3 (legacy 4-04 b3)",
+      "master": "not a legal claim on anyone in particular — a social claim on everyone in general, enforced by acceptance, not courts.",
+      "installed": "Not a *legal* claim on anyone in particular. A *social* claim on everyone in general — enforced not by courts, but by acceptance.",
+      "identical": false,
+      "wordsIdentical": true,
+      "clause": {
+        "master": "enforced by acceptance not courts",
+        "legacy": "enforced not by courts but by acceptance",
+        "legacyExtraWords": [
+          "but"
+        ]
+      },
+      "ok": true
+    },
+    {
+      "name": "the on-screen definition (master §9.2) — legacy 4-04's two-line headline",
+      "where": "4-04 headline (two stacked lines, no trailing period)",
+      "master": "AN EARNED, TRANSFERABLE CLAIM ON VALUE.",
+      "installed": "AN EARNED, TRANSFERABLE CLAIM ON VALUE",
+      "identical": false,
+      "wordsIdentical": true,
+      "firstDifference": {
+        "at": 38,
+        "master": ".",
+        "installed": ""
+      },
+      "ok": true
+    },
+    {
+      "name": "the hundred-year sentence (master §9.5) — installed in S18 b2",
+      "where": "S18 b2 (legacy 4-08 b2)",
+      "master": "One hundred years — long enough that you're not allowed to assume any company, any arrangement, any government survives it. That's the point of the number.",
+      "installed": "One hundred years — long enough that you’re not allowed to *assume* any company, any arrangement, any government survives it. That’s the point of the number.",
+      "identical": false,
+      "wordsIdentical": true,
+      "firstDifference": {
+        "at": 40,
+        "master": "'re not allowed to assum",
+        "installed": "’re not allowed to *assu"
+      },
+      "ok": true
+    }
+  ],
+  "frozen": {
+    "comparisonDataSha256": "951c4af89dd0aa20afeb46c131874f67432f3ff59fde9d990d84abcb915c544a",
+    "failurePropertyDataSha256": "f4fb579f1508b69f3da2988f7b24d2536b6af76db61273e0f80c362237493e32",
+    "scores": [
+      [
+        4,
+        1,
+        5,
+        3,
+        2
+      ],
+      [
+        3,
+        4,
+        5,
+        1,
+        3
+      ],
+      [
+        3,
+        5,
+        4,
+        2,
+        5
+      ],
+      [
+        2,
+        4,
+        5,
+        1,
+        4
+      ],
+      [
+        2,
+        4,
+        4,
+        1,
+        4
+      ],
+      [
+        4,
+        1,
+        5,
+        1,
+        1
+      ],
+      [
+        5,
+        3,
+        5,
+        4,
+        3
+      ],
+      [
+        4,
+        4,
+        5,
+        3,
+        4
+      ],
+      [
+        5,
+        4,
+        4,
+        1,
+        4
+      ],
+      [
+        5,
+        3,
+        2,
+        4,
+        4
+      ]
+    ],
+    "properties": [
+      "NO SUPPLY INFLATION",
+      "DIVISIBILITY",
+      "LIQUIDITY",
+      "PORTABILITY",
+      "NO CARRYING COSTS",
+      "RESISTANCE TO CONTROL",
+      "DURABILITY",
+      "VERIFIABILITY",
+      "FUNGIBILITY",
+      "TRACK RECORD"
+    ],
+    "failures": [
+      "DILUTED",
+      "INDIVISIBLE",
+      "ILLIQUID",
+      "TRAPPED",
+      "COSTLY TO HOLD",
+      "CONTROLLED",
+      "DEGRADED",
+      "UNVERIFIABLE",
+      "NON-FUNGIBLE",
+      "UNTESTED"
+    ]
+  },
+  "virginity": {
+    "filesChecked": 29,
+    "generalizationHits": [],
+    "testHits": [
+      "src/scenes/act-2-the-architecture-of-money/09-scarcity-becomes-digital.js:80: [→] And the honest line, in the same breath: it is very young. Its price still swings far more than the monies",
+      "src/scenes/act-2-the-architecture-of-money/_architectureStage.js:69: { key: 'bitcoin', name: 'BITCOIN', gain: 'NON-DISCRETIONARY SUPPLY', dep: 'not yet twenty years into a hundred",
+      "src/scenes/act-2-the-architecture-of-money/_architectureStage.js:143: limitation: 'Very young. Its price still swings far more than the monies it would compete with. Not yet twenty",
+      "src/scenes/act-2-the-architecture-of-money/_railStates.js:18: limitation: 'Very young. Its price still swings far more than the monies it would compete with. Not yet twenty",
+      "src/scenes/act-2-the-architecture-of-money/_railWorld.js:60: bitcoin: { gain: 'NON-DISCRETIONARY SUPPLY', dep: 'not yet twenty years into a hundred-year question' }",
+      "src/slides/section-3-function/08-waypoint-judge.js:65: [→] One question left — the one everything has been building toward. How would you judge anything that tries t"
+    ]
+  },
+  "checks": 23,
+  "failures": 0,
+  "results": [
+    {
+      "name": "PRESENT: every scene has an installed block",
+      "ok": true,
+      "detail": "8/8"
+    },
+    {
+      "name": "WORDS: the installed scripts are the legacy notes with exactly the ledger applied, word for word",
+      "ok": true,
+      "detail": "zero differences (S16 653 · S17 243 · S18 374 · S19 133 · S20 206 · S21 226 · S22 303 · S23 1712)"
+    },
+    {
+      "name": "CHARACTERS: identical to the byte, punctuation and dashes included",
+      "ok": true,
+      "detail": "8/8 identical"
+    },
+    {
+      "name": "BEATS: every scene's [→] count is its §1 map, and Act IV is 43 at the default map",
+      "ok": true,
+      "detail": "S16 8 · S17 5 · S18 8 · S19 2 · S20 5 · S21 5 · S22 4 · S23 6 = 43"
+    },
+    {
+      "name": "MAP: §1's beat maps state the same counts as §2's scripts",
+      "ok": true,
+      "detail": "8/8 agree"
+    },
+    {
+      "name": "MARKERS: the seam flag and the armor blocks carry no advance",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "LEDGER: 4 substitutions, each once in its source, each applied, none of the originals surviving",
+      "ok": true,
+      "detail": "S17: “So here is the definition we will use for the rest of the evening:” → “So here is the definition we will use from here:” · S23: “the holding we defined one slide ago” → “the holding we defined a moment ago” · S23: “and here’s what it means tonight, concretely:” → “and here’s what it means, concretely:” · S23-armor: “that is precisely the currency chart from Section 2,” → “that is precisely the currency chart you saw earlier,”"
+    },
+    {
+      "name": "PROTECTED: the bisection crescendo (master §9.3, architecture Scene 16) — installed in S16 b7",
+      "ok": true,
+      "detail": "words identical; first character difference at 0: master “You cannot print money. ” vs installed “you cannot print money. ”"
+    },
+    {
+      "name": "PROTECTED: \"Don’t trust. Verify.\" — the table's closing line, on stage",
+      "ok": true,
+      "detail": "character-for-character identical"
+    },
+    {
+      "name": "PROTECTED: \"Don’t trust. Verify.\" is on stage exactly once in the Section 4 sources (master §3.7; the second use retired at R7.4)",
+      "ok": true,
+      "detail": "16-the-comparison.js"
+    },
+    {
+      "name": "PROTECTED: the enlargement rung 4 phrasing vs master §3.3",
+      "ok": true,
+      "detail": "words identical; first character difference at 0: master “not a legal claim on any” vs installed “Not a *legal* claim on a”"
+    },
+    {
+      "name": "PROTECTED: the rung 4 phrasing vs master §9.2 — the protected phrase word for word; the enforcement clause's difference reported exactly",
+      "ok": true,
+      "detail": "phrase identical through \"in general\"; the clause: master “enforced by acceptance not courts” vs legacy “enforced not by courts but by acceptance” — the legacy's extra word: but; order differs"
+    },
+    {
+      "name": "PROTECTED: the on-screen definition (master §9.2) — legacy 4-04's two-line headline",
+      "ok": true,
+      "detail": "words identical; first character difference at 38: master “.” vs installed “”"
+    },
+    {
+      "name": "PROTECTED: the spoken definition \"Money is an earned, transferable claim on value.\" is installed at S16 b2",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "PROTECTED: the hundred-year sentence (master §9.5) — installed in S18 b2",
+      "ok": true,
+      "detail": "words identical; first character difference at 40: master “'re not allowed to assum” vs installed “’re not allowed to *assu”"
+    },
+    {
+      "name": "PROTECTED: the scores are dated — \"my judgments, as of 2026\" installed at S23 b6",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "PROTECTED: the architecture's return line opens S16 b1, verbatim",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "PROTECTED: the store-of-value definition (purchasing power + redeemability) installed at S17 b5",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "FROZEN: fifty scores, ten rows, in _comparison-data.js — recorded by sha256",
+      "ok": true,
+      "detail": "10 rows · sha256 951c4af89dd0aa20…"
+    },
+    {
+      "name": "FROZEN: the ten properties invert one-to-one from the ten failures, in the table's order (master §9.5)",
+      "ok": true,
+      "detail": "DILUTED · INDIVISIBLE · ILLIQUID · TRAPPED · COSTLY TO HOLD · CONTROLLED · DEGRADED · UNVERIFIABLE · NON-FUNGIBLE · UNTESTED → NO SUPPLY INFLATION · DIVISIBILITY · LIQUIDITY · PORTABILITY · NO CARRYING COSTS · RESISTANCE TO CONTROL · DURABILITY · VERIFIABILITY · FUNGIBILITY · TRACK RECORD"
+    },
+    {
+      "name": "FROZEN: PROPERTY is the row header and the real-estate asset is labeled REAL ESTATE (master §3.7)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "VIRGINITY: no scene before Scene 16 speaks or shows the generalization — \"claim on value\", \"social claim\", \"legal claim\", \"transferable claim\"",
+      "ok": true,
+      "detail": "29 files clean"
+    },
+    {
+      "name": "VIRGINITY: the 100-Year Test and the inversion never appear before Act IV — every hit reported for the presenter's eye",
+      "ok": true,
+      "detail": "src/scenes/act-2-the-architecture-of-money/09-scarcity-becomes-digital.js:80: [→] And the honest line, in the same breath: it is very young. Its price still swings far more than the monies · src/scenes/act-2-the-architecture-of-money/_architectureStage.js:69: { key: 'bitcoin', name: 'BITCOIN', gain: 'NON-DISCRETIONARY SUPPLY', dep: 'not yet twenty years into a hundred · src/scenes/act-2-the-architecture-of-money/_architectureStage.js:143: limitation: 'Very young. Its price still swings far more than the monies it would compete with. Not yet twenty · src/scenes/act-2-the-architecture-of-money/_railStates.js:18: limitation: 'Very young. Its price still swings far more than the monies it would compete with. Not yet twenty · src/scenes/act-2-the-architecture-of-money/_railWorld.js:60: bitcoin: { gain: 'NON-DISCRETIONARY SUPPLY', dep: 'not yet twenty years into a hundred-year question' } · src/slides/section-3-function/08-waypoint-judge.js:65: [→] One question left — the one everything has been building toward. How would you judge anything that tries t"
+    }
+  ]
+}
