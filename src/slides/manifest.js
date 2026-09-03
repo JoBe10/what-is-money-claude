@@ -163,6 +163,24 @@
 // **The deck is 34 slides** (was 38): twelve legacy slides out (4-01 and
 // 4-06 through 4-16), eight scenes in. Both splice seams are proven both
 // ways in review/batch-d/smoke-batch-d.json.
+// (The two survivors are retired by presenter ruling, 3 September 2026 —
+// the Acts III–IV final block below.)
+//
+// ===== ACTS III–IV FINAL, 3 September 2026 — the two survivors retired =====
+//
+// The presenter retires the two ambiguous-fate survivors (master §13, 3 Sep
+// 2026 — the Act V kickoff brief, Part A §4; the ruling Batches C and D asked
+// for): 3-00-waypoint-function — the waypoint device was retired by the
+// structure freeze (Stage 0, ruling 1) — and 3-04-stage-signatures — no
+// scene in the architecture; its ladder content is spoken inside Scene 13.
+// **The legacy files stay on disk and in history**; only their manifest
+// entries are gone, and the `function` section leaves the sections list, as
+// `question` and `origin` did before it. Act IV now exits directly onto the
+// surviving legacy Section 4 — 4-17, Act V's first source — and the seam
+// S23 → 4-17 is reported, not smoothed
+// (review/acts-3-4-final/smoke-acts-3-4-final.json proves it both ways).
+//
+// **The deck is 32 slides** (was 34): two legacy slides out, nothing in.
 
 import p1 from '../scenes/prologue/p1-eighty-thousand-hours.js';
 import p2 from '../scenes/prologue/p2-the-stakes.js';
@@ -192,9 +210,6 @@ import scene20 from '../scenes/act-4-the-store-of-value-test/20-how-the-carrier-
 import scene21 from '../scenes/act-4-the-store-of-value-test/21-how-the-carrier-can-fail-ii.js';
 import scene22 from '../scenes/act-4-the-store-of-value-test/22-from-failure-to-requirement.js';
 import scene23 from '../scenes/act-4-the-store-of-value-test/23-the-comparison.js';
-
-import s3_00 from './section-3-function/00-waypoint-function.js';
-import s3_04 from './section-3-function/04-stage-signatures.js';
 
 import s4_17 from './section-4-ideal-store/17-store-of-value-function-migrates.js';
 import s4_18 from './section-4-ideal-store/18-monetary-premium.js';
@@ -230,14 +245,10 @@ const act3 = [scene11, scene12, scene13, scene14, scene15];
 // preserves by never tearing the stage down at these seven boundaries.
 const act4 = [scene16, scene17, scene18, scene19, scene20, scene21, scene22, scene23];
 
-// The legacy deck, as it stands after Batch D (the block above). The
-// function section keeps two ambiguous-fate survivors — the second waypoint
-// and the stage-signatures bracket, in their legacy relative order, now after
-// Act IV and still immediately before the surviving legacy Section 4; the
-// third waypoint (3-08) is retired, its file on disk.
-const section3 = [
-  s3_00, s3_04
-];
+// The legacy deck, as it stands after the Acts III–IV final rulings (the
+// block above): the function section is gone — its three waypoint and
+// bracket survivors (3-00, 3-04, 3-08) are all retired, their files on disk
+// — and the surviving legacy Section 4 follows Act IV directly.
 // Section 4 keeps its shipped slide numbers — the whole project, the freeze
 // register and every governing document refer to beats as 4.15, 4.23 — so
 // structural changes slot in rather than renumbering. R7's merged section entry
@@ -261,7 +272,6 @@ export const sections = [
   { id: 'act-2',       label: 'Act II — The Architecture of Money', slides: act2 },
   { id: 'act-3',       label: 'Act III — The Jobs of Money',       slides: act3 },
   { id: 'act-4',       label: 'Act IV — The Store-of-Value Test',  slides: act4 },
-  { id: 'function',    label: 'Function',                          slides: section3 },
   { id: 'ideal-store', label: 'Ideal Store',                       slides: section4 },
   { id: 'close',       label: 'Close',                             slides: section5 }
 ];
