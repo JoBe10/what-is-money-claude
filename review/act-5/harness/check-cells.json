@@ -1,0 +1,696 @@
+{
+  "date": "2026-09-03T23:02:54.241Z",
+  "session": "act-5-states",
+  "limits": {
+    "cornerMean": 6,
+    "borderMean": 6
+  },
+  "frozenBeatMap": {
+    "S24": 4,
+    "S25": 4,
+    "S26": 9,
+    "S27": 3,
+    "S28": 3,
+    "S29": 2,
+    "S30": 2,
+    "total": 27,
+    "cells": 27
+  },
+  "portFrames": [
+    "S24-F1",
+    "S24-F2",
+    "S24-F3",
+    "S24-F4",
+    "S25-F1",
+    "S25-F2",
+    "S25-F3",
+    "S25-F4",
+    "S26-F1",
+    "S26-F2",
+    "S26-F3",
+    "S26-F4",
+    "S27-F1",
+    "S27-F2",
+    "S27-F3",
+    "S28-F1",
+    "S28-F2",
+    "S28-F3",
+    "S28-F4",
+    "S29-F1",
+    "S29-F2",
+    "S30-F2"
+  ],
+  "adaptFrames": [
+    "S30-F1"
+  ],
+  "blackCells": [
+    "s30-b1"
+  ],
+  "frozenBlobs": {
+    "src/slides/section-4-ideal-store/_comparison-data.js": "3a6440aa274260924ae6b83d896d60f37a5f1154"
+  },
+  "reportedNotGated": "warmPixelsReported — the act carries the accent by design (the claims, the halo, the repricing, the conclusion’s two terms), so warmth is evidence here rather than a gate.",
+  "cells": [
+    {
+      "id": "s24-b1",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "black": false,
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 6301,
+      "warmPixelsReported": 3632
+    },
+    {
+      "id": "s24-b2",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "black": false,
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 31123,
+      "warmPixelsReported": 8385
+    },
+    {
+      "id": "s24-b3",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "black": false,
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 104743,
+      "warmPixelsReported": 41818
+    },
+    {
+      "id": "s24-b4",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "black": false,
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 123720,
+      "warmPixelsReported": 44534
+    },
+    {
+      "id": "s25-b1",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "black": false,
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 2131,
+      "warmPixelsReported": 302
+    },
+    {
+      "id": "s25-b2",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "black": false,
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 46114,
+      "warmPixelsReported": 25557
+    },
+    {
+      "id": "s25-b3",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "black": false,
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 86125,
+      "warmPixelsReported": 60665
+    },
+    {
+      "id": "s25-b4",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "black": false,
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 62535,
+      "warmPixelsReported": 16457
+    },
+    {
+      "id": "s26-b1",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "black": false,
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 12289,
+      "warmPixelsReported": 5199
+    },
+    {
+      "id": "s26-b2",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "black": false,
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 35235,
+      "warmPixelsReported": 17777
+    },
+    {
+      "id": "s26-b3",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "black": false,
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 48765,
+      "warmPixelsReported": 26059
+    },
+    {
+      "id": "s26-b4",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "black": false,
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 61701,
+      "warmPixelsReported": 36793
+    },
+    {
+      "id": "s26-b5",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "black": false,
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 75679,
+      "warmPixelsReported": 38737
+    },
+    {
+      "id": "s26-b6",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "black": false,
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 29625,
+      "warmPixelsReported": 14800
+    },
+    {
+      "id": "s26-b7",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "black": false,
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 47717,
+      "warmPixelsReported": 26655
+    },
+    {
+      "id": "s26-b8",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "black": false,
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 60868,
+      "warmPixelsReported": 35740
+    },
+    {
+      "id": "s26-b9",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "black": false,
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 70563,
+      "warmPixelsReported": 43876
+    },
+    {
+      "id": "s27-b1",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "black": false,
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 29043,
+      "warmPixelsReported": 2433
+    },
+    {
+      "id": "s27-b2",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "black": false,
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 44932,
+      "warmPixelsReported": 12938
+    },
+    {
+      "id": "s27-b3",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "black": false,
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 55964,
+      "warmPixelsReported": 14638
+    },
+    {
+      "id": "s28-b1",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "black": false,
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 44885,
+      "warmPixelsReported": 22358
+    },
+    {
+      "id": "s28-b2",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "black": false,
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 53754,
+      "warmPixelsReported": 22425
+    },
+    {
+      "id": "s28-b3",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "black": false,
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 177625,
+      "warmPixelsReported": 138587
+    },
+    {
+      "id": "s29-b1",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "black": false,
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 42581,
+      "warmPixelsReported": 10739
+    },
+    {
+      "id": "s29-b2",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "black": false,
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 48585,
+      "warmPixelsReported": 20747
+    },
+    {
+      "id": "s30-b1",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "black": true,
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 0,
+      "pxAbove32": 0,
+      "warmPixelsReported": 0
+    },
+    {
+      "id": "s30-b2",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "black": false,
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 25143,
+      "warmPixelsReported": 0
+    }
+  ],
+  "checks": 41,
+  "failures": 0,
+  "results": [
+    {
+      "name": "CELLS: 27 measured — corner ≤ 6, border ≤ 6, content present (the silence black), 1920×1080",
+      "ok": true,
+      "detail": "27/27"
+    },
+    {
+      "name": "CELLS: the sheet carries exactly 27 cells — one per beat of the frozen map",
+      "ok": true,
+      "detail": "27"
+    },
+    {
+      "name": "MAP: docs/act-5-provenance.md is RULED (4 September 2026)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "MAP: every PORT frame transcribed here is a PORT row of the ruled map",
+      "ok": true,
+      "detail": "22/22 rows agree"
+    },
+    {
+      "name": "MAP: the ADAPT frame transcribed here is an ADAPT row of the ruled map (S30-F1 — the wayline retired)",
+      "ok": true,
+      "detail": "1/1"
+    },
+    {
+      "name": "MAP: no ARGUABLE class or open ARGUABLE note survives in the map’s table (the six rows ruled A)",
+      "ok": true,
+      "detail": "0 classes · 0 notes left"
+    },
+    {
+      "name": "MAP: each of the six §2 rows carries its ruling",
+      "ok": true,
+      "detail": "6/6"
+    },
+    {
+      "name": "MAP: the one retired row is recorded (the stability contrast, Ruling 5)",
+      "ok": true,
+      "detail": "1"
+    },
+    {
+      "name": "MAP: every cell names a frame of the ruled map and carries that frame’s class",
+      "ok": true,
+      "detail": "27/27"
+    },
+    {
+      "name": "MAP: every cell names its legacy source (slide and build)",
+      "ok": true,
+      "detail": "all named"
+    },
+    {
+      "name": "MAP: the package’s beat maps are FROZEN at 27 (4 September 2026)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "BEATS: every beat of the frozen map exactly once — Act V is 27",
+      "ok": true,
+      "detail": "S24 4 · S25 4 · S26 9 · S27 3 · S28 3 · S29 2 · S30 2 = 27"
+    },
+    {
+      "name": "CANDIDATES: no cell carries a candidate system — the map names no NEW frame",
+      "ok": true,
+      "detail": "none"
+    },
+    {
+      "name": "REVIEW: the only review classes are approved-port and pending-review",
+      "ok": true,
+      "detail": "approved-port · pending-review"
+    },
+    {
+      "name": "REVIEW: every pending cell carries its flag, and every flag is on a pending cell",
+      "ok": true,
+      "detail": "6 pending, each flagged"
+    },
+    {
+      "name": "REVIEW: the one ADAPT cell (s30-b1) is pending with its change named",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "REVIEW: every flag is written in full sentences (the plain-English rule, AGENTS.md §4.10)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "REVIEW: states.json records the pending set and every flag as open — the sheet is a review request",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "PROBES: every cell carries at least one probe, and every probe passed at capture — the still shows the state it claims",
+      "ok": true,
+      "detail": "127 probes over 27 cells"
+    },
+    {
+      "name": "PROBES: the four renders stand on the lane at S24 b3 and the three claims ride at focus",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "PROBES: the three halos light at S25 b3",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "PROBES: the four roles stand at S26 b4 and the five assets at S26 b9",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "PROBES: the five candidates in the compact render box at S27 b2",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "PROBES: thirty-five units and the five at the margin at every Scene 28 cell; the field repriced at b3",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "PROBES: the conclusion’s two bold terms at S29 b2, the summary gone",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "PROBES: the close — nothing shown at S30 b1, the one line at S30 b2, the wayline never shown",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "RHYME: every Scene 28 cell’s mounted grid carries UNIT_GRAMMAR’s geometry read from the source — 102 × 62 pitch, fractions 0.8235 · 0.7419 → units 84 × 46, gaps 18 · 16, 7 × 5 = 35",
+      "ok": true,
+      "detail": "3 cells agree"
+    },
+    {
+      "name": "RHYME: FixedSupplyField imports UnitGrid from UnitField.js, and P1 imports UnitField from the same file — one grammar, two renderers",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "RHYME: both components stand at the blob ids the foundation recorded, untouched by this session",
+      "ok": true,
+      "detail": "4af4ad9c… · 89623ecd…"
+    },
+    {
+      "name": "RHYME: the sheet stands the approved P1 cell beside the Scene 28 cells, from the Prologue sheet’s own record",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "RHYME: p1-b1 is the Prologue’s approved cell for P1 b1",
+      "ok": true,
+      "detail": "P1 b1 → p1-b1"
+    },
+    {
+      "name": "CLOSE: s30-b1 is black — no pixel above the floor (the silence, a scripted beat)",
+      "ok": true,
+      "detail": "max luminance 0, lit 0"
+    },
+    {
+      "name": "CLOSE: s30-b2’s visible text is “Thank you.” and nothing else — no medium, no sequel, no waypoint",
+      "ok": true,
+      "detail": "Thank you."
+    },
+    {
+      "name": "CLOSE: s30-b1 shows no text at all",
+      "ok": true,
+      "detail": "none"
+    },
+    {
+      "name": "SOURCE: states.mjs creates exactly one element — the stage container — and draws nothing",
+      "ok": true,
+      "detail": "createElement 1 · createElementNS 0 · cssText 1"
+    },
+    {
+      "name": "SOURCE: the only imports are the seven legacy Act V slide modules and the close",
+      "ok": true,
+      "detail": "legacy 7 · close 1"
+    },
+    {
+      "name": "SOURCE: every cell builder mounts a legacy module at a build — 24 cell() calls, 24 such builders (the roles loop covers four cells)",
+      "ok": true,
+      "detail": "builders 23 + loop 1 · cell() 24"
+    },
+    {
+      "name": "FROZEN: the comparison data file’s committed blob id is the id the ruled Act IV map records, and the working tree carries no change to it",
+      "ok": true,
+      "detail": "3a6440aa… — untouched"
+    },
+    {
+      "name": "SCENE 23: the landed proof on file is green — six states at zero pixels in the deck, the ruling’s geometry measured",
+      "ok": true,
+      "detail": "6/6 · rows 10 × 60 · band 100"
+    },
+    {
+      "name": "SCENE 23: the Act IV check record is green and re-cut at this session; its states record names the fit ruling on the two table cells",
+      "ok": true,
+      "detail": "act-4 27/27 · act-5-states"
+    },
+    {
+      "name": "SCENE 23: the source carries the ruling — BAND = 100, the band 100 tall, the table at the legacy 60 px pitch, no 48 px rule",
+      "ok": true,
+      "detail": ""
+    }
+  ]
+}
