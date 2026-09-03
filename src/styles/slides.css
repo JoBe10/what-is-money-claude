@@ -2549,6 +2549,47 @@
   top: 104px;
 }
 
+/* The header band (the Acts III–IV final ruling 2, 3 Sep 2026, master §13):
+   the five candidates as renders above the table at the rails-law band scale
+   (AGENTS.md §6 — the 188 × 188 contain box, each render in a box of its own
+   aspect, bottom-aligned on one band baseline), the five glyph marks retired
+   from the asset headings, the drawn grammar beneath untouched. The band
+   mirrors the table's column template, so each render stands over its own
+   column; the first column, PROPERTY's, is empty. */
+.s4-comparison__band {
+  position: absolute;
+  left: 120px;
+  top: 142px;
+  width: 1680px;
+  height: 188px;
+  display: grid;
+  grid-template-columns: 460px repeat(5, 244px);
+}
+
+.s4-comparison__band-cell {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+/* The room the band needs — flagged in the session report, one attribute on
+   the slide root. At the rails-law box the band does not fit above the table
+   with the closing line at its held position (930) unless the table gives
+   ground: with the marks retired the heading row shrinks to its label, and
+   the ten score rows tighten from 60 to 48. The legacy pitch above stays on
+   file; removing the attribute restores it. */
+.s4-comparison[data-band="true"] .s4-comparison__table-wrap {
+  top: 354px;
+}
+
+.s4-comparison[data-band="true"] .s4-comparison-table__asset-row {
+  height: 40px;
+}
+
+.s4-comparison[data-band="true"] .s4-comparison-table__row {
+  height: 48px;
+}
+
 .s4-comparison__table-wrap {
   position: absolute;
   left: 120px;

@@ -19,11 +19,16 @@ import { DarkFieldImage } from '../DarkField.js';
 // `compact` is that boundary, and every call site already passed it correctly,
 // so the change is confined to this file: 4.15's lineup, the migration slide,
 // the premium and other-assets slides all render photographs now; 4.21's
-// decision row and the comparison table's own headers keep their marks.
+// decision row keeps its marks.
 //
-// The one open question is the table's headers, which sit at the boundary — a
-// 56px cell is diagram scale by size and the table's masthead by function. It
-// is a toggle rather than a decision, screenshotted both ways for the ruling.
+// THE TABLE'S HEADERS — the one open question R7.4 left at the boundary, a
+// toggle screenshotted both ways for a ruling — ARE RULED (the Acts III–IV
+// final ruling 2, 3 September 2026, master §13): the five glyphs retire from
+// the asset headings, and the renders ride as a header band ABOVE the table
+// at the rails-law band scale, built by the comparison slide itself
+// (slides/section-4-ideal-store/16-the-comparison.js). The heading cell
+// carries the label alone — `mark: false` — so the drawn grammar beneath the
+// band is untouched. The toggle is gone with the question it asked.
 
 const GLYPHS = {
   gold: 'gold',
@@ -33,11 +38,11 @@ const GLYPHS = {
   shares: 'shares'
 };
 
-// Subject keys in the dark-field manifest. `fiat` has no graded render yet —
-// the historical one fails four of the five clauses (a neutral key, a lit
-// ground) and is listed for regeneration in docs/dark-field-manifest.md. The
-// component stubs it to its mark, so the lineup is complete the moment the
-// render lands and nothing here changes.
+// Subject keys in the dark-field manifest — all five renders are in the
+// shipping set (`fiat` ingested at Batch A; `shares` and `property` restored
+// candidate-lineup studies). The component stubs a missing subject to its
+// mark, so a lineup is complete the moment a render lands and nothing here
+// changes.
 const SUBJECTS = {
   gold: 'gold',
   fiat: 'fiat',
@@ -45,10 +50,6 @@ const SUBJECTS = {
   property: 'property',
   shares: 'shares'
 };
-
-/** The table-header exception test (R7.4 §B). Presenter rules; both states are
- *  screenshotted in review/rebuild-r7-4/screenshots/table-headers/. */
-export const TABLE_HEADERS_DARK_FIELD = false;
 
 const DISPLAY_SIZE = 96;
 const COMPACT_SIZE = 56;
@@ -58,44 +59,47 @@ const COMPACT_SIZE = 56;
 const DISPLAY_BOX = [180, 150];
 const COMPACT_BOX = [96, 72];
 
-export function ComparisonAssetHeader({ asset, compact = false, darkField = null } = {}) {
+export function ComparisonAssetHeader({ asset, compact = false, darkField = null, mark = true } = {}) {
   const root = document.createElement('figure');
   root.className = 's4-comparison-asset';
   root.dataset.asset = asset.id;
   if (compact) root.classList.add('s4-comparison-asset--compact');
 
-  // Display scale is dark-field; compact is the grammar, unless a caller (the
-  // comparison table, under its toggle) asks otherwise.
+  // Display scale is dark-field; compact is the grammar, unless a caller asks
+  // otherwise (4.21's decision row carries renders in the compact box).
   const wantsRender = darkField == null ? !compact : darkField;
 
-  let mark;
-  if (wantsRender) {
-    const [w, h] = compact ? COMPACT_BOX : DISPLAY_BOX;
-    const df = DarkFieldImage({
-      name: SUBJECTS[asset.id],
-      width: w,
-      height: h,
-      alt: asset.alt,
-      className: 's4-comparison-asset__render',
-      stubSize: compact ? COMPACT_SIZE : DISPLAY_SIZE
-    });
-    df.el.dataset.visible = 'true';
-    mark = document.createElement('div');
-    mark.className = 's4-comparison-asset__mark s4-comparison-asset__mark--df';
-    mark.appendChild(df.el);
-  } else {
-    mark = document.createElement('div');
-    mark.className = 's4-comparison-asset__mark';
-    mark.setAttribute('role', 'img');
-    mark.setAttribute('aria-label', asset.alt);
-    mark.innerHTML = glyph(GLYPHS[asset.id], compact ? COMPACT_SIZE : DISPLAY_SIZE);
+  if (mark) {
+    let markEl;
+    if (wantsRender) {
+      const [w, h] = compact ? COMPACT_BOX : DISPLAY_BOX;
+      const df = DarkFieldImage({
+        name: SUBJECTS[asset.id],
+        width: w,
+        height: h,
+        alt: asset.alt,
+        className: 's4-comparison-asset__render',
+        stubSize: compact ? COMPACT_SIZE : DISPLAY_SIZE
+      });
+      df.el.dataset.visible = 'true';
+      markEl = document.createElement('div');
+      markEl.className = 's4-comparison-asset__mark s4-comparison-asset__mark--df';
+      markEl.appendChild(df.el);
+    } else {
+      markEl = document.createElement('div');
+      markEl.className = 's4-comparison-asset__mark';
+      markEl.setAttribute('role', 'img');
+      markEl.setAttribute('aria-label', asset.alt);
+      markEl.innerHTML = glyph(GLYPHS[asset.id], compact ? COMPACT_SIZE : DISPLAY_SIZE);
+    }
+    root.appendChild(markEl);
   }
 
   const label = document.createElement('figcaption');
   label.className = 's4-comparison-asset__label';
   label.textContent = asset.label;
+  root.appendChild(label);
 
-  root.append(mark, label);
   return root;
 }
 

@@ -1,5 +1,5 @@
 import { QuietKicker } from '../../components/QuietKicker.js';
-import { TABLE_HEADERS_DARK_FIELD } from '../../components/section-4/ComparisonAssetHeader.js';
+import { DarkFieldImage } from '../../components/DarkField.js';
 import { AssetComparisonTable } from '../../components/section-4/AssetComparisonTable.js';
 import {
   COMPARISON_ASSETS,
@@ -9,6 +9,52 @@ import {
 import { beginBuild, clampStep, markReconstruct } from '../_snapFrame.js';
 
 const MAX_STEP = 2;
+
+// THE HEADER BAND — the Acts III–IV final ruling 2 (3 September 2026, master
+// §13): the five candidate glyphs retire from the table's asset headings, and
+// the renders ride as a header band ABOVE the table at lineup scale per the
+// rails law (AGENTS.md §6) — one shared box, both axes capped at 188, each
+// render in a box of its own aspect scaled to fit inside it, bottom-aligned on
+// one band baseline, above the table and never on a drawn line — gold, the
+// fiat note, the coin, the house, and shares, with the drawn grammar beneath
+// untouched. The band mirrors the table's column template (460 + 5 × 244) so
+// each render stands over its own column. The aspects are the register's
+// measured frames (src/dark-field.js — the near-16:9 family at 1672 × 941,
+// the 4:3 coin at 1448 × 1086, the two square lineup studies at 1254 × 1254).
+const BAND = 188;
+const BAND_ASPECT = {
+  gold: 1672 / 941,
+  fiat: 1672 / 941,
+  bitcoin: 1448 / 1086,
+  property: 1254 / 1254,
+  shares: 1254 / 1254
+};
+const bandBox = (ar) => {
+  const h = Math.min(BAND, BAND / ar);
+  return [h * ar, h];
+};
+
+function createBand(assets) {
+  const band = document.createElement('div');
+  band.className = 's4-comparison__band';
+  band.setAttribute('aria-hidden', 'true');
+  // The property column's empty cell first, so the grid's columns line up
+  // with the table's colgroup.
+  band.appendChild(document.createElement('div'));
+  assets.forEach((asset) => {
+    const cell = document.createElement('div');
+    cell.className = 's4-comparison__band-cell';
+    cell.dataset.asset = asset.id;
+    const [w, h] = bandBox(BAND_ASPECT[asset.id]);
+    const df = DarkFieldImage({ name: asset.id, width: w, height: h, alt: asset.alt });
+    // The band is the table's header: it stands with the table at every
+    // build, and enters with it.
+    df.el.dataset.visible = 'true';
+    cell.appendChild(df.el);
+    band.appendChild(cell);
+  });
+  return band;
+}
 
 function setVisible(element, visible) {
   element.dataset.visible = String(visible);
@@ -27,9 +73,16 @@ export default {
 
     const root = document.createElement('div');
     root.className = 's4-opening s4-comparison';
-    // The table's headers are the flagged exception (R7.4 §B): glyphs by
-    // default, renders under the toggle, and the register follows the toggle.
-    root.dataset.register = TABLE_HEADERS_DARK_FIELD ? 'mixed' : 'line';
+    // The header band is dark-field above a line-grammar table — the rails
+    // law's own mixed surface (the ruling of 3 Sep 2026); the R7.4 toggle
+    // that used to set this is retired with the question it asked.
+    root.dataset.register = 'mixed';
+    // The room the band needs, as one attribute (the report flags the
+    // numbers): the heading row shrinks to its label and the score rows
+    // tighten so the band, the table and the closing line at its held
+    // position all fit the frame. The legacy pitch stays on file in the
+    // stylesheet; removing this attribute restores it.
+    root.dataset.band = 'true';
 
     // A2 survivor: the table is a frame that must be named, so it keeps a
     // kicker — but in the Sections 1–3 register (small, tracked, muted, no
@@ -37,6 +90,8 @@ export default {
     const kicker = QuietKicker('THE COMPARISON');
     kicker.classList.add('s4-comparison__kicker');
     root.appendChild(kicker);
+
+    root.appendChild(createBand(COMPARISON_ASSETS));
 
     const tableWrap = document.createElement('div');
     tableWrap.className = 's4-comparison__table-wrap';
