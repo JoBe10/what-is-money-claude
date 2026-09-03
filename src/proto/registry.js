@@ -29,25 +29,13 @@ import spendOrSave from './gate-2/s4-spend-or-save.js';
 // when the batch lands, which is this file's own rule. The scenes are in the
 // film now; `src/slides/manifest.js` is where they live.
 
-// Act IV (Scenes 16–23) runs here as `?proto=act4` while Batch D builds it
-// (Scenes 16–19 at Session 1); the entries leave at Session 2's splice.
-import returnToTheOpenExchange from '../scenes/act-4-the-store-of-value-test/16-return-to-the-open-exchange.js';
-import whatTheCarrierMustPreserve from '../scenes/act-4-the-store-of-value-test/17-what-the-carrier-must-preserve.js';
-import the100YearTest from '../scenes/act-4-the-store-of-value-test/18-the-100-year-test.js';
-import invertTheQuestion from '../scenes/act-4-the-store-of-value-test/19-invert-the-question.js';
-import howTheCarrierCanFailI from '../scenes/act-4-the-store-of-value-test/20-how-the-carrier-can-fail-i.js';
-import howTheCarrierCanFailII from '../scenes/act-4-the-store-of-value-test/21-how-the-carrier-can-fail-ii.js';
-import fromFailureToRequirement from '../scenes/act-4-the-store-of-value-test/22-from-failure-to-requirement.js';
-import theComparison from '../scenes/act-4-the-store-of-value-test/23-the-comparison.js';
-
-[returnToTheOpenExchange, whatTheCarrierMustPreserve, the100YearTest, invertTheQuestion,
-  howTheCarrierCanFailI, howTheCarrierCanFailII, fromFailureToRequirement, theComparison]
-  .forEach((scene) => { scene.protoKey = 'act4'; });
+// Act IV (Scenes 16–23) ran here as `?proto=act4` while Batch D built it,
+// and LEFT THIS LIST AT THE SPLICE of 3 September 2026 — the entry leaves
+// when the batch lands, which is this file's own rule. The scenes are in the
+// film now; `src/slides/manifest.js` is where they live.
 
 export const prototypes = [
-  theDirectExchange, theBreakthrough, spendOrSave,
-  returnToTheOpenExchange, whatTheCarrierMustPreserve, the100YearTest, invertTheQuestion,
-  howTheCarrierCanFailI, howTheCarrierCanFailII, fromFailureToRequirement, theComparison
+  theDirectExchange, theBreakthrough, spendOrSave
 ];
 
 export default prototypes;

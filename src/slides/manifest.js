@@ -111,6 +111,58 @@
 // reported, not smoothed (review/act-4/smoke-deck.json proves it both ways).
 //
 // **The deck is 38 slides** (was 39): one legacy slide out, nothing in.
+//
+// ===== BATCH D, 3 September 2026 — Act IV enters the deck =====
+//
+// Scenes 16–23 are spliced in directly after Act III as one contiguous world
+// (`sceneGroup: 'act4-test'`), in place of the legacy slides the ruled
+// provenance map (`docs/act-4-provenance.md`) names as their sources. **The
+// legacy files stay on disk and in history**; only their manifest entries are
+// gone. The act's shared stage re-homes the legacy modules themselves from
+// disk (src/scenes/act-4-the-store-of-value-test/_testStage.js), so the
+// proven treatments live on in the film rather than being transcribed.
+//
+//   scene                                   supersedes
+//   16 Return to the Open Exchange          4-06-claim-and-carrier
+//                                           4-01-define-the-job (retired by
+//                                           the presenter's Row 2 ruling,
+//                                           3 Sep 2026 — the phrase-under-a-
+//                                           lens beat does not come along)
+//                                           (4-04-unfinished-exchange's
+//                                           builds 3–4 are re-homed from
+//                                           disk; 4-04 itself left the deck
+//                                           at Batch A, superseded by Scene 3)
+//   17 What the Carrier Must Preserve       4-07-store-of-value-function
+//   18 The 100-Year Test                    4-08-100-year-test
+//                                           4-09-future-is-unknowable
+//   19 Invert the Question                  4-10-invert-the-question
+//   20 How the Carrier Can Fail: I          4-11-carrier-failures-i
+//   21 How the Carrier Can Fail: II         4-12-carrier-failures-ii
+//   22 From Failure to Requirement —        4-13-failure-to-requirement
+//      the Ten Properties                   4-14-ten-properties
+//   23 The Comparison                       4-15-framework-to-comparison
+//                                           4-16-the-comparison
+//
+// Each row is a ruled PORT source, two of them with one ruled change each
+// (S19's carrier arriving at beat 2; S22's ten properties landing in one
+// advance — the Batch D rulings 1 and 2, master §13). 4-17 through 4-23
+// stay: they are Act V's sources, for Batch E.
+//
+// **THE TWO AMBIGUOUS-FATE SURVIVORS MOVE, AND ARE STILL FLAGGED, NOT
+// DECIDED.** 3-00-waypoint-function and 3-04-stage-signatures stood between
+// Act III and the legacy Section 4. The splice puts Act IV directly after
+// Act III — the seam the brief names, Act III's exit question into Scene
+// 16's homecoming — so the two survivors now stand AFTER Act IV, still in
+// their legacy relative order and still immediately before the surviving
+// legacy Section 4. Nothing about them is decided: the film is contiguous
+// from the Prologue through Scene 23, and the act now exits onto 3-00 — the
+// same narratively odd seam Batch C reported after Scene 15, now eight
+// scenes further along. Retiring or re-homing them is the presenter's
+// ruling to make; both seams are reported, not smoothed.
+//
+// **The deck is 34 slides** (was 38): twelve legacy slides out (4-01 and
+// 4-06 through 4-16), eight scenes in. Both splice seams are proven both
+// ways in review/batch-d/smoke-batch-d.json.
 
 import p1 from '../scenes/prologue/p1-eighty-thousand-hours.js';
 import p2 from '../scenes/prologue/p2-the-stakes.js';
@@ -132,21 +184,18 @@ import scene13 from '../scenes/act-3-the-jobs-of-money/13-the-order-of-monetizat
 import scene14 from '../scenes/act-3-the-jobs-of-money/14-the-coffee-objection.js';
 import scene15 from '../scenes/act-3-the-jobs-of-money/15-the-tower.js';
 
+import scene16 from '../scenes/act-4-the-store-of-value-test/16-return-to-the-open-exchange.js';
+import scene17 from '../scenes/act-4-the-store-of-value-test/17-what-the-carrier-must-preserve.js';
+import scene18 from '../scenes/act-4-the-store-of-value-test/18-the-100-year-test.js';
+import scene19 from '../scenes/act-4-the-store-of-value-test/19-invert-the-question.js';
+import scene20 from '../scenes/act-4-the-store-of-value-test/20-how-the-carrier-can-fail-i.js';
+import scene21 from '../scenes/act-4-the-store-of-value-test/21-how-the-carrier-can-fail-ii.js';
+import scene22 from '../scenes/act-4-the-store-of-value-test/22-from-failure-to-requirement.js';
+import scene23 from '../scenes/act-4-the-store-of-value-test/23-the-comparison.js';
+
 import s3_00 from './section-3-function/00-waypoint-function.js';
 import s3_04 from './section-3-function/04-stage-signatures.js';
 
-import s4_01 from './section-4-ideal-store/01-define-the-job.js';
-import s4_06 from './section-4-ideal-store/06-claim-and-carrier.js';
-import s4_07 from './section-4-ideal-store/07-store-of-value-function.js';
-import s4_08 from './section-4-ideal-store/08-100-year-test.js';
-import s4_09 from './section-4-ideal-store/09-future-is-unknowable.js';
-import s4_10 from './section-4-ideal-store/10-invert-the-question.js';
-import s4_11 from './section-4-ideal-store/11-carrier-failures-i.js';
-import s4_12 from './section-4-ideal-store/12-carrier-failures-ii.js';
-import s4_13 from './section-4-ideal-store/13-failure-to-requirement.js';
-import s4_14 from './section-4-ideal-store/14-ten-properties.js';
-import s4_15 from './section-4-ideal-store/15-framework-to-comparison.js';
-import s4_16 from './section-4-ideal-store/16-the-comparison.js';
 import s4_17 from './section-4-ideal-store/17-store-of-value-function-migrates.js';
 import s4_18 from './section-4-ideal-store/18-monetary-premium.js';
 import s4_19 from './section-4-ideal-store/19-other-assets-do-moneys-job.js';
@@ -174,12 +223,18 @@ const act2 = [scene5, scene6, scene7, scene8, scene9, scene10];
 // finally gives the frame to the tower — continuity the engine preserves by
 // never tearing the stage down at these four boundaries.
 const act3 = [scene11, scene12, scene13, scene14, scene15];
+// Scenes 16–23 are likewise one world (`sceneGroup: 'act4-test'`): the claim
+// comes home on the Act I stage's own frame, the legacy Section 4 treatments
+// are re-homed as layers of one stage, and every in-act boundary is the
+// legacy deck's own crossfade played inside the stage — continuity the engine
+// preserves by never tearing the stage down at these seven boundaries.
+const act4 = [scene16, scene17, scene18, scene19, scene20, scene21, scene22, scene23];
 
-// The legacy deck, as it stands after Batch C and the 3 September 2026
-// ruling (the Act IV foundation block above). The function section keeps
-// two ambiguous-fate survivors — the second waypoint and the stage-signatures
-// bracket, in their legacy relative order, after the act that superseded
-// their siblings; the third waypoint (3-08) is retired, its file on disk.
+// The legacy deck, as it stands after Batch D (the block above). The
+// function section keeps two ambiguous-fate survivors — the second waypoint
+// and the stage-signatures bracket, in their legacy relative order, now after
+// Act IV and still immediately before the surviving legacy Section 4; the
+// third waypoint (3-08) is retired, its file on disk.
 const section3 = [
   s3_00, s3_04
 ];
@@ -187,16 +242,15 @@ const section3 = [
 // register and every governing document refer to beats as 4.15, 4.23 — so
 // structural changes slot in rather than renumbering. R7's merged section entry
 // took 01; R7.4 removed the falsifiability beat that had entered as 20b; Batch A
-// removes 03, 04 and 05 as Scenes 2, 3 and 4 supersede them. The remaining
-// `number:` fields are left alone for the same reason as ever: they are
-// documentation, `src/main.js` assigns the real deck position from this array's
-// order, and 4.23's file is byte-frozen and cannot be edited to renumber it.
-// Deep-link ids for every retained slide are unchanged.
+// removes 03, 04 and 05 as Scenes 2, 3 and 4 supersede them; Batch D removes
+// 01 and 06 through 16 as Scenes 16–23 supersede them, leaving 17 through 23
+// for Batch E. The remaining `number:` fields are left alone for the same
+// reason as ever: they are documentation, `src/main.js` assigns the real deck
+// position from this array's order, and 4.23's file is byte-frozen and cannot
+// be edited to renumber it. Deep-link ids for every retained slide are
+// unchanged.
 const section4 = [
-  s4_01,
-  s4_06, s4_07, s4_08, s4_09, s4_10,
-  s4_11, s4_12, s4_13, s4_14, s4_15,
-  s4_16, s4_17, s4_18, s4_19, s4_20,
+  s4_17, s4_18, s4_19, s4_20,
   s4_21, s4_22, s4_23
 ];
 const section5 = [s5_01];
@@ -206,6 +260,7 @@ export const sections = [
   { id: 'act-1',       label: 'Act I — The Unfinished Exchange',   slides: act1 },
   { id: 'act-2',       label: 'Act II — The Architecture of Money', slides: act2 },
   { id: 'act-3',       label: 'Act III — The Jobs of Money',       slides: act3 },
+  { id: 'act-4',       label: 'Act IV — The Store-of-Value Test',  slides: act4 },
   { id: 'function',    label: 'Function',                          slides: section3 },
   { id: 'ideal-store', label: 'Ideal Store',                       slides: section4 },
   { id: 'close',       label: 'Close',                             slides: section5 }
