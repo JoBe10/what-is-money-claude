@@ -34,10 +34,10 @@ Act II taught the pipeline to answer this before building anything: *what stays 
 |---|---|---|
 | **S24-F1** fiat standing with its two jobs — MEDIUM OF EXCHANGE · UNIT OF ACCOUNT | **PORT** — *row 1 ruled A, 4 Sep 2026* | `4-17-store-of-value-function-migrates` build 0: the `fiat` render at the display box with the two job labels beneath; the entry line *"Fiat, holding two of the three jobs — and holding them extremely well."* is spoken over it. Serves S24 b1 at the default (the entry beat) |
 | **S24-F2** the demand to save — the first claim at the lane's origin | **PORT** | `4-17` build 1: *The demand to save does not disappear.* lands; one `ClaimObject` at the origin, neutral. Serves S24 b2 |
-| **S24-F3** it migrates — the flow lane, the three destinations, the claims traveling | **PORT** — *ARGUABLE row 5 on the renders* | `4-17` build 2: *It migrates.*; the lane and its three branches draw; gold · real estate · shares at the display box on the dark-field register (R7.4 §B, the R7.2 mixed assignment); the three claims ride their `offset-path` to the destinations at focus. Serves S24 b3 |
+| **S24-F3** it migrates — the flow lane, the three destinations, the claims traveling | **PORT** — *row 5 ruled A, 4 Sep 2026* | `4-17` build 2: *It migrates.*; the lane and its three branches draw; gold · real estate · shares at the display box on the dark-field register (R7.4 §B, the R7.2 mixed assignment); the three claims ride their `offset-path` to the destinations at focus. Serves S24 b3 |
 | **S24-F4** the final line | **PORT** | `4-17` build 3: *When money is not trusted to preserve purchasing power, savings demand moves into other assets.* Serves S24 b4 |
 | **S25-F1** the equation opens — ASSET VALUE = | **PORT** — *row 1 ruled A, 4 Sep 2026* | `4-18-monetary-premium` build 0; the entry line *"An asset's value, split into two parts."* spoken over it. Serves S25 b1 at the default |
-| **S25-F2** the part that is easy to defend — the utility term and the three examples | **PORT** — *ARGUABLE row 5 on the renders* | `4-18` build 1: UNDERLYING UTILITY / PRODUCTIVE VALUE; real estate · shares · gold at the display box with their base labels (SHELTER / RENT · PROFITS / CASH FLOWS · ORNAMENTAL / INDUSTRIAL), one accumulating element. Serves S25 b2 |
+| **S25-F2** the part that is easy to defend — the utility term and the three examples | **PORT** — *row 5 ruled A, 4 Sep 2026* | `4-18` build 1: UNDERLYING UTILITY / PRODUCTIVE VALUE; real estate · shares · gold at the display box with their base labels (SHELTER / RENT · PROFITS / CASH FLOWS · ORNAMENTAL / INDUSTRIAL), one accumulating element. Serves S25 b2 |
 | **S25-F3** the other part — the premium as a halo on each mark | **PORT** | `4-18` build 2: + MONETARY PREMIUM; the warm halo on the marks (R7.1 §C3 — no boxed tile), the shared label, the supporting line. Serves S25 b3 |
 | **S25-F4** the closing pair, alone | **PORT** | `4-18` build 3: everything above settles to the quiet step; *Bitcoin competes for the monetary premium — not the asset's entire value.* — the architecture's own Scene 25 line, on screen. Serves S25 b4 |
 | **S26-F1** the four roles, one per advance | **PORT** | `4-19-other-assets-do-moneys-job` builds 1–4: REAL ESTATE SHELTERS. · COMPANIES PRODUCE. · GOLD HAS LONG CARRIED MONETARY VALUE. · BITCOIN'S UTILITY IS MONETARY. — each a statement over its render at the display box with its function label. Serves S26 b1–b4 |
@@ -117,6 +117,8 @@ The brief's §0 phrase puts the migration and the premium *in the act's abstract
 - **Reading B — the vehicles retire to the grammar in these two scenes.** The three destinations on the lane and the three examples under the equation become compact marks — entries in a structure, which §6.3 permits at diagram scale — so the renders enter the act only at Scene 26, where the architecture names them. That is an ADAPT of `4-17` and `4-18` with one named change each, and it moves two display-scale objects to diagram scale, which the same rule treats as a designed moment.
 
 **The default is A.** One word rules B, and the map records two ADAPT rows if it does.
+
+**RULED A, 4 September 2026 (master §13).** The renders stand in Scenes 24 and 25; S24-F3 and S25-F2 stay PORT.
 
 ## Row 6 — Is the silence its own beat at the close?
 
