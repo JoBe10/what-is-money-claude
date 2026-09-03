@@ -109,7 +109,7 @@ uses.
 | `surgeon` | `assets/dark-field/surgeon.png` | 4.03 the sensory anchor | 0.00 / 0.82 | 92.1% | +133 |
 | `meal` | `assets/dark-field/meal.png` | 4.04 wanted goods · 4.05 SPEND | 0.00 / 1.28 | 69.2% | +60 |
 | `property` | `assets/dark-field/property.png` | the five-candidate lineup, at every display-scale appearance | 0.09 / 0.08 | 79.1% | +124 |
-| `shares` | `assets/dark-field/shares.png` | the five-candidate lineup, at every display-scale appearance | 0.17 / 0.15 | 51.9% | +52 |
+| `shares` | `assets/dark-field/shares.png` | the five-candidate lineup, at every display-scale appearance; and, since the Acts III–IV final ruling 2 (3 Sep 2026, master §13), the comparison table's header band — the five candidates (`gold` · `fiat` · `bitcoin` · `property` · `shares`) as renders above the table at the rails-law band scale, the grammar beneath untouched | 0.17 / 0.15 | 51.9% | +52 |
 
 `surgeon` and `meal` are **graded, not regenerated**: both failed R7.2's gate on
 their ground rather than their light (a lamp in shot; a lit stone surface), and
