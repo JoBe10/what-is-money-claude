@@ -34,8 +34,21 @@ import spendOrSave from './gate-2/s4-spend-or-save.js';
 // when the batch lands, which is this file's own rule. The scenes are in the
 // film now; `src/slides/manifest.js` is where they live.
 
+// Act V (Scenes 24–30) runs here as `?proto=act5` while Batch E builds it
+// (Scenes 24–27 at Session 1); the entries leave at Session 2's splice.
+import migration from '../scenes/act-5-the-case/24-migration.js';
+import theMonetaryPremium from '../scenes/act-5-the-case/25-the-monetary-premium.js';
+import whenOtherAssetsDoMoneysJob from '../scenes/act-5-the-case/26-when-other-assets-do-moneys-job.js';
+import theMarginalDecision from '../scenes/act-5-the-case/27-the-marginal-decision.js';
+
+migration.protoKey = 'act5';
+theMonetaryPremium.protoKey = 'act5';
+whenOtherAssetsDoMoneysJob.protoKey = 'act5';
+theMarginalDecision.protoKey = 'act5';
+
 export const prototypes = [
-  theDirectExchange, theBreakthrough, spendOrSave
+  theDirectExchange, theBreakthrough, spendOrSave,
+  migration, theMonetaryPremium, whenOtherAssetsDoMoneysJob, theMarginalDecision
 ];
 
 export default prototypes;
