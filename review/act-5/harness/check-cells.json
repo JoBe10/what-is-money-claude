@@ -1,5 +1,5 @@
 {
-  "date": "2026-09-04T02:47:40.470Z",
+  "date": "2026-09-04T02:49:07.078Z",
   "session": "act-5-states",
   "limits": {
     "cornerMean": 6,
@@ -484,7 +484,7 @@
       "warmPixelsReported": 0
     }
   ],
-  "checks": 42,
+  "checks": 43,
   "failures": 0,
   "results": [
     {
@@ -576,6 +576,11 @@
       "name": "REVIEW: states.json records the approved-as-rendered set and every flag as closed",
       "ok": true,
       "detail": ""
+    },
+    {
+      "name": "SEAMS: states.json records the six ruled seams, each on a cell of the approved set (ruled 4 Sep 2026 — the seams are Batch E’s to time)",
+      "ok": true,
+      "detail": "s24-b1 · s26-b6 · s28-b1 · s28-b1 · s29-b1 · s30-b1"
     },
     {
       "name": "APPROVAL: states.json records the presenter’s approval, and the approved set is every cell",

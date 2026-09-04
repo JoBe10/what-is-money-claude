@@ -69,7 +69,7 @@ Plain English, one paragraph each; the full list with the map's frame references
 3. **"In eleven words."** The frozen script says it after two sentences of fourteen words. Untouched; yours.
 4. **The passage's pointers at the table** (*that table*, *this table*) stand as written at the default home, three scenes after the table.
 5. **"A silent Thank you."** The master's phrase; the legacy script speaks the words. Installed as the legacy speaks them.
-6. **The claim's last journey** (Scene 27 → 28) and **the full clear** (Scene 28 → 29) are wiring flags for Session 2 and Batch E, recorded in the map.
+6. **The claim's last journey** (Scene 27 → 28) and **the full clear** (Scene 28 → 29) are wiring flags for Session 2 and Batch E, recorded in the map. **CLOSED — ruled 4 September 2026 (master §13): the six seams are Batch E's to time, as their flags state.** The Act IV → Scene 24 boundary is a crossfade; Scene 26's internal merge is the legacy crossfade; Scene 28's margin lights as the words land, its build 0 the composition the gesture starts from; the claim's last journey is wired across the Scene 27 → Scene 28 boundary; Scene 29's full clear lands on the kicker alone; Scene 30's silence is a scripted black beat with the retired wayline never shown. No settled frame changes and nothing is redesigned.
 
 # 2. Scripts [installed verbatim from the legacy slides, 3 September 2026; the presenter's own pass comes later]
 

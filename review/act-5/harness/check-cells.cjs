@@ -30,6 +30,10 @@
 //   named; states.json records the approval, the approved set is every cell,
 //   and every flag is closed.
 //
+//   THE SEAMS — the six ruled seams are recorded on the cells that carried
+//   them (ruled 4 Sep 2026: Batch E's to time, each boundary played as the
+//   legacy played it, no settled frame changed).
+//
 //   THE PROBES — every cell has at least one probe and every probe passed at
 //   capture: the still shows the state it claims (the four renders on the
 //   lane, the three halos, the five candidates, the thirty-five units and the
@@ -259,6 +263,12 @@ const read = (p) => fs.readFileSync(p, 'utf8').replace(/\r\n/g, '\n');
       record.flags.every((f) => /^closed/.test(f.status)) &&
       Array.isArray(record.approvedAsRenderedSet) && record.approvedAsRenderedSet.length === cells.filter((c) => c.review === 'approved-as-rendered').length;
     check('REVIEW: states.json records the approved-as-rendered set and every flag as closed', recorded);
+    const seamCells = ['s24-b1', 's26-b6', 's28-b1', 's28-b1', 's29-b1', 's30-b1'];
+    const seamsOk = Array.isArray(record.seams) && record.seams.length === 6 &&
+      record.seams.every((x, i) => x.cell === seamCells[i] && typeof x.ruling === 'string' && x.ruling.length > 40) &&
+      record.seams.every((x) => cells.some((c) => c.id === x.cell));
+    check('SEAMS: states.json records the six ruled seams, each on a cell of the approved set (ruled 4 Sep 2026 — the seams are Batch E’s to time)',
+      seamsOk, seamsOk ? record.seams.map((x) => x.cell).join(' · ') : 'NOT RECORDED');
     const approvedOk = typeof record.approval === 'string' && /approved in full/.test(record.approval) &&
       Array.isArray(record.approvedSet) && record.approvedSet.length === cells.length &&
       cells.every((c) => record.approvedSet.includes(c.id));

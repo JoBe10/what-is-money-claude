@@ -94,6 +94,19 @@ const RULINGS = [
   'Part A — Scene 23’s fit: the ten score rows return to the legacy 60 px pitch and the header band shrinks to a 100 × 100 box; s23-b5 and s23-b6 re-rendered and re-proven in the deck (review/act-5/landed-proof-s23-band.json); the exit’s two wiring numbers and Scene 16’s entry stand as built, to be judged at the viewing'
 ];
 
+// The six seams, ruled 4 September 2026 (master §13; the Batch E implementation
+// brief §1.2): each boundary is played as the legacy played it, no settled
+// frame changes, nothing is redesigned. Recorded here so the ruling travels
+// with the approved set every landed-state proof reads.
+const SEAMS = [
+  { seam: 'Act IV → Scene 24', cell: 's24-b1', ruling: 'a crossfade — the fifty scores under “Don’t trust. Verify.” dissolve into fiat standing alone with its two jobs, as the legacy deck played that slide boundary; the question changes and the film cuts, so it is not a morph' },
+  { seam: 'inside Scene 26 (beat 5 → beat 6)', cell: 's26-b6', ruling: 'the legacy crossfade — the four roles and their final line give way to the first coexistence statement with two assets beneath it, exactly as the legacy played 4-19 → 4-20, whose build 0 is empty' },
+  { seam: 'Scene 28’s margin', cell: 's28-b1', ruling: 'the margin lights as the words land — 4-22’s build 0, the stock at rest, is the composition the beat’s gesture starts from, not a beat of its own' },
+  { seam: 'Scene 27 → Scene 28 (the through-line’s last journey)', cell: 's28-b1', ruling: 'the claim’s continuity is wired across the boundary — one decision claim at the decision point gives way to the three demand claims at 44 arriving at the margin from the right; neither end’s frame is redesigned' },
+  { seam: 'Scene 28 → Scene 29 (the full clear)', cell: 's29-b1', ruling: 'the full clear lands on the kicker alone — Scene 28’s world clears completely before 4-23’s build 0, the kicker on black, arrives' },
+  { seam: 'Scene 30’s silence', cell: 's30-b1', ruling: 'a scripted black beat with the retired wayline never shown — the advance that leaves the case lands on black and the callback is spoken over it' }
+];
+
 const CLASS_NOTE = {
   'approved-port': ['APPROVED BY PROVENANCE — the PORT cells',
     'A proven legacy treatment, transplanted verbatim: the legacy slide module itself mounted at the build the ruled map names, the legacy stylesheet placing every element. Review is optional under the provenance rule (AGENTS.md §4.9) — the presenter approved these treatments when the Section 4 deck shipped and when the argument froze, and the map’s ruling carries them home. A cell here asks nothing; it is on the sheet so the act can be walked whole.'],
@@ -270,6 +283,11 @@ statements; the law), <b>the marginal decision</b> (one claim; five paths; the s
 arriving; the repricing — the hours field’s rhyme, shown beside it), <b>the case</b> (four lines; the conclusion), and <b>the silence</b> (black; Thank you.).
 At every frame the question is the one every sheet has asked: <i>can I follow the argument by eye alone?</i> It was walked, the verdicts
 came back “as rendered” on all ${flagged.length} flagged cells, and <b>the go-ahead was given</b> — which unlocked the final implementation batch.</p>
+<p class="note"><b>The six seams — ruled 4 September 2026: Batch E's to time, as their flags state.</b> The approved cells are the settled
+frames and none of them moves; what is ruled is how each boundary is played, and every one is played as the legacy played it:</p>
+<ol class="rulings">
+${SEAMS.map((x) => `<li><b>${esc(x.seam)}</b> (${x.cell}) — ${esc(x.ruling)}</li>`).join('\n')}
+</ol>
 <p class="note"><b>The flags, gathered</b> — each in plain English, each on its cell, <b>all closed as approved as rendered</b>:</p>
 <ul class="flags">
 ${flagList}
@@ -301,6 +319,7 @@ ${sceneSections}
       module: 'src/components/UnitField.js — UNIT_GRAMMAR (PITCH_X 102 · PITCH_Y 62 · W_FRAC 0.8235 · H_FRAC 0.7419); UnitField (P1, canvas, 400 × 200 at 4.58) and UnitGrid (Scene 28, DOM, 7 × 5 at the grammar’s pitch)',
       note: RHYME_NOTE
     },
+    seams: SEAMS,
     protocol: 'walked, 4 September 2026 — the film’s ending as stills, the migration, the premium, the other assets, the marginal decision, the field returning, the case, the silence; the verdicts returned “as rendered” on all six flagged cells and the go-ahead was given, unlocking the final implementation batch',
     counts: Object.fromEntries(REVIEW_CLASSES.map((r) => [r, byReview(r).length])),
     approvedAsRenderedSet: byReview('approved-as-rendered'),
