@@ -1,0 +1,129 @@
+{
+  "date": "2026-09-04T03:41:09.365Z",
+  "session": "batch-e",
+  "rule": "each of the 7 settled states of Scenes 28–30, mounted cold through the real engine in the scratch route (?proto=act5) at 1920×1080, is its approved cell (review/act-5/states — presenter-approved in full 4 Sep 2026) at zero differing pixels (channel delta > 2/255 counts). Comparisons: scene↔archived cell, fresh cell↔archived cell, scene↔fresh cell. Every shot on a fresh page, both passes — the Act V image-cache discipline the states session recorded.",
+  "states": 7,
+  "passed": 7,
+  "results": [
+    {
+      "state": "5:0",
+      "cell": "s28-b1",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "5:1",
+      "cell": "s28-b2",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "5:2",
+      "cell": "s28-b3",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "6:0",
+      "cell": "s29-b1",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "6:1",
+      "cell": "s29-b2",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "7:0",
+      "cell": "s30-b1",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "7:1",
+      "cell": "s30-b2",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    }
+  ],
+  "consoleErrors": []
+}
