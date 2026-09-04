@@ -1,0 +1,496 @@
+{
+  "date": "2026-09-04T03:47:51.815Z",
+  "session": "batch-e",
+  "rule": "each of the 27 settled states of Act V, mounted cold at its real deck position in the spliced 31-scene deck at 1920×1080, is its approved cell (review/act-5/states — presenter-approved in full 4 Sep 2026) at zero differing pixels (channel delta > 2/255 counts). Comparisons: scene↔archived cell, fresh cell↔archived cell, scene↔fresh cell. Every shot on a fresh page, both passes.",
+  "states": 27,
+  "passed": 27,
+  "results": [
+    {
+      "scene": "migration",
+      "build": 0,
+      "cell": "s24-b1",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "scene": "migration",
+      "build": 1,
+      "cell": "s24-b2",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "scene": "migration",
+      "build": 2,
+      "cell": "s24-b3",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "scene": "migration",
+      "build": 3,
+      "cell": "s24-b4",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "scene": "the-monetary-premium",
+      "build": 0,
+      "cell": "s25-b1",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "scene": "the-monetary-premium",
+      "build": 1,
+      "cell": "s25-b2",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "scene": "the-monetary-premium",
+      "build": 2,
+      "cell": "s25-b3",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "scene": "the-monetary-premium",
+      "build": 3,
+      "cell": "s25-b4",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "scene": "when-other-assets-do-moneys-job",
+      "build": 0,
+      "cell": "s26-b1",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "scene": "when-other-assets-do-moneys-job",
+      "build": 1,
+      "cell": "s26-b2",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "scene": "when-other-assets-do-moneys-job",
+      "build": 2,
+      "cell": "s26-b3",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "scene": "when-other-assets-do-moneys-job",
+      "build": 3,
+      "cell": "s26-b4",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "scene": "when-other-assets-do-moneys-job",
+      "build": 4,
+      "cell": "s26-b5",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "scene": "when-other-assets-do-moneys-job",
+      "build": 5,
+      "cell": "s26-b6",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "scene": "when-other-assets-do-moneys-job",
+      "build": 6,
+      "cell": "s26-b7",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "scene": "when-other-assets-do-moneys-job",
+      "build": 7,
+      "cell": "s26-b8",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "scene": "when-other-assets-do-moneys-job",
+      "build": 8,
+      "cell": "s26-b9",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "scene": "the-marginal-decision",
+      "build": 0,
+      "cell": "s27-b1",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "scene": "the-marginal-decision",
+      "build": 1,
+      "cell": "s27-b2",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "scene": "the-marginal-decision",
+      "build": 2,
+      "cell": "s27-b3",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "scene": "fixed-supply-reprices-at-the-margin",
+      "build": 0,
+      "cell": "s28-b1",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "scene": "fixed-supply-reprices-at-the-margin",
+      "build": 1,
+      "cell": "s28-b2",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "scene": "fixed-supply-reprices-at-the-margin",
+      "build": 2,
+      "cell": "s28-b3",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "scene": "the-case-from-first-principles",
+      "build": 0,
+      "cell": "s29-b1",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "scene": "the-case-from-first-principles",
+      "build": 1,
+      "cell": "s29-b2",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "scene": "the-close",
+      "build": 0,
+      "cell": "s30-b1",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "scene": "the-close",
+      "build": 1,
+      "cell": "s30-b2",
+      "sceneVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "sceneVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    }
+  ],
+  "consoleErrors": []
+}
