@@ -39,10 +39,20 @@
 // flags is wiring, the sheet stands the settled state of the beat and flags it
 // in plain English — one honest render, nothing decided silently.
 //
+// THE SHEET IS PRESENTER-APPROVED IN FULL, 4 September 2026 (the Batch E
+// implementation brief §1.1; master §13): all 27 cells are the approved set
+// and the visual authority for every landed-state proof of Batch E — a
+// settled state that is not its approved cell at zero pixels is a defect.
+// The six flagged cells are approved AS RENDERED, Scene 27's legacy order
+// standing (the question hangs over the lone claim before the paths appear),
+// and their flags are closed as accepted records rather than deleted: the
+// record of what was seen and approved is the record.
+//
 // Review classes: `approved-port` — a PORT cell, approved by provenance
-// (review optional under AGENTS.md §4.9); `pending-review` — a PORT cell
-// carrying a wiring flag the presenter should see, or the one ADAPT cell with
-// its change named. No cell carries a candidate system.
+// (review optional under AGENTS.md §4.9); `approved-as-rendered` — a cell
+// that carried a wiring flag or the one ruled ADAPT change, seen at the
+// flipbook walk and approved exactly as it stands, its flag kept as a closed
+// record. No cell is pending, and no cell carries a candidate system.
 
 import s417 from '/src/slides/section-4-ideal-store/17-store-of-value-function-migrates.js';
 import s418 from '/src/slides/section-4-ideal-store/18-monetary-premium.js';
@@ -144,7 +154,7 @@ export function probe(id) {
 // to save (F2), it migrates (F3), the final line (F4). Legacy 4-17 whole.
 
 cell('s24-b1', {
-  scene: 'S24', beat: 1, frame: 'S24-F1', klass: 'PORT', review: 'pending-review',
+  scene: 'S24', beat: 1, frame: 'S24-F1', klass: 'PORT', review: 'approved-as-rendered',
   source: '4-17-store-of-value-function-migrates, build 0 — the entry frame; the entry line made a beat (row 1 ruled A, 4 Sep 2026)',
   caption: 'Beat 1 · fiat standing with its two jobs: the fiat note at display scale in the dark-field register, MEDIUM OF EXCHANGE and UNIT OF ACCOUNT beneath it, nothing else on the frame. The entry line is spoken over it — “Fiat, holding two of the three jobs — and holding them extremely well.” The legacy always spoke that line over this state; the ruling makes the advance that lands it Scene 24’s own.',
   flag: 'The entry seam (map §4 seam 1), rendered once. Act IV ends on the fifty scores with the render band above the table and “Don’t trust. Verify.” beneath them; this frame is fiat standing alone. The legacy deck played that boundary as its own crossfade and Batch E plays it the same way — nothing here is a morph, and the spoken turn is already written at both ends. And the fiat render’s box (seam 8): every display-scale call for the note is the 180 × 150 display box, a 48% aspect departure from the render’s near-16:9 frame — carried as Act IV approved it. Both are wiring; neither changes the frame.',
@@ -240,7 +250,7 @@ cell('s26-b5', {
 }, (st) => mount(st, s419, 5));
 
 cell('s26-b6', {
-  scene: 'S26', beat: 6, frame: 'S26-F3', klass: 'PORT', review: 'pending-review',
+  scene: 'S26', beat: 6, frame: 'S26-F3', klass: 'PORT', review: 'approved-as-rendered',
   source: '4-20-bitcoin-does-not-replace-everything, build 1 + ComparisonAssetHeader (display box, dark-field) — the architecture’s merge: 4-19 and 4-20 are one scene',
   caption: 'Beat 6 · the first coexistence statement: It does not need to replace real estate. — the coin and the house standing beneath it at the display box. Spoken: a home still provides shelter; a framework that needed it not to would be a bad framework.',
   flag: 'The merge point inside Scene 26, rendered once. The legacy played 4-19 → 4-20 as its own slide crossfade: the four roles and their final line give way to this statement with two assets beneath it, and 4-20’s build 0 is empty — nothing stands between the two compositions but the advance. Inside one scene that boundary is Batch E’s to time as the beat’s gesture (a crossfade, as the legacy played it); the settled frame does not change. Wiring, flagged.',
@@ -273,7 +283,7 @@ cell('s26-b9', {
 // ============================================================ SCENE 27 (3 beats)
 
 cell('s27-b1', {
-  scene: 'S27', beat: 1, frame: 'S27-F1', klass: 'PORT', review: 'pending-review',
+  scene: 'S27', beat: 1, frame: 'S27-F1', klass: 'PORT', review: 'approved-as-rendered',
   source: '4-21-marginal-store-of-value-decision, build 0 + ClaimObject — the entry frame; the entry line made a beat (row 1 ruled A, 4 Sep 2026)',
   caption: 'Beat 1 · one claim at the decision point: the ClaimObject at focus, at the default 116, low on the frame at the decision point — and the question already standing above it at display scale: Where does the next unredeemed claim go? No paths, no candidates yet. The entry line is spoken over it — “One claim, and five places it could go.”',
   flag: 'A legacy fact found at the sheet: the map’s S27-F1 row describes this frame as the claim “at the decision point, nothing else”, and its S27-F2 row lands the question with the paths; legacy 4-21 stands the question from build 0 — the claim and the question are the entry frame, and build 1 adds the five paths and the five candidates. Rendered as the legacy renders it, which is what PORT means. If you want the question to land with the paths at beat 2, that is one word in the source’s state — a ruled change on a proven treatment, and the map’s rows would say so.',
@@ -306,7 +316,7 @@ cell('s27-b3', {
 const FIELD_STANDING = [['.unit-field-grid__unit', 35], ['.unit-field-grid__unit[data-available="true"]', 5], ['.s4-fixed-supply-field__stock-label', 1]];
 
 cell('s28-b1', {
-  scene: 'S28', beat: 1, frame: 'S28-F2', klass: 'PORT', review: 'pending-review', rhyme: true,
+  scene: 'S28', beat: 1, frame: 'S28-F2', klass: 'PORT', review: 'approved-as-rendered', rhyme: true,
   source: '4-22-fixed-supply-reprices-at-margin, build 1 + FixedSupplyField + UnitGrid (src/components/UnitField.js — UNIT_GRAMMAR) + ClaimObject at 44',
   caption: 'Beat 1 · the margin — the sliver actually for sale: Demand does not need to absorb everything. over the field — FIXED OUTSTANDING STOCK, thirty-five units in the hours field’s own grammar (seven by five, each unit 84 × 46 on a 102 × 62 pitch), the rightmost column lit as AVAILABLE AT THE MARGIN with its bracket, and the three demand claims waiting at the right at 44, neutral. Spoken: only a sliver of the outstanding stock is on the market; the rest is held by people not selling at today’s price.',
   flag: 'Two things to see, both wiring. First, the stock at rest — 4-22’s build 0, the field standing with no column lit and no claims — has no spoken advance of its own once the boundary from Scene 27 lands on it (map row S28-F1): it is the composition this beat’s gesture starts from, the margin lighting as the words land. Second, the claim’s last journey (map §4 seam 6): Scene 27’s one decision claim at 116 gives way to three demand claims at 44 arriving from the right — the through-line’s continuity across that boundary is Batch E’s to wire, rendered here as the legacy renders each end. The field itself is the rhyme’s other half: the P1 cell beside these three shows the same grammar at eighty thousand.',
@@ -335,7 +345,7 @@ cell('s28-b3', {
 // ============================================================ SCENE 29 (2 beats)
 
 cell('s29-b1', {
-  scene: 'S29', beat: 1, frame: 'S29-F1', klass: 'PORT', review: 'pending-review',
+  scene: 'S29', beat: 1, frame: 'S29-F1', klass: 'PORT', review: 'approved-as-rendered',
   source: '4-23-investment-case-from-first-principles, build 1 + KickerLabel — the frozen frame’s kicker (R7.1 A2), the four summary lines as one gesture',
   caption: 'Beat 1 · the case, closing the loop: THE CASE FOR BITCOIN — FROM FIRST PRINCIPLES in the one surviving kicker of the retired header treatment (frozen by design), and the four summary lines landing as one gesture — Money is a claim on value. / A store of value carries that claim through time. / The ten properties let us compare the available carriers. / The key question is which carrier wins the next unit of savings. Spoken: so let’s close the loop we opened an hour ago.',
   flag: 'The full clear (map §4 seam 7), rendered once. Scene 28’s field, its claims and its lines clear completely before the kicker lands — the architecture’s own words — and legacy 4-23’s build 0, the kicker alone on black, is the composition the clear lands on; it has no spoken advance of its own once the boundary from Scene 28 lands on it. Batch E times the clear; the settled frame of this beat does not change. Wiring, flagged. The kicker itself is carried as the frozen frame carries it (map §4 seam 11) — the only such kicker left in the film.',
@@ -352,7 +362,7 @@ cell('s29-b2', {
 // ============================================================ SCENE 30 (2 beats)
 
 cell('s30-b1', {
-  scene: 'S30', beat: 1, frame: 'S30-F1', klass: 'ADAPT', review: 'pending-review', closeText: true,
+  scene: 'S30', beat: 1, frame: 'S30-F1', klass: 'ADAPT', review: 'approved-as-rendered', closeText: true,
   source: '5-01-thank-you, build 0 — black; the one ruled change: the wayline build (5-01 build 1) is retired with the waypoint device (architecture Ruling 1); the silence its own beat (row 6 ruled A, 4 Sep 2026)',
   caption: 'Beat 1 · silence: black. The advance that leaves the case lands here, and the callback is spoken over it — An hour ago I told you something strange: that you’d spend eighty thousand hours of your life earning something you couldn’t define. Now you can define it. You know where it came from. You know what it must do, and in what order. And you know how to judge anything that tries to be it. Nothing is on the frame; black here is a scripted beat, not a seam (master §3.5).',
   flag: 'The one ADAPT cell of the act, with its one change named: legacy 5-01’s first build brought the method line back with all three waypoints completed and one warmth pulse along it; that device is retired by the structure freeze (Ruling 1), so the beat is the black the legacy always started from, with the sentence that named the road cut from the script and nothing written in its place. This cell mounts 5-01 at build 0 — the legacy’s own black, the wayline never shown — so the ADAPT is a state the legacy already performs, not a drawing. The check asserts the frame is black: no pixel above the floor.',

@@ -1,5 +1,5 @@
 {
-  "date": "2026-09-03T23:02:54.241Z",
+  "date": "2026-09-04T02:47:40.470Z",
   "session": "act-5-states",
   "limits": {
     "cornerMean": 6,
@@ -484,7 +484,7 @@
       "warmPixelsReported": 0
     }
   ],
-  "checks": 41,
+  "checks": 42,
   "failures": 0,
   "results": [
     {
@@ -553,17 +553,17 @@
       "detail": "none"
     },
     {
-      "name": "REVIEW: the only review classes are approved-port and pending-review",
+      "name": "REVIEW: the only review classes are approved-port and approved-as-rendered — no cell is pending (the sheet approved in full, 4 Sep 2026)",
       "ok": true,
-      "detail": "approved-port · pending-review"
+      "detail": "approved-port · approved-as-rendered"
     },
     {
-      "name": "REVIEW: every pending cell carries its flag, and every flag is on a pending cell",
+      "name": "REVIEW: every approved-as-rendered cell carries its closed flag, and every flag is on such a cell",
       "ok": true,
-      "detail": "6 pending, each flagged"
+      "detail": "6 approved as rendered, each with its closed flag"
     },
     {
-      "name": "REVIEW: the one ADAPT cell (s30-b1) is pending with its change named",
+      "name": "REVIEW: the one ADAPT cell (s30-b1) is approved as rendered with its change named",
       "ok": true,
       "detail": ""
     },
@@ -573,9 +573,14 @@
       "detail": ""
     },
     {
-      "name": "REVIEW: states.json records the pending set and every flag as open — the sheet is a review request",
+      "name": "REVIEW: states.json records the approved-as-rendered set and every flag as closed",
       "ok": true,
       "detail": ""
+    },
+    {
+      "name": "APPROVAL: states.json records the presenter’s approval, and the approved set is every cell",
+      "ok": true,
+      "detail": "27 cells approved"
     },
     {
       "name": "PROBES: every cell carries at least one probe, and every probe passed at capture — the still shows the state it claims",

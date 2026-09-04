@@ -5,15 +5,21 @@
 // cuts the record: `sheet.html` — the flipbook, in beat order, the review
 // request the presenter walks — and `states.json`.
 //
-// THE SHEET IS A REVIEW REQUEST. The map is RULED (4 Sep 2026, master §13:
+// THE SHEET IS PRESENTER-APPROVED IN FULL (4 September 2026, the Batch E
+// implementation brief §1.1; master §13). It was cut as a review request and
+// the walk answered it: all 27 cells are the approved set and the visual
+// authority for every landed-state proof of Batch E — a settled state that is
+// not its approved cell at zero pixels is a defect. The six flagged cells are
+// approved AS RENDERED, Scene 27's legacy order standing, and their flags stay
+// on the sheet as closed records. The map is RULED (4 Sep 2026, master §13:
 // the six ARGUABLE rows at A · A · A · A · A · A; 22 PORT · 1 ADAPT · 0 NEW ·
 // 1 retired) and the beat maps are frozen at 27, so every cell is a PORT or
 // the one ruled ADAPT: the legacy slide module mounted at its build. The
-// pending set is the cells that carry a wiring flag — the entry seam, the
-// merge point inside Scene 26, the question standing from Scene 27's entry
-// frame, the stock at rest and the claim's last journey, the full clear — and
-// the ADAPT cell (the close's black), each rendered once, honestly, and
-// flagged in plain English.
+// approved-as-rendered set is the cells that carried a wiring flag — the entry
+// seam, the merge point inside Scene 26, the question standing from Scene 27's
+// entry frame, the stock at rest and the claim's last journey, the full clear —
+// and the ADAPT cell (the close's black), each rendered once, honestly, flagged
+// in plain English, and approved exactly as it stands.
 //
 // THE RHYME: the Scene 28 cells are rendered from P1's field implementation —
 // FixedSupplyField draws with UnitGrid from src/components/UnitField.js, the
@@ -91,8 +97,8 @@ const RULINGS = [
 const CLASS_NOTE = {
   'approved-port': ['APPROVED BY PROVENANCE — the PORT cells',
     'A proven legacy treatment, transplanted verbatim: the legacy slide module itself mounted at the build the ruled map names, the legacy stylesheet placing every element. Review is optional under the provenance rule (AGENTS.md §4.9) — the presenter approved these treatments when the Section 4 deck shipped and when the argument froze, and the map’s ruling carries them home. A cell here asks nothing; it is on the sheet so the act can be walked whole.'],
-  'pending-review': ['PENDING REVIEW — the flagged cells',
-    'Five PORT cells rendered exactly as the map names them, each carrying a wiring flag the presenter should see — the entry seam from the table into fiat standing alone, the merge point inside Scene 26, the question standing from Scene 27’s entry frame (a legacy fact the map’s row did not describe), the stock at rest and the claim’s last journey into the field, the full clear before the case — and the one ADAPT cell, the close’s black with its one change named. Each is one honest render plus a plain-English flag; nothing is decided silently. Your verdict on each — “as rendered”, or one word that changes it — closes it.']
+  'approved-as-rendered': ['APPROVED AS RENDERED — the cells that carried a flag',
+    'Five PORT cells rendered exactly as the map names them, each of which carried a wiring flag — the entry seam from the table into fiat standing alone, the merge point inside Scene 26, the question standing from Scene 27’s entry frame (a legacy fact the map’s row did not describe), the stock at rest and the claim’s last journey into the field, the full clear before the case — and the one ADAPT cell, the close’s black with its one change named. All six were walked and approved AS RENDERED on 4 September 2026, Scene 27’s legacy order standing. The flags stay beneath their cells as closed records: what was seen, and what was approved.']
 };
 
 const RHYME_NOTE = 'The rhyme, shown at both ends. Left: the approved P1 cell — the hours field complete, eighty thousand units at a 4.58 pitch, the Prologue sheet’s own render (review/prologue/states/p1-b1.png), not re-rendered here. Right: Scene 28’s field — thirty-five units at a 102 × 62 pitch, drawn by UnitGrid from the same src/components/UnitField.js. Both read UNIT_GRAMMAR: a unit fills 0.8235 of its horizontal pitch and 0.7419 of its vertical pitch. A life poured in; the container it is poured into. The rhyme is never pointed out in copy or spoken word — it lives in the code, and the check proves the mounted grid against the grammar in the source.';
@@ -170,7 +176,7 @@ const RHYME_NOTE = 'The rhyme, shown at both ends. Left: the approved P1 cell �
         <b>${id}</b> · ${esc(m.scene)} b${m.beat} · <span class="frame">${esc(m.frame)}</span>
         <span class="pill pill--${m.review}">${esc(m.klass)} · ${esc(m.review)}</span>
         <br>${esc(m.caption)}
-        ${m.flag ? `<br><span class="flagline"><b>FLAG — for your word:</b> ${esc(m.flag)}</span>` : ''}
+        ${m.flag ? `<br><span class="flagline"><b>FLAG — closed, approved as rendered 4 Sep 2026:</b> ${esc(m.flag)}</span>` : ''}
         ${m.source ? `<br><span class="src">source: ${esc(m.source)}</span>` : ''}
         <br><span class="src">probes ${p.results.filter((r) => r.ok).length}/${p.results.length}${p.ok ? '' : ' — FAILED'}</span> · <a href="./${id}.png" target="_blank">full size</a>
       </figcaption>
@@ -179,7 +185,7 @@ const RHYME_NOTE = 'The rhyme, shown at both ends. Left: the approved P1 cell �
 
   const byReview = (r) => ids.filter((id) => meta[id].review === r);
   const flagged = ids.filter((id) => meta[id].flag);
-  const REVIEW_CLASSES = ['approved-port', 'pending-review'];
+  const REVIEW_CLASSES = ['approved-port', 'approved-as-rendered'];
 
   const rhymePanel = `
     <div class="rhyme">
@@ -206,7 +212,7 @@ const RHYME_NOTE = 'The rhyme, shown at both ends. Left: the approved P1 cell �
     .map((r) => `${byReview(r).length} ${r}`).join(' · ');
 
   fs.writeFileSync(path.join(OUT, 'sheet.html'), `<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><title>Act V — the beat-state sheet · the review request</title>
+<html lang="en"><head><meta charset="utf-8"><title>Act V — the beat-state sheet · the approved set</title>
 <link rel="stylesheet" href="/src/styles/fonts.css">
 <style>
   body { background:#000; color:#fff; font-family:Inter,sans-serif; margin:0; padding:44px 48px 72px; }
@@ -216,7 +222,7 @@ const RHYME_NOTE = 'The rhyme, shown at both ends. Left: the approved P1 cell �
   h2 { font-size:13px; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.85); margin:52px 0 6px; font-weight:500; }
   h3 { font-size:12px; letter-spacing:.18em; text-transform:uppercase; margin:22px 0 4px; font-weight:500; }
   h3.h--approved-port { color:#F7931A; }
-  h3.h--pending-review { color:rgba(255,217,166,.85); }
+  h3.h--approved-as-rendered { color:rgba(255,217,166,.85); }
   p.lang { font-size:12.5px; color:rgba(255,255,255,.55); margin:0 0 10px; max-width:1020px; line-height:1.7; }
   ol.rulings, ul.flags { font-size:12.5px; color:rgba(255,255,255,.55); max-width:1020px; line-height:1.7; padding-left:22px; }
   ul.flags b, ol.rulings b { color:rgba(255,255,255,.85); font-weight:600; }
@@ -224,7 +230,7 @@ const RHYME_NOTE = 'The rhyme, shown at both ends. Left: the approved P1 cell �
   figure { margin:0; width:560px; }
   img { display:block; width:560px; height:315px; outline:1px solid rgba(255,255,255,.09); }
   figure[data-review="approved-port"] img { outline:1px solid rgba(247,147,26,.35); }
-  figure[data-review="pending-review"] img { outline:1px solid rgba(255,217,166,.45); }
+  figure[data-review="approved-as-rendered"] img { outline:1px solid rgba(255,217,166,.45); }
   figcaption { margin-top:8px; font-size:11.5px; color:rgba(255,255,255,.52); line-height:1.6; }
   figcaption b { color:rgba(255,255,255,.85); font-weight:600; }
   .frame { color:rgba(255,255,255,.68); }
@@ -234,14 +240,14 @@ const RHYME_NOTE = 'The rhyme, shown at both ends. Left: the approved P1 cell �
   .pill { display:inline-block; margin-left:6px; padding:1px 7px; border-radius:9px; font-size:9.5px;
           letter-spacing:.12em; text-transform:uppercase; border:1px solid rgba(255,255,255,.2); }
   .pill--approved-port { color:#F7931A; border-color:rgba(247,147,26,.5); }
-  .pill--pending-review { color:rgba(255,217,166,.85); border-color:rgba(255,217,166,.5); }
+  .pill--approved-as-rendered { color:rgba(255,217,166,.85); border-color:rgba(255,217,166,.5); }
   .rhyme { display:flex; gap:26px; align-items:flex-start; margin:0 0 22px; }
   .rhyme figure img { outline:1px solid rgba(253,233,212,.35); }
   .rhyme p.lang { max-width:560px; margin-top:0; }
   a { color:#F7931A; text-decoration:none; }
   hr { border:0; border-top:1px solid rgba(255,255,255,.1); margin:56px 0 0; }
 </style></head><body>
-<h1>Act V — the beat-state sheet · the review request (4 September 2026)</h1>
+<h1>Act V — the beat-state sheet · the approved set (approved in full, 4 September 2026)</h1>
 <p class="note"><b>What this is.</b> The film’s ending as stills — every settled state of Scenes 24–30, one cell per beat,
 <b>27 cells at the frozen map</b> (S24 4 · S25 4 · S26 9 · S27 3 · S28 3 · S29 2 · S30 2).
 The ruled map (<i>docs/act-5-provenance.md</i>, 4 September 2026) is 22 PORT · 1 ADAPT · 0 NEW · 1 retired, so
@@ -253,15 +259,18 @@ the world’s savings, one asset’s value, the assets doing money’s job, one 
 <ol class="rulings">
 ${RULINGS.map((r) => `<li>${esc(r)}</li>`).join('\n')}
 </ol>
-<p class="note"><b>The flipbook protocol — how to read this sheet.</b> Walk the film’s ending once, as stills, in beat order:
+<p class="note"><b>APPROVED IN FULL — 4 September 2026.</b> The walk was made and the sheet is the presenter’s approved set:
+all ${ids.length} cells stand approved, the ${flagged.length} flagged cells <b>as rendered</b> — with <b>Scene 27’s legacy order standing</b>: the question
+hangs over the lone claim before the paths appear. Their flags stay below as <b>closed records</b>, not open questions. The approved set is
+the <b>visual authority for every landed-state proof of Batch E</b>: a settled state that is not its approved cell at zero pixels is a defect.</p>
+<p class="note"><b>The walk this sheet was cut for</b>, kept for the record. Walk the film’s ending once, as stills, in beat order:
 <b>the migration</b> (fiat standing with its two jobs; the demand to save; the lane, the three destinations, the claims traveling),
 <b>the premium</b> (the equation assembling; the halo; the closing pair), <b>the other assets</b> (four roles, one per advance; the three coexistence
 statements; the law), <b>the marginal decision</b> (one claim; five paths; the supporting line), <b>the field returning</b> (the margin; the demand
 arriving; the repricing — the hours field’s rhyme, shown beside it), <b>the case</b> (four lines; the conclusion), and <b>the silence</b> (black; Thank you.).
-At every frame the question is the one every sheet has asked: <i>can I follow the argument by eye alone?</i> Then return two things:
-your verdicts on the <b>pending set</b> — the ${flagged.length} flagged cells listed below, each “as rendered” or one word that changes it — and
-<b>the go-ahead</b> that unlocks the final implementation batch. The approved-port cells ask nothing.</p>
-<p class="note"><b>The flags, gathered</b> — each in plain English, each on its cell:</p>
+At every frame the question is the one every sheet has asked: <i>can I follow the argument by eye alone?</i> It was walked, the verdicts
+came back “as rendered” on all ${flagged.length} flagged cells, and <b>the go-ahead was given</b> — which unlocked the final implementation batch.</p>
+<p class="note"><b>The flags, gathered</b> — each in plain English, each on its cell, <b>all closed as approved as rendered</b>:</p>
 <ul class="flags">
 ${flagList}
 </ul>
@@ -279,7 +288,9 @@ ${sceneSections}
   fs.writeFileSync(path.join(OUT, 'states.json'), JSON.stringify({
     date: new Date().toISOString(),
     session: 'act-5-states',
-    status: 'the review request — the presenter walks the film’s ending as stills and returns his verdicts on the pending set and the go-ahead',
+    status: 'the approved set — the film’s ending walked as stills, every cell approved, the go-ahead given (4 September 2026)',
+    approval: 'presenter-approved in full at the flipbook walk, 4 September 2026 (the Batch E implementation brief §1.1, master §13) — the 27 cells are the approved set, the six flagged cells approved as rendered with Scene 27’s legacy order standing; a settled state that is not its approved cell at zero pixels is a defect',
+    approvedSet: ids.slice(),
     beatMap: { ...BEAT_MAP, total: TOTAL_BEATS },
     cellCount: ids.length,
     beatMapAuthority: 'docs/batch-e-package.md §1 — derived from the legacy advance structure 3 September 2026 and frozen 4 September 2026 on the presenter’s rulings (master §13: the six ARGUABLE rows at A)',
@@ -290,11 +301,11 @@ ${sceneSections}
       module: 'src/components/UnitField.js — UNIT_GRAMMAR (PITCH_X 102 · PITCH_Y 62 · W_FRAC 0.8235 · H_FRAC 0.7419); UnitField (P1, canvas, 400 × 200 at 4.58) and UnitGrid (Scene 28, DOM, 7 × 5 at the grammar’s pitch)',
       note: RHYME_NOTE
     },
-    protocol: 'the presenter walks the film’s ending as stills — the migration, the premium, the other assets, the marginal decision, the field returning, the case, the silence — and returns his verdicts on the pending set plus the go-ahead that unlocks the final implementation batch',
+    protocol: 'walked, 4 September 2026 — the film’s ending as stills, the migration, the premium, the other assets, the marginal decision, the field returning, the case, the silence; the verdicts returned “as rendered” on all six flagged cells and the go-ahead was given, unlocking the final implementation batch',
     counts: Object.fromEntries(REVIEW_CLASSES.map((r) => [r, byReview(r).length])),
-    pendingSet: byReview('pending-review'),
+    approvedAsRenderedSet: byReview('approved-as-rendered'),
     approvedPortSet: byReview('approved-port'),
-    flags: flagged.map((id) => ({ id, flag: meta[id].flag, status: 'open — for the presenter’s word at the flipbook walk' })),
+    flags: flagged.map((id) => ({ id, flag: meta[id].flag, status: 'closed — approved as rendered at the flipbook walk, 4 September 2026' })),
     probeFailures: ids.filter((id) => !probes[id].ok),
     cells,
     consoleErrors: errors

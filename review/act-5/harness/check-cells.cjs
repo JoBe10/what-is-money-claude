@@ -22,9 +22,13 @@
 //   BEAT COVERAGE — all 27 beats of the frozen map, each exactly once; 27
 //   cells; no candidate system anywhere (the map names no NEW frame).
 //
-//   THE PENDING SET — the only review classes are approved-port and
-//   pending-review; every pending cell carries its flag and every flag is on
-//   a pending cell; the one ADAPT cell is pending with its change named.
+//   THE APPROVED SET — the sheet is presenter-approved in full (4 Sep 2026,
+//   the Batch E implementation brief §1.1; master §13): no cell is pending;
+//   the only review classes are approved-port and approved-as-rendered; every
+//   approved-as-rendered cell carries its closed flag and every flag is on
+//   such a cell; the one ADAPT cell is approved as rendered with its change
+//   named; states.json records the approval, the approved set is every cell,
+//   and every flag is closed.
 //
 //   THE PROBES — every cell has at least one probe and every probe passed at
 //   capture: the still shows the state it claims (the four renders on the
@@ -234,26 +238,32 @@ const read = (p) => fs.readFileSync(p, 'utf8').replace(/\r\n/g, '\n');
     check('CANDIDATES: no cell carries a candidate system — the map names no NEW frame', candidates.length === 0, candidates.join(', ') || 'none');
   }
 
-  // ---- THE PENDING SET ------------------------------------------------------
+  // ---- THE APPROVED SET -----------------------------------------------------
   {
     const reviews = new Set(cells.map((c) => c.review));
-    const allowed = ['approved-port', 'pending-review'];
+    const allowed = ['approved-port', 'approved-as-rendered'];
     const stray = [...reviews].filter((r) => !allowed.includes(r));
-    check('REVIEW: the only review classes are approved-port and pending-review', stray.length === 0, stray.join(', ') || allowed.join(' · '));
-    const pendingNoFlag = cells.filter((c) => c.review === 'pending-review' && !c.flag).map((c) => c.id);
-    const flagNotPending = cells.filter((c) => c.flag && c.review !== 'pending-review').map((c) => c.id);
-    check('REVIEW: every pending cell carries its flag, and every flag is on a pending cell',
-      pendingNoFlag.length === 0 && flagNotPending.length === 0,
-      [...pendingNoFlag.map((id) => `${id} pending without a flag`), ...flagNotPending.map((id) => `${id} flagged but not pending`)].join(' · ')
-        || `${cells.filter((c) => c.review === 'pending-review').length} pending, each flagged`);
+    check('REVIEW: the only review classes are approved-port and approved-as-rendered — no cell is pending (the sheet approved in full, 4 Sep 2026)', stray.length === 0, stray.join(', ') || allowed.join(' · '));
+    const renderedNoFlag = cells.filter((c) => c.review === 'approved-as-rendered' && !c.flag).map((c) => c.id);
+    const flagNotRendered = cells.filter((c) => c.flag && c.review !== 'approved-as-rendered').map((c) => c.id);
+    check('REVIEW: every approved-as-rendered cell carries its closed flag, and every flag is on such a cell',
+      renderedNoFlag.length === 0 && flagNotRendered.length === 0,
+      [...renderedNoFlag.map((id) => `${id} approved as rendered without its flag`), ...flagNotRendered.map((id) => `${id} flagged but not approved-as-rendered`)].join(' · ')
+        || `${cells.filter((c) => c.review === 'approved-as-rendered').length} approved as rendered, each with its closed flag`);
     const adapt = cells.filter((c) => c.klass === 'ADAPT');
-    check('REVIEW: the one ADAPT cell (s30-b1) is pending with its change named',
-      adapt.length === 1 && adapt[0].id === 's30-b1' && adapt[0].review === 'pending-review' && /wayline/.test(adapt[0].flag || ''));
+    check('REVIEW: the one ADAPT cell (s30-b1) is approved as rendered with its change named',
+      adapt.length === 1 && adapt[0].id === 's30-b1' && adapt[0].review === 'approved-as-rendered' && /wayline/.test(adapt[0].flag || ''));
     const plainOk = cells.filter((c) => c.flag).every((c) => c.flag.split(/[.!?]\s/).length >= 3);
     check('REVIEW: every flag is written in full sentences (the plain-English rule, AGENTS.md §4.10)', plainOk);
     const recorded = Array.isArray(record.flags) && record.flags.length === cells.filter((c) => c.flag).length &&
-      record.flags.every((f) => /^open/.test(f.status)) && Array.isArray(record.pendingSet) && record.pendingSet.length === cells.filter((c) => c.review === 'pending-review').length;
-    check('REVIEW: states.json records the pending set and every flag as open — the sheet is a review request', recorded);
+      record.flags.every((f) => /^closed/.test(f.status)) &&
+      Array.isArray(record.approvedAsRenderedSet) && record.approvedAsRenderedSet.length === cells.filter((c) => c.review === 'approved-as-rendered').length;
+    check('REVIEW: states.json records the approved-as-rendered set and every flag as closed', recorded);
+    const approvedOk = typeof record.approval === 'string' && /approved in full/.test(record.approval) &&
+      Array.isArray(record.approvedSet) && record.approvedSet.length === cells.length &&
+      cells.every((c) => record.approvedSet.includes(c.id));
+    check('APPROVAL: states.json records the presenter’s approval, and the approved set is every cell',
+      approvedOk, approvedOk ? `${record.approvedSet.length} cells approved` : 'NOT RECORDED');
   }
 
   // ---- THE PROBES -----------------------------------------------------------
