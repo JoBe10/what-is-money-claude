@@ -181,6 +181,59 @@
 // (review/acts-3-4-final/smoke-acts-3-4-final.json proves it both ways).
 //
 // **The deck is 32 slides** (was 34): two legacy slides out, nothing in.
+//
+// ===== BATCH E, 4 September 2026 — Act V enters the deck, and the legacy
+// ===== deck leaves it entirely
+//
+// Scenes 24–30 are spliced in directly after Act IV as one contiguous world
+// (`sceneGroup: 'act5-case'`), in place of the last legacy slides the ruled
+// provenance map (`docs/act-5-provenance.md`) names as their sources. **The
+// legacy files stay on disk and in history**; only their manifest entries are
+// gone. The act's shared stage re-homes the legacy modules themselves from
+// disk (src/scenes/act-5-the-case/_caseStage.js), so the proven treatments
+// live on in the film rather than being transcribed.
+//
+//   scene                                   supersedes
+//   24 Migration                            4-17-store-of-value-function-
+//                                              migrates
+//   25 The Monetary Premium                 4-18-monetary-premium
+//   26 When Other Assets Do Money's Job     4-19-other-assets-do-moneys-job
+//                                           4-20-bitcoin-does-not-replace-
+//                                              everything (builds 1–4 only;
+//                                              its builds 5–7, the stability
+//                                              contrast, are cut by
+//                                              architecture Ruling 5 — the
+//                                              steelman is Scene 23's notes-
+//                                              only armor and the rules line
+//                                              is Scene 29's script)
+//   27 The Marginal Decision                4-21-marginal-store-of-value-
+//                                              decision
+//   28 Fixed Supply Reprices at the Margin  4-22-fixed-supply-reprices-at-
+//                                              margin
+//   29 The Case from First Principles       4-23-investment-case-from-first-
+//                                              principles
+//   30 Close                                5-01-thank-you (build 1, the
+//                                              wayline, retired by
+//                                              architecture Ruling 1 — in no
+//                                              state, never shown)
+//
+// Every row is a ruled PORT but the last, which is the act's one ADAPT with
+// its one change named. The map is 22 PORT · 1 ADAPT · 0 NEW · 1 retired, and
+// the sheet of all 27 beat states is presenter-approved in full (4 Sep 2026,
+// master §13).
+//
+// **NO LEGACY SLIDE REMAINS IN THE MANIFEST.** The `ideal-store` and `close`
+// sections leave the sections list, as `question`, `origin` and `function`
+// did before them, and with them the last of the 45-slide deck. **The deck is
+// the film, end to end: a prologue and five acts, thirty-one scenes, black to
+// black.** The legacy deck survives where it always was meant to — on disk, in
+// history, and inside the act stages that re-home its modules.
+//
+// **The deck is 31 slides** (was 32): eight legacy slides out, seven scenes
+// in. Both splice seams are proven both ways in
+// review/batch-e/smoke-batch-e.json — Scene 23's "Don't trust. Verify." into
+// Scene 24's crossfade, and Scene 30 as the deck's final state with nothing
+// after it.
 
 import p1 from '../scenes/prologue/p1-eighty-thousand-hours.js';
 import p2 from '../scenes/prologue/p2-the-stakes.js';
@@ -211,15 +264,13 @@ import scene21 from '../scenes/act-4-the-store-of-value-test/21-how-the-carrier-
 import scene22 from '../scenes/act-4-the-store-of-value-test/22-from-failure-to-requirement.js';
 import scene23 from '../scenes/act-4-the-store-of-value-test/23-the-comparison.js';
 
-import s4_17 from './section-4-ideal-store/17-store-of-value-function-migrates.js';
-import s4_18 from './section-4-ideal-store/18-monetary-premium.js';
-import s4_19 from './section-4-ideal-store/19-other-assets-do-moneys-job.js';
-import s4_20 from './section-4-ideal-store/20-bitcoin-does-not-replace-everything.js';
-import s4_21 from './section-4-ideal-store/21-marginal-store-of-value-decision.js';
-import s4_22 from './section-4-ideal-store/22-fixed-supply-reprices-at-margin.js';
-import s4_23 from './section-4-ideal-store/23-investment-case-from-first-principles.js';
-
-import s5_01 from './section-5-close/01-thank-you.js';
+import scene24 from '../scenes/act-5-the-case/24-migration.js';
+import scene25 from '../scenes/act-5-the-case/25-the-monetary-premium.js';
+import scene26 from '../scenes/act-5-the-case/26-when-other-assets-do-moneys-job.js';
+import scene27 from '../scenes/act-5-the-case/27-the-marginal-decision.js';
+import scene28 from '../scenes/act-5-the-case/28-fixed-supply-reprices-at-the-margin.js';
+import scene29 from '../scenes/act-5-the-case/29-the-case-from-first-principles.js';
+import scene30 from '../scenes/act-5-the-case/30-the-close.js';
 
 // The film, so far.
 const prologue = [p1, p2];
@@ -244,27 +295,23 @@ const act3 = [scene11, scene12, scene13, scene14, scene15];
 // legacy deck's own crossfade played inside the stage — continuity the engine
 // preserves by never tearing the stage down at these seven boundaries.
 const act4 = [scene16, scene17, scene18, scene19, scene20, scene21, scene22, scene23];
+// Scenes 24–30 are likewise one world (`sceneGroup: 'act5-case'`): the last
+// eight legacy Act V treatments are re-homed as layers of one stage, and every
+// in-act boundary is the legacy deck's own crossfade played inside the stage.
+// The act is a descent — the world's savings, one asset's value, the assets
+// doing money's job, one claim, one field, four lines, one line, black — and
+// the last boundary of all lands on the black the close was always going to
+// start from.
+const act5 = [scene24, scene25, scene26, scene27, scene28, scene29, scene30];
 
-// The legacy deck, as it stands after the Acts III–IV final rulings (the
-// block above): the function section is gone — its three waypoint and
-// bracket survivors (3-00, 3-04, 3-08) are all retired, their files on disk
-// — and the surviving legacy Section 4 follows Act IV directly.
-// Section 4 keeps its shipped slide numbers — the whole project, the freeze
-// register and every governing document refer to beats as 4.15, 4.23 — so
-// structural changes slot in rather than renumbering. R7's merged section entry
-// took 01; R7.4 removed the falsifiability beat that had entered as 20b; Batch A
-// removes 03, 04 and 05 as Scenes 2, 3 and 4 supersede them; Batch D removes
-// 01 and 06 through 16 as Scenes 16–23 supersede them, leaving 17 through 23
-// for Batch E. The remaining `number:` fields are left alone for the same
-// reason as ever: they are documentation, `src/main.js` assigns the real deck
-// position from this array's order, and 4.23's file is byte-frozen and cannot
-// be edited to renumber it. Deep-link ids for every retained slide are
-// unchanged.
-const section4 = [
-  s4_17, s4_18, s4_19, s4_20,
-  s4_21, s4_22, s4_23
-];
-const section5 = [s5_01];
+// The legacy deck is gone from the running order. Batch A took 1-01 through
+// 1-05, 2-01 through 2-03, and 4-03 through 4-05; Batch B took 2-04 through
+// 2-08 and 3-05; Batch C took 3-01, 3-02, 3-03, 3-06 and 3-07; the Act IV
+// foundation took 3-08; Batch D took 4-01 and 4-06 through 4-16; the Acts
+// III–IV final rulings took 3-00 and 3-04; and Batch E takes the last eight —
+// 4-17 through 4-23 and 5-01. **The files stay on disk and in history**
+// (`AGENTS.md` §5), and the treatments live on inside the act stages that
+// mount them. What leaves is only the running order.
 
 export const sections = [
   { id: 'prologue',    label: 'Prologue',                          slides: prologue },
@@ -272,8 +319,7 @@ export const sections = [
   { id: 'act-2',       label: 'Act II — The Architecture of Money', slides: act2 },
   { id: 'act-3',       label: 'Act III — The Jobs of Money',       slides: act3 },
   { id: 'act-4',       label: 'Act IV — The Store-of-Value Test',  slides: act4 },
-  { id: 'ideal-store', label: 'Ideal Store',                       slides: section4 },
-  { id: 'close',       label: 'Close',                             slides: section5 }
+  { id: 'act-5',       label: 'Act V — The Case',                  slides: act5 }
 ];
 
 export const slides = sections.flatMap((s) => s.slides);

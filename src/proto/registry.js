@@ -34,28 +34,14 @@ import spendOrSave from './gate-2/s4-spend-or-save.js';
 // when the batch lands, which is this file's own rule. The scenes are in the
 // film now; `src/slides/manifest.js` is where they live.
 
-// Act V (Scenes 24–30) runs here as `?proto=act5` while Batch E builds it —
-// all seven scenes as of Session 2; the entries leave at this session's splice.
-import migration from '../scenes/act-5-the-case/24-migration.js';
-import theMonetaryPremium from '../scenes/act-5-the-case/25-the-monetary-premium.js';
-import whenOtherAssetsDoMoneysJob from '../scenes/act-5-the-case/26-when-other-assets-do-moneys-job.js';
-import theMarginalDecision from '../scenes/act-5-the-case/27-the-marginal-decision.js';
-import fixedSupplyRepricesAtTheMargin from '../scenes/act-5-the-case/28-fixed-supply-reprices-at-the-margin.js';
-import theCaseFromFirstPrinciples from '../scenes/act-5-the-case/29-the-case-from-first-principles.js';
-import theClose from '../scenes/act-5-the-case/30-the-close.js';
-
-migration.protoKey = 'act5';
-theMonetaryPremium.protoKey = 'act5';
-whenOtherAssetsDoMoneysJob.protoKey = 'act5';
-theMarginalDecision.protoKey = 'act5';
-fixedSupplyRepricesAtTheMargin.protoKey = 'act5';
-theCaseFromFirstPrinciples.protoKey = 'act5';
-theClose.protoKey = 'act5';
+// Act V (Scenes 24–30) ran here as `?proto=act5` while Batch E built it, and
+// LEFT THIS LIST AT THE SPLICE of 4 September 2026 — the entry leaves when the
+// batch lands, which is this file's own rule. The scenes are in the film now;
+// `src/slides/manifest.js` is where they live, and with them the last legacy
+// slide left the running order.
 
 export const prototypes = [
-  theDirectExchange, theBreakthrough, spendOrSave,
-  migration, theMonetaryPremium, whenOtherAssetsDoMoneysJob, theMarginalDecision,
-  fixedSupplyRepricesAtTheMargin, theCaseFromFirstPrinciples, theClose
+  theDirectExchange, theBreakthrough, spendOrSave
 ];
 
 export default prototypes;
