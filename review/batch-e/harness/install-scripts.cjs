@@ -13,8 +13,10 @@
 // them (its bold bracketed marker paragraph and the five paragraphs beneath
 // it), because the passage is spoken over the scene's final frame with no
 // advance (Row 2 ruled A, 4 Sep 2026). The marker carries no `[→]`, so the
-// scene stays at nine beats. Session 1 installs Scenes 24–27; Session 2
-// extends the list to Scenes 28–30.
+// scene stays at nine beats. Session 1 installed Scenes 24–27; Session 2
+// extends the list to Scenes 28–30, which completes the act: all seven scenes
+// carry the package's own installed text, and the film's last words come from
+// the same place every other line does.
 //
 // Usage: node install-scripts.cjs [--check]
 //   --check  verify only; exit 1 if any installed script differs.
@@ -29,7 +31,10 @@ const SCENES = [
   ['S24', '24-migration.js'],
   ['S25', '25-the-monetary-premium.js'],
   ['S26', '26-when-other-assets-do-moneys-job.js'],
-  ['S27', '27-the-marginal-decision.js']
+  ['S27', '27-the-marginal-decision.js'],
+  ['S28', '28-fixed-supply-reprices-at-the-margin.js'],
+  ['S29', '29-the-case-from-first-principles.js'],
+  ['S30', '30-the-close.js']
 ];
 const ALL_KEYS = ['S24', 'S25', 'S26', 'S27', 'S28', 'S29', 'S30'];
 
