@@ -1,0 +1,514 @@
+{
+  "date": "2026-09-04T03:58:38.340Z",
+  "session": "batch-e",
+  "deck": {
+    "slides": 31,
+    "firstId": "eighty-thousand-hours",
+    "lastId": "the-close",
+    "ids": [
+      "eighty-thousand-hours",
+      "the-stakes",
+      "the-direct-exchange",
+      "the-breakthrough",
+      "spend-or-save",
+      "the-function-stayed",
+      "scarcity-in-matter",
+      "claims-on-gold",
+      "money-becomes-information",
+      "scarcity-becomes-digital",
+      "the-trade-off-keeps-moving",
+      "three-familiar-jobs",
+      "we-already-split-those-jobs",
+      "the-order-of-monetization",
+      "the-coffee-objection",
+      "the-tower",
+      "return-to-the-open-exchange",
+      "what-the-carrier-must-preserve",
+      "the-100-year-test",
+      "invert-the-question",
+      "how-the-carrier-can-fail-i",
+      "how-the-carrier-can-fail-ii",
+      "from-failure-to-requirement",
+      "the-comparison",
+      "migration",
+      "the-monetary-premium",
+      "when-other-assets-do-moneys-job",
+      "the-marginal-decision",
+      "fixed-supply-reprices-at-the-margin",
+      "the-case-from-first-principles",
+      "the-close"
+    ],
+    "builds": [
+      11,
+      1,
+      4,
+      8,
+      4,
+      7,
+      8,
+      4,
+      4,
+      4,
+      4,
+      4,
+      2,
+      6,
+      2,
+      6,
+      7,
+      4,
+      7,
+      1,
+      4,
+      4,
+      2,
+      5,
+      3,
+      3,
+      8,
+      2,
+      2,
+      1,
+      1
+    ],
+    "sections": [
+      {
+        "id": "prologue",
+        "label": "Prologue",
+        "n": 2
+      },
+      {
+        "id": "act-1",
+        "label": "Act I — The Unfinished Exchange",
+        "n": 3
+      },
+      {
+        "id": "act-2",
+        "label": "Act II — The Architecture of Money",
+        "n": 6
+      },
+      {
+        "id": "act-3",
+        "label": "Act III — The Jobs of Money",
+        "n": 5
+      },
+      {
+        "id": "act-4",
+        "label": "Act IV — The Store-of-Value Test",
+        "n": 8
+      },
+      {
+        "id": "act-5",
+        "label": "Act V — The Case",
+        "n": 7
+      }
+    ],
+    "legacySlidesLeft": [],
+    "totalBeats": 164
+  },
+  "traversal": {
+    "states": 164,
+    "forward": true,
+    "forwardFirstMismatchAt": null,
+    "backwardReachesTop": true,
+    "backwardMonotonic": true,
+    "backwardSteps": 132
+  },
+  "seams": [
+    {
+      "name": "Scene 30 is the deck’s final state — nothing after it",
+      "at": {
+        "idx": 30,
+        "step": 1,
+        "id": "the-close"
+      },
+      "afterAdvance": {
+        "idx": 30,
+        "step": 1,
+        "id": "the-close"
+      },
+      "holds": true
+    },
+    {
+      "name": "SEAM  S23 end → S24 (the crossfade — the film cuts)",
+      "from": {
+        "idx": 23,
+        "step": 5,
+        "id": "the-comparison"
+      },
+      "to": {
+        "idx": 24,
+        "step": 0,
+        "id": "migration"
+      },
+      "act5Layer": "s417"
+    },
+    {
+      "name": "SEAM  S24 b0 → S23 end (backward across the acts)",
+      "from": {
+        "idx": 24,
+        "step": 0,
+        "id": "migration"
+      },
+      "to": {
+        "idx": 23,
+        "step": 0,
+        "id": "the-comparison"
+      },
+      "act5Layer": null
+    }
+  ],
+  "boundaries": [
+    {
+      "name": "S24 end → S25 (forward)",
+      "from": {
+        "idx": 24,
+        "step": 3,
+        "id": "migration"
+      },
+      "to": {
+        "idx": 25,
+        "step": 0,
+        "id": "the-monetary-premium"
+      },
+      "act5Layer": "s418"
+    },
+    {
+      "name": "S24 b0 ← S25 (backward, the handoff)",
+      "from": {
+        "idx": 25,
+        "step": 0,
+        "id": "the-monetary-premium"
+      },
+      "to": {
+        "idx": 24,
+        "step": 3,
+        "id": "migration"
+      },
+      "act5Layer": "s417"
+    },
+    {
+      "name": "S25 end → S26 (forward)",
+      "from": {
+        "idx": 25,
+        "step": 3,
+        "id": "the-monetary-premium"
+      },
+      "to": {
+        "idx": 26,
+        "step": 0,
+        "id": "when-other-assets-do-moneys-job"
+      },
+      "act5Layer": "s419"
+    },
+    {
+      "name": "S25 b0 ← S26 (backward, the handoff)",
+      "from": {
+        "idx": 26,
+        "step": 0,
+        "id": "when-other-assets-do-moneys-job"
+      },
+      "to": {
+        "idx": 25,
+        "step": 3,
+        "id": "the-monetary-premium"
+      },
+      "act5Layer": "s418"
+    },
+    {
+      "name": "S26 end → S27 (forward)",
+      "from": {
+        "idx": 26,
+        "step": 8,
+        "id": "when-other-assets-do-moneys-job"
+      },
+      "to": {
+        "idx": 27,
+        "step": 0,
+        "id": "the-marginal-decision"
+      },
+      "act5Layer": "s421"
+    },
+    {
+      "name": "S26 b0 ← S27 (backward, the handoff)",
+      "from": {
+        "idx": 27,
+        "step": 0,
+        "id": "the-marginal-decision"
+      },
+      "to": {
+        "idx": 26,
+        "step": 8,
+        "id": "when-other-assets-do-moneys-job"
+      },
+      "act5Layer": "s420"
+    },
+    {
+      "name": "S27 end → S28 (forward)",
+      "from": {
+        "idx": 27,
+        "step": 2,
+        "id": "the-marginal-decision"
+      },
+      "to": {
+        "idx": 28,
+        "step": 0,
+        "id": "fixed-supply-reprices-at-the-margin"
+      },
+      "act5Layer": "s422"
+    },
+    {
+      "name": "S27 b0 ← S28 (backward, the handoff)",
+      "from": {
+        "idx": 28,
+        "step": 0,
+        "id": "fixed-supply-reprices-at-the-margin"
+      },
+      "to": {
+        "idx": 27,
+        "step": 2,
+        "id": "the-marginal-decision"
+      },
+      "act5Layer": "s421"
+    },
+    {
+      "name": "S28 end → S29 (forward)",
+      "from": {
+        "idx": 28,
+        "step": 2,
+        "id": "fixed-supply-reprices-at-the-margin"
+      },
+      "to": {
+        "idx": 29,
+        "step": 0,
+        "id": "the-case-from-first-principles"
+      },
+      "act5Layer": "s423"
+    },
+    {
+      "name": "S28 b0 ← S29 (backward, the handoff)",
+      "from": {
+        "idx": 29,
+        "step": 0,
+        "id": "the-case-from-first-principles"
+      },
+      "to": {
+        "idx": 28,
+        "step": 2,
+        "id": "fixed-supply-reprices-at-the-margin"
+      },
+      "act5Layer": "s422"
+    },
+    {
+      "name": "S29 end → S30 (forward)",
+      "from": {
+        "idx": 29,
+        "step": 1,
+        "id": "the-case-from-first-principles"
+      },
+      "to": {
+        "idx": 30,
+        "step": 0,
+        "id": "the-close"
+      },
+      "act5Layer": "s501"
+    },
+    {
+      "name": "S29 b0 ← S30 (backward, the handoff)",
+      "from": {
+        "idx": 30,
+        "step": 0,
+        "id": "the-close"
+      },
+      "to": {
+        "idx": 29,
+        "step": 1,
+        "id": "the-case-from-first-principles"
+      },
+      "act5Layer": "s423"
+    }
+  ],
+  "directEntry": [
+    "migration:0",
+    "migration:1",
+    "migration:2",
+    "migration:3",
+    "the-monetary-premium:0",
+    "the-monetary-premium:1",
+    "the-monetary-premium:2",
+    "the-monetary-premium:3",
+    "when-other-assets-do-moneys-job:0",
+    "when-other-assets-do-moneys-job:1",
+    "when-other-assets-do-moneys-job:2",
+    "when-other-assets-do-moneys-job:3",
+    "when-other-assets-do-moneys-job:4",
+    "when-other-assets-do-moneys-job:5",
+    "when-other-assets-do-moneys-job:6",
+    "when-other-assets-do-moneys-job:7",
+    "when-other-assets-do-moneys-job:8",
+    "the-marginal-decision:0",
+    "the-marginal-decision:1",
+    "the-marginal-decision:2",
+    "fixed-supply-reprices-at-the-margin:0",
+    "fixed-supply-reprices-at-the-margin:1",
+    "fixed-supply-reprices-at-the-margin:2",
+    "the-case-from-first-principles:0",
+    "the-case-from-first-principles:1",
+    "the-close:0",
+    "the-close:1"
+  ],
+  "parity": [
+    {
+      "state": "migration:0",
+      "identical": true
+    },
+    {
+      "state": "migration:1",
+      "identical": true
+    },
+    {
+      "state": "migration:2",
+      "identical": true
+    },
+    {
+      "state": "migration:3",
+      "identical": true
+    },
+    {
+      "state": "the-monetary-premium:0",
+      "identical": true
+    },
+    {
+      "state": "the-monetary-premium:1",
+      "identical": true
+    },
+    {
+      "state": "the-monetary-premium:2",
+      "identical": true
+    },
+    {
+      "state": "the-monetary-premium:3",
+      "identical": true
+    },
+    {
+      "state": "when-other-assets-do-moneys-job:0",
+      "identical": true
+    },
+    {
+      "state": "when-other-assets-do-moneys-job:1",
+      "identical": true
+    },
+    {
+      "state": "when-other-assets-do-moneys-job:2",
+      "identical": true
+    },
+    {
+      "state": "when-other-assets-do-moneys-job:3",
+      "identical": true
+    },
+    {
+      "state": "when-other-assets-do-moneys-job:4",
+      "identical": true
+    },
+    {
+      "state": "when-other-assets-do-moneys-job:5",
+      "identical": true
+    },
+    {
+      "state": "when-other-assets-do-moneys-job:6",
+      "identical": true
+    },
+    {
+      "state": "when-other-assets-do-moneys-job:7",
+      "identical": true
+    },
+    {
+      "state": "when-other-assets-do-moneys-job:8",
+      "identical": true
+    },
+    {
+      "state": "the-marginal-decision:0",
+      "identical": true
+    },
+    {
+      "state": "the-marginal-decision:1",
+      "identical": true
+    },
+    {
+      "state": "the-marginal-decision:2",
+      "identical": true
+    },
+    {
+      "state": "fixed-supply-reprices-at-the-margin:0",
+      "identical": true
+    },
+    {
+      "state": "fixed-supply-reprices-at-the-margin:1",
+      "identical": true
+    },
+    {
+      "state": "fixed-supply-reprices-at-the-margin:2",
+      "identical": true
+    },
+    {
+      "state": "the-case-from-first-principles:0",
+      "identical": true
+    },
+    {
+      "state": "the-case-from-first-principles:1",
+      "identical": true
+    },
+    {
+      "state": "the-close:0",
+      "identical": true
+    },
+    {
+      "state": "the-close:1",
+      "identical": true
+    }
+  ],
+  "closeFade": {
+    "motion": {
+      "mid": 0.400807,
+      "end": 1
+    },
+    "fadesRatherThanPops": true,
+    "settlesOpaque": true,
+    "reduced": {
+      "mid": 1,
+      "end": 1
+    },
+    "reducedIsInstant": true
+  },
+  "silence": {
+    "visibleText": [],
+    "textCount": 0
+  },
+  "lastFrame": {
+    "visibleText": [
+      "Thank you."
+    ],
+    "isThankYouAlone": true,
+    "namesNoMedium": true
+  },
+  "retiredBuilds": {
+    "maxBuildPerLayer": {
+      "s417": 3,
+      "s418": 3,
+      "s419": 5,
+      "s420": 4,
+      "s421": 2,
+      "s422": 3,
+      "s423": 2,
+      "s501": 2
+    },
+    "s420StopsAt4": true,
+    "s501BuildsUsed": [
+      0,
+      2
+    ],
+    "waylineNeverShown": true,
+    "note": "legacy 4-20 builds 5–7 (the stability contrast, Ruling 5) and 5-01 build 1 (the wayline, Ruling 1) appear in no state"
+  },
+  "consoleErrors": []
+}
