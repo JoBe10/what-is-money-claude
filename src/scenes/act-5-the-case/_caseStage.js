@@ -2,9 +2,8 @@
 //
 // One continuous visual world: the scene modules share this one stage object,
 // cached on the engine's container across within-group handoffs, so every
-// in-act boundary — S24→S25, S25→S26, S26→S27, and Session 2's S27→S28 …
-// S29→S30 — is real shared-DOM continuity and never a remount. Scenes 24–27
-// land at Session 1; Scenes 28–30 join at Session 2. The scenes drive it
+// in-act boundary — S24→S25, S25→S26, S26→S27, S27→S28, S28→S29 and S29→S30
+// — is real shared-DOM continuity and never a remount. The scenes drive it
 // through two surfaces only, exactly as Acts I, II, III and IV established:
 //
 //   applyState(sceneId, build)  — reconstructs the COMPLETE settled state of
@@ -18,8 +17,8 @@
 //
 // THE TREATMENTS ARE THE LEGACY MODULES THEMSELVES, RE-HOMED — not
 // transcribed, not re-authored. The ruled map (docs/act-5-provenance.md,
-// RULED 4 Sep 2026) is PORT throughout Scenes 24–27, with no ADAPT in this
-// session's range, and the approved cells (review/act-5/states, presenter-
+// RULED 4 Sep 2026) is PORT throughout the act but for one ADAPT at the close,
+// and the approved cells (review/act-5/states, presenter-
 // approved in full 4 Sep 2026) were rendered by MOUNTING THE LEGACY SLIDE
 // MODULES at their builds. This stage does the same thing in the deck: each
 // legacy module is rendered once into a layer of its own and driven through
@@ -36,7 +35,7 @@
 // advances and the legacy deck's own boundaries. The six seams were ruled on
 // 4 September 2026 (master §13; docs/batch-e-package.md §1.2): each boundary
 // is played AS THE LEGACY PLAYED IT, no settled frame changes, and nothing is
-// redesigned. Two of the six fall in this session's range:
+// redesigned. All six, and where each one lives:
 //
 //   · Act IV → Scene 24 — a crossfade. It is a cross-group boundary, so the
 //     ENGINE's own crossfade plays it (SlideEngine `_render`, the non-
@@ -48,6 +47,29 @@
 //     and their final line give way to the first coexistence statement,
 //     exactly as the legacy played 4-19 → 4-20, whose build 0 is empty
 //     (`legacyBoundary`, the same shape Act IV used at its own merges).
+//   · Scene 27 → Scene 28 — the legacy boundary onto 4-22's build 0, the stock
+//     at rest, then its build-1 reveal: the margin lights as the words land.
+//     The through-line's last journey rides that same crossfade — the one
+//     decision claim dissolves as the three demand claims appear at the field's
+//     right edge — which is the wiring the ruling asks for and the whole of it.
+//   · Scene 28 → Scene 29 — the full clear onto the kicker alone: the field,
+//     its claims and its lines dissolve completely while 4-23's build 0, the
+//     kicker on black, rises beneath them; then the four summary lines land.
+//   · Scene 29 → Scene 30 — the case dissolves into black. 5-01's build 0 is
+//     black, so the boundary lands on it and nothing follows: the silence is a
+//     scripted beat, not a seam (master §3.5).
+//
+// THE ONE PLACE THIS STAGE REACHES PAST THE LEGACY'S PUBLIC SURFACE, and why.
+// The close's ADAPT retires 5-01's build 1 (the wayline), so the film's two
+// close beats are that module's builds 0 and 2 — an advance the legacy's own
+// `_snapFrame` contract cannot recognise as live, because it tests
+// `n === appliedStep + 1` and the film has taken a build out of the middle.
+// Left alone, the last frame of the film would POP instead of playing the
+// legacy's authored 1000ms fade of "Thank you." from black. `liveAcrossRetiredBuild`
+// clears the snap attribute that apply arms, in the same task and before any
+// style resolution, so the legacy's own transition runs exactly as it always
+// did. It changes no legacy file, no settled state and no timing — it restores
+// a fade the retirement would otherwise have taken with it.
 //
 // WHERE A SCENE'S FIRST BEAT IS A LEGACY BUILD 0 — Scenes 24, 25 and 27, by
 // the entry-line ruling (Row 1 = A, 4 Sep 2026: the legacy's own entry advance
@@ -76,6 +98,9 @@ import s418 from '../../slides/section-4-ideal-store/18-monetary-premium.js';
 import s419 from '../../slides/section-4-ideal-store/19-other-assets-do-moneys-job.js';
 import s420 from '../../slides/section-4-ideal-store/20-bitcoin-does-not-replace-everything.js';
 import s421 from '../../slides/section-4-ideal-store/21-marginal-store-of-value-decision.js';
+import s422 from '../../slides/section-4-ideal-store/22-fixed-supply-reprices-at-margin.js';
+import s423 from '../../slides/section-4-ideal-store/23-investment-case-from-first-principles.js';
+import s501 from '../../slides/section-5-close/01-thank-you.js';
 
 gsap.registerPlugin(CustomEase);
 
@@ -83,10 +108,11 @@ export const reducedMotion = () =>
   window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 // The legacy Act V modules this stage re-homes, by layer key — 4-17 … 4-21 for
-// Scenes 24–27 (Session 1); 4-22, 4-23 and 5-01 join at Session 2. Each leaves
-// the manifest at the Batch E splice; the file stays on disk and this stage is
-// where it lives on.
-const LEGACY = { s417, s418, s419, s420, s421 };
+// Scenes 24–27, and 4-22, 4-23 and 5-01 for Scenes 28–30. All eight leave the
+// manifest at the Batch E splice; the files stay on disk and this stage is
+// where they live on. After that splice no legacy slide is in the deck at all,
+// and this map is the last place the legacy Act V runs.
+const LEGACY = { s417, s418, s419, s420, s421, s422, s423, s501 };
 
 // The deck's own boundary curve — CSS `ease-out`, exactly as SlideEngine's
 // crossfade runs it — so the in-act boundaries move as the legacy deck's did.
@@ -122,7 +148,21 @@ export const STATES = {
   // it is the legacy's own composition: the claim at the decision point WITH
   // the question already standing above it — the order the presenter approved
   // as rendered on 4 September 2026.
-  'the-marginal-decision': [0, 1, 2].map((b) => at('s421', b))
+  'the-marginal-decision': [0, 1, 2].map((b) => at('s421', b)),
+  // S28 — s28-b1 … s28-b3: 4-22 at builds 1–3. Build 0, the stock at rest, is
+  // NOT a beat: the boundary from Scene 27 lands on it and the margin lights
+  // as the words land (the seam ruling, 4 Sep 2026), so it is the composition
+  // this scene's entry gesture starts from.
+  'fixed-supply-reprices-at-the-margin': [1, 2, 3].map((b) => at('s422', b)),
+  // S29 — s29-b1 · s29-b2: 4-23 at builds 1–2. Build 0, the kicker alone on
+  // black, is not a beat either: it is what the full clear lands on.
+  'the-case-from-first-principles': [at('s423', 1), at('s423', 2)],
+  // S30 — s30-b1 · s30-b2: 5-01 at build 0 (black — the silence, its own beat
+  // by Row 6 = A) and build 2 (Thank you.). Build 1, the wayline returning
+  // with all three waypoints completed, is the ADAPT's one ruled change: the
+  // waypoint device is retired by the structure freeze (architecture Ruling 1),
+  // so it is in no state and is never shown.
+  'the-close': [at('s501', 0), at('s501', 2)]
 };
 
 export const TOTAL_BUILDS = Object.fromEntries(
@@ -173,6 +213,20 @@ export const legacyEntry = (id, key, settle) => (mod, stage) => {
   const tl = stage.timeline();
   tl.add(() => stage.live(key, 1), 0.1);
   tl.add(() => stage.applyState(id, 0), settle);
+};
+
+// An advance across a build the film has retired. The legacy's `beginBuild`
+// treats any apply that is not `appliedStep + 1` as a reconstruction and arms
+// `data-snap`, which the stylesheet reads as "no transitions" — correct for a
+// direct entry, wrong for this one advance, which IS the viewer's single step
+// forward and only looks like a jump because the ADAPT removed the build in
+// between. Clearing the attribute in the same task, before the browser
+// resolves style, lets the legacy's own transition play. Nothing else is
+// touched: the module set every value it always sets.
+export const legacyAdvanceAcrossRetiredBuild = (id, n, key, build, settle) => (mod, stage) => {
+  const tl = stage.timeline();
+  tl.add(() => stage.liveAcrossRetiredBuild(key, build), 0.05);
+  tl.add(() => stage.applyState(id, n), settle);
 };
 
 // A cold arrival on a scene whose first beat is a legacy build 0: the frame
@@ -255,6 +309,15 @@ class Act5Stage {
   // legacy stylesheet's durations and staggers.
   live(key, build) {
     LEGACY[key].buildStep(build);
+  }
+
+  // `live`, for the one advance that steps over a retired build (see the
+  // header). The module has already written every value; only the snap the
+  // contract armed has to go, and it goes before any style resolution.
+  liveAcrossRetiredBuild(key, build) {
+    const mod = LEGACY[key];
+    mod.buildStep(build);
+    delete this.layers[key].firstElementChild.dataset.snap;
   }
 
   showLayer(key, build) {
