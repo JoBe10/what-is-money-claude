@@ -1,5 +1,5 @@
 {
-  "date": "2026-09-04T03:02:07.270Z",
+  "date": "2026-09-04T03:17:36.217Z",
   "session": "act-5-impl-1",
   "deck": {
     "slides": 32,
@@ -259,5 +259,67 @@
     "s420StopsAt4": true,
     "note": "legacy 4-20 builds 5–7 — the stability contrast — are retired by architecture Ruling 5 and appear in no state"
   },
+  "interrupted": [
+    {
+      "from": "migration:0",
+      "to": "migration:2",
+      "identical": true
+    },
+    {
+      "from": "migration:1",
+      "to": "migration:3",
+      "identical": true
+    },
+    {
+      "from": "the-monetary-premium:0",
+      "to": "the-monetary-premium:2",
+      "identical": true
+    },
+    {
+      "from": "the-monetary-premium:1",
+      "to": "the-monetary-premium:3",
+      "identical": true
+    },
+    {
+      "from": "when-other-assets-do-moneys-job:0",
+      "to": "when-other-assets-do-moneys-job:2",
+      "identical": true
+    },
+    {
+      "from": "when-other-assets-do-moneys-job:1",
+      "to": "when-other-assets-do-moneys-job:3",
+      "identical": true
+    },
+    {
+      "from": "when-other-assets-do-moneys-job:2",
+      "to": "when-other-assets-do-moneys-job:4",
+      "identical": true
+    },
+    {
+      "from": "when-other-assets-do-moneys-job:3",
+      "to": "when-other-assets-do-moneys-job:5",
+      "identical": true
+    },
+    {
+      "from": "when-other-assets-do-moneys-job:4",
+      "to": "when-other-assets-do-moneys-job:6",
+      "identical": true
+    },
+    {
+      "from": "when-other-assets-do-moneys-job:5",
+      "to": "when-other-assets-do-moneys-job:7",
+      "identical": true
+    },
+    {
+      "from": "when-other-assets-do-moneys-job:6",
+      "to": "when-other-assets-do-moneys-job:8",
+      "identical": true
+    },
+    {
+      "from": "the-marginal-decision:0",
+      "to": "the-marginal-decision:2",
+      "identical": true
+    }
+  ],
   "consoleErrors": []
 }

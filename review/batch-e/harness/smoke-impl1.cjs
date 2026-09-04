@@ -22,7 +22,12 @@
 //   6. Reduced-motion parity: the same 20 cold entries under
 //      prefers-reduced-motion serialize IDENTICALLY to the settled motion-on
 //      states (window.__act5's serializer) — checked mechanically, not by eye.
-//   7. The retired stability builds are unreachable: no state in the route
+//   7. The interrupted gesture: an advance that lands mid-flight completes
+//      the gesture it interrupted and then plays its own, so no key sequence
+//      can leave partial state. Every build of every scene is advanced into
+//      while the previous gesture is still running, and the settled state is
+//      compared with the same state reached calmly.
+//   8. The retired stability builds are unreachable: no state in the route
 //      drives legacy 4-20 past build 4, so the contrast Ruling 5 cut can
 //      never appear.
 //
@@ -55,7 +60,7 @@ const EXPECTED_DECK_SLIDES = 32;
     date: new Date().toISOString(),
     session: 'act-5-impl-1',
     deck: null, route: null, traversal: null, boundaries: [], merge: [],
-    directEntry: [], parity: [], retiredBuilds: null,
+    directEntry: [], parity: [], retiredBuilds: null, interrupted: [],
     consoleErrors: errors
   };
   const page = await browser.newPage({ viewport: { width: 1920, height: 1080 } });
@@ -221,6 +226,39 @@ const EXPECTED_DECK_SLIDES = 32;
   };
   console.log(`retired builds: 4-20 reached at most build ${maxs.s420} (must be 4)`);
 
+  // ---- 7 · the interrupted gesture ----
+  //
+  // The contract says an advance that arrives mid-gesture first completes the
+  // gesture it interrupted (snap to the build it was heading for) and then
+  // plays its own. Proved by racing it: from a settled build, advance and then
+  // advance again after 120ms — well inside every gesture in this act — and
+  // compare the settled result with the same build reached calmly.
+  const interrupted = [];
+  for (const sc of SCENES) {
+    for (let b = 0; b + 2 <= sc.builds - 1; b += 1) {
+      await jump(sc.slide - 1, b);
+      await settled();
+      await page.evaluate(() => window.__deck.advanceStep(false));
+      await page.waitForTimeout(120);
+      await page.evaluate(() => window.__deck.advanceStep(false));
+      await settled();
+      const raced = await sceneState();
+      await jump(sc.slide - 1, b);
+      await settled();
+      await page.evaluate(() => window.__deck.advanceStep(false));
+      await settled();
+      await page.evaluate(() => window.__deck.advanceStep(false));
+      await settled();
+      const calm = await sceneState();
+      const same = JSON.stringify(raced) === JSON.stringify(calm);
+      interrupted.push({ from: `${sc.id}:${b}`, to: `${sc.id}:${b + 2}`, identical: same });
+      if (!same) console.log(`INTERRUPT MISMATCH ${sc.id}: ${b} → ${b + 2}`);
+    }
+  }
+  result.interrupted = interrupted;
+  const interruptFailures = interrupted.filter((x) => !x.identical).length;
+  console.log(`interrupted gestures: ${interrupted.length - interruptFailures}/${interrupted.length} land the calm state`);
+
   // ---- 5 + 6 · direct entry at every build, then parity ----
   const enterCold = async (slide, build) => {
     let last = null;
@@ -279,6 +317,6 @@ const EXPECTED_DECK_SLIDES = 32;
 
   const failed = errors.length || result.deck.slides !== EXPECTED_DECK_SLIDES ||
     result.route.slides !== 4 || !fwdOk || !backOk || !backMonotonic || parityFailures ||
-    !result.retiredBuilds.s420StopsAt4;
+    !result.retiredBuilds.s420StopsAt4 || interruptFailures;
   process.exit(failed ? 1 : 0);
 })();
