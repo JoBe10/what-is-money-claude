@@ -13,15 +13,16 @@ Treat it as a designed audiovisual argument, not a conventional web application.
 
 When instructions conflict, follow this order:
 
-1. The user’s latest explicit instruction
-2. The active session brief in `docs/` (the rebuild is run in briefed phases)
-3. `docs/sections-1-3-rebuild-brief.md` — the whole-deck constitution, including §13's argument freeze
-4. `docs/section-4-master-document-v2.md` for Section 4 narrative and creative decisions
-5. An approved `PLANS.md` for implementation sequencing and file-level execution
-6. This `AGENTS.md`
-7. Existing repository conventions and README guidance
+1. The presenter’s latest explicit instruction
+2. The active session brief / batch package in `docs/` (the film is built in briefed stages and batches)
+3. `docs/synthesis-architecture.md` — **the frozen structure.** Acts, scenes, beats, what dies, what survives. Amendable by presenter ruling only
+4. `docs/what-is-money-master.md` — **the constitution.** Every standing rule of narrative, craft, composition, script, register and accuracy, plus the freeze register
+5. This `AGENTS.md` — process law and repository conventions
+6. Existing repository conventions and README guidance
 
-*(`docs/section-4-master-brief.md` and `docs/section-4-narrative-master-document.md` are ChatGPT-era and were consolidated into the v2 document at R7; both now live under `docs/archive/` behind a superseded-by header and govern nothing.)*
+`docs/SOURCES.md`, `docs/icon-grammar.md` and `docs/dark-field-manifest.md` are binding within their subjects and sit beside the master rather than beneath it.
+
+*(Everything else that once governed — the Sections 1–3 rebuild brief, the Section 4 master documents, the original presentation master, `PLANS.md`, and every session brief and report through R7.4 — was consolidated into the master at Stage 0 and now lives under `docs/archive/` behind superseded-by headers. **None of it governs anything.** It is kept as history and as the evidence record older harnesses and citations point back to.)*
 
 Do not silently reinterpret an approved narrative decision. Flag a genuine contradiction or technical impossibility before changing the intended meaning.
 
@@ -52,8 +53,8 @@ The current `package.json` does not define lint or automated test scripts. Do no
 ```text
 index.html
 src/
-  main.js
-  assets.js
+  main.js                  deck, or the scratch route when ?proto= is present
+  dark-field.js            the subject-keyed image register
   engine/
     KeyboardController.js
     NotesOverlay.js
@@ -61,8 +62,17 @@ src/
     SlideEngine.js
     TouchController.js
   components/
-  slides/
-    manifest.js
+  proto/
+    registry.js            the prototypes ?proto= can run
+  scenes/                  the film — one directory per act, see its README
+    prologue/
+    act-1-the-unfinished-exchange/
+    act-2-the-architecture-of-money/
+    act-3-the-jobs-of-money/
+    act-4-the-store-of-value-test/
+    act-5-the-case/
+  slides/                  the legacy deck — deleted per batch as scenes replace it
+    manifest.js            the running order, and the only one
     section-1-question/
     section-2-origin/
     section-3-function/
@@ -71,8 +81,12 @@ src/
   styles/
     globals.css
     slides.css
-assets/images/
+assets/dark-field/         the graded shipping set
+assets/dark-field/incoming/  the drop zone the grade gate reads
 ```
+
+`src/assets.js` was deleted at R7.1 and is not coming back; `assets/images/`
+holds only the favicon.
 
 ## Slide module contract
 
@@ -100,113 +114,231 @@ Audit existing modules before introducing a new pattern.
 
 ---
 
-# 3. Mission for the current rebuild
+# 3. Mission — the film rebuild
 
-The Section 4 rebuild is **complete**: the section shipped at 23 slides, was
-audited from first principles on 28 July 2026 (which froze its argument spine),
-and was rebuilt in execution — structure, scripts and craft — by R7 on
-31 July 2026. It is still **23 slides**; the deck is **46**. The governing
-document is:
+The deck is being rebuilt as a **film**. `docs/synthesis-architecture.md` is the
+frozen structure: thirty-one scenes across a prologue and five acts, one thread
+(the unfinished exchange), one protagonist (the Claim Mark), and no visible
+chapter structure at all. The structure closed at Stage 0, 25 August 2026.
+**Craft only hereafter** — no session proposes another architecture, and no
+session reopens a freeze. That is the presenter's to do.
 
-```text
-docs/section-4-master-document-v2.md
-```
+The paradigm is **scenes and beats, not slides**: a scene is one continuous
+visual world (one module, shared DOM), a beat is one advance within it. Scenes
+morph into each other when the idea persists; hard cuts only when the question
+changes.
 
-Its §2 records what is frozen. No session may alter the Test, the definition,
+## The branch
+
+All film work lives on **`film-rebuild`**, cut from `main` at the last stable
+deck. Batches are **commit ranges on that branch**, never separate branches.
+`main` stays the last stable deck until the final GATE merge before recording.
+
+## The legacy deck
+
+The 45-slide deck is the film's source of parts, not its enemy. The engine,
+`UnitField`, the dark-field library and its pipeline, the icon grammar, the
+comparison components and their frozen data, and every surviving script all
+carry over.
+
+**Legacy slides are deleted per batch, as each batch replaces them — never
+preemptively.** The deck on `film-rebuild` therefore runs end to end at every
+commit: new scenes splice into the manifest as their batches land, and seams are
+**noted in the batch report, not smoothed**.
+
+## What is frozen
+
+The argument freeze of 28 July 2026 stands in full, and the structure freeze of
+25 August 2026 joins it. No session may alter the 100-Year Test, the definition,
 claim/carrier, the inversion, the ten failure modes and properties, the five
 candidates, any of the fifty scores, migration, the margin mechanism, or the
-case as final frame without the presenter reopening the freeze.
+case as the final frame. The full register is `docs/what-is-money-master.md`
+§13.
 
 Preserve:
 - the ten selected properties;
 - the five compared assets;
 - the existing scores unless explicitly changed;
-- the comparison framework as the presenter’s own work;
-- the overall visual identity of the deck.
+- the comparison framework as the presenter's own work;
+- the film's visual identity.
 
-Do not modify Sections 1–3 or Section 5 except where required for:
-- manifest integration;
-- absolute slide numbering;
-- a necessary transition;
-- a confirmed shared component improvement.
-
-Report every out-of-scope file changed and why.
+Stay inside your batch's scope. Touching a scene outside it is permitted only
+for manifest integration, a necessary seam, or a confirmed shared-component
+improvement. Report every out-of-scope file changed and why.
 
 ---
 
-# 4. Required workflow
+# 4. Process law
 
-## 4.1 Audit before editing
+Presenter-ordered, 25 August 2026. These are not style preferences: each one
+exists because the failure it prevents has already cost this project time.
 
-Before implementation:
-1. Read the README.
-2. Read `package.json`.
-3. Read `src/slides/manifest.js`.
-4. Read all current Section 4 modules and notes.
-5. Read relevant Section 3 and close slides to understand entry and exit.
-6. Read shared components.
-7. Read the slide engine and note overlay.
-8. Read `src/styles/globals.css` and `src/styles/slides.css`.
-9. Read `src/assets.js`.
-10. Read `docs/section-4-master-document-v2.md` and the active session brief.
+## 4.1 Commit granularity
+
+**Every self-contained change is committed immediately** — a scene, a component,
+a fix, a doc edit — with a message that describes it. **Unrelated changes are
+never batched into one commit.** The working tree is clean at every stop.
+
+Purpose: any change is individually revertible. A commit that carries four
+unrelated edits cannot be undone without undoing three things that were fine.
+
+## 4.2 Revert points
+
+**Tag every stage and batch completion** — `stage-0`, `batch-a-frames`,
+`batch-a`, and so on. A tag is a place the presenter can return to without
+reading a log.
+
+## 4.3 The aesthetic law
+
+**No aesthetic decision ships on agent self-selection.** Glyphs, marks, frames,
+compositions — each goes to a **contact sheet**, and the presenter selects.
+Candidates are rendered at their shipping size, in the context they ship in, and
+every candidate stays on file so a selection can be changed by changing one
+letter rather than by redrawing.
+
+## 4.4 The no-invention rule
+
+During batches, the CLI **implements approved style frames and approved
+scripts.** A visual gap — a missing render, an unspecified state, a composition
+the frames do not cover — is **flagged in the report and left visibly pending.**
+It is never improvised. A pending element says so at its call site, and the
+report says so in words.
+
+This is the rule that makes the style-frames stage worth running: an improvised
+frame is indistinguishable from an approved one three weeks later.
+
+## 4.5 The style-frames stage
+
+**Every new or changed scene has its key states rendered and presenter-approved
+as stills before any motion is built.** Stills first; the approval loop runs on
+the sheet; nothing animates until the frames are approved. Prototype gates, where
+the architecture names one, run after the frames and before the batch.
+
+## 4.6 Modes
+
+FAST and GATE are retained (§14). **Batches run FAST. One GATE runs before the
+recording merge.** A report that does not name its mode is claiming the strong
+one.
+
+## 4.7 The working order
+
+For each batch: **audit → style frames → prototype gate (where one applies) →
+implement → review.**
+
+**Audit before editing.** Read, in this order:
+
+1. `docs/synthesis-architecture.md` for the scenes in scope.
+2. `docs/what-is-money-master.md` — the constitution.
+3. The batch package: beat maps, scripts, style-frame specs.
+4. `src/slides/manifest.js` and the scenes on either side of the batch's seams.
+5. The scene modules the batch replaces, and their notes.
+6. The shared components the batch will use.
+7. The slide engine and the notes overlay.
+8. `src/styles/globals.css` and `src/styles/slides.css`.
+9. `src/dark-field.js` and the dark-field manifest for the assets in scope.
 
 Do not assume a component behaves as its name suggests.
 
-## 4.2 Plan before implementation
+**Implement in scene order, not in file order.** Shared visual language and
+narrative continuity matter more than convenient batching; a run of unrelated
+scenes implemented independently produces a run of unrelated scenes.
 
-For a rebuild phase of this size, create or update `PLANS.md` after the audit.
+**Review as you go.** After each scene, and again at the end of the batch:
 
-The plan must include:
-- current-state findings;
-- exact file mapping;
-- components to reuse;
-- new components to create;
-- slide ID and numbering strategy;
-- animation-continuation strategy;
-- three implementation milestones;
-- validation after each milestone;
-- risks and rollback points.
-
-Do not begin the complete rebuild from only a high-level prompt.
-
-## 4.3 Implement in coherent milestones
-
-Preferred milestones:
-1. Slides 4.01–4.06
-2. Slides 4.07–4.12
-3. Slides 4.13–4.17
-4. Whole-deck integration and review
-
-Do not implement a run of unrelated slides independently. Shared visual language and narrative continuity matter.
-
-## 4.4 Review after each milestone
-
-After each milestone:
 - run the production build;
 - inspect the diff;
 - run the deck in the browser when available;
-- review the slides in sequence;
-- test forward and backward build steps;
-- inspect speaker notes;
+- walk the scenes in sequence, forward and backward through every build;
+- direct-enter each build;
+- check reduced motion;
+- read the notes against the frames;
 - check the console;
 - report unresolved visual judgments.
 
 Do not defer all validation to the end.
 
+## 4.8 The session-sizing law
+
+**Presenter-ordered, 30 August 2026.** **One major construction task per
+session.**
+
+A batch is not one session. It is a **sequence of small FAST sessions** — each
+under an hour where possible, **each tagged, each independently reviewable** —
+plus one closing session for batch-level verification and the batch tag.
+
+**A brief that bundles multiple major constructions is a process defect**, and
+is to be split before it runs rather than executed as written.
+
+Purpose, and it is the same purpose as §4.1 one level up: a session that builds
+four things cannot be reviewed, cannot be reverted, and cannot be judged. Its
+report becomes a summary rather than an account, its tag marks a state nobody
+chose, and a defect anywhere inside it puts everything else in the session at
+risk with it. Granular commits make a change revertible; small sessions make a
+*decision* revertible.
+
+What counts as one major construction: a scene, a systems or beat-state sheet, a
+prototype gate round, a splice, an ingest with its records. Records, rulings and
+their proofs travel with the construction they belong to.
+
+## 4.9 The provenance rule
+
+**Presenter-ordered, 30 August 2026.** **Every frame and state in the remaining
+film carries a provenance class, recorded before any design or implementation
+session touches it.**
+
+- **PORT** — a proven legacy treatment exists. It is **transplanted verbatim**:
+  grade, type and engine wiring are the only permitted changes. **Redesign is
+  forbidden, and generating candidates for a PORT frame is a process defect** —
+  unless the presenter explicitly reopens that frame **by name**.
+- **ADAPT** — a proven treatment exists, and **one ruled change** applies to it.
+  The ruling is named in the map. **Only that change is made**; everything else
+  is a PORT.
+- **NEW** — no proven treatment exists. The full-coverage rule and the candidate
+  process apply as established (§4.3, §4.5).
+
+**Sessions verify the class before touching anything.** An unclassified frame is
+not NEW by default — it is unclassified, and classifying it is the presenter's,
+through his act's provenance map. A map is a **proposal** until he rules it;
+the ruled map then governs that act's work.
+
+The class lives with the act it governs — Act II's is `docs/act-2-provenance.md`
+— and every PORT and ADAPT row **names its legacy source slide**, so the claim
+"a proven treatment exists" is checkable rather than asserted.
+
+Purpose: the legacy deck is judgment the presenter has already spent and already
+approved, and the expensive failure is not a bad candidate — it is a good one,
+generated for a frame that was already solved. That failure costs twice: the
+session that redesigned what did not need designing, and the delivery that
+quietly lost a proven treatment nobody noticed leaving. §4.3 says no aesthetic
+decision ships on agent self-selection. This answers the question before it:
+**whether there is a decision to make at all** — and that is answered from the
+record, not from the blank page.
+
+## 4.10 The plain-English rule
+
+**Presenter-ordered, 31 August 2026.** Any text that asks the presenter for a
+decision — ARGUABLE rows, flags, open questions, review protocols in reports
+and sheets — is written in **plain English: the question stated simply, the
+options in full sentences.** Compressed style stays confined to machine-facing
+sections. **Violations are defects.**
+
+Purpose: a decision request the presenter has to decode is a decision delayed
+or mis-made. Compression that saves the writer's space spends the reader's
+attention, and the presenter's attention is the project's scarcest resource.
+
 ---
 
 # 5. Scope and safety
 
-- Work on a dedicated branch.
-- Do not use destructive Git operations.
-- Do not force-push.
-- Do not delete source files until replacements are working and their removal is justified.
+- Work on `film-rebuild`. Never commit film work to `main`.
+- Do not use destructive Git operations. Do not force-push.
+- **Delete legacy slides only as the batch that replaces them lands** — never preemptively, never as tidying. The deck must run end to end at every commit.
 - Do not install new dependencies without explicit approval.
 - Do not regenerate or replace existing artwork without approval.
 - Do not alter the comparison scores without approval.
-- Do not change the project’s architectural stack.
-- Do not rewrite the whole slide engine to solve a local slide problem.
-- Keep changes reviewable and milestone-oriented.
+- Do not change the project's architectural stack.
+- Do not rewrite the slide engine to solve a local scene problem.
+- Keep changes reviewable: one self-contained change per commit (§4.1).
 
 If a task is ambiguous but non-blocking, make the most conservative decision consistent with the governing documents and report it. Ask only about genuinely blocking choices.
 
@@ -236,11 +368,128 @@ Follow the existing repository conventions.
 - Use `KickerLabel` for kicker labels.
 - Avoid browser-default bullets.
 - Use `BuildList` or a deliberate custom visual when progressive lists are required.
-- **Images go through the dark-field register, never through raw paths.** `src/assets.js` is gone; the deck's only raster surface is `src/dark-field.js` (the subject-keyed manifest) rendered by `src/components/DarkField.js`. A slide asks for a subject by name and gets either the graded render or its grammar-glyph stub. Adding a raster reference anywhere else fails `review/rebuild-r7-2/harness/gates-r7-2.cjs`. The register's own rules are `docs/sections-1-3-rebuild-brief.md` §9.4.9 and `docs/dark-field-manifest.md`.
+- **Images go through the dark-field register, never through raw paths.** `src/assets.js` is gone; the deck's only raster surface is `src/dark-field.js` (the subject-keyed manifest) rendered by `src/components/DarkField.js`. A slide asks for a subject by name and gets either the graded render or its grammar-glyph stub. Adding a raster reference anywhere else fails `review/rebuild-r7-2/harness/gates-r7-2.cjs`. The register's own rules are `docs/what-is-money-master.md` §6 and `docs/dark-field-manifest.md`.
 - Preserve the logical 1920×1080 stage.
 - Respect the existing title safe zone and projection needs.
 - Whitespace is part of the design.
 - Do not add full-width orange bars or generic title underlines.
+
+## The rails law
+
+**Presenter-ordered, 31 August 2026. Film-wide.** Simple icons retire from
+monetary-good stations everywhere. On every rail, strip, or timeline of
+monetary goods, the goods are carried by their **dark-field renders as an
+object band above the line at lineup scale**, while the drawn line, station
+marks, labels, wounds and gain/dependency text beneath keep the film's line
+grammar unchanged. **Every station is photographic; the ClaimObject disc is
+never a station — it is the traveler.**
+
+> **The station clause was amended by the presenter on 31 August 2026** (the
+> CERTIFICATE ruling — Batch B implementation brief §1.1). As adopted, the law
+> made the CLAIM station an exception carrying the ClaimObject disc itself.
+> The ruling supersedes that exception: on Scene 10's strip the claim station
+> carries the **`gold_certificate` render, relabeled CLAIM ON GOLD**, all four
+> stations are photographic, and the disc's role on any rail is the traveler —
+> the through-line moving along it — never a station. The disc-as-station
+> staging is retired to file (`s10-b1-disc` · `s10-b2-disc`).
+
+- The band sits **above** the line, never on it: no render stands on a drawn
+  line, which is the form of the register boundary (master §6.3) this law
+  preserves while amending its rail case.
+- Lineup-scale discipline applies (each render in a box of its own aspect
+  under the framing rule, one band scale across a surface), and the register
+  brightness rules apply to the band (a receded station's render recedes with
+  its station; the active station's render carries the full voice).
+
+> **The band rule is equal visual weight — presenter-ordered, 1 September
+> 2026 (the rail r2 session).** As first written, "one band scale" meant one
+> shared *height*: every render stood 188 world px tall in a box of its own
+> aspect. Measured across the register that is a **2.22× spread in width** —
+> a near-16:9 render (gold, metals, coinage) runs 334 wide beside a 4:5
+> portrait's 150 — so the wide subjects dominated the tall ones and the band
+> stopped reading as one family.
+>
+> **The band box now caps both axes: 188 × 188 world.** Each render keeps its
+> own aspect and is scaled to *fit inside* the box (contain), bottom-aligned
+> on the band baseline. Tall subjects fill the height; wide subjects fill the
+> width. **One family, one weight, at focus and at recede.**
+>
+> **Re-measured, 1 September 2026** — the shipping set's four aspect families
+> in the shared box:
+>
+> | family | subjects | render px | box |
+> |---|---|---|---|
+> | 4:5 portrait | `cowrie_shells` `cattle` `salt` `iron` `gold_certificate` | 1122 × 1402 | **150.5 × 188.0** |
+> | 4:3 | `bitcoin` | 1448 × 1086 | **188.0 × 141.0** |
+> | 3:2 | `ledger_glow` | 1536 × 1024 | **188.0 × 125.3** |
+> | near-16:9 | `metals` `gold` `coinage` | 1672 × 941 | **188.0 × 105.8** |
+>
+> Width spread falls from **2.220× to 1.250×**; box-area spread from
+> **2.220× to 1.422×**. The height cap is `EvolutionRail`'s own `RENDER_H`,
+> unchanged; the width cap is the icon grid's square live-area normalization
+> (§the framing rule) applied to photography, which is the same rule the
+> framing scales already answer to. A render still sits in a box of its own
+> aspect, so the framing rule's "render and box share an aspect" assumption
+> is untouched.
+- Applied on ruling day to `s5-b5` and `s10-b1`/`s10-b2` (the Act II states
+  sheet); already pre-recorded for Act III's monetization timeline; governs
+  all future rails, strips, and timelines of monetary goods.
+
+### The fill-order ruling
+
+**Presenter-ordered, 1 September 2026 (the rail r2 session).** On every rail
+governed by the rails law: **narrative order is spatial order.** A station
+stands where the story reaches it, and **the rail fills strictly left to right
+at every beat — nothing ever lands to the left of a station already standing.**
+
+Act II's spine is therefore **SHELLS · CATTLE · SALT · IRON · METALS · GOLD ·
+COINAGE · CLAIM ON GOLD · LEDGER · BITCOIN**, and Zanzibar's featured moment
+returns to the **far-left SHELLS station** when it lands. The legacy
+`EvolutionRail` stop positions are unchanged; only which station stands at
+which stop changes.
+
+**Recorded with the ruling, because it is what makes the order legitimate:**
+the rail is a **competition record, not a chronology.** The only dates on it
+are the featured facts. A viewer reading it left to right is reading the order
+in which the film enters the carriers into the contest — not the order in
+which the world minted them.
+
+### The survival-brightness ruling
+
+**Presenter-ordered, 1 September 2026 (the staging amendment's session).** On
+every rail governed by the rails law: **an undefeated station holds full
+voice; fallen stations dim with their wounds.** A station is not receded
+merely because history has moved past it — it recedes when its defeat lands.
+The canonical case: SHELLS reads as alive until Zanzibar lands, even as
+CATTLE, SALT and IRON take their wounds around it. The ruling composes with
+§9.4 rule 10 unchanged: among the wounds already landed, the latest speaks at
+full voice and the prior ones hold the dimmed-prior step; this ruling governs
+the *stations*, rule 10 the *sentences beneath them*.
+
+### The arrival-line rule
+
+**Presenter-ordered, 1 September 2026 (the rail r2 session).** The
+survival-brightness ruling made an undefeated station read as alive. This one
+makes it *say something*: **an undefeated station is never blank. Every
+station arrives with a line beneath it, always**, and keeps a line for as long
+as it stands.
+
+- **Standing = the virtue, at the station's own voice.** The line is the
+  station's own recorded reason for being money, in the installed script's own
+  words. SHELLS arrives with **"Beautiful. Scarce. Hard to fake."**; METALS
+  with **"Hard to make more of. Slow to decay. Divisible without dying."**
+- **Fallen = the wound, at the dimmed-prior step.** The virtue is replaced by
+  the wound the moment the defeat lands — SHELLS' virtue gives way to the
+  Zanzibar wound at S5 b6.
+- A station whose own sentence is landing on that beat is not blank: the
+  landing is its line, anchored at it, and settles into the rail's world row
+  register on the following beat.
+
+The rule composes with §9.4 rule 10 unchanged: the latest sentence speaks at
+full voice, the prior ones hold the dimmed-prior step. A virtue is not a
+sentence competing for the beat — it rides at its own station's voice, which
+is why it can stand for five beats without ever shouting over the wound that
+just landed next to it.
 
 ## Anti-slop test
 Before adding a decorative element, ask:
@@ -264,45 +513,60 @@ Avoid:
 
 ---
 
-# 7. Section 4 visual system
+# 7. The Claim Mark
 
-## The recurring orange claim
+## The film's only recurring protagonist
 
-Section 4 requires a persistent orange visual motif representing the transferable monetary claim.
+The Claim Mark is the transferable monetary claim, and it runs the whole film —
+born in Scene 3, carried, saved, transferred, layered, tested, and repriced. Its
+**form is decided at Prototype Gate 1** from a contact sheet the presenter
+selects from (§4.3); until that gate rules, prototypes render the gate's
+candidate and nothing ships.
 
 It must:
-- remain recognisable across slides;
+- remain recognizable across every act;
 - change state only for conceptual reasons;
-- be reusable through a dedicated component or carefully shared implementation;
+- be one component with one API — not seventeen unrelated orange circles;
 - support reduced motion;
 - reset deterministically;
 - avoid becoming a literal dollar symbol too early.
 
-Expected narrative states:
-1. created by an unfinished exchange;
-2. detached and transferable;
-3. carried by different monetary media;
-4. preserved when saved;
-5. diluted or maintained in a simplified model;
-6. sent toward 2126;
-7. threatened by failure modes;
-8. compared across carriers;
-9. linked to hidden rulebooks;
-10. delivered to the future;
-11. multiplied into a civilization-wide coordination network.
+Its states across the film, in order:
 
-Prefer a reusable component/API over seventeen unrelated orange circles.
+1. born from an unfinished exchange (Scene 3);
+2. detached from the person who created it, and transferable (Scene 3);
+3. spent — travels, redeems, and is gone; or saved — held, the interval open (Scene 4);
+4. the through-line, as the carriers change beneath it (Scenes 5–9) — **off
+   the Act II rail as of the presenter's r2 ruling, 1 September 2026**: the
+   disc appears in no Act II rail beat, station illumination and the spoken
+   narrative carry the claim's position there, and the on-screen thread
+   resumes in Act III and at Act IV's return;
+5. detached from custody as a paper claim on a vault (Scene 7);
+6. dematerialized into a ledger entry (Scene 8);
+7. doing one job at a time — held, spent, priced (Scenes 11–14);
+8. layered: a claim on the layer below (Scene 15);
+9. generalized — the claim on value (Scene 16);
+10. sent toward 2126, and threatened by each failure mode (Scenes 18–22);
+11. compared across carriers (Scene 23);
+12. the marginal claim, choosing where it goes, and repriced against a fixed supply (Scenes 27–28).
+
+Prefer one component with one API over a fresh orange circle per scene. The
+existing implementation to audit first is `src/components/section-4/ClaimObject.js`,
+which renders the shared `LuminousDisc`.
 
 ## Continuations
-Use `continuesFrom` or an equivalent shared-DOM technique when it materially improves continuity. Audit the existing `OrangePillCapsule` continuation pattern before implementation.
 
-Likely continuation candidates:
-- unfinished exchange → definition of money;
-- definition → claim and carrier;
-- saving → integrity model;
-- 100-Year Test → failure modes;
-- comparison → hidden rulebook;
-- return to 2126 → civilization network.
+Use `continuesFrom` or an equivalent shared-DOM technique **when it materially
+improves continuity** — the film's paradigm is that a scene morphs into the next
+when the idea persists, and hard-cuts when the question changes.
+
+Continuities the architecture already asks for:
+- the hours field condensing into the shifting forms (P1);
+- the failing return path contracting into the Claim Mark (Scene 2 → Scene 3);
+- the held claim taking either road (Scene 3 → Scene 4);
+- the saved claim becoming the through-line as carriers transform around it (Scene 4 → Scene 5);
+- the tower's unanswered question opening the return to the exchange (Scene 15 → Scene 16) *(amended 3 Sep 2026, master §13: the act's final beat is now the relocated pivot — one beat after the held question — and, by the Acts III–IV final ruling 3 of the same day, its visual is the tower receding to its glowing base slab with the hinge question beneath it, no return to the triad; Scene 16's homecoming morphs from that slab — the disc appears at the slab's center and rises to the fork's apex — and the held question is still the one Scene 16 answers)*;
+- the hours field's rhyme in the fixed-supply field (P1 → Scene 28).
 
 Do not use continuation merely because it is technically impressive.
 
@@ -357,24 +621,27 @@ If a component is Section-4-specific, place it where repository conventions make
 
 ---
 
-# 10. Slide IDs, numbers, and manifest
+# 10. Scene IDs, numbers, and the manifest
 
-The current deck stores:
-- semantic slide IDs;
-- absolute slide numbers;
-- ordered imports in `src/slides/manifest.js`.
+`src/slides/manifest.js` is the running order and the only source of truth for
+it; `src/main.js` assigns each module's deck position from the manifest's order,
+so a module's `number:` field is documentation, not authority.
 
-When Section 4 expands:
-1. choose stable semantic IDs;
-2. update every Section 4 `number`;
-3. update the Section 5 close slide number;
-4. update the manifest ordering;
-5. check deep links;
-6. check overview labels and progress;
-7. search the repository for hard-coded absolute numbers or old IDs;
-8. preserve IDs only where the slide still represents the same conceptual content.
+**A scene ID is a deep link and is permanent.** Choose it for what the scene *is*
+— never for where it currently sits in the running order. An ID survives
+renumbering, resequencing and rewrites; it changes only when the scene stops
+being the same scene.
 
-Do not leave two slides with the same ID or number.
+When a batch splices its scenes in:
+
+1. import the scenes and place them in the manifest at their architecture order;
+2. delete the legacy slides they replace, in the same batch;
+3. check deep links for every ID that moved or left;
+4. check the overview grid's labels and the progress readout;
+5. search the repository for hard-coded absolute numbers or retired IDs;
+6. walk the seams on both sides, and report them rather than smoothing them.
+
+Do not leave two modules with the same ID.
 
 ---
 
@@ -428,7 +695,7 @@ Do not say:
 - sound money determines all civilizational outcomes.
 
 ## Preferred formulations
-Use exact approved formulations from `docs/section-4-master-document-v2.md` where specified.
+Use exact approved formulations from `docs/what-is-money-master.md` §9–§10 and from the active batch package's scripts where specified.
 
 Do not weaken them casually and do not intensify them beyond their qualification.
 
@@ -536,39 +803,41 @@ Before completion, search for:
 
 ---
 
-# 15. Definition of done
+# 15. Definition of done (per batch)
 
-The work is done only when:
+A batch is done only when:
 
-1. The approved 23-slide Section 4 is present in the manifest (deck total 46).
-2. The old problem-solving sequence is no longer active.
-3. The ten-property and five-asset frameworks remain intact.
-4. The orange claim motif creates genuine continuity.
-5. Every slide has complete speaker notes.
-6. The build succeeds.
-7. Navigation and build states are deterministic.
-8. Presenter notes remain synchronised.
-9. No obsolete Section 4 narrative remains in active code or notes.
-10. All affected slide numbers and IDs are correct.
-11. The complete section has been reviewed in sequence.
-12. The transition from Section 3 and into the close feels intentional.
-13. All overclaims prohibited by the master document's guardrails have been removed.
-14. The final result feels designed, not generated.
+1. Every scene in it is implemented against **presenter-approved style frames** and the batch package's scripts.
+2. Every beat maps to exactly one `[→]` in its script, in order.
+3. Builds are deterministic forward, backward and on direct entry, with reduced-motion parity at every state.
+4. Speaker notes are complete, are the verbatim recording script, and stay synchronized in the second window.
+5. `npm run build` succeeds.
+6. The legacy slides this batch replaces are deleted **in this batch**, the manifest is spliced, and the deck runs end to end.
+7. No guardrail in the master §10 is violated, and nothing on screen or in a script refers to the film as a film.
+8. The compositional standard holds: the two-element budget, the brightness floors, the display rule, the settle budgets, and the register boundary.
+9. Every visual gap is **flagged in the report** — none improvised (§4.4).
+10. Commits are granular, the working tree is clean, and the batch tag is cut.
+11. The report names its mode.
+12. The scenes pass the ten-question scene test, and the act passes the retelling test — a cold viewer can retell its idea unprompted.
 
 ---
 
 # 16. Completion report format
 
-At the end of each milestone, report:
+At the end of each stage or batch, report:
+
+## Mode
+FAST or GATE. A report that does not name its mode is claiming the strong one.
 
 ## Implemented
-- slides and components completed;
+- scenes and components completed;
 - narrative decisions preserved;
 - visual system changes.
 
 ## Files changed
 - file-by-file summary;
-- out-of-scope changes and justification.
+- out-of-scope changes and justification;
+- the commit list, and the tag cut.
 
 ## Validation
 - commands run;
@@ -577,10 +846,13 @@ At the end of each milestone, report:
 - notes status;
 - reduced-motion status.
 
+## Flagged, not improvised
+Every visual gap left pending under §4.4, and what each one is waiting on.
+
 ## Remaining judgment calls
-- visual choices requiring user review;
+- aesthetic selections awaiting the presenter (§4.3);
 - factual language requiring approval;
-- known limitations.
+- known limitations, and anything a scoped FAST run deferred to the GATE.
 
 ## Recommended next step
 One clear next action only.

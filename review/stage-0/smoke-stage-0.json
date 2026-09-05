@@ -1,0 +1,30 @@
+[
+  {
+    "path": "/",
+    "errors": [],
+    "deckMounted": 1,
+    "slideCount": 45,
+    "firstSlideId": "1-01-eighty-thousand-hours",
+    "counter": "01 / 45"
+  },
+  {
+    "path": "/?slide=23",
+    "errors": [],
+    "index": 22,
+    "id": "4-01-define-the-job"
+  },
+  {
+    "path": "/?proto=",
+    "errors": [],
+    "indexShown": 1,
+    "deckMounted": 0,
+    "text": "No prototypes registered. Add a scene module to src/proto/registry.js to run it here.",
+    "backHref": "?"
+  },
+  {
+    "path": "/?proto=claim-mark",
+    "errors": [],
+    "indexShown": 1,
+    "text": "No prototypes registered. Add a scene module to src/proto/registry.js to run it here."
+  }
+]

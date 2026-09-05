@@ -1,0 +1,93 @@
+{
+  "date": "2026-08-31T02:26:04.874Z",
+  "session": "batch-b",
+  "checks": 17,
+  "failures": 0,
+  "results": [
+    {
+      "name": "PACING: every [→] maps to exactly one advance",
+      "ok": true,
+      "detail": "S5 8→7 · S6 9→8 · S7 5→4 · S8 5→4 · S9 5→4 · S10 5→4 — 37 beats"
+    },
+    {
+      "name": "VERBATIM: the installed scripts are the package’s §2 scripts, character for character",
+      "ok": true,
+      "detail": "6/6 identical"
+    },
+    {
+      "name": "LANGUAGE: no visible line or script in src/scenes/ names the medium",
+      "ok": true,
+      "detail": "17 scene files swept"
+    },
+    {
+      "name": "LANGUAGE: no Act II script names the medium",
+      "ok": true,
+      "detail": "6/6 clean"
+    },
+    {
+      "name": "SWEEP: none of the retired-wording terms appears in Act II",
+      "ok": true,
+      "detail": "6 terms, 8 files"
+    },
+    {
+      "name": "SWEEP: no Act II script names an absolute slide number",
+      "ok": true,
+      "detail": "6/6 clean"
+    },
+    {
+      "name": "GUARDRAILS: no Act II script makes a master §10 prohibited overclaim",
+      "ok": true,
+      "detail": "8 patterns, 6 scripts"
+    },
+    {
+      "name": "SPLICE: no superseded slide is imported by the manifest",
+      "ok": true,
+      "detail": "6/6 removed"
+    },
+    {
+      "name": "SPLICE: every superseded slide file is still on disk",
+      "ok": true,
+      "detail": "6/6 kept"
+    },
+    {
+      "name": "SPLICE: no surviving module references a retired id in live code",
+      "ok": true,
+      "detail": "no stale deep links"
+    },
+    {
+      "name": "SPLICE: the manifest imports exactly the 39 slides it lists",
+      "ok": true,
+      "detail": "39 imports"
+    },
+    {
+      "name": "SPLICE: Batch A’s eleven retirements are still out of the manifest and still on disk",
+      "ok": true,
+      "detail": "11/11 out, 11/11 kept"
+    },
+    {
+      "name": "REGISTER: no scene names an image path",
+      "ok": true,
+      "detail": "every raster goes through src/dark-field.js"
+    },
+    {
+      "name": "REGISTER: no render stands on the strip’s drawn line (the rails law’s band clause)",
+      "ok": true,
+      "detail": "band 244 tall, bottom at 402, the line at 470 — 68px of clearance"
+    },
+    {
+      "name": "REGISTER: no accent color anywhere in the Prologue",
+      "ok": true,
+      "detail": "3 files clean"
+    },
+    {
+      "name": "DEAD CODE: Act II left the scratch route at the splice",
+      "ok": true,
+      "detail": "the registry lists Gate 2’s three only"
+    },
+    {
+      "name": "DEAD CODE: the Act II scene contract carries no protoKey",
+      "ok": true,
+      "detail": "the scenes are addressed by the manifest now"
+    }
+  ]
+}

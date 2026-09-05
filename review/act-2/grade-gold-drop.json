@@ -1,0 +1,82 @@
+{
+  "phase": "R7.2",
+  "dir": "assets/dark-field/incoming",
+  "thresholds": {
+    "cornerMax": 6,
+    "borderMax": 6,
+    "darkFracMin": 0.5,
+    "warmthMin": 18,
+    "warmFracMin": 0.9
+  },
+  "images": 1,
+  "checks": 5,
+  "failures": 0,
+  "frameTarget": 0.88,
+  "framing": {
+    "gold": [
+      1.469,
+      -0.7,
+      -3.5
+    ]
+  },
+  "rows": [
+    {
+      "file": "gold.png",
+      "zone": "integrated",
+      "bytes": 993802,
+      "width": 1672,
+      "height": 941,
+      "corners": {
+        "tl": 0.08,
+        "tr": 0.1,
+        "bl": 0.1,
+        "br": 0.09
+      },
+      "cornerMax": 0.1,
+      "border": 0.09,
+      "darkFrac": 0.786,
+      "subjectW": 0.569,
+      "subjectH": 0.599,
+      "subjectDX": 0.007,
+      "subjectDY": 0.035,
+      "highlightFrac": 0.0261,
+      "warmth": 147.8,
+      "highlightRGB": [
+        223,
+        172,
+        75
+      ],
+      "warmFrac": 0.992,
+      "keyAzimuth": 169,
+      "keyOffset": 0.189,
+      "spread": 0.993
+    }
+  ],
+  "results": [
+    {
+      "name": "grade: gold.png — frame corners are black (≤ 6)",
+      "ok": true,
+      "detail": "max corner 0.1 (tl 0.08 tr 0.1 bl 0.1 br 0.09)"
+    },
+    {
+      "name": "grade: gold.png — no environment reaches the border (≤ 6)",
+      "ok": true,
+      "detail": "border ring 0.09"
+    },
+    {
+      "name": "grade: gold.png — the subject emerges from darkness (≥ 50% below L16)",
+      "ok": true,
+      "detail": "78.6% dark"
+    },
+    {
+      "name": "grade: gold.png — the key is warm (R−B ≥ 18)",
+      "ok": true,
+      "detail": "R−B 147.8 on 2.61% of the frame, mean highlight rgb(223, 172, 75)"
+    },
+    {
+      "name": "grade: gold.png — the highlight population is warm throughout (≥ 90%)",
+      "ok": true,
+      "detail": "99.2% of highlight pixels warm"
+    }
+  ]
+}

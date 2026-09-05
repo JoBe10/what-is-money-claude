@@ -1,0 +1,281 @@
+{
+  "date": "2026-09-02T08:01:00.089Z",
+  "session": "batch-c-impl-1",
+  "baseline": "act-3-states-r2",
+  "method": "sha256 of every cell PNG against the file at the baseline tag; byte-identity implies zero differing pixels",
+  "counts": {
+    "untouched": 28,
+    "re-staged": 9,
+    "carried": 1
+  },
+  "tagFilesMissing": [],
+  "failures": 0,
+  "rows": [
+    {
+      "file": "s11-b1.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "d4552e6f7d4d9d4671a22ea9e514d99c2b11e92b43f0a75e528d69b377e28f02"
+    },
+    {
+      "file": "s11-b2.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "14e5444f2132e8d03c112d95b4189273ab6486b73f0a004659a89fdc2c6ebdf9"
+    },
+    {
+      "file": "s11-b3.png",
+      "class": "re-staged",
+      "ok": true,
+      "detail": "ruling c.3 — the medium job object at the triad’s right spoke is the hand-off",
+      "sha256": "a4ae5108164b787f84751f79e23743cf91fca4186fbe4d8da6e4ca0ecce26fcf"
+    },
+    {
+      "file": "s11-b4.png",
+      "class": "re-staged",
+      "ok": true,
+      "detail": "ruling c.3 — the triad complete with the replaced medium mark",
+      "sha256": "ca550338a89df784b9dca8a87fed8dc9ad5c82beae78636b0d5e627689869add"
+    },
+    {
+      "file": "s11-b5.png",
+      "class": "re-staged",
+      "ok": true,
+      "detail": "ruling c.3 — the continuity beat over the replaced medium mark",
+      "sha256": "5f28c719a7095980220ac69e1d3ffef0a1b67fc4c1994cb6716fde495a0fe16a"
+    },
+    {
+      "file": "s12-b1.png",
+      "class": "re-staged",
+      "ok": true,
+      "detail": "ruling c.3 — the receded home frame carries the replaced medium mark at 0.35",
+      "sha256": "54d9f002034355337aadf73982c3756d2acac1fb2b09285aa8daf87549a2c305"
+    },
+    {
+      "file": "s12-b2.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "9512f386e3e9ecda4086c5f8b53581595620d30bc16665cd3995708bc80f98b5"
+    },
+    {
+      "file": "s12-b3-block.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "13f320a675724dc4dc6df7ad8202d72f8f32ec7631ea13937b920efd4ef78a7c"
+    },
+    {
+      "file": "s12-b3.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "702ced52c679145abc598a8e85eb9448c528849e67c64ea79820b4f5fbac03c6"
+    },
+    {
+      "file": "s12-b4.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "d0930832eeb58d50bb228b819d8d45139549b5ab0078b92e7516cd5d42c531ba"
+    },
+    {
+      "file": "s13-b1.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "d8dc74506c1aa50c0cb6a52254d11372a8aa13e69a758dd8d1f098c8ba5f3756"
+    },
+    {
+      "file": "s13-b2.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "fcf78ae4ed0d5de558ecafcb20bf3f91c99363469fe97b9a6e85e282d0613b5a"
+    },
+    {
+      "file": "s13-b3.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "28fca8b5d1f9fc7e20e761d91401820dc9c4f3c4503d7b3ea7ce6487e8370ebf"
+    },
+    {
+      "file": "s13-b4.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "d851bed32b69b09327182ffaa83c6a70bac0bf51298b17e688736a4ebe80395f"
+    },
+    {
+      "file": "s13-b5.png",
+      "class": "re-staged",
+      "ok": true,
+      "detail": "ruling c.3 — the MEDIUM OF EXCHANGE stage stands under the hand-off",
+      "sha256": "c1c8d6ea8cdbc15eae434cce9a6236735b4677d7fa8eb356b095becc545021a6"
+    },
+    {
+      "file": "s13-b6.png",
+      "class": "re-staged",
+      "ok": true,
+      "detail": "ruling c.3 — the foundation beat with the replaced medium mark standing",
+      "sha256": "d072c9ff9fcb4a7b4ac9a611debe5e854982335375a7fc7f55440ab0c441500e"
+    },
+    {
+      "file": "s14-b1.png",
+      "class": "carried",
+      "ok": true,
+      "detail": "byte-identical through r1, r2 and this session",
+      "sha256": "e7cc6fff9a1142573f5a30878505e8625f1c57ca1cac1b95f881167458821081"
+    },
+    {
+      "file": "s14-b2.png",
+      "class": "re-staged",
+      "ok": true,
+      "detail": "ruling c.3 — the resolved ladder, the coffee berth above the hand-off",
+      "sha256": "438d8fc4e7e82c5110e39d3d264546e677105a9ee10db0285fb2926d50d063bb"
+    },
+    {
+      "file": "s14-b3.png",
+      "class": "re-staged",
+      "ok": true,
+      "detail": "ruling c.3 — the coin’s landing, the hand-off among the neutral marks",
+      "sha256": "3ac0ea59ffb25b41b86a7f723155cd5a35d43412c8778480aa38d4b175019b74"
+    },
+    {
+      "file": "s14-b4.png",
+      "class": "re-staged",
+      "ok": true,
+      "detail": "ruling c.3 — the home base returning whole with the replaced medium mark",
+      "sha256": "8e69451b67206dda1f56e54543a5e088290a08e6c692e701baf12ee44ee6538d"
+    },
+    {
+      "file": "s15-b1-a.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "573ea2ec705a0229a89ab8556c7fb369d75b1b0a0da58f3bb3cf05a75ff2cfbe"
+    },
+    {
+      "file": "s15-b1-b.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "0fa40dc6a2d35a7a70ae0565321c451aa415d8db6445e02820d06f78c0937c24"
+    },
+    {
+      "file": "s15-b1-boxes.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "170c15b5c9eccca6b90f866b1429fdac1aea4215f2cafb0b661d992b206627f4"
+    },
+    {
+      "file": "s15-b2-a.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "f02802ef8f78bbabc1580a392673cdca456728dee55a231fcdc499ed9a38d169"
+    },
+    {
+      "file": "s15-b2-b.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "e93f100114237cb73b1935175a4a8d38ffea48d69873d50d7e1738dfe2c130d7"
+    },
+    {
+      "file": "s15-b2-boxes.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "7a06f08894a4579aa54068d55d114554e69151c4b32344e3eb0b8f8b2bb27c98"
+    },
+    {
+      "file": "s15-b3-a.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "7f04be23a99ae81c43aa461b3e48f10124ee43f1ecaa692a16a510be9e9c61b3"
+    },
+    {
+      "file": "s15-b3-b.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "f11c1becb579f9b0c9937e7b535eb62a9d36c56cd3bbbdd6e2f06e8697977dbb"
+    },
+    {
+      "file": "s15-b3-boxes.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "ebedfe07a41b8ddc4d5a07c8cf30b8e71e6491eb9b43c406a608cc29f17ff69c"
+    },
+    {
+      "file": "s15-b4-a.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "a5b3e145b89784c7aa61129cff3bcd703fc8ee2ea759f414c31a76336ff8b9d6"
+    },
+    {
+      "file": "s15-b4-b.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "0ca4fce0e91934644c63abea3098bf78b1155f2976406cc78ee77931d22b821a"
+    },
+    {
+      "file": "s15-b4-boxes.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "b3b5eaefb8b92871bafef00291cb92a50cb383d1d78c0353103bffd8b3f000c4"
+    },
+    {
+      "file": "s15-b5-a.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "8fa51ea060e6e3f2e88a4156afa37b0cbb7e0c0a6cbb0dea83d563ebef4b05c2"
+    },
+    {
+      "file": "s15-b5-b.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "c9a44093c2b4d33d891477236d48c8b5eb8d14a49dc7f6d518ea29b79de1a895"
+    },
+    {
+      "file": "s15-b5-boxes.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "92c1782d2477446251847003f94d6a968b9884dd833f17820cf9a38751cf792c"
+    },
+    {
+      "file": "s15-b6-a.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "f182837631a5100a4674ba89b30f12eae9d0acae3234595cd06e5c5de46f063f"
+    },
+    {
+      "file": "s15-b6-b.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "df2f5e05da5e1f6a4b0f74781ef86120c4b0da27205ee0c045dd29a8e6da5c9d"
+    },
+    {
+      "file": "s15-b6-boxes.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "b4dec5e858fdac72edaacdee698259655688bf43618a5879a8b05a6aa2645db2"
+    }
+  ]
+}

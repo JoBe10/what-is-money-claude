@@ -1,0 +1,53 @@
+{
+  "date": "2026-08-25T10:21:35.392Z",
+  "session": "batch-a-selections",
+  "rendered": [
+    "s2-f1-final",
+    "s3-f1-final"
+  ],
+  "sheets": [
+    "contact-sheet.png"
+  ],
+  "approved": [
+    "p1-f1",
+    "p1-f2",
+    "p1-f3",
+    "p2-f1-plain",
+    "s2-f1-final",
+    "s2-f2",
+    "s3-f1-final",
+    "s3-f2-a",
+    "s4-f1",
+    "s4-f2-a"
+  ],
+  "onFile": [
+    "p1-f1",
+    "p1-f2",
+    "p1-f3",
+    "p2-f1-ghost",
+    "p2-f1-plain",
+    "s2-f1-final",
+    "s2-f1-mark",
+    "s2-f1-photo",
+    "s2-f2",
+    "s3-f1-a1-a",
+    "s3-f1-a1-b",
+    "s3-f1-a1-c",
+    "s3-f1-a2-a",
+    "s3-f1-a2-b",
+    "s3-f1-a2-c",
+    "s3-f1-a3-a",
+    "s3-f1-a3-b",
+    "s3-f1-a3-c",
+    "s3-f1-final",
+    "s3-f2-a",
+    "s3-f2-b",
+    "s3-f2-c",
+    "s4-f1",
+    "s4-f2-a",
+    "s4-f2-b",
+    "s4-f2-c"
+  ],
+  "count": 2,
+  "consoleErrors": []
+}

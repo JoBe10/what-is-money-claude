@@ -1,0 +1,265 @@
+{
+  "phase": "R7.2",
+  "dir": "assets/dark-field/incoming",
+  "thresholds": {
+    "cornerMax": 6,
+    "borderMax": 6,
+    "darkFracMin": 0.5,
+    "warmthMin": 18,
+    "warmFracMin": 0.9
+  },
+  "images": 4,
+  "checks": 20,
+  "failures": 0,
+  "frameTarget": 0.88,
+  "framing": {
+    "collectible": [
+      1.371,
+      1.4,
+      1
+    ],
+    "medium": [
+      1.259,
+      -2.4,
+      -1.2
+    ],
+    "store": [
+      1.035,
+      0.4,
+      1.6
+    ],
+    "unit": [
+      1.113,
+      -0.3,
+      -0.5
+    ]
+  },
+  "rows": [
+    {
+      "file": "collectible.png",
+      "zone": "integrated",
+      "bytes": 802672,
+      "width": 1672,
+      "height": 941,
+      "corners": {
+        "tl": 0.07,
+        "tr": 0.07,
+        "bl": 0.08,
+        "br": 0.07
+      },
+      "cornerMax": 0.08,
+      "border": 0.06,
+      "darkFrac": 0.841,
+      "subjectW": 0.345,
+      "subjectH": 0.642,
+      "subjectDX": -0.014,
+      "subjectDY": -0.01,
+      "highlightFrac": 0.0221,
+      "warmth": 116.3,
+      "highlightRGB": [
+        221,
+        169,
+        105
+      ],
+      "warmFrac": 0.998,
+      "keyAzimuth": 114,
+      "keyOffset": 0.158,
+      "spread": 1
+    },
+    {
+      "file": "medium.png",
+      "zone": "integrated",
+      "bytes": 1407093,
+      "width": 1672,
+      "height": 941,
+      "corners": {
+        "tl": 0.22,
+        "tr": 0.23,
+        "bl": 0.2,
+        "br": 0.17
+      },
+      "cornerMax": 0.23,
+      "border": 0.5,
+      "darkFrac": 0.864,
+      "subjectW": 0.699,
+      "subjectH": 0.597,
+      "subjectDX": 0.024,
+      "subjectDY": 0.012,
+      "highlightFrac": 0.0199,
+      "warmth": 136.1,
+      "highlightRGB": [
+        225,
+        156,
+        89
+      ],
+      "warmFrac": 1,
+      "keyAzimuth": 104,
+      "keyOffset": 0.096,
+      "spread": 1
+    },
+    {
+      "file": "store.png",
+      "zone": "integrated",
+      "bytes": 726180,
+      "width": 1672,
+      "height": 941,
+      "corners": {
+        "tl": 0.05,
+        "tr": 0.08,
+        "bl": 0.06,
+        "br": 0.07
+      },
+      "cornerMax": 0.08,
+      "border": 0.06,
+      "darkFrac": 0.913,
+      "subjectW": 0.263,
+      "subjectH": 0.85,
+      "subjectDX": -0.004,
+      "subjectDY": -0.016,
+      "highlightFrac": 0.0084,
+      "warmth": 83.8,
+      "highlightRGB": [
+        206,
+        161,
+        122
+      ],
+      "warmFrac": 0.997,
+      "keyAzimuth": 161,
+      "keyOffset": 0.045,
+      "spread": 1
+    },
+    {
+      "file": "unit.png",
+      "zone": "integrated",
+      "bytes": 614601,
+      "width": 1672,
+      "height": 941,
+      "corners": {
+        "tl": 0.05,
+        "tr": 0.06,
+        "bl": 0.07,
+        "br": 0.07
+      },
+      "cornerMax": 0.07,
+      "border": 0.06,
+      "darkFrac": 0.933,
+      "subjectW": 0.518,
+      "subjectH": 0.791,
+      "subjectDX": 0.003,
+      "subjectDY": 0.005,
+      "highlightFrac": 0.0056,
+      "warmth": 110.1,
+      "highlightRGB": [
+        212,
+        165,
+        102
+      ],
+      "warmFrac": 0.996,
+      "keyAzimuth": -61,
+      "keyOffset": 0.092,
+      "spread": 0.999
+    }
+  ],
+  "results": [
+    {
+      "name": "grade: collectible.png — frame corners are black (≤ 6)",
+      "ok": true,
+      "detail": "max corner 0.08 (tl 0.07 tr 0.07 bl 0.08 br 0.07)"
+    },
+    {
+      "name": "grade: collectible.png — no environment reaches the border (≤ 6)",
+      "ok": true,
+      "detail": "border ring 0.06"
+    },
+    {
+      "name": "grade: collectible.png — the subject emerges from darkness (≥ 50% below L16)",
+      "ok": true,
+      "detail": "84.1% dark"
+    },
+    {
+      "name": "grade: collectible.png — the key is warm (R−B ≥ 18)",
+      "ok": true,
+      "detail": "R−B 116.3 on 2.21% of the frame, mean highlight rgb(221, 169, 105)"
+    },
+    {
+      "name": "grade: collectible.png — the highlight population is warm throughout (≥ 90%)",
+      "ok": true,
+      "detail": "99.8% of highlight pixels warm"
+    },
+    {
+      "name": "grade: medium.png — frame corners are black (≤ 6)",
+      "ok": true,
+      "detail": "max corner 0.23 (tl 0.22 tr 0.23 bl 0.2 br 0.17)"
+    },
+    {
+      "name": "grade: medium.png — no environment reaches the border (≤ 6)",
+      "ok": true,
+      "detail": "border ring 0.5"
+    },
+    {
+      "name": "grade: medium.png — the subject emerges from darkness (≥ 50% below L16)",
+      "ok": true,
+      "detail": "86.4% dark"
+    },
+    {
+      "name": "grade: medium.png — the key is warm (R−B ≥ 18)",
+      "ok": true,
+      "detail": "R−B 136.1 on 1.99% of the frame, mean highlight rgb(225, 156, 89)"
+    },
+    {
+      "name": "grade: medium.png — the highlight population is warm throughout (≥ 90%)",
+      "ok": true,
+      "detail": "100.0% of highlight pixels warm"
+    },
+    {
+      "name": "grade: store.png — frame corners are black (≤ 6)",
+      "ok": true,
+      "detail": "max corner 0.08 (tl 0.05 tr 0.08 bl 0.06 br 0.07)"
+    },
+    {
+      "name": "grade: store.png — no environment reaches the border (≤ 6)",
+      "ok": true,
+      "detail": "border ring 0.06"
+    },
+    {
+      "name": "grade: store.png — the subject emerges from darkness (≥ 50% below L16)",
+      "ok": true,
+      "detail": "91.3% dark"
+    },
+    {
+      "name": "grade: store.png — the key is warm (R−B ≥ 18)",
+      "ok": true,
+      "detail": "R−B 83.8 on 0.84% of the frame, mean highlight rgb(206, 161, 122)"
+    },
+    {
+      "name": "grade: store.png — the highlight population is warm throughout (≥ 90%)",
+      "ok": true,
+      "detail": "99.7% of highlight pixels warm"
+    },
+    {
+      "name": "grade: unit.png — frame corners are black (≤ 6)",
+      "ok": true,
+      "detail": "max corner 0.07 (tl 0.05 tr 0.06 bl 0.07 br 0.07)"
+    },
+    {
+      "name": "grade: unit.png — no environment reaches the border (≤ 6)",
+      "ok": true,
+      "detail": "border ring 0.06"
+    },
+    {
+      "name": "grade: unit.png — the subject emerges from darkness (≥ 50% below L16)",
+      "ok": true,
+      "detail": "93.3% dark"
+    },
+    {
+      "name": "grade: unit.png — the key is warm (R−B ≥ 18)",
+      "ok": true,
+      "detail": "R−B 110.1 on 0.56% of the frame, mean highlight rgb(212, 165, 102)"
+    },
+    {
+      "name": "grade: unit.png — the highlight population is warm throughout (≥ 90%)",
+      "ok": true,
+      "detail": "99.6% of highlight pixels warm"
+    }
+  ]
+}

@@ -1,0 +1,305 @@
+{
+  "date": "2026-08-29T07:53:44.409Z",
+  "session": "prologue-states",
+  "beats": {
+    "p1": 11,
+    "p2": 2
+  },
+  "entryBlack": "p1-b0",
+  "beatCountAuthority": "the verbatim script’s [→] count (docs/batch-a-package.md §2) — 11 advances; the §1 map’s 10-beat compression of condensation-into-first-form is flagged in the session report, per the close brief",
+  "carried": {
+    "p1-b2": "p1-f1",
+    "p1-b5": "p1-f2",
+    "p1-b11": "p1-f3",
+    "p2-b1": "p2-f1-plain"
+  },
+  "openDecisions": {
+    "C1": "RULED 29 August 2026 — A, the coin (p1-b8-a). See rulings.C1; p1-b8-b stays on file, not selected. No open decision remains in the Prologue.",
+    "C2": "determined — the counter treatment is P1-F1’s approved s1q-hours__counter; rendered as the single determined cell p1-b1"
+  },
+  "cells": [
+    {
+      "id": "p1-b0",
+      "file": "p1-b0.png",
+      "beat": "P1 entry",
+      "status": "determined",
+      "decision": null,
+      "caption": "Entry · the authored black hold — “Let me start with a number.” is spoken over darkness before the first advance. Rendered as its own cell per the full-coverage rule",
+      "ruling": "approved",
+      "rulingNote": "Approved 29 Aug 2026 — the presenter's per-cell verdict on the Prologue sheet"
+    },
+    {
+      "id": "p1-b1",
+      "file": "p1-b1.png",
+      "beat": "P1 beat 1",
+      "status": "determined",
+      "decision": null,
+      "caption": "Beat 1 · the field complete, the counter at 80,000 — the deck’s proven treatment (1.01 build 1 reconstructed: s1q-hours__counter over the steady field). C2 is determined by P1-F1’s approved counter — no candidates",
+      "ruling": "approved",
+      "rulingNote": "Approved 29 Aug 2026 — the presenter's per-cell verdict on the Prologue sheet"
+    },
+    {
+      "id": "p1-b2",
+      "file": "p1-b2.png",
+      "beat": "P1 beat 2",
+      "status": "carried",
+      "carriedFrom": "p1-f1",
+      "decision": null,
+      "caption": "Beat 2 · CARRIED (p1-f1, byte-identical) — the hours line lands over the completed field and counter. Approved as rendered 25 Aug 2026; inputs unchanged, so the approved pixels ship",
+      "ruling": "approved",
+      "rulingNote": "Approved 29 Aug 2026 — a carried approval, shipping the approved pixels byte-identical"
+    },
+    {
+      "id": "p1-b3",
+      "file": "p1-b3.png",
+      "beat": "P1 beat 3",
+      "status": "determined",
+      "decision": null,
+      "caption": "Beat 3 · RETIRED — SUPERSEDED BY RESTORATION (30 Aug 2026). The condensation’s settled landing as the field’s own points of light gathered into one dense mass at the forms’ center. Kept on file (aesthetic-law file-keeping clause); replaced by p1-b3-token",
+      "ruling": "retired",
+      "rulingNote": "Superseded twice: by p1-b3-ball on the condensation ruling (letter B), and with it by p1-b3-token on the restoration. Kept on file (aesthetic-law file-keeping clause)",
+      "ruledReplaced": {
+        "date": "2026-08-30",
+        "ruling": "The condensation ruling, letter B: the landing is a smooth luminous ball, not the field's own units massed.",
+        "replacedBy": "p1-b3-ball",
+        "note": "This cell stays on file, retired — the aesthetic law's file-keeping clause."
+      },
+      "supersededByRestoration": {
+        "date": "2026-08-30",
+        "ruling": "The condensation is PORT — the legacy deck's absorption restored verbatim (rulings.restoration).",
+        "replacedBy": "p1-b3-token",
+        "note": "Both candidates for this beat are retired by the restoration. This one stays on file."
+      }
+    },
+    {
+      "id": "p1-b3-ball",
+      "file": "p1-b3-ball.png",
+      "beat": "P1 beat 3",
+      "status": "retired",
+      "decision": null,
+      "caption": "Beat 3 · RETIRED — SUPERSEDED BY RESTORATION (30 Aug 2026). The letter-B object: a smooth luminous ball, achromatic white, 296 across at the forms’ centre, built to be deliberately NOT the Claim Mark. It held the beat for one session. Kept on file (aesthetic-law file-keeping clause); replaced by p1-b3-token",
+      "ruling": "retired",
+      "rulingNote": "Approved by the condensation ruling (letter B) on 30 Aug 2026 and superseded the same day by the restoration ruling. Kept on file (aesthetic-law file-keeping clause). Recorded in the cells array here for the first time: the fix session amended approvedSet and the rulings block but never added the cell row, which is why it never reached sheet.html either",
+      "supersededByRestoration": {
+        "date": "2026-08-30",
+        "ruling": "The condensation is PORT — the legacy deck's absorption restored verbatim (rulings.restoration).",
+        "replacedBy": "p1-b3-token",
+        "note": "The letter-B distinction — an object deliberately unlike the Claim Mark — was built to satisfy a clause that has since been struck. See rulings.restoration.strickenClause."
+      }
+    },
+    {
+      "id": "p1-b3-token",
+      "file": "p1-b3-token.png",
+      "beat": "P1 beat 3",
+      "status": "approved",
+      "decision": null,
+      "caption": "Beat 3 · RESTORED BY RULING (30 Aug 2026 — PORT) — the condensation’s landing is the LEGACY BALL, verbatim: 1-02-the-conversion’s token, the deck’s own luminous disc, 176 across at the stage centre the collapse actually converges on. Nothing here was designed and nothing was sized: the classes the legacy slide used are the classes this cell uses. Replaces both p1-b3 (the granular mass) and p1-b3-ball (the white ball)",
+      "ruling": "landed",
+      "rulingNote": "The approved P1 b3 state, from the presenter's restoration ruling; rendered through the states pipeline beside the two retired candidates",
+      "portedFrom": {
+        "slide": "1-02-the-conversion",
+        "file": "src/slides/section-1-question/02-the-conversion.js",
+        "object": ".luminous-disc + .s1q-token (src/styles/slides.css) — 176px, stage centre (960, 540), arriving from scale(0.82) over 1100ms opacity / 1500ms transform",
+        "gesture": "COLLAPSE_MS 4600 · TOKEN_EMERGE_AT 0.22"
+      }
+    },
+    {
+      "id": "p1-b4",
+      "file": "p1-b4.png",
+      "beat": "P1 beat 4",
+      "status": "determined",
+      "decision": null,
+      "caption": "Beat 4 · SHELL — single_cowrie per the recorded assignment (manifest §2.2: P1 morph, centre scale). 4:5 box at the forms’ center, P1-F2’s scale",
+      "ruling": "approved",
+      "rulingNote": "Approved 29 Aug 2026 — the presenter's per-cell verdict on the Prologue sheet"
+    },
+    {
+      "id": "p1-b5",
+      "file": "p1-b5.png",
+      "beat": "P1 beat 5",
+      "status": "carried",
+      "carriedFrom": "p1-f2",
+      "decision": null,
+      "caption": "Beat 5 · GOLD · CARRIED (p1-f2, byte-identical) — the condensed mass as the gold form, display scale, centered low. Approved as rendered 25 Aug 2026",
+      "ruling": "approved",
+      "rulingNote": "Approved 29 Aug 2026 — a carried approval, shipping the approved pixels byte-identical"
+    },
+    {
+      "id": "p1-b6",
+      "file": "p1-b6.png",
+      "beat": "P1 beat 6",
+      "status": "determined",
+      "decision": null,
+      "caption": "Beat 6 · PAPER — paper per the recorded assignment (manifest §2.2: P1 morph’s paper form). “Paper, and a promise.”",
+      "ruling": "approved",
+      "rulingNote": "Approved 29 Aug 2026 — the presenter's per-cell verdict on the Prologue sheet"
+    },
+    {
+      "id": "p1-b7",
+      "file": "p1-b7.png",
+      "beat": "P1 beat 7",
+      "status": "determined",
+      "decision": null,
+      "caption": "Beat 7 · LEDGER — ledger per the recorded assignment row (manifest §2.2: ledger serves display-scale ledger appearances; ledger_glow is Scene 8’s). FLAGGED in the report: the architecture’s P1 summary says “glowing ledger entry” — his verdict on this cell settles which study the beat gets",
+      "ruledReplaced": {
+        "date": "2026-08-29",
+        "ruling": "p1-b7 = ledger_glow (Batch A implementation brief §1.2). The flagged study question is settled: the ledger form is the glowing entry.",
+        "replacedBy": "p1-b7-glow",
+        "note": "This cell stays on file, retired — the aesthetic law's file-keeping clause."
+      },
+      "ruling": "retired",
+      "rulingNote": "Replaced by p1-b7-glow on the ledger ruling. Kept on file (aesthetic-law file-keeping clause)"
+    },
+    {
+      "id": "p1-b7-glow",
+      "file": "p1-b7-glow.png",
+      "beat": "P1 beat 7",
+      "status": "approved",
+      "decision": null,
+      "caption": "Beat 7 · LEDGER · APPROVED BY RULING (29 Aug 2026) — ledger_glow, the glowing entry: the script’s line is “it stopped looking like anything at all. Numbers in a ledger,” and the architecture’s P1 summary says “glowing ledger entry.” The register’s one 3:2 render, so the form box takes its aspect at the recorded height and centre (810×540 at 555, 380). Replaces the retired p1-b7",
+      "ruling": "landed",
+      "rulingNote": "The approved P1 b7 state, from the presenter's ruling; rendered through the states pipeline beside the retired original"
+    },
+    {
+      "id": "p1-b8-a",
+      "file": "p1-b8-a.png",
+      "beat": "P1 beat 8",
+      "status": "candidate",
+      "decision": "C1",
+      "caption": "Beat 8 · C1-A — BITCOIN as the library’s coin render: visually continuous with the four physical forms before it. The manifest flags exactly this (V-1): the render asserts a physical object the film argues bitcoin does not have",
+      "ruling": "approved",
+      "rulingNote": "Approved 29 Aug 2026 — the presenter's per-cell verdict on the Prologue sheet"
+    },
+    {
+      "id": "p1-b8-b",
+      "file": "p1-b8-b.png",
+      "beat": "P1 beat 8",
+      "status": "candidate",
+      "decision": "C1",
+      "caption": "Beat 8 · C1-B — BITCOIN as the form refusing to condense into an object: the material resolved into structured light — the field’s own units held in exact order, edges dissolving into the dark. Composed from the film’s existing vocabulary (the unit grammar, the unit-warm family); no disc, no symbol, no Claim Mark anticipation",
+      "ruling": "not-selected",
+      "rulingNote": "C1 ruled A (the coin). Kept on file (aesthetic-law file-keeping clause)"
+    },
+    {
+      "id": "p1-b9",
+      "file": "p1-b9.png",
+      "beat": "P1 beat 9",
+      "status": "determined",
+      "decision": null,
+      "caption": "Beat 9 · the forms line — “The forms could hardly be more different.” at the stakes register, alone. The morph layer hands the frame off fully (recorded handoff — the spoken line speaks of all five forms, and holding only the last would misweight it; the sequenced-lines precedent is 1.02’s)",
+      "ruling": "approved",
+      "rulingNote": "Approved 29 Aug 2026 — the presenter's per-cell verdict on the Prologue sheet"
+    },
+    {
+      "id": "p1-b10",
+      "file": "p1-b10.png",
+      "beat": "P1 beat 10",
+      "status": "determined",
+      "decision": null,
+      "caption": "Beat 10 · the question line — “So what is the thing that stays the same?” at the deck’s proven big-question register (1.03’s s1q-what__question treatment), alone; the forms line clears (sequenced, never stacked)",
+      "ruling": "approved",
+      "rulingNote": "Approved 29 Aug 2026 — the presenter's per-cell verdict on the Prologue sheet"
+    },
+    {
+      "id": "p1-b11",
+      "file": "p1-b11.png",
+      "beat": "P1 beat 11",
+      "status": "carried",
+      "carriedFrom": "p1-f3",
+      "decision": null,
+      "caption": "Beat 11 · TITLE · CARRIED (p1-f3, byte-identical) — WHAT IS MONEY? lands as the punchline on cleared black, the deck’s proven title treatment. Approved as rendered 25 Aug 2026",
+      "ruling": "approved",
+      "rulingNote": "Approved 29 Aug 2026 — a carried approval, shipping the approved pixels byte-identical"
+    },
+    {
+      "id": "p2-b1",
+      "file": "p2-b1.png",
+      "beat": "P2 beat 1",
+      "status": "carried",
+      "carriedFrom": "p2-f1-plain",
+      "decision": null,
+      "caption": "Beat 1 · CARRIED (p2-f1-plain, byte-identical) — the mercy line alone on black; the hours-field ghost was retired by ruling 4 of 25 Aug 2026",
+      "ruling": "approved",
+      "rulingNote": "Approved 29 Aug 2026 — a carried approval, shipping the approved pixels byte-identical"
+    },
+    {
+      "id": "p2-b2",
+      "file": "p2-b2.png",
+      "beat": "P2 beat 2",
+      "status": "determined",
+      "decision": null,
+      "caption": "Beat 2 · the spoken promise — the screen holds (§1 map: “spoken promise + handoff (screen holds)”; the architecture: no agenda, no map on screen — the waypoint device is retired). Identical to beat 1 by design, rendered as its own cell per the full-coverage rule (the s3-b8 precedent)",
+      "ruling": "approved",
+      "rulingNote": "Approved 29 Aug 2026 — the presenter's per-cell verdict on the Prologue sheet"
+    }
+  ],
+  "consoleErrors": [],
+  "rulings": {
+    "date": "2026-08-29",
+    "recordedBy": "the Batch A implementation session, from the presenter's Prologue rulings (docs/batch-a-implementation-brief.md §1)",
+    "C1": {
+      "selection": "A",
+      "cell": "p1-b8-a",
+      "ruling": "C1 = THE COIN. P1's fifth form is the library's `bitcoin` render. p1-b8-b (structured light) stays on file, not selected, per the aesthetic law's file-keeping clause.",
+      "consequence": "The manifest's V-1 flag is closed as a PRESENTER decision (docs/dark-field-manifest.md §2.2): the physical-coin render is presenter-accepted for P1's morph, and Scene 10's trade-off strip follows the same ruling for consistency. Batch B's states session inherits it; no Scene 10 work here."
+    },
+    "p1b7": {
+      "assignment": "ledger_glow",
+      "cell": "p1-b7-glow",
+      "ruling": "p1-b7 = `ledger_glow`. The flagged cell (report §6.3) is ruled: the ledger form is the glowing entry, not the book. Re-rendered through the states pipeline as p1-b7-glow, beside the retired p1-b7, which stays on file.",
+      "record": "docs/dark-field-manifest.md §2.2 (the ledger row now serves P1's morph as well as Scene 8) and src/dark-field.js's assignment comment.",
+      "forcedGeometry": "ledger_glow is the register's one 3:2 render (1536×1024). The Prologue's recorded form law fixes the box height (540) and centre (960, 650) and requires the render's own aspect, which gives an 810×540 box at (555, 380). Transcribed from the recorded rule, not chosen — recorded here because it is the one geometry the ruling forced."
+    },
+    "allCells": "ALL REMAINING PROLOGUE CELLS: APPROVED (Batch A implementation brief §1.4). With C1 ruled A and p1-b7 ruled to ledger_glow, every beat of P1 and P2 now has one approved cell and the Prologue is under the full-coverage rule with no open decision.",
+    "condensation": {
+      "date": "2026-08-30",
+      "recordedBy": "the P1 condensation fix session, from the presenter's letter in the session prompt",
+      "letter": "B",
+      "ruling": "THE CONDENSATION LANDS ON A SMOOTH LUMINOUS BALL THAT IS DELIBERATELY NOT THE MARK. Pure-white monochrome per P1's register — no warm tone, no orange anywhere near it — with a tighter, cooler glow falloff than the ClaimMark's, sized per the reopened cell's box. It must read as premium and intentional as a still and stay clearly distinct from the Claim Mark at a glance.",
+      "reopened": "p1-b3 — the granular condensed mass is presenter-reopened and superseded by p1-b3-ball. The retired cell stays on file (aesthetic-law file-keeping clause).",
+      "scope": "The condensation landing only. Audited rather than assumed: P1's _applyBuild puts the condensed object on stage at exactly one build (setVisible(mass, n === 3)) and nowhere else, so no adjacent state shows the condensed mass before the shell. No other P1 cell is affected, and the letter changes no other beat.",
+      "notAmended": "Letter B leaves the master's no-anticipation rule untouched: the ball is not the mark, so the birth in Scene 3 stays the accent's first appearance and the disc's first appearance. The freeze-register amendment the brief reserves for letter A is NOT made.",
+      "approvedSetAmendments": {
+        "P1 b3": "p1-b3-ball"
+      },
+      "superseded": "SUPERSEDED 30 August 2026 by rulings.restoration — the condensation is PORT, and p1-b3-ball retires beside p1-b3. Kept in full: it is the record of what was ruled, and the restoration's trail needs it."
+    },
+    "restoration": {
+      "date": "2026-08-30",
+      "recordedBy": "the P1 restoration session, from the presenter's ruling in the session prompt",
+      "class": "PORT",
+      "ruling": "P1'S CONDENSATION IS PORT. The legacy deck's absorption is the proven treatment and is restored VERBATIM: the field's points absorbed gradually into the luminous white ball, using the legacy slides' own gesture — the legacy implementation ported (timing, easing, absorption behavior, the ball's rendering), not re-authored from description. The ball is the legacy ball, verbatim. The test is that it looks exactly as it always did.",
+      "legacySource": "1-02-the-conversion (src/slides/section-1-question/02-the-conversion.js) — COLLAPSE_MS 4600, TOKEN_EMERGE_AT 0.22, and the object it renders: `.luminous-disc` + `.s1q-token` (src/styles/slides.css), 176px centred on the stage at (960, 540), arriving from scale(0.82) over 1100ms opacity / 1500ms transform.",
+      "reopened": "BOTH prior candidates. p1-b3 (the granular mass, 29 Aug) and p1-b3-ball (the white monochrome ball, 30 Aug) are superseded-by-restoration and stay on file under the aesthetic law's file-keeping clause.",
+      "strickenClause": {
+        "clause": "no Claim Mark anywhere",
+        "legislatedBy": "docs/gate-2-close-and-prologue-states-brief.md §3 (Composition law), 29 August 2026",
+        "verdict": "STRUCK as over-extension — it was that document's own invention, not the architecture's law. Struck in place at its origin, with a pointer to the trail.",
+        "replacedBy": "orange enters the film at Scene 3's birth; no accent color in the Prologue — docs/what-is-money-master.md §8.5 and its freeze register, 25 August 2026. Unchanged, and always the law.",
+        "cost": "The clause is what made P1's condensation a design question at all: it ruled out the one object the deck had already proven for this gesture, and the beat went to the candidate process instead — a granular mass, a reopening, a white ball, a second reopening, two retired cells, for a frame that was never open.",
+        "trail": "docs/gate-2-close-and-prologue-states-report.md §12"
+      },
+      "notAmended": "The freeze register, the master and the architecture are untouched. Under PORT the condensation lands on the deck's proven token, which is the same drawing as the Claim Mark's disc — so the no-anticipation question the letter-A branch would have raised returns. It is FLAGGED for the presenter, not decided here (docs/p1-restoration-and-provenance-report.md §7).",
+      "approvedSetAmendments": {
+        "P1 b3": "p1-b3-token"
+      }
+    }
+  },
+  "approvedSet": {
+    "note": "the authoritative approved set for the Prologue — the presenter's rulings of 29 August 2026 (rulings block). One cell per beat, plus the authored entry black. Amended twice on 30 August 2026: by the condensation ruling (rulings.condensation) to p1-b3-ball, and then by the restoration ruling (rulings.restoration) to p1-b3-token, which is the current approved state for P1 b3.",
+    "P1 entry": "p1-b0",
+    "P1 b1": "p1-b1",
+    "P1 b2": "p1-b2",
+    "P1 b3": "p1-b3-token",
+    "P1 b4": "p1-b4",
+    "P1 b5": "p1-b5",
+    "P1 b6": "p1-b6",
+    "P1 b7": "p1-b7-glow",
+    "P1 b8": "p1-b8-a",
+    "P1 b9": "p1-b9",
+    "P1 b10": "p1-b10",
+    "P1 b11": "p1-b11",
+    "P2 b1": "p2-b1",
+    "P2 b2": "p2-b2"
+  }
+}

@@ -1,0 +1,604 @@
+{
+  "date": "2026-08-30T05:57:59.855Z",
+  "rule": "each of the 33 settled states of the five new scenes, mounted cold in the deck at 1920×1080, is its approved cell at zero differing pixels (channel delta > 2/255 counts). Comparisons: deck↔archived cell, fresh cell↔archived cell, deck↔fresh cell.",
+  "determinism": "Math.random is an LCG re-seeded at every canvas creation, so the hours field paints identically in both passes. The two field-bearing states (p1-b1, p1-b2) are proven against a same-seed fresh cell; their delta against the archived cell is the field's own unseeded sampling, reported not hidden (prologue report §6.6).",
+  "states": 33,
+  "passed": 33,
+  "results": [
+    {
+      "state": "1:0",
+      "cell": "p1-b0",
+      "fieldBearing": false,
+      "deckVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "deckVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "1:1",
+      "cell": "p1-b1",
+      "fieldBearing": true,
+      "deckVsArchive": {
+        "diffPixels": 1284951,
+        "maxDelta": 75
+      },
+      "cellVsArchive": {
+        "diffPixels": 1284951,
+        "maxDelta": 75
+      },
+      "deckVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "1:2",
+      "cell": "p1-b2",
+      "fieldBearing": true,
+      "deckVsArchive": {
+        "diffPixels": 1265613,
+        "maxDelta": 75
+      },
+      "cellVsArchive": {
+        "diffPixels": 1265613,
+        "maxDelta": 75
+      },
+      "deckVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "1:3",
+      "cell": "p1-b3-token",
+      "fieldBearing": false,
+      "deckVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "deckVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "1:4",
+      "cell": "p1-b4",
+      "fieldBearing": false,
+      "deckVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "deckVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "1:5",
+      "cell": "p1-b5",
+      "fieldBearing": false,
+      "deckVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "deckVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "1:6",
+      "cell": "p1-b6",
+      "fieldBearing": false,
+      "deckVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "deckVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "1:7",
+      "cell": "p1-b7-glow",
+      "fieldBearing": false,
+      "deckVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "deckVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "1:8",
+      "cell": "p1-b8-a",
+      "fieldBearing": false,
+      "deckVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "deckVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "1:9",
+      "cell": "p1-b9",
+      "fieldBearing": false,
+      "deckVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "deckVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "1:10",
+      "cell": "p1-b10",
+      "fieldBearing": false,
+      "deckVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "deckVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "1:11",
+      "cell": "p1-b11",
+      "fieldBearing": false,
+      "deckVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "deckVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "2:0",
+      "cell": "p2-b1",
+      "fieldBearing": false,
+      "deckVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "deckVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "2:1",
+      "cell": "p2-b2",
+      "fieldBearing": false,
+      "deckVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "deckVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "3:0",
+      "cell": "s2-b1-a",
+      "fieldBearing": false,
+      "deckVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "deckVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "3:1",
+      "cell": "s2-b2",
+      "fieldBearing": false,
+      "deckVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "deckVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "3:2",
+      "cell": "s2-b3-p2",
+      "fieldBearing": false,
+      "deckVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "deckVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "3:3",
+      "cell": "s2-b4-p2",
+      "fieldBearing": false,
+      "deckVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "deckVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "3:4",
+      "cell": "s2-b5-b-p2",
+      "fieldBearing": false,
+      "deckVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "deckVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "4:0",
+      "cell": "s3-b1-p2",
+      "fieldBearing": false,
+      "deckVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "deckVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "4:1",
+      "cell": "s3-b2",
+      "fieldBearing": false,
+      "deckVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "deckVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "4:2",
+      "cell": "s3-b3",
+      "fieldBearing": false,
+      "deckVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "deckVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "4:3",
+      "cell": "s3-b4-a",
+      "fieldBearing": false,
+      "deckVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "deckVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "4:4",
+      "cell": "s3-b5-a",
+      "fieldBearing": false,
+      "deckVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "deckVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "4:5",
+      "cell": "s3-b6-a",
+      "fieldBearing": false,
+      "deckVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "deckVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "4:6",
+      "cell": "s3-b7-b",
+      "fieldBearing": false,
+      "deckVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "deckVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "4:7",
+      "cell": "s3-b8-a",
+      "fieldBearing": false,
+      "deckVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "deckVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "4:8",
+      "cell": "s3-b9-a",
+      "fieldBearing": false,
+      "deckVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "deckVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "5:0",
+      "cell": "s4-b1-b",
+      "fieldBearing": false,
+      "deckVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 1
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "deckVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 1
+      },
+      "pass": true
+    },
+    {
+      "state": "5:1",
+      "cell": "s4-b2-b2",
+      "fieldBearing": false,
+      "deckVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "deckVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "5:2",
+      "cell": "s4-b3-b",
+      "fieldBearing": false,
+      "deckVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "deckVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "5:3",
+      "cell": "s4-b4-b",
+      "fieldBearing": false,
+      "deckVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "deckVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    },
+    {
+      "state": "5:4",
+      "cell": "s4-b5-b",
+      "fieldBearing": false,
+      "deckVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "cellVsArchive": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "deckVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0
+      },
+      "pass": true
+    }
+  ],
+  "consoleErrors": []
+}

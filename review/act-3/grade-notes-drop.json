@@ -1,0 +1,143 @@
+{
+  "phase": "R7.2",
+  "dir": "assets/dark-field/incoming",
+  "thresholds": {
+    "cornerMax": 6,
+    "borderMax": 6,
+    "darkFracMin": 0.5,
+    "warmthMin": 18,
+    "warmFracMin": 0.9
+  },
+  "images": 2,
+  "checks": 10,
+  "failures": 0,
+  "frameTarget": 0.88,
+  "framing": {
+    "ars": [
+      1.356,
+      0.5,
+      -0.4
+    ],
+    "usd": [
+      1.429,
+      0.6,
+      3.3
+    ]
+  },
+  "rows": [
+    {
+      "file": "ars.png",
+      "zone": "integrated",
+      "bytes": 1027958,
+      "width": 1672,
+      "height": 941,
+      "corners": {
+        "tl": 0.07,
+        "tr": 0.12,
+        "bl": 0.09,
+        "br": 0.08
+      },
+      "cornerMax": 0.12,
+      "border": 0.08,
+      "darkFrac": 0.805,
+      "subjectW": 0.337,
+      "subjectH": 0.649,
+      "subjectDX": -0.005,
+      "subjectDY": 0.004,
+      "highlightFrac": 0.0338,
+      "warmth": 147.2,
+      "highlightRGB": [
+        217,
+        151,
+        70
+      ],
+      "warmFrac": 1,
+      "keyAzimuth": 157,
+      "keyOffset": 0.162,
+      "spread": 1
+    },
+    {
+      "file": "usd.png",
+      "zone": "integrated",
+      "bytes": 773873,
+      "width": 1672,
+      "height": 941,
+      "corners": {
+        "tl": 0.06,
+        "tr": 0.08,
+        "bl": 0.07,
+        "br": 0.07
+      },
+      "cornerMax": 0.08,
+      "border": 0.06,
+      "darkFrac": 0.889,
+      "subjectW": 0.29,
+      "subjectH": 0.616,
+      "subjectDX": -0.006,
+      "subjectDY": -0.033,
+      "highlightFrac": 0.0226,
+      "warmth": 135.7,
+      "highlightRGB": [
+        213,
+        160,
+        77
+      ],
+      "warmFrac": 1,
+      "keyAzimuth": 155,
+      "keyOffset": 0.162,
+      "spread": 1
+    }
+  ],
+  "results": [
+    {
+      "name": "grade: ars.png — frame corners are black (≤ 6)",
+      "ok": true,
+      "detail": "max corner 0.12 (tl 0.07 tr 0.12 bl 0.09 br 0.08)"
+    },
+    {
+      "name": "grade: ars.png — no environment reaches the border (≤ 6)",
+      "ok": true,
+      "detail": "border ring 0.08"
+    },
+    {
+      "name": "grade: ars.png — the subject emerges from darkness (≥ 50% below L16)",
+      "ok": true,
+      "detail": "80.5% dark"
+    },
+    {
+      "name": "grade: ars.png — the key is warm (R−B ≥ 18)",
+      "ok": true,
+      "detail": "R−B 147.2 on 3.38% of the frame, mean highlight rgb(217, 151, 70)"
+    },
+    {
+      "name": "grade: ars.png — the highlight population is warm throughout (≥ 90%)",
+      "ok": true,
+      "detail": "100.0% of highlight pixels warm"
+    },
+    {
+      "name": "grade: usd.png — frame corners are black (≤ 6)",
+      "ok": true,
+      "detail": "max corner 0.08 (tl 0.06 tr 0.08 bl 0.07 br 0.07)"
+    },
+    {
+      "name": "grade: usd.png — no environment reaches the border (≤ 6)",
+      "ok": true,
+      "detail": "border ring 0.06"
+    },
+    {
+      "name": "grade: usd.png — the subject emerges from darkness (≥ 50% below L16)",
+      "ok": true,
+      "detail": "88.9% dark"
+    },
+    {
+      "name": "grade: usd.png — the key is warm (R−B ≥ 18)",
+      "ok": true,
+      "detail": "R−B 135.7 on 2.26% of the frame, mean highlight rgb(213, 160, 77)"
+    },
+    {
+      "name": "grade: usd.png — the highlight population is warm throughout (≥ 90%)",
+      "ok": true,
+      "detail": "100.0% of highlight pixels warm"
+    }
+  ]
+}

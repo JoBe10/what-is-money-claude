@@ -1,0 +1,280 @@
+{
+  "date": "2026-08-31T23:06:44.237Z",
+  "session": "act-2-rail-r2",
+  "baseline": "act-2-rail-states",
+  "method": "sha256 — byte-identity implies zero differing pixels; the carried cells are checked against both their approved source and the baseline tag",
+  "counts": {
+    "re-rendered": 33,
+    "carried": 6,
+    "interior": 4,
+    "banked": 1
+  },
+  "tagFilesMissing": [],
+  "failures": 0,
+  "rows": [
+    {
+      "file": "s10-b1.png",
+      "class": "re-rendered",
+      "ok": true,
+      "detail": "differs from the tag — the ruled re-render landed"
+    },
+    {
+      "file": "s10-b2.png",
+      "class": "re-rendered",
+      "ok": true,
+      "detail": "differs from the tag — the ruled re-render landed"
+    },
+    {
+      "file": "s10-b3.png",
+      "class": "re-rendered",
+      "ok": true,
+      "detail": "differs from the tag — the ruled re-render landed"
+    },
+    {
+      "file": "s10-b4.png",
+      "class": "carried",
+      "ok": true,
+      "detail": "byte-identical to review/act-2/states/s10-b4.png and to the tag — copied, never re-rendered"
+    },
+    {
+      "file": "s10-b5.png",
+      "class": "re-rendered",
+      "ok": true,
+      "detail": "differs from the tag — the ruled re-render landed"
+    },
+    {
+      "file": "s5-b1.png",
+      "class": "re-rendered",
+      "ok": true,
+      "detail": "differs from the tag — the ruled re-render landed"
+    },
+    {
+      "file": "s5-b2.png",
+      "class": "re-rendered",
+      "ok": true,
+      "detail": "differs from the tag — the ruled re-render landed"
+    },
+    {
+      "file": "s5-b3.png",
+      "class": "re-rendered",
+      "ok": true,
+      "detail": "differs from the tag — the ruled re-render landed"
+    },
+    {
+      "file": "s5-b4.png",
+      "class": "re-rendered",
+      "ok": true,
+      "detail": "differs from the tag — the ruled re-render landed"
+    },
+    {
+      "file": "s5-b5.png",
+      "class": "re-rendered",
+      "ok": true,
+      "detail": "differs from the tag — the ruled re-render landed"
+    },
+    {
+      "file": "s5-b6.png",
+      "class": "re-rendered",
+      "ok": true,
+      "detail": "differs from the tag — the ruled re-render landed"
+    },
+    {
+      "file": "s5-b7.png",
+      "class": "re-rendered",
+      "ok": true,
+      "detail": "differs from the tag — the ruled re-render landed"
+    },
+    {
+      "file": "s5-b8.png",
+      "class": "re-rendered",
+      "ok": true,
+      "detail": "differs from the tag — the ruled re-render landed"
+    },
+    {
+      "file": "s6-b1.png",
+      "class": "re-rendered",
+      "ok": true,
+      "detail": "differs from the tag — the ruled re-render landed"
+    },
+    {
+      "file": "s6-b2.png",
+      "class": "re-rendered",
+      "ok": true,
+      "detail": "differs from the tag — the ruled re-render landed"
+    },
+    {
+      "file": "s6-b3.png",
+      "class": "carried",
+      "ok": true,
+      "detail": "byte-identical to review/act-2/states/s6-b3.png and to the tag — copied, never re-rendered"
+    },
+    {
+      "file": "s6-b4.png",
+      "class": "carried",
+      "ok": true,
+      "detail": "byte-identical to review/act-2/states/s6-b4.png and to the tag — copied, never re-rendered"
+    },
+    {
+      "file": "s6-b5.png",
+      "class": "carried",
+      "ok": true,
+      "detail": "byte-identical to review/act-2/states/s6-b5.png and to the tag — copied, never re-rendered"
+    },
+    {
+      "file": "s6-b6.png",
+      "class": "carried",
+      "ok": true,
+      "detail": "byte-identical to review/act-2/states/s6-b6.png and to the tag — copied, never re-rendered"
+    },
+    {
+      "file": "s6-b7.png",
+      "class": "carried",
+      "ok": true,
+      "detail": "byte-identical to review/act-2/states/s6-b7.png and to the tag — copied, never re-rendered"
+    },
+    {
+      "file": "s6-b8.png",
+      "class": "re-rendered",
+      "ok": true,
+      "detail": "differs from the tag — the ruled re-render landed"
+    },
+    {
+      "file": "s6-b9-return.png",
+      "class": "re-rendered",
+      "ok": true,
+      "detail": "differs from the tag — the ruled re-render landed"
+    },
+    {
+      "file": "s6-b9.png",
+      "class": "re-rendered",
+      "ok": true,
+      "detail": "differs from the tag — the ruled re-render landed"
+    },
+    {
+      "file": "s7-b1.png",
+      "class": "re-rendered",
+      "ok": true,
+      "detail": "differs from the tag — the ruled re-render landed"
+    },
+    {
+      "file": "s7-b2.png",
+      "class": "re-rendered",
+      "ok": true,
+      "detail": "differs from the tag — the ruled re-render landed"
+    },
+    {
+      "file": "s7-b3.png",
+      "class": "re-rendered",
+      "ok": true,
+      "detail": "differs from the tag — the ruled re-render landed"
+    },
+    {
+      "file": "s7-b4.png",
+      "class": "re-rendered",
+      "ok": true,
+      "detail": "differs from the tag — the ruled re-render landed"
+    },
+    {
+      "file": "s7-b5.png",
+      "class": "re-rendered",
+      "ok": true,
+      "detail": "differs from the tag — the ruled re-render landed"
+    },
+    {
+      "file": "s8-b1.png",
+      "class": "re-rendered",
+      "ok": true,
+      "detail": "differs from the tag — the ruled re-render landed"
+    },
+    {
+      "file": "s8-b2.png",
+      "class": "re-rendered",
+      "ok": true,
+      "detail": "differs from the tag — the ruled re-render landed"
+    },
+    {
+      "file": "s8-b3.png",
+      "class": "re-rendered",
+      "ok": true,
+      "detail": "differs from the tag — the ruled re-render landed"
+    },
+    {
+      "file": "s8-b4-return.png",
+      "class": "re-rendered",
+      "ok": true,
+      "detail": "differs from the tag — the ruled re-render landed"
+    },
+    {
+      "file": "s8-b4.png",
+      "class": "re-rendered",
+      "ok": true,
+      "detail": "differs from the tag — the ruled re-render landed"
+    },
+    {
+      "file": "s8-b5.png",
+      "class": "re-rendered",
+      "ok": true,
+      "detail": "differs from the tag — the ruled re-render landed"
+    },
+    {
+      "file": "s9-b1.png",
+      "class": "re-rendered",
+      "ok": true,
+      "detail": "differs from the tag — the ruled re-render landed"
+    },
+    {
+      "file": "s9-b2.png",
+      "class": "re-rendered",
+      "ok": true,
+      "detail": "differs from the tag — the ruled re-render landed"
+    },
+    {
+      "file": "s9-b3.png",
+      "class": "re-rendered",
+      "ok": true,
+      "detail": "differs from the tag — the ruled re-render landed"
+    },
+    {
+      "file": "s9-b4.png",
+      "class": "re-rendered",
+      "ok": true,
+      "detail": "differs from the tag — the ruled re-render landed"
+    },
+    {
+      "file": "s9-b5.png",
+      "class": "re-rendered",
+      "ok": true,
+      "detail": "differs from the tag — the ruled re-render landed"
+    },
+    {
+      "file": "s6-b2.png",
+      "class": "interior",
+      "ok": true,
+      "detail": "byte-identical to the tag — the periodic-table overlay — the s6-b2 builder the S6 seam runs"
+    },
+    {
+      "file": "s6-b9.png",
+      "class": "interior",
+      "ok": true,
+      "detail": "byte-identical to the tag — the mass state — the s6-b9 builder the S6 b9 seam runs"
+    },
+    {
+      "file": "s8-b4.png",
+      "class": "interior",
+      "ok": true,
+      "detail": "byte-identical to the tag — the four-currency chart — the s8-b4 builder the S8 b4 seam runs"
+    },
+    {
+      "file": "s10-b3.png",
+      "class": "interior",
+      "ok": true,
+      "detail": "byte-identical to the tag — the palladium frame — the s10-b3 builder the S10 b3 seam runs"
+    },
+    {
+      "file": "s7-b4.png",
+      "class": "banked",
+      "ok": true,
+      "detail": "byte-identical to the tag — the retired vault restage (r2.4) — banked on file, not deleted"
+    }
+  ]
+}

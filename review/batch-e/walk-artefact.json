@@ -1,0 +1,336 @@
+{
+  "date": "2026-09-04T03:16:45.684Z",
+  "session": "act-5-impl-1",
+  "question": "four settled frames differ on a continuous walk of ?proto=act5 while all twenty match cold — did Batch E cause it?",
+  "control": "the legacy deck measured against ITSELF at the same states: the same legacy slide walked 4-17 → 4-21 in one continuous page, versus direct-entered one state per page. Antialiasing, grade, layout and type are identical between the two; the only variable is the walk. (Comparing legacy frames with the approved cells proves nothing here — the deck canvas keeps will-change:transform, so its text is grayscale-antialiased and every legacy frame differs from every cell by thousands of glyph-edge pixels. That is the mechanism src/components/rasterHint.js exists for, and it is why the scenes release the hint.)",
+  "inheritedFromTheLegacyWalk": [
+    "s24-b3",
+    "s24-b4",
+    "s27-b2",
+    "s27-b3"
+  ],
+  "introducedByBatchE": [],
+  "rows": [
+    {
+      "cell": "s24-b1",
+      "legacyWalkVsLegacyCold": {
+        "diffPixels": 0,
+        "maxDelta": 0,
+        "box": null
+      },
+      "sceneWalkVsApprovedCell": {
+        "diffPixels": 0,
+        "maxDelta": 0,
+        "box": null
+      },
+      "bothShowIt": true
+    },
+    {
+      "cell": "s24-b2",
+      "legacyWalkVsLegacyCold": {
+        "diffPixels": 0,
+        "maxDelta": 0,
+        "box": null
+      },
+      "sceneWalkVsApprovedCell": {
+        "diffPixels": 0,
+        "maxDelta": 0,
+        "box": null
+      },
+      "bothShowIt": true
+    },
+    {
+      "cell": "s24-b3",
+      "legacyWalkVsLegacyCold": {
+        "diffPixels": 6,
+        "maxDelta": 7,
+        "box": {
+          "x": 1617,
+          "y": 558,
+          "w": 66,
+          "h": 103
+        }
+      },
+      "sceneWalkVsApprovedCell": {
+        "diffPixels": 6,
+        "maxDelta": 7,
+        "box": {
+          "x": 1617,
+          "y": 558,
+          "w": 66,
+          "h": 103
+        }
+      },
+      "bothShowIt": true
+    },
+    {
+      "cell": "s24-b4",
+      "legacyWalkVsLegacyCold": {
+        "diffPixels": 6,
+        "maxDelta": 7,
+        "box": {
+          "x": 1617,
+          "y": 558,
+          "w": 66,
+          "h": 103
+        }
+      },
+      "sceneWalkVsApprovedCell": {
+        "diffPixels": 6,
+        "maxDelta": 7,
+        "box": {
+          "x": 1617,
+          "y": 558,
+          "w": 66,
+          "h": 103
+        }
+      },
+      "bothShowIt": true
+    },
+    {
+      "cell": "s25-b1",
+      "legacyWalkVsLegacyCold": {
+        "diffPixels": 0,
+        "maxDelta": 0,
+        "box": null
+      },
+      "sceneWalkVsApprovedCell": {
+        "diffPixels": 0,
+        "maxDelta": 0,
+        "box": null
+      },
+      "bothShowIt": true
+    },
+    {
+      "cell": "s25-b2",
+      "legacyWalkVsLegacyCold": {
+        "diffPixels": 0,
+        "maxDelta": 0,
+        "box": null
+      },
+      "sceneWalkVsApprovedCell": {
+        "diffPixels": 0,
+        "maxDelta": 0,
+        "box": null
+      },
+      "bothShowIt": true
+    },
+    {
+      "cell": "s25-b3",
+      "legacyWalkVsLegacyCold": {
+        "diffPixels": 0,
+        "maxDelta": 0,
+        "box": null
+      },
+      "sceneWalkVsApprovedCell": {
+        "diffPixels": 0,
+        "maxDelta": 0,
+        "box": null
+      },
+      "bothShowIt": true
+    },
+    {
+      "cell": "s25-b4",
+      "legacyWalkVsLegacyCold": {
+        "diffPixels": 0,
+        "maxDelta": 0,
+        "box": null
+      },
+      "sceneWalkVsApprovedCell": {
+        "diffPixels": 0,
+        "maxDelta": 0,
+        "box": null
+      },
+      "bothShowIt": true
+    },
+    {
+      "cell": "s26-b1",
+      "legacyWalkVsLegacyCold": {
+        "diffPixels": 0,
+        "maxDelta": 0,
+        "box": null
+      },
+      "sceneWalkVsApprovedCell": {
+        "diffPixels": 0,
+        "maxDelta": 0,
+        "box": null
+      },
+      "bothShowIt": true
+    },
+    {
+      "cell": "s26-b2",
+      "legacyWalkVsLegacyCold": {
+        "diffPixels": 0,
+        "maxDelta": 0,
+        "box": null
+      },
+      "sceneWalkVsApprovedCell": {
+        "diffPixels": 0,
+        "maxDelta": 0,
+        "box": null
+      },
+      "bothShowIt": true
+    },
+    {
+      "cell": "s26-b3",
+      "legacyWalkVsLegacyCold": {
+        "diffPixels": 0,
+        "maxDelta": 0,
+        "box": null
+      },
+      "sceneWalkVsApprovedCell": {
+        "diffPixels": 0,
+        "maxDelta": 0,
+        "box": null
+      },
+      "bothShowIt": true
+    },
+    {
+      "cell": "s26-b4",
+      "legacyWalkVsLegacyCold": {
+        "diffPixels": 0,
+        "maxDelta": 0,
+        "box": null
+      },
+      "sceneWalkVsApprovedCell": {
+        "diffPixels": 0,
+        "maxDelta": 0,
+        "box": null
+      },
+      "bothShowIt": true
+    },
+    {
+      "cell": "s26-b5",
+      "legacyWalkVsLegacyCold": {
+        "diffPixels": 0,
+        "maxDelta": 0,
+        "box": null
+      },
+      "sceneWalkVsApprovedCell": {
+        "diffPixels": 0,
+        "maxDelta": 0,
+        "box": null
+      },
+      "bothShowIt": true
+    },
+    {
+      "cell": "s26-b6",
+      "legacyWalkVsLegacyCold": {
+        "diffPixels": 0,
+        "maxDelta": 0,
+        "box": null
+      },
+      "sceneWalkVsApprovedCell": {
+        "diffPixels": 0,
+        "maxDelta": 0,
+        "box": null
+      },
+      "bothShowIt": true
+    },
+    {
+      "cell": "s26-b7",
+      "legacyWalkVsLegacyCold": {
+        "diffPixels": 0,
+        "maxDelta": 0,
+        "box": null
+      },
+      "sceneWalkVsApprovedCell": {
+        "diffPixels": 0,
+        "maxDelta": 0,
+        "box": null
+      },
+      "bothShowIt": true
+    },
+    {
+      "cell": "s26-b8",
+      "legacyWalkVsLegacyCold": {
+        "diffPixels": 0,
+        "maxDelta": 0,
+        "box": null
+      },
+      "sceneWalkVsApprovedCell": {
+        "diffPixels": 0,
+        "maxDelta": 0,
+        "box": null
+      },
+      "bothShowIt": true
+    },
+    {
+      "cell": "s26-b9",
+      "legacyWalkVsLegacyCold": {
+        "diffPixels": 0,
+        "maxDelta": 0,
+        "box": null
+      },
+      "sceneWalkVsApprovedCell": {
+        "diffPixels": 0,
+        "maxDelta": 0,
+        "box": null
+      },
+      "bothShowIt": true
+    },
+    {
+      "cell": "s27-b1",
+      "legacyWalkVsLegacyCold": {
+        "diffPixels": 0,
+        "maxDelta": 0,
+        "box": null
+      },
+      "sceneWalkVsApprovedCell": {
+        "diffPixels": 0,
+        "maxDelta": 0,
+        "box": null
+      },
+      "bothShowIt": true
+    },
+    {
+      "cell": "s27-b2",
+      "legacyWalkVsLegacyCold": {
+        "diffPixels": 7083,
+        "maxDelta": 61,
+        "box": {
+          "x": 259,
+          "y": 352,
+          "w": 1406,
+          "h": 70
+        }
+      },
+      "sceneWalkVsApprovedCell": {
+        "diffPixels": 7083,
+        "maxDelta": 61,
+        "box": {
+          "x": 259,
+          "y": 352,
+          "w": 1406,
+          "h": 70
+        }
+      },
+      "bothShowIt": true
+    },
+    {
+      "cell": "s27-b3",
+      "legacyWalkVsLegacyCold": {
+        "diffPixels": 7083,
+        "maxDelta": 61,
+        "box": {
+          "x": 259,
+          "y": 352,
+          "w": 1406,
+          "h": 70
+        }
+      },
+      "sceneWalkVsApprovedCell": {
+        "diffPixels": 7083,
+        "maxDelta": 61,
+        "box": {
+          "x": 259,
+          "y": 352,
+          "w": 1406,
+          "h": 70
+        }
+      },
+      "bothShowIt": true
+    }
+  ],
+  "consoleErrors": []
+}

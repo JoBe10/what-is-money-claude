@@ -1,4 +1,4 @@
-import { ComparisonAssetHeader, TABLE_HEADERS_DARK_FIELD } from './ComparisonAssetHeader.js';
+import { ComparisonAssetHeader } from './ComparisonAssetHeader.js';
 import { DotRating } from './DotRating.js';
 
 function createColumn(className) {
@@ -56,12 +56,11 @@ export function AssetComparisonTable({
     cell.className = 's4-comparison-table__asset-heading';
     if (index === 3) cell.classList.add('s4-comparison-table__family-break');
     cell.scope = 'col';
-    // The table-header exception test (R7.4 §B): the headers sit on the
-    // boundary between diagram scale and the table's own masthead. Toggle,
-    // screenshot, presenter rules.
-    cell.appendChild(ComparisonAssetHeader({
-      asset, compact: true, darkField: TABLE_HEADERS_DARK_FIELD
-    }));
+    // The heading carries the label alone (the Acts III–IV final ruling 2,
+    // 3 Sep 2026, master §13): the five glyph marks are retired, and the
+    // candidates' renders ride as a header band above the table, built by the
+    // comparison slide. The R7.4 table-header toggle is answered and gone.
+    cell.appendChild(ComparisonAssetHeader({ asset, compact: true, mark: false }));
     assetRow.appendChild(cell);
   });
   thead.appendChild(assetRow);

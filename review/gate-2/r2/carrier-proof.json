@@ -1,0 +1,159 @@
+{
+  "ruling": "the disc sits centered between the carrier arcs, fully symmetric",
+  "legacy405": [
+    {
+      "build": 0,
+      "name": "the claim, inherited and centered",
+      "stage": {
+        "x": 960,
+        "y": 500
+      },
+      "disc": {
+        "x": 960,
+        "y": 500
+      },
+      "shell": {
+        "x": 960.0000305175781,
+        "y": 500
+      },
+      "centered": true
+    },
+    {
+      "build": 3,
+      "name": "SAVE — the shell around the claim",
+      "stage": {
+        "x": 1470,
+        "y": 590
+      },
+      "disc": {
+        "x": 1470,
+        "y": 590
+      },
+      "shell": {
+        "x": 1470,
+        "y": 590
+      },
+      "centered": true
+    }
+  ],
+  "gate1CarrierRow": [
+    {
+      "candidate": "a",
+      "size": 48,
+      "mark": {
+        "x": 218,
+        "y": 1456.390625
+      },
+      "shell": {
+        "x": 218,
+        "y": 1456.390625
+      },
+      "centered": true
+    },
+    {
+      "candidate": "a",
+      "size": 116,
+      "mark": {
+        "x": 676,
+        "y": 1406.390625
+      },
+      "shell": {
+        "x": 676,
+        "y": 1406.390625
+      },
+      "centered": true
+    },
+    {
+      "candidate": "a",
+      "size": 176,
+      "mark": {
+        "x": 1314,
+        "y": 1356.390625
+      },
+      "shell": {
+        "x": 1314,
+        "y": 1356.390625
+      },
+      "centered": true
+    },
+    {
+      "candidate": "b",
+      "size": null,
+      "mark": {
+        "x": 218,
+        "y": 4155.890625
+      },
+      "shell": {
+        "x": 218,
+        "y": 4155.890625
+      },
+      "centered": true
+    },
+    {
+      "candidate": "b",
+      "size": null,
+      "mark": {
+        "x": 676,
+        "y": 4105.890625
+      },
+      "shell": {
+        "x": 676,
+        "y": 4105.890625
+      },
+      "centered": true
+    },
+    {
+      "candidate": "b",
+      "size": null,
+      "mark": {
+        "x": 1314,
+        "y": 4055.890625
+      },
+      "shell": {
+        "x": 1314,
+        "y": 4055.890625
+      },
+      "centered": true
+    },
+    {
+      "candidate": "c",
+      "size": null,
+      "mark": {
+        "x": 218,
+        "y": 6855.390625
+      },
+      "shell": {
+        "x": 218,
+        "y": 6855.390625
+      },
+      "centered": true
+    },
+    {
+      "candidate": "c",
+      "size": null,
+      "mark": {
+        "x": 676,
+        "y": 6805.390625
+      },
+      "shell": {
+        "x": 676,
+        "y": 6805.390625
+      },
+      "centered": true
+    },
+    {
+      "candidate": "c",
+      "size": null,
+      "mark": {
+        "x": 1314,
+        "y": 6755.390625
+      },
+      "shell": {
+        "x": 1314,
+        "y": 6755.390625
+      },
+      "centered": true
+    }
+  ],
+  "consoleErrors": []
+}

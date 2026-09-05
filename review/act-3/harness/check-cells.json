@@ -1,0 +1,668 @@
+{
+  "date": "2026-09-03T13:11:53.931Z",
+  "session": "acts-3-4-final",
+  "limits": {
+    "cornerMean": 6,
+    "borderMean": 6
+  },
+  "frozenBeatMap": {
+    "S11": 5,
+    "S12": 3,
+    "S13": 7,
+    "S14": 3,
+    "S15": 7,
+    "total": 25,
+    "cells": 31
+  },
+  "ruledClasses": {
+    "S11-F1": "ADAPT",
+    "S12-F1": "ADAPT",
+    "S13-F1": "ADAPT",
+    "S14-F1": "ADAPT",
+    "S15-F1": "NEW",
+    "S15-F2": "NEW",
+    "S15-F3": "ADAPT"
+  },
+  "carriedSha": {
+    "s14-b1-study.png": "e7cc6fff9a1142573f5a30878505e8625f1c57ca1cac1b95f881167458821081",
+    "s15-b7-triad.png": "8e69451b67206dda1f56e54543a5e088290a08e6c692e701baf12ee44ee6538d",
+    "s12-b2-household.png": "9512f386e3e9ecda4086c5f8b53581595620d30bc16665cd3995708bc80f98b5",
+    "s12-b2.png": "2c83b833f83ee287dfabce4eeec7fbf1ba016528789ad891737f126de3ad0b55",
+    "s12-b3.png": "b6733b08b218a1e650165221546d40f934aa3356a0fecfdc76a5171170be4a0a"
+  },
+  "retiredFiles": [
+    "s12-b3-block.png",
+    "s15-b1-boxes.png",
+    "s15-b2-boxes.png",
+    "s15-b3-boxes.png",
+    "s15-b4-boxes.png",
+    "s15-b5-boxes.png",
+    "s15-b6-boxes.png",
+    "s13-b5-pair.png",
+    "s14-b1-study.png",
+    "s12-b2-household.png",
+    "s15-b7-triad.png"
+  ],
+  "reportedNotGated": "warmPixelsReported — the act carries the accent by design at the ladder’s foundation state, both candidates’ foundation scopes and the disc at the triad’s center, so warmth is evidence here rather than a gate.",
+  "cells": [
+    {
+      "id": "s11-b1",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 245.3,
+      "pxAbove32": 15409,
+      "warmPixelsReported": 3581
+    },
+    {
+      "id": "s11-b2",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 245.3,
+      "pxAbove32": 21087,
+      "warmPixelsReported": 5428
+    },
+    {
+      "id": "s11-b3",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 245.3,
+      "pxAbove32": 28479,
+      "warmPixelsReported": 8676
+    },
+    {
+      "id": "s11-b4",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 245.3,
+      "pxAbove32": 33226,
+      "warmPixelsReported": 10444
+    },
+    {
+      "id": "s11-b5",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 43848,
+      "warmPixelsReported": 12732
+    },
+    {
+      "id": "s12-b1",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 191,
+      "pxAbove32": 3491,
+      "warmPixelsReported": 610
+    },
+    {
+      "id": "s12-b2",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 243.6,
+      "pxAbove32": 27380,
+      "warmPixelsReported": 19473
+    },
+    {
+      "id": "s12-b3",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 40023,
+      "warmPixelsReported": 22056
+    },
+    {
+      "id": "s13-b1",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 127,
+      "pxAbove32": 3800,
+      "warmPixelsReported": 214
+    },
+    {
+      "id": "s13-b2",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 12609,
+      "warmPixelsReported": 6372
+    },
+    {
+      "id": "s13-b3",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 18066,
+      "warmPixelsReported": 8268
+    },
+    {
+      "id": "s13-b4",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 30452,
+      "warmPixelsReported": 9680
+    },
+    {
+      "id": "s13-b5",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 250.1,
+      "pxAbove32": 41242,
+      "warmPixelsReported": 13027
+    },
+    {
+      "id": "s13-b6",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 250.1,
+      "pxAbove32": 48770,
+      "warmPixelsReported": 14740
+    },
+    {
+      "id": "s13-b7",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 57206,
+      "warmPixelsReported": 16541
+    },
+    {
+      "id": "s14-b1",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 39649,
+      "warmPixelsReported": 16100
+    },
+    {
+      "id": "s14-b2",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 45734,
+      "warmPixelsReported": 16919
+    },
+    {
+      "id": "s14-b3",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 46601,
+      "warmPixelsReported": 19980
+    },
+    {
+      "id": "s15-b1-a",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 96,
+      "pxAbove32": 4348,
+      "warmPixelsReported": 187
+    },
+    {
+      "id": "s15-b2-a",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 191,
+      "pxAbove32": 9783,
+      "warmPixelsReported": 862
+    },
+    {
+      "id": "s15-b3-a",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 221.7,
+      "pxAbove32": 33359,
+      "warmPixelsReported": 2347
+    },
+    {
+      "id": "s15-b4-a",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 221.7,
+      "pxAbove32": 41980,
+      "warmPixelsReported": 4233
+    },
+    {
+      "id": "s15-b5-a",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 48104,
+      "warmPixelsReported": 9936
+    },
+    {
+      "id": "s15-b6-a",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 221.7,
+      "pxAbove32": 27424,
+      "warmPixelsReported": 7114
+    },
+    {
+      "id": "s15-b7",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 34646,
+      "warmPixelsReported": 8627
+    },
+    {
+      "id": "s15-b1-b",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 151,
+      "pxAbove32": 2700,
+      "warmPixelsReported": 264
+    },
+    {
+      "id": "s15-b2-b",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 191,
+      "pxAbove32": 6756,
+      "warmPixelsReported": 938
+    },
+    {
+      "id": "s15-b3-b",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 223.6,
+      "pxAbove32": 15365,
+      "warmPixelsReported": 2217
+    },
+    {
+      "id": "s15-b4-b",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 223.6,
+      "pxAbove32": 23986,
+      "warmPixelsReported": 4103
+    },
+    {
+      "id": "s15-b5-b",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 28630,
+      "warmPixelsReported": 3324
+    },
+    {
+      "id": "s15-b6-b",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 7958,
+      "warmPixelsReported": 513
+    }
+  ],
+  "checks": 30,
+  "failures": 0,
+  "results": [
+    {
+      "name": "CELLS: 31 measured — corner ≤ 6, border ≤ 6, content present, 1920×1080",
+      "ok": true,
+      "detail": "31/31"
+    },
+    {
+      "name": "CELLS: the sheet carries exactly 31 cells (25 beats; S15 twice, once per candidate)",
+      "ok": true,
+      "detail": "31"
+    },
+    {
+      "name": "MAP: the ruled classes transcribed here are the classes the amended docs/act-3-provenance.md states",
+      "ok": true,
+      "detail": "7/7 rows agree"
+    },
+    {
+      "name": "MAP: the coordination-scales NEW row is recorded as not built",
+      "ok": true,
+      "detail": "recorded"
+    },
+    {
+      "name": "MAP: Scene 15 is recorded as presenter-reopened by name (ruling 4)",
+      "ok": true,
+      "detail": "recorded"
+    },
+    {
+      "name": "MAP: the candidate-A selection is recorded on the S15 row (Batch C ruling 1)",
+      "ok": true,
+      "detail": "recorded"
+    },
+    {
+      "name": "MAP: the exit is recorded as S15-F3 (ADAPT) — the base slab and the hinge question — and the triad-return coda as on file (the Acts III–IV final ruling 3)",
+      "ok": true,
+      "detail": "recorded"
+    },
+    {
+      "name": "MAP: S11-F1 no longer serves S15 b7 — the disc’s Act III appearances are S11 b1–b5 alone",
+      "ok": true,
+      "detail": "recorded"
+    },
+    {
+      "name": "MAP: S12-F1 records the household frame’s retirement and serves three beats (the Acts III–IV final ruling 1)",
+      "ok": true,
+      "detail": "recorded"
+    },
+    {
+      "name": "MAP: S12-F1’s reclassification is recorded with its one change (the Act III final ruling 1)",
+      "ok": true,
+      "detail": "recorded"
+    },
+    {
+      "name": "MAP: every cell’s class is the class the map rules for its frame",
+      "ok": true,
+      "detail": "every framed cell agrees with the map"
+    },
+    {
+      "name": "MAP: no cell is unclassified",
+      "ok": true,
+      "detail": "31/31 carry a frame and a class"
+    },
+    {
+      "name": "MAP: every cell names its source (legacy slide, or the ruling that opened it)",
+      "ok": true,
+      "detail": "all named"
+    },
+    {
+      "name": "BEATS: the approved set covers every beat of the frozen map exactly once — Act III is 25",
+      "ok": true,
+      "detail": "S11 5 · S12 3 · S13 7 · S14 3 · S15 7 = 25 approved beats"
+    },
+    {
+      "name": "SELECTION: the six candidate-A cells are the approved S15 states, and the six B cells are on file",
+      "ok": true,
+      "detail": "A approved 6/6 · B on-file 6/6"
+    },
+    {
+      "name": "SELECTION: no cell outside Scene 15 carries a candidate system",
+      "ok": true,
+      "detail": "18 non-S15 cells clean"
+    },
+    {
+      "name": "SELECTION: the only review classes on the record are approved and on-file (the go-ahead is given)",
+      "ok": true,
+      "detail": "approved · on-file"
+    },
+    {
+      "name": "EXIT: s15-b7 is the act’s final beat — S15-F3, the base slab and the hinge question, ADAPT, approved, captured fresh — the triad-return coda on file as s15-b7-triad, and s14-b4 gone from the sheet",
+      "ok": true,
+      "detail": "exit true · triad coda on file true · s14-b4 gone true"
+    },
+    {
+      "name": "HOUSEHOLD: Scene 12 stands at b1–b3, b2 and b3 carrying the approved Argentina and principle bytes; the household row on file as s12-b2-household and s12-b4 gone",
+      "ok": true,
+      "detail": "beats 1,2,3 · carried true · household on file true"
+    },
+    {
+      "name": "THREAD: the disc (the legacy token) is built exactly once, inside the triad hub — and ClaimObject appears nowhere",
+      "ok": true,
+      "detail": "token constructions 1 · hub-gated true · ClaimObject absent true"
+    },
+    {
+      "name": "REGISTER: no render and no disc enters either tower candidate — line grammar throughout",
+      "ok": true,
+      "detail": "candidate A clean true · candidate B clean true"
+    },
+    {
+      "name": "LADDER: the builder removes the stop glyphs and stands renders in the stops (the standing ruled change)",
+      "ok": true,
+      "detail": "glyphs removed · DarkFieldImage in the stop · the component’s state machine drives presence"
+    },
+    {
+      "name": "BAND: the stage and job marks use the 188×188 contain box (the rails law, r2.5)",
+      "ok": true,
+      "detail": "188 cap on both axes, each render in a box of its own aspect"
+    },
+    {
+      "name": "ASSIGNMENTS: the stage marks are the presenter’s neutral set — collectible · store · medium · unit — and no monetary asset is a stage mark",
+      "ok": true,
+      "detail": "all four recorded · stages carry no monetary asset"
+    },
+    {
+      "name": "ASSIGNMENTS: the triad’s job objects are the same three marks (store · medium · unit) — one family for jobs and stages",
+      "ok": true,
+      "detail": "the three job objects match the stage marks"
+    },
+    {
+      "name": "CLIMBERS: the coin reaches the ladder only through a berth — S14 b3 is the only monetary object in sight",
+      "ok": true,
+      "detail": "bitcoin at the sov berth only, never a stage mark"
+    },
+    {
+      "name": "CARRIED: s14-b1-study.png carries the r1 study’s bytes (r2 ruling 4); s15-b7-triad.png the approved s14-b4’s (the Act III final ruling 3, retired by the Acts III–IV final ruling 3); s12-b2-household.png the approved household row’s, and s12-b2.png / s12-b3.png the approved Argentina and principle cells’ (the Acts III–IV final ruling 1) — sha256 proven",
+      "ok": true,
+      "detail": "5 files match"
+    },
+    {
+      "name": "RETIRED: states.json records the r2 retirements (the study, the pair staging)",
+      "ok": true,
+      "detail": "study true · pair true"
+    },
+    {
+      "name": "RETIRED: states.json records the Acts III–IV final retirements (the household row, the triad coda)",
+      "ok": true,
+      "detail": "household true · triad coda true"
+    },
+    {
+      "name": "RETIRED: the superseded stagings are on file under their retired names (s12-b3-block, s12-b2-household, s15-b*-boxes, s13-b5-pair, s14-b1-study, s15-b7-triad)",
+      "ok": true,
+      "detail": "11/11 on file"
+    }
+  ]
+}

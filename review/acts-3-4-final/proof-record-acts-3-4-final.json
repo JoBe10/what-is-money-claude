@@ -1,0 +1,704 @@
+{
+  "date": "2026-09-03T13:21:08.523Z",
+  "session": "acts-3-4-final",
+  "baseline": "batch-d",
+  "method": "sha256 of every cell PNG on both sheets against the file at the baseline tag; byte-identity implies zero differing pixels; a carried cell is checked against the tag file whose bytes it carries",
+  "counts": {
+    "untouched": 77,
+    "carried": 4,
+    "re-staged": 3
+  },
+  "sheets": [
+    {
+      "dir": "review/act-3/states",
+      "files": 42,
+      "tagFiles": 41,
+      "gone": [
+        "s12-b4.png"
+      ],
+      "goneOk": true
+    },
+    {
+      "dir": "review/act-4/states",
+      "files": 42,
+      "tagFiles": 42,
+      "gone": [],
+      "goneOk": true
+    }
+  ],
+  "failures": 0,
+  "rows": [
+    {
+      "sheet": "review/act-3/states",
+      "file": "s11-b1.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "d4552e6f7d4d9d4671a22ea9e514d99c2b11e92b43f0a75e528d69b377e28f02"
+    },
+    {
+      "sheet": "review/act-3/states",
+      "file": "s11-b2.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "14e5444f2132e8d03c112d95b4189273ab6486b73f0a004659a89fdc2c6ebdf9"
+    },
+    {
+      "sheet": "review/act-3/states",
+      "file": "s11-b3.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "a4ae5108164b787f84751f79e23743cf91fca4186fbe4d8da6e4ca0ecce26fcf"
+    },
+    {
+      "sheet": "review/act-3/states",
+      "file": "s11-b4.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "ca550338a89df784b9dca8a87fed8dc9ad5c82beae78636b0d5e627689869add"
+    },
+    {
+      "sheet": "review/act-3/states",
+      "file": "s11-b5.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "5f28c719a7095980220ac69e1d3ffef0a1b67fc4c1994cb6716fde495a0fe16a"
+    },
+    {
+      "sheet": "review/act-3/states",
+      "file": "s12-b1.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "bcb61ebe7ffdf80f4725ac86f5110392bc74fcb421b052237cc28d35eb41616a"
+    },
+    {
+      "sheet": "review/act-3/states",
+      "file": "s12-b2-household.png",
+      "class": "carried",
+      "ok": true,
+      "detail": "byte-identical to the tag's s12-b2.png — the bytes carried under the new name",
+      "sha256": "9512f386e3e9ecda4086c5f8b53581595620d30bc16665cd3995708bc80f98b5"
+    },
+    {
+      "sheet": "review/act-3/states",
+      "file": "s12-b2.png",
+      "class": "carried",
+      "ok": true,
+      "detail": "byte-identical to the tag's s12-b3.png — the bytes carried under the new name",
+      "sha256": "2c83b833f83ee287dfabce4eeec7fbf1ba016528789ad891737f126de3ad0b55"
+    },
+    {
+      "sheet": "review/act-3/states",
+      "file": "s12-b3-block.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "13f320a675724dc4dc6df7ad8202d72f8f32ec7631ea13937b920efd4ef78a7c"
+    },
+    {
+      "sheet": "review/act-3/states",
+      "file": "s12-b3.png",
+      "class": "carried",
+      "ok": true,
+      "detail": "byte-identical to the tag's s12-b4.png — the bytes carried under the new name",
+      "sha256": "b6733b08b218a1e650165221546d40f934aa3356a0fecfdc76a5171170be4a0a"
+    },
+    {
+      "sheet": "review/act-3/states",
+      "file": "s13-b1.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "d8dc74506c1aa50c0cb6a52254d11372a8aa13e69a758dd8d1f098c8ba5f3756"
+    },
+    {
+      "sheet": "review/act-3/states",
+      "file": "s13-b2.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "fcf78ae4ed0d5de558ecafcb20bf3f91c99363469fe97b9a6e85e282d0613b5a"
+    },
+    {
+      "sheet": "review/act-3/states",
+      "file": "s13-b3.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "28fca8b5d1f9fc7e20e761d91401820dc9c4f3c4503d7b3ea7ce6487e8370ebf"
+    },
+    {
+      "sheet": "review/act-3/states",
+      "file": "s13-b4.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "d851bed32b69b09327182ffaa83c6a70bac0bf51298b17e688736a4ebe80395f"
+    },
+    {
+      "sheet": "review/act-3/states",
+      "file": "s13-b5-pair.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "c1c8d6ea8cdbc15eae434cce9a6236735b4677d7fa8eb356b095becc545021a6"
+    },
+    {
+      "sheet": "review/act-3/states",
+      "file": "s13-b5.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "cd185bd46f5bff0a54211bad245f76e673e55ae69dacdf84f388271bac636a34"
+    },
+    {
+      "sheet": "review/act-3/states",
+      "file": "s13-b6.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "35cb6ae38ee386988bb3fb0a726d4439105a90e0d6ea7fa6a40dbe173ac376e3"
+    },
+    {
+      "sheet": "review/act-3/states",
+      "file": "s13-b7.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "d072c9ff9fcb4a7b4ac9a611debe5e854982335375a7fc7f55440ab0c441500e"
+    },
+    {
+      "sheet": "review/act-3/states",
+      "file": "s14-b1-study.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "e7cc6fff9a1142573f5a30878505e8625f1c57ca1cac1b95f881167458821081"
+    },
+    {
+      "sheet": "review/act-3/states",
+      "file": "s14-b1.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "83bf547fbc9928a79609e813e45914de4352a06ff95342b710f99ac1331687cc"
+    },
+    {
+      "sheet": "review/act-3/states",
+      "file": "s14-b2.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "7a20461a7e9bbd8f86fd0c75591420442f88cd95744ff6357d6136e153eac6a1"
+    },
+    {
+      "sheet": "review/act-3/states",
+      "file": "s14-b3.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "3ac0ea59ffb25b41b86a7f723155cd5a35d43412c8778480aa38d4b175019b74"
+    },
+    {
+      "sheet": "review/act-3/states",
+      "file": "s15-b1-a.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "573ea2ec705a0229a89ab8556c7fb369d75b1b0a0da58f3bb3cf05a75ff2cfbe"
+    },
+    {
+      "sheet": "review/act-3/states",
+      "file": "s15-b1-b.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "0fa40dc6a2d35a7a70ae0565321c451aa415d8db6445e02820d06f78c0937c24"
+    },
+    {
+      "sheet": "review/act-3/states",
+      "file": "s15-b1-boxes.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "170c15b5c9eccca6b90f866b1429fdac1aea4215f2cafb0b661d992b206627f4"
+    },
+    {
+      "sheet": "review/act-3/states",
+      "file": "s15-b2-a.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "f02802ef8f78bbabc1580a392673cdca456728dee55a231fcdc499ed9a38d169"
+    },
+    {
+      "sheet": "review/act-3/states",
+      "file": "s15-b2-b.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "e93f100114237cb73b1935175a4a8d38ffea48d69873d50d7e1738dfe2c130d7"
+    },
+    {
+      "sheet": "review/act-3/states",
+      "file": "s15-b2-boxes.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "7a06f08894a4579aa54068d55d114554e69151c4b32344e3eb0b8f8b2bb27c98"
+    },
+    {
+      "sheet": "review/act-3/states",
+      "file": "s15-b3-a.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "7f04be23a99ae81c43aa461b3e48f10124ee43f1ecaa692a16a510be9e9c61b3"
+    },
+    {
+      "sheet": "review/act-3/states",
+      "file": "s15-b3-b.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "f11c1becb579f9b0c9937e7b535eb62a9d36c56cd3bbbdd6e2f06e8697977dbb"
+    },
+    {
+      "sheet": "review/act-3/states",
+      "file": "s15-b3-boxes.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "ebedfe07a41b8ddc4d5a07c8cf30b8e71e6491eb9b43c406a608cc29f17ff69c"
+    },
+    {
+      "sheet": "review/act-3/states",
+      "file": "s15-b4-a.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "a5b3e145b89784c7aa61129cff3bcd703fc8ee2ea759f414c31a76336ff8b9d6"
+    },
+    {
+      "sheet": "review/act-3/states",
+      "file": "s15-b4-b.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "0ca4fce0e91934644c63abea3098bf78b1155f2976406cc78ee77931d22b821a"
+    },
+    {
+      "sheet": "review/act-3/states",
+      "file": "s15-b4-boxes.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "b3b5eaefb8b92871bafef00291cb92a50cb383d1d78c0353103bffd8b3f000c4"
+    },
+    {
+      "sheet": "review/act-3/states",
+      "file": "s15-b5-a.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "8fa51ea060e6e3f2e88a4156afa37b0cbb7e0c0a6cbb0dea83d563ebef4b05c2"
+    },
+    {
+      "sheet": "review/act-3/states",
+      "file": "s15-b5-b.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "c9a44093c2b4d33d891477236d48c8b5eb8d14a49dc7f6d518ea29b79de1a895"
+    },
+    {
+      "sheet": "review/act-3/states",
+      "file": "s15-b5-boxes.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "92c1782d2477446251847003f94d6a968b9884dd833f17820cf9a38751cf792c"
+    },
+    {
+      "sheet": "review/act-3/states",
+      "file": "s15-b6-a.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "f182837631a5100a4674ba89b30f12eae9d0acae3234595cd06e5c5de46f063f"
+    },
+    {
+      "sheet": "review/act-3/states",
+      "file": "s15-b6-b.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "df2f5e05da5e1f6a4b0f74781ef86120c4b0da27205ee0c045dd29a8e6da5c9d"
+    },
+    {
+      "sheet": "review/act-3/states",
+      "file": "s15-b6-boxes.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "b4dec5e858fdac72edaacdee698259655688bf43618a5879a8b05a6aa2645db2"
+    },
+    {
+      "sheet": "review/act-3/states",
+      "file": "s15-b7-triad.png",
+      "class": "carried",
+      "ok": true,
+      "detail": "byte-identical to the tag's s15-b7.png — the bytes carried under the new name",
+      "sha256": "8e69451b67206dda1f56e54543a5e088290a08e6c692e701baf12ee44ee6538d"
+    },
+    {
+      "sheet": "review/act-3/states",
+      "file": "s15-b7.png",
+      "class": "re-staged",
+      "ok": true,
+      "detail": "ruling 3 — the exit on the base slab: the tower receded to its glowing base slab, the hinge question beneath it (rendered fresh; the triad coda retired to file)",
+      "sha256": "0ca3188b121836d3ea902d2913bf07f2cd88572bf632128105a879d7088f7873"
+    },
+    {
+      "sheet": "review/act-4/states",
+      "file": "s16-b1.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "3a04d0906fce146db796a07c7dbaeedf86650226c1693a4198b4379ca673e580"
+    },
+    {
+      "sheet": "review/act-4/states",
+      "file": "s16-b2.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "810f56db6a96c37d860ff24e807c6f7046d63012014070e6c9058625143a5802"
+    },
+    {
+      "sheet": "review/act-4/states",
+      "file": "s16-b3.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "810f56db6a96c37d860ff24e807c6f7046d63012014070e6c9058625143a5802"
+    },
+    {
+      "sheet": "review/act-4/states",
+      "file": "s16-b4.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "ab7b385f7d4d806abfc570fd8cdf726acbd920a9d86fee4218d8c1870753401c"
+    },
+    {
+      "sheet": "review/act-4/states",
+      "file": "s16-b5.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "561f802fc87b93876f4b943f8f5a88d6dc5788b872f77b8489d006fb6c3df291"
+    },
+    {
+      "sheet": "review/act-4/states",
+      "file": "s16-b6.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "f9aa260a8d858967a388f1074db577ade80abf9014553254e1d0a9df4883bff3"
+    },
+    {
+      "sheet": "review/act-4/states",
+      "file": "s16-b7.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "648a5f18fe0c97870f8029b4b30a6934f29fdaf8de295f1e1db4f754e4cb26df"
+    },
+    {
+      "sheet": "review/act-4/states",
+      "file": "s16-b8.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "8d80fda7a31fd93f1ac4b86c52a4fb4a7338aeec5b972b49b59bd98dfc0f63dc"
+    },
+    {
+      "sheet": "review/act-4/states",
+      "file": "s17-b1.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "12590e9325b5264204128cce759a2e07590831618f7491fdc2d0f9932fdb7751"
+    },
+    {
+      "sheet": "review/act-4/states",
+      "file": "s17-b2.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "dee22619a8155175ea79467e134c768d503a1f16c998e7ff50b873bf50a207ce"
+    },
+    {
+      "sheet": "review/act-4/states",
+      "file": "s17-b3.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "1541dded49b2fdf8f6b11d06538bfff010971aee7a5c96b602025dccb8b3a353"
+    },
+    {
+      "sheet": "review/act-4/states",
+      "file": "s17-b4.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "da0bfa0c98909d2aeb1a744dab5e00fc9bb13015cc7ceccbdac1be6437c0e3af"
+    },
+    {
+      "sheet": "review/act-4/states",
+      "file": "s17-b5.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "9b81d7ee44ffeb21acfb3347ae9a038faba64e5dd5578ab7b8198a33efa9cc0e"
+    },
+    {
+      "sheet": "review/act-4/states",
+      "file": "s18-b1.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "f32a79a428a7a30365f6461083ce700e6c5085fdea0d398565cf788fbb87a19d"
+    },
+    {
+      "sheet": "review/act-4/states",
+      "file": "s18-b2.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "f13e27c40b22215f1b3a65e91579be75aa33b54011fe0487890b49a912d4e384"
+    },
+    {
+      "sheet": "review/act-4/states",
+      "file": "s18-b3.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "8af4508d79639ed8274c97cafb11636b749d93d7b4f6816e4fb6383dbfc3bb71"
+    },
+    {
+      "sheet": "review/act-4/states",
+      "file": "s18-b4.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "b84ca9006cdeee44c2f5f5c29611d8e16387799f3f275761bd93b14e96232509"
+    },
+    {
+      "sheet": "review/act-4/states",
+      "file": "s18-b5.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "f76a27ed8c15d4b3d2a688258190aac4a1a3b6af465226e2a1a2984ebf9fd63b"
+    },
+    {
+      "sheet": "review/act-4/states",
+      "file": "s18-b6.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "52efb062aab6c36c0723e2fe9cf6a9e24acf323b4f2e83d90be06f1ff9866d18"
+    },
+    {
+      "sheet": "review/act-4/states",
+      "file": "s18-b7.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "a1c7dfb9eaf1bb22f1d2b094f17d5a1ff5f75e52e1c1caeaf4b728b7aa31405a"
+    },
+    {
+      "sheet": "review/act-4/states",
+      "file": "s18-b8.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "4dd9a2289928a7500853cf256a03b3d3edbdd84d1982252c86a7491459cef509"
+    },
+    {
+      "sheet": "review/act-4/states",
+      "file": "s19-b1.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "49acc12e153a81ddd6317de0d43a0cfb07e23214e302170182421c49193d3e0f"
+    },
+    {
+      "sheet": "review/act-4/states",
+      "file": "s19-b2.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "fb11936874ece8d5e711a70dbcbdf31a0d16837b63c41265ef6c0bbc5f35d02a"
+    },
+    {
+      "sheet": "review/act-4/states",
+      "file": "s20-b1.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "24554e16584913ca2687d6a61026fed984a19c520fe249769625208b269ee6a5"
+    },
+    {
+      "sheet": "review/act-4/states",
+      "file": "s20-b2.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "03fec3f5933f037da3e9639931e919cce8048c71efda8647cb59a7fef5c6caa1"
+    },
+    {
+      "sheet": "review/act-4/states",
+      "file": "s20-b3.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "1c95f0b3c74daf4ad28572ca9cd7b86fb068d0fcf24234ff322e7f5c71e7ed29"
+    },
+    {
+      "sheet": "review/act-4/states",
+      "file": "s20-b4.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "1c014bdc44e626600856d9396c66d26cf82bc7dbed656b2206d835fd4789fa30"
+    },
+    {
+      "sheet": "review/act-4/states",
+      "file": "s20-b5.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "244c9e373d2f2b8a161f1f75d8de44498846d06681040773c70293478b630cdc"
+    },
+    {
+      "sheet": "review/act-4/states",
+      "file": "s21-b1.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "43342a12649f79339c877bdc427d3179d92c16b65bfa66f381feee9f455f0c6d"
+    },
+    {
+      "sheet": "review/act-4/states",
+      "file": "s21-b2.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "92566d54c7b120a5937a5d08515fd04e3882351c08deca8f15975062b589933c"
+    },
+    {
+      "sheet": "review/act-4/states",
+      "file": "s21-b3.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "e716b5ec4cc5436d09036c090e50cc8f1f86ef5725d80955dab560a27993da3c"
+    },
+    {
+      "sheet": "review/act-4/states",
+      "file": "s21-b4.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "cb6f95f7553f57aaeeb76ae6bbfa2736e72f99e4434c1a23737cfd2b05566fc9"
+    },
+    {
+      "sheet": "review/act-4/states",
+      "file": "s21-b5.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "3f27048ff705dca822348042f288042a96d301c5cecb0ac67b8c48e6ea95e395"
+    },
+    {
+      "sheet": "review/act-4/states",
+      "file": "s22-b1.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "85f061d2e7686f5dfc5f8c5c1ca3f9a0803eaa13d83cf76d1f3f62738d431904"
+    },
+    {
+      "sheet": "review/act-4/states",
+      "file": "s22-b2.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "687a409adc3ca42d8f420d0568bea820b9feaa7844de567bc2395deb85a0b294"
+    },
+    {
+      "sheet": "review/act-4/states",
+      "file": "s22-b3.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "555e9b055539cd4be21d88e095dc31c9b6be25a0150e3573fd534a82840045cf"
+    },
+    {
+      "sheet": "review/act-4/states",
+      "file": "s23-b1.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "a18d5d66e2802d755f6c01aa953d2c2aea0bf5708226b95e4d986592c8e4d4ec"
+    },
+    {
+      "sheet": "review/act-4/states",
+      "file": "s23-b2.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "d2a5a98e4321c3160b37d84b4a8163cef23b6fb6d70ff37f9ccd030dcdec33cc"
+    },
+    {
+      "sheet": "review/act-4/states",
+      "file": "s23-b3.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "036b7996278d116a73186589cbcd37cb0064536eb3505a5501f818ae340f4d79"
+    },
+    {
+      "sheet": "review/act-4/states",
+      "file": "s23-b4.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "98109f8c4c547adfc727719e7223b15e7dd2b8c0712b27b1e098c708d70aa731"
+    },
+    {
+      "sheet": "review/act-4/states",
+      "file": "s23-b5.png",
+      "class": "re-staged",
+      "ok": true,
+      "detail": "ruling 2 — the header band of renders above the table, the glyphs retired, the fifty scores landed",
+      "sha256": "fb4d1ca7d494b445a9028f9bd5176b7fad06a2a283498164ac28e7137af9ac27"
+    },
+    {
+      "sheet": "review/act-4/states",
+      "file": "s23-b6.png",
+      "class": "re-staged",
+      "ok": true,
+      "detail": "ruling 2 — the same band, the closing line beneath the table",
+      "sha256": "06667d5a4e80a76656232255f230b3e66610034a34bcde05dc84b97d276c999a"
+    }
+  ]
+}

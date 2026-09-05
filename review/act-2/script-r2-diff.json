@@ -1,0 +1,100 @@
+{
+  "date": "2026-08-30T11:08:01.695Z",
+  "session": "act-2-states-r2",
+  "authority": {
+    "waves": "src/slides/section-2-origin/05-two-survivors.js notes, arrows 2–6, character-identical",
+    "approved": "docs/batch-b-package.md at tag act-2-states (git show), character-identical",
+    "strike": "master §13, 31 August 2026 — Ruling 3 struck"
+  },
+  "s6Advances": 9,
+  "actTotal": 37,
+  "checks": 17,
+  "failures": 0,
+  "results": [
+    {
+      "name": "S6 is 9 advances",
+      "ok": true,
+      "detail": "9"
+    },
+    {
+      "name": "the legacy 2-05 notes carry 6 arrows",
+      "ok": true,
+      "detail": "6"
+    },
+    {
+      "name": "VERBATIM: S6 [→]3 is legacy arrow 2 character for character (the gases wave)",
+      "ok": true,
+      "detail": "57 chars"
+    },
+    {
+      "name": "VERBATIM: S6 [→]4 is legacy arrow 3 character for character (the corrosion wave)",
+      "ok": true,
+      "detail": "147 chars"
+    },
+    {
+      "name": "VERBATIM: S6 [→]5 is legacy arrow 4 character for character (the radioactive wave)",
+      "ok": true,
+      "detail": "62 chars"
+    },
+    {
+      "name": "VERBATIM: S6 [→]6 is legacy arrow 5 character for character (the shapeless wave)",
+      "ok": true,
+      "detail": "205 chars"
+    },
+    {
+      "name": "VERBATIM: S6 [→]7 is legacy arrow 6 character for character (the furnace arrow, 1803 and the verdict in place)",
+      "ok": true,
+      "detail": "651 chars"
+    },
+    {
+      "name": "APPROVED: S6 [→]1 is the prior install's [→]1 character for character (the SCARCITY IN MATTER landing)",
+      "ok": true,
+      "detail": "182 chars"
+    },
+    {
+      "name": "APPROVED: S6 [→]8 is the prior install's [→]4 character for character (hard to create, hard to destroy)",
+      "ok": true,
+      "detail": "83 chars"
+    },
+    {
+      "name": "APPROVED: S6 [→]9 is the prior install's [→]5 character for character (not hard to move)",
+      "ok": true,
+      "detail": "228 chars"
+    },
+    {
+      "name": "APPROVED: S6 [→]2 (the table rises) is the prior install's [→]2 opening, character-identical as a prefix",
+      "ok": true,
+      "detail": "147 chars of the prior 606"
+    },
+    {
+      "name": "UNTOUCHED: S5's installed script is character-identical to the prior install",
+      "ok": true,
+      "detail": "8 advances"
+    },
+    {
+      "name": "UNTOUCHED: S7's installed script is character-identical to the prior install",
+      "ok": true,
+      "detail": "5 advances"
+    },
+    {
+      "name": "UNTOUCHED: S8's installed script is character-identical to the prior install",
+      "ok": true,
+      "detail": "5 advances"
+    },
+    {
+      "name": "UNTOUCHED: S9's installed script is character-identical to the prior install",
+      "ok": true,
+      "detail": "5 advances"
+    },
+    {
+      "name": "UNTOUCHED: S10's installed script is character-identical to the prior install",
+      "ok": true,
+      "detail": "5 advances"
+    },
+    {
+      "name": "FREEZE: §1's amended map states the counts §2's scripts perform, and Act II is 37",
+      "ok": true,
+      "detail": "S5 8 · S6 9 · S7 5 · S8 5 · S9 5 · S10 5 = 37"
+    }
+  ]
+}

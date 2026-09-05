@@ -1,0 +1,63 @@
+{
+  "date": "2026-09-02T10:13:23.196Z",
+  "session": "batch-c",
+  "checks": 11,
+  "failures": 0,
+  "results": [
+    {
+      "name": "BEATS: every scene’s notes carry the frozen map’s arrows — Act III is 25",
+      "ok": true,
+      "detail": "5 · 4 · 6 · 4 · 6 = 25"
+    },
+    {
+      "name": "VERBATIM: the installed scripts are the package’s §2 scripts, character for character (S13’s notes-only armor included)",
+      "ok": true,
+      "detail": "5/5 identical"
+    },
+    {
+      "name": "LANGUAGE: no visible line or script in src/scenes/ names the medium",
+      "ok": true,
+      "detail": "26 scene files swept"
+    },
+    {
+      "name": "SWEEP: no retired wording, and the armor vocabulary stays inside the armor",
+      "ok": true,
+      "detail": "8 terms, 7 files"
+    },
+    {
+      "name": "SWEEP: no Act III script names an absolute slide number",
+      "ok": true,
+      "detail": "5/5 clean"
+    },
+    {
+      "name": "GUARDRAILS: no Act III script makes a master §10 prohibited overclaim",
+      "ok": true,
+      "detail": "8 patterns, 5 scripts"
+    },
+    {
+      "name": "SPLICE: every superseded and surviving legacy file stays on disk",
+      "ok": true,
+      "detail": "8/8 on disk"
+    },
+    {
+      "name": "SPLICE: no superseded legacy slide is imported by the manifest",
+      "ok": true,
+      "detail": "5/5 out of the running order"
+    },
+    {
+      "name": "SPLICE: the three ambiguous-fate survivors stay in the manifest (flagged, never decided)",
+      "ok": true,
+      "detail": "3-00 · 3-04 · 3-08 kept"
+    },
+    {
+      "name": "SPLICE: all five Act III scenes are in the manifest",
+      "ok": true,
+      "detail": "5/5 spliced"
+    },
+    {
+      "name": "SPLICE: the survivors’ ambiguous fates are flagged in the manifest’s own record",
+      "ok": true,
+      "detail": "the Batch C block says so in plain English"
+    }
+  ]
+}

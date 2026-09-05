@@ -1,0 +1,399 @@
+{
+  "date": "2026-08-28T12:36:13.339Z",
+  "rule": "every non-target beat changes zero pixels against r2's approved renders, under every path candidate; S4 b2 is the s4-b2-b2 markup cell exactly (channel delta > 2/255 counts; any differing pixel fails)",
+  "pipeline": "proto beats via cold direct entry at 1920×1080; the markup cell via states.mjs buildCell on the same dev server",
+  "results": [
+    {
+      "path": 1,
+      "beat": "s2-b1",
+      "against": "r2/s2-b1.png",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "path": 1,
+      "beat": "s2-b2",
+      "against": "r2/s2-b2.png",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "path": 1,
+      "beat": "s2-b5",
+      "against": "r2/s2-b5.png",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "path": 1,
+      "beat": "s3-b2",
+      "against": "r2/s3-b2.png",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "path": 1,
+      "beat": "s3-b3",
+      "against": "r2/s3-b3.png",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "path": 1,
+      "beat": "s3-b4",
+      "against": "r2/s3-b4.png",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "path": 1,
+      "beat": "s3-b5",
+      "against": "r2/s3-b5.png",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "path": 1,
+      "beat": "s3-b6",
+      "against": "r2/s3-b6.png",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "path": 1,
+      "beat": "s3-b7",
+      "against": "r2/s3-b7.png",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "path": 1,
+      "beat": "s3-b8",
+      "against": "r2/s3-b8.png",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "path": 1,
+      "beat": "s3-b9",
+      "against": "r2/s3-b9.png",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "path": 1,
+      "beat": "s4-b1",
+      "against": "r2/s4-b1.png",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "path": 1,
+      "beat": "s4-b3",
+      "against": "r2/s4-b3.png",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "path": 1,
+      "beat": "s4-b4",
+      "against": "r2/s4-b4.png",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "path": 1,
+      "beat": "s4-b5",
+      "against": "r2/s4-b5.png",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "path": 2,
+      "beat": "s2-b1",
+      "against": "r2/s2-b1.png",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "path": 2,
+      "beat": "s2-b2",
+      "against": "r2/s2-b2.png",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "path": 2,
+      "beat": "s2-b5",
+      "against": "r2/s2-b5.png",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "path": 2,
+      "beat": "s3-b2",
+      "against": "r2/s3-b2.png",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "path": 2,
+      "beat": "s3-b3",
+      "against": "r2/s3-b3.png",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "path": 2,
+      "beat": "s3-b4",
+      "against": "r2/s3-b4.png",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "path": 2,
+      "beat": "s3-b5",
+      "against": "r2/s3-b5.png",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "path": 2,
+      "beat": "s3-b6",
+      "against": "r2/s3-b6.png",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "path": 2,
+      "beat": "s3-b7",
+      "against": "r2/s3-b7.png",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "path": 2,
+      "beat": "s3-b8",
+      "against": "r2/s3-b8.png",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "path": 2,
+      "beat": "s3-b9",
+      "against": "r2/s3-b9.png",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "path": 2,
+      "beat": "s4-b1",
+      "against": "r2/s4-b1.png",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "path": 2,
+      "beat": "s4-b3",
+      "against": "r2/s4-b3.png",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "path": 2,
+      "beat": "s4-b4",
+      "against": "r2/s4-b4.png",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "path": 2,
+      "beat": "s4-b5",
+      "against": "r2/s4-b5.png",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "path": 3,
+      "beat": "s2-b1",
+      "against": "r2/s2-b1.png",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "path": 3,
+      "beat": "s2-b2",
+      "against": "r2/s2-b2.png",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "path": 3,
+      "beat": "s2-b5",
+      "against": "r2/s2-b5.png",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "path": 3,
+      "beat": "s3-b2",
+      "against": "r2/s3-b2.png",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "path": 3,
+      "beat": "s3-b3",
+      "against": "r2/s3-b3.png",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "path": 3,
+      "beat": "s3-b4",
+      "against": "r2/s3-b4.png",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "path": 3,
+      "beat": "s3-b5",
+      "against": "r2/s3-b5.png",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "path": 3,
+      "beat": "s3-b6",
+      "against": "r2/s3-b6.png",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "path": 3,
+      "beat": "s3-b7",
+      "against": "r2/s3-b7.png",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "path": 3,
+      "beat": "s3-b8",
+      "against": "r2/s3-b8.png",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "path": 3,
+      "beat": "s3-b9",
+      "against": "r2/s3-b9.png",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "path": 3,
+      "beat": "s4-b1",
+      "against": "r2/s4-b1.png",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "path": 3,
+      "beat": "s4-b3",
+      "against": "r2/s4-b3.png",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "path": 3,
+      "beat": "s4-b4",
+      "against": "r2/s4-b4.png",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "path": 3,
+      "beat": "s4-b5",
+      "against": "r2/s4-b5.png",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "beat": "s4-b2-b2 cell",
+      "against": "states/s4-b2-b2.png (archived)",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "path": 1,
+      "beat": "s4-b2",
+      "against": "s4-b2-b2 (fresh cell)",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "path": 2,
+      "beat": "s4-b2",
+      "against": "s4-b2-b2 (fresh cell)",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    },
+    {
+      "path": 3,
+      "beat": "s4-b2",
+      "against": "s4-b2-b2 (fresh cell)",
+      "diffPixels": 0,
+      "maxDelta": 0,
+      "pass": true
+    }
+  ],
+  "consoleErrors": []
+}

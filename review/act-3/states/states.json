@@ -1,0 +1,639 @@
+{
+  "date": "2026-09-03T13:10:51.608Z",
+  "session": "acts-3-4-final",
+  "beatMap": {
+    "S11": 5,
+    "S12": 3,
+    "S13": 7,
+    "S14": 3,
+    "S15": 7,
+    "total": 25
+  },
+  "cellCount": 31,
+  "beatMapAuthority": "docs/batch-c-package.md §1 — frozen 2 September 2026, amended the same day by Batch C r2 ruling 3 (S13 = 7, master §13), on 3 September 2026 by the Act III final ruling 3 (S14 = 3, S15 = 7, master §13), and on 3 September 2026 by the Acts III–IV final ruling 1 (S12 = 3, Act III = 25, master §13)",
+  "provenanceAuthority": "docs/act-3-provenance.md as amended 3 September 2026 — 0 PORT · 5 ADAPT (S11, S12, S13, S14, S15-F3) · S15-F1/F2 NEW closed by the candidate-A selection; the exit at S15 b7 is S15-F3, the base slab and the hinge question",
+  "actsFinal": {
+    "date": "3 September 2026",
+    "authority": "the Act V kickoff brief, Part A (master §13, the Acts III–IV final rulings — recorded before the pipeline was touched)",
+    "rulings": [
+      "the household frame retires (1): the household sentence is spoken over beat 1 as the empty columns land; the text-only row on file as s12-b2-household; S12 = 3, Act III = 25; s12-b3 → s12-b2 and s12-b4 → s12-b3, bytes carried",
+      "the exit lands on the tower (3): the pivot coda keeps its words; on the final advance the tower recedes to its glowing base slab and “What makes something a good store of value?” lands beneath it — no return to the triad; the triad-return coda on file as s15-b7-triad; the new s15-b7 captured fresh; the wording protected as Act IV’s hinge question"
+    ],
+    "gate": "the presenter’s re-walk of Scenes 11–16 and 23 in the deck"
+  },
+  "act3Final": {
+    "date": "3 September 2026",
+    "authority": "the Act IV kickoff brief, Part A (master §13, the three Act III final rulings — recorded before the pipeline was touched)",
+    "rulings": [
+      "the renders replace the words (1): the Argentina columns carry the header, then the render(s), nothing else — the USD / ARS codes and the dollars / pesos words retire; s12-b3 and s12-b4 re-rendered; S12-F1 PORT → ADAPT",
+      "the contradiction fixed (2): s14-b2’s landed line is the ruled wording — “A monetary good is trusted to hold value before it is used to pay.”; s14-b2 re-rendered",
+      "the pivot relocates (3): S14 = 3, S15 = 7 — the approved s14-b4 composition carries its bytes into s15-b7, the act’s final beat after the tower’s held question; the act leaves on the question"
+    ],
+    "relocated": [
+      {
+        "was": "s14-b4",
+        "now": "s15-b7-triad",
+        "bytes": "carried",
+        "reason": "the pivot relocates to the act’s exit — the Act III final ruling 3, 3 Sep 2026, master §13; the composition then retired to file by the Acts III–IV final ruling 3 of the same day (the exit lands on the tower)"
+      },
+      {
+        "was": "s12-b3",
+        "now": "s12-b2",
+        "bytes": "carried",
+        "reason": "the household frame retires — the Acts III–IV final ruling 1, 3 Sep 2026, master §13; Argentina’s objects are beat 2"
+      },
+      {
+        "was": "s12-b4",
+        "now": "s12-b3",
+        "bytes": "carried",
+        "reason": "the household frame retires — the Acts III–IV final ruling 1, 3 Sep 2026, master §13; the principle is beat 3"
+      }
+    ],
+    "gate": "the presenter’s re-walk of Scenes 11–15 in the deck"
+  },
+  "approval": {
+    "date": "2 September 2026",
+    "authority": "the Batch C implementation brief §1 (master §13, the three rulings)",
+    "selection": "Scene 15 is CANDIDATE A — the proportional inverted tower; the A cells are the approved S15 states; candidate B on file",
+    "goAhead": "the r2 sheet approved in full — the S12 brick glyph and the deliberate s14-b4 re-render seen and accepted by name; the fourteen flags closed as accepted records",
+    "mediumSwap": "the medium render replaced (the handshake read as agreement, not exchange); the nine medium-bearing cells re-rendered as the updated approved states — s11-b3, s11-b4, s11-b5, s12-b1, s13-b5, s13-b6, s14-b2, s14-b3, s14-b4",
+    "gate": "the act viewing, after the Session 2 splice"
+  },
+  "r2": {
+    "date": "2 September 2026",
+    "authority": "the Batch C r2 brief §1 (master §13, the five r2 rulings — recorded before the pipeline was touched)",
+    "rulings": [
+      "the clean handoff (1): s12-b1 re-rendered — the columns arrive on clean black; the cell leaves the disc-cell record",
+      "the columns’ objects (2): usd · ars gated and ingested, recognizability their ruled content; the renders at the band scale above the codes, usd + the located real-estate render (property) over the saved column; the brick glyph retired; s12-b2 re-rendered through the pipeline and expected pixel-identical",
+      "the split (3): S13 = 7 beats — s13-b5/b6 are the restored legacy gate beats, the foundation renumbered to b7 with its bytes carried; the pair staging on file as s13-b5-pair",
+      "the fold (4): S14 staged continuously on the ladder — the study cell retired to file as s14-b1-study (its r1 bytes carried), the new b1 the coffee at the MEDIUM berth with the objection as the statement line",
+      "forms-once (5): Scene 9’s formation is a gesture fix in the scene module — nothing on this sheet"
+    ],
+    "gate": "the presenter’s re-walk of Scenes 9 and 11–15 in the deck"
+  },
+  "approvedSet": [
+    "s11-b1",
+    "s11-b2",
+    "s11-b3",
+    "s11-b4",
+    "s11-b5",
+    "s12-b1",
+    "s12-b2",
+    "s12-b3",
+    "s13-b1",
+    "s13-b2",
+    "s13-b3",
+    "s13-b4",
+    "s13-b5",
+    "s13-b6",
+    "s13-b7",
+    "s14-b1",
+    "s14-b2",
+    "s14-b3",
+    "s15-b1-a",
+    "s15-b2-a",
+    "s15-b3-a",
+    "s15-b4-a",
+    "s15-b5-a",
+    "s15-b6-a",
+    "s15-b7"
+  ],
+  "discCells": [
+    "s11-b1",
+    "s11-b2",
+    "s11-b3",
+    "s11-b4",
+    "s11-b5"
+  ],
+  "carried": [
+    "s12-b2",
+    "s12-b3"
+  ],
+  "relocated": [
+    {
+      "was": "s14-b4",
+      "now": "s15-b7-triad",
+      "bytes": "carried",
+      "reason": "the pivot relocates to the act’s exit — the Act III final ruling 3, 3 Sep 2026, master §13; the composition then retired to file by the Acts III–IV final ruling 3 of the same day (the exit lands on the tower)"
+    },
+    {
+      "was": "s12-b3",
+      "now": "s12-b2",
+      "bytes": "carried",
+      "reason": "the household frame retires — the Acts III–IV final ruling 1, 3 Sep 2026, master §13; Argentina’s objects are beat 2"
+    },
+    {
+      "was": "s12-b4",
+      "now": "s12-b3",
+      "bytes": "carried",
+      "reason": "the household frame retires — the Acts III–IV final ruling 1, 3 Sep 2026, master §13; the principle is beat 3"
+    }
+  ],
+  "retired": [
+    {
+      "file": "s12-b3-block.png",
+      "was": "s12-b3",
+      "staging": "the r1 dated-fact block over the deep-dimmed columns — retired by r2 ruling 2"
+    },
+    {
+      "file": "s12-b2-household.png",
+      "was": "s12-b2",
+      "staging": "the text-only household row in the legacy word register — retired by the Acts III–IV final ruling 1 (3 Sep 2026): the household sentence is spoken over beat 1 as the empty columns land; its bytes carried into this name"
+    },
+    {
+      "file": "s15-b7-triad.png",
+      "was": "s15-b7",
+      "staging": "the pivot coda over the returned triad (the approved s14-b4’s bytes) — retired by the Acts III–IV final ruling 3 (3 Sep 2026): the exit lands on the tower’s base slab; its bytes carried into this name"
+    },
+    {
+      "file": "s13-b5-pair.png",
+      "was": "s13-b5",
+      "staging": "the merged two-gate advance — superseded by Batch C r2 ruling 3 (the beat split)"
+    },
+    {
+      "file": "s14-b1-study.png",
+      "was": "s14-b1",
+      "staging": "the display-scale coffee study over the condensed home row — retired by Batch C r2 ruling 4 (the fold); its r1 bytes carried into this name"
+    },
+    {
+      "file": "s15-b1-boxes.png",
+      "was": "s15-b1",
+      "staging": "the three-box tower, build 1 — superseded by r2 ruling 4"
+    },
+    {
+      "file": "s15-b2-boxes.png",
+      "was": "s15-b2",
+      "staging": "the three-box tower, build 2 — superseded by r2 ruling 4"
+    },
+    {
+      "file": "s15-b3-boxes.png",
+      "was": "s15-b3",
+      "staging": "the three-box tower, build 3 — superseded by r2 ruling 4"
+    },
+    {
+      "file": "s15-b4-boxes.png",
+      "was": "s15-b4",
+      "staging": "the three-box tower, build 4 — superseded by r2 ruling 4"
+    },
+    {
+      "file": "s15-b5-boxes.png",
+      "was": "s15-b5",
+      "staging": "the three-box tower, build 5 — superseded by r2 ruling 4"
+    },
+    {
+      "file": "s15-b6-boxes.png",
+      "was": "s15-b6",
+      "staging": "the three-box tower, build 6 with the r1 disc — superseded by r2 rulings 1 and 4"
+    }
+  ],
+  "counts": {
+    "approved": 25,
+    "on-file": 6
+  },
+  "flags": [
+    {
+      "id": "s11-b2",
+      "flag": "Your ruling names the objects but not their scale or position at the spokes. The band box (188) standing in the glyph’s own slot would cross the drawn spoke at store and medium — a render on a drawn line, which the register boundary forbids — so this sheet stands those two marks ABOVE the spoke axis, bottoms 32px clear of the line, entries’ text at its legacy position beneath: the rails-law band form. One number (the clearance, or a smaller cap) re-places them.",
+      "status": "closed by the approval of 2 September 2026"
+    },
+    {
+      "id": "s11-b4",
+      "flag": "Unit of account’s spoke is vertical, so there is no “above the line” for its mark to stand in: the balance scale takes the vacated glyph slot instead, and the entry’s words flow beneath it — about 50px lower than the legacy text position. The three marks therefore read symmetrically as objects but not identically in placement; if you want all three re-placed on one rule, it is one ruling.",
+      "status": "closed by the approval of 2 September 2026"
+    },
+    {
+      "id": "s11-b5",
+      "flag": "One measured crowding, in plain English: with the unit mark in the glyph slot, the unit entry’s wrapped text ends roughly 14px above the continuity line’s slot. Nothing overlaps, but the two read close at the frame’s center; one number (the unit mark’s scale, or the continuity’s legacy top) relieves it if your eye wants air.",
+      "status": "closed by the approval of 2 September 2026"
+    },
+    {
+      "id": "s12-b2",
+      "flag": "Your ruling names the order — the header, then the render(s) — but not the band’s baseline. The renders stand in the slot the text rows vacated, bottom-aligned on one shared band baseline at the slot’s bottom (cell-relative 188, absolute 684): the square house fills the band’s full height from 496, the notes bottom-align beside it, the saved pair at the marks row’s own 26px gap, the principle eighty pixels beneath. One number (the baseline, or a smaller cap for the pair) re-places everything.",
+      "status": "closed by the approval of 2 September 2026"
+    },
+    {
+      "id": "s12-b3",
+      "flag": "The principle reads “jobs” where the legacy read “functions,” following the installed script and the act’s titles — one word, twice, flagged for your word pass as in r1.",
+      "status": "closed by the approval of 2 September 2026"
+    },
+    {
+      "id": "s13-b4",
+      "flag": "The on-screen line is the installed script’s own clause, distilled by this sheet; its position in the upper-left sky is wiring. Your word pass owns the distillation.",
+      "status": "closed by the approval of 2 September 2026"
+    },
+    {
+      "id": "s13-b5",
+      "flag": "The split restores the legacy state table verbatim; the one wiring reading is the arrival lines’ voice — this sheet keeps the approved pair beat’s treatment (every arrival line at the dimmed row step, the gate line carrying the beat’s voice). One word makes the MOE line the latest instead.",
+      "status": "closed by the approval of 2 September 2026"
+    },
+    {
+      "id": "s13-b7",
+      "flag": "The foundation line reads “job” where the legacy read “function,” following the installed script — flagged for your word pass with S12’s principle.",
+      "status": "closed by the approval of 2 September 2026"
+    },
+    {
+      "id": "s14-b1",
+      "flag": "The ruling names the statement line but not its register: this sheet lands the objection in the deck’s statement slot at the scene’s own landing register (top 850, 40px — the slot the b2 placement line uses), so the two lines hand off in place. One number or one word re-registers it.",
+      "status": "closed by the approval of 2 September 2026"
+    },
+    {
+      "id": "s14-b2",
+      "flag": "Placing the coffee render at the medium stage’s berth is this sheet’s honest reading of “put that objection on the ladder” — one word retires it. (Stands from r1; the landing line is now your ruled wording, verbatim.)",
+      "status": "closed by the approval of 2 September 2026"
+    },
+    {
+      "id": "s14-b3",
+      "flag": "The berth carries the coin render at the visitor cap (132 against the band’s 188) so the climber reads as a climber, not a fifth station. The landing line is distilled from the installed script. (Stands from r1.)",
+      "status": "closed by the approval of 2 September 2026"
+    },
+    {
+      "id": "s15-b3-a",
+      "flag": "The proportions (1240 · 880 · 260) are qualitative and deliberately not a displayed ratio — the legacy tower’s own recorded law, with the drama turned up as your spec orders. If you want measured ratios, that is a data decision with a source, not a drawing change.",
+      "status": "closed by the approval of 2 September 2026"
+    },
+    {
+      "id": "s15-b7",
+      "flag": "One honest render, two numbers of wiring. The base slab keeps its A position (top 498, 260 × 60) and its foundation look — the orange edge and glow — rather than rising toward the frame’s center; and the held question’s drop (the line reaching into black at beat 6) dissolves with the upper layers rather than staying to reach toward the question. One number lifts the slab; one word keeps the drop.",
+      "status": "closed by the approval of 2 September 2026"
+    },
+    {
+      "id": "s15-b3-b",
+      "flag": "The counts (24 apps · 6 deposits · 1 base) are wiring — the argument is the convergence, not the numbers, and no ratio is displayed or implied. One number changes any row.",
+      "status": "closed by the approval of 2 September 2026"
+    }
+  ],
+  "cells": [
+    {
+      "id": "s11-b1",
+      "file": "s11-b1.png",
+      "scene": "S11",
+      "beat": 1,
+      "frame": "S11-F1",
+      "klass": "ADAPT",
+      "review": "approved",
+      "source": "3-01-the-three-functions, build 1 — the token returns center, AS THE DISC (r2 ruling 1)",
+      "caption": "Beat 1 · the go-between good again — and the center is the disc itself, as you ruled it: the legacy token by its own classes, literally 1.2’s luminous disc at the token’s own 120px box, restored glow included. The r1 footprint ring is gone. This is the thread on stage from the act’s first beat, at the triad’s center, where the legacy composition always held it."
+    },
+    {
+      "id": "s11-b2",
+      "file": "s11-b2.png",
+      "scene": "S11",
+      "beat": 2,
+      "frame": "S11-F1",
+      "klass": "ADAPT",
+      "review": "approved",
+      "source": "3-01 build 2 + r2 ruling 3 — the store job object at the first spoke",
+      "caption": "Beat 2 · the first job radiates: STORE OF VALUE — moves value through time. The spoke and the entry are the legacy slide’s own; the grammar glyph (the time-gap mark) is retired, and the hourglass — your store mark — stands above the spoke in the rails-law band box, the entry’s words beneath the line.",
+      "flag": "Your ruling names the objects but not their scale or position at the spokes. The band box (188) standing in the glyph’s own slot would cross the drawn spoke at store and medium — a render on a drawn line, which the register boundary forbids — so this sheet stands those two marks ABOVE the spoke axis, bottoms 32px clear of the line, entries’ text at its legacy position beneath: the rails-law band form. One number (the clearance, or a smaller cap) re-places them."
+    },
+    {
+      "id": "s11-b3",
+      "file": "s11-b3.png",
+      "scene": "S11",
+      "beat": 3,
+      "frame": "S11-F1",
+      "klass": "ADAPT",
+      "review": "approved",
+      "source": "3-01 build 3 + r2 ruling 3 — the medium job object",
+      "caption": "Beat 3 · the second job: MEDIUM OF EXCHANGE — moves value between people. The hand-off in mid-transfer — your replaced medium mark (Batch C ruling 3) — above the right spoke in the same band form, mirroring store. The disc holds the center between them."
+    },
+    {
+      "id": "s11-b4",
+      "file": "s11-b4.png",
+      "scene": "S11",
+      "beat": 4,
+      "frame": "S11-F1",
+      "klass": "ADAPT",
+      "review": "approved",
+      "source": "3-01 build 4 + r2 ruling 3 — the unit job object",
+      "caption": "Beat 4 · the quiet third: UNIT OF ACCOUNT — measures value. The balance scale — your unit mark — and the triad complete: the act’s home frame, standing, with the disc at its center and the three job objects at its spokes, one visual family with the ladder to come.",
+      "flag": "Unit of account’s spoke is vertical, so there is no “above the line” for its mark to stand in: the balance scale takes the vacated glyph slot instead, and the entry’s words flow beneath it — about 50px lower than the legacy text position. The three marks therefore read symmetrically as objects but not identically in placement; if you want all three re-placed on one rule, it is one ruling."
+    },
+    {
+      "id": "s11-b5",
+      "file": "s11-b5.png",
+      "scene": "S11",
+      "beat": 5,
+      "frame": "S11-F1",
+      "klass": "ADAPT",
+      "review": "approved",
+      "source": "3-01-the-three-functions, build 5 — the continuity line",
+      "caption": "Beat 5 · the continuity lands under the whole triad, verbatim from the legacy slide: the competition’s three dimensions, seen from the inside.",
+      "flag": "One measured crowding, in plain English: with the unit mark in the glyph slot, the unit entry’s wrapped text ends roughly 14px above the continuity line’s slot. Nothing overlaps, but the two read close at the frame’s center; one number (the unit mark’s scale, or the continuity’s legacy top) relieves it if your eye wants air."
+    },
+    {
+      "id": "s12-b1",
+      "file": "s12-b1.png",
+      "scene": "S12",
+      "beat": 1,
+      "frame": "S12-F1",
+      "klass": "ADAPT",
+      "review": "approved",
+      "source": "3-02-the-functions-separate, build 1 — the three heads land empty, ON CLEAN BLACK (r2 ruling 1); the frame is ADAPT since the Act III final ruling 1, the change landing at b2",
+      "caption": "Beat 1 · the clean handoff, as you ruled it: the triad completes its recede before the heads land, and the three column heads stand empty on clean black — PRICED IN · PAID IN · SAVED IN, the jobs re-stated as columns, no element of the home frame beneath them. The household sentence is spoken over this frame (the Acts III–IV final ruling 1): you may already live the split — paid in one money, your home priced in it, savings somewhere else. This is the legacy slide’s own build 1; the r2 staging that held the receded triad under the heads is superseded, and the cell leaves the disc-cell record."
+    },
+    {
+      "id": "s12-b2",
+      "file": "s12-b2.png",
+      "scene": "S12",
+      "beat": 2,
+      "frame": "S12-F1",
+      "klass": "ADAPT",
+      "review": "approved",
+      "carried": true,
+      "carriedFrom": "s12-b3",
+      "source": "3-02-the-functions-separate, build 2 + r2 ruling 2 + the Act III final ruling 1 — the renders replace the words; beat 3 → beat 2 by the Acts III–IV final ruling 1, the approved cell’s bytes carried",
+      "caption": "Beat 2 · Argentina lands the legacy way, and the columns carry their objects as you ruled it — the renders replacing the words: under PRICED IN the folded dollar; under PAID IN the folded peso note; under SAVED IN the dollar with the register’s real-estate render — each column the header, then the render(s), nothing else. The USD / ARS codes and the dollars / pesos words are retired; “Argentina, five decades.” stands under the heads at full voice; the five-decade span and the every-stripe clause ride the spoken beat.",
+      "flag": "Your ruling names the order — the header, then the render(s) — but not the band’s baseline. The renders stand in the slot the text rows vacated, bottom-aligned on one shared band baseline at the slot’s bottom (cell-relative 188, absolute 684): the square house fills the band’s full height from 496, the notes bottom-align beside it, the saved pair at the marks row’s own 26px gap, the principle eighty pixels beneath. One number (the baseline, or a smaller cap for the pair) re-places everything."
+    },
+    {
+      "id": "s12-b3",
+      "file": "s12-b3.png",
+      "scene": "S12",
+      "beat": 3,
+      "frame": "S12-F1",
+      "klass": "ADAPT",
+      "review": "approved",
+      "carried": true,
+      "carriedFrom": "s12-b4",
+      "source": "3-02-the-functions-separate, build 3 + the Act III final ruling 1 — the principle, over the render-bearing columns; beat 4 → beat 3 by the Acts III–IV final ruling 1, the approved cell’s bytes carried",
+      "caption": "Beat 3 · the principle lands at full voice in the legacy’s own slot, over the standing Argentina columns — the renders under the heads, no text rows — and the kicker: the legacy slide’s own final state, carrying the ruled objects in place of the words.",
+      "flag": "The principle reads “jobs” where the legacy read “functions,” following the installed script and the act’s titles — one word, twice, flagged for your word pass as in r1."
+    },
+    {
+      "id": "s13-b1",
+      "file": "s13-b1.png",
+      "scene": "S13",
+      "beat": 1,
+      "frame": "S13-F1",
+      "klass": "ADAPT",
+      "review": "approved",
+      "source": "3-03-the-order-of-monetization, build 1 — the empty rising line, the attribution",
+      "caption": "Beat 1 · there is an order. The empty rising line enters — the ladder’s drawn grammar untouched — and the attribution stands on stage per your ruling: “after Vijay Boyapati.” Nothing else yet; the ascent is genuinely empty."
+    },
+    {
+      "id": "s13-b2",
+      "file": "s13-b2.png",
+      "scene": "S13",
+      "beat": 2,
+      "frame": "S13-F1",
+      "klass": "ADAPT",
+      "review": "approved",
+      "source": "3-03 build 2 + r2 ruling 3 — collectible = your neutral mark",
+      "caption": "Beat 2 · COLLECTIBLE stands on the line — the raw gem crystal, your neutral mark, in the rails-law band box above the line at the stop’s own clearance, never on it. No monetary asset is a stage mark anymore: the marks are the stages, not the climbers. Its arrival line beneath, in the script’s own words: “Held by a few people for their own strange reasons.” The first threshold tick sits dim above it."
+    },
+    {
+      "id": "s13-b3",
+      "file": "s13-b3.png",
+      "scene": "S13",
+      "beat": 3,
+      "frame": "S13-F1",
+      "klass": "ADAPT",
+      "review": "approved",
+      "source": "3-03 build 3 + r2 ruling 3 — store of value = the hourglass",
+      "caption": "Beat 3 · STORE OF VALUE arrives: the hourglass steps up the line — the same object that marks the job at the triad’s spoke, one visual family — its arrival line beneath: “A place to park purchasing power on purpose.” The first gate brightens as its logic becomes visible; the second sits dim. The r1 stand-ins (gold · coinage · ledger) are retired by your ruling."
+    },
+    {
+      "id": "s13-b4",
+      "file": "s13-b4.png",
+      "scene": "S13",
+      "beat": 4,
+      "frame": "S13-F1",
+      "klass": "ADAPT",
+      "review": "approved",
+      "source": "the social-technology beat (presenter-ruled, 2 Sep 2026) against 3-03’s standing state",
+      "caption": "Beat 4 · the social-technology beat, as you ruled it: the ladder holds at two stages while the reason the order cannot run backward lands in the clear sky the un-arrived stages leave open — “The one good you use because everyone else uses it.” The coordination logic (one person holds, two agree, everyone converges) rides in the spoken beat; the vocabulary stays in the notes armor.",
+      "flag": "The on-screen line is the installed script’s own clause, distilled by this sheet; its position in the upper-left sky is wiring. Your word pass owns the distillation."
+    },
+    {
+      "id": "s13-b5",
+      "file": "s13-b5.png",
+      "scene": "S13",
+      "beat": 5,
+      "frame": "S13-F1",
+      "klass": "ADAPT",
+      "review": "approved",
+      "source": "3-03 build 4 (restored by the split — r2 ruling 3) + the standing icons-to-renders change",
+      "caption": "Beat 5 · the acceptance gate, as the split rules it: MEDIUM OF EXCHANGE stands — the hand-off joining the ascent — and its gate line lands alone in the legacy slot: “Nobody accepts as payment what they don’t expect to hold value.” The third threshold sits dim above it, exactly as legacy 3-03’s own build 4 holds it; the social line recedes to the dimmed-prior step; the arrival line beneath the new stage speaks S11’s own job line. The retired pair staging is on file as s13-b5-pair.",
+      "flag": "The split restores the legacy state table verbatim; the one wiring reading is the arrival lines’ voice — this sheet keeps the approved pair beat’s treatment (every arrival line at the dimmed row step, the gate line carrying the beat’s voice). One word makes the MOE line the latest instead."
+    },
+    {
+      "id": "s13-b6",
+      "file": "s13-b6.png",
+      "scene": "S13",
+      "beat": 6,
+      "frame": "S13-F1",
+      "klass": "ADAPT",
+      "review": "approved",
+      "source": "3-03 build 5 (restored by the split — r2 ruling 3) + the standing icons-to-renders change",
+      "caption": "Beat 6 · the contracts gate: UNIT OF ACCOUNT stands — the balance scale completing the neutral object sequence — every threshold lit (legacy 3-03’s own build 5), and the second gate line landing beneath the first: “Nobody writes contracts in what nobody accepts.” Both gate lines hold their own voice until the foundation settles them."
+    },
+    {
+      "id": "s13-b7",
+      "file": "s13-b7.png",
+      "scene": "S13",
+      "beat": 7,
+      "frame": "S13-F1",
+      "klass": "ADAPT",
+      "review": "approved",
+      "source": "3-03 build 6 — the foundation state, renumbered b6 → b7 by the split (r2 ruling 3), the look unchanged",
+      "caption": "Beat 7 · the foundation, renumbered from b6 by the split with its look unchanged: the store-of-value stop takes the accent — the ladder’s only orange, the component’s own foundation state, under the hourglass — and the foundation line lands at full voice while the gate lines settle to the legacy’s own dimmed step. The neutral object sequence stands complete above the drawn ascent.",
+      "flag": "The foundation line reads “job” where the legacy read “function,” following the installed script — flagged for your word pass with S12’s principle."
+    },
+    {
+      "id": "s14-b1",
+      "file": "s14-b1.png",
+      "scene": "S14",
+      "beat": 1,
+      "frame": "S13-F1",
+      "klass": "ADAPT",
+      "review": "approved",
+      "source": "3-07-where-bitcoin-is, build 1 (the resolved ladder with the placed visitor) + r2 ruling 4 — the fold",
+      "caption": "Beat 1 · the objection arrives IN the ladder world, as the fold rules it: the ladder stands in 3-07’s own resolved state — every stage under its neutral mark, every threshold lit — the coffee cup at the MEDIUM OF EXCHANGE berth at its established perch scale, and the objection landing as the statement line: “But I can’t buy my coffee with Bitcoin.” The display-scale study frame is retired to file (s14-b1-study); the render lives on at the berth, and the S13 → S14 boundary is a pure morph — one world.",
+      "flag": "The ruling names the statement line but not its register: this sheet lands the objection in the deck’s statement slot at the scene’s own landing register (top 850, 40px — the slot the b2 placement line uses), so the two lines hand off in place. One number or one word re-registers it."
+    },
+    {
+      "id": "s14-b2",
+      "file": "s14-b2.png",
+      "scene": "S14",
+      "beat": 2,
+      "frame": "S13-F1",
+      "klass": "ADAPT",
+      "review": "approved",
+      "source": "3-07-where-bitcoin-is, build 1 (the ladder returns resolved) + r2 ruling 3",
+      "caption": "Beat 2 · the objection goes on the ladder you just built: the ladder returns in 3-07’s own resolved state — every stage standing under its neutral mark, every threshold lit — with the coffee cup placed at the MEDIUM OF EXCHANGE berth, above the hand-off, and the beat’s line beneath in your ruled wording (the Act III final ruling 2, 3 Sep 2026 — the contradiction fixed): “A monetary good is trusted to hold value before it is used to pay.”",
+      "flag": "Placing the coffee render at the medium stage’s berth is this sheet’s honest reading of “put that objection on the ladder” — one word retires it. (Stands from r1; the landing line is now your ruled wording, verbatim.)"
+    },
+    {
+      "id": "s14-b3",
+      "file": "s14-b3.png",
+      "scene": "S14",
+      "beat": 3,
+      "frame": "S13-F1",
+      "klass": "ADAPT",
+      "review": "approved",
+      "source": "3-07-where-bitcoin-is, builds 2–3 (the entity berth at store of value) + r2 ruling 3",
+      "caption": "Beat 3 · the placement — the scene’s payoff, now protected by your ruling: bitcoin’s coin stands at the entity berth above STORE OF VALUE, stage two of the ladder, THE ONLY MONETARY OBJECT IN SIGHT — the neutral marks beneath it are a crystal, an hourglass, a hand-off, a scale, so the coin’s landing has the frame to itself. The coffee recedes at its berth, answered. The line: “Held on purpose, across years — one job: store of value.”",
+      "flag": "The berth carries the coin render at the visitor cap (132 against the band’s 188) so the climber reads as a climber, not a fifth station. The landing line is distilled from the installed script. (Stands from r1.)"
+    },
+    {
+      "id": "s15-b1-a",
+      "file": "s15-b1-a.png",
+      "scene": "S15",
+      "beat": 1,
+      "frame": "S15-F1",
+      "klass": "NEW",
+      "review": "approved",
+      "system": "A",
+      "source": "r2 ruling 4, candidate A — the proportional inverted tower (your spec)",
+      "caption": "A · Beat 1 · the reveal opens where you live, at the frame’s top: PAYMENT APPS — the widest slab and the faintest, barely more than a trace. Width is claim volume, solidity is realness, and the top layer has the most claims and the least reality."
+    },
+    {
+      "id": "s15-b2-a",
+      "file": "s15-b2-a.png",
+      "scene": "S15",
+      "beat": 2,
+      "frame": "S15-F1",
+      "klass": "NEW",
+      "review": "approved",
+      "system": "A",
+      "source": "r2 ruling 4, candidate A — the proportional inverted tower (your spec)",
+      "caption": "A · Beat 2 · the app balance is not money: BANK DEPOSITS lands beneath — narrower, more solid, a real outline — and the first claim line hangs in the gap with the legacy caption in its slot: “a claim on your deposit.” The tower is descending toward something."
+    },
+    {
+      "id": "s15-b3-a",
+      "file": "s15-b3-a.png",
+      "scene": "S15",
+      "beat": 3,
+      "frame": "S15-F1",
+      "klass": "NEW",
+      "review": "approved",
+      "system": "A",
+      "source": "r2 ruling 4, candidate A — the proportional inverted tower (your spec)",
+      "caption": "A · Beat 3 · BASE MONEY — Act III’s one term, landing at the bottom as a narrow, SOLID, near-luminous block, the one solid object in the frame, its label dark against the light. The shape is complete and it argues by itself: wide and faint above, small and real beneath. The run line lands in its slot: “More claims than base. That is what a bank run runs on.”",
+      "flag": "The proportions (1240 · 880 · 260) are qualitative and deliberately not a displayed ratio — the legacy tower’s own recorded law, with the drama turned up as your spec orders. If you want measured ratios, that is a data decision with a source, not a drawing change."
+    },
+    {
+      "id": "s15-b4-a",
+      "file": "s15-b4-a.png",
+      "scene": "S15",
+      "beat": 4,
+      "frame": "S15-F1",
+      "klass": "NEW",
+      "review": "approved",
+      "system": "A",
+      "source": "r2 ruling 4, candidate A — the proportional inverted tower (your spec)",
+      "caption": "A · Beat 4 · fair in both directions: the principle lands — “Layers are not a scam — they are how money scales. But layers inherit the soundness of their base.” THE SHIVER IS THIS BEAT’S EVENT, kept per your ruling: the luminous base flickers once and the shudder travels up through the outlined layers — choreography over this unchanged state; the still holds the state."
+    },
+    {
+      "id": "s15-b5-a",
+      "file": "s15-b5-a.png",
+      "scene": "S15",
+      "beat": 5,
+      "frame": "S15-F1",
+      "klass": "NEW",
+      "review": "approved",
+      "system": "A",
+      "source": "r2 ruling 4, candidate A — the proportional inverted tower (your spec)",
+      "caption": "A · Beat 5 · the scoping: the wide faint layers recede further — engineering on top, excellent but not the question — and the solid base takes the scene’s single allowed orange in its glow. The scoping line at full voice in its slot: “The real question is about the foundation asset — underneath them all.”"
+    },
+    {
+      "id": "s15-b6-a",
+      "file": "s15-b6-a.png",
+      "scene": "S15",
+      "beat": 6,
+      "frame": "S15-F2",
+      "klass": "NEW",
+      "review": "approved",
+      "system": "A",
+      "source": "r2 ruling 4, candidate A — the proportional inverted tower (your spec) + 3-06’s own held-question beat",
+      "caption": "A · Beat 6 · the held question, as 3-06 always played it: every line of copy off stage, and the bottom-most claim line — the legacy drop drawing itself — reaching from the solid base into empty black and dissolving, pointing at nothing. No disc, per ruling 1: the question is spoken and held — and since the Act III final ruling 3 the pivot coda follows it as the act’s last beat."
+    },
+    {
+      "id": "s15-b7",
+      "file": "s15-b7.png",
+      "scene": "S15",
+      "beat": 7,
+      "frame": "S15-F3",
+      "klass": "ADAPT",
+      "review": "approved",
+      "source": "candidate A’s foundation state (s15-b5-a / s15-b6-a: the base slab in its foundation look, at its A position) + the deck’s question register — the Acts III–IV final ruling 3, 3 Sep 2026; the triad-return coda on file as s15-b7-triad",
+      "caption": "Beat 7 · the exit — the act’s final beat, as you ruled it: on the final advance the tower recedes to its glowing base slab — PAYMENT APPS, BANK DEPOSITS, both claim links and the held question’s drop dissolve — and the hinge question lands beneath the one solid object left in the frame: “What makes something a good store of value?” The spoken coda is untouched. The act leaves on the question over the base, and Scene 16’s homecoming morphs from this slab: the disc appears at its center and rises to the fork’s apex.",
+      "flag": "One honest render, two numbers of wiring. The base slab keeps its A position (top 498, 260 × 60) and its foundation look — the orange edge and glow — rather than rising toward the frame’s center; and the held question’s drop (the line reaching into black at beat 6) dissolves with the upper layers rather than staying to reach toward the question. One number lifts the slab; one word keeps the drop."
+    },
+    {
+      "id": "s15-b1-b",
+      "file": "s15-b1-b.png",
+      "scene": "S15",
+      "beat": 1,
+      "frame": "S15-F1",
+      "klass": "NEW",
+      "review": "on-file",
+      "system": "B",
+      "source": "r2 ruling 4, candidate B — the convergence of claims (this session’s design)",
+      "caption": "B · Beat 1 · the same opening, drawn as counting: PAYMENT APPS is twenty-four faint open marks scattered across the frame’s top — the balances where you live, many and thin. No boxes anywhere in this system: claim volume is multiplicity."
+    },
+    {
+      "id": "s15-b2-b",
+      "file": "s15-b2-b.png",
+      "scene": "S15",
+      "beat": 2,
+      "frame": "S15-F1",
+      "klass": "NEW",
+      "review": "on-file",
+      "system": "B",
+      "source": "r2 ruling 4, candidate B — the convergence of claims (this session’s design)",
+      "caption": "B · Beat 2 · every app mark hangs by a drawn claim-line on one of SIX deposit marks beneath — the first fan, twenty-four lines onto six points, with the legacy caption beside it: “a claim on your deposit.” A number that points at another number, drawn literally."
+    },
+    {
+      "id": "s15-b3-b",
+      "file": "s15-b3-b.png",
+      "scene": "S15",
+      "beat": 3,
+      "frame": "S15-F1",
+      "klass": "NEW",
+      "review": "on-file",
+      "system": "B",
+      "source": "r2 ruling 4, candidate B — the convergence of claims (this session’s design)",
+      "caption": "B · Beat 3 · BASE MONEY — the six deposit marks converge onto ONE small bright point at the bottom: 24 → 6 → 1, more lines above than points below, the bank-run arithmetic drawn as counting rather than width. The legacy caption beside the convergence — “a claim on base money.” — and the run line in its slot.",
+      "flag": "The counts (24 apps · 6 deposits · 1 base) are wiring — the argument is the convergence, not the numbers, and no ratio is displayed or implied. One number changes any row."
+    },
+    {
+      "id": "s15-b4-b",
+      "file": "s15-b4-b.png",
+      "scene": "S15",
+      "beat": 4,
+      "frame": "S15-F1",
+      "klass": "NEW",
+      "review": "on-file",
+      "system": "B",
+      "source": "r2 ruling 4, candidate B — the convergence of claims (this session’s design)",
+      "caption": "B · Beat 4 · the principle lands in its slot, fair in both directions — and THE SHIVER IS THIS BEAT’S EVENT here too: the base point flickers once and the shudder travels up every claim-line of both fans — the same proven choreography, carried by lines instead of slabs. The still holds the state."
+    },
+    {
+      "id": "s15-b5-b",
+      "file": "s15-b5-b.png",
+      "scene": "S15",
+      "beat": 5,
+      "frame": "S15-F1",
+      "klass": "NEW",
+      "review": "on-file",
+      "system": "B",
+      "source": "r2 ruling 4, candidate B — the convergence of claims (this session’s design)",
+      "caption": "B · Beat 5 · the scoping: both fans and the upper rows recede to a third of their voice, and the one base point takes the scene’s single allowed orange in its glow — the question narrowing visibly from many, through few, to one. The scoping line at full voice in its slot."
+    },
+    {
+      "id": "s15-b6-b",
+      "file": "s15-b6-b.png",
+      "scene": "S15",
+      "beat": 6,
+      "frame": "S15-F2",
+      "klass": "NEW",
+      "review": "on-file",
+      "system": "B",
+      "source": "r2 ruling 4, candidate B — the convergence of claims (this session’s design) + 3-06’s own held-question beat",
+      "caption": "B · Beat 6 · the held question: all copy off stage, and from the one bright point the bottom-most claim line — the legacy drop drawing — continues downward into empty black and dissolves. Everything above converged on this point; what does the point rest on? No disc, per ruling 1."
+    }
+  ],
+  "consoleErrors": []
+}

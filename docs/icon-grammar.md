@@ -110,7 +110,7 @@ one of them.** R7.1's reading was right about the *problem* and wrong about the
 *remedy*. The photography was incoherent because nothing governed it, not
 because photography cannot be governed — and abolishing it cost the deck the
 one thing line work cannot do, which is make a viewer want a thing. The deck now
-speaks two registers under `docs/sections-1-3-rebuild-brief.md` §9.4.9: this
+speaks two registers under `docs/what-is-money-master.md` §6: this
 grammar for everything structural, and a graded dark-field register for the few
 beats where sensory concreteness *is* the argument. What changed for this
 document:

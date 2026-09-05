@@ -1,0 +1,82 @@
+{
+  "phase": "R7.2",
+  "dir": "assets/dark-field/incoming",
+  "thresholds": {
+    "cornerMax": 6,
+    "borderMax": 6,
+    "darkFracMin": 0.5,
+    "warmthMin": 18,
+    "warmFracMin": 0.9
+  },
+  "images": 1,
+  "checks": 5,
+  "failures": 0,
+  "frameTarget": 0.88,
+  "framing": {
+    "patient": [
+      1.217,
+      3.4,
+      -5
+    ]
+  },
+  "rows": [
+    {
+      "file": "patient.png",
+      "zone": "integrated",
+      "bytes": 1612845,
+      "width": 1122,
+      "height": 1402,
+      "corners": {
+        "tl": 0,
+        "tr": 0.08,
+        "bl": 0.05,
+        "br": 0.07
+      },
+      "cornerMax": 0.08,
+      "border": 0.06,
+      "darkFrac": 0.914,
+      "subjectW": 0.52,
+      "subjectH": 0.723,
+      "subjectDX": -0.034,
+      "subjectDY": 0.05,
+      "highlightFrac": 0.015,
+      "warmth": 122.6,
+      "highlightRGB": [
+        224,
+        171,
+        102
+      ],
+      "warmFrac": 1,
+      "keyAzimuth": -172,
+      "keyOffset": 0.079,
+      "spread": 0.897
+    }
+  ],
+  "results": [
+    {
+      "name": "grade: patient.png — frame corners are black (≤ 6)",
+      "ok": true,
+      "detail": "max corner 0.08 (tl 0 tr 0.08 bl 0.05 br 0.07)"
+    },
+    {
+      "name": "grade: patient.png — no environment reaches the border (≤ 6)",
+      "ok": true,
+      "detail": "border ring 0.06"
+    },
+    {
+      "name": "grade: patient.png — the subject emerges from darkness (≥ 50% below L16)",
+      "ok": true,
+      "detail": "91.4% dark"
+    },
+    {
+      "name": "grade: patient.png — the key is warm (R−B ≥ 18)",
+      "ok": true,
+      "detail": "R−B 122.6 on 1.50% of the frame, mean highlight rgb(224, 171, 102)"
+    },
+    {
+      "name": "grade: patient.png — the highlight population is warm throughout (≥ 90%)",
+      "ok": true,
+      "detail": "100.0% of highlight pixels warm"
+    }
+  ]
+}

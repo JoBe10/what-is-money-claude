@@ -1,0 +1,161 @@
+{
+  "date": "2026-09-04T04:17:52.856Z",
+  "session": "batch-e",
+  "scope": "the installed deck — the seven Act V scene modules that ship, and the one protected line that stands on screen",
+  "passed": 28,
+  "of": 28,
+  "checks": [
+    {
+      "name": "INSTALLED: all seven scene modules carry the package’s §2 script character for character",
+      "ok": true,
+      "detail": "7/7 identical"
+    },
+    {
+      "name": "INSTALLED: every beat is exactly one arrow — S24 4 · S25 4 · S26 9 · S27 3 · S28 3 · S29 2 · S30 2, the frozen map",
+      "ok": true,
+      "detail": "S24 4/4 · S25 4/4 · S26 9/9 · S27 3/3 · S28 3/3 · S29 2/2 · S30 2/2"
+    },
+    {
+      "name": "INSTALLED: Act V is 27 beats",
+      "ok": true,
+      "detail": "27"
+    },
+    {
+      "name": "PROTECTED: the rules line stands in Scene 29’s installed script, exactly once",
+      "ok": true,
+      "detail": "Bitcoin does not fix its price. It fixes the rules through which the market discovers its price."
+    },
+    {
+      "name": "PROTECTED: it sits immediately before \"The case is not that the price will behave.\" (Row 3, ruled A)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "PROTECTED: the three sentences after it stay together, so \"in eleven words\" still points at the pair beside it",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "PROTECTED: no other Act V script carries it, and no Act V scene stages it (Ruling 5: script, not frame)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "PROTECTED: the callback opens Scene 30’s first beat — nothing stands before it",
+      "ok": true,
+      "detail": "An hour ago I told you something strange: that you’d spend e…"
+    },
+    {
+      "name": "PROTECTED: the covenant and the disclaimer stand verbatim in Scene 30’s second beat",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "PROTECTED: the film’s script ends on \"Thank you.\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "PROTECTED: the road sentence is cut — the one ruled change — and survives only in the legacy source",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "PROTECTED: \"you won’t be able to stop\" stands as the legacy words",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "PROTECTED: \"The monetary competition is decided at the margin.\" is spoken at Scene 27",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "PROTECTED: it is on no on-screen string of the scene’s source — spoken-only holds (master §3.7)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "PROTECTED: the asked-calmly line stands at its relocated home (R7)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "HYGIENE: no \"L1:\" transcript artifacts in any installed Act V note",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "HYGIENE: no retired legacy slide id appears in any installed note",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "HYGIENE: no absolute slide numbers in any installed note",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "BAN: no installed Act V script names the medium, the live delivery or a section (the marker set aside)",
+      "ok": true,
+      "detail": "all seven scripts clean"
+    },
+    {
+      "name": "BAN: the close names no medium, no sequel, no waypoint — checked hardest here (master §5 rule 13)",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "name": "BAN: the marker Scene 26 carries is a stage direction, not speech — it holds no advance",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "BAN: the two self-reference substitutions are still in place — \"this whole inquiry began from\" and \"the last few minutes\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "PROTECTED (on screen): the conclusion at Scene 29 beat 2 is the frozen final frame, character for character",
+      "ok": true,
+      "detail": "\"Bitcoin does not need to replace everything.It only needs to become the preferred placeto store the next unit of value.\""
+    },
+    {
+      "name": "PROTECTED (on screen): its two accent terms are \"preferred place\" and \"next unit of value\", across three authored lines",
+      "ok": true,
+      "detail": "preferred place | next unit of value · 2 breaks"
+    },
+    {
+      "name": "PROTECTED (on screen): \"Don’t trust. Verify.\" stands on stage in exactly one scene of the whole film",
+      "ok": true,
+      "detail": "the-comparison:5"
+    },
+    {
+      "name": "PROTECTED (on screen): that scene is Scene 23, the table",
+      "ok": true,
+      "detail": "the-comparison"
+    },
+    {
+      "name": "PROTECTED: Act V names it only as a spoken mention, in the falsifiability passage",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "CONSOLE: no errors while verifying the installed deck",
+      "ok": true,
+      "detail": "0"
+    }
+  ],
+  "onScreenConclusion": {
+    "text": "Bitcoin does not need to replace everything.It only needs to become the preferred placeto store the next unit of value.",
+    "accents": [
+      "preferred place",
+      "next unit of value"
+    ],
+    "lineBreaks": 2
+  },
+  "verifyOnStage": [
+    "the-comparison:5"
+  ],
+  "consoleErrors": []
+}

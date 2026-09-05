@@ -1,0 +1,325 @@
+{
+  "date": "2026-09-04T03:17:36.217Z",
+  "session": "act-5-impl-1",
+  "deck": {
+    "slides": 32,
+    "firstId": "eighty-thousand-hours"
+  },
+  "route": {
+    "slides": 4,
+    "order": [
+      "migration",
+      "the-monetary-premium",
+      "when-other-assets-do-moneys-job",
+      "the-marginal-decision"
+    ],
+    "builds": [
+      3,
+      3,
+      8,
+      2
+    ]
+  },
+  "traversal": {
+    "states": 20,
+    "forward": true,
+    "forwardFirstMismatchAt": null,
+    "backwardReachesTop": true,
+    "backwardMonotonic": true,
+    "backwardSteps": 19
+  },
+  "boundaries": [
+    {
+      "name": "S24 end → S25 (forward, the legacy boundary onto a build 0)",
+      "from": {
+        "idx": 0,
+        "step": 3,
+        "id": "migration"
+      },
+      "to": {
+        "idx": 1,
+        "step": 0,
+        "id": "the-monetary-premium"
+      },
+      "layer": "s418"
+    },
+    {
+      "name": "S25 b0 → S24 end (backward, the handoff)",
+      "from": {
+        "idx": 1,
+        "step": 0,
+        "id": "the-monetary-premium"
+      },
+      "to": {
+        "idx": 0,
+        "step": 3,
+        "id": "migration"
+      },
+      "layer": "s417"
+    },
+    {
+      "name": "S25 end → S26 (forward, the legacy boundary + build-1 reveal)",
+      "from": {
+        "idx": 1,
+        "step": 3,
+        "id": "the-monetary-premium"
+      },
+      "to": {
+        "idx": 2,
+        "step": 0,
+        "id": "when-other-assets-do-moneys-job"
+      },
+      "layer": "s419"
+    },
+    {
+      "name": "S26 b0 → S25 end (backward, the handoff)",
+      "from": {
+        "idx": 2,
+        "step": 0,
+        "id": "when-other-assets-do-moneys-job"
+      },
+      "to": {
+        "idx": 1,
+        "step": 3,
+        "id": "the-monetary-premium"
+      },
+      "layer": "s418"
+    },
+    {
+      "name": "S26 end → S27 (forward, the legacy boundary onto a build 0)",
+      "from": {
+        "idx": 2,
+        "step": 8,
+        "id": "when-other-assets-do-moneys-job"
+      },
+      "to": {
+        "idx": 3,
+        "step": 0,
+        "id": "the-marginal-decision"
+      },
+      "layer": "s421"
+    },
+    {
+      "name": "S27 b0 → S26 end (backward, the handoff)",
+      "from": {
+        "idx": 3,
+        "step": 0,
+        "id": "the-marginal-decision"
+      },
+      "to": {
+        "idx": 2,
+        "step": 8,
+        "id": "when-other-assets-do-moneys-job"
+      },
+      "layer": "s420"
+    }
+  ],
+  "merge": [
+    {
+      "name": "S26 b5 → b6 (forward, the merge: 4-19 → 4-20)",
+      "from": {
+        "idx": 2,
+        "step": 4,
+        "id": "when-other-assets-do-moneys-job"
+      },
+      "to": {
+        "idx": 2,
+        "step": 5,
+        "id": "when-other-assets-do-moneys-job"
+      },
+      "layer": "s420"
+    },
+    {
+      "name": "S26 b6 → b5 (backward, the merge in reverse)",
+      "from": {
+        "idx": 2,
+        "step": 5,
+        "id": "when-other-assets-do-moneys-job"
+      },
+      "to": {
+        "idx": 2,
+        "step": 4,
+        "id": "when-other-assets-do-moneys-job"
+      },
+      "layer": "s419"
+    }
+  ],
+  "directEntry": [
+    "migration:0",
+    "migration:1",
+    "migration:2",
+    "migration:3",
+    "the-monetary-premium:0",
+    "the-monetary-premium:1",
+    "the-monetary-premium:2",
+    "the-monetary-premium:3",
+    "when-other-assets-do-moneys-job:0",
+    "when-other-assets-do-moneys-job:1",
+    "when-other-assets-do-moneys-job:2",
+    "when-other-assets-do-moneys-job:3",
+    "when-other-assets-do-moneys-job:4",
+    "when-other-assets-do-moneys-job:5",
+    "when-other-assets-do-moneys-job:6",
+    "when-other-assets-do-moneys-job:7",
+    "when-other-assets-do-moneys-job:8",
+    "the-marginal-decision:0",
+    "the-marginal-decision:1",
+    "the-marginal-decision:2"
+  ],
+  "parity": [
+    {
+      "state": "migration:0",
+      "identical": true
+    },
+    {
+      "state": "migration:1",
+      "identical": true
+    },
+    {
+      "state": "migration:2",
+      "identical": true
+    },
+    {
+      "state": "migration:3",
+      "identical": true
+    },
+    {
+      "state": "the-monetary-premium:0",
+      "identical": true
+    },
+    {
+      "state": "the-monetary-premium:1",
+      "identical": true
+    },
+    {
+      "state": "the-monetary-premium:2",
+      "identical": true
+    },
+    {
+      "state": "the-monetary-premium:3",
+      "identical": true
+    },
+    {
+      "state": "when-other-assets-do-moneys-job:0",
+      "identical": true
+    },
+    {
+      "state": "when-other-assets-do-moneys-job:1",
+      "identical": true
+    },
+    {
+      "state": "when-other-assets-do-moneys-job:2",
+      "identical": true
+    },
+    {
+      "state": "when-other-assets-do-moneys-job:3",
+      "identical": true
+    },
+    {
+      "state": "when-other-assets-do-moneys-job:4",
+      "identical": true
+    },
+    {
+      "state": "when-other-assets-do-moneys-job:5",
+      "identical": true
+    },
+    {
+      "state": "when-other-assets-do-moneys-job:6",
+      "identical": true
+    },
+    {
+      "state": "when-other-assets-do-moneys-job:7",
+      "identical": true
+    },
+    {
+      "state": "when-other-assets-do-moneys-job:8",
+      "identical": true
+    },
+    {
+      "state": "the-marginal-decision:0",
+      "identical": true
+    },
+    {
+      "state": "the-marginal-decision:1",
+      "identical": true
+    },
+    {
+      "state": "the-marginal-decision:2",
+      "identical": true
+    }
+  ],
+  "retiredBuilds": {
+    "maxBuildPerLayer": {
+      "s417": 3,
+      "s418": 3,
+      "s419": 5,
+      "s420": 4,
+      "s421": 2
+    },
+    "s420StopsAt4": true,
+    "note": "legacy 4-20 builds 5–7 — the stability contrast — are retired by architecture Ruling 5 and appear in no state"
+  },
+  "interrupted": [
+    {
+      "from": "migration:0",
+      "to": "migration:2",
+      "identical": true
+    },
+    {
+      "from": "migration:1",
+      "to": "migration:3",
+      "identical": true
+    },
+    {
+      "from": "the-monetary-premium:0",
+      "to": "the-monetary-premium:2",
+      "identical": true
+    },
+    {
+      "from": "the-monetary-premium:1",
+      "to": "the-monetary-premium:3",
+      "identical": true
+    },
+    {
+      "from": "when-other-assets-do-moneys-job:0",
+      "to": "when-other-assets-do-moneys-job:2",
+      "identical": true
+    },
+    {
+      "from": "when-other-assets-do-moneys-job:1",
+      "to": "when-other-assets-do-moneys-job:3",
+      "identical": true
+    },
+    {
+      "from": "when-other-assets-do-moneys-job:2",
+      "to": "when-other-assets-do-moneys-job:4",
+      "identical": true
+    },
+    {
+      "from": "when-other-assets-do-moneys-job:3",
+      "to": "when-other-assets-do-moneys-job:5",
+      "identical": true
+    },
+    {
+      "from": "when-other-assets-do-moneys-job:4",
+      "to": "when-other-assets-do-moneys-job:6",
+      "identical": true
+    },
+    {
+      "from": "when-other-assets-do-moneys-job:5",
+      "to": "when-other-assets-do-moneys-job:7",
+      "identical": true
+    },
+    {
+      "from": "when-other-assets-do-moneys-job:6",
+      "to": "when-other-assets-do-moneys-job:8",
+      "identical": true
+    },
+    {
+      "from": "the-marginal-decision:0",
+      "to": "the-marginal-decision:2",
+      "identical": true
+    }
+  ],
+  "consoleErrors": []
+}

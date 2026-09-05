@@ -1,0 +1,93 @@
+{
+  "date": "2026-09-03T02:44:06.734Z",
+  "session": "act-3-final",
+  "deck": {
+    "slides": 39,
+    "firstId": "eighty-thousand-hours",
+    "s14Builds": 2,
+    "s15Builds": 6,
+    "act3At": 11,
+    "afterAct3": "3-00-waypoint-function"
+  },
+  "act3Span": {
+    "states": 26,
+    "forward": true,
+    "backwardReachesTop": true,
+    "backwardMonotonic": true,
+    "backwardSteps": 25
+  },
+  "exit": {
+    "last": {
+      "idx": 15,
+      "step": 6,
+      "id": "the-tower"
+    },
+    "statement": "What makes something a good store of value?",
+    "next": {
+      "idx": 16,
+      "step": 0,
+      "id": "3-00-waypoint-function"
+    },
+    "onQuestion": true,
+    "exitOk": true
+  },
+  "parity": [
+    {
+      "state": "we-already-split-those-jobs:0",
+      "identical": true
+    },
+    {
+      "state": "we-already-split-those-jobs:1",
+      "identical": true
+    },
+    {
+      "state": "we-already-split-those-jobs:2",
+      "identical": true
+    },
+    {
+      "state": "we-already-split-those-jobs:3",
+      "identical": true
+    },
+    {
+      "state": "the-coffee-objection:0",
+      "identical": true
+    },
+    {
+      "state": "the-coffee-objection:1",
+      "identical": true
+    },
+    {
+      "state": "the-coffee-objection:2",
+      "identical": true
+    },
+    {
+      "state": "the-tower:0",
+      "identical": true
+    },
+    {
+      "state": "the-tower:1",
+      "identical": true
+    },
+    {
+      "state": "the-tower:2",
+      "identical": true
+    },
+    {
+      "state": "the-tower:3",
+      "identical": true
+    },
+    {
+      "state": "the-tower:4",
+      "identical": true
+    },
+    {
+      "state": "the-tower:5",
+      "identical": true
+    },
+    {
+      "state": "the-tower:6",
+      "identical": true
+    }
+  ],
+  "consoleErrors": []
+}

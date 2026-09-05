@@ -1,0 +1,138 @@
+{
+  "date": "2026-09-03T05:02:13.420Z",
+  "session": "act-4-states",
+  "expectedSlides": 38,
+  "wasSlides": 39,
+  "retired": "3-08-waypoint-judge",
+  "deck": {
+    "slides": 38,
+    "firstId": "eighty-thousand-hours",
+    "ids": [
+      "eighty-thousand-hours",
+      "the-stakes",
+      "the-direct-exchange",
+      "the-breakthrough",
+      "spend-or-save",
+      "the-function-stayed",
+      "scarcity-in-matter",
+      "claims-on-gold",
+      "money-becomes-information",
+      "scarcity-becomes-digital",
+      "the-trade-off-keeps-moving",
+      "three-familiar-jobs",
+      "we-already-split-those-jobs",
+      "the-order-of-monetization",
+      "the-coffee-objection",
+      "the-tower",
+      "3-00-waypoint-function",
+      "3-04-stage-signatures",
+      "4-01-define-the-job",
+      "4-06-claim-and-carrier",
+      "4-07-store-of-value-function",
+      "4-08-100-year-test",
+      "4-09-future-is-unknowable",
+      "4-10-invert-the-question",
+      "4-11-carrier-failures-i",
+      "4-12-carrier-failures-ii",
+      "4-13-failure-to-requirement",
+      "4-14-ten-properties",
+      "4-15-framework-to-comparison",
+      "4-16-the-comparison",
+      "4-17-store-of-value-function-migrates",
+      "4-18-monetary-premium",
+      "4-19-other-assets-do-moneys-job",
+      "4-20-bitcoin-does-not-replace-everything",
+      "4-21-marginal-store-of-value-decision",
+      "4-22-fixed-supply-reprices-at-margin",
+      "4-23-investment-case-from-first-principles",
+      "5-01-thank-you"
+    ],
+    "sections": [
+      "prologue:2",
+      "act-1:3",
+      "act-2:6",
+      "act-3:5",
+      "function:2",
+      "ideal-store:19",
+      "close:1"
+    ]
+  },
+  "retirement": {
+    "absent": true,
+    "deepLink": {
+      "idx": 0,
+      "step": 0,
+      "id": "eighty-thousand-hours"
+    },
+    "fallbackToFirst": true
+  },
+  "boundary": {
+    "before": "3-04-stage-signatures",
+    "after": "4-01-define-the-job",
+    "beforeBuilds": 2,
+    "forward": [
+      {
+        "idx": 17,
+        "step": 0,
+        "id": "3-04-stage-signatures"
+      },
+      {
+        "idx": 17,
+        "step": 1,
+        "id": "3-04-stage-signatures"
+      },
+      {
+        "idx": 17,
+        "step": 2,
+        "id": "3-04-stage-signatures"
+      },
+      {
+        "idx": 18,
+        "step": 0,
+        "id": "4-01-define-the-job"
+      }
+    ],
+    "forwardOk": true,
+    "backwardArrow": [
+      {
+        "idx": 18,
+        "step": 0,
+        "id": "4-01-define-the-job"
+      },
+      {
+        "idx": 17,
+        "step": 0,
+        "id": "3-04-stage-signatures"
+      }
+    ],
+    "backwardArrowOk": true,
+    "backwardJump": [
+      {
+        "idx": 18,
+        "step": 0,
+        "id": "4-01-define-the-job"
+      },
+      {
+        "idx": 17,
+        "step": 2,
+        "id": "3-04-stage-signatures"
+      }
+    ],
+    "backwardJumpOk": true
+  },
+  "exit": {
+    "last": {
+      "idx": 15,
+      "step": 6,
+      "id": "the-tower"
+    },
+    "next": {
+      "idx": 16,
+      "step": 0,
+      "id": "3-00-waypoint-function"
+    },
+    "ok": true
+  },
+  "consoleErrors": [],
+  "pass": true
+}

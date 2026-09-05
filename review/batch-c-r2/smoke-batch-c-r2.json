@@ -1,0 +1,185 @@
+{
+  "date": "2026-09-02T12:55:10.980Z",
+  "session": "batch-c-r2",
+  "deck": {
+    "slides": 39,
+    "firstId": "eighty-thousand-hours",
+    "s13Builds": 6,
+    "act3At": 11
+  },
+  "act3Span": {
+    "states": 26,
+    "forward": true,
+    "backwardReachesTop": true,
+    "backwardMonotonic": true,
+    "backwardSteps": 25
+  },
+  "act2Span": {
+    "states": 15,
+    "forward": true,
+    "backwardReachesTop": true,
+    "backwardMonotonic": true,
+    "backwardSteps": 14
+  },
+  "formsOnce": {
+    "samples": [
+      {
+        "at": 300,
+        "layerShown": true,
+        "hub": 0,
+        "maxChord": 0,
+        "maxSpoke": 0
+      },
+      {
+        "at": 900,
+        "layerShown": true,
+        "hub": 0,
+        "maxChord": 0,
+        "maxSpoke": 0
+      },
+      {
+        "at": 1500,
+        "layerShown": true,
+        "hub": 0,
+        "maxChord": 0,
+        "maxSpoke": 0
+      },
+      {
+        "at": 2100,
+        "layerShown": true,
+        "hub": 1,
+        "maxChord": 0,
+        "maxSpoke": 0.8413
+      },
+      {
+        "at": 2700,
+        "layerShown": true,
+        "hub": 1,
+        "maxChord": 0,
+        "maxSpoke": 1
+      }
+    ],
+    "settled": {
+      "layerShown": true,
+      "hub": 1,
+      "maxChord": 1,
+      "maxSpoke": 1
+    },
+    "preShowDead": true,
+    "hubFirst": true,
+    "settledMesh": true
+  },
+  "backwardReconstruction": {
+    "from": {
+      "idx": 9,
+      "step": 1,
+      "id": "scarcity-becomes-digital"
+    },
+    "to": {
+      "idx": 9,
+      "step": 0,
+      "id": "scarcity-becomes-digital"
+    },
+    "dips": [
+      {
+        "wait": 200,
+        "maxChord": 1,
+        "layerShown": true
+      },
+      {
+        "wait": 600,
+        "maxChord": 1,
+        "layerShown": true
+      },
+      {
+        "wait": 1000,
+        "maxChord": 1,
+        "layerShown": true
+      }
+    ],
+    "noReplay": true
+  },
+  "parity": [
+    {
+      "state": "we-already-split-those-jobs:0",
+      "identical": true
+    },
+    {
+      "state": "we-already-split-those-jobs:1",
+      "identical": true
+    },
+    {
+      "state": "we-already-split-those-jobs:2",
+      "identical": true
+    },
+    {
+      "state": "we-already-split-those-jobs:3",
+      "identical": true
+    },
+    {
+      "state": "the-order-of-monetization:0",
+      "identical": true
+    },
+    {
+      "state": "the-order-of-monetization:1",
+      "identical": true
+    },
+    {
+      "state": "the-order-of-monetization:2",
+      "identical": true
+    },
+    {
+      "state": "the-order-of-monetization:3",
+      "identical": true
+    },
+    {
+      "state": "the-order-of-monetization:4",
+      "identical": true
+    },
+    {
+      "state": "the-order-of-monetization:5",
+      "identical": true
+    },
+    {
+      "state": "the-order-of-monetization:6",
+      "identical": true
+    },
+    {
+      "state": "the-coffee-objection:0",
+      "identical": true
+    },
+    {
+      "state": "the-coffee-objection:1",
+      "identical": true
+    },
+    {
+      "state": "the-coffee-objection:2",
+      "identical": true
+    },
+    {
+      "state": "the-coffee-objection:3",
+      "identical": true
+    },
+    {
+      "state": "scarcity-becomes-digital:0",
+      "identical": true
+    },
+    {
+      "state": "scarcity-becomes-digital:1",
+      "identical": true
+    },
+    {
+      "state": "scarcity-becomes-digital:2",
+      "identical": true
+    },
+    {
+      "state": "scarcity-becomes-digital:3",
+      "identical": true
+    },
+    {
+      "state": "scarcity-becomes-digital:4",
+      "identical": true
+    }
+  ],
+  "consoleErrors": []
+}

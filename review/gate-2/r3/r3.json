@@ -1,0 +1,32 @@
+{
+  "date": "2026-08-28T12:45:55.402Z",
+  "session": "gate-2-r3",
+  "candidates": {
+    "1": "THE REACH",
+    "2": "THE ABSENCE",
+    "3": "THE FLOW"
+  },
+  "captures": [
+    "p1-s2-b3",
+    "p1-s2-b3-mid",
+    "p1-s2-b4",
+    "p1-s2-b4-mid",
+    "p1-s3-b1",
+    "p1-birth-mid",
+    "p2-s2-b3",
+    "p2-s2-b3-mid",
+    "p2-s2-b4",
+    "p2-s2-b4-mid",
+    "p2-s3-b1",
+    "p2-birth-mid",
+    "p3-s2-b3",
+    "p3-s2-b3-mid",
+    "p3-s2-b4",
+    "p3-s2-b4-mid",
+    "p3-s3-b1",
+    "p3-birth-mid",
+    "s4-b2",
+    "s4-spend-mid"
+  ],
+  "consoleErrors": []
+}

@@ -1,0 +1,828 @@
+{
+  "date": "2026-09-03T22:56:29.311Z",
+  "session": "act-5-states",
+  "limits": {
+    "cornerMean": 6,
+    "borderMean": 6
+  },
+  "frozenBeatMap": {
+    "S16": 8,
+    "S17": 5,
+    "S18": 8,
+    "S19": 2,
+    "S20": 5,
+    "S21": 5,
+    "S22": 3,
+    "S23": 6,
+    "total": 42,
+    "cells": 42
+  },
+  "portFrames": [
+    "S16-F1",
+    "S16-F2",
+    "S16-F3",
+    "S16-F4",
+    "S16-F5",
+    "S16-F6",
+    "S17-F1",
+    "S17-F2",
+    "S18-F1",
+    "S18-F2",
+    "S18-F3",
+    "S18-F4",
+    "S18-F5",
+    "S19-F2",
+    "S20-F1",
+    "S21-F1",
+    "S22-F1",
+    "S23-F1",
+    "S23-F3"
+  ],
+  "adaptFrames": [
+    "S19-F1",
+    "S22-F2",
+    "S23-F2"
+  ],
+  "frozenBlobs": {
+    "src/slides/section-4-ideal-store/_comparison-data.js": "3a6440aa274260924ae6b83d896d60f37a5f1154",
+    "src/slides/section-4-ideal-store/_failure-property-data.js": "c1eb13d4d22eebedf4600d708e6f61c7a7cd0bc0"
+  },
+  "homecomingPixels": {
+    "sameSize": true,
+    "differing": 0,
+    "maxDelta": 0,
+    "pixels": 2073600
+  },
+  "reportedNotGated": "warmPixelsReported — the act carries the accent by design (the claim, the carrier shell, the accent in the definition), so warmth is evidence here rather than a gate.",
+  "cells": [
+    {
+      "id": "s16-b1",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 245.3,
+      "pxAbove32": 14949,
+      "warmPixelsReported": 3317
+    },
+    {
+      "id": "s16-b2",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 53164,
+      "warmPixelsReported": 14405
+    },
+    {
+      "id": "s16-b3",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 53164,
+      "warmPixelsReported": 14405
+    },
+    {
+      "id": "s16-b4",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 254.4,
+      "pxAbove32": 70851,
+      "warmPixelsReported": 15029
+    },
+    {
+      "id": "s16-b5",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 40025,
+      "warmPixelsReported": 9351
+    },
+    {
+      "id": "s16-b6",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 65111,
+      "warmPixelsReported": 39955
+    },
+    {
+      "id": "s16-b7",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 48555,
+      "warmPixelsReported": 15721
+    },
+    {
+      "id": "s16-b8",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 37477,
+      "warmPixelsReported": 13354
+    },
+    {
+      "id": "s17-b1",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 32628,
+      "warmPixelsReported": 6507
+    },
+    {
+      "id": "s17-b2",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 35246,
+      "warmPixelsReported": 6499
+    },
+    {
+      "id": "s17-b3",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 43374,
+      "warmPixelsReported": 7488
+    },
+    {
+      "id": "s17-b4",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 49443,
+      "warmPixelsReported": 10106
+    },
+    {
+      "id": "s17-b5",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 75194,
+      "warmPixelsReported": 17685
+    },
+    {
+      "id": "s18-b1",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 49522,
+      "warmPixelsReported": 3516
+    },
+    {
+      "id": "s18-b2",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 254.4,
+      "pxAbove32": 20932,
+      "warmPixelsReported": 5322
+    },
+    {
+      "id": "s18-b3",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 254.4,
+      "pxAbove32": 20902,
+      "warmPixelsReported": 4109
+    },
+    {
+      "id": "s18-b4",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 35584,
+      "warmPixelsReported": 3524
+    },
+    {
+      "id": "s18-b5",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 41254,
+      "warmPixelsReported": 4827
+    },
+    {
+      "id": "s18-b6",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 46422,
+      "warmPixelsReported": 5603
+    },
+    {
+      "id": "s18-b7",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 45327,
+      "warmPixelsReported": 5401
+    },
+    {
+      "id": "s18-b8",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 53103,
+      "warmPixelsReported": 12711
+    },
+    {
+      "id": "s19-b1",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 15615,
+      "warmPixelsReported": 1299
+    },
+    {
+      "id": "s19-b2",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 32680,
+      "warmPixelsReported": 5096
+    },
+    {
+      "id": "s20-b1",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 8398,
+      "warmPixelsReported": 1919
+    },
+    {
+      "id": "s20-b2",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 17498,
+      "warmPixelsReported": 3965
+    },
+    {
+      "id": "s20-b3",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 26149,
+      "warmPixelsReported": 5974
+    },
+    {
+      "id": "s20-b4",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 32902,
+      "warmPixelsReported": 7513
+    },
+    {
+      "id": "s20-b5",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 42321,
+      "warmPixelsReported": 9595
+    },
+    {
+      "id": "s21-b1",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 9026,
+      "warmPixelsReported": 1982
+    },
+    {
+      "id": "s21-b2",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 16766,
+      "warmPixelsReported": 3625
+    },
+    {
+      "id": "s21-b3",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 26341,
+      "warmPixelsReported": 5755
+    },
+    {
+      "id": "s21-b4",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 36377,
+      "warmPixelsReported": 7954
+    },
+    {
+      "id": "s21-b5",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 46170,
+      "warmPixelsReported": 10061
+    },
+    {
+      "id": "s22-b1",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 35806,
+      "warmPixelsReported": 5132
+    },
+    {
+      "id": "s22-b2",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 46175,
+      "warmPixelsReported": 7104
+    },
+    {
+      "id": "s22-b3",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 29874,
+      "warmPixelsReported": 7823
+    },
+    {
+      "id": "s23-b1",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 45004,
+      "warmPixelsReported": 19257
+    },
+    {
+      "id": "s23-b2",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 74882,
+      "warmPixelsReported": 36070
+    },
+    {
+      "id": "s23-b3",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 73898,
+      "warmPixelsReported": 35698
+    },
+    {
+      "id": "s23-b4",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 73441,
+      "warmPixelsReported": 35698
+    },
+    {
+      "id": "s23-b5",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 53687,
+      "warmPixelsReported": 29789
+    },
+    {
+      "id": "s23-b6",
+      "pass": true,
+      "checks": {
+        "corner": true,
+        "border": true,
+        "content": true,
+        "size": true
+      },
+      "cornerMean": 0,
+      "borderMean": 0,
+      "maxLum": 255,
+      "pxAbove32": 56297,
+      "warmPixelsReported": 31080
+    }
+  ],
+  "checks": 27,
+  "failures": 0,
+  "results": [
+    {
+      "name": "CELLS: 42 measured — corner ≤ 6, border ≤ 6, content present, 1920×1080",
+      "ok": true,
+      "detail": "42/42"
+    },
+    {
+      "name": "CELLS: the sheet carries exactly 42 cells — one per beat of the frozen map",
+      "ok": true,
+      "detail": "42"
+    },
+    {
+      "name": "HOMECOMING: the approved s4-b4-b and the s16-b1 cell are both on disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "HOMECOMING: s16-b1 is the approved s4-b4-b at zero differing pixels",
+      "ok": true,
+      "detail": "0 of 2073600 pixels differ (max channel delta 0)"
+    },
+    {
+      "name": "MAP: docs/act-4-provenance.md is RULED (3 September 2026)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "MAP: every PORT frame transcribed here is a PORT row of the ruled map",
+      "ok": true,
+      "detail": "19/19 rows agree"
+    },
+    {
+      "name": "MAP: every ADAPT frame transcribed here is an ADAPT row of the ruled map (the Batch D rulings, 3 Sep 2026)",
+      "ok": true,
+      "detail": "3/3 rows agree"
+    },
+    {
+      "name": "MAP: no ARGUABLE class survives in the map’s table (the three rows ruled A · A · A)",
+      "ok": true,
+      "detail": "0 left"
+    },
+    {
+      "name": "MAP: the two retired rows are recorded (the 4-01 lens; the 4-04 goods band)",
+      "ok": true,
+      "detail": "2"
+    },
+    {
+      "name": "MAP: every cell names a frame of the ruled map and carries that frame’s class — PORT, or ADAPT where a ruling named one change",
+      "ok": true,
+      "detail": "42/42"
+    },
+    {
+      "name": "MAP: every cell names its legacy source (slide and build)",
+      "ok": true,
+      "detail": "all named"
+    },
+    {
+      "name": "BEATS: every beat of the frozen map exactly once — Act IV is 42",
+      "ok": true,
+      "detail": "S16 8 · S17 5 · S18 8 · S19 2 · S20 5 · S21 5 · S22 3 · S23 6 = 42"
+    },
+    {
+      "name": "CANDIDATES: no cell carries a candidate system — the map names no NEW frame",
+      "ok": true,
+      "detail": "none"
+    },
+    {
+      "name": "REVIEW: the only review classes are approved-port, approved-ruled and approved-as-rendered — no cell is pending (the sheet approved in full, 3 Sep 2026)",
+      "ok": true,
+      "detail": "approved-port · approved-ruled · approved-as-rendered"
+    },
+    {
+      "name": "REVIEW: every approved-as-rendered cell carries its closed flag, every flag is on such a cell, and every approved-ruled cell carries its ruling",
+      "ok": true,
+      "detail": "6 approved as rendered, each with its closed flag · 5 ruled, each with its ruling"
+    },
+    {
+      "name": "APPROVAL: states.json records the presenter’s approval, the approved set is every cell, and every flag is closed",
+      "ok": true,
+      "detail": "42 cells approved"
+    },
+    {
+      "name": "PROBES: every cell carries at least one probe, and every probe passed at capture — the still shows the state it claims",
+      "ok": true,
+      "detail": "109 probes over 42 cells"
+    },
+    {
+      "name": "PROBES: the fifty scores are revealed at once at S23 b5 and stand at b6",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "PROBES: the table’s header band carries the five renders and no asset heading carries a glyph mark (the Acts III–IV final ruling 2)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "SOURCE: states.mjs creates exactly one element — the stage container — and draws nothing",
+      "ok": true,
+      "detail": "createElement 1 · createElementNS 0 · cssText 1"
+    },
+    {
+      "name": "SOURCE: the only imports are the twelve legacy Section 4 slide modules and the Act I stage",
+      "ok": true,
+      "detail": "legacy 12 · act1 1"
+    },
+    {
+      "name": "SOURCE: every cell builder mounts a legacy module at a build, or the homecoming — 34 cell() calls, 34 such builders (the two failure loops cover ten cells; 35 until the S22 merge)",
+      "ok": true,
+      "detail": "builders 34 · cell() 34"
+    },
+    {
+      "name": "SOURCE: the homecoming is the Act I stage’s own applyState, built in exactly one place",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "HOMECOMING: s16-b1’s recorded Act I state is Scene 4’s save state by the stage’s own law — the claim at markSaveB, the roads at roads.save, the continuation at fadeSaveB, no words, no goods, no people",
+      "ok": true,
+      "detail": "mark true (1530px, 630px, 1, 1, 116px) · roads true · fade true · quiet true"
+    },
+    {
+      "name": "FROZEN: the two data files’ committed blob ids are the ids the ruled map records (§3.1), and the working tree carries no change to them",
+      "ok": true,
+      "detail": "3a6440aa… and c1eb13d4… — untouched"
+    },
+    {
+      "name": "SPLICE: the deck smoke on file is green — 38 slides, 3-08 absent, the 3-04 → 4-01 boundary both ways, the act’s exit unchanged",
+      "ok": true,
+      "detail": "38 slides · pass true"
+    },
+    {
+      "name": "SPLICE: states.json records the splice — 39 → 38, the retired id, the file on disk",
+      "ok": true,
+      "detail": ""
+    }
+  ]
+}

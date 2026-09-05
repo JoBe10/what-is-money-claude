@@ -1,0 +1,146 @@
+{
+  "date": "2026-09-04T04:22:00.873Z",
+  "session": "batch-e",
+  "question": "the film's continuous walk differs from the approved cells at a few frames while every cold mount matches — is that the film's doing or the legacy treatment's?",
+  "control": "each legacy module mounted BARE — no stage, no scene module, no engine — and produced twice: cold (the reconstruction path the approved cell was captured by) and live (its own advances played one after another). If cold matches the cell and live does not, the difference belongs to the legacy treatment's rasterization after motion, and the film inherits it.",
+  "legacyColdMatchesEveryCell": true,
+  "inheritedFromTheLegacyTreatment": [
+    "s24-b3",
+    "s24-b4",
+    "s28-b2"
+  ],
+  "introducedByBatchE": [],
+  "rows": [
+    {
+      "cell": "s24-b3",
+      "legacyColdVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0,
+        "box": null
+      },
+      "legacyLiveVsCell": {
+        "diffPixels": 6,
+        "maxDelta": 7,
+        "box": {
+          "x": 1617,
+          "y": 558,
+          "w": 66,
+          "h": 103
+        }
+      },
+      "filmWalkVsCell": {
+        "diffPixels": 6,
+        "maxDelta": 7,
+        "box": {
+          "x": 1617,
+          "y": 558,
+          "w": 66,
+          "h": 103
+        }
+      },
+      "legacyShowsItToo": true,
+      "sameMagnitude": true
+    },
+    {
+      "cell": "s24-b4",
+      "legacyColdVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0,
+        "box": null
+      },
+      "legacyLiveVsCell": {
+        "diffPixels": 6,
+        "maxDelta": 7,
+        "box": {
+          "x": 1617,
+          "y": 558,
+          "w": 66,
+          "h": 103
+        }
+      },
+      "filmWalkVsCell": {
+        "diffPixels": 6,
+        "maxDelta": 7,
+        "box": {
+          "x": 1617,
+          "y": 558,
+          "w": 66,
+          "h": 103
+        }
+      },
+      "legacyShowsItToo": true,
+      "sameMagnitude": true
+    },
+    {
+      "cell": "s28-b2",
+      "legacyColdVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0,
+        "box": null
+      },
+      "legacyLiveVsCell": {
+        "diffPixels": 15,
+        "maxDelta": 4,
+        "box": {
+          "x": 1264,
+          "y": 403,
+          "w": 1,
+          "h": 288
+        }
+      },
+      "filmWalkVsCell": {
+        "diffPixels": 15,
+        "maxDelta": 4,
+        "box": {
+          "x": 1264,
+          "y": 403,
+          "w": 1,
+          "h": 288
+        }
+      },
+      "legacyShowsItToo": true,
+      "sameMagnitude": true
+    },
+    {
+      "cell": "s28-b1",
+      "legacyColdVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0,
+        "box": null
+      },
+      "legacyLiveVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0,
+        "box": null
+      },
+      "filmWalkVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0,
+        "box": null
+      },
+      "legacyShowsItToo": true,
+      "sameMagnitude": true
+    },
+    {
+      "cell": "s30-b2",
+      "legacyColdVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0,
+        "box": null
+      },
+      "legacyLiveVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0,
+        "box": null
+      },
+      "filmWalkVsCell": {
+        "diffPixels": 0,
+        "maxDelta": 0,
+        "box": null
+      },
+      "legacyShowsItToo": true,
+      "sameMagnitude": true
+    }
+  ],
+  "consoleErrors": []
+}

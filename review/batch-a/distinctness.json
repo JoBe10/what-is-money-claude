@@ -1,0 +1,53 @@
+{
+  "date": "2026-08-30T00:30:29.737Z",
+  "check": "docs/batch-a-package.md §5 — `gold_certificate` must be visually distinct from the fiat note",
+  "strip": "review/batch-a/gold-certificate-vs-fiat.png (display scale, and the lineup box)",
+  "measurements": [
+    {
+      "key": "gold_certificate",
+      "displayBox": [
+        368,
+        460
+      ],
+      "highlightRGB": [
+        214,
+        162,
+        82
+      ],
+      "highlightFrac": 0.1652,
+      "natural": [
+        1122,
+        1402
+      ],
+      "aspect": 0.8
+    },
+    {
+      "key": "fiat",
+      "displayBox": [
+        817,
+        460
+      ],
+      "highlightRGB": [
+        223,
+        167,
+        92
+      ],
+      "highlightFrac": 0.0362,
+      "natural": [
+        1672,
+        941
+      ],
+      "aspect": 1.777
+    }
+  ],
+  "highlightDelta": {
+    "rgb": [
+      -9,
+      -5,
+      -10
+    ],
+    "note": "gold_certificate minus fiat, mean RGB of the highlight population"
+  },
+  "verdict": "recorded on the strip — the visual read is the register's own human clause (§0)",
+  "consoleErrors": []
+}

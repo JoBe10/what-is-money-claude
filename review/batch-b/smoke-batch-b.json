@@ -1,0 +1,550 @@
+{
+  "date": "2026-08-31T02:26:05.948Z",
+  "session": "batch-b",
+  "deck": {
+    "slides": 39,
+    "firstId": "eighty-thousand-hours",
+    "ids": [
+      "eighty-thousand-hours",
+      "the-stakes",
+      "the-direct-exchange",
+      "the-breakthrough",
+      "spend-or-save",
+      "the-function-stayed",
+      "scarcity-in-matter",
+      "claims-on-gold",
+      "money-becomes-information",
+      "scarcity-becomes-digital",
+      "the-trade-off-keeps-moving",
+      "3-00-waypoint-function",
+      "3-01-the-three-functions",
+      "3-02-the-functions-separate",
+      "3-03-the-order-of-monetization",
+      "3-04-stage-signatures",
+      "3-06-what-your-money-is",
+      "3-07-where-bitcoin-is",
+      "3-08-waypoint-judge",
+      "4-01-define-the-job",
+      "4-06-claim-and-carrier",
+      "4-07-store-of-value-function",
+      "4-08-100-year-test",
+      "4-09-future-is-unknowable",
+      "4-10-invert-the-question",
+      "4-11-carrier-failures-i",
+      "4-12-carrier-failures-ii",
+      "4-13-failure-to-requirement",
+      "4-14-ten-properties",
+      "4-15-framework-to-comparison",
+      "4-16-the-comparison",
+      "4-17-store-of-value-function-migrates",
+      "4-18-monetary-premium",
+      "4-19-other-assets-do-moneys-job",
+      "4-20-bitcoin-does-not-replace-everything",
+      "4-21-marginal-store-of-value-decision",
+      "4-22-fixed-supply-reprices-at-margin",
+      "4-23-investment-case-from-first-principles",
+      "5-01-thank-you"
+    ],
+    "builds": [
+      11,
+      1,
+      4,
+      8,
+      4,
+      7,
+      8,
+      4,
+      4,
+      4,
+      4,
+      2,
+      5,
+      3,
+      6,
+      2,
+      6,
+      5,
+      2,
+      4,
+      4,
+      5,
+      3,
+      5,
+      2,
+      5,
+      5,
+      2,
+      2,
+      4,
+      2,
+      3,
+      3,
+      5,
+      7,
+      2,
+      3,
+      2,
+      2
+    ],
+    "sections": [
+      "prologue:2",
+      "act-1:3",
+      "act-2:6",
+      "function:8",
+      "ideal-store:19",
+      "close:1"
+    ]
+  },
+  "traversal": {
+    "states": 199,
+    "forward": true,
+    "forwardFirstMismatchAt": null,
+    "backwardReachesTop": true,
+    "backwardMonotonic": true,
+    "backwardSteps": 85
+  },
+  "boundaries": [
+    {
+      "name": "Act I: Scene 4 end → Scene 5 (the splice seam)",
+      "from": {
+        "idx": 4,
+        "step": 4,
+        "id": "spend-or-save"
+      },
+      "to": {
+        "idx": 5,
+        "step": 0,
+        "id": "the-function-stayed"
+      }
+    },
+    {
+      "name": "Scene 5 b0 → Scene 4 end (backward)",
+      "from": {
+        "idx": 5,
+        "step": 0,
+        "id": "the-function-stayed"
+      },
+      "to": {
+        "idx": 4,
+        "step": 0,
+        "id": "spend-or-save"
+      }
+    },
+    {
+      "name": "the-function-stayed end → scarcity-in-matter (forward)",
+      "from": {
+        "idx": 5,
+        "step": 7,
+        "id": "the-function-stayed"
+      },
+      "to": {
+        "idx": 6,
+        "step": 0,
+        "id": "scarcity-in-matter"
+      }
+    },
+    {
+      "name": "scarcity-in-matter b0 → the-function-stayed end (backward)",
+      "from": {
+        "idx": 6,
+        "step": 0,
+        "id": "scarcity-in-matter"
+      },
+      "to": {
+        "idx": 5,
+        "step": 7,
+        "id": "the-function-stayed"
+      }
+    },
+    {
+      "name": "scarcity-in-matter end → claims-on-gold (forward)",
+      "from": {
+        "idx": 6,
+        "step": 8,
+        "id": "scarcity-in-matter"
+      },
+      "to": {
+        "idx": 7,
+        "step": 0,
+        "id": "claims-on-gold"
+      }
+    },
+    {
+      "name": "claims-on-gold b0 → scarcity-in-matter end (backward)",
+      "from": {
+        "idx": 7,
+        "step": 0,
+        "id": "claims-on-gold"
+      },
+      "to": {
+        "idx": 6,
+        "step": 8,
+        "id": "scarcity-in-matter"
+      }
+    },
+    {
+      "name": "claims-on-gold end → money-becomes-information (forward)",
+      "from": {
+        "idx": 7,
+        "step": 4,
+        "id": "claims-on-gold"
+      },
+      "to": {
+        "idx": 8,
+        "step": 0,
+        "id": "money-becomes-information"
+      }
+    },
+    {
+      "name": "money-becomes-information b0 → claims-on-gold end (backward)",
+      "from": {
+        "idx": 8,
+        "step": 0,
+        "id": "money-becomes-information"
+      },
+      "to": {
+        "idx": 7,
+        "step": 4,
+        "id": "claims-on-gold"
+      }
+    },
+    {
+      "name": "money-becomes-information end → scarcity-becomes-digital (forward)",
+      "from": {
+        "idx": 8,
+        "step": 4,
+        "id": "money-becomes-information"
+      },
+      "to": {
+        "idx": 9,
+        "step": 0,
+        "id": "scarcity-becomes-digital"
+      }
+    },
+    {
+      "name": "scarcity-becomes-digital b0 → money-becomes-information end (backward)",
+      "from": {
+        "idx": 9,
+        "step": 0,
+        "id": "scarcity-becomes-digital"
+      },
+      "to": {
+        "idx": 8,
+        "step": 4,
+        "id": "money-becomes-information"
+      }
+    },
+    {
+      "name": "scarcity-becomes-digital end → the-trade-off-keeps-moving (forward)",
+      "from": {
+        "idx": 9,
+        "step": 4,
+        "id": "scarcity-becomes-digital"
+      },
+      "to": {
+        "idx": 10,
+        "step": 0,
+        "id": "the-trade-off-keeps-moving"
+      }
+    },
+    {
+      "name": "the-trade-off-keeps-moving b0 → scarcity-becomes-digital end (backward)",
+      "from": {
+        "idx": 10,
+        "step": 0,
+        "id": "the-trade-off-keeps-moving"
+      },
+      "to": {
+        "idx": 9,
+        "step": 4,
+        "id": "scarcity-becomes-digital"
+      }
+    },
+    {
+      "name": "Scene 10 end → the surviving legacy deck (the splice seam)",
+      "from": {
+        "idx": 10,
+        "step": 4,
+        "id": "the-trade-off-keeps-moving"
+      },
+      "to": {
+        "idx": 11,
+        "step": 0,
+        "id": "3-00-waypoint-function"
+      }
+    },
+    {
+      "name": "the legacy deck b0 → Scene 10 end (backward)",
+      "from": {
+        "idx": 11,
+        "step": 0,
+        "id": "3-00-waypoint-function"
+      },
+      "to": {
+        "idx": 10,
+        "step": 0,
+        "id": "the-trade-off-keeps-moving"
+      }
+    }
+  ],
+  "directEntry": [
+    "the-function-stayed:0",
+    "the-function-stayed:1",
+    "the-function-stayed:2",
+    "the-function-stayed:3",
+    "the-function-stayed:4",
+    "the-function-stayed:5",
+    "the-function-stayed:6",
+    "the-function-stayed:7",
+    "scarcity-in-matter:0",
+    "scarcity-in-matter:1",
+    "scarcity-in-matter:2",
+    "scarcity-in-matter:3",
+    "scarcity-in-matter:4",
+    "scarcity-in-matter:5",
+    "scarcity-in-matter:6",
+    "scarcity-in-matter:7",
+    "scarcity-in-matter:8",
+    "claims-on-gold:0",
+    "claims-on-gold:1",
+    "claims-on-gold:2",
+    "claims-on-gold:3",
+    "claims-on-gold:4",
+    "money-becomes-information:0",
+    "money-becomes-information:1",
+    "money-becomes-information:2",
+    "money-becomes-information:3",
+    "money-becomes-information:4",
+    "scarcity-becomes-digital:0",
+    "scarcity-becomes-digital:1",
+    "scarcity-becomes-digital:2",
+    "scarcity-becomes-digital:3",
+    "scarcity-becomes-digital:4",
+    "the-trade-off-keeps-moving:0",
+    "the-trade-off-keeps-moving:1",
+    "the-trade-off-keeps-moving:2",
+    "the-trade-off-keeps-moving:3",
+    "the-trade-off-keeps-moving:4"
+  ],
+  "parity": [
+    {
+      "state": "the-function-stayed:0",
+      "identical": true
+    },
+    {
+      "state": "the-function-stayed:1",
+      "identical": true
+    },
+    {
+      "state": "the-function-stayed:2",
+      "identical": true
+    },
+    {
+      "state": "the-function-stayed:3",
+      "identical": true
+    },
+    {
+      "state": "the-function-stayed:4",
+      "identical": true
+    },
+    {
+      "state": "the-function-stayed:5",
+      "identical": true
+    },
+    {
+      "state": "the-function-stayed:6",
+      "identical": true
+    },
+    {
+      "state": "the-function-stayed:7",
+      "identical": true
+    },
+    {
+      "state": "scarcity-in-matter:0",
+      "identical": true
+    },
+    {
+      "state": "scarcity-in-matter:1",
+      "identical": true
+    },
+    {
+      "state": "scarcity-in-matter:2",
+      "identical": true
+    },
+    {
+      "state": "scarcity-in-matter:3",
+      "identical": true
+    },
+    {
+      "state": "scarcity-in-matter:4",
+      "identical": true
+    },
+    {
+      "state": "scarcity-in-matter:5",
+      "identical": true
+    },
+    {
+      "state": "scarcity-in-matter:6",
+      "identical": true
+    },
+    {
+      "state": "scarcity-in-matter:7",
+      "identical": true
+    },
+    {
+      "state": "scarcity-in-matter:8",
+      "identical": true
+    },
+    {
+      "state": "claims-on-gold:0",
+      "identical": true
+    },
+    {
+      "state": "claims-on-gold:1",
+      "identical": true
+    },
+    {
+      "state": "claims-on-gold:2",
+      "identical": true
+    },
+    {
+      "state": "claims-on-gold:3",
+      "identical": true
+    },
+    {
+      "state": "claims-on-gold:4",
+      "identical": true
+    },
+    {
+      "state": "money-becomes-information:0",
+      "identical": true
+    },
+    {
+      "state": "money-becomes-information:1",
+      "identical": true
+    },
+    {
+      "state": "money-becomes-information:2",
+      "identical": true
+    },
+    {
+      "state": "money-becomes-information:3",
+      "identical": true
+    },
+    {
+      "state": "money-becomes-information:4",
+      "identical": true
+    },
+    {
+      "state": "scarcity-becomes-digital:0",
+      "identical": true
+    },
+    {
+      "state": "scarcity-becomes-digital:1",
+      "identical": true
+    },
+    {
+      "state": "scarcity-becomes-digital:2",
+      "identical": true
+    },
+    {
+      "state": "scarcity-becomes-digital:3",
+      "identical": true
+    },
+    {
+      "state": "scarcity-becomes-digital:4",
+      "identical": true
+    },
+    {
+      "state": "the-trade-off-keeps-moving:0",
+      "identical": true
+    },
+    {
+      "state": "the-trade-off-keeps-moving:1",
+      "identical": true
+    },
+    {
+      "state": "the-trade-off-keeps-moving:2",
+      "identical": true
+    },
+    {
+      "state": "the-trade-off-keeps-moving:3",
+      "identical": true
+    },
+    {
+      "state": "the-trade-off-keeps-moving:4",
+      "identical": true
+    }
+  ],
+  "deepLinks": {
+    "live": [
+      {
+        "id": "the-function-stayed",
+        "resolvedTo": "the-function-stayed",
+        "ok": true
+      },
+      {
+        "id": "scarcity-in-matter",
+        "resolvedTo": "scarcity-in-matter",
+        "ok": true
+      },
+      {
+        "id": "claims-on-gold",
+        "resolvedTo": "claims-on-gold",
+        "ok": true
+      },
+      {
+        "id": "money-becomes-information",
+        "resolvedTo": "money-becomes-information",
+        "ok": true
+      },
+      {
+        "id": "scarcity-becomes-digital",
+        "resolvedTo": "scarcity-becomes-digital",
+        "ok": true
+      },
+      {
+        "id": "the-trade-off-keeps-moving",
+        "resolvedTo": "the-trade-off-keeps-moving",
+        "ok": true
+      }
+    ],
+    "retired": [
+      {
+        "id": "2-04-the-competition-record",
+        "fallsBackTo": "eighty-thousand-hours",
+        "ok": true
+      },
+      {
+        "id": "2-05-two-survivors",
+        "fallsBackTo": "eighty-thousand-hours",
+        "ok": true
+      },
+      {
+        "id": "2-06-the-abstraction-ladder",
+        "fallsBackTo": "eighty-thousand-hours",
+        "ok": true
+      },
+      {
+        "id": "2-07-the-severance",
+        "fallsBackTo": "eighty-thousand-hours",
+        "ok": true
+      },
+      {
+        "id": "2-08-the-pattern",
+        "fallsBackTo": "eighty-thousand-hours",
+        "ok": true
+      },
+      {
+        "id": "3-05-the-palladium-test",
+        "fallsBackTo": "eighty-thousand-hours",
+        "ok": true
+      }
+    ]
+  },
+  "consoleErrors": [],
+  "boundaryLaw": {
+    "withinGroupHandsBackToEndState": true,
+    "crossGroupEntersPreviousAtBuildZero": true
+  }
+}

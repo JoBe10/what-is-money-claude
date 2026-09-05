@@ -1,0 +1,65 @@
+{
+  "rows": [
+    {
+      "name": "single_cowrie",
+      "w": 240,
+      "h": 300,
+      "present": true
+    },
+    {
+      "name": "cowrie_shells",
+      "w": 240,
+      "h": 300,
+      "present": true
+    },
+    {
+      "name": "shells",
+      "w": 400,
+      "h": 300,
+      "present": true
+    },
+    {
+      "name": "ledger_glow",
+      "w": 450,
+      "h": 300,
+      "present": true
+    },
+    {
+      "name": "ledger",
+      "w": 400,
+      "h": 300,
+      "present": true
+    },
+    {
+      "name": "gold_certificate",
+      "w": 240,
+      "h": 300,
+      "present": true
+    },
+    {
+      "name": "paper",
+      "w": 400,
+      "h": 300,
+      "present": true
+    },
+    {
+      "name": "vault",
+      "w": 288,
+      "h": 360,
+      "present": true
+    },
+    {
+      "name": "palladium",
+      "w": 288,
+      "h": 360,
+      "present": true
+    },
+    {
+      "name": "coffee_cup",
+      "w": 288,
+      "h": 360,
+      "present": true
+    }
+  ],
+  "consoleErrors": []
+}

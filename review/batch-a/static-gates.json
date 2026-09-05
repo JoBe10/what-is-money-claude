@@ -1,0 +1,72 @@
+{
+  "date": "2026-08-30T05:54:49.530Z",
+  "checks": 13,
+  "failures": 0,
+  "results": [
+    {
+      "name": "PACING: every [→] maps to exactly one advance",
+      "ok": true,
+      "detail": "P1 11→11 · P2 2→1 · S2 5→4 · S3 9→8 · S4 5→4"
+    },
+    {
+      "name": "VERBATIM: the installed scripts are the package’s §2 scripts, character for character",
+      "ok": true,
+      "detail": "5/5 identical"
+    },
+    {
+      "name": "LANGUAGE: no visible line or script in src/scenes/ names the medium",
+      "ok": true,
+      "detail": "9 scene files swept"
+    },
+    {
+      "name": "LANGUAGE: no installed script names the medium",
+      "ok": true,
+      "detail": "5/5 clean"
+    },
+    {
+      "name": "SWEEP: none of the retired-wording terms appears in the new scenes",
+      "ok": true,
+      "detail": "5 terms, 9 files"
+    },
+    {
+      "name": "SWEEP: no installed script names an absolute slide number",
+      "ok": true,
+      "detail": "5/5 clean"
+    },
+    {
+      "name": "SPLICE: no superseded slide is imported by the manifest",
+      "ok": true,
+      "detail": "11/11 removed"
+    },
+    {
+      "name": "SPLICE: every superseded slide file is still on disk",
+      "ok": true,
+      "detail": "11/11 kept"
+    },
+    {
+      "name": "SPLICE: no surviving module references a retired id",
+      "ok": true,
+      "detail": "no stale deep links"
+    },
+    {
+      "name": "SPLICE: the manifest imports exactly what it lists",
+      "ok": true,
+      "detail": "39 imports, 39 distinct names in the arrays"
+    },
+    {
+      "name": "REGISTER: no scene names an image path",
+      "ok": true,
+      "detail": "every raster goes through src/dark-field.js"
+    },
+    {
+      "name": "REGISTER: no accent color anywhere in the Prologue",
+      "ok": true,
+      "detail": "3 files clean"
+    },
+    {
+      "name": "REGISTER: Scene 2 carries no accent",
+      "ok": true,
+      "detail": "orange enters at the birth in Scene 3"
+    }
+  ]
+}

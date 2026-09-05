@@ -11,7 +11,7 @@ resolved; no entry in this document is a placeholder. Where verified data sat
 in tension with a line of copy, R4 implemented the figure and flagged the
 line; R4.1 carries the presenter's ruling and the applied wording. Entries
 that went through that loop are marked **✔ Ruling R-0n applied** and quote
-what is on stage now — see `docs/r4-report.md` §R4.1 for the full record.
+what is on stage now — see `docs/archive/r4-report.md` §R4.1 for the full record.
 
 Charted data is embedded as static files in the repo — `src/data/purchasing-power.js`
 (WIM-FX-001…004) and `src/data/palladium.js` (WIM-PD-001/002) — with no
@@ -853,5 +853,5 @@ so the figure can be re-pulled and checked.
 Replaced at R4 by **WIM-FX-001…005**, one entry per currency plus one for the
 chart's spoken claim. The provisional indexed shapes this entry described are
 gone from the code; the chart now plots the real annual national CPI records.
-Kept as a redirect so that references to WIM-002 in `docs/r2-report.md` and
-`docs/r2-session-brief.md` still resolve.
+Kept as a redirect so that references to WIM-002 in `docs/archive/r2-report.md` and
+`docs/archive/r2-session-brief.md` still resolve.

@@ -657,8 +657,21 @@
   filter: none;
 }
 
+/* PRESENTER-RULED, 27 August 2026 (markup on the legacy 4.05 reference): in a
+   carrier context the disc sits centered between the carrier arcs, fully
+   symmetric. The grid centering above silently top-aligns the disc when the
+   box the slide gives it is shorter than the disc (the 180×72 claim stages of
+   4.05, the stress stage and 4.21 hold 104–116px discs, leaving the disc
+   16–22px below the center their shells and roads are authored to), because
+   an overflowing auto-sized grid row starts at the container's top. Absolute
+   centering holds at any box size, which is what this component has always
+   promised: "centered in whatever box the slide gives it." */
 .s4-claim-object__disc {
   flex: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .s4-claim-object__geometry {
@@ -2536,6 +2549,46 @@
   top: 104px;
 }
 
+/* The header band (the Acts III–IV final ruling 2, 3 Sep 2026, master §13):
+   the five candidates as renders above the table (AGENTS.md §6 — a shared
+   contain box, each render in a box of its own aspect, bottom-aligned on one
+   band baseline), the five glyph marks retired from the asset headings, the
+   drawn grammar beneath untouched. The band mirrors the table's column
+   template, so each render stands over its own column; the first column,
+   PROPERTY's, is empty. The box is 100, not the rails law's 188 — the fit
+   ruling of 4 Sep 2026 (master §13): the band shrinks so the score rows keep
+   their legacy pitch. */
+.s4-comparison__band {
+  position: absolute;
+  left: 120px;
+  top: 132px;
+  width: 1680px;
+  height: 100px;
+  display: grid;
+  grid-template-columns: 460px repeat(5, 244px);
+}
+
+.s4-comparison__band-cell {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+/* The room the band needs — one attribute on the slide root. The table drops
+   beneath the band, and with the marks retired the heading row shrinks to its
+   label; the ten score rows keep the legacy 60 px pitch below (the fit ruling
+   of 4 Sep 2026, master §13 — the session before it tightened them to 48 to
+   fit the 188 box, and the ruling shrank the band instead). The table's
+   bottom lands at 911, under the closing line's held 930. Removing the
+   attribute restores the no-band layout. */
+.s4-comparison[data-band="true"] .s4-comparison__table-wrap {
+  top: 244px;
+}
+
+.s4-comparison[data-band="true"] .s4-comparison-table__asset-row {
+  height: 40px;
+}
+
 .s4-comparison__table-wrap {
   position: absolute;
   left: 120px;
@@ -4353,6 +4406,102 @@
   /* The ignition pulse collapses to its end state. */
   .s1q-promise .s1q-promise__dot {
     animation: none !important;
+  }
+}
+
+/* ===== The Prologue — P1, P2 (the film, Batch A) ===== */
+
+/* The Prologue reuses Section 1's type treatments verbatim — the counter, the
+   hours line, the stakes line, the question and the title are the same classes
+   the presenter approved his frames in, so the scenes inherit their proven
+   transitions and their exact metrics. Since the restoration the condensation
+   joins them: it is 1.02's token on 1.02's own `.luminous-disc` and
+   `.s1q-token` rules, which are already in this file. **There is no rule below
+   for the condensation's object, and its absence is the record of the port** —
+   a P1-specific rule for it would be a re-authoring of a frame the deck had
+   already solved. The one thing that is still the Prologue's own is the
+   five-form morph, and it is geometry-free here: every coordinate lives in the
+   scene's builders, transcribed from the approved cells. */
+
+/* THE TWO RETIRED CONDENSATION LANDINGS. `.p1-mass` is the granular landing
+   (presenter-reopened 30 August 2026); `.p1-ball` is the white monochrome ball
+   that briefly replaced it (letter B, superseded the same day by the
+   restoration ruling — states report §12). Both stay here because their cells
+   stay on file, which is the aesthetic law's file-keeping clause, and neither
+   is rendered anywhere in the deck. The letter-B ball's parameters are kept in
+   full below: they are the record of what was ruled, and a retired candidate
+   that cannot be re-rendered is not on file at all. */
+.p1-mass,
+.p1-ball {
+  opacity: 0;
+  transition: opacity 520ms ease-out;
+}
+
+.p1-mass[data-visible="true"],
+.p1-ball[data-visible="true"] {
+  opacity: 1;
+  transition: opacity 1200ms ease-out;
+}
+
+/* RETIRED — the letter-B object, kept for its cell. A smooth luminous ball,
+   deliberately not the Claim Mark; everything about it was set against
+   `.luminous-disc` (the deck-wide block near the top of this file):
+
+     · HUE — the disc is warm and ends in the accent: unit-warm-bright to
+       unit-warm to a rim mixed 18% with `--accent`. The ball is ACHROMATIC:
+       white to near-white to a neutral grey.
+     · FALLOFF — the disc's glow reaches 0.1932 and 0.625 of its diameter, in
+       the warm rgba(253,233,212). The ball's reaches 0.11 and 0.34, in white:
+       a little over half the radius, at roughly two thirds the strength.
+     · CORE TO HALO — the disc's halo reaches 1.25 core-radii past its edge, a
+       total footprint of 2.25 diameters. The ball's reaches 0.68, a footprint
+       of 1.68.
+
+   Under the restoration the distinction it was built to carry is no longer
+   wanted: P1's condensation lands on the deck's proven token, which IS the
+   disc, and the object's separation from the Claim Mark was never the law —
+   only the accent's absence from the Prologue was. */
+.p1-ball {
+  --ball-size: 296px;
+  width: var(--ball-size);
+  height: var(--ball-size);
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 50% 42%,
+    #FFFFFF 0%,
+    #FAFAFA 46%,
+    #D6D6D6 100%
+  );
+  box-shadow:
+    0 0 calc(var(--ball-size) * 0.11) rgba(255, 255, 255, 0.30),
+    0 0 calc(var(--ball-size) * 0.34) rgba(255, 255, 255, 0.14);
+}
+
+/* The five-form morph is a cross-dissolve in the dark-field register's own
+   reveal (520ms, `.df`). The outgoing form releases a beat after the incoming
+   has begun to rise, so the frame never dips to black between two objects —
+   one form becomes the next rather than being replaced by it. */
+.p1-form[data-visible="false"] {
+  transition-delay: 180ms;
+}
+
+/* The title's beat of emptiness — 1.03's proven treatment: on the live advance
+   the question clears and the frame holds dark before the title lands.
+   Stepping back is immediate. */
+.p1[data-live="true"] .s1q-what__title[data-visible="true"] {
+  transition-delay: 600ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .p1-mass,
+  .p1-mass[data-visible="true"],
+  .p1-ball,
+  .p1-ball[data-visible="true"],
+  .p1-form,
+  .p1-form[data-visible="false"],
+  .p1[data-live="true"] .s1q-what__title[data-visible="true"] {
+    transition-delay: 0ms !important;
+    transition-duration: 0.01ms !important;
   }
 }
 
@@ -6959,8 +7108,13 @@
   transform: translateX(-50%) translateY(0);
 }
 
-/* The gate quotes settle once the foundation lands. */
-.s3f-order[data-step="6"] .s3f-order__gateline[data-visible="true"] {
+/* The gate quotes settle once the foundation lands. Step 6 is the legacy
+   slide's own foundation step; step 7 is the same state under the amended
+   7-beat Scene 13 map (Batch C r2 ruling 3 — the beat split renumbered the
+   foundation beat; the legacy slide never reaches step 7, so its behavior
+   is untouched). */
+.s3f-order[data-step="6"] .s3f-order__gateline[data-visible="true"],
+.s3f-order[data-step="7"] .s3f-order__gateline[data-visible="true"] {
   opacity: 0.55;
 }
 

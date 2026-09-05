@@ -1,0 +1,689 @@
+{
+  "date": "2026-08-30T21:51:58.584Z",
+  "session": "batch-b-impl-1",
+  "beatMap": {
+    "S5": 8,
+    "S6": 9,
+    "S7": 5,
+    "S8": 5,
+    "S9": 5,
+    "S10": 5,
+    "total": 37
+  },
+  "beatMapAuthority": "docs/batch-b-package.md §1 — frozen 31 August 2026, amended the same day to 37 by the Ruling 3 strike (master §13); ruling 4 of the Batch B brief §1 confirms the freeze at 37",
+  "provenanceAuthority": "docs/act-2-provenance.md, ruled 31 August 2026, amended by the strike: 9 PORT · 2 ADAPT · 3 NEW",
+  "reviewProtocol": {
+    "ruled-re-render": "re-rendered exactly as a §1 ruling of the Batch B brief orders (the certificate station; the coin in the entrant block); the approved record by ruling 4 — they meet the presenter’s eye at the act viewing, which ruling 3 makes the gate",
+    "pending-review": "awaiting a formal verdict — empty after ruling 4",
+    "restored": "the six restored elimination cells — ports, no formal burden; the test is that the run looks like it always did",
+    "approved-selection": "the selected candidates, landed as beat cells — s6-b9 and s9-b1 carried byte-identical, s7-b4 the ruled photographic restage approved with the post-§1 record",
+    "approved-adapt": "verified 31 August 2026 — the one ruled change landed and nothing else moved",
+    "approved-port": "approved by provenance; optional spot-check only",
+    "determined": "script landings on approved compositions; no decision",
+    "on-file": "non-selected candidates and retired stagings, kept per the aesthetic law; no burden"
+  },
+  "rulingsR2": {
+    "date": "31 August 2026",
+    "recordedBy": "the act-2-states-r2 session, docs/act-2-states-r2-brief.md §1",
+    "selections": {
+      "S6-F3": {
+        "selected": "s6-b5-a",
+        "system": "A — the counted load",
+        "nonSelected": [
+          "s6-b5-b",
+          "s6-b5-c"
+        ],
+        "disposition": "The counted load is the mass state. The non-selected candidates stay on file, so the selection can be changed by changing one letter."
+      },
+      "S7-F2": {
+        "selected": "s7-b4-b (the logic)",
+        "system": "B — the custody boundary crossed",
+        "nonSelected": [
+          "s7-b4-a",
+          "s7-b4-c"
+        ],
+        "disposition": "The custody-boundary logic is selected, with the restage the r2 brief §3 orders: the frame is rebuilt in the film's real register — the photographic vault render, the photographic gold_certificate render traveled outward, a thin dependency line back — the Act I photograph-plus-line pattern. The drawn circle and the ticket glyph retire to file with the three drawn candidates."
+      },
+      "S9-F1": {
+        "selected": "s9-b1-a",
+        "system": "A — the hub dissolving",
+        "nonSelected": [
+          "s9-b1-b",
+          "s9-b1-c"
+        ],
+        "disposition": "The hub dissolving is the network formation. The non-selected candidates stay on file."
+      }
+    },
+    "adaptationsVerified": {
+      "cells": [
+        "s5-b6",
+        "s8-b2",
+        "s10-b3",
+        "s10-b4",
+        "s5f3-proof-1803"
+      ],
+      "verdict": "Approved, 31 August 2026. The presenter verified that each adaptation's one ruled change landed and nothing else moved. On s10-b3 the placement is confirmed: the beat stands against the strip, out of Act III's judging position, with nothing inside the frame moved. The evidence-grammar 1803 proof is approved with the two beat specimens, so the generalization is demonstrated on all three.",
+      "note": "s6-b2 and s6-b3 — the funnel compression's two cells — are deliberately absent from this list: architecture Ruling 3 is struck (see the freeze register), and the elimination returns to the legacy pacing. Their compressed renders are superseded, preserved at tag act-2-states."
+    }
+  },
+  "rulingsImpl1": {
+    "date": "31 August 2026",
+    "recordedBy": "Batch B implementation Session 1 — docs/batch-b-implementation-brief.md §1",
+    "stripStation": {
+      "ruling": "CERTIFICATE",
+      "provenance": "The Session 1 prompt’s ruling placeholder arrived unfilled (\"[CERTIFICATE or DISC]\"); the presenter supplied the letter in-session — CERTIFICATE — and it is recorded here per the brief’s own definition.",
+      "effect": "The strip’s second station carries the gold_certificate render, relabeled CLAIM ON GOLD; all four stations are photographic; the ClaimObject disc is never a station — it is the traveler. s10-b1 and s10-b2 re-rendered; the disc-as-station staging retired to file as s10-b1-disc and s10-b2-disc, byte-identical to the r2 renders. The rails law’s CLAIM-station exception is superseded (AGENTS.md §6, master §6.3 — amended with the trail)."
+    },
+    "glyphRetirement": {
+      "ruling": "the bitcoin glyph retires at display scale in Act II",
+      "effect": "s9-b2’s entrant block carries the bitcoin coin render per the C1 ruling; the same builder serves s9-b3 and s9-b4, so the ruling re-renders all three. Sweep result: the entrant block was the only display-scale glyph stand-in for the asset among the act’s beat cells — the strip already carries the coin render by C1 and the rails law, the network formation and station marks are drawn grammar and stay drawn, and the on-file candidates keep their glyphs per the aesthetic law’s file-keeping clause. Nothing ambiguous was found; the legacy 2-08’s entrant glyph leaves the deck at Session 2’s splice."
+    },
+    "gate3": "Collapsed into the implementation review (presenter process amendment) — recorded in docs/batch-b-package.md §4 and master §13. The presenter’s live viewing of the implemented act is the gate; the claim’s connective journey (S5 entry → carrier → certificate travel → strip arrival) is what he judges.",
+    "approvedSetRule": "The beat maps stand frozen at 37; the states record post-§1 is the approved set for every landed-state proof (ruling 4). The four r2 pending-review verdicts land with it: s7-b4 approved as the restaged selection, s5-b5 approved as the rails-law port, s10-b1/s10-b2 re-staged by ruling 1 and approved as the record."
+  },
+  "approvedSet": [
+    "s5-b1",
+    "s5-b2",
+    "s5-b3",
+    "s5-b4",
+    "s5-b5",
+    "s5-b6",
+    "s5-b7",
+    "s5-b8",
+    "s6-b1",
+    "s6-b2",
+    "s6-b3",
+    "s6-b4",
+    "s6-b5",
+    "s6-b6",
+    "s6-b7",
+    "s6-b8",
+    "s6-b9",
+    "s7-b1",
+    "s7-b2",
+    "s7-b3",
+    "s7-b4",
+    "s7-b5",
+    "s8-b1",
+    "s8-b2",
+    "s8-b3",
+    "s8-b4",
+    "s8-b5",
+    "s9-b1",
+    "s9-b2",
+    "s9-b3",
+    "s9-b4",
+    "s9-b5",
+    "s10-b1",
+    "s10-b2",
+    "s10-b3",
+    "s10-b4",
+    "s10-b5"
+  ],
+  "claimThroughLine": [
+    "s5-b1",
+    "s5-b7",
+    "s5-b8",
+    "s6-b8",
+    "s7-b1",
+    "s7-b2"
+  ],
+  "claimTravelerNote": "On S10’s strip the disc is the traveler, never a station (the CERTIFICATE ruling) — its arrival is connective motion, not a settled still.",
+  "counts": {
+    "ruled-re-render": 5,
+    "approved-selection": 3,
+    "approved-adapt": 5,
+    "approved-port": 18,
+    "determined": 7,
+    "on-file": 11
+  },
+  "cells": [
+    {
+      "id": "s5-b1",
+      "file": "s5-b1.png",
+      "scene": "S5",
+      "beat": 1,
+      "frame": "S5-F1",
+      "klass": "PORT",
+      "review": "approved-port",
+      "source": "4-06-claim-and-carrier — ClaimObject in CarrierShell, construction C",
+      "caption": "Beat 1 · the claim needs a body, and wears its first. The through-line composition, ported: the disc centred between construction C’s bands (the carrier-centring ruling of 27 Aug 2026, which lives in the component), the carrier named in the rail’s own stop register. The claim enters Act II here and is on stage at every beat that is about the body it wears."
+    },
+    {
+      "id": "s5-b2",
+      "file": "s5-b2.png",
+      "scene": "S5",
+      "beat": 2,
+      "frame": "S5-F2",
+      "klass": "PORT",
+      "review": "approved-port",
+      "source": "2-04-the-competition-record builds 1–4 — the contender row",
+      "caption": "Beat 2 · CATTLE falls. The verdict treatment ported by mounting the component itself: the good on the dark-field register, its one wound beneath it at full voice, the row’s shared two-row rhythm. The wound is the legacy verdict, unchanged — “Cannot be divided. Half a cow is no cow.”"
+    },
+    {
+      "id": "s5-b3",
+      "file": "s5-b3.png",
+      "scene": "S5",
+      "beat": 3,
+      "frame": "S5-F2",
+      "klass": "PORT",
+      "review": "approved-port",
+      "source": "2-04-the-competition-record builds 1–4",
+      "caption": "Beat 3 · SALT falls. The landed wound speaks at full voice and CATTLE’s recedes to the dimmed-prior step (§9.4 rule 10) — the rule that keeps the sentence being spoken brighter than the ones already said."
+    },
+    {
+      "id": "s5-b4",
+      "file": "s5-b4.png",
+      "scene": "S5",
+      "beat": 4,
+      "frame": "S5-F2",
+      "klass": "PORT",
+      "review": "approved-port",
+      "source": "2-04-the-competition-record builds 1–4",
+      "caption": "Beat 4 · IRON falls. Three wounds on the record, the newest at full voice. SHELLS is still standing — its defeat is beat 6’s, and it is the one the scene opened on."
+    },
+    {
+      "id": "s5-b5",
+      "file": "s5-b5.png",
+      "scene": "S5",
+      "beat": 5,
+      "frame": "S5-F2",
+      "klass": "PORT",
+      "review": "approved-port",
+      "source": "2-04-the-competition-record build 8 + the rails law (31 Aug 2026) — the goods on the object band",
+      "caption": "Beat 5 · the metals rise — THE RAILS LAW STAGED. Beneath the line, the legacy record is untouched: the drawn line, the station markers, the labels and the four wounds, with METALS active. Above it, the goods ride as an object band of their dark-field renders — the same four studies the contender row uses, receded to the record’s own prior step where their stations have fallen, SHELLS still at full voice — and METALS is carried by the metals render on the band’s shared baseline. APPROVED 31 August 2026 with the post-§1 record (Batch B brief §1.4): the band reads as one system with the strip, and the drawn grammar beneath is exactly as it was."
+    },
+    {
+      "id": "s5-b6",
+      "file": "s5-b6.png",
+      "scene": "S5",
+      "beat": 6,
+      "frame": "S5-F3",
+      "klass": "ADAPT",
+      "review": "approved-adapt",
+      "source": "2-07-the-severance’s dated-fact treatment · ruled change: generalized as the film-wide evidence grammar",
+      "caption": "Beat 6 · THE ZANZIBAR RECEIPT — the evidence grammar’s first specimen. VERIFIED 31 August 2026: the one ruled change landed and nothing else moved. The type is the legacy’s to the value (128px/650 tabular date, 33px/460 fact); the only thing that moved is that the two now stand as one block that can also carry a place. The words are the rail’s own receipt text, split into place · date · fact."
+    },
+    {
+      "id": "s5-b7",
+      "file": "s5-b7.png",
+      "scene": "S5",
+      "beat": 7,
+      "frame": "S5-F1",
+      "klass": "PORT",
+      "review": "approved-port",
+      "source": "4-06-claim-and-carrier — the same composition, the scene’s closing pair",
+      "caption": "Beat 7 · “The function stayed. The carrier changed.” The through-line composition returns with the carrier unnamed — five bodies have been and gone, and the thing inside is the one that did not. This is the frame the whole act hangs from."
+    },
+    {
+      "id": "s5-b8",
+      "file": "s5-b8.png",
+      "scene": "S5",
+      "beat": 8,
+      "frame": "—",
+      "klass": "determined",
+      "review": "determined",
+      "source": "the deck’s sequenced-line treatment (P1 b9/b10) on the beat-7 composition",
+      "caption": "Beat 8 · the exit question, alone on the composition it leaves. A script landing on an already-approved frame: the line changes, nothing else does."
+    },
+    {
+      "id": "s6-b1",
+      "file": "s6-b1.png",
+      "scene": "S6",
+      "beat": 1,
+      "frame": "S6-F1",
+      "klass": "PORT",
+      "review": "approved-port",
+      "source": "P1-F2’s approved display-scale study box (p1-b5) + master §11’s display rule",
+      "caption": "Beat 1 · GOLD, and the answer it is. The study box is the Prologue’s approved geometry — 540 tall at the forms’ centre, the render’s own aspect, nothing else in the frame — with the statement in the deck’s caps register above it. WIRING: only the statement’s y is this sheet’s."
+    },
+    {
+      "id": "s6-b2",
+      "file": "s6-b2.png",
+      "scene": "S6",
+      "beat": 2,
+      "frame": "S6-F2",
+      "klass": "PORT",
+      "review": "approved-port",
+      "source": "2-05-two-survivors build 1 + ElementGrid — the legacy pacing (Ruling 3 struck 31 Aug 2026)",
+      "caption": "Beat 2 · the table rises. Legacy build 1, ported whole: the kicker lands and the stylized table stands at its full population, nothing yet eliminated. From here the film advances one wave at a time, exactly as the legacy performed it."
+    },
+    {
+      "id": "s6-b3",
+      "file": "s6-b3.png",
+      "scene": "S6",
+      "beat": 3,
+      "frame": "S6-F2",
+      "klass": "PORT",
+      "review": "approved-port",
+      "source": "2-05-two-survivors build 2 + ElementGrid — the legacy pacing (Ruling 3 struck 31 Aug 2026)",
+      "caption": "Beat 3 · the gases drift off. Legacy build 2: ElementGrid’s own step 1, and the wave’s single line at full voice — “Anything that floats away is out.” One line on stage at a time, as the legacy showed it."
+    },
+    {
+      "id": "s6-b4",
+      "file": "s6-b4.png",
+      "scene": "S6",
+      "beat": 4,
+      "frame": "S6-F2",
+      "klass": "PORT",
+      "review": "approved-port",
+      "source": "2-05-two-survivors build 3 + ElementGrid — the legacy pacing (Ruling 3 struck 31 Aug 2026)",
+      "caption": "Beat 4 · the corrosion wave. Legacy build 3: everything that rusts, burns, or dissolves goes dark — most of the table, iron included — with the wave’s own line beneath."
+    },
+    {
+      "id": "s6-b5",
+      "file": "s6-b5.png",
+      "scene": "S6",
+      "beat": 5,
+      "frame": "S6-F2",
+      "klass": "PORT",
+      "review": "approved-port",
+      "source": "2-05-two-survivors build 4 + ElementGrid — the legacy pacing (Ruling 3 struck 31 Aug 2026)",
+      "caption": "Beat 5 · the radioactive row pulses out. Legacy build 4: one wave, one line — “Anything that kills the holder is out.”"
+    },
+    {
+      "id": "s6-b6",
+      "file": "s6-b6.png",
+      "scene": "S6",
+      "beat": 6,
+      "frame": "S6-F2",
+      "klass": "PORT",
+      "review": "approved-port",
+      "source": "2-05-two-survivors build 5 + ElementGrid — the legacy pacing (Ruling 3 struck 31 Aug 2026)",
+      "caption": "Beat 6 · the shapeless settle out. Legacy build 5: what will not hold a shape goes, and what remains is the small lit family of noble metals."
+    },
+    {
+      "id": "s6-b7",
+      "file": "s6-b7.png",
+      "scene": "S6",
+      "beat": 7,
+      "frame": "S6-F2",
+      "klass": "PORT",
+      "review": "approved-port",
+      "source": "2-05-two-survivors build 6 + ElementGrid — the legacy pacing (Ruling 3 struck 31 Aug 2026)",
+      "caption": "Beat 7 · the furnace decides, and two survive. Legacy build 6: the furnace wave takes the noble metals no ancient forge could work, Ag and Au stand alone, and the legacy verdict lands — “Workable nobility leaves two.” The 1803 foreshadow is spoken on this advance, where the legacy speaks it, and it is why palladium is a candidate that lost on timing rather than one chemistry had already excluded."
+    },
+    {
+      "id": "s6-b8",
+      "file": "s6-b8.png",
+      "scene": "S6",
+      "beat": 8,
+      "frame": "S5-F1",
+      "klass": "PORT",
+      "review": "approved-port",
+      "source": "4-06-claim-and-carrier — the through-line composition, carrier GOLD",
+      "caption": "Beat 8 · the claim has found its strongest body yet. The same ported composition, the carrier now named GOLD — which is what makes the argument visible rather than spoken: the body changed and the thing inside did not. (Beat 4 of the r1 sheet, renumbered by the restoration; the render is carried byte-identical.)"
+    },
+    {
+      "id": "s6-b9",
+      "file": "s6-b9.png",
+      "scene": "S6",
+      "beat": 9,
+      "frame": "S6-F3",
+      "klass": "NEW",
+      "review": "approved-selection",
+      "system": "A — the counted load",
+      "source": "the presenter’s selection, 31 August 2026 — s6-b5-a carried byte-identical",
+      "caption": "Beat 9 · THE MASS STATE — the selected system: the counted load. The mass is COUNTED, in the metal’s own mark: three stations along one baseline, the represented value named above and the required mass stacked beneath as repeated gold marks — one, four, twelve. The growth is arithmetic and unarguable, and it reads before a word is read. Selected 31 August 2026; the render is the candidate’s, byte-identical."
+    },
+    {
+      "id": "s6-b5-a",
+      "file": "s6-b5-a.png",
+      "scene": "S6",
+      "beat": 9,
+      "frame": "S6-F3",
+      "klass": "NEW",
+      "review": "on-file",
+      "system": "A — the counted load",
+      "caption": "Candidate A — the counted load. SELECTED 31 August 2026: this system lands as the beat cell s6-b9. The candidate keeps its r1 id (the mass state was beat 5 before the restoration) and stays on file per the aesthetic law."
+    },
+    {
+      "id": "s6-b5-b",
+      "file": "s6-b5-b.png",
+      "scene": "S6",
+      "beat": 9,
+      "frame": "S6-F3",
+      "klass": "NEW",
+      "review": "on-file",
+      "system": "B — the column that grows",
+      "caption": "Candidate B — the column that grows, NOT SELECTED (the presenter chose A, 31 August 2026); kept on file per the aesthetic law. One column on one baseline, with the three represented values ticked on it as thresholds in the line’s own language — the level the mass stands at now drawn as a column, the two it has passed left as the edges where it used to reach."
+    },
+    {
+      "id": "s6-b5-c",
+      "file": "s6-b5-c.png",
+      "scene": "S6",
+      "beat": 9,
+      "frame": "S6-F3",
+      "klass": "NEW",
+      "review": "on-file",
+      "system": "C — the load hung from the claim",
+      "caption": "Candidate C — the load hung from the claim, NOT SELECTED (the presenter chose A, 31 August 2026); kept on file per the aesthetic law. The dependency drawn as literal length: three rows, the claim’s mark fixed at the left of each, and the mass hanging from it as a line that reaches further every time."
+    },
+    {
+      "id": "s7-b1",
+      "file": "s7-b1.png",
+      "scene": "S7",
+      "beat": 1,
+      "frame": "—",
+      "klass": "determined",
+      "review": "determined",
+      "source": "S6 b4’s composition (S5-F1, ported) with the rail’s own recorded gold wound",
+      "caption": "Beat 1 · gold’s weaknesses named on the body that has them. The composition is beat 4’s; the line is the Evolution Rail’s own gold wound, unchanged — “heavy · hard to verify · dangerous to move.”"
+    },
+    {
+      "id": "s7-b2",
+      "file": "s7-b2.png",
+      "scene": "S7",
+      "beat": 2,
+      "frame": "S5-F1",
+      "klass": "PORT",
+      "review": "approved-port",
+      "source": "4-06’s composition + EvolutionRail’s recorded COINAGE riser note",
+      "caption": "Beat 2 · the body becomes the coin. The through-line composition with the carrier named COINAGE, and the rail’s own riser note beneath it, verbatim: “Solves verification and division. Trust required: the mint.”"
+    },
+    {
+      "id": "s7-b3",
+      "file": "s7-b3.png",
+      "scene": "S7",
+      "beat": 3,
+      "frame": "S7-F1",
+      "klass": "PORT",
+      "review": "approved-port",
+      "source": "P1-F2’s approved display-scale study box, subject `vault`",
+      "caption": "Beat 3 · CUSTODY — the gold stops. The same approved study geometry as beat 1 of Scene 6, with a subject that has never been on screen. §0’s convention is what makes this a port rather than a new frame: a subject is not a treatment, and the presenter confirmed §0."
+    },
+    {
+      "id": "s7-b4",
+      "file": "s7-b4.png",
+      "scene": "S7",
+      "beat": 4,
+      "frame": "S7-F2",
+      "klass": "NEW",
+      "review": "approved-selection",
+      "system": "B — the custody boundary crossed · restaged photographically",
+      "source": "the presenter’s selection of s7-b4-b’s logic + the r2 brief §3 — the Act I photograph-plus-line pattern",
+      "caption": "Beat 4 · THE DETACHMENT, restaged in the film’s real register at the presenter’s order: the photographic vault holding the gold, the photographic certificate detached and traveled outward across the boundary, and one thin dependency line back — the Act I photograph-plus-line pattern, not a diagram. APPROVED 31 August 2026 with the post-§1 record (Batch B brief §1.4 and §2 — the restaged s7-b4 is the settled state); the drawn circle and the ticket glyph stay retired to file with the drawn candidates."
+    },
+    {
+      "id": "s7-b4-a",
+      "file": "s7-b4-a.png",
+      "scene": "S7",
+      "beat": 4,
+      "frame": "S7-F2",
+      "klass": "NEW",
+      "review": "on-file",
+      "system": "A — the departure arc",
+      "caption": "Candidate A — the departure arc, NOT SELECTED (the presenter chose B’s logic, restaged photographically, 31 August 2026); kept on file per the aesthetic law."
+    },
+    {
+      "id": "s7-b4-b",
+      "file": "s7-b4-b.png",
+      "scene": "S7",
+      "beat": 4,
+      "frame": "S7-F2",
+      "klass": "NEW",
+      "review": "on-file",
+      "system": "B — the custody boundary crossed",
+      "caption": "Candidate B — the custody boundary crossed. ITS LOGIC WAS SELECTED (31 August 2026) and restaged photographically as the beat cell s7-b4; this drawn form — the ring and the ticket glyph — retires to file per the aesthetic law."
+    },
+    {
+      "id": "s7-b4-c",
+      "file": "s7-b4-c.png",
+      "scene": "S7",
+      "beat": 4,
+      "frame": "S7-F2",
+      "klass": "NEW",
+      "review": "on-file",
+      "system": "C — the two positions",
+      "caption": "Candidate C — the two positions, NOT SELECTED (the presenter chose B’s logic, restaged photographically, 31 August 2026); kept on file per the aesthetic law."
+    },
+    {
+      "id": "s7-b5",
+      "file": "s7-b5.png",
+      "scene": "S7",
+      "beat": 5,
+      "frame": "—",
+      "klass": "determined",
+      "review": "determined",
+      "source": "the deck’s sequenced-line treatment; the paired lines are the architecture’s own",
+      "caption": "Beat 5 · the trade named honestly, as a pair on cleared black — the deck’s own sequenced-line treatment. FLAGGED: whether the detachment holds under these lines instead of clearing follows the beat-4 selection, and is not decided here."
+    },
+    {
+      "id": "s8-b1",
+      "file": "s8-b1.png",
+      "scene": "S8",
+      "beat": 1,
+      "frame": "S8-F1",
+      "klass": "PORT",
+      "review": "approved-port",
+      "source": "P1’s five-form cross-dissolve — p1-b6 (paper) → p1-b7-glow (ledger_glow), both approved",
+      "caption": "Beat 1 · MONEY BECAME INFORMATION. The landing of a transition the film already owns: the Prologue’s approved morph runs paper into the glowing ledger entry, and both of its frames are presenter-approved cells. The register’s one 3:2 render takes its own aspect in the approved box."
+    },
+    {
+      "id": "s8-b2",
+      "file": "s8-b2.png",
+      "scene": "S8",
+      "beat": 2,
+      "frame": "S5-F3",
+      "klass": "ADAPT",
+      "review": "approved-adapt",
+      "source": "2-07-the-severance’s dated-fact treatment · the evidence grammar’s second specimen",
+      "caption": "Beat 2 · 1971. The grammar’s second specimen — a date with no place — carrying `2-07`’s own decree sentence verbatim. VERIFIED 31 August 2026: the legacy composition and the generalized one look most alike here, because this is the specimen it was built on, and nothing else moved."
+    },
+    {
+      "id": "s8-b3",
+      "file": "s8-b3.png",
+      "scene": "S8",
+      "beat": 3,
+      "frame": "—",
+      "klass": "determined",
+      "review": "determined",
+      "source": "2-08-the-pattern’s recorded thesis line 2",
+      "caption": "Beat 3 · captured, not beaten. The legacy pattern slide’s own sentence, on cleared black at the deck’s statement register — the protected history, in the words the record already uses."
+    },
+    {
+      "id": "s8-b4",
+      "file": "s8-b4.png",
+      "scene": "S8",
+      "beat": 4,
+      "frame": "S8-F2",
+      "klass": "PORT",
+      "review": "approved-port",
+      "source": "2-07-the-severance’s chart — the frozen data and every draw rule, untouched",
+      "caption": "Beat 4 · THE RECORD. Ported whole: `src/data/purchasing-power.js` unchanged, one vertex per observed year (“the line is the record, not a curve fit”), the frozen draw order and per-series alpha, the 1971 = 100 reference line, the end-label spread where USD and GBP finish within a label’s height, the index note. Ruled PORT on 31 Aug; an ADAPT is reserved only for a clash the presenter sees in context."
+    },
+    {
+      "id": "s8-b5",
+      "file": "s8-b5.png",
+      "scene": "S8",
+      "beat": 5,
+      "frame": "—",
+      "klass": "determined",
+      "review": "determined",
+      "source": "2-07-the-severance’s two balance lines, verbatim",
+      "caption": "Beat 5 · both facts on one screen, because both are true. The legacy severance’s own closing pair, unchanged — the honest strength above, the measured wound below."
+    },
+    {
+      "id": "s9-b1",
+      "file": "s9-b1.png",
+      "scene": "S9",
+      "beat": 1,
+      "frame": "S9-F1",
+      "klass": "NEW",
+      "review": "approved-selection",
+      "system": "A — the hub dissolving",
+      "source": "the presenter’s selection, 31 August 2026 — s9-b1-a carried byte-identical (the systems sheet’s own builder)",
+      "caption": "Beat 1 · THE NETWORK FORMATION — the selected system: the hub dissolving. The institutional shape and its replacement in one frame: a centre with spokes to a ring, both receded to the floor, and peer-to-peer chords forming between the ring’s own nodes at full voice. Mid-formation — about two thirds of the chords are drawn. The argument is visible in the two weights: what is going out, and what is coming in. No text on the frame. Selected 31 August 2026; the render is the candidate’s, byte-identical."
+    },
+    {
+      "id": "s9-b1-a",
+      "file": "s9-b1-a.png",
+      "scene": "S9",
+      "beat": 1,
+      "frame": "S9-F1",
+      "klass": "NEW",
+      "review": "on-file",
+      "system": "A — the hub dissolving",
+      "source": "review/act-2/systems — the same builder, reused per the ruled map §6",
+      "caption": "Candidate A — the hub dissolving. SELECTED 31 August 2026: this system lands as the beat cell s9-b1."
+    },
+    {
+      "id": "s9-b1-b",
+      "file": "s9-b1-b.png",
+      "scene": "S9",
+      "beat": 1,
+      "frame": "S9-F1",
+      "klass": "NEW",
+      "review": "on-file",
+      "system": "B — the layer breaking",
+      "source": "review/act-2/systems — the same builder, reused per the ruled map §6",
+      "caption": "Candidate B — the layer breaking. NOT SELECTED (the presenter chose A, 31 August 2026); kept on file per the aesthetic law."
+    },
+    {
+      "id": "s9-b1-c",
+      "file": "s9-b1-c.png",
+      "scene": "S9",
+      "beat": 1,
+      "frame": "S9-F1",
+      "klass": "NEW",
+      "review": "on-file",
+      "system": "C — the record, copied",
+      "source": "review/act-2/systems — the same builder, reused per the ruled map §6",
+      "caption": "Candidate C — the record, copied. NOT SELECTED (the presenter chose A, 31 August 2026); kept on file per the aesthetic law."
+    },
+    {
+      "id": "s9-b2",
+      "file": "s9-b2.png",
+      "scene": "S9",
+      "beat": 2,
+      "frame": "S9-F2",
+      "klass": "PORT",
+      "review": "ruled-re-render",
+      "source": "2-08-the-pattern builds 5–6 — the entrant block in the neutral register + the display-scale glyph retirement (31 Aug 2026, Batch B brief §1.2 — the coin render per C1)",
+      "caption": "Beat 2 · the facts, in the deck’s most neutral register. The rail’s own entrant block, free-standing: the coin render at its head (the §1.2 ruling — the bitcoin glyph retires at display scale, per C1), the name in stop typography, and the recorded line — “2009: digital · no state, no company · supply fixed by its own rules.” Description, never argument. The drawn rhythm beneath the head is untouched."
+    },
+    {
+      "id": "s9-b3",
+      "file": "s9-b3.png",
+      "scene": "S9",
+      "beat": 3,
+      "frame": "S9-F2",
+      "klass": "PORT",
+      "review": "ruled-re-render",
+      "source": "2-08-the-pattern builds 5–6 + the display-scale glyph retirement (31 Aug 2026, Batch B brief §1.2)",
+      "caption": "Beat 3 · the three capabilities that had never coexisted, landing on their own advance while the facts recede to the dimmed-prior step. The caps register is the deck’s; the three names are the architecture’s. Re-rendered with the coin at the block’s head per the §1.2 ruling — nothing else moved."
+    },
+    {
+      "id": "s9-b4",
+      "file": "s9-b4.png",
+      "scene": "S9",
+      "beat": 4,
+      "frame": "S9-F2",
+      "klass": "PORT",
+      "review": "ruled-re-render",
+      "source": "2-08-the-pattern build 6 — the limitation as its own advance + the display-scale glyph retirement (31 Aug 2026, Batch B brief §1.2)",
+      "caption": "Beat 4 · the honest line, in the same breath. This is the whole reason S9-F2 is a port: the legacy treatment already gives the limitation ITS OWN ADVANCE at full voice, with everything above it receded — which is what turns “honesty in the same breath” from a hope into a composition. The sentence is the rail’s, verbatim. Re-rendered with the coin at the block’s head per the §1.2 ruling — nothing else moved."
+    },
+    {
+      "id": "s9-b5",
+      "file": "s9-b5.png",
+      "scene": "S9",
+      "beat": 5,
+      "frame": "—",
+      "klass": "determined",
+      "review": "determined",
+      "source": "the deck’s sequenced-line treatment; the content is Ruling 5’s distribution",
+      "caption": "Beat 5 · the two-question distinction, on cleared black. Ruling 5’s distributed stability content lands here as a spoken distinction with one line on screen — no frame was built for the stability scene, and none is built here."
+    },
+    {
+      "id": "s10-b1",
+      "file": "s10-b1.png",
+      "scene": "S10",
+      "beat": 1,
+      "frame": "S10-F1",
+      "klass": "PORT",
+      "review": "ruled-re-render",
+      "source": "EvolutionRail’s grammar (icon grammar §4.5) + the rails law (31 Aug 2026) + the CERTIFICATE ruling (31 Aug 2026, Batch B brief §1.1)",
+      "caption": "Beat 1 · THE STRIP — THE CERTIFICATE RULING STAGED. Beneath the line, the rail’s own drawn sentence is unchanged: the 12px marker on the line, the name at +26 in 25px/0.16em, the gain and the dependency where the wound sat, one shared rhythm, no staggered baselines. Above it, all four stations are now photographic: GOLD by its render, the claim station by the gold_certificate render relabeled CLAIM ON GOLD, LEDGER by ledger_glow, BITCOIN by its render per the C1 ruling — each at the band’s shared height in a box of its own aspect. The ClaimObject disc is never a station — it is the traveler, and its journey across the strip is motion the implementation builds, judged at the act viewing. BITCOIN is the live station; the three before it recede to the prior step. The disc-as-station staging is retired to file as s10-b1-disc."
+    },
+    {
+      "id": "s10-b2",
+      "file": "s10-b2.png",
+      "scene": "S10",
+      "beat": 2,
+      "frame": "—",
+      "klass": "determined",
+      "review": "ruled-re-render",
+      "source": "the architecture’s own line, on the beat-1 composition — re-landed on the certificate strip",
+      "caption": "Beat 2 · the history line, re-landed on the certificate strip. The line and its register are unchanged; only the station above it changed, by the CERTIFICATE ruling. The disc-as-station variant is retired to file as s10-b2-disc."
+    },
+    {
+      "id": "s10-b1-disc",
+      "file": "s10-b1-disc.png",
+      "scene": "S10",
+      "beat": 1,
+      "frame": "S10-F1",
+      "klass": "PORT",
+      "review": "on-file",
+      "source": "the r2 rails-law staging — the disc at CLAIM, retired by the CERTIFICATE ruling (31 Aug 2026)",
+      "caption": "The disc-as-station strip, RETIRED TO FILE by the CERTIFICATE ruling of 31 August 2026 (Batch B brief §1.1); kept per the aesthetic law so the selection can be changed by changing one word. The render is the r2 staging, carried byte-identical."
+    },
+    {
+      "id": "s10-b2-disc",
+      "file": "s10-b2-disc.png",
+      "scene": "S10",
+      "beat": 2,
+      "frame": "—",
+      "klass": "determined",
+      "review": "on-file",
+      "source": "the r2 rails-law staging — the history line on the disc strip, retired by the CERTIFICATE ruling (31 Aug 2026)",
+      "caption": "The history line on the disc-as-station strip, RETIRED TO FILE by the CERTIFICATE ruling of 31 August 2026; kept per the aesthetic law. The render is the r2 staging, carried byte-identical."
+    },
+    {
+      "id": "s10-b3",
+      "file": "s10-b3.png",
+      "scene": "S10",
+      "beat": 3,
+      "frame": "S10-F2",
+      "klass": "ADAPT",
+      "review": "approved-adapt",
+      "source": "3-05-the-palladium-test · ruled change: Ruling 4, placed in Scene 10 as the bar the strip must clear",
+      "caption": "Beat 3 · PALLADIUM. The legacy frame ported — the hook, and the two panels with their real sourced figures (annual mine supply beside the modern price record on a log axis, one vertex per observed year). VERIFIED 31 August 2026, placement confirmed: the beat stands against the strip, out of Act III’s judging position, nothing inside the frame moved, and the two-epoch honesty traveled with it."
+    },
+    {
+      "id": "s10-b4",
+      "file": "s10-b4.png",
+      "scene": "S10",
+      "beat": 4,
+      "frame": "S10-F2",
+      "klass": "ADAPT",
+      "review": "approved-adapt",
+      "source": "3-05-the-palladium-test build 5 — the bar",
+      "caption": "Beat 4 · THE BAR — the sentence every later candidate is held to, landing at full voice with the two epoch lines settled small and receded beneath a chart still at full voice (R7.4 §F.6’s own budget). The sentence is the legacy’s, unchanged. VERIFIED 31 August 2026."
+    },
+    {
+      "id": "s10-b5",
+      "file": "s10-b5.png",
+      "scene": "S10",
+      "beat": 5,
+      "frame": "—",
+      "klass": "determined",
+      "review": "determined",
+      "source": "the deck’s question register (1.03’s s1q-what__question, the film’s big-question type)",
+      "caption": "Beat 5 · the pivot that opens Act III, alone on cleared black. The question register the film uses for exactly this — a question the next act exists to answer."
+    },
+    {
+      "id": "s5f3-proof-1803",
+      "file": "s5f3-proof-1803.png",
+      "scene": "—",
+      "beat": null,
+      "frame": "S5-F3",
+      "klass": "ADAPT",
+      "review": "approved-adapt",
+      "system": "system proof",
+      "source": "the evidence grammar carrying its third specimen",
+      "caption": "SYSTEM PROOF, not a beat · the evidence grammar carrying 1803 — the film’s third dated fact, and the one Scene 6 plants four scenes before Scene 10 pays it off. APPROVED 31 August 2026 with the two beat specimens, so the ruled generalization is demonstrated on all three rather than asserted on the third. In the film the line lives inside Scene 10’s ported palladium frame."
+    }
+  ],
+  "consoleErrors": []
+}

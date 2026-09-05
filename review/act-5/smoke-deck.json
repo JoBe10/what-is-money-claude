@@ -1,0 +1,99 @@
+{
+  "date": "2026-09-03T23:03:09.003Z",
+  "session": "act-5-states",
+  "pass": true,
+  "deck": {
+    "slides": 32,
+    "actV": [
+      "4-17-store-of-value-function-migrates",
+      "4-18-monetary-premium",
+      "4-19-other-assets-do-moneys-job",
+      "4-20-bitcoin-does-not-replace-everything",
+      "4-21-marginal-store-of-value-decision",
+      "4-22-fixed-supply-reprices-at-margin",
+      "4-23-investment-case-from-first-principles",
+      "5-01-thank-you"
+    ]
+  },
+  "s23DirectEntry": {
+    "i": 23,
+    "b": 5,
+    "band": 5,
+    "rows": 10,
+    "pitch": 60,
+    "scores": 50,
+    "line": 1
+  },
+  "walk": [
+    "4-17-store-of-value-function-migrates:0",
+    "4-17-store-of-value-function-migrates:1",
+    "4-17-store-of-value-function-migrates:2",
+    "4-17-store-of-value-function-migrates:3",
+    "4-18-monetary-premium:0",
+    "4-18-monetary-premium:1",
+    "4-18-monetary-premium:2",
+    "4-18-monetary-premium:3",
+    "4-19-other-assets-do-moneys-job:0",
+    "4-19-other-assets-do-moneys-job:1",
+    "4-19-other-assets-do-moneys-job:2",
+    "4-19-other-assets-do-moneys-job:3",
+    "4-19-other-assets-do-moneys-job:4",
+    "4-19-other-assets-do-moneys-job:5",
+    "4-20-bitcoin-does-not-replace-everything:0",
+    "4-20-bitcoin-does-not-replace-everything:1",
+    "4-20-bitcoin-does-not-replace-everything:2",
+    "4-20-bitcoin-does-not-replace-everything:3",
+    "4-20-bitcoin-does-not-replace-everything:4",
+    "4-20-bitcoin-does-not-replace-everything:5",
+    "4-20-bitcoin-does-not-replace-everything:6",
+    "4-20-bitcoin-does-not-replace-everything:7",
+    "4-21-marginal-store-of-value-decision:0",
+    "4-21-marginal-store-of-value-decision:1",
+    "4-21-marginal-store-of-value-decision:2",
+    "4-22-fixed-supply-reprices-at-margin:0",
+    "4-22-fixed-supply-reprices-at-margin:1",
+    "4-22-fixed-supply-reprices-at-margin:2",
+    "4-22-fixed-supply-reprices-at-margin:3",
+    "4-23-investment-case-from-first-principles:0",
+    "4-23-investment-case-from-first-principles:1",
+    "4-23-investment-case-from-first-principles:2",
+    "5-01-thank-you:0",
+    "5-01-thank-you:1",
+    "5-01-thank-you:2"
+  ],
+  "checks": 6,
+  "failures": 0,
+  "results": [
+    {
+      "name": "BOOT: the deck boots at slide 0 with 32 slides",
+      "ok": true,
+      "detail": "32 slides"
+    },
+    {
+      "name": "BOOT: the eight Act V sources follow Act IV directly and in order, the close last",
+      "ok": true,
+      "detail": "the-comparison → 4-17-store-of-value-function-migrates → 4-18-monetary-premium → 4-19-other-assets-do-moneys-job → 4-20-bitcoin-does-not-replace-everything → 4-21-marginal-store-of-value-decision → 4-22-fixed-supply-reprices-at-margin → 4-23-investment-case-from-first-principles → 5-01-thank-you"
+    },
+    {
+      "name": "S23: direct entry at the closing line — the band’s five renders, ten rows at 60, fifty scores, the line",
+      "ok": true,
+      "detail": "23:5 · band 5 · rows 10 × 60 · scores 50 · line 1"
+    },
+    {
+      "name": "ACT V: the eight sources walk forward through every build — 35 states, exact — to Thank you.",
+      "ok": true,
+      "detail": "35 states · 0 off"
+    },
+    {
+      "name": "ACT V: the close stands on “Thank you.”",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "CONSOLE: 0 errors across the boot, the direct entry and the walk",
+      "ok": true,
+      "detail": "0"
+    }
+  ],
+  "consoleErrors": []
+}

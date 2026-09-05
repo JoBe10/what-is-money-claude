@@ -1,0 +1,358 @@
+{
+  "date": "2026-08-30T21:52:13.302Z",
+  "session": "batch-b-impl-1",
+  "baseline": "act-2-states-r2",
+  "method": "sha256 of every cell PNG against the file at the baseline tag; byte-identity implies zero differing pixels",
+  "counts": {
+    "carried": 2,
+    "re-staged": 5,
+    "untouched": 42
+  },
+  "tagFilesMissing": [],
+  "failures": 0,
+  "rows": [
+    {
+      "file": "s10-b1-disc.png",
+      "class": "carried",
+      "ok": true,
+      "detail": "byte-identical to act-2-states-r2:s10-b1.png — the retired staging preserved by construction",
+      "sha256": "c6fe1a4155c1f62a8855f2e562c18410b631d0b320c250091f14428da3855e17"
+    },
+    {
+      "file": "s10-b1.png",
+      "class": "re-staged",
+      "ok": true,
+      "detail": "ruling 1.1 — the CERTIFICATE: the second station carries the gold_certificate render, relabeled CLAIM ON GOLD; all four stations photographic — supersedes the r2 render, preserved at the tag",
+      "sha256": "a79d41320c533cbd21fd3cb74ff27f99f381c3fe5b038b7a010c5296a06cf803"
+    },
+    {
+      "file": "s10-b2-disc.png",
+      "class": "carried",
+      "ok": true,
+      "detail": "byte-identical to act-2-states-r2:s10-b2.png — the retired staging preserved by construction",
+      "sha256": "58d7e24cfdd1ded30084299350c92988ab87cdae197fa3fde411aea4e061728d"
+    },
+    {
+      "file": "s10-b2.png",
+      "class": "re-staged",
+      "ok": true,
+      "detail": "ruling 1.1 — the history line re-landed on the certificate strip — supersedes the r2 render, preserved at the tag",
+      "sha256": "8011cd727346310806e3e0660a1e70c5ba981520310f153a439dd753d7f33b3e"
+    },
+    {
+      "file": "s10-b3.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "21d491e181924e98ab4fb4cd9e220a1fc18b88a30fdc335370c7b086a4ee74b3"
+    },
+    {
+      "file": "s10-b4.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "11648de73c89f4c50dd3095a06e65528ffbb27e3992db0e33835db75e291d0c2"
+    },
+    {
+      "file": "s10-b5.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "42d3e05c02d54f03f85e68aa65c512fcf4fff6ed8ee2aa17943aca1497ca2925"
+    },
+    {
+      "file": "s5-b1.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "12c7743b429d18d51c1f44aec9efdb2116d36c385d7e37fc335dba9c2ef7021e"
+    },
+    {
+      "file": "s5-b2.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "c4714f0dc8837903606cea4d065984f84b802f8936c639ce258ba759b4f07a13"
+    },
+    {
+      "file": "s5-b3.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "02cc25a85840cd0132d034895cf1abc232fda26aa57e58165a0ee84ec291cf87"
+    },
+    {
+      "file": "s5-b4.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "9b76dadfdcb118ea420ac8b368a4a4fb897c2075a1ad42a49d3c12fdab879e9b"
+    },
+    {
+      "file": "s5-b5.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "68b88c6b822e2afb46aca86ff36b66b542948567e5aaceed1c2214d23ef6f7f9"
+    },
+    {
+      "file": "s5-b6.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "4698a47d8258d693d0530facaa42505fabd05b94aba4fabb613b625001d9f41b"
+    },
+    {
+      "file": "s5-b7.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "03d25e88939de5dbb2b225fdc3f66c94a871d18d60489d7ad5c9b8ac9dbe885c"
+    },
+    {
+      "file": "s5-b8.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "18f75cf95306aad488be3d0e81878a81d2836425597cf5ba45583fceb6e97bf1"
+    },
+    {
+      "file": "s5f3-proof-1803.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "c3a1147f05c3d1e263eda3db40a1361e16eed9c59a2d7711f733b6e6a961683b"
+    },
+    {
+      "file": "s6-b1.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "bbba3001e4ec816f7937aafddbfd6ed59e764886347db55a21bca5db44a2b22d"
+    },
+    {
+      "file": "s6-b2.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "918123734419c4ee804a76d8eefccbf08cfaaea96f40abdcc98cc1ba3ff5d60e"
+    },
+    {
+      "file": "s6-b3.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "1debbb50ac6aaed6ff6fc6a59f3d7bb1e39122e799d95f8bf9c8f4dc726ae09e"
+    },
+    {
+      "file": "s6-b4.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "1bd98b2dc917cd2c1cc8beb46c29ece0f282fb4db30fa7571f86896f3135298d"
+    },
+    {
+      "file": "s6-b5-a.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "21103338b769fe20223d911a98ba49aa062feab221a962bf091597b2a738d6bc"
+    },
+    {
+      "file": "s6-b5-b.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "a3842ac0424fb750e58a00e9dc58b1e587ec13bc3fd333bd3e0cbde68d6ffdc4"
+    },
+    {
+      "file": "s6-b5-c.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "2d9bfd7fa5a662850a47b76bef5162bca8cfcea3ddb7c1de0083a6834f54db22"
+    },
+    {
+      "file": "s6-b5.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "16ae73207f5f6e18127e621a6ca5e0edea5d1838b0a117e04d41907673253339"
+    },
+    {
+      "file": "s6-b6.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "e0a001945a75e091604abfbff50390db20399389fcfe64a7104a28985633c047"
+    },
+    {
+      "file": "s6-b7.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "e593d7bdf1632c8db56dc51ca0329fa2dde887ce601815b798752c878015ce4d"
+    },
+    {
+      "file": "s6-b8.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "d894e59514b9f71279f438c021532b1ed290c490f6e4663550c80e0bec39c30c"
+    },
+    {
+      "file": "s6-b9.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "21103338b769fe20223d911a98ba49aa062feab221a962bf091597b2a738d6bc"
+    },
+    {
+      "file": "s7-b1.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "45b49ee51544c2b645c32a6dd5d1b4a5c4497b319f29a6d1c41a599fa24f4410"
+    },
+    {
+      "file": "s7-b2.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "718103f96c824e4379263eaf02a456fdcb58255b33b09026d08a87e39e310abb"
+    },
+    {
+      "file": "s7-b3.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "267ff3e527a0e06503152a2c5d763889583220fdcb6b0f092954981bab1a0f98"
+    },
+    {
+      "file": "s7-b4-a.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "c8dbae290393037b464793f05171de3539198becad7ccecaf8c585380c374b38"
+    },
+    {
+      "file": "s7-b4-b.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "ce1589c543d9ff56a1327268570135d02f5b90161684bd8e77f1697b1edc2d5f"
+    },
+    {
+      "file": "s7-b4-c.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "52af134adbcf5e0b35fbd8c6cc9faa976c402fa14879efb957a3284451c89aa8"
+    },
+    {
+      "file": "s7-b4.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "15caf8684fc01d7ce99dbdc6031914ab0ef22affc472e90c949b2db2608f346e"
+    },
+    {
+      "file": "s7-b5.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "4ec1b18231b28a63526e278abe491c3ebd606db35aeb0a12b07af7cb087cd4e0"
+    },
+    {
+      "file": "s8-b1.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "c4fbe57d1b2a3377c4509767c292cdb80397de15a9924d33081e461db92ee7d1"
+    },
+    {
+      "file": "s8-b2.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "52f4ef206e7cf11c4d4425ee71d918c979e18b1204889ba48304e7bb9a68060e"
+    },
+    {
+      "file": "s8-b3.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "38c27744d7abdbc76ab72503ae4cd7367d3bbbdb93ac6e7d01c24eb815fa55b9"
+    },
+    {
+      "file": "s8-b4.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "878d671b23e36ce702092d133b284f0ab0adb00b335645bffb37c619c210d16b"
+    },
+    {
+      "file": "s8-b5.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "205edfff28babce479ce02795432b4d56cf7d43f7f20f6a7e8f9724967681ddb"
+    },
+    {
+      "file": "s9-b1-a.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "038869645c4bf45e2733c5e81f80326e72fcd6d83e5152edbb09f5af56545e76"
+    },
+    {
+      "file": "s9-b1-b.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "a4f779b976d966279fba0699cb2207b9252671a68a67610a96ccd3b77e5de245"
+    },
+    {
+      "file": "s9-b1-c.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "265982e57547138a1246dd2c51a04626bed4af82541816ef0e83383516d7bd5a"
+    },
+    {
+      "file": "s9-b1.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "038869645c4bf45e2733c5e81f80326e72fcd6d83e5152edbb09f5af56545e76"
+    },
+    {
+      "file": "s9-b2.png",
+      "class": "re-staged",
+      "ok": true,
+      "detail": "ruling 1.2 — the entrant block carries the coin render (the display-scale glyph retirement, per C1) — supersedes the r2 render, preserved at the tag",
+      "sha256": "5b3588e61ed8bbd3d4ebb67aac9f4103a7f7004f97fd57725422a45429094b07"
+    },
+    {
+      "file": "s9-b3.png",
+      "class": "re-staged",
+      "ok": true,
+      "detail": "ruling 1.2 — the capabilities advance, re-rendered with the coin at the block’s head — supersedes the r2 render, preserved at the tag",
+      "sha256": "0b500a02e198f56551a27fa5d229e67a88a62db48b14d0335a1d36e69363ce92"
+    },
+    {
+      "file": "s9-b4.png",
+      "class": "re-staged",
+      "ok": true,
+      "detail": "ruling 1.2 — the honest line, re-rendered with the coin at the block’s head — supersedes the r2 render, preserved at the tag",
+      "sha256": "a4df3a043684c408694a3389b2250995d94d762299dc9f9235edc32d4bcc57e9"
+    },
+    {
+      "file": "s9-b5.png",
+      "class": "untouched",
+      "ok": true,
+      "detail": "byte-identical to the tag — zero differing pixels",
+      "sha256": "bb57b7e1e7195fd393305387f4386c65d813de3272f5565d0fbfda636204df0a"
+    }
+  ]
+}

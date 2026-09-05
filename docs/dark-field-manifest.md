@@ -1,6 +1,6 @@
 # The Dark-Field Manifest
 
-**Standard:** `docs/sections-1-3-rebuild-brief.md` §9.4.9 (the two registers)
+**Standard:** `docs/what-is-money-master.md` §6 (the two registers)
 **Gate:** `review/rebuild-r7-2/harness/grade-r7-2.cjs` · results in `review/rebuild-r7-2/grade-r7-2.json`
 **Drop zone:** `assets/dark-field/incoming/` · **Shipping set:** `assets/dark-field/`
 **Created:** R7.2, 1 August 2026
@@ -70,10 +70,10 @@ sit beside them on the contact sheet without standing out.
 | `shoe` | `assets/dark-field/shoe.png` | 4.04 wanted goods · 4.05 SPEND | 0.74 / 0.63 | 82.4% | +56 |
 | `wine` | `assets/dark-field/wine.png` | 4.04 wanted goods · 4.05 SPEND | 2.28 / 1.12 | 95.5% | +115 |
 | `shells` | `assets/dark-field/shells.png` | 4.06 carrier lineup | 0.10 / 0.08 | 80.2% | +72 |
-| `gold` | `assets/dark-field/gold.png` | 4.06 carrier lineup · 2.5 two-survivors (flagged) · 2.6 featured moment (flagged) | 0.08 / 0.07 | 86.7% | +181 |
+| `gold` | `assets/dark-field/gold.png` | 4.06 carrier lineup · 2.5 two-survivors (flagged) · 2.6 featured moment (flagged) · **REGENERATED 1 Sep 2026 — see the rail-states drop below**; the first-shoot study is retired to `review/act-2/dark-field/gold--retired.png` | 0.10 / 0.09 | 78.6% | +148 |
 | `paper` | `assets/dark-field/paper.png` | 4.06 carrier lineup | 0.09 / 0.08 | 80.5% | +80 |
 | `ledger` | `assets/dark-field/ledger.png` | 4.06 carrier lineup | 0.10 / 0.08 | 69.0% | +138 |
-| `bitcoin` | `assets/dark-field/bitcoin.png` | 4.06 carrier lineup | 0.11 / 0.10 | 77.2% | +154 |
+| `bitcoin` | `assets/dark-field/bitcoin.png` | 4.06 carrier lineup · P1's fifth form · S9's entrant block · S10's strip | 0.11 / 0.10 | 77.2% | +154 |
 
 **The R7.3 contender shoot — four more, all passing** (presenter-generated,
 grade-gated 11 August 2026; the run is `review/rebuild-r7-3/grade-r7-3.json`):
@@ -109,7 +109,7 @@ uses.
 | `surgeon` | `assets/dark-field/surgeon.png` | 4.03 the sensory anchor | 0.00 / 0.82 | 92.1% | +133 |
 | `meal` | `assets/dark-field/meal.png` | 4.04 wanted goods · 4.05 SPEND | 0.00 / 1.28 | 69.2% | +60 |
 | `property` | `assets/dark-field/property.png` | the five-candidate lineup, at every display-scale appearance | 0.09 / 0.08 | 79.1% | +124 |
-| `shares` | `assets/dark-field/shares.png` | the five-candidate lineup, at every display-scale appearance | 0.17 / 0.15 | 51.9% | +52 |
+| `shares` | `assets/dark-field/shares.png` | the five-candidate lineup, at every display-scale appearance; and, since the Acts III–IV final ruling 2 (3 Sep 2026, master §13), the comparison table's header band — the five candidates (`gold` · `fiat` · `bitcoin` · `property` · `shares`) as renders above the table in a 100 × 100 contain box (the fit ruling of 4 Sep 2026, master §13 — a ruled departure from the rails-law 188 box for this surface; the score rows at the legacy 60 px pitch), the grammar beneath untouched | 0.17 / 0.15 | 51.9% | +52 |
 
 `surgeon` and `meal` are **graded, not regenerated**: both failed R7.2's gate on
 their ground rather than their light (a lamp in shot; a lit stone surface), and
@@ -123,16 +123,359 @@ historical `comparison_*.png` files restored from `85bad44^`, unmodified.
 180px it reads as banknotes. Beside `fiat` — once `fiat` has its own render —
 that is a collision worth the presenter's eye.
 
+**The Batch A drop — all seven now shipping** (presenter-generated from the
+Batch A package §5, grade-gated 25 August 2026; the runs are
+`review/frames-a/harness/grade-frames-a.json`, `grade-frames-a-post-ingest.json`,
+and — for the regraded `patient` and the set it joined —
+`grade-selections-patient.json` and `grade-selections-post-ingest.json`):
+
+| subject key | file | used at | corner / border | dark | R−B |
+|---|---|---|---|---|---|
+| `single_cowrie` | `assets/dark-field/single_cowrie.png` | P1 morph, the SHELL form | 0.58 / 0.49 | 89.0% | +105 |
+| `gold_certificate` | `assets/dark-field/gold_certificate.png` | Scene 7, the claim on gold · Scene 8, the dissolve's outgoing form (motion only) · Scene 10, the strip's CLAIM ON GOLD station | 0.11 / 0.10 | 58.8% | +132 |
+| `vault` | `assets/dark-field/vault.png` | Scene 7 custody | 0.07 / 0.07 | 84.2% | +84 |
+| `ledger_glow` | `assets/dark-field/ledger_glow.png` | Scene 8, the transformation | 0.12 / 0.10 | 64.9% | +165 |
+| `palladium` | `assets/dark-field/palladium.png` | Scene 10, the bar | 0.10 / 0.09 | 75.3% | +49 |
+| `coffee_cup` | `assets/dark-field/coffee_cup.png` | Scene 14, the coffee objection | 0.19 / 0.94 | 86.3% | +86 |
+| `patient` | `assets/dark-field/patient.png` | Scene 2, the patient — **regraded**, §2.1 | 0.08 / 0.06 | 91.4% | +123 |
+
+All seven are portraits of the R7.3 contender family (1122 × 1402, 4:5) except
+`ledger_glow`, a 1536 × 1024 landscape (3:2) — a third aspect family, so its box
+must be 3:2 for the framing rule to hold. Three subjects now duplicate an
+earlier study on purpose, and **the duplication is a presenter choice, not a
+collision**: `single_cowrie` beside `shells`/`cowrie_shells` (one cowrie for
+the P1 morph's center scale against the five-shell cluster and the contender
+study), `ledger_glow` beside `ledger` (the transformation close-up against the
+carrier lineup's book), and `gold_certificate` beside `paper` (the historical
+gold claim against the plain note). All passing variants stay in the register,
+and the presenter ruled on the Batch A register sheet which study serves which
+scene — the assignments are §2.2 below. Nothing was deleted to record them.
+
+**The Batch A implementation drop — `fiat`, the register's last gap, ingested
+29 August 2026** (presenter-generated from §3.0's prompt; the gate run on the
+drop zone is `review/batch-a/grade-fiat-drop.json`, and the post-ingest run over
+the whole shipping set is `review/batch-a/grade-shipping-set.json` — **23 images,
+115 checks, 0 failures**):
+
+| subject key | file | used at | corner / border | dark | R−B |
+|---|---|---|---|---|---|
+| `fiat` | `assets/dark-field/fiat.png` | the five-candidate lineup, at every display-scale appearance | 0.32 / 0.30 | 79.7% | +130 |
+
+It passes **all five clauses**, and by margins in the register's own range: warm
+fraction 100%, a single key at azimuth 111° with a spread of 1 (one light, not
+two), and a subject occupying 0.345 × 0.781 of the frame. The render is a folded
+note — the §3.0 note asked for exactly that, so no denomination reads as a
+specific currency. Measured framing row, pasted into `src/dark-field.js`:
+`fiat: [1.127, 0.9, -1.9]`.
+
+**The Act II states r2 drop — `metals`, ingested 31 August 2026**
+(presenter-generated; gated and ingested through the standard harness for the
+rails law's S5 band — the drop-zone run is `review/act-2/grade-metals-drop.json`,
+and the post-ingest run over the whole shipping set is
+`review/act-2/grade-shipping-set-r2.json` — **24 images, 120 checks, 0 failures**):
+
+| subject key | file | used at | corner / border | dark | R−B |
+|---|---|---|---|---|---|
+| `metals` | `assets/dark-field/metals.png` | S5's rail — the object band above the line (the rails law, 31 Aug 2026); also lights 2.4's dormant featured-moment slot on the legacy deck (R7.3 §7, built for exactly this) | 0.09 / 0.08 | 82.1% | +83.8 |
+
+The render is a stack of cast ingots of different metals — the §6 optional
+prompt answered. It passes all five clauses with a single key (warm fraction
+99.5%, spread 1), and its frame is **1672 × 941 — the `fiat` family's near-16:9**,
+so its box takes that aspect under the framing rule. Measured framing row,
+pasted into `src/dark-field.js`: `metals: [1.457, -0.4, -0.4]`.
+
+**The rail-states drop — `gold` regenerated, ingested 1 September 2026**
+(presenter-generated and presenter-committed; gated and ingested through the
+standard harness for the staging amendment's rail — the drop-zone run is
+`review/act-2/grade-gold-drop.json`, and the post-ingest run over the whole
+shipping set is `review/act-2/grade-shipping-set-rail.json` — **24 images,
+120 checks, 0 failures**):
+
+| subject key | file | used at | corner / border | dark | R−B |
+|---|---|---|---|---|---|
+| `gold` | `assets/dark-field/gold.png` | the rail's GOLD station (the staging amendment, 1 Sep 2026) · P1 morph, the gold form · every prior gold call site | 0.10 / 0.09 | 78.6% | +147.8 |
+
+The regenerated render is **1672 × 941 — the `fiat`/`metals` near-16:9
+family** — so `gold` leaves the first shoot's 4:3 family, and under the
+framing rule **every box that displays gold derives from the new render's own
+aspect** (the `ledger_glow` precedent), across Act II's rail band and P1's
+morph form (the gold-form box becomes 960 × 540 at (480, 380) — 16:9 to
+within 0.05% of the render). Measured framing row, pasted into
+`src/dark-field.js`: `gold: [1.469, -0.7, -3.5]`. It passes all five clauses
+with a single key (warm fraction 99.2%, spread 0.993). **The retired
+first-shoot study is on file** at `review/act-2/dark-field/gold--retired.png`
+(1448 × 1086) — a regeneration is a change of file behind one key, and the
+old study stays recoverable, per the aesthetic law's file-keeping clause.
+
+**The rail r2 drop — `coinage`, ingested 1 September 2026** (presenter-generated;
+gated and ingested through the standard harness for the rail's COINAGE station —
+the drop-zone run is `review/act-2/grade-coinage-drop.json`, and the post-ingest
+run over the whole shipping set is `review/act-2/grade-shipping-set-rail-r2.json`
+— **25 images, 125 checks, 0 failures**):
+
+| subject key | file | used at | corner / border | dark | R−B |
+|---|---|---|---|---|---|
+| `coinage` | `assets/dark-field/coinage.png` | the rail's COINAGE station (the staging amendment, S7 b1 onward) | 0.09 / 0.07 | 78.8% | +102.3 |
+
+This closes the register's last gap — **the one the spine itself created.**
+The rails law makes every station photographic, and when the staging amendment
+extended the rail to COINAGE there was no coinage study in the register, so the
+station carried its grammar-glyph stub, `data-pending`, and the rail-states
+report flagged it. The render — a small pile of ancient hammered gold and
+silver coins — passes all five clauses with a single key (warm fraction 99.2%,
+spread 0.99, key azimuth −172°). Its frame is **1672 × 941, the near-16:9
+family** (`fiat` · `metals` · `gold` · `coinage`), so its band box takes that
+aspect under the framing rule and the equal-visual-weight box (`AGENTS.md` §6).
+Measured framing row, pasted into `src/dark-field.js`:
+`coinage: [1.44, 1.1, -1.3]`. **No code change lit the station** — the eager
+glob and the pending stub are what the pipeline was built for.
+
+**The Act III neutral-marks drop — `collectible` · `store` · `medium` · `unit`,
+ingested 2 September 2026** (presenter-generated; the neutral stage system
+ruling, r2 ruling 3, master §13 — gated and ingested through the standard
+harness. The drop-zone run is `review/act-3/grade-neutral-marks-drop.json` —
+**4 images, 20 checks, 0 failures, none held back** — and the post-ingest run
+over the whole shipping set is
+`review/act-3/grade-shipping-set-r2-neutral.json` — **29 images, 145 checks,
+0 failures**):
+
+| subject key | file | used at | corner / border | dark | R−B |
+|---|---|---|---|---|---|
+| `collectible` | `assets/dark-field/collectible.png` | the ladder's COLLECTIBLE stage mark (S13) — a raw uncut gem crystal | 0.08 / 0.06 | 84.1% | +116.3 |
+| `store` | `assets/dark-field/store.png` | the ladder's STORE OF VALUE stage mark (S13, S14) · the triad's store-of-value job mark (S11 onward) — an hourglass | 0.08 / 0.06 | 91.3% | +83.8 |
+| `medium` | `assets/dark-field/medium.png` | the ladder's MEDIUM OF EXCHANGE stage mark (S13, S14) · the triad's medium-of-exchange job mark — ~~a handshake~~ **a hand-off in mid-transfer (REPLACED 2 Sep 2026 — see the Batch C drop below)** | 1.16 / 1.46 | 88.3% | +162.7 |
+| `unit` | `assets/dark-field/unit.png` | the ladder's UNIT OF ACCOUNT stage mark (S13, S14) · the triad's unit-of-account job mark — a balance scale | 0.07 / 0.06 | 93.3% | +110.1 |
+
+All four arrive at **1672 × 941, the near-16:9 family** (`fiat` · `metals` ·
+`gold` · `coinage` and now these), so their band boxes take that aspect under
+the framing rule and the equal-visual-weight box (`AGENTS.md` §6). Measured
+framing rows, pasted into `src/dark-field.js`: `collectible: [1.371, 1.4, 1]` ·
+`store: [1.035, 0.4, 1.6]` · `medium: [1.259, -2.4, -1.2]` ·
+`unit: [1.113, -0.3, -0.5]`. **These four are deliberately not monetary
+assets** — a gem crystal, an hourglass, a handshake, a balance scale — because
+the ruling that ordered them also orders that monetary assets appear on the
+ladder *only as climbers*: Scene 14's coin lands at stage two as the only
+monetary object in sight, and the marks must not compete with that payoff. The
+same three job objects (`store`, `medium`, `unit`) replace Scene 11's grammar
+glyphs at the triad's spokes, so the jobs and the stages share one visual
+family and the film's last basic icons retire from those stations.
+
+**The Batch C drop — `medium` replaced, ingested 2 September 2026**
+(presenter-ruled at the r2 flipbook walk, the Batch C implementation brief
+§1.3, master §13: **the handshake read as agreement, not exchange** — the new
+presenter-generated study is **a hand-off in mid-transfer**, the object
+actually moving between two hands. Gated and ingested through the standard
+harness: the drop-zone run is `review/act-3/grade-medium-drop.json` — **1
+image, 5 checks, 0 failures, ingested, 0 held** — and the post-ingest run over
+the whole shipping set is `review/act-3/grade-shipping-set-impl1.json` — **29
+images, 145 checks, 0 failures**):
+
+| subject key | file | used at | corner / border | dark | R−B |
+|---|---|---|---|---|---|
+| `medium` | `assets/dark-field/medium.png` | the ladder's MEDIUM OF EXCHANGE stage mark (S13, S14) · the triad's medium-of-exchange job mark (S11 onward) — a hand-off in mid-transfer | 1.16 / 1.46 | 88.3% | +162.7 |
+
+The new study arrives at **842 × 474 — the same near-16:9 aspect at a smaller
+frame** — so every band box it occupies is unchanged; its measured framing row
+in `src/dark-field.js` is `medium: [1.287, -1.5, 12.4]`. **The retired
+handshake study is on file** at `review/act-3/dark-field/medium--retired.png`
+(1672 × 941), per the aesthetic law's file-keeping clause and the `gold`
+regeneration precedent — a replacement is a change of file behind one key, and
+**the handshake never ships**: the nine medium-bearing cells of the approved
+sheet were re-rendered through the states pipeline the same day, before any
+scene work, so implementation transcribes final geometry.
+
+**The Batch C r2 drop — `usd` and `ars`, the two ruled-recognizable notes,
+ingested 2 September 2026** (presenter-generated for S12's column objects —
+Batch C r2 ruling 2, master §13. Gated and ingested through the standard
+harness: the drop-zone run is `review/act-3/grade-notes-drop.json` — **2
+images, 10 checks, 0 failures, both ingested, 0 held** — and the post-ingest
+run over the whole shipping set is
+`review/act-3/grade-shipping-set-r2-notes.json` — **31 images, 155 checks,
+0 failures**):
+
+| subject key | file | used at | corner / border | dark | R−B |
+|---|---|---|---|---|---|
+| `usd` | `assets/dark-field/usd.png` | S12's priced-in and saved-in column objects — a folded dollar note | 0.08 / 0.06 | 88.9% | +135.7 |
+| `ars` | `assets/dark-field/ars.png` | S12's paid-in column object — a folded thousand-peso note | 0.12 / 0.08 | 80.5% | +147.2 |
+
+Both arrive at **1672 × 941** and join the near-16:9 family; the measured
+framing rows in `src/dark-field.js` are `usd: [1.429, 0.6, 3.3]` and
+`ars: [1.356, 0.5, -0.4]`. **The recognizability exception, recorded where the
+register's own rule lives:** the `fiat` study's rule — *no denomination reads
+as a specific currency; the score is about a class of money, not a country* —
+**does not govern these two subjects, by presenter ruling** (Batch C r2 ruling
+2, master §13). Recognizability is their content: Argentina's evidence is the
+dollar and the peso as themselves, and an anonymous note would un-say the
+argument. `fiat`'s rule stands unamended for every class-of-money appearance,
+and these two keys are never substitutes for `fiat`.
+
+**Its frame is a fourth aspect family.** `fiat.png` is 1672 × 941 — near 16:9,
+the widest in the register — where the five-candidate lineup's display box is
+180 × 150 (6:5). That is a 48% aspect departure, well past the framing rule's
+"within a few percent," and it is **flagged, not fixed**: every call site is an
+Act IV/V scene (`ComparisonAssetHeader`, 4.15/4.17/4.19/4.20), out of Batch A's
+scope. The box question travels with those scenes, to Batches D and E.
+
+**The `shares` collision is now checkable** (the §2 note above): both studies now
+exist and can be put side by side at lineup scale. Not run here — no Batch A
+scene shows either — and it stays open for the presenter's eye.
+
+### 2.1 `patient` — regraded and ingested, 25 August 2026
+
+`patient` was held at the Batch A gate on one clause of five: top-left corner
+patch **64.73** against a limit of 6, because the key light's shaft is in frame
+at the upper left. Border, dark fraction and both warmth clauses passed with
+room — the surgeon's failure class from R7.2, a light source reaching the frame
+rather than a wrong grade. The presenter ordered the regrade attempted before
+any regeneration, and it succeeded: **corner 0.08, border 0.06, 91.4% dark,
+R−B +123, 100% of the highlight population warm** — five clauses of five, and
+the whole shipping set re-gated at 22 images, 110 checks, 0 failures.
+
+The pass is one operation, and its parameters are measured rather than chosen:
+a **corner window** anchored at the top-left, stage black inside r = 0.12 of the
+frame diagonal and smoothstepped back to untouched by r = 0.30. R7.4's crop was
+unavailable here — the subject already fills 0.70 × 0.90 of the frame, so the
+crop that removes the shaft removes the head — but the same power-window falloff
+was. Local variance separates the smooth shaft from the structured subject
+exactly: the nearest structured block sits at **r = 0.319** and the nearest pixel
+the key modelled at **r = 0.331**, both outside the window. The consequence is
+not an estimate — **zero pixels of L ≥ 90 changed**, and the brightest pixel
+anywhere in the window's reach is L = 80, the shaft's own core.
+
+**R7.4's third move, the global black-point crush, is deliberately not in this
+pass.** Tried at [14, 34] — gentler than either parameter set R7.4 shipped — it
+visibly collapsed the gown's shadow side, taking the right shoulder and the
+lower tie to black. The patient is lit far lower-key than the surgeon or the
+steak, and its subject *lives* in the tones a crush lifts. Recorded here because
+the next regrade in this register will be tempted by it.
+
+The harness is `review/frames-a/harness/regrade-patient.mjs`, re-runnable and
+reversible: the as-generated render is preserved beside it at
+`review/frames-a/dark-field/patient--as-generated.png`.
+
+**One visual note for the presenter's eye, not a gate failure.** The regrade
+removes the shaft; it does not remove the warm ambient the shaft left in the
+mid-left of the frame, because that ambient lies between the shaft's tail and
+the subject, where no window can reach it without touching the figure. Measured
+as the 90th percentile of smooth-block brightness it sits at 9.2, against 6.8
+for `coffee_cup`, the highest of the renders already shipping — the same order,
+slightly above. It reads as key spill rather than as a beam. Regeneration from
+the Batch A package §5 item 7 remains the alternative if the presenter's eye
+disagrees with the gate's verdict.
+
+### 2.2 The duplicate-subject scene assignments (ruled 25 August 2026)
+
+Three subjects hold more than one passing study. The presenter ruled on the
+Batch A register sheet which study serves which scene. **Every non-assigned
+study stays in the library, banked** — a selection here is a change of
+reference, never a deletion, exactly as the aesthetic law requires.
+
+| subject | study | serves |
+|---|---|---|
+| cowrie | `single_cowrie` | P1 morph, centre scale — one object, rhyming with the sequence's other single forms, which is what it was generated for |
+| cowrie | `shells` | Scene 5, the carrier lineup — individual shells stay legible at lineup scale |
+| cowrie | `cowrie_shells` | **banked** — no current scene |
+| ledger | `ledger_glow` | **P1's morph, the ledger form** *(presenter-ruled 29 August 2026)* · Scene 8, the transformation — the glowing close-up it was generated for |
+| ledger | `ledger` | the carrier lineup and other display-scale ledger appearances |
+| note | `gold_certificate` | Scene 7, the claim on gold · **Scene 10, the strip's CLAIM ON GOLD station** *(the CERTIFICATE ruling, 31 August 2026 — Batch B brief §1.1: every strip station photographic, the disc never a station)* · **Scene 8, the dissolve's outgoing form — motion only** *(Batch B implementation, 31 August 2026: S8-F1 ports P1's cross-dissolve, whose two approved frames are paper → `ledger_glow`. Act II's paper claim is the certificate — `paper` is assigned to the P1 morph and is not in Act II's asset manifest — so the certificate is what dissolves. No settled state carries it; the report flags the choice, and it is one word to change.)* |
+| note | `paper` | P1 morph's paper form, and generic note appearances |
+
+The `used at` columns above and in §2 record the same assignments per row.
+`src/dark-field.js` carries them as a comment beside the framing table: the code
+has no assignment slot to fill — a subject key resolves to one file, and which
+scene calls that key is a property of the scenes — so the record lives where a
+reader choosing between two cowries will actually be standing.
+
+**The ledger row was amended by presenter ruling, 29 August 2026.** The Prologue
+sheet rendered `p1-b7` with the `ledger` book and flagged it: the architecture's
+P1 summary says *"glowing ledger entry"* and the script's line is *"it stopped
+looking like anything at all. Numbers in a ledger."* — a physical book on that
+line is arguable. **The presenter ruled `p1-b7` = `ledger_glow`.** The study now
+serves two scenes; `ledger` keeps the lineup and every other display-scale
+ledger appearance. Nothing is regenerated and nothing is banked — a selection is
+a change of the key a scene asks for.
+
+One consequence is geometric and is recorded here because it is the one framing
+the ruling forced. `ledger_glow` is the register's single **3:2** render
+(1536 × 1024); P1's other four forms are 4:3 and its cowrie is 4:5. The
+framing rule requires a box of the render's own aspect, and the Prologue's
+recorded form law fixes the box's height and centre (540 tall, centred at
+960 × 650 — the approved P1-F2 placement). Applied to a 3:2 render that is a
+**810 × 540 box at (555, 380)** — transcribed from the recorded rule, not chosen.
+
 Two of the first shoot's renders need a note rather than a regeneration.
 
 - **`shells` satisfies the brief's "cluster of cowrie shells" contender** outright — the restored render *is* a five-shell cowrie cluster on black. No new generation is required for §4.1's shells; if a distinct Section 2 frame is wanted later, the prompt is in §4 anyway.
 - **`bitcoin` is on-grade and off-argument.** The render is a physical coin, and R7 retired it for exactly that reason (defect V-1: it asserts an object 4.15 spends its script denying, and the deck holds that bitcoin is held directly, with no counterparty and no physical form). R7.2's brief names it among the renders to restore, so it is restored and shipped — but this is a **flagged presenter decision, not an implementation one.** Reverting it is one line: `['bitcoin', 'BITCOIN', 'bitcoin', 'glyph']` in `06-claim-and-carrier.js`'s `CARRIERS` table drops that one position back to the struck ₿ and leaves the other four photographic.
 
+#### V-1 is RULED (presenter, 29 August 2026) — the coin is accepted
+
+The Prologue beat-state sheet put the question directly: P1's fifth form as the
+library's `bitcoin` coin render (`p1-b8-a`, continuous with the four physical
+forms before it, and carrying exactly this flag) or as structured light
+(`p1-b8-b`, on-argument, composed from the unit grammar). **The presenter
+selected the coin — C1 = A.**
+
+The V-1 flag is therefore closed **as a presenter decision, not as an
+implementation one**: the physical-coin render is presenter-accepted for **P1's
+morph**, and the same ruling governs **Scene 10's trade-off strip** for
+consistency — one film, one answer to the same question. *(Batch B's states
+session inherits the ruling; no work is done on Scene 10 here.)* The revert path
+above is unchanged and stays on file: the ruling is a selection, and a selection
+is changed by changing one word.
+
+**Extended by the presenter, 31 August 2026 (Batch B implementation brief
+§1.2): the bitcoin glyph retires at display scale in Act II.** Wherever a
+drawn glyph stood in for the asset at display scale, the coin render carries
+it — the first site is S9's entrant block (`s9-b2` through `s9-b4`, re-rendered).
+Drawn grammar — network nodes, station marks — is not the asset and stays
+drawn; the on-file candidate cells keep their glyphs per the aesthetic law's
+file-keeping clause.
+
 ---
 
 ## 3. Failed the gate — regeneration required
 
-### 3.0 `fiat` — the comparison lineup's one gap (R7.4)
+### 3.0 `fiat` — **CLOSED, 29 August 2026** *(was: the comparison lineup's one gap)*
+
+**The regenerated render passed the gate and was ingested.** The presenter's
+`fiat.png` had been dropped straight into the shipping set, untracked and
+ungated (flagged at the Prologue states session, §6.4 of its report); Batch A
+moved it to `incoming/` and put it through the standard harness:
+
+| run | result |
+|---|---|
+| gate on the drop zone (`review/batch-a/grade-fiat-drop.json`) | **5 clauses of 5 pass** — corner 0.32, border 0.30, 79.7% dark, R−B +130.3, warm fraction 100% |
+| `ingest-r7-2.cjs` | 1 accepted, 0 held back → `assets/dark-field/fiat.png` |
+| gate on the whole shipping set (`review/batch-a/grade-shipping-set.json`) | **23 images, 115 checks, 0 failures** |
+| measured framing row | `fiat: [1.127, 0.9, -1.9]`, pasted into `src/dark-field.js` |
+
+The register is complete: **every subject the film asks for is present and
+on-grade.** The row is in §2 above; the aspect flag is there too.
+
+**The distinctness clause is confirmed.** The §5 clause — that
+`gold_certificate` be *"visually distinct from the fiat note"* — has been
+unconfirmable since the certificate landed, because the note did not exist. Both
+now do, and the check is on file: `review/batch-a/gold-certificate-vs-fiat.png`
+(both renders through the deck's own render path, at display scale and in the
+lineup's own 180 × 150 box) with `review/batch-a/distinctness.json`.
+
+> **Read: distinct, and distinct structurally rather than tonally.** The
+> certificate is a single flat plane, monochrome gold on cream, carrying an
+> engraved ornamental border and a central seal. The note is folded into two
+> planes with a lit crease, and it is polychrome — a blue oval at the left, red-
+> brown bands across the middle — with a highlight population a quarter the
+> size (0.036 of the frame against 0.165). The two do not read as one object at
+> either scale. What does *not* separate them is the key: mean highlight RGB
+> differs by (−9, −5, −10), which is the grade holding, exactly as it should.
+
+*One honest note from the strip:* in the lineup's 6:5 box the note renders much
+smaller than the certificate, because `object-fit: contain` letterboxes a 16:9
+render into a 6:5 frame and the framing rule's scale was computed against the
+frame. That is the aspect flag in §2, not a distinctness failure, and it belongs
+to the Act IV/V scenes that own the box.
+
+The record of the original failure is kept below.
 
 The historical `fiat.png` was restored from git history with `property` and
 `shares` and is the only one of the three that fails, on four clauses of five:
@@ -251,17 +594,39 @@ lineup keeps its own:
 
 | status | subjects |
 |---|---|
-| **shipping** (15) | `shoe` · `wine` · `shells` · `gold` · `paper` · `ledger` · `bitcoin` · `cattle` · `salt` · `cowrie_shells` · `iron` · **`surgeon`** · **`meal`** · **`property`** · **`shares`** |
-| **regenerate** (1) | `fiat` — see §3.0 |
-| **optional** (2) | `metals`, which would light the second featured moment at 2.4 (R7.3 §7 — implemented, dormant, and it does not stub to a glyph because the stop below it already shows that glyph); `gold-native`, only if the two-survivors arrival is ruled in and wants its own study |
+| **shipping** (31) | `shoe` · `wine` · `shells` · `gold` · `paper` · `ledger` · `bitcoin` · `cattle` · `salt` · `cowrie_shells` · `iron` · `surgeon` · `meal` · `property` · `shares` · `single_cowrie` · `gold_certificate` · `vault` · `ledger_glow` · `palladium` · `coffee_cup` · `patient` · `fiat` · `metals` · `coinage` · `collectible` · `store` · `medium` · `unit` · **`usd`** · **`ars`** |
+| **regenerate** (0) | — |
+| **optional** (1) | `gold-native`, only if the two-survivors arrival is ruled in and wants its own study |
 
-**One image stands between this deck and a complete dark-field register**, down
-from five: `fiat`. `surgeon` and `meal` were graded rather than regenerated at
-R7.4 — they failed on their *ground*, not their light, so the lamp and the lit
-stone surface were cropped out and the surround taken to true black; the
-parameters are in `review/rebuild-r7-4/harness/regrade-r7-4.mjs` and both now
-pass all five clauses. `property` and `shares` were restored from git history
-and passed unmodified.
+`metals` was the last optional study with a standing call site; it was
+presenter-generated and ingested 31 August 2026 (the r2 drop above) for the
+rails law's S5 band, and — because the eager glob and 2.4's
+`hasDarkField('metals')` slot were built for exactly this — it also lights the
+legacy competition record's featured moment with no code change.
+
+**The register is complete** (Batch A, 29 August 2026). `fiat` was the last gap
+and it is gated, ingested and rowed (§3.0); the five-candidate lineup no longer
+shows a mark at any display-scale position, and the §5 distinctness clause is
+confirmed on file. Nothing in the register is now waiting on a generation.
+
+**One gap opened and closed after that** — `coinage`, created by the staging
+amendment's own spine when it made COINAGE a station on a rail whose law says
+every station is photographic. It was flagged pending in the rail-states report
+on 1 September 2026 and ingested the same day (the rail r2 drop, §2 above).
+
+Two flags stay open, and neither blocks anything: `fiat`'s frame is a fourth
+aspect family and every present call site gives it a 6:5 box (§2, §3.0 — the Act
+IV/V scenes own it), and the `shares`/`fiat` collision at lineup scale is now
+checkable and remains the presenter's eye to make.
+
+Three images in this register were **graded rather than regenerated**, and all
+three failed on their *ground* rather than their light. `surgeon` and `meal`
+were cropped free of the lamp and the lit stone surface and their surround taken
+to true black at R7.4 (`review/rebuild-r7-4/harness/regrade-r7-4.mjs`).
+`patient` was taken by a corner window at the Batch A selections session
+(`review/frames-a/harness/regrade-patient.mjs`, §2.1) — a crop was not available
+to it. All three now pass all five clauses. `property` and `shares` were
+restored from git history and passed unmodified.
 
 If a `metals` study is ever generated, the prompt follows the master template
 with the subject line *"A stack of three rough cast metal ingots of different

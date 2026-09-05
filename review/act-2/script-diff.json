@@ -1,0 +1,72 @@
+{
+  "date": "2026-08-30T07:05:36.928Z",
+  "rule": "docs/batch-b-package.md §2 is docs/batch-b-scripts-draft.md word for word and character for character; every scene’s [→] count is the frozen map’s; Act II is 33 beats.",
+  "scenes": [
+    {
+      "scene": "S5",
+      "words": 348,
+      "beats": 8,
+      "expected": 8
+    },
+    {
+      "scene": "S6",
+      "words": 300,
+      "beats": 5,
+      "expected": 5
+    },
+    {
+      "scene": "S7",
+      "words": 218,
+      "beats": 5,
+      "expected": 5
+    },
+    {
+      "scene": "S8",
+      "words": 338,
+      "beats": 5,
+      "expected": 5
+    },
+    {
+      "scene": "S9",
+      "words": 287,
+      "beats": 5,
+      "expected": 5
+    },
+    {
+      "scene": "S10",
+      "words": 254,
+      "beats": 5,
+      "expected": 5
+    }
+  ],
+  "totalBeats": 33,
+  "checks": 5,
+  "failures": 0,
+  "results": [
+    {
+      "name": "PRESENT: every scene has a draft block and an installed block",
+      "ok": true,
+      "detail": "6/6 located"
+    },
+    {
+      "name": "WORDS: the installed scripts are the draft, word for word",
+      "ok": true,
+      "detail": "zero differences (S5 348 · S6 300 · S7 218 · S8 338 · S9 287 · S10 254)"
+    },
+    {
+      "name": "CHARACTERS: identical to the byte, punctuation and dashes included",
+      "ok": true,
+      "detail": "6/6 identical"
+    },
+    {
+      "name": "BEATS: every scene matches the frozen map, and Act II is 33",
+      "ok": true,
+      "detail": "S5 8 · S6 5 · S7 5 · S8 5 · S9 5 · S10 5 = 33"
+    },
+    {
+      "name": "FREEZE: §1’s beat maps state the same counts as §2’s scripts",
+      "ok": true,
+      "detail": "6/6 agree"
+    }
+  ]
+}

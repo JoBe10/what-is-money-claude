@@ -1,0 +1,347 @@
+{
+  "date": "2026-08-30T11:23:28.278Z",
+  "deck": {
+    "slides": 39,
+    "firstId": "eighty-thousand-hours",
+    "order": [
+      "eighty-thousand-hours",
+      "the-stakes",
+      "the-direct-exchange",
+      "the-breakthrough",
+      "spend-or-save",
+      "2-04-the-competition-record",
+      "2-05-two-survivors",
+      "2-06-the-abstraction-ladder",
+      "2-07-the-severance",
+      "2-08-the-pattern",
+      "3-00-waypoint-function",
+      "3-01-the-three-functions",
+      "3-02-the-functions-separate",
+      "3-03-the-order-of-monetization",
+      "3-04-stage-signatures",
+      "3-05-the-palladium-test",
+      "3-06-what-your-money-is",
+      "3-07-where-bitcoin-is",
+      "3-08-waypoint-judge",
+      "4-01-define-the-job",
+      "4-06-claim-and-carrier",
+      "4-07-store-of-value-function",
+      "4-08-100-year-test",
+      "4-09-future-is-unknowable",
+      "4-10-invert-the-question",
+      "4-11-carrier-failures-i",
+      "4-12-carrier-failures-ii",
+      "4-13-failure-to-requirement",
+      "4-14-ten-properties",
+      "4-15-framework-to-comparison",
+      "4-16-the-comparison",
+      "4-17-store-of-value-function-migrates",
+      "4-18-monetary-premium",
+      "4-19-other-assets-do-moneys-job",
+      "4-20-bitcoin-does-not-replace-everything",
+      "4-21-marginal-store-of-value-decision",
+      "4-22-fixed-supply-reprices-at-margin",
+      "4-23-investment-case-from-first-principles",
+      "5-01-thank-you"
+    ],
+    "builds": [
+      11,
+      1,
+      4,
+      8,
+      4,
+      8,
+      6,
+      4,
+      4,
+      6,
+      2,
+      5,
+      3,
+      6,
+      2,
+      5,
+      6,
+      5,
+      2,
+      4,
+      4,
+      5,
+      3,
+      5,
+      2,
+      5,
+      5,
+      2,
+      2,
+      4,
+      2,
+      3,
+      3,
+      5,
+      7,
+      2,
+      3,
+      2,
+      2
+    ]
+  },
+  "traversal": {
+    "states": 201,
+    "forward": true,
+    "forwardFirstMismatchAt": null,
+    "backwardReachesTop": true,
+    "backwardMonotonic": true,
+    "backwardSteps": 80
+  },
+  "boundaries": [
+    {
+      "name": "P2 end → Scene 2 entry (forward)",
+      "from": {
+        "idx": 1,
+        "step": 1,
+        "id": "the-stakes"
+      },
+      "to": {
+        "idx": 2,
+        "step": 0,
+        "id": "the-direct-exchange"
+      }
+    },
+    {
+      "name": "Scene 2 b0 → P2 (backward)",
+      "from": {
+        "idx": 2,
+        "step": 0,
+        "id": "the-direct-exchange"
+      },
+      "to": {
+        "idx": 1,
+        "step": 0,
+        "id": "the-stakes"
+      }
+    },
+    {
+      "name": "Scene 4 end → legacy (forward)",
+      "from": {
+        "idx": 4,
+        "step": 4,
+        "id": "spend-or-save"
+      },
+      "to": {
+        "idx": 5,
+        "step": 0,
+        "id": "2-04-the-competition-record"
+      }
+    },
+    {
+      "name": "legacy b0 → Scene 4 (backward, ←)",
+      "from": {
+        "idx": 5,
+        "step": 0,
+        "id": "2-04-the-competition-record"
+      },
+      "to": {
+        "idx": 4,
+        "step": 0,
+        "id": "spend-or-save"
+      }
+    },
+    {
+      "name": "legacy b0 → Scene 4 end (backward, ↑)",
+      "from": {
+        "idx": 5,
+        "step": 0,
+        "id": "2-04-the-competition-record"
+      },
+      "to": {
+        "idx": 4,
+        "step": 4,
+        "id": "spend-or-save"
+      }
+    },
+    {
+      "name": "P1 b0 → P1 b1 (the cold open)",
+      "from": {
+        "idx": 0,
+        "step": 0,
+        "id": "eighty-thousand-hours"
+      },
+      "to": {
+        "idx": 0,
+        "step": 1,
+        "id": "eighty-thousand-hours"
+      }
+    }
+  ],
+  "directEntry": [
+    "eighty-thousand-hours:0",
+    "eighty-thousand-hours:1",
+    "eighty-thousand-hours:2",
+    "eighty-thousand-hours:3",
+    "eighty-thousand-hours:4",
+    "eighty-thousand-hours:5",
+    "eighty-thousand-hours:6",
+    "eighty-thousand-hours:7",
+    "eighty-thousand-hours:8",
+    "eighty-thousand-hours:9",
+    "eighty-thousand-hours:10",
+    "eighty-thousand-hours:11",
+    "the-stakes:0",
+    "the-stakes:1",
+    "the-direct-exchange:0",
+    "the-direct-exchange:1",
+    "the-direct-exchange:2",
+    "the-direct-exchange:3",
+    "the-direct-exchange:4",
+    "the-breakthrough:0",
+    "the-breakthrough:1",
+    "the-breakthrough:2",
+    "the-breakthrough:3",
+    "the-breakthrough:4",
+    "the-breakthrough:5",
+    "the-breakthrough:6",
+    "the-breakthrough:7",
+    "the-breakthrough:8",
+    "spend-or-save:0",
+    "spend-or-save:1",
+    "spend-or-save:2",
+    "spend-or-save:3",
+    "spend-or-save:4"
+  ],
+  "parity": [
+    {
+      "state": "eighty-thousand-hours:0",
+      "identical": true
+    },
+    {
+      "state": "eighty-thousand-hours:1",
+      "identical": true
+    },
+    {
+      "state": "eighty-thousand-hours:2",
+      "identical": true
+    },
+    {
+      "state": "eighty-thousand-hours:3",
+      "identical": true
+    },
+    {
+      "state": "eighty-thousand-hours:4",
+      "identical": true
+    },
+    {
+      "state": "eighty-thousand-hours:5",
+      "identical": true
+    },
+    {
+      "state": "eighty-thousand-hours:6",
+      "identical": true
+    },
+    {
+      "state": "eighty-thousand-hours:7",
+      "identical": true
+    },
+    {
+      "state": "eighty-thousand-hours:8",
+      "identical": true
+    },
+    {
+      "state": "eighty-thousand-hours:9",
+      "identical": true
+    },
+    {
+      "state": "eighty-thousand-hours:10",
+      "identical": true
+    },
+    {
+      "state": "eighty-thousand-hours:11",
+      "identical": true
+    },
+    {
+      "state": "the-stakes:0",
+      "identical": true
+    },
+    {
+      "state": "the-stakes:1",
+      "identical": true
+    },
+    {
+      "state": "the-direct-exchange:0",
+      "identical": true
+    },
+    {
+      "state": "the-direct-exchange:1",
+      "identical": true
+    },
+    {
+      "state": "the-direct-exchange:2",
+      "identical": true
+    },
+    {
+      "state": "the-direct-exchange:3",
+      "identical": true
+    },
+    {
+      "state": "the-direct-exchange:4",
+      "identical": true
+    },
+    {
+      "state": "the-breakthrough:0",
+      "identical": true
+    },
+    {
+      "state": "the-breakthrough:1",
+      "identical": true
+    },
+    {
+      "state": "the-breakthrough:2",
+      "identical": true
+    },
+    {
+      "state": "the-breakthrough:3",
+      "identical": true
+    },
+    {
+      "state": "the-breakthrough:4",
+      "identical": true
+    },
+    {
+      "state": "the-breakthrough:5",
+      "identical": true
+    },
+    {
+      "state": "the-breakthrough:6",
+      "identical": true
+    },
+    {
+      "state": "the-breakthrough:7",
+      "identical": true
+    },
+    {
+      "state": "the-breakthrough:8",
+      "identical": true
+    },
+    {
+      "state": "spend-or-save:0",
+      "identical": true
+    },
+    {
+      "state": "spend-or-save:1",
+      "identical": true
+    },
+    {
+      "state": "spend-or-save:2",
+      "identical": true
+    },
+    {
+      "state": "spend-or-save:3",
+      "identical": true
+    },
+    {
+      "state": "spend-or-save:4",
+      "identical": true
+    }
+  ],
+  "consoleErrors": []
+}

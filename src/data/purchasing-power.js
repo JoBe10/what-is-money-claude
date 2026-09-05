@@ -1,7 +1,8 @@
 // GENERATED DATA — do not hand-edit. Regenerate from the sources below.
 // Audit trail: docs/SOURCES.md entries WIM-FX-001 (USD), WIM-FX-002 (GBP),
-// WIM-FX-003 (JPY), WIM-FX-004 (CHF). Consumed by slide 2.7
-// (`2-07-the-severance`), build 3 — the chart "What one unit still buys."
+// WIM-FX-003 (JPY), WIM-FX-004 (CHF). Consumed by Scene 8 beat 4, the chart
+// "What one unit still buys." — ported whole from slide 2.7's build 3
+// (`2-07-the-severance`, left the manifest at the Batch B splice).
 //
 // WHAT THESE NUMBERS ARE. Purchasing power of one unit of each currency,
 // CPI-deflated, indexed 1971 = 100, annual, 1971 through 2025 (the latest
@@ -36,7 +37,7 @@
 //     JPY rises in 12 of the 54 year-steps and CHF in 7 (largest single-year
 //     rise: JPY +0.46 index points in 2009, CHF +0.42 in 2015 — under 2px
 //     on this chart, but real). The trend over the span is one direction for
-//     all four; individual years are not. See docs/r4-report.md.
+//     all four; individual years are not. See docs/archive/r4-report.md.
 
 export const PP_YEAR_MIN = 1971;
 export const PP_YEAR_MAX = 2025;

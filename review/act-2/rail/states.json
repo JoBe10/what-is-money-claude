@@ -1,0 +1,489 @@
+{
+  "date": "2026-09-01T00:00:04.721Z",
+  "session": "act-2-rail-r2",
+  "authority": "docs/act-2-staging-amendment.md — presenter-approved verbatim, 1 September 2026 (master §13) — as amended by its r2 section, the presenter’s six rulings on this sheet (docs/act-2-rail-r2-brief.md §1)",
+  "beatMap": {
+    "S5": 8,
+    "S6": 9,
+    "S7": 5,
+    "S8": 5,
+    "S9": 5,
+    "S10": 5,
+    "total": 37
+  },
+  "sheet": {
+    "cells": 39,
+    "beats": 37,
+    "note": "every beat has exactly one settled frame; the two overlays whose return seam is not itself a mapped beat (the mass state, the chart) carry an extra -return cell, so the sheet is 39 files over 37 beats"
+  },
+  "reviewProtocol": "The presenter walks sheet.html top to bottom once more, like a flipbook of the act. The rail should now fill left to right like history being written, every station should arrive with a line beneath it, and there should be no white ball anywhere. He returns either the go-ahead that sends Act II to implementation, or the frames that break the thread.",
+  "counts": {
+    "rail": 18,
+    "featured": 2,
+    "statement": 6,
+    "seam": 5,
+    "carried": 6,
+    "return": 2
+  },
+  "rulings": {
+    "r2.1 fill order": "narrative order is spatial order — SHELLS first, then CATTLE, SALT, IRON, METALS, GOLD, COINAGE, CLAIM ON GOLD, LEDGER, BITCOIN; the legacy stop positions unchanged, only the assignment. Zanzibar returns to the far-left SHELLS station",
+    "r2.2 arrival lines": "every station arrives with a line beneath it — standing = the virtue at the station’s own voice (SHELLS and METALS in the installed S5 script’s own words), fallen = the wound at the dimmed-prior step",
+    "r2.3 the claim off the rail": "the ClaimObject appears in no rail beat; station illumination and the spoken narrative carry the claim’s position. The collapsed Gate 3’s judgment object becomes the rail’s own continuity",
+    "r2.4 the vault folds in": "the standalone vault overlay retired to file; S7 b3 stages CLAIM ON GOLD’s arrival, the dependency line arcing back to GOLD, and the vault line as the featured line at full voice; b4 keeps the line in the record",
+    "r2.5 the band box": "one shared box, 188 × 188 world, height and width capped; every render in a box of its own aspect scaled to fit inside it",
+    "r2.6 the network": "the mesh forms out of the LEDGER station itself at the approved s9-b1-a geometry, anchored where the ledger stood; palladium’s placement confirmed as staged",
+    "r2.7 coinage": "the presenter’s coinage study gated and ingested through the standard harness; the flagged PENDING station is photographic"
+  },
+  "approval": {
+    "date": "1 September 2026",
+    "by": "the presenter, on his flipbook walk of review/act-2/rail/sheet.html",
+    "recordedBy": "docs/act-2-rail-impl-brief.md §1.1",
+    "verdict": "APPROVED IN FULL — all 39 cells, including the nine honest-render flags of docs/act-2-rail-r2-report.md §6.",
+    "flagsNamedForHisWord": {
+      "the featured-line register at S7 b3 (flag 1)": "APPROVED AS RENDERED — the deck’s statement register at 36px, anchored at the CLAIM ON GOLD station, the same register the act’s other station arrivals use.",
+      "the mesh as the coin arrives at S9 b2 (flag 6)": "APPROVED AS RENDERED — the mesh belongs to beat 1; beat 2 shows the rail returned with BITCOIN at its station."
+    },
+    "effect": "The flags are closed and no cell is pending. This set is the visual authority for every landed-state proof of the rail implementation; a settled state that is not its approved cell at zero pixels is a defect.",
+    "gateCriterion": "The act’s gate criterion stands as amended (master §13 and §14, docs/act-2-staging-amendment.md r2.3): what the presenter’s act viewing judges is THE RAIL’S OWN CONTINUITY — whether the record reads as one continuous, growing history from S5 b1 to S10 b5. The viewing runs after implementation Session 2."
+  },
+  "approvedSet": [
+    "s5-b1",
+    "s5-b2",
+    "s5-b3",
+    "s5-b4",
+    "s5-b5",
+    "s5-b6",
+    "s5-b7",
+    "s5-b8",
+    "s6-b1",
+    "s6-b2",
+    "s6-b3",
+    "s6-b4",
+    "s6-b5",
+    "s6-b6",
+    "s6-b7",
+    "s6-b8",
+    "s6-b9",
+    "s6-b9-return",
+    "s7-b1",
+    "s7-b2",
+    "s7-b3",
+    "s7-b4",
+    "s7-b5",
+    "s8-b1",
+    "s8-b2",
+    "s8-b3",
+    "s8-b4",
+    "s8-b4-return",
+    "s8-b5",
+    "s9-b1",
+    "s9-b2",
+    "s9-b3",
+    "s9-b4",
+    "s9-b5",
+    "s10-b1",
+    "s10-b2",
+    "s10-b3",
+    "s10-b4",
+    "s10-b5"
+  ],
+  "cells": [
+    {
+      "id": "s5-b1",
+      "file": "s5-b1.png",
+      "scene": "S5",
+      "beat": 1,
+      "ord": 1,
+      "kind": "rail",
+      "source": "the amendment S5 b1 · EvolutionRail’s world · the rails law · r2.1 the fill order · r2.2 the arrival line, the installed S5 script verbatim",
+      "caption": "Beat 1 · the rail begins, and it begins at the left edge of the record. SHELLS is station one — the first body a claim ever wore — with its render in the band above the line and its virtue beneath it in the script’s own words: “Beautiful. Scarce. Hard to fake.” No station stands blank. The track runs on into darkness to the right: the history has not happened yet."
+    },
+    {
+      "id": "s5-b2",
+      "file": "s5-b2.png",
+      "scene": "S5",
+      "beat": 2,
+      "ord": 2,
+      "kind": "rail",
+      "source": "the amendment S5 b2 · the legacy wound, verbatim · the survival-brightness ruling · r2.1",
+      "caption": "Beat 2 · CATTLE arrives to the RIGHT of the shells — the rail fills the way history is written — and falls, its wound at full voice beneath it, the station dimmed with it. SHELLS holds full brightness and its virtue: undefeated reads as alive, not blank."
+    },
+    {
+      "id": "s5-b3",
+      "file": "s5-b3.png",
+      "scene": "S5",
+      "beat": 3,
+      "ord": 3,
+      "kind": "rail",
+      "source": "the amendment S5 b3 · the legacy wound, verbatim",
+      "caption": "Beat 3 · SALT enters next along the line and falls. Its wound speaks at full voice; CATTLE’s recedes to the dimmed-prior step (§9.4 rule 10). The shells’ virtue holds at its own station’s voice — it is not competing with the sentence that just landed, it is the reason the station is still standing."
+    },
+    {
+      "id": "s5-b4",
+      "file": "s5-b4.png",
+      "scene": "S5",
+      "beat": 4,
+      "ord": 4,
+      "kind": "rail",
+      "source": "the amendment S5 b4 · the legacy wound, verbatim",
+      "caption": "Beat 4 · IRON falls. Three wounds on the record, the newest at full voice, and one station at the far left still lit with its virtue intact — SHELLS is the one still standing, and you can read that from the frame alone."
+    },
+    {
+      "id": "s5-b5",
+      "file": "s5-b5.png",
+      "scene": "S5",
+      "beat": 5,
+      "ord": 5,
+      "kind": "rail",
+      "source": "the amendment S5 b5 · the rails law · the equal-weight band box (r2.5) · r2.2 — the metals virtue, the installed S5 script verbatim",
+      "caption": "Beat 5 · METALS rises out of the wreckage at full voice, and arrives with its own line beneath it — “Hard to make more of. Slow to decay. Divisible without dying.” — the script’s own sentence. Its render is near-16:9 and now sits inside the same box as its neighbours: one family, one weight. The three wounds have receded; SHELLS still alive, still lit, still holding its virtue."
+    },
+    {
+      "id": "s5-b6",
+      "file": "s5-b6.png",
+      "scene": "S5",
+      "beat": 6,
+      "ord": 6,
+      "kind": "featured",
+      "source": "the amendment S5 b6 · the S5-F3 dated-fact grammar (approved) staged at the SHELLS station · the survival-brightness ruling · r2.1, r2.2",
+      "caption": "Beat 6 · ZANZIBAR, the featured moment, at the far-left SHELLS station — the ruling’s own instruction: the dated fact returns to the station it belongs to, across the whole record the act has built since station one. The virtue is gone from beneath the shells, replaced by the wound itself — which is landing here, at full scale, in the approved dated-fact typography. That landing is the station’s line on this beat; it settles into the rail’s own row at beat 7. The station goes dark in front of you: this is the frame where the survival-brightness ruling pays."
+    },
+    {
+      "id": "s5-b7",
+      "file": "s5-b7.png",
+      "scene": "S5",
+      "beat": 7,
+      "ord": 7,
+      "kind": "statement",
+      "source": "the amendment S5 b7 · the installed S5 script, verbatim · statement over the receded rail",
+      "caption": "Beat 7 · “The function stayed. The carrier changed.” — the act’s thesis over the receded rail. Four bodies have been and gone on the record above; the one still standing carries its virtue, and the claim that rode all of them is spoken, not drawn (r2.3 — the traveler has stepped off the Act II rail)."
+    },
+    {
+      "id": "s5-b8",
+      "file": "s5-b8.png",
+      "scene": "S5",
+      "beat": 8,
+      "ord": 8,
+      "kind": "statement",
+      "source": "the amendment S5 b8 · the installed S5 script, verbatim · the question register (1.03)",
+      "caption": "Beat 8 · the exit question over the receded record: why did the carrier keep changing? Every station on the rail behind it is part of the answer, and the newest one — metals, still undefeated — is where the question points."
+    },
+    {
+      "id": "s6-b1",
+      "file": "s6-b1.png",
+      "scene": "S6",
+      "beat": 1,
+      "ord": 9,
+      "kind": "rail",
+      "source": "the amendment S6 b1 · the regenerated gold render · the strip’s recorded gain, verbatim · the equal-weight band box (r2.5)",
+      "caption": "Beat 1 · GOLD arrives at full voice, in the shared band box at its own near-16:9 aspect — no longer the widest thing on the rail. SCARCITY IN MATTER lands as its annotation, anchored at the station. The metals recede into the family’s champion, keeping their virtue on the record: absorbed, not defeated."
+    },
+    {
+      "id": "s6-b2",
+      "file": "s6-b2.png",
+      "scene": "S6",
+      "beat": 2,
+      "ord": 10,
+      "kind": "seam",
+      "source": "the amendment S6 b2–b7 · the approved s6-b2 builder (states.mjs) over the deep-dimmed rail — the legacy table-over-rail treatment",
+      "caption": "Beat 2 · the periodic-table overlay enters: the rail recedes to the legacy deep dim and the table rises over it — the approved restored cell’s own builder, unchanged. Beneath it the record now carries gold’s gain, settled from beat 1’s landing. Beats 3–7 play the elimination exactly as approved (carried byte-identical on this sheet)."
+    },
+    {
+      "id": "s6-b3",
+      "file": "s6-b3.png",
+      "scene": "S6",
+      "beat": 3,
+      "ord": 11,
+      "kind": "carried",
+      "carriedFrom": "review/act-2/states/s6-b3.png",
+      "source": "the amendment S6 b2–b7 — the overlay’s interior states, the approved cells unchanged",
+      "caption": "Beat 3 · the elimination, wave 1 of the restored legacy pacing — carried byte-identical from the approved states sheet. The rail holds deep-dimmed beneath the overlay in the film; the approved cell is the overlay’s own content, unchanged, and no r2 ruling touches it."
+    },
+    {
+      "id": "s6-b4",
+      "file": "s6-b4.png",
+      "scene": "S6",
+      "beat": 4,
+      "ord": 12,
+      "kind": "carried",
+      "carriedFrom": "review/act-2/states/s6-b4.png",
+      "source": "the amendment S6 b2–b7 — the overlay’s interior states, the approved cells unchanged",
+      "caption": "Beat 4 · the elimination, wave 2 of the restored legacy pacing — carried byte-identical from the approved states sheet. The rail holds deep-dimmed beneath the overlay in the film; the approved cell is the overlay’s own content, unchanged, and no r2 ruling touches it."
+    },
+    {
+      "id": "s6-b5",
+      "file": "s6-b5.png",
+      "scene": "S6",
+      "beat": 5,
+      "ord": 13,
+      "kind": "carried",
+      "carriedFrom": "review/act-2/states/s6-b5.png",
+      "source": "the amendment S6 b2–b7 — the overlay’s interior states, the approved cells unchanged",
+      "caption": "Beat 5 · the elimination, wave 3 of the restored legacy pacing — carried byte-identical from the approved states sheet. The rail holds deep-dimmed beneath the overlay in the film; the approved cell is the overlay’s own content, unchanged, and no r2 ruling touches it."
+    },
+    {
+      "id": "s6-b6",
+      "file": "s6-b6.png",
+      "scene": "S6",
+      "beat": 6,
+      "ord": 14,
+      "kind": "carried",
+      "carriedFrom": "review/act-2/states/s6-b6.png",
+      "source": "the amendment S6 b2–b7 — the overlay’s interior states, the approved cells unchanged",
+      "caption": "Beat 6 · the elimination, wave 4 of the restored legacy pacing — carried byte-identical from the approved states sheet. The rail holds deep-dimmed beneath the overlay in the film; the approved cell is the overlay’s own content, unchanged, and no r2 ruling touches it."
+    },
+    {
+      "id": "s6-b7",
+      "file": "s6-b7.png",
+      "scene": "S6",
+      "beat": 7,
+      "ord": 15,
+      "kind": "carried",
+      "carriedFrom": "review/act-2/states/s6-b7.png",
+      "source": "the amendment S6 b2–b7 — the overlay’s interior states, the approved cells unchanged",
+      "caption": "Beat 7 · the elimination, wave 5 of the restored legacy pacing — carried byte-identical from the approved states sheet. The rail holds deep-dimmed beneath the overlay in the film; the approved cell is the overlay’s own content, unchanged, and no r2 ruling touches it."
+    },
+    {
+      "id": "s6-b8",
+      "file": "s6-b8.png",
+      "scene": "S6",
+      "beat": 8,
+      "ord": 16,
+      "kind": "rail",
+      "source": "the amendment S6 b8 · the installed S6 script, verbatim · the overlay’s return seam",
+      "caption": "Beat 8 · the rail returns, GOLD crowned — the overlay’s answer landed. “Hard to create. Hard to destroy.” lands at the station while SCARCITY IN MATTER holds its place in the record beneath it."
+    },
+    {
+      "id": "s6-b9",
+      "file": "s6-b9.png",
+      "scene": "S6",
+      "beat": 9,
+      "ord": 17,
+      "kind": "seam",
+      "source": "the amendment S6 b9 · the selected counted load (approved s6-b9 builder) over the deep-dimmed rail",
+      "caption": "Beat 9 · the mass-state overlay enters: the rail recedes and the counted load — the presenter’s selected system, the approved builder unchanged — rises over it. Gold’s weakness, weight growing with value."
+    },
+    {
+      "id": "s6-b9-return",
+      "file": "s6-b9-return.png",
+      "scene": "S6",
+      "beat": 9,
+      "ord": 18,
+      "kind": "return",
+      "source": "the amendment S6 b9 — “the rail returns carrying it as GOLD’s dependency note” · the strip’s recorded dependency, verbatim",
+      "caption": "Beat 9, the return seam · the rail comes back carrying the overlay’s answer: “as value grows, weight grows” lands as GOLD’s dependency note, at full voice — the strip’s own recorded row. The station now shows the whole trade: the gain above, the cost beneath."
+    },
+    {
+      "id": "s7-b1",
+      "file": "s7-b1.png",
+      "scene": "S7",
+      "beat": 1,
+      "ord": 19,
+      "kind": "rail",
+      "source": "the amendment S7 b1 · the rail’s own riser note, verbatim · the coinage study ingested this session (r2.7)",
+      "caption": "Beat 1 · COINAGE arrives, and for the first time the station is photographic: the presenter’s coinage study was gated and ingested this session, so the pending stub the last sheet flagged is gone. Its annotation is the rail’s own recorded note — “Solves verification and division. Trust required: the mint.” Gold stays alive behind it, undefeated, its trade recorded."
+    },
+    {
+      "id": "s7-b2",
+      "file": "s7-b2.png",
+      "scene": "S7",
+      "beat": 2,
+      "ord": 20,
+      "kind": "rail",
+      "source": "the amendment S7 b2 · the installed S7 script’s own clause as the limit row",
+      "caption": "Beat 2 · the fleet problem is spoken over the rail, and the station’s limit takes its place beneath COINAGE at full voice: “solves the market stall, not the merchant fleet” — the installed script’s own clause in the wound register. Nothing else moves."
+    },
+    {
+      "id": "s7-b3",
+      "file": "s7-b3.png",
+      "scene": "S7",
+      "beat": 3,
+      "ord": 21,
+      "kind": "rail",
+      "source": "the amendment S7 b3 as restaged by r2.4 — the vault overlay retired to file · the certificate render at its station · the service path’s grammar · the featured line at full voice",
+      "caption": "Beat 3 · THE VAULT FOLDS INTO THE RAIL. There is no standalone overlay any more: CLAIM ON GOLD arrives as a station, the certificate render takes its place in the band, and one thin dependency line arcs back from it to the GOLD station — through the corridor between the band and the line, the airspace the traveler left when the claim stepped off the rail. “A claim on gold in a vault. Trust required: the vault.” lands as the featured line, at full voice. The gold has not moved; the claim on it has."
+    },
+    {
+      "id": "s7-b4",
+      "file": "s7-b4.png",
+      "scene": "S7",
+      "beat": 4,
+      "ord": 22,
+      "kind": "rail",
+      "source": "the amendment S7 b4 as restaged by r2.4 — “the dependency line persists at the station” · the landing settled into the rail’s own row register",
+      "caption": "Beat 4 · the dependency line persists in the record. The sentence that landed at full voice a beat ago has condensed into the station’s own row — the same words, in the rail’s register, where the record keeps them — and the line still runs back to the gold that has never moved. Coinage holds its limit; the certificate station stands lit."
+    },
+    {
+      "id": "s7-b5",
+      "file": "s7-b5.png",
+      "scene": "S7",
+      "beat": 5,
+      "ord": 23,
+      "kind": "statement",
+      "source": "the amendment S7 b5 · the installed S7 script, verbatim — both pairs",
+      "caption": "Beat 5 · the trade named honestly, over the receded rail: “The gold stayed. The claim moved.” and “Portability improved. Trust moved to the issuer.” The dependency line still hangs in the record behind the words — which is why the second sentence is not an opinion."
+    },
+    {
+      "id": "s8-b1",
+      "file": "s8-b1.png",
+      "scene": "S8",
+      "beat": 1,
+      "ord": 24,
+      "kind": "rail",
+      "source": "the amendment S8 b1 · ledger_glow per its recorded assignment · the annotation at the station",
+      "caption": "Beat 1 · LEDGER arrives — the glowing entry, in the shared band box at its own 3:2 aspect. MONEY BECAME INFORMATION lands as its annotation. The certificate’s vault note has given way to the named trade: portability bought, issuer trust owed, both now standing in the record as the claim station’s pair."
+    },
+    {
+      "id": "s8-b2",
+      "file": "s8-b2.png",
+      "scene": "S8",
+      "beat": 2,
+      "ord": 25,
+      "kind": "rail",
+      "source": "the amendment S8 b2 · the legacy severance’s honest strength line, verbatim",
+      "caption": "Beat 2 · the honest strengths land at the station: “The most universally accepted medium of exchange in history.” — the legacy’s own sentence, at the ledger, at full voice, with INSTANT TRANSFER settled into the record beneath it."
+    },
+    {
+      "id": "s8-b3",
+      "file": "s8-b3.png",
+      "scene": "S8",
+      "beat": 3,
+      "ord": 26,
+      "kind": "featured",
+      "source": "the amendment S8 b3 · the S5-F3 dated-fact grammar staged at the LEDGER station · the severance decree, verbatim",
+      "caption": "Beat 3 · 1971, the featured moment at the LEDGER station — the severance’s decree in the approved dated-fact typography, landed under the station. Gold and its claim dim together: captured, not beaten — the redemption they stood on is cancelled. The ledger reigns alone from here."
+    },
+    {
+      "id": "s8-b4",
+      "file": "s8-b4.png",
+      "scene": "S8",
+      "beat": 4,
+      "ord": 27,
+      "kind": "seam",
+      "source": "the amendment S8 b4 · the ported four-currency chart (approved s8-b4 builder) over the deep-dimmed rail",
+      "caption": "Beat 4 · the chart overlay enters: the rail recedes and the ported severance chart — the frozen data, every draw rule — rises over it, unchanged."
+    },
+    {
+      "id": "s8-b4-return",
+      "file": "s8-b4-return.png",
+      "scene": "S8",
+      "beat": 4,
+      "ord": 28,
+      "kind": "return",
+      "source": "the amendment S8 b4 — “the rail returns with the residue noted” · the strip’s recorded dependency, verbatim",
+      "caption": "Beat 4, the return seam · the rail comes back with the residue noted at the LEDGER station: “the window closed” — the strip’s recorded dependency row, at full voice. The chart’s slope has become one line of the record."
+    },
+    {
+      "id": "s8-b5",
+      "file": "s8-b5.png",
+      "scene": "S8",
+      "beat": 5,
+      "ord": 29,
+      "kind": "statement",
+      "source": "the amendment S8 b5 · the installed S8 script, verbatim",
+      "caption": "Beat 5 · the measured wound, over the receded rail: “Extraordinary at moving value. Measurably poor at storing it.” Both halves of the ledger’s trade now stand in the record beneath it."
+    },
+    {
+      "id": "s9-b1",
+      "file": "s9-b1.png",
+      "scene": "S9",
+      "beat": 1,
+      "ord": 30,
+      "kind": "seam",
+      "source": "the amendment S9 b1 as restaged by r2.6 — the approved s9-b1-a geometry, its origin moved to the LEDGER station · the legacy deep dim for the rest of the record",
+      "caption": "Beat 1 · THE MESH FORMS OUT OF THE LEDGER STATION. It is not a diagram arriving from somewhere else: the record recedes to the legacy deep dim, the LEDGER station alone stays lit — the issuer the act has just watched fail — and its hub dissolves into the ring. The approved network system is unchanged in every line, chord and voice; only where it stands has moved. What replaces the issuer is anchored exactly where the issuer was."
+    },
+    {
+      "id": "s9-b2",
+      "file": "s9-b2.png",
+      "scene": "S9",
+      "beat": 2,
+      "ord": 31,
+      "kind": "rail",
+      "source": "the amendment S9 b2 · the entrant’s facts block, verbatim · the C1 coin render",
+      "caption": "Beat 2 · the rail returns and BITCOIN takes its station beside the ledger — the coin render per the C1 ruling, at full voice — with the facts landing as its entrant annotation in the deck’s most neutral register. Description, never argument."
+    },
+    {
+      "id": "s9-b3",
+      "file": "s9-b3.png",
+      "scene": "S9",
+      "beat": 3,
+      "ord": 32,
+      "kind": "rail",
+      "source": "the amendment S9 b3 · the entrant block’s capabilities, verbatim · §9.4 rule 10",
+      "caption": "Beat 3 · the three capabilities that had never coexisted land at the station, each in the caps register at full voice, while the facts recede to the dimmed-prior step."
+    },
+    {
+      "id": "s9-b4",
+      "file": "s9-b4.png",
+      "scene": "S9",
+      "beat": 4,
+      "ord": 33,
+      "kind": "rail",
+      "source": "the amendment S9 b4 · the entrant block’s limitation, verbatim — its own advance at full voice",
+      "caption": "Beat 4 · the honest line, in the same breath: the limitation takes its own advance at full voice while everything above it recedes — the legacy entrant treatment’s whole point, on the rail."
+    },
+    {
+      "id": "s9-b5",
+      "file": "s9-b5.png",
+      "scene": "S9",
+      "beat": 5,
+      "ord": 34,
+      "kind": "statement",
+      "source": "the amendment S9 b5 · the approved s9-b5 pair, verbatim",
+      "caption": "Beat 5 · the stability distinction, over the receded rail: the market’s valuation of a young asset and the architecture of the claim are two different questions. Volatility is a stage, not a verdict."
+    },
+    {
+      "id": "s10-b1",
+      "file": "s10-b1.png",
+      "scene": "S10",
+      "beat": 1,
+      "ord": 35,
+      "kind": "rail",
+      "source": "the amendment S10 b1 — “no second strip: this is the same rail” · the strip’s recorded pairs, verbatim",
+      "caption": "Beat 1 · the rail, complete, read again as argument. The gain-and-dependency pairs stand lit at the four architecture stations — the strip’s own recorded rows on the same rail the act has been building since station one — and every earlier station still says why it entered and how it left. No second strip exists."
+    },
+    {
+      "id": "s10-b2",
+      "file": "s10-b2.png",
+      "scene": "S10",
+      "beat": 2,
+      "ord": 36,
+      "kind": "rail",
+      "source": "the amendment S10 b2 · the installed S10 script, verbatim — the line lands on the rail",
+      "caption": "Beat 2 · “The history of money is a history of changing trade-offs.” — landed on the complete rail, not over a receded one: the sentence and its evidence share the frame."
+    },
+    {
+      "id": "s10-b3",
+      "file": "s10-b3.png",
+      "scene": "S10",
+      "beat": 3,
+      "ord": 37,
+      "kind": "seam",
+      "source": "the amendment S10 b3 · the ported palladium frame (approved s10-b3 builder) over the deep-dimmed extended rail · placement confirmed as staged (r2.6)",
+      "caption": "Beat 3 · the palladium overlay, against the extended rail: the record recedes to the deep dim and the ported frame — the hook, the two panels, the real figures — rises over it, unchanged. Its placement here is confirmed by the r2 rulings; beat 4, the insufficiency line, is the approved cell carried byte-identical."
+    },
+    {
+      "id": "s10-b4",
+      "file": "s10-b4.png",
+      "scene": "S10",
+      "beat": 4,
+      "ord": 38,
+      "kind": "carried",
+      "carriedFrom": "review/act-2/states/s10-b4.png",
+      "source": "the amendment S10 b4 — the insufficiency line inside the approved palladium frame, unchanged",
+      "caption": "Beat 4 · THE BAR — “Marginally better is structurally insufficient.” — landing inside the ported palladium frame exactly as approved; carried byte-identical from the states sheet, and untouched by any r2 ruling."
+    },
+    {
+      "id": "s10-b5",
+      "file": "s10-b5.png",
+      "scene": "S10",
+      "beat": 5,
+      "ord": 39,
+      "kind": "statement",
+      "source": "the amendment S10 b5 · the question register (1.03) over the receded rail",
+      "caption": "Beat 5 · “Better for what job?” — the pivot that opens Act III, over the receded complete record. Ten stations, each with its line beneath it, and one question that none of them has answered yet."
+    }
+  ],
+  "consoleErrors": []
+}
